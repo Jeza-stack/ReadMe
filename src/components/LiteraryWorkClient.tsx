@@ -11,41 +11,45 @@ import { Progress } from "./ui/progress";
 import { Separator } from "./ui/separator";
 import { convertTextToSpeech } from "@/ai/flows/text-to-speech-flow";
 import { useToast } from "@/hooks/use-toast";
-import { Skeleton } from "./ui/skeleton";
 
 // InteractiveText Component
 function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
-    
-    const parts = text.split(/(\s+)/);
+
+    const stanzas = text.split('\n\n');
 
     return (
-        <p className="text-lg/relaxed font-body">
-            {parts.map((part, index) => {
-                const wordPart = part.trim().replace(/[.,;!?]$/, '');
-                if (difficultWordsMap.has(wordPart.toLowerCase())) {
-                    const wordData = difficultWordsMap.get(wordPart.toLowerCase())!;
-                    return (
-                        <Popover key={index}>
-                            <PopoverTrigger asChild>
-                                <span className="cursor-pointer font-bold text-primary hover:underline">{part}</span>
-                            </PopoverTrigger>
-                            <PopoverContent className="w-80">
-                                <div className="space-y-2">
-                                    <h4 className="font-bold font-headline">{wordData.word}</h4>
-                                    <p className="text-sm">{wordData.definition}</p>
-                                    <p className="text-sm"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
-                                    <p className="text-sm"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
-                                </div>
-                            </PopoverContent>
-                        </Popover>
-                    );
-                }
-                return <span key={index}>{part}</span>;
-            })}
-        </p>
+        <div className="font-body text-lg/relaxed space-y-6">
+            {stanzas.map((stanza, stanzaIndex) => (
+                <p key={stanzaIndex}>
+                    {stanza.split(/(\s+)/).map((part, partIndex) => {
+                        const wordPart = part.trim().replace(/[.,;!?—]$/, '');
+                        if (difficultWordsMap.has(wordPart.toLowerCase())) {
+                            const wordData = difficultWordsMap.get(wordPart.toLowerCase())!;
+                            return (
+                                <Popover key={partIndex}>
+                                    <PopoverTrigger asChild>
+                                        <span className="cursor-pointer font-bold text-primary hover:underline">{part}</span>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-80">
+                                        <div className="space-y-2">
+                                            <h4 className="font-bold font-headline">{wordData.word}</h4>
+                                            <p className="text-sm">{wordData.definition}</p>
+                                            <p className="text-sm"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
+                                            <p className="text-sm"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
+                                        </div>
+                                    </PopoverContent>
+                                </Popover>
+                            );
+                        }
+                        return <span key={partIndex}>{part}</span>;
+                    })}
+                </p>
+            ))}
+        </div>
     );
 }
+
 
 // AudioPlayer Component
 function AudioPlayer({ text }: { text: string }) {
@@ -238,6 +242,101 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
 // Main Client Component
 export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
+    // Special handling for the poem "Don't Quit" to match the image style
+    const isSpecialPoem = work.slug === 'dont-quit';
+
+    if (isSpecialPoem) {
+        return (
+            <div>
+                 <div className="max-w-md mx-auto bg-stone-50 p-8 sm:p-12">
+                    <h1 className="font-serif text-5xl md:text-6xl font-extrabold text-center tracking-wider mb-8">
+                        {work.title.toUpperCase()}
+                    </h1>
+                    <div className="space-y-6 text-center font-serif text-lg text-stone-800">
+                        {work.fullText.split('\n\n').map((stanza, i) => (
+                            <p key={i} className="leading-relaxed">
+                                {stanza.split('\n').map((line, j) => (
+                                    <span key={j}>{line}<br/></span>
+                                ))}
+                            </p>
+                        ))}
+                    </div>
+                    <p className="mt-12 text-center font-serif text-base tracking-[.25em] text-stone-700">
+                        ~ {work.author.toUpperCase()}
+                    </p>
+                </div>
+                <div className="mt-12">
+                    <h2 className="font-headline text-2xl font-bold mb-4 text-center">Interactive Elements</h2>
+                     <p className="text-muted-foreground mb-4 text-center">Click on <span className="text-primary font-bold">bolded words</span> below for definitions, listen to an audio version, and test your knowledge.</p>
+                    <AudioPlayer text={work.fullText} />
+                    <InteractiveText text={work.fullText} difficultWords={work.difficultWords} />
+                </div>
+            
+                <Separator className="my-12" />
+    
+                {/* Content Analysis */}
+                <section className="space-y-8">
+                    <h2 className="font-headline text-3xl font-bold">Content Analysis</h2>
+                    <Card>
+                        <CardHeader><CardTitle className="font-headline">Summary</CardTitle></CardHeader>
+                        <CardContent><p>{work.contentAnalysis.summary}</p></CardContent>
+                    </Card>
+                     <Card>
+                        <CardHeader><CardTitle className="font-headline">Themes</CardTitle></CardHeader>
+                        <CardContent>
+                            <ul className="list-disc pl-5 space-y-1">
+                                {work.contentAnalysis.themes.map((theme, i) => <li key={i}>{theme}</li>)}
+                            </ul>
+                        </CardContent>
+                    </Card>
+                     <Card>
+                        <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
+                        <CardContent>
+                            {work.contentAnalysis.literaryDevices.map((ld, i) => (
+                                <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
+                            ))}
+                        </CardContent>
+                    </Card>
+                </section>
+                
+                <Separator className="my-12" />
+    
+                {/* Author Info */}
+                <section>
+                     <h2 className="font-headline text-3xl font-bold mb-8">About the Author</h2>
+                     <Card>
+                        <CardContent className="p-6">
+                            <p className="mb-4">{work.authorInfo.biography}</p>
+                            <p><strong>Writing Style:</strong> {work.authorInfo.writingStyle}</p>
+                        </CardContent>
+                     </Card>
+                </section>
+    
+                <Separator className="my-12" />
+    
+                {/* FAQs */}
+                <section>
+                    <h2 className="font-headline text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+                    <Accordion type="single" collapsible className="w-full">
+                        {work.faqs.map((faq, index) => (
+                            <AccordionItem value={`item-${index}`} key={index}>
+                                <AccordionTrigger className="font-semibold text-left">{faq.question}</AccordionTrigger>
+                                <AccordionContent>{faq.answer}</AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </section>
+                
+                <Separator className="my-12" />
+    
+                {/* Quiz */}
+                <section>
+                    <Quiz questions={work.quiz} />
+                </section>
+            </div>
+        )
+    }
+
     return (
         <div>
             {/* Main Content */}
