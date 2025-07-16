@@ -43,6 +43,111 @@
               "quiz": [
                 { "question": "What does the author suggest you do when 'care is pressing you down'?", "options": ["Quit", "Rest, if you must", "Smile", "Sigh"], "correctAnswer": "Rest, if you must", "explanation": "The poem advises taking a break if needed but ultimately to not quit the struggle." }
               ]
+            },
+            {
+              "title": "The Sparrow",
+              "slug": "the-sparrow",
+              "category": "Unit I: Poetry",
+              "author": "Paul Laurence Dunbar",
+              "fullText": "A little bird, with plumage brown,\nBeside my window flutters down,\nA moment chirps its little strain,\nThen taps upon my window-pane,\nAnd chirps again, and hops along,\nTo call my notice to its song;\nBut I work on, nor heed its lay,\nTill, in neglect, it flies away.\n\nSo birds of peace and hope and love,\nCome fluttering earthward from above,\nTo settle on life's window-sills,\nAnd ease our load of earthly ills;\nBut we, in traffic's rush and din\nToo deep engaged to let them in,\nWith deadened heart and sense plod on,\nNor know our loss till they are gone.",
+              "difficultWords": [
+                { "word": "Plumage", "definition": "A bird's feathers, collectively.", "connotation": "Refers to the bird's appearance, often implying its color and texture.", "example": "The peacock has a beautiful plumage." },
+                { "word": "Heed", "definition": "To pay attention to; take notice of.", "connotation": "Suggests giving careful consideration to something or someone.", "example": "We should heed the warnings on the label." },
+                { "word": "Din", "definition": "A loud, unpleasant, and prolonged noise.", "connotation": "Implies a chaotic and distracting environment.", "example": "It was hard to hear over the din of the city." }
+              ],
+              "authorInfo": {
+                "biography": "Paul Laurence Dunbar (1872-1906) was one of the first influential Black poets in American literature. He was born in Dayton, Ohio, to parents who had been enslaved in Kentucky before the American Civil War.",
+                "historicalContext": "Dunbar wrote during the late 19th and early 20th centuries, a period of significant racial strife and segregation in the United States following Reconstruction.",
+                "writingStyle": "Known for his versatile style, writing in both African-American dialect and conventional English. His works often explored the experiences of Black Americans.",
+                "majorWorks": ["Lyrics of Lowly Life", "Majors and Minors"],
+                "influence": "His work was praised by contemporaries like Frederick Douglass and inspired later writers of the Harlem Renaissance."
+              },
+              "contentAnalysis": {
+                "summary": "The poem uses the metaphor of a sparrow to represent the simple joys and moments of peace that life offers. The speaker, busy with work, ignores the bird's song and only realizes the loss when it flies away. This is extended to a broader commentary on how people, caught up in the rush of life, often miss out on opportunities for hope, love, and peace.",
+                "themes": ["Missed Opportunities", "The Value of Simple Joys", "Nature vs. Modern Life", "Regret"],
+                "literaryDevices": [
+                  { "device": "Metaphor", "example": "The sparrow is a metaphor for 'birds of peace and hope and love' that we often ignore." },
+                  { "device": "Personification", "example": "Birds of peace and hope and love... come fluttering earthward... to ease our load of earthly ills." }
+                ],
+                "criticalAnalysis": "The poem is a gentle but poignant critique of a life overly focused on material or worldly concerns, leading to a spiritual or emotional emptiness. Its simple AABB rhyme scheme makes the message accessible and memorable.",
+                "relevance": "The poem's message is timeless, especially in today's fast-paced, digitally-driven world, reminding us to pause and appreciate the small, beautiful moments in life."
+              },
+              "faqs": [
+                { "question": "What does the sparrow symbolize in the poem?", "answer": "The sparrow symbolizes the simple, everyday moments of peace, hope, and love that we often overlook because we are too busy with our daily struggles and ambitions." }
+              ],
+              "quiz": [
+                { "question": "Why does the speaker miss the sparrow's song?", "options": ["He dislikes birds", "He is too busy working", "The bird is too quiet", "He is sleeping"], "correctAnswer": "He is too busy working", "explanation": "The poem states, 'But I work on, nor heed its lay,' indicating that the speaker's focus on his work caused him to neglect the bird's song." }
+              ]
+            },
+            {
+              "title": "A Nation's Strength",
+              "slug": "a-nations-strength",
+              "category": "Unit I: Poetry",
+              "author": "Ralph Waldo Emerson",
+              "fullText": "What makes a nation's pillars high\nAnd its foundations strong?\nWhat makes it mighty to defy\nThe foes that round it throng?\n\nIt is not gold. Its kingdoms grand\nGo down in battle shock;\nIts shafts are laid on sinking sand,\nNot on abiding rock.\n\nIs it the sword? Ask the red dust\nOf empires passed away;\nThe blood has turned their stones to rust,\nTheir glory to decay.\n\nAnd is it pride? Ah, that bright crown\nHas seemed to nations sweet;\nBut God has struck its luster down\nIn ashes at his feet.\n\nNot gold but only men can make\nA people great and strong;\nMen who for truth and honor's sake\nStand fast and suffer long.\n\nBrave men who work while others sleep,\nWho dare while others fly…\nThey build a nation's pillars deep\nAnd lift them to the sky.",
+              "difficultWords": [
+                { "word": "Throng", "definition": "To crowd around or be present in great numbers.", "connotation": "Suggests a large, pressing group, often with hostile intent.", "example": "Fans throng the stadium gates." },
+                { "word": "Abiding", "definition": "Lasting a long time; enduring.", "connotation": "Implies permanence and stability.", "example": "He had an abiding faith in his country." },
+                { "word": "Luster", "definition": "A gentle sheen or soft glow.", "connotation": "Refers to glory or distinction, which can be superficial and temporary.", "example": "The luster of the victory soon faded." }
+              ],
+              "authorInfo": {
+                "biography": "Ralph Waldo Emerson (1803-1882) was an American essayist, lecturer, philosopher, and poet who led the transcendentalist movement of the mid-19th century.",
+                "historicalContext": "Emerson wrote during a period of American expansion and intellectual ferment, championing individualism and a personal connection to nature and the divine.",
+                "writingStyle": "His poetry and prose are known for their philosophical depth, aphoristic quality, and focus on individualism, morality, and nature.",
+                "majorWorks": ["Self-Reliance (essay)", "Nature (essay)", "The American Scholar (speech)"],
+                "influence": "Emerson's ideas on individualism and transcendentalism had a profound impact on American literature and thought, influencing writers like Henry David Thoreau and Walt Whitman."
+              },
+              "contentAnalysis": {
+                "summary": "The poem explores the true source of a nation's strength. Through a series of rhetorical questions, Emerson dismisses wealth ('gold'), military power ('the sword'), and pride as fleeting and unreliable foundations. He concludes that a nation's true strength lies in its people—brave, honorable, and hardworking individuals who are willing to stand for truth and endure hardship.",
+                "themes": ["True Strength", "Patriotism", "Human Value", "Morality"],
+                "literaryDevices": [
+                  { "device": "Rhetorical Question", "example": "What makes a nation's pillars high / And its foundations strong?" },
+                  { "device": "Metaphor", "example": "The poem uses 'pillars' and 'foundations' as metaphors for the core principles and stability of a nation." }
+                ],
+                "criticalAnalysis": "This poem is a powerful moral statement that prioritizes human character and virtue over material wealth or military might. It reflects Emerson's transcendentalist belief in the inherent goodness and potential of the individual as the basis for a strong society.",
+                "relevance": "The poem continues to be relevant as a reminder that the character, integrity, and resilience of its citizens are the most important assets of any nation, a message that transcends time and politics."
+              },
+              "faqs": [
+                { "question": "According to Emerson, what is the 'abiding rock' of a nation?", "answer": "The poem argues that the 'abiding rock' is not gold or power, but the character of its people: men and women who are brave, hardworking, and dedicated to truth and honor." }
+              ],
+              "quiz": [
+                { "question": "What does Emerson say is NOT the source of a nation's strength?", "options": ["Brave men", "Hard work", "Honor", "Gold"], "correctAnswer": "Gold", "explanation": "The poem explicitly states, 'It is not gold... Not gold but only men can make / A people great and strong.'" }
+              ]
+            },
+            {
+              "title": "Ozymandias",
+              "slug": "ozymandias",
+              "category": "Unit I: Poetry",
+              "author": "P.B. Shelley",
+              "fullText": "I met a traveller from an antique land,\nWho said—“Two vast and trunkless legs of stone\nStand in the desert. . . . Near them, on the sand,\nHalf sunk a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed;\nAnd on the pedestal, these words appear:\nMy name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.”",
+              "difficultWords": [
+                { "word": "Antique", "definition": "Belonging to ancient times.", "connotation": "Suggests something ancient, valuable, and from a distant past.", "example": "He collects antique furniture." },
+                { "word": "Visage", "definition": "A person's face, with reference to the form or proportions of the features.", "connotation": "A formal or literary term for face, often implying a certain expression.", "example": "His smiling visage was a welcome sight." },
+                { "word": "Colossal", "definition": "Extremely large; huge.", "connotation": "Emphasizes immense size and scale.", "example": "They built a colossal monument." }
+              ],
+              "authorInfo": {
+                "biography": "Percy Bysshe Shelley (1792-1822) was one of the major English Romantic poets. A radical in his poetry as well as in his political and social views, Shelley did not see fame during his lifetime, but recognition of his achievements in poetry grew steadily following his death.",
+                "historicalContext": "Shelley was part of the Romantic movement, which emphasized emotion, individualism, and the power of nature. He was critical of tyranny and monarchical power, which is a key theme in 'Ozymandias'.",
+                "writingStyle": "Characterized by lyrical beauty, rich imagery, and complex verse forms. He often explored themes of nature, politics, and the human imagination.",
+                "majorWorks": ["Prometheus Unbound", "Ode to the West Wind", "To a Skylark"],
+                "influence": "Shelley is considered a key figure in English Romanticism and has influenced a wide range of poets and writers, including Robert Browning and W.B. Yeats."
+              },
+              "contentAnalysis": {
+                "summary": "The narrator recounts a story from a traveler about the ruins of a statue in the desert. The statue is of a long-forgotten king, Ozymandias, whose proud and commanding expression is still visible on its shattered face. The pedestal contains an arrogant inscription boasting of his power, but it is surrounded by nothing but endless sand. The poem is a powerful meditation on the temporary nature of power and the ultimate futility of human ambition.",
+                "themes": ["The Transience of Power", "The Power of Art", "Human Pride and Futility", "Nature's Endurance"],
+                "literaryDevices": [
+                  { "device": "Irony", "example": "The inscription 'Look on my Works, ye Mighty, and despair!' is deeply ironic because no works remain, only a 'colossal Wreck'." },
+                  { "device": "Alliteration", "example": "'boundless and bare' and 'lone and level' create a sense of vast, empty space." }
+                ],
+                "criticalAnalysis": "'Ozymandias' is a masterfully constructed sonnet that uses a frame narrative (the narrator telling a traveler's story) to create distance and a sense of mythic time. The poem critiques the arrogance of rulers and suggests that both political power and individual lives are insignificant compared to the passage of time and the enduring power of nature.",
+                "relevance": "The poem remains a potent warning against hubris and the illusion of permanent power, applicable to political leaders, empires, and even modern celebrities and corporations. It reminds us that all things are temporary."
+              },
+              "faqs": [
+                { "question": "What is the central message of 'Ozymandias'?", "answer": "The central message is that human power, pride, and achievements are temporary and will ultimately fade away, reduced to insignificance by the vast and indifferent forces of time and nature." }
+              ],
+              "quiz": [
+                { "question": "What is the ultimate fate of Ozymandias's great 'Works'?", "options": ["They are in a museum", "They are still standing", "Nothing remains of them", "They were stolen"], "correctAnswer": "Nothing remains of them", "explanation": "The poem ends with the powerful image of the 'colossal Wreck' surrounded by nothing but 'lone and level sands,' highlighting the complete disappearance of the king's empire." }
+              ]
             }
           ]
         }
