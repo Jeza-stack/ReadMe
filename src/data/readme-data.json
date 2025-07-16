@@ -150,6 +150,81 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Unit II: Prose",
+          "works": [
+            {
+              "title": "Father Forgets",
+              "slug": "father-forgets",
+              "category": "Unit II: Prose",
+              "author": "W. Livingston Larned",
+              "fullText": "Listen, son: I am saying this as you lie asleep, one little paw crumpled under your cheek and the blond curls stickily wet on your damp forehead. I have stolen into your room alone. Just a few minutes ago, as I sat reading my paper in the library, a stifling wave of remorse swept over me. Guiltily I came to your bedside.\n\nThese are the things I was thinking, son: I had been cross to you. I scolded you as you were dressing for school because you gave your face merely a dab with a towel. I took you to task for not cleaning your shoes. I called out angrily when you threw some of your things on the floor.\n\nAt breakfast I found fault, too. You spilled things. You gulped down your food. You put your elbows on the table. You spread butter too thick on your bread. And as you started off to play and I made for my train, you turned and waved a hand and called, 'Goodbye, Daddy!' and I frowned, and said in reply, 'Hold your shoulders back!'\n\nThen it began all over again in the late afternoon. As I came up the road I spied you, down on your knees, playing marbles. There were holes in your stockings. I humiliated you before your boyfriends by marching you ahead of me to the house. Stockings were expensive—and if you had to buy them you would be more careful! Imagine that, son, from a father!\n\nDo you remember, later, when I was reading in the library, how you came in timidly, with a sort of hurt look in your eyes? When I glanced up from my paper, impatient at the interruption, you hesitated at the door. 'What is it you want?' I snapped.\n\nYou said nothing, but ran across in one tempestuous plunge, and threw your arms around my neck and kissed me, and your small arms tightened with an affection that God had set blooming in your heart and which even neglect could not wither. And then you were gone, pattering up the stairs.\n\nWell, son, it was shortly afterwards that my paper slipped from my hands and a terrible sickening fear came over me. What has habit been doing to me? The habit of finding fault, of reprimanding—this was my reward to you for being a boy. It was not that I did not love you; it was that I expected too much of youth. I was measuring you by the yardstick of my own years.\n\nAnd there was so much that was good and fine and true in your character. The little heart of you was as big as the dawn itself over the wide hills. This was shown by your spontaneous impulse to rush in and kiss me good night. Nothing else matters tonight, son. I have come to your bedside in the darkness, and I have knelt there, ashamed!\n\nIt is a feeble atonement; I know you would not understand these things if I told them to you during your waking hours. But tomorrow I will be a real daddy! I will chum with you, and suffer when you suffer, and laugh when you laugh. I will bite my tongue when impatient words come. I will keep saying as if it were a ritual: 'He is nothing but a boy—a little boy!'\n\nI am afraid I have visualized you as a man. Yet as I see you now, son, crumpled and weary in your cot, I see that you are still a baby. Yesterday you were in your mother's arms, your head on her shoulder. I have asked too much, too much.",
+              "difficultWords": [
+                { "word": "Remorse", "definition": "Deep regret or guilt for a wrong committed.", "connotation": "Suggests a powerful, painful feeling of guilt.", "example": "He felt a deep remorse for his actions." },
+                { "word": "Reprimanding", "definition": "To express sharp disapproval or criticism of (someone) because of their behavior or actions.", "connotation": "A formal and stern way of scolding.", "example": "She was reprimanded for being late." },
+                { "word": "Atonement", "definition": "Reparation for a wrong or injury.", "connotation": "Implies making amends for a fault, often with a sense of humility or shame.", "example": "He wanted to find a way to make atonement for his mistake." }
+              ],
+              "authorInfo": {
+                "biography": "W. Livingston Larned was an American author and journalist. 'Father Forgets' is his most famous work, originally published as a short piece in People's Home Journal in 1927. Dale Carnegie later used it in his famous book 'How to Win Friends and Influence People', which led to it often being misattributed to him.",
+                "historicalContext": "The piece was written in a time when parenting styles were often more rigid and authoritarian than they are today. It struck a chord with parents who recognized their own behavior in the father's.",
+                "writingStyle": "Larned's style in this piece is confessional, sentimental, and deeply personal. It uses simple, direct language to convey a powerful emotional message.",
+                "majorWorks": ["While often misattributed, this piece is Larned's primary claim to fame."],
+                "influence": "The text has been widely reprinted and shared for decades as a poignant reminder to parents to appreciate the fleeting nature of childhood and to practice patience and understanding."
+              },
+              "contentAnalysis": {
+                "summary": "A father reflects with deep regret on his harsh and critical treatment of his young son throughout the day. Overcome with remorse, he goes to his sleeping son's bedside, acknowledges his own fault-finding habits, and recognizes the pure, affectionate nature of his child. He vows to be a more patient, understanding, and loving father from the next day onward.",
+                "themes": ["Parenthood", "Regret", "Unconditional Love", "The Innocence of Childhood", "Patience"],
+                "literaryDevices": [
+                  { "device": "Apostrophe", "example": "The entire piece is an apostrophe, as the father is addressing his sleeping son who cannot hear him." },
+                  { "device": "Metaphor", "example": "I was measuring you by the yardstick of my own years." }
+                ],
+                "criticalAnalysis": "The piece is a timeless and universally relatable exploration of parental guilt and the desire to be better. Its emotional power comes from its honest self-critique and the tender contrast between the father's harshness and the son's innocent love.",
+                "relevance": "It remains highly relevant, resonating with any parent who has ever felt they were too hard on their child and wished they could take back impatient words. It's a powerful call for empathy and cherishing the present moment with loved ones."
+              },
+              "faqs": [
+                { "question": "What causes the father's change of heart?", "answer": "His change of heart is triggered by his son's spontaneous act of affection—running in to kiss him good night despite the father's impatience—which makes him realize how harsh he has been." }
+              ],
+              "quiz": [
+                { "question": "What does the father promise to do the next day?", "options": ["Buy his son a new toy", "Scold him less", "Be a 'real daddy' by playing with him and being patient", "Teach him to be more careful"], "correctAnswer": "Be a 'real daddy' by playing with him and being patient", "explanation": "The father vows to chum with his son, share in his joys and sorrows, and bite his tongue when he feels impatient." }
+              ]
+            },
+            {
+              "title": "On the Rule of the Road",
+              "slug": "on-the-rule-of-the-road",
+              "category": "Unit II: Prose",
+              "author": "A.G. Gardiner",
+              "fullText": "A stout old lady was walking with her basket down the middle of a street in Petrograd to the great confusion of the traffic and with no small peril to herself. It was pointed out to her that the pavement was the place for foot-passengers, but she replied: 'I'm going to walk where I like. We've got liberty now.' It did not occur to the dear old lady that if liberty entitled the foot-passenger to walk down the middle of the road, it also entitled the taxi-driver to drive on the pavement, and that the end of such liberty would be universal chaos.\n\nEverything would be getting in everybody else's way and nobody would get anywhere. Individual liberty would have become social anarchy. There is a danger of the world getting liberty-drunk in these days like the old lady with the basket, and it is just as well to remind ourselves of what is the rule of the road. It means that in order that the liberties of all may be preserved, the liberties of everybody must be curtailed.\n\nWhen the policeman, say, at Piccadilly Circus steps into the middle of the road and puts out his hand, he is the symbol not of tyranny, but of liberty. You may not think so. You may, being in a hurry, and seeing your car pulled up by this insolence of office, feel that your liberty has been violated. How can this fellow interfere with your free use of the public highway? Then, if you are a reasonable person, you will reflect that if he did not interfere with you, he would interfere with no one, and the result would be that Piccadilly Circus would be a maelstrom that you would never cross at all. You have submitted to a curtailment of private liberty in order that you may enjoy a social order which makes your liberty a reality.\n\nLiberty is not a personal affair only, but a social contract. It is an accommodation of interests. In matters which do not touch anybody else's liberty, of course, I may be as free as I like. If I choose to go down the road in a dressing-gown with long hair and bare feet, who shall say me nay? You have liberty to laugh at me, but I have liberty to be indifferent to you. And if I have a fancy for dyeing my hair, or waxing my moustache (which heaven forbid), or wearing an overcoat and sandals, or going to bed late or getting up early, I shall follow my fancy and ask no man's permission.\n\nBut when we step out of that kingdom our personal liberty of action becomes qualified by other people's liberty. I might like to practice on the trombone from midnight till three in the morning. If I went on to the top of Everest to do it, I could please myself, but in my suburban house I have to consider the people in my street. We are all liable to forget this, and unfortunately we are much more conscious of the imperfections of others in this respect than of our own. A reasonable consideration for the rights or feelings of others is the foundation of social conduct. It is in the small matters of conduct, in the observance of the rule of the road, that we pass judgment upon ourselves, and declare that we are civilized or uncivilized.",
+              "difficultWords": [
+                { "word": "Peril", "definition": "Serious and immediate danger.", "connotation": "Suggests a high level of risk or jeopardy.", "example": "They faced the peril of the storm." },
+                { "word": "Curtail", "definition": "To reduce in extent or quantity; impose a restriction on.", "connotation": "Means to limit or cut something short.", "example": "We must curtail our spending." },
+                { "word": "Maelstrom", "definition": "A powerful whirlpool; a situation of confused movement or violent turmoil.", "connotation": "Evokes an image of complete, swirling chaos.", "example": "The city was a maelstrom of traffic." }
+              ],
+              "authorInfo": {
+                "biography": "Alfred George Gardiner (1865-1946) was an English journalist, editor, and author. Writing under the pen-name 'Alpha of the Plough', he was known for his thoughtful and elegant essays on a wide range of subjects, from the mundane to the profound.",
+                "historicalContext": "Gardiner wrote during the early 20th century, a period of immense social and political change, including the aftermath of World War I and the rise of new ideas about individual freedoms and societal responsibilities.",
+                "writingStyle": "His style is characterized by its clarity, gentle humor, and ability to draw large philosophical conclusions from small, everyday observations. He wrote in a conversational and accessible manner.",
+                "majorWorks": ["Pebbles on the Shore", "Windfalls", "Leaves in the Wind"],
+                "influence": "Gardiner was a master of the English essay form, and his work is celebrated for its wisdom, warmth, and timeless reflections on human nature and society."
+              },
+              "contentAnalysis": {
+                "summary": "Gardiner uses the anecdote of a woman insisting on walking in the middle of the street as a symbol of 'liberty' to argue about the true nature of freedom. He explains that individual liberty is not absolute; it must be limited to ensure the liberty and safety of everyone else in society. This 'social contract' means accepting small restrictions (like following the rule of the road) in order to prevent chaos and make true freedom possible for all.",
+                "themes": ["Liberty vs. Anarchy", "Individual Rights and Social Responsibility", "The Social Contract", "Civilized Behavior"],
+                "literaryDevices": [
+                  { "device": "Anecdote", "example": "The entire essay is built around the opening story of the old lady in Petrograd." },
+                  { "device": "Analogy", "example": "He compares the policeman restricting traffic to a symbol of liberty, not tyranny, because this action creates the social order needed for freedom to exist." }
+                ],
+                "criticalAnalysis": "The essay is a brilliant and concise argument for a mature understanding of liberty. Gardiner masterfully distinguishes between personal freedom in private matters and the necessary compromises required for public life. His central point is that consideration for others is the bedrock of a functioning, civilized society.",
+                "relevance": "Gardiner's essay is profoundly relevant today in debates about personal freedoms versus public health mandates, free speech versus hate speech, and individual rights versus the common good. It provides a clear and enduring framework for thinking about how to live together in a free society."
+              },
+              "faqs": [
+                { "question": "What is Gardiner's main point about liberty?", "answer": "His main point is that true liberty for everyone can only exist when each individual agrees to have their personal liberty slightly restricted. Absolute, unrestricted individual freedom would lead to social chaos, not liberty." }
+              ],
+              "quiz": [
+                { "question": "According to Gardiner, what is the 'foundation of social conduct'?", "options": ["Following the law strictly", "Personal freedom", "A reasonable consideration for the rights or feelings of others", "Strong government"], "correctAnswer": "A reasonable consideration for the rights or feelings of others", "explanation": "He explicitly states that this consideration for others is the foundation of how we behave in a society and what makes us civilized." }
+              ]
+            }
+          ]
         }
       ]
     },
