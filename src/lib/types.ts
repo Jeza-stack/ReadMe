@@ -36,7 +36,7 @@ export interface QuizQuestion {
 export interface LiteraryWork {
   title: string;
   slug: string;
-  category: 'Poetry' | 'Prose' | 'Short Stories' | "Shakespeare Scenes" | "Famous Speeches";
+  category: string;
   author: string;
   fullText: string;
   difficultWords: DifficultWord[];
@@ -73,3 +73,5 @@ export interface Data {
     blogPosts: BlogPost[];
   };
 }
+
+    
