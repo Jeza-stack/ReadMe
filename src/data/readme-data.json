@@ -1,0 +1,143 @@
+
+{
+  "courses": [
+    {
+      "name": "English I",
+      "slug": "english-1",
+      "description": "Foundational course in English literature and language competency, focusing on classic poetry, prose, and essential workplace communication skills.",
+      "image": "https://placehold.co/600x400.png",
+      "dataAiHint": "library books",
+      "categories": [
+        {
+          "name": "Poetry",
+          "works": [
+            {
+              "title": "Don't Quit",
+              "slug": "dont-quit",
+              "category": "Poetry",
+              "author": "Edgar Albert Guest",
+              "fullText": "When things go wrong, as they sometimes will,\nWhen the road you're trudging seems all uphill,\nWhen the funds are low and the debts are high,\nAnd you want to smile, but you have to sigh,\nWhen care is pressing you down a bit,\nRest, if you must, but don't you quit.\n\nLife is queer with its twists and turns,\nAs every one of us sometimes learns,\nAnd many a failure turns about,\nWhen he might have won had he stuck it out;\nDon't give up though the pace seems slow—\nYou may succeed with another blow.\n\nSuccess is failure turned inside out—\nThe silver tint of the clouds of doubt,\nAnd you never can tell how close you are,\nIt may be near when it seems so far;\nSo stick to the fight when you're hardest hit—\nIt's when things seem worst that you must not quit.",
+              "difficultWords": [
+                { "word": "Trudging", "definition": "Walking slowly and with heavy steps, typically because of exhaustion or harsh conditions.", "connotation": "Suggests a difficult, weary journey.", "example": "He was trudging through the deep snow." },
+                { "word": "Queer", "definition": "Strange; odd.", "connotation": "In this context, it means peculiar or unusual, not its modern usage.", "example": "Life is queer with its unexpected events." }
+              ],
+              "authorInfo": {
+                "biography": "Edgar Albert Guest (1881-1959) was a prolific English-born American poet who was popular in the first half of the 20th century and became known as the 'People's Poet'.",
+                "historicalContext": "His poetry often reflected the optimistic, sentimental values of early 20th-century America.",
+                "writingStyle": "Simple, rhyming verse with an emphasis on inspirational and moral themes.",
+                "majorWorks": ["A Heap o' Livin'", "Just Folks"],
+                "influence": "His work was widely syndicated in newspapers and resonated with a broad audience looking for everyday inspiration."
+              },
+              "contentAnalysis": {
+                "summary": "The poem is an inspirational message about perseverance. It encourages the reader to not give up when faced with hardship, suggesting that success might be just around the corner, even when things look their bleakest.",
+                "themes": ["Perseverance", "Hope", "Resilience"],
+                "literaryDevices": [
+                  { "device": "Metaphor", "example": "Success is failure turned inside out— The silver tint of the clouds of doubt." }
+                ],
+                "criticalAnalysis": "While sometimes criticized for its sentimentality, the poem's enduring popularity lies in its simple, direct, and universally relatable message of encouragement.",
+                "relevance": "The message remains relevant today as a timeless reminder to stay resilient in the face of personal and professional challenges."
+              },
+              "faqs": [
+                { "question": "What is the main theme of 'Don't Quit'?", "answer": "The central theme is perseverance and the importance of not giving up, even when facing extreme difficulties." }
+              ],
+              "quiz": [
+                { "question": "What does the author suggest you do when 'care is pressing you down'?", "options": ["Quit", "Rest, if you must", "Smile", "Sigh"], "correctAnswer": "Rest, if you must", "explanation": "The poem advises taking a break if needed but ultimately to not quit the struggle." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "English III",
+      "slug": "english-3",
+      "description": "Advanced course covering complex literary works, including Shakespeare, famous speeches, and modern communication for professional environments.",
+      "image": "https://placehold.co/600x400.png",
+      "dataAiHint": "classic architecture",
+      "categories": [
+        {
+          "name": "Famous Speeches",
+          "works": [
+            {
+              "title": "Tryst with Destiny",
+              "slug": "tryst-with-destiny",
+              "category": "Famous Speeches",
+              "author": "Jawaharlal Nehru",
+              "fullText": "Long years ago we made a tryst with destiny, and now the time comes when we shall redeem our pledge, not wholly or in full measure, but very substantially. At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom...",
+              "difficultWords": [
+                { "word": "Tryst", "definition": "A private, romantic rendezvous between lovers.", "connotation": "Here it's used metaphorically to signify a profound, long-awaited appointment with fate.", "example": "They had a secret tryst by the river." },
+                { "word": "Redeem", "definition": "Fulfill or carry out (a pledge or promise).", "connotation": "Suggests honorably meeting an obligation.", "example": "He worked hard to redeem his promise." }
+              ],
+              "authorInfo": {
+                "biography": "Jawaharlal Nehru (1889-1964) was an Indian anti-colonial nationalist, secular humanist, social democrat and author who was a central figure in India during the middle of the 20th century.",
+                "historicalContext": "This speech was delivered on the eve of India's Independence in 1947, a moment of immense historical significance.",
+                "writingStyle": "Eloquent, powerful, and deeply moving, using elevated language to capture the gravity of the occasion.",
+                "majorWorks": ["The Discovery of India"],
+                "influence": "As India's first Prime Minister, his words and vision shaped the new nation."
+              },
+              "contentAnalysis": {
+                "summary": "Nehru's speech marks India's independence. He acknowledges the weight of the moment, the fulfillment of a long-held promise ('tryst'), and the immense responsibility that comes with freedom. He calls for dedication to building a new, sovereign India.",
+                "themes": ["Freedom", "Destiny", "Responsibility", "Nation-building"],
+                "literaryDevices": [
+                  { "device": "Personification", "example": "India will awake to life and freedom." }
+                ],
+                "criticalAnalysis": "It is considered one of the greatest speeches of the 20th century, perfectly capturing the hope and solemnity of India's independence.",
+                "relevance": "The speech is a powerful expression of national identity and the ideals upon which modern India was founded."
+              },
+              "faqs": [
+                { "question": "What is the 'tryst with destiny' Nehru refers to?", "answer": "It refers to the long struggle for India's independence, which he frames as a long-awaited and destined meeting with freedom." }
+              ],
+              "quiz": [
+                { "question": "When did India 'awake to life and freedom' according to the speech?", "options": ["At sunrise", "At the stroke of the midnight hour", "In the afternoon", "The next morning"], "correctAnswer": "At the stroke of the midnight hour", "explanation": "This iconic line signifies the precise moment of India's independence from British rule." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "softSkills": {
+    "blogCategories": [
+      "Communication Skills",
+      "Leadership & Management",
+      "Emotional Intelligence",
+      "Time Management",
+      "Teamwork & Collaboration",
+      "Problem Solving",
+      "Adaptability & Flexibility",
+      "Work-Life Balance"
+    ],
+    "blogPosts": [
+      {
+        "title": "10 Essential Communication Skills for Career Success",
+        "slug": "10-essential-communication-skills",
+        "category": "Communication Skills",
+        "content": "Effective communication is the cornerstone of success in any professional environment. This post explores ten crucial skills, from active listening to non-verbal cues, that can help you build stronger relationships and advance your career. We'll delve into practical examples and exercises to help you hone each skill.",
+        "readingTime": "5 min",
+        "authorProfile": "Jane Doe, Career Coach",
+        "image": "https://placehold.co/600x400.png",
+        "dataAiHint": "people talking"
+      },
+      {
+        "title": "How to Develop Emotional Intelligence in the Workplace",
+        "slug": "develop-emotional-intelligence",
+        "category": "Emotional Intelligence",
+        "content": "Emotional intelligence (EQ) is the ability to understand and manage your own emotions, and those of the people around you. High EQ helps you navigate the social complexities of the workplace, lead and motivate others. This article provides a roadmap for developing your EQ, focusing on self-awareness, empathy, and social skills.",
+        "readingTime": "7 min",
+        "authorProfile": "Dr. John Smith, Psychologist",
+        "image": "https://placehold.co/600x400.png",
+        "dataAiHint": "empathy connection"
+      },
+      {
+        "title": "Time Management Strategies for Busy Professionals",
+        "slug": "time-management-strategies",
+        "category": "Time Management",
+        "content": "Feeling overwhelmed by your to-do list? You're not alone. This guide offers proven time management strategies, such as the Eisenhower Matrix and Pomodoro Technique, to help you prioritize tasks, reduce stress, and increase productivity. Learn to take control of your schedule and achieve a better work-life balance.",
+        "readingTime": "6 min",
+        "authorProfile": "Emily White, Productivity Expert",
+        "image": "https://placehold.co/600x400.png",
+        "dataAiHint": "clock calendar"
+      }
+    ]
+  }
+}
