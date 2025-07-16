@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BookMarked, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const navItems = [
   { href: "/courses/english-1", label: "English I" },
@@ -47,6 +47,9 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[280px]">
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Menu</SheetTitle>
+                </SheetHeader>
                 <div className="p-4">
                     <div className="flex justify-between items-center mb-8">
                          <Link href="/" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
