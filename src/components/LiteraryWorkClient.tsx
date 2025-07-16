@@ -6,35 +6,29 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Play, Pause, Rewind, FastForward, Volume2, CheckCircle, XCircle } from "lucide-react";
+import { Play, Pause, Rewind, Loader, CheckCircle, XCircle } from "lucide-react";
 import { Progress } from "./ui/progress";
-import { SocialShare } from "./SocialShare";
 import { Separator } from "./ui/separator";
+import { convertTextToSpeech } from "@/ai/flows/text-to-speech-flow";
+import { useToast } from "@/hooks/use-toast";
+import { Skeleton } from "./ui/skeleton";
 
 // InteractiveText Component
-function InteractiveText({ text, difficultWords, highlightIndex }: { text: string; difficultWords: DifficultWord[], highlightIndex: number | null }) {
+function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
     
     const parts = text.split(/(\s+)/);
 
-    let charCount = 0;
-
     return (
         <p className="text-lg/relaxed font-body">
             {parts.map((part, index) => {
-                const start = charCount;
-                const end = start + part.length;
-                charCount = end;
-
-                const isHighlight = highlightIndex !== null && highlightIndex >= start && highlightIndex < end;
-
                 const wordPart = part.trim().replace(/[.,;!?]$/, '');
                 if (difficultWordsMap.has(wordPart.toLowerCase())) {
                     const wordData = difficultWordsMap.get(wordPart.toLowerCase())!;
                     return (
                         <Popover key={index}>
                             <PopoverTrigger asChild>
-                                <span className={`cursor-pointer font-bold text-primary hover:underline ${isHighlight ? 'bg-accent/30' : ''}`}>{part}</span>
+                                <span className="cursor-pointer font-bold text-primary hover:underline">{part}</span>
                             </PopoverTrigger>
                             <PopoverContent className="w-80">
                                 <div className="space-y-2">
@@ -47,54 +41,74 @@ function InteractiveText({ text, difficultWords, highlightIndex }: { text: strin
                         </Popover>
                     );
                 }
-                return <span key={index} className={isHighlight ? 'bg-accent/30 rounded' : ''}>{part}</span>;
+                return <span key={index}>{part}</span>;
             })}
         </p>
     );
 }
 
 // AudioPlayer Component
-function AudioPlayer({ text, onBoundary }: { text: string, onBoundary: (charIndex: number) => void }) {
+function AudioPlayer({ text }: { text: string }) {
+    const [isLoading, setIsLoading] = useState(true);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [playbackRate, setPlaybackRate] = useState(1);
-    const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+    const [audioSrc, setAudioSrc] = useState<string | null>(null);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+    const { toast } = useToast();
 
     useEffect(() => {
-        const synth = window.speechSynthesis;
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.onend = () => setIsPlaying(false);
-        utterance.onboundary = (event) => onBoundary(event.charIndex);
-        utteranceRef.current = utterance;
-
-        return () => {
-            synth.cancel();
-        };
-    }, [text, onBoundary]);
-
-    const handlePlayPause = () => {
-        const synth = window.speechSynthesis;
-        if (isPlaying) {
-            synth.pause();
-        } else {
-            if (synth.paused) {
-                synth.resume();
-            } else {
-                synth.speak(utteranceRef.current!);
+        async function generateAudio() {
+            try {
+                setIsLoading(true);
+                const { audioDataUri } = await convertTextToSpeech({ text });
+                setAudioSrc(audioDataUri);
+            } catch (error) {
+                console.error("Error generating audio:", error);
+                toast({
+                    variant: "destructive",
+                    title: "Audio Error",
+                    description: "Failed to generate audio for this text. Please try again later.",
+                });
+            } finally {
+                setIsLoading(false);
             }
         }
-        setIsPlaying(!isPlaying);
+        generateAudio();
+    }, [text, toast]);
+
+    const handlePlayPause = () => {
+        if (!audioRef.current) return;
+        if (isPlaying) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.play();
+        }
     };
     
-    const handleRateChange = (rate: number) => {
-        setPlaybackRate(rate);
-        if (utteranceRef.current) {
-            utteranceRef.current.rate = rate;
-        }
-    }
-    
     const handleStop = () => {
-        window.speechSynthesis.cancel();
-        setIsPlaying(false);
+        if (!audioRef.current) return;
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+    }
+
+    if (isLoading) {
+        return (
+            <Card className="my-6">
+                <CardContent className="p-4 flex items-center justify-center gap-4">
+                    <Loader className="w-6 h-6 animate-spin" />
+                    <p className="text-muted-foreground">Generating audio...</p>
+                </CardContent>
+            </Card>
+        )
+    }
+
+    if (!audioSrc) {
+        return (
+            <Card className="my-6">
+                <CardContent className="p-4 flex items-center justify-center gap-4">
+                    <p className="text-destructive">Audio could not be loaded.</p>
+                </CardContent>
+            </Card>
+        );
     }
 
     return (
@@ -108,14 +122,13 @@ function AudioPlayer({ text, onBoundary }: { text: string, onBoundary: (charInde
                         <Rewind className="w-6 h-6"/>
                     </Button>
                 </div>
-                <div className="flex items-center gap-2 text-sm">
-                    <span className="font-medium">Speed:</span>
-                    {[0.75, 1, 1.5, 2].map(rate => (
-                        <Button key={rate} size="sm" variant={playbackRate === rate ? 'default' : 'ghost'} onClick={() => handleRateChange(rate)}>
-                            {rate}x
-                        </Button>
-                    ))}
-                </div>
+                 <audio 
+                    ref={audioRef} 
+                    src={audioSrc}
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                />
             </CardContent>
         </Card>
     );
@@ -225,16 +238,14 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
 // Main Client Component
 export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
-    const [highlightIndex, setHighlightIndex] = useState<number | null>(null);
-
     return (
         <div>
             {/* Main Content */}
             <div className="prose prose-lg max-w-none">
                  <h2 className="font-headline text-3xl font-bold mt-12 mb-2">Full Text</h2>
                  <p className="text-muted-foreground mb-4">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
-                <AudioPlayer text={work.fullText} onBoundary={setHighlightIndex} />
-                <InteractiveText text={work.fullText} difficultWords={work.difficultWords} highlightIndex={highlightIndex} />
+                <AudioPlayer text={work.fullText} />
+                <InteractiveText text={work.fullText} difficultWords={work.difficultWords} />
             </div>
             
             <Separator className="my-12" />
