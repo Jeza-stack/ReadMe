@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { LiteraryWork, DifficultWord, QuizQuestion, Faq } from "@/lib/types";
@@ -62,9 +63,13 @@ function InteractiveText({ text, difficultWords, currentWordIndex }: { text: str
 // AudioPlayer Component
 function AudioPlayer({ text, onTimeUpdate, onMetadata, onPlayStateChange }: { text: string; onTimeUpdate: (time: number) => void; onMetadata: (data: any) => void; onPlayStateChange: (playing: boolean) => void; }) {
     const [isLoading, setIsLoading] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
     const [audioSrc, setAudioSrc] = useState<string | null>(null);
     const [playbackRate, setPlaybackRate] = useState(1);
+    const [duration, setDuration] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);
     const audioRef = useRef<HTMLAudioElement | null>(null);
+    const progressRef = useRef<HTMLDivElement | null>(null);
     const { toast } = useToast();
 
     useEffect(() => {
@@ -107,7 +112,36 @@ function AudioPlayer({ text, onTimeUpdate, onMetadata, onPlayStateChange }: { te
         if (!audioRef.current) return;
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
-    }
+    };
+
+    const handleTimeUpdateInternal = () => {
+        if (!audioRef.current) return;
+        const time = audioRef.current.currentTime;
+        setCurrentTime(time);
+        onTimeUpdate(time);
+    };
+
+    const handleLoadedMetadata = () => {
+        if (audioRef.current) {
+            setDuration(audioRef.current.duration);
+        }
+    };
+
+    const handleSeek = (event: React.MouseEvent<HTMLDivElement>) => {
+        if (!progressRef.current || !audioRef.current) return;
+        const rect = progressRef.current.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const width = rect.width;
+        const newTime = (x / width) * duration;
+        audioRef.current.currentTime = newTime;
+        setCurrentTime(newTime);
+    };
+
+    const formatTime = (seconds: number) => {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    };
 
     if (isLoading) {
         return (
@@ -132,18 +166,27 @@ function AudioPlayer({ text, onTimeUpdate, onMetadata, onPlayStateChange }: { te
 
     return (
         <Card className="my-6">
-            <CardContent className="p-4 flex items-center justify-between gap-4">
+            <CardContent className="p-4 flex items-center gap-4">
                 <div className="flex items-center gap-2">
                     <Button size="icon" variant="ghost" onClick={handlePlayPause}>
-                        {audioRef.current?.paused !== false ? <Play className="w-6 h-6"/> : <Pause className="w-6 h-6"/>}
+                        {isPlaying ? <Pause className="w-6 h-6"/> : <Play className="w-6 h-6"/>}
                     </Button>
                      <Button size="icon" variant="ghost" onClick={handleStop}>
                         <Rewind className="w-6 h-6"/>
                     </Button>
                 </div>
+
+                <div className="flex-grow flex items-center gap-3">
+                    <span className="text-xs font-mono text-muted-foreground">{formatTime(currentTime)}</span>
+                    <div ref={progressRef} className="w-full cursor-pointer py-2" onClick={handleSeek}>
+                        <Progress value={(currentTime / duration) * 100} className="h-2" />
+                    </div>
+                    <span className="text-xs font-mono text-muted-foreground">{formatTime(duration)}</span>
+                </div>
+
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="outline">
+                        <Button variant="outline" className="w-28">
                             Speed: {playbackRate}x <ChevronDown className="w-4 h-4 ml-2" />
                         </Button>
                     </DropdownMenuTrigger>
@@ -159,10 +202,11 @@ function AudioPlayer({ text, onTimeUpdate, onMetadata, onPlayStateChange }: { te
                  <audio 
                     ref={audioRef} 
                     src={audioSrc}
-                    onPlay={() => onPlayStateChange(true)}
-                    onPause={() => onPlayStateChange(false)}
-                    onEnded={() => onPlayStateChange(false)}
-                    onTimeUpdate={() => onTimeUpdate(audioRef.current?.currentTime ?? 0)}
+                    onPlay={() => { setIsPlaying(true); onPlayStateChange(true); }}
+                    onPause={() => { setIsPlaying(false); onPlayStateChange(false); }}
+                    onEnded={() => { setIsPlaying(false); onPlayStateChange(false); }}
+                    onTimeUpdate={handleTimeUpdateInternal}
+                    onLoadedMetadata={handleLoadedMetadata}
                 />
             </CardContent>
         </Card>
