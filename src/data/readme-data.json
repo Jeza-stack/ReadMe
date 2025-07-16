@@ -337,108 +337,239 @@
           ]
         },
         {
-            "name": "Unit IV: Language Competency",
-            "works": [
-              {
-                "title": "Vocabulary: Synonyms, Antonyms, and Word Formation",
-                "slug": "vocabulary-synonyms-antonyms-word-formation",
-                "category": "Unit IV: Language Competency",
-                "author": "ReadMe Studio",
-                "fullText": "Building a strong vocabulary is essential for effective communication. This lesson focuses on three key areas: synonyms, antonyms, and word formation.\n\n**1. Synonyms**\nSynonyms are words that have the same or nearly the same meaning as another word. Using synonyms can make your writing more interesting and precise.\n\n*   **Example:**\n    *   Instead of always using the word 'good', you could use: **excellent**, **great**, **fantastic**, **superb**, **wonderful**.\n    *   For 'happy', you could use: **joyful**, **cheerful**, **delighted**, **pleased**.\n\n**2. Antonyms**\nAntonyms are words that have the opposite meaning of another word. Understanding antonyms helps clarify meaning and provides contrast.\n\n*   **Example:**\n    *   The antonym of 'hot' is **cold**.\n    *   The antonym of 'fast' is **slow**.\n    *   The antonym of 'begin' is **end**.\n\n**3. Word Formation**\nWord formation is the process of creating new words from existing words, often by adding prefixes or suffixes.\n\n*   **Prefixes:** A prefix is added to the beginning of a word to change its meaning.\n    *   `un-` + `happy` = `unhappy` (opposite of happy)\n    *   `re-` + `do` = `redo` (to do again)\n\n*   **Suffixes:** A suffix is added to the end of a word, and it can change the word's meaning or its part of speech.\n    *   `wonder` (noun/verb) + `-ful` = `wonderful` (adjective)\n    *   `quick` (adjective) + `-ly` = `quickly` (adverb)",
-                "difficultWords": [
-                  { "word": "Synonym", "definition": "A word or phrase that means exactly or nearly the same as another word or phrase in the same language.", "connotation": "Used for variety and precision in language.", "example": "''Shut' is a synonym of 'close'." },
-                  { "word": "Antonym", "definition": "A word opposite in meaning to another.", "connotation": "Used to show contrast.", "example": "''Bad' is an antonym of 'good'." },
-                  { "word": "Prefix", "definition": "A group of letters placed at the beginning of a word to alter its meaning.", "connotation": "A fundamental concept in morphology.", "example": "The prefix 'un-' means 'not'." }
-                ],
-                "authorInfo": {
-                    "biography": "This content was created by the educational team at ReadMe Studio.",
-                    "historicalContext": "",
-                    "writingStyle": "Clear, concise, and focused on practical application for English language learners.",
-                    "majorWorks": [],
-                    "influence": ""
-                },
-                "contentAnalysis": {
-                  "summary": "This lesson explains the concepts of synonyms (words with similar meanings), antonyms (words with opposite meanings), and word formation through prefixes and suffixes. It provides clear examples for each concept to help build a stronger vocabulary.",
-                  "themes": ["Vocabulary Building", "Language Precision", "Word Structure"],
-                  "literaryDevices": [],
-                  "criticalAnalysis": "",
-                  "relevance": "A strong vocabulary is crucial for clear communication in both academic and professional settings. Understanding these concepts allows for more nuanced and effective expression."
-                },
-                "faqs": [
-                  { "question": "Why is it important to use synonyms?", "answer": "Using synonyms helps avoid repetition and makes your writing more engaging and precise. It allows you to choose the word that best fits the specific context." }
-                ],
-                "quiz": [
-                  { "question": "What is the synonym for 'beautiful'?", "options": ["Ugly", "Pretty", "Tall", "Smart"], "correctAnswer": "Pretty", "explanation": "'Pretty' has a similar meaning to 'beautiful'. 'Ugly' is an antonym." },
-                  { "question": "Which prefix would you add to the word 'possible' to make it mean 'not possible'?", "options": ["un-", "im-", "re-", "pre-"], "correctAnswer": "im-", "explanation": "The correct prefix to negate 'possible' is 'im-', creating the word 'impossible'." }
-                ]
+          "name": "Unit IV: Language Competency",
+          "works": [
+            {
+              "title": "Vocabulary: Synonyms, Antonyms, and Word Formation",
+              "slug": "vocabulary-synonyms-antonyms-word-formation",
+              "category": "Unit IV: Language Competency",
+              "author": "ReadMe Studio",
+              "fullText": "Building a strong vocabulary is essential for effective communication. This lesson focuses on three key areas: synonyms, antonyms, and word formation.\n\n**1. Synonyms**\nSynonyms are words that have the same or nearly the same meaning as another word. Using synonyms can make your writing more interesting and precise.\n\n*   **Example:**\n    *   Instead of always using the word 'good', you could use: **excellent**, **great**, **fantastic**, **superb**, **wonderful**.\n    *   For 'happy', you could use: **joyful**, **cheerful**, **delighted**, **pleased**.\n\n**2. Antonyms**\nAntonyms are words that have the opposite meaning of another word. Understanding antonyms helps clarify meaning and provides contrast.\n\n*   **Example:**\n    *   The antonym of 'hot' is **cold**.\n    *   The antonym of 'fast' is **slow**.\n    *   The antonym of 'begin' is **end**.\n\n**3. Word Formation**\nWord formation is the process of creating new words from existing words, often by adding prefixes or suffixes.\n\n*   **Prefixes:** A prefix is added to the beginning of a word to change its meaning.\n    *   `un-` + `happy` = `unhappy` (opposite of happy)\n    *   `re-` + `do` = `redo` (to do again)\n\n*   **Suffixes:** A suffix is added to the end of a word, and it can change the word's meaning or its part of speech.\n    *   `wonder` (noun/verb) + `-ful` = `wonderful` (adjective)\n    *   `quick` (adjective) + `-ly` = `quickly` (adverb)",
+              "difficultWords": [
+                { "word": "Synonym", "definition": "A word or phrase that means exactly or nearly the same as another word or phrase in the same language.", "connotation": "Used for variety and precision in language.", "example": "''Shut' is a synonym of 'close'." },
+                { "word": "Antonym", "definition": "A word opposite in meaning to another.", "connotation": "Used to show contrast.", "example": "''Bad' is an antonym of 'good'." },
+                { "word": "Prefix", "definition": "A group of letters placed at the beginning of a word to alter its meaning.", "connotation": "A fundamental concept in morphology.", "example": "The prefix 'un-' means 'not'." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "historicalContext": "",
+                "writingStyle": "Clear, concise, and focused on practical application for English language learners.",
+                "majorWorks": [],
+                "influence": ""
               },
-              {
-                "title": "Using Articles and Parts of Speech",
-                "slug": "articles-and-parts-of-speech",
-                "category": "Unit IV: Language Competency",
-                "author": "ReadMe Studio",
-                "fullText": "Understanding grammar is the foundation of clear writing and speech. This lesson covers two fundamental components: Articles and Parts of Speech.\n\n**1. Articles (a, an, the)**\nArticles are words that define a noun as specific or unspecific.\n\n*   **Indefinite Articles (a, an):** Used for a non-specific noun. 'a' is used before words that start with a consonant sound, and 'an' is used before words that start with a vowel sound.\n    *   Examples: 'I saw **a** cat.' (any cat), 'She ate **an** apple.' (any apple).\n\n*   **Definite Article (the):** Used for a specific noun that both the speaker and listener know.\n    *   Example: 'I saw **the** cat that lives next door.' (a specific cat).\n\n**2. Parts of Speech**\nThese are the categories to which words are assigned based on their grammatical function.\n\n*   **Noun:** A person, place, thing, or idea. (e.g., `teacher`, `school`, `book`, `love`)\n*   **Pronoun:** A word used in place of a noun. (e.g., `he`, `she`, `it`, `they`)\n*   **Verb:** An action or a state of being. (e.g., `run`, `study`, `is`, `seems`)\n*   **Adjective:** A word that describes a noun. (e.g., `**blue** sky`, `**happy** student`)\n*   **Adverb:** A word that describes a verb, adjective, or another adverb. (e.g., `runs **quickly**`, `**very** happy`)\n*   **Preposition:** Shows the relationship between a noun/pronoun and another word. (e.g., `in`, `on`, `at`, `under`)\n*   **Conjunction:** A word that joins words or phrases. (e.g., `and`, `but`, `or`)\n*   **Interjection:** A word that expresses strong emotion. (e.g., `Wow!`, `Oh!`, `Ouch!`)",
-                "difficultWords": [
-                  { "word": "Article", "definition": "A word (such as 'a,' 'an,' or 'the') that is used with a noun to specify its grammatical definiteness.", "connotation": "A basic building block of English grammar.", "example": "The articles in English are 'a,' 'an,' and 'the'." },
-                  { "word": "Noun", "definition": "A word that refers to a person, place, thing, event, substance, or quality.", "connotation": "A fundamental part of speech.", "example": "'Cat' is a noun." },
-                  { "word": "Verb", "definition": "A word that expresses an action, an occurrence, or a state of being.", "connotation": "The core of a sentence's predicate.", "example": "'Run' is a verb." }
-                ],
-                "authorInfo": {
-                    "biography": "This content was created by the educational team at ReadMe Studio.",
-                    "historicalContext": "",
-                    "writingStyle": "Clear, concise, and focused on practical application for English language learners.",
-                    "majorWorks": [],
-                    "influence": ""
-                },
-                "contentAnalysis": {
-                  "summary": "This lesson provides a foundational overview of English grammar, focusing on the correct usage of articles ('a,' 'an,' 'the') and defining the eight primary parts of speech with clear examples for each.",
-                  "themes": ["Grammar Fundamentals", "Sentence Structure", "Clarity in Communication"],
-                  "literaryDevices": [],
-                  "criticalAnalysis": "",
-                  "relevance": "A solid grasp of articles and parts of speech is non-negotiable for constructing clear, correct, and effective sentences in English."
-                },
-                "faqs": [
-                  { "question": "When should you use 'an' instead of 'a'?", "answer": "You should use 'an' before a word that begins with a vowel sound (a, e, i, o, u), such as 'an apple' or 'an hour'." }
-                ],
-                "quiz": [
-                  { "question": "Which part of speech is the word 'quickly' in the sentence 'She quickly finished her homework.'?", "options": ["Adjective", "Verb", "Adverb", "Noun"], "correctAnswer": "Adverb", "explanation": "'Quickly' is an adverb because it describes the verb 'finished,' telling us how the action was done." },
-                  { "question": "Choose the correct article: 'I need to buy ___ new car.'", "options": ["a", "an", "the", "no article"], "correctAnswer": "a", "explanation": "'a' is the correct indefinite article because 'car' is a non-specific noun that starts with a consonant sound." }
-                ]
+              "contentAnalysis": {
+                "summary": "This lesson explains the concepts of synonyms (words with similar meanings), antonyms (words with opposite meanings), and word formation through prefixes and suffixes. It provides clear examples for each concept to help build a stronger vocabulary.",
+                "themes": ["Vocabulary Building", "Language Precision", "Word Structure"],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "A strong vocabulary is crucial for clear communication in both academic and professional settings. Understanding these concepts allows for more nuanced and effective expression."
               },
-              {
-                "title": "Error Correction Exercises",
-                "slug": "error-correction-exercises",
-                "category": "Unit IV: Language Competency",
-                "author": "ReadMe Studio",
-                "fullText": "Identifying and correcting errors is a key skill in mastering a language. This section provides exercises to test your ability to spot common grammatical mistakes.\n\nRead each sentence carefully and identify the error. The correction is provided in the quiz explanation.\n\n**Instructions:** Choose the option that correctly rephrases the sentence or identifies the error.\n\n**Example Sentences for Practice:**\n1.  He don't like coffee.\n2.  She is more taller than her brother.\n3.  I have seen that movie yesterday.\n4.  The dog lost it's bone.\n5.  Me and my friend went to the park.\n\n*Use the quiz below to test your error correction skills!*",
-                "difficultWords": [
-                  { "word": "Grammatical", "definition": "Conforming to the rules of grammar.", "connotation": "Relates to the structural rules of a language.", "example": "Please check for grammatical errors." }
-                ],
-                "authorInfo": {
-                    "biography": "This content was created by the educational team at ReadMe Studio.",
-                    "historicalContext": "",
-                    "writingStyle": "Clear, concise, and focused on practical application for English language learners.",
-                    "majorWorks": [],
-                    "influence": ""
-                },
-                "contentAnalysis": {
-                  "summary": "This lesson provides practical exercises for identifying and correcting common grammatical errors in English sentences, covering topics like subject-verb agreement, comparative adjectives, verb tenses, and pronoun usage.",
-                  "themes": ["Practical Grammar", "Editing", "Proofreading"],
-                  "literaryDevices": [],
-                  "criticalAnalysis": "",
-                  "relevance": "The ability to spot and correct errors is crucial for clear and professional communication in writing, from emails to academic papers."
-                },
-                "faqs": [
-                  { "question": "What is a common subject-verb agreement error?", "answer": "A common error is using a plural verb with a singular subject or vice-versa. For example, 'He don't like...' is incorrect; it should be 'He doesn't like...'" }
-                ],
-                "quiz": [
-                  { "question": "Find the error: 'He don't like coffee.'", "options": ["Incorrect verb form", "Incorrect noun", "Incorrect spelling", "No error"], "correctAnswer": "Incorrect verb form", "explanation": "The correct form is 'He doesn't like coffee.' The subject 'He' is singular, so it requires the singular verb 'doesn't'." },
-                  { "question": "Find the error: 'The dog lost it's bone.'", "options": ["Incorrect verb", "Incorrect use of 'it's'", "Incorrect spelling", "No error"], "correctAnswer": "Incorrect use of 'it's'", "explanation": "The sentence requires the possessive pronoun 'its'. 'It's' is a contraction for 'it is'. The correct sentence is 'The dog lost its bone.'" },
-                  { "question": "Find the error: 'I have seen that movie yesterday.'", "options": ["Incorrect tense", "Incorrect subject", "Incorrect article", "No error"], "correctAnswer": "Incorrect tense", "explanation": "The use of 'yesterday' indicates a specific time in the past, which requires the simple past tense. The correct sentence is 'I saw that movie yesterday.'" }
+              "faqs": [
+                { "question": "Why is it important to use synonyms?", "answer": "Using synonyms helps avoid repetition and makes your writing more engaging and precise. It allows you to choose the word that best fits the specific context." }
+              ],
+              "quiz": [
+                { "question": "What is the synonym for 'beautiful'?", "options": ["Ugly", "Pretty", "Tall", "Smart"], "correctAnswer": "Pretty", "explanation": "'Pretty' has a similar meaning to 'beautiful'. 'Ugly' is an antonym." },
+                { "question": "Which prefix would you add to the word 'possible' to make it mean 'not possible'?", "options": ["un-", "im-", "re-", "pre-"], "correctAnswer": "im-", "explanation": "The correct prefix to negate 'possible' is 'im-', creating the word 'impossible'." }
+              ]
+            },
+            {
+              "title": "Using Articles and Parts of Speech",
+              "slug": "articles-and-parts-of-speech",
+              "category": "Unit IV: Language Competency",
+              "author": "ReadMe Studio",
+              "fullText": "Understanding grammar is the foundation of clear writing and speech. This lesson covers two fundamental components: Articles and Parts of Speech.\n\n**1. Articles (a, an, the)**\nArticles are words that define a noun as specific or unspecific.\n\n*   **Indefinite Articles (a, an):** Used for a non-specific noun. 'a' is used before words that start with a consonant sound, and 'an' is used before words that start with a vowel sound.\n    *   Examples: 'I saw **a** cat.' (any cat), 'She ate **an** apple.' (any apple).\n\n*   **Definite Article (the):** Used for a specific noun that both the speaker and listener know.\n    *   Example: 'I saw **the** cat that lives next door.' (a specific cat).\n\n**2. Parts of Speech**\nThese are the categories to which words are assigned based on their grammatical function.\n\n*   **Noun:** A person, place, thing, or idea. (e.g., `teacher`, `school`, `book`, `love`)\n*   **Pronoun:** A word used in place of a noun. (e.g., `he`, `she`, `it`, `they`)\n*   **Verb:** An action or a state of being. (e.g., `run`, `study`, `is`, `seems`)\n*   **Adjective:** A word that describes a noun. (e.g., `**blue** sky`, `**happy** student`)\n*   **Adverb:** A word that describes a verb, adjective, or another adverb. (e.g., `runs **quickly**`, `**very** happy`)\n*   **Preposition:** Shows the relationship between a noun/pronoun and another word. (e.g., `in`, `on`, `at`, `under`)\n*   **Conjunction:** A word that joins words or phrases. (e.g., `and`, `but`, `or`)\n*   **Interjection:** A word that expresses strong emotion. (e.g., `Wow!`, `Oh!`, `Ouch!`)",
+              "difficultWords": [
+                { "word": "Article", "definition": "A word (such as 'a,' 'an,' or 'the') that is used with a noun to specify its grammatical definiteness.", "connotation": "A basic building block of English grammar.", "example": "The articles in English are 'a,' 'an,' and 'the'." },
+                { "word": "Noun", "definition": "A word that refers to a person, place, thing, event, substance, or quality.", "connotation": "A fundamental part of speech.", "example": "'Cat' is a noun." },
+                { "word": "Verb", "definition": "A word that expresses an action, an occurrence, or a state of being.", "connotation": "The core of a sentence's predicate.", "example": "'Run' is a verb." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "historicalContext": "",
+                "writingStyle": "Clear, concise, and focused on practical application for English language learners.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This lesson provides a foundational overview of English grammar, focusing on the correct usage of articles ('a,' 'an,' 'the') and defining the eight primary parts of speech with clear examples for each.",
+                "themes": ["Grammar Fundamentals", "Sentence Structure", "Clarity in Communication"],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "A solid grasp of articles and parts of speech is non-negotiable for constructing clear, correct, and effective sentences in English."
+              },
+              "faqs": [
+                { "question": "When should you use 'an' instead of 'a'?", "answer": "You should use 'an' before a word that begins with a vowel sound (a, e, i, o, u), such as 'an apple' or 'an hour'." }
+              ],
+              "quiz": [
+                { "question": "Which part of speech is the word 'quickly' in the sentence 'She quickly finished her homework.'?", "options": ["Adjective", "Verb", "Adverb", "Noun"], "correctAnswer": "Adverb", "explanation": "'Quickly' is an adverb because it describes the verb 'finished,' telling us how the action was done." },
+                { "question": "Choose the correct article: 'I need to buy ___ new car.'", "options": ["a", "an", "the", "no article"], "correctAnswer": "a", "explanation": "'a' is the correct indefinite article because 'car' is a non-specific noun that starts with a consonant sound." }
                 ]
-              }
-            ]
-          }
+            },
+            {
+              "title": "Error Correction Exercises",
+              "slug": "error-correction-exercises",
+              "category": "Unit IV: Language Competency",
+              "author": "ReadMe Studio",
+              "fullText": "Identifying and correcting errors is a key skill in mastering a language. This section provides exercises to test your ability to spot common grammatical mistakes.\n\nRead each sentence carefully and identify the error. The correction is provided in the quiz explanation.\n\n**Instructions:** Choose the option that correctly rephrases the sentence or identifies the error.\n\n**Example Sentences for Practice:**\n1.  He don't like coffee.\n2.  She is more taller than her brother.\n3.  I have seen that movie yesterday.\n4.  The dog lost it's bone.\n5.  Me and my friend went to the park.\n\n*Use the quiz below to test your error correction skills!*",
+              "difficultWords": [
+                { "word": "Grammatical", "definition": "Conforming to the rules of grammar.", "connotation": "Relates to the structural rules of a language.", "example": "Please check for grammatical errors." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "historicalContext": "",
+                "writingStyle": "Clear, concise, and focused on practical application for English language learners.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This lesson provides practical exercises for identifying and correcting common grammatical errors in English sentences, covering topics like subject-verb agreement, comparative adjectives, verb tenses, and pronoun usage.",
+                "themes": ["Practical Grammar", "Editing", "Proofreading"],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "The ability to spot and correct errors is crucial for clear and professional communication in writing, from emails to academic papers."
+              },
+              "faqs": [
+                { "question": "What is a common subject-verb agreement error?", "answer": "A common error is using a plural verb with a singular subject or vice-versa. For example, 'He don't like...' is incorrect; it should be 'He doesn't like...'" }
+              ],
+              "quiz": [
+                { "question": "Find the error: 'He don't like coffee.'", "options": ["Incorrect verb form", "Incorrect noun", "Incorrect spelling", "No error"], "correctAnswer": "Incorrect verb form", "explanation": "The correct form is 'He doesn't like coffee.' The subject 'He' is singular, so it requires the singular verb 'doesn't'." },
+                { "question": "Find the error: 'The dog lost it's bone.'", "options": ["Incorrect verb", "Incorrect use of 'it's'", "Incorrect spelling", "No error"], "correctAnswer": "Incorrect use of 'it's'", "explanation": "The sentence requires the possessive pronoun 'its'. 'It's' is a contraction for 'it is'. The correct sentence is 'The dog lost its bone.'" },
+                { "question": "Find the error: 'I have seen that movie yesterday.'", "options": ["Incorrect tense", "Incorrect subject", "Incorrect article", "No error"], "correctAnswer": "Incorrect tense", "explanation": "The use of 'yesterday' indicates a specific time in the past, which requires the simple past tense. The correct sentence is 'I saw that movie yesterday.'" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit V: English for Workplace",
+          "works": [
+            {
+              "title": "Self-introduction and Greetings",
+              "slug": "self-introduction-and-greetings",
+              "category": "Unit V: English for Workplace",
+              "author": "ReadMe Studio",
+              "fullText": "Making a great first impression is key in any professional setting. This starts with confident greetings and a clear self-introduction.\n\n**Formal Greetings:**\nUse these in interviews, when meeting senior executives, or in formal meetings.\n- *Hello, [Name]. It's a pleasure to meet you.*\n- *Good morning/afternoon. My name is [Your Name].*\n\n**Informal Greetings:**\nUse these with colleagues you know well.\n- *Hi, [Name]. How are you?*\n- *Hey, how's it going?*\n\n**The Elevator Pitch Self-Introduction:**\nA concise, 30-second summary of who you are, what you do, and what you want.\n\n*Structure:*\n1.  **Who you are:** *'Hello, my name is [Your Name] and I'm a [Your Role/Title].'*\n2.  **What you do/value you bring:** *'I specialize in [Your Key Skill or Area], helping teams to [Achieve a Specific Outcome].'*\n3.  **Your goal (optional):** *'It's great to be here, and I'm looking forward to collaborating with you all.'*\n\n**Example:**\n*'Good morning, everyone. My name is Alex Smith, and I'm the new Project Manager. I specialize in agile methodologies and have a passion for helping teams streamline their workflows to deliver projects on time. I'm really excited to be part of this team.'*",
+              "difficultWords": [
+                { "word": "Concise", "definition": "Giving a lot of information clearly and in a few words; brief but comprehensive.", "connotation": "Implies efficiency and clarity.", "example": "Your summary should be concise and to the point." },
+                { "word": "Methodologies", "definition": "A system of methods used in a particular area of study or activity.", "connotation": "Refers to formal, structured approaches to work.", "example": "The company uses agile project management methodologies." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "historicalContext": "",
+                "writingStyle": "Practical, clear, and focused on actionable advice for professional communication.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This lesson provides practical guidance on how to greet people and introduce yourself in a professional workplace. It covers the difference between formal and informal greetings and offers a clear structure for a concise and effective self-introduction, often called an 'elevator pitch'.",
+                "themes": ["Professional Communication", "First Impressions", "Networking", "Workplace Etiquette"],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "A confident and clear self-introduction is a fundamental skill for networking, starting a new job, and establishing professional credibility."
+              },
+              "faqs": [
+                { "question": "When should I use a formal greeting instead of an informal one?", "answer": "Use a formal greeting when you are meeting someone for the first time, in an interview, or when addressing someone in a much higher position than you. It's always safer to start formal and become more informal as the relationship develops." }
+              ],
+              "quiz": [
+                { "question": "What are the three key parts of a good 'elevator pitch' self-introduction?", "options": ["Your name, your hobby, your favorite food", "Who you are, what you do, and your goal", "Your past, present, and future", "Your job title, your salary, and your boss's name"], "correctAnswer": "Who you are, what you do, and your goal", "explanation": "A strong self-introduction clearly states who you are (name/role), what you do (your value/skills), and what your objective is in that context." }
+              ]
+            },
+            {
+              "title": "Introducing Others",
+              "slug": "introducing-others",
+              "category": "Unit V: English for Workplace",
+              "author": "ReadMe Studio",
+              "fullText": "Properly introducing people is a vital networking skill that shows respect and helps build connections.\n\n**The Rule of Status:**\nWhen making an introduction, always introduce the person of lower status to the person of higher status. Address the person of higher status first.\n\n*   **Status can be based on:**\n    *   **Rank:** A junior employee vs. a senior executive (or CEO).\n    *   **Age:** A younger person vs. an older person.\n    *   **Client vs. Colleague:** A client vs. an internal team member.\n\n**Formula:**\n*'[Person of Higher Status], I'd like to introduce [Person of Lower Status]. [Person of Lower Status], this is [Person of Higher Status].'*\n\n**Adding Context:**\nAfter the names, provide a brief piece of information to start a conversation.\n\n**Example 1: Introducing a junior to a senior**\n*'Hi Ms. CEO, I'd like to introduce John Appleseed. John is the newest developer on our mobile team. John, this is Ms. Davis, our CEO.'*\n\n**Example 2: Introducing a colleague to a client**\n*'Mr. Client, I'd like you to meet Sarah Collins. Sarah is our lead designer and was responsible for the mockups I sent you last week. Sarah, this is Mr. Patel, our client from Acme Corp.'*\n\n**Responding to an Introduction:**\nWhen you are being introduced, smile, make eye contact, and offer a firm handshake (if culturally appropriate). A simple *'It's a pleasure to meet you, [Name]'* is a perfect response.",
+              "difficultWords": [
+                { "word": "Etiquette", "definition": "The customary code of polite behavior in society or among members of a particular profession or group.", "connotation": "Refers to the 'unwritten rules' of polite social conduct.", "example": "Good business etiquette is essential for success." },
+                { "word": "Status", "definition": "The relative social, professional, or other standing of someone or something.", "connotation": "In this context, it refers to hierarchy or importance in a professional setting.", "example": "When making introductions, you should be mindful of each person's status." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "historicalContext": "",
+                "writingStyle": "Practical, clear, and focused on actionable advice for professional communication.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This lesson explains the professional etiquette for introducing two people to each other. It covers the 'rule of status,' which dictates who should be introduced to whom, and provides a clear formula and examples. It also emphasizes the importance of adding context to help initiate conversation.",
+                "themes": ["Workplace Etiquette", "Networking", "Professional Communication"],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "Knowing how to make proper introductions is a sign of professionalism and social awareness that can significantly enhance one's networking abilities."
+              },
+              "faqs": [
+                { "question": "Who should you introduce first, a client or your CEO?", "answer": "The client is always considered the person of highest status. Therefore, you would address the client first and introduce your CEO to them. Example: 'Mr. Client, I'd like to introduce my CEO, Ms. Davis.'" }
+              ],
+              "quiz": [
+                { "question": "You need to introduce a new junior designer, Tom, to the Head of Marketing, Susan. How should you do it?", "options": ["'Tom, meet Susan. Susan, this is Tom.'", "'Hey everyone, this is Tom and Susan.'", "'Susan, I'd like to introduce Tom, our new junior designer. Tom, this is Susan, our Head of Marketing.'", "'Tom, I'd like to introduce Susan, our Head of Marketing. Susan, this is Tom, our new junior designer.'"], "correctAnswer": "'Susan, I'd like to introduce Tom, our new junior designer. Tom, this is Susan, our Head of Marketing.'", "explanation": "You should address the person of higher status (Susan) first and introduce the person of lower status (Tom) to her, while providing context about their roles." }
+              ]
+            },
+            {
+              "title": "Listening for General and Specific Information",
+              "slug": "listening-for-information",
+              "category": "Unit V: English for Workplace",
+              "author": "ReadMe Studio",
+              "fullText": "Active listening is more than just hearing words; it's about understanding the message. In the workplace, you'll need two types of listening skills: listening for general information (skimming) and listening for specific information (scanning).\n\n**1. Listening for General Information (Gist/Skimming)**\nThis is when you listen to understand the main idea or overall topic of a conversation, meeting, or presentation. You are not trying to catch every single detail.\n\n*   **When to use it:** In a long meeting to get the key takeaways, during a casual team update, or when first hearing about a new project.\n*   **How to do it:**\n    *   Focus on the speaker's tone and emphasis.\n    *   Listen for keywords and repeated phrases.\n    *   Don't get stuck on words you don't understand; focus on the overall context.\n    *   Ask yourself: *'What is the main point here?'*\n\n**2. Listening for Specific Information (Scanning)**\nThis is when you are listening for particular details, such as names, dates, numbers, or answers to specific questions.\n\n*   **When to use it:** When a client gives you project requirements, when your manager assigns a task with a deadline, or when listening for your name in a meeting.\n*   **How to do it:**\n    *   Prepare beforehand: know what information you need.\n    *   Listen for signal words (e.g., *'The deadline is...'*, *'The key metric will be...'*).\n    *   Take notes, writing down only the specific details you need.\n    *   Ignore irrelevant information.\n\n**Example Scenario:**\nIn a project kickoff meeting, you would use **general listening** to understand the project's overall goal. When the project manager says, *'Okay, let's talk deadlines. The first draft is due on October 25th,'* you would switch to **specific listening** to note down that exact date.",
+              "difficultWords": [
+                { "word": "Gist", "definition": "The substance or essence of a speech or text.", "connotation": "Refers to the main point or general idea, without the details.", "example": "I didn't catch every word, but I got the gist of it." },
+                { "word": "Skimming", "definition": "Reading or glancing through something quickly to identify the main points.", "connotation": "A quick, superficial review for a general understanding. Here it's applied to listening.", "example": "I was just skimming through the report." },
+                { "word": "Scanning", "definition": "Looking over a text quickly in order to find a particular piece of information.", "connotation": "A focused search for specific details. Here it's applied to listening.", "example": "He scanned the list for his name." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "historicalContext": "",
+                "writingStyle": "Practical, clear, and focused on actionable advice for professional communication.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This lesson differentiates between two key active listening skills for the workplace: listening for general information (the gist) and listening for specific information (details). It provides strategies and examples for when and how to use each skill effectively to improve comprehension and productivity.",
+                "themes": ["Active Listening", "Communication Skills", "Workplace Productivity", "Meeting Effectiveness"],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "Mastering both types of listening is crucial for understanding tasks, participating effectively in meetings, and reducing misunderstandings in a professional environment."
+              },
+              "faqs": [
+                { "question": "What's an easy way to improve active listening?", "answer": "A great technique is to paraphrase. After someone speaks, briefly summarize what you heard in your own words (e.g., 'So, if I understand correctly, the main goal is to increase user engagement by 15% this quarter. Is that right?'). This confirms your understanding and shows you were paying attention." }
+              ],
+              "quiz": [
+                { "question": "You are in a meeting, and you need to know the exact budget for your project. Which listening skill should you primarily use?", "options": ["General Listening (Skimming)", "Specific Listening (Scanning)", "Passive Listening", "Distracted Listening"], "correctAnswer": "Specific Listening (Scanning)", "explanation": "You are listening for a particular piece of data (the budget), so you should be 'scanning' the conversation for that specific information." }
+              ]
+            },
+            {
+              "title": "Listening to and Giving Instructions/Directions",
+              "slug": "listening-and-giving-instructions",
+              "category": "Unit V: English for Workplace",
+              "author": "ReadMe Studio",
+              "fullText": "Clear instructions are vital for ensuring tasks are completed correctly and efficiently. This involves skills in both giving and receiving directions.\n\n**Giving Clear Instructions:**\nWhen you are the one giving instructions, your goal is clarity and simplicity.\n\n1.  **Use Imperative Verbs:** Start sentences with action words. (e.g., `Open`, `Click`, `Submit`, `Send`).\n2.  **Be Chronological:** Give the steps in the order they need to be performed.\n3.  **Use Sequence Words:** Use words like `First`, `Next`, `Then`, `After that`, and `Finally` to guide the listener.\n4.  **Keep it Simple:** Use simple language and avoid jargon. Break complex tasks into smaller, manageable steps.\n5.  **Check for Understanding:** After giving instructions, ask a question like, *'Does that make sense?'* or *'What questions do you have?'* to ensure your message was received correctly.\n\n**Example of Giving Instructions:**\n*'First, open the 'Reports' folder on the shared drive. Next, find the file named 'Q3_Sales_Data'. Then, please email that file to me as an attachment. Finally, let me know once you've sent it.'*\n\n**Listening to Instructions:**\nWhen you are receiving instructions, your goal is to understand completely.\n\n1.  **Listen Actively:** Pay full attention and avoid interrupting.\n2.  **Take Notes:** Write down key steps, deadlines, and details.\n3.  **Ask Clarifying Questions:** If anything is unclear, ask for more information. Don't pretend you understand.\n    *   *'Could you please repeat the file name?'*\n    *   *'When you say 'soon,' what is the exact deadline?'*\n4.  **Confirm Your Understanding:** Paraphrase the instructions back to the person to ensure you understood correctly.\n    *   *'Okay, so just to confirm: I need to find the Q3 sales data file and email it to you. Is that right?'*",
+              "difficultWords": [
+                { "word": "Imperative", "definition": "A verb or phrase in the imperative mood, expressing a command or request.", "connotation": "In grammar, it refers to verbs that give a direct order.", "example": "'Open the door' is an imperative sentence." },
+                { "word": "Chronological", "definition": "Starting with the earliest and following the order in which they occurred.", "connotation": "Refers to time-based sequence.", "example": "Please list the events in chronological order." },
+                { "word": "Paraphrase", "definition": "To express the meaning of (something written or spoken) using different words, especially to achieve greater clarity.", "connotation": "A technique for checking and confirming understanding.", "example": "Could you paraphrase the instructions to make sure you understand?" }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "historicalContext": "",
+                "writingStyle": "Practical, clear, and focused on actionable advice for professional communication.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This lesson provides a dual focus on how to both give and receive instructions effectively in a workplace setting. For giving instructions, it emphasizes using clear, sequential language and checking for understanding. For receiving instructions, it highlights the importance of active listening, taking notes, and paraphrasing to confirm comprehension.",
+                "themes": ["Effective Communication", "Workplace Productivity", "Task Management", "Clarity"],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "The ability to give and follow instructions accurately is fundamental to teamwork, preventing errors, and ensuring that projects and tasks are completed correctly and on time."
+              },
+              "faqs": [
+                { "question": "What is the most important part of giving instructions?", "answer": "While all steps are important, arguably the most crucial is checking for understanding. No matter how clearly you think you've explained something, confirming that the listener has understood correctly prevents mistakes before they happen." }
+              ],
+              "quiz": [
+                { "question": "When receiving instructions for a complex task, what is the BEST way to ensure you understood correctly?", "options": ["Nod and say 'okay'", "Immediately start working on it", "Wait for them to send a follow-up email", "Paraphrase the instructions back to the person who gave them"], "correctAnswer": "Paraphrase the instructions back to the person who gave them", "explanation": "Paraphrasing, or repeating the instructions in your own words, is the most effective way to actively confirm your understanding and catch any potential miscommunications." }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
