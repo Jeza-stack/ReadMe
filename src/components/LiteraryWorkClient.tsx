@@ -155,13 +155,7 @@ function AudioPlayer({ text, onTimeUpdate, onMetadata, onPlayStateChange }: { te
     }
 
     if (!audioSrc) {
-        return (
-            <Card className="my-6">
-                <CardContent className="p-4 flex items-center justify-center gap-4">
-                    <p className="text-destructive">Audio could not be loaded.</p>
-                </CardContent>
-            </Card>
-        );
+        return null;
     }
 
     return (
