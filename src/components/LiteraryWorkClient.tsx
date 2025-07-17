@@ -2,53 +2,208 @@
 "use client";
 
 import type { LiteraryWork, DifficultWord, QuizQuestion, Faq } from "@/lib/types";
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle, Play, Pause, Volume2, VolumeX, FastForward } from "lucide-react";
 import { Progress } from "./ui/progress";
 import { Separator } from "./ui/separator";
+import { Slider } from "@/components/ui/slider";
+import { toast } from "@/hooks/use-toast";
+import { convertTextToSpeech } from "@/ai/flows/text-to-speech-flow";
+
+function formatTime(seconds: number) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
+  return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
+function AudioPlayer({ text }: { text: string }) {
+  const [audioSrc, setAudioSrc] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [playbackRate, setPlaybackRate] = useState(1);
+  const [volume, setVolume] = useState(1);
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    async function generateAudio() {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const { audioDataUri } = await convertTextToSpeech({ text });
+        setAudioSrc(audioDataUri);
+      } catch (e: any) {
+        console.error(e);
+        setError("Audio could not be loaded due to high demand. Please try again later.");
+        toast({
+            variant: "destructive",
+            title: "Audio Generation Failed",
+            description: "Could not generate audio due to high demand. Please try again later.",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    generateAudio();
+  }, [text]);
+
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+      setProgress((audioRef.current.currentTime / audioRef.current.duration) * 100);
+    }
+  };
+
+  const handleLoadedMetadata = () => {
+    if (audioRef.current) {
+      setDuration(audioRef.current.duration);
+    }
+  };
+  
+  const handleSeek = (value: number[]) => {
+    if (audioRef.current) {
+      const seekTime = (value[0] / 100) * duration;
+      audioRef.current.currentTime = seekTime;
+      setProgress(value[0]);
+    }
+  };
+
+  const changePlaybackRate = () => {
+    const rates = [1, 1.5, 2];
+    const currentIndex = rates.indexOf(playbackRate);
+    const nextIndex = (currentIndex + 1) % rates.length;
+    const newRate = rates[nextIndex];
+    setPlaybackRate(newRate);
+    if (audioRef.current) {
+      audioRef.current.playbackRate = newRate;
+    }
+  };
+  
+  const toggleMute = () => {
+      const newVolume = volume > 0 ? 0 : 1;
+      setVolume(newVolume);
+      if(audioRef.current) {
+          audioRef.current.volume = newVolume;
+      }
+  }
+
+  if (isLoading) {
+    return (
+      <Card>
+        <CardContent className="p-4 flex items-center justify-center gap-4">
+          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary"></div>
+          <p className="text-muted-foreground">Generating audio...</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  if (error) {
+     return null;
+  }
+
+  if (!audioSrc) {
+    return null;
+  }
+
+  return (
+    <Card>
+        <CardContent className="p-4 flex items-center gap-4">
+            <audio
+                ref={audioRef}
+                src={audioSrc}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleLoadedMetadata}
+                onEnded={() => setIsPlaying(false)}
+            />
+            <Button onClick={togglePlayPause} variant="ghost" size="icon">
+                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+            </Button>
+            <div className="flex-grow flex items-center gap-3">
+                <span className="text-sm font-mono">{formatTime(currentTime)}</span>
+                <Slider
+                    value={[progress]}
+                    max={100}
+                    step={1}
+                    onValueChange={handleSeek}
+                    className="w-full"
+                />
+                <span className="text-sm font-mono">{formatTime(duration)}</span>
+            </div>
+             <Button onClick={changePlaybackRate} variant="ghost" size="sm" className="w-20">
+                Speed: {playbackRate}x
+            </Button>
+            <Button onClick={toggleMute} variant="ghost" size="icon">
+                {volume > 0 ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
+            </Button>
+        </CardContent>
+    </Card>
+  );
+}
+
 
 // InteractiveText Component
 function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
     
-    const words = text.split(/(\s+)/);
+    const paragraphs = text.split('\n\n');
     
     return (
-        <div className="font-serif text-lg/relaxed space-y-6 whitespace-pre-wrap">
-            <p>
-                {words.map((part, index) => {
-                    const isWord = part.trim() !== '';
-                    if (!isWord) {
-                        return <span key={index}>{part}</span>;
-                    }
-                    
-                    const wordPart = part.trim().replace(/[.,;!?—]$/, '');
+        <div className="font-serif text-lg/relaxed space-y-6">
+            {paragraphs.map((paragraph, pIndex) => {
+                const words = paragraph.split(/(\s+)/); // Split by spaces, keeping them
+                return (
+                    <p key={pIndex}>
+                        {words.map((part, index) => {
+                            const isWord = part.trim() !== '';
+                            if (!isWord) {
+                                return <span key={index}>{part}</span>;
+                            }
+                            
+                            const wordPart = part.trim().replace(/[.,;!?—]$/, '');
 
-                    if (difficultWordsMap.has(wordPart.toLowerCase())) {
-                        const wordData = difficultWordsMap.get(wordPart.toLowerCase())!;
-                        return (
-                            <Popover key={index}>
-                                <PopoverTrigger asChild>
-                                    <span className="cursor-pointer font-bold text-primary hover:underline">{part}</span>
-                                </PopoverTrigger>
-                                <PopoverContent className="w-80">
-                                    <div className="space-y-2">
-                                        <h4 className="font-bold font-headline">{wordData.word}</h4>
-                                        <p className="text-sm">{wordData.definition}</p>
-                                        <p className="text-sm"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
-                                        <p className="text-sm"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
-                                    </div>
-                                </PopoverContent>
-                            </Popover>
-                        );
-                    }
-                    return <span key={index}>{part}</span>;
-                })}
-            </p>
+                            if (difficultWordsMap.has(wordPart.toLowerCase())) {
+                                const wordData = difficultWordsMap.get(wordPart.toLowerCase())!;
+                                return (
+                                    <Popover key={index}>
+                                        <PopoverTrigger asChild>
+                                            <span className="cursor-pointer font-bold text-primary hover:underline">{part}</span>
+                                        </PopoverTrigger>
+                                        <PopoverContent className="w-80">
+                                            <div className="space-y-2">
+                                                <h4 className="font-bold font-headline">{wordData.word}</h4>
+                                                <p className="text-sm">{wordData.definition}</p>
+                                                <p className="text-sm"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
+                                                <p className="text-sm"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
+                                            </div>
+                                        </PopoverContent>
+                                    </Popover>
+                                );
+                            }
+                            return <span key={index}>{part}</span>;
+                        })}
+                    </p>
+                )
+            })}
         </div>
     );
 }
@@ -159,6 +314,14 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
     
     return (
         <div>
+            {/* Audio Player */}
+             <div className="mb-8">
+                 <h2 className="font-headline text-3xl font-bold mb-4">Audio Narration</h2>
+                 <AudioPlayer text={work.fullText} />
+            </div>
+            
+            <Separator className="my-12" />
+
             {/* Main Content */}
             <div className="prose prose-lg max-w-none">
                  <h2 className="font-headline text-3xl font-bold mt-12 mb-2">Full Text</h2>
@@ -203,8 +366,8 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                  <h2 className="font-headline text-3xl font-bold mb-8">About the Author</h2>
                  <Card>
                     <CardContent className="p-6">
-                        <p className="mb-4">{work.authorInfo.biography}</p>
-                        <p><strong>Writing Style:</strong> {work.authorInfo.writingStyle}</p>
+                        {work.authorInfo.biography && <p className="mb-4">{work.authorInfo.biography}</p>}
+                        {work.authorInfo.writingStyle && <p><strong>Writing Style:</strong> {work.authorInfo.writingStyle}</p>}
                     </CardContent>
                  </Card>
             </section>
