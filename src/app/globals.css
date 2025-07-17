@@ -57,3 +57,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+    .bg-hero-gradient {
+        @apply bg-gradient-to-br from-background to-muted;
+    }
+}

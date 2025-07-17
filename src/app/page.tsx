@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-24">
       {/* Hero Section */}
-      <section className="bg-muted/50 py-20 md:py-32">
+      <section className="bg-hero-gradient py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-foreground">
             Unlock Your Potential with ReadMe
