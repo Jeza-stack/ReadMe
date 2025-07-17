@@ -2,21 +2,17 @@
 "use client";
 
 import type { LiteraryWork, DifficultWord, QuizQuestion, Faq } from "@/lib/types";
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Play, Pause, Rewind, Loader, CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle } from "lucide-react";
 import { Progress } from "./ui/progress";
 import { Separator } from "./ui/separator";
-import { convertTextToSpeech } from "@/ai/flows/text-to-speech-flow";
-import { useToast } from "@/hooks/use-toast";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
 
 // InteractiveText Component
-function InteractiveText({ text, difficultWords, currentWordIndex }: { text: string; difficultWords: DifficultWord[], currentWordIndex: number }) {
+function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
     
     const words = text.split(/(\s+)/);
@@ -31,16 +27,13 @@ function InteractiveText({ text, difficultWords, currentWordIndex }: { text: str
                     }
                     
                     const wordPart = part.trim().replace(/[.,;!?—]$/, '');
-                    const wordIndex = Math.floor(index / 2);
-
-                    const isHighlighted = wordIndex === currentWordIndex;
 
                     if (difficultWordsMap.has(wordPart.toLowerCase())) {
                         const wordData = difficultWordsMap.get(wordPart.toLowerCase())!;
                         return (
                             <Popover key={index}>
                                 <PopoverTrigger asChild>
-                                    <span className={`cursor-pointer font-bold text-primary hover:underline ${isHighlighted ? 'bg-accent/30' : ''}`}>{part}</span>
+                                    <span className="cursor-pointer font-bold text-primary hover:underline">{part}</span>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-80">
                                     <div className="space-y-2">
@@ -53,157 +46,10 @@ function InteractiveText({ text, difficultWords, currentWordIndex }: { text: str
                             </Popover>
                         );
                     }
-                    return <span key={index} className={isHighlighted ? 'bg-accent/30' : ''}>{part}</span>;
+                    return <span key={index}>{part}</span>;
                 })}
             </p>
         </div>
-    );
-}
-
-// AudioPlayer Component
-function AudioPlayer({ text, onTimeUpdate, onMetadata, onPlayStateChange }: { text: string; onTimeUpdate: (time: number) => void; onMetadata: (data: any) => void; onPlayStateChange: (playing: boolean) => void; }) {
-    const [isLoading, setIsLoading] = useState(true);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [audioSrc, setAudioSrc] = useState<string | null>(null);
-    const [playbackRate, setPlaybackRate] = useState(1);
-    const [duration, setDuration] = useState(0);
-    const [currentTime, setCurrentTime] = useState(0);
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const progressRef = useRef<HTMLDivElement | null>(null);
-    const { toast } = useToast();
-
-    useEffect(() => {
-        async function generateAudio() {
-            try {
-                setIsLoading(true);
-                const result = await convertTextToSpeech({ text });
-                setAudioSrc(result.audioDataUri);
-                onMetadata(result);
-            } catch (error) {
-                console.error("Error generating audio:", error);
-                toast({
-                    variant: "destructive",
-                    title: "Audio Error",
-                    description: "Failed to generate audio for this text. Please try again later.",
-                });
-            } finally {
-                setIsLoading(false);
-            }
-        }
-        generateAudio();
-    }, [text, toast, onMetadata]);
-    
-    useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.playbackRate = playbackRate;
-        }
-    }, [playbackRate]);
-
-    const handlePlayPause = () => {
-        if (!audioRef.current) return;
-        if (audioRef.current.paused) {
-            audioRef.current.play();
-        } else {
-            audioRef.current.pause();
-        }
-    };
-    
-    const handleStop = () => {
-        if (!audioRef.current) return;
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-    };
-
-    const handleTimeUpdateInternal = () => {
-        if (!audioRef.current) return;
-        const time = audioRef.current.currentTime;
-        setCurrentTime(time);
-        onTimeUpdate(time);
-    };
-
-    const handleLoadedMetadata = () => {
-        if (audioRef.current) {
-            setDuration(audioRef.current.duration);
-        }
-    };
-
-    const handleSeek = (event: React.MouseEvent<HTMLDivElement>) => {
-        if (!progressRef.current || !audioRef.current) return;
-        const rect = progressRef.current.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const width = rect.width;
-        const newTime = (x / width) * duration;
-        audioRef.current.currentTime = newTime;
-        setCurrentTime(newTime);
-    };
-
-    const formatTime = (seconds: number) => {
-        const minutes = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-    };
-
-    if (isLoading) {
-        return (
-            <Card className="my-6">
-                <CardContent className="p-4 flex items-center justify-center gap-4">
-                    <Loader className="w-6 h-6 animate-spin" />
-                    <p className="text-muted-foreground">Generating audio...</p>
-                </CardContent>
-            </Card>
-        )
-    }
-
-    if (!audioSrc) {
-        return null;
-    }
-
-    return (
-        <Card className="my-6">
-            <CardContent className="p-4 flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                    <Button size="icon" variant="ghost" onClick={handlePlayPause}>
-                        {isPlaying ? <Pause className="w-6 h-6"/> : <Play className="w-6 h-6"/>}
-                    </Button>
-                     <Button size="icon" variant="ghost" onClick={handleStop}>
-                        <Rewind className="w-6 h-6"/>
-                    </Button>
-                </div>
-
-                <div className="flex-grow flex items-center gap-3">
-                    <span className="text-xs font-mono text-muted-foreground">{formatTime(currentTime)}</span>
-                    <div ref={progressRef} className="w-full cursor-pointer py-2" onClick={handleSeek}>
-                        <Progress value={(currentTime / duration) * 100} className="h-2" />
-                    </div>
-                    <span className="text-xs font-mono text-muted-foreground">{formatTime(duration)}</span>
-                </div>
-
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="w-28">
-                            Speed: {playbackRate}x <ChevronDown className="w-4 h-4 ml-2" />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                        {[0.5, 0.75, 1, 1.25, 1.5, 2].map(rate => (
-                             <DropdownMenuItem key={rate} onSelect={() => setPlaybackRate(rate)}>
-                                {rate}x
-                            </DropdownMenuItem>
-                        ))}
-                    </DropdownMenuContent>
-                </DropdownMenu>
-
-                 <audio 
-                    ref={audioRef} 
-                    src={audioSrc}
-                    onPlay={() => { setIsPlaying(true); onPlayStateChange(true); }}
-                    onPause={() => { setIsPlaying(false); onPlayStateChange(false); }}
-                    onEnded={() => { setIsPlaying(false); onPlayStateChange(false); }}
-                    onTimeUpdate={handleTimeUpdateInternal}
-                    onLoadedMetadata={handleLoadedMetadata}
-                />
-            </CardContent>
-        </Card>
     );
 }
 
@@ -310,45 +156,16 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
 // Main Client Component
 export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [currentWordIndex, setCurrentWordIndex] = useState(-1);
-    const [timestamps, setTimestamps] = useState<{word: string, startTime: number, endTime: number}[]>([]);
-
-    const handleTimeUpdate = (currentTime: number) => {
-        if (!isPlaying || timestamps.length === 0) return;
-        
-        const currentWord = timestamps.findIndex(t => currentTime >= t.startTime && currentTime <= t.endTime);
-        
-        setCurrentWordIndex(currentWord);
-    };
-
-    const handleMetadata = (data: any) => {
-        if (data?.speech?.timingInfo?.wordTimestamps) {
-            const formattedTimestamps = data.speech.timingInfo.wordTimestamps.map((t: any) => ({
-                word: t.word,
-                startTime: t.startTime.seconds + (t.startTime.nanos / 1e9),
-                endTime: t.endTime.seconds + (t.endTime.nanos / 1e9),
-            }));
-            setTimestamps(formattedTimestamps);
-        }
-    };
     
     return (
         <div>
             {/* Main Content */}
             <div className="prose prose-lg max-w-none">
                  <h2 className="font-headline text-3xl font-bold mt-12 mb-2">Full Text</h2>
-                 <p className="text-muted-foreground mb-4">Click on <span className="text-primary font-bold">bolded words</span> for definitions, or press play to listen.</p>
-                <AudioPlayer 
-                    text={work.fullText}
-                    onTimeUpdate={handleTimeUpdate}
-                    onMetadata={handleMetadata}
-                    onPlayStateChange={setIsPlaying}
-                />
+                 <p className="text-muted-foreground mb-4">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
                 <InteractiveText 
                     text={work.fullText} 
                     difficultWords={work.difficultWords} 
-                    currentWordIndex={currentWordIndex}
                 />
             </div>
             
