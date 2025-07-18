@@ -18,8 +18,8 @@ const fontHeadline = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'ReadMe - Your Educational Platform',
-  description: 'A multi-course educational website for soft skills and professional development.',
+  title: 'CEFR English Learning Platform - Master English Step by Step',
+  description: 'Learn English systematically with our CEFR-aligned platform. From A1 beginner to C2 proficiency, master all language skills with interactive lessons and assessments.',
 };
 
 export default function RootLayout({
