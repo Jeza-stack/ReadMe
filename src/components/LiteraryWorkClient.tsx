@@ -334,7 +334,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                  <div className="sticky top-20 z-10 mb-8 backdrop-blur-sm p-2 -m-2 rounded-lg">
                     <AudioPlayer text={work.fullText} onWordHighlight={setHighlightedWord} />
                  </div>
-                 <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions, or press play to listen along.</p>
+                 <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
                 <InteractiveText 
                     text={work.fullText} 
                     difficultWords={work.difficultWords}
