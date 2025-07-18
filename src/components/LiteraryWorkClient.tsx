@@ -66,7 +66,7 @@ function AudioPlayer({ text, onWordHighlight }: { text: string; onWordHighlight:
         audioRef.current.pause();
         onWordHighlight(null);
       } else {
-        audio_current.play();
+        audioRef.current.play();
       }
       setIsPlaying(!isPlaying);
     }
