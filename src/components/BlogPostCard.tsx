@@ -7,7 +7,7 @@ import { Clock } from 'lucide-react';
 
 export function BlogPostCard({ post }: { post: BlogPost }) {
   return (
-    <Card className="flex flex-col overflow-hidden group">
+    <Card className="flex flex-col overflow-hidden group bg-card/50 border-border/50 shadow-lg hover:border-primary/50 transition-all duration-300">
         <Link href={`/soft-skills/${post.slug}`} className="block overflow-hidden">
             <Image
                 src={post.image}
@@ -27,10 +27,10 @@ export function BlogPostCard({ post }: { post: BlogPost }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground text-sm line-clamp-3">{post.content}</p>
+        <p className="text-foreground/60 text-sm line-clamp-3">{post.content}</p>
       </CardContent>
       <CardFooter>
-        <div className="flex items-center text-sm text-muted-foreground gap-2">
+        <div className="flex items-center text-sm text-foreground/60 gap-2">
             <Clock className="w-4 h-4"/>
             <span>{post.readingTime} read</span>
         </div>

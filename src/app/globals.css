@@ -4,48 +4,66 @@
 
 @layer base {
   :root {
-    --background: 210 100% 97%;
-    --foreground: 210 14% 20%;
-    --card: 210 100% 100%;
-    --card-foreground: 210 14% 20%;
-    --popover: 210 100% 100%;
-    --popover-foreground: 210 14% 20%;
-    --primary: 210 14% 50%;
-    --primary-foreground: 210 100% 97%;
-    --secondary: 210 14% 90%;
-    --secondary-foreground: 210 14% 20%;
-    --muted: 210 14% 94%;
-    --muted-foreground: 210 14% 45%;
-    --accent: 45 99% 44%;
-    --accent-foreground: 240 6% 10%;
+    --background: 212 100% 13%; /* #002244 */
+    --foreground: 210 100% 97%; /* #EDF6FF */
+
+    --card: 212 100% 16%; /* Slightly lighter blue */
+    --card-foreground: 210 100% 97%;
+
+    --popover: 212 100% 13%;
+    --popover-foreground: 210 100% 97%;
+
+    --primary: 31 100% 50%; /* #FF8800 */
+    --primary-foreground: 212 100% 13%;
+
+    --secondary: 212 100% 25%;
+    --secondary-foreground: 31 100% 50%;
+
+    --muted: 212 100% 20%;
+    --muted-foreground: 210 14% 65%;
+
+    --accent: 31 100% 60%;
+    --accent-foreground: 212 100% 13%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 14% 88%;
-    --input: 210 14% 88%;
-    --ring: 210 14% 50%;
-    --radius: 0.5rem;
+
+    --border: 212 100% 25%;
+    --input: 212 100% 25%;
+    --ring: 31 100% 50%;
+    
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 210 14% 10%;
-    --foreground: 210 100% 97%;
-    --card: 210 14% 12%;
+    /* Keeping dark theme consistent with the new base theme for now */
+    --background: 212 100% 13%; /* #002244 */
+    --foreground: 210 100% 97%; /* #EDF6FF */
+
+    --card: 212 100% 16%;
     --card-foreground: 210 100% 97%;
-    --popover: 210 14% 12%;
+
+    --popover: 212 100% 13%;
     --popover-foreground: 210 100% 97%;
-    --primary: 210 14% 70%;
-    --primary-foreground: 210 14% 10%;
-    --secondary: 210 14% 20%;
-    --secondary-foreground: 210 100% 97%;
-    --muted: 210 14% 20%;
+
+    --primary: 31 100% 50%; /* #FF8800 */
+    --primary-foreground: 212 100% 13%;
+
+    --secondary: 212 100% 25%;
+    --secondary-foreground: 31 100% 50%;
+
+    --muted: 212 100% 20%;
     --muted-foreground: 210 14% 65%;
-    --accent: 45 99% 54%;
-    --accent-foreground: 240 6% 10%;
-    --destructive: 0 62.8% 30.6%;
+
+    --accent: 31 100% 60%;
+    --accent-foreground: 212 100% 13%;
+
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 14% 25%;
-    --input: 210 14% 25%;
-    --ring: 210 14% 70%;
+
+    --border: 212 100% 25%;
+    --input: 212 100% 25%;
+    --ring: 31 100% 50%;
   }
 }
 
@@ -59,8 +77,10 @@
 }
 
 @layer utilities {
-    .bg-hero-gradient {
-        background-color: hsl(var(--background));
-        background-image: radial-gradient(at 27% 37%, hsl(var(--primary) / 0.1), transparent 80%), radial-gradient(at 97% 21%, hsl(var(--accent) / 0.1), transparent 50%), radial-gradient(at 52% 99%, hsl(var(--primary) / 0.15), transparent 50%), radial-gradient(at 10% 29%, hsl(var(--accent) / 0.1), transparent 50%), radial-gradient(at 97% 96%, hsl(var(--muted) / 0.1), transparent 50%), radial-gradient(at 33% 50%, hsl(var(--muted) / 0.1), transparent 50%), radial-gradient(at 79% 53%, hsl(var(--primary) / 0.1), transparent 50%);
-    }
+  .sunrise-gradient {
+    @apply bg-gradient-to-br from-[#002244] via-[#1a3a5a] to-[#5a3a1a];
+  }
+  .sunrise-gradient-rev {
+    @apply bg-gradient-to-tl from-[#002244] via-[#1a3a5a] to-[#5a3a1a];
+  }
 }

@@ -7,20 +7,22 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { CheckCircle, XCircle, Play, Pause, Volume2, VolumeX, FastForward } from "lucide-react";
+import { CheckCircle, XCircle, Play, Pause, Volume2, VolumeX } from "lucide-react";
 import { Progress } from "./ui/progress";
 import { Separator } from "./ui/separator";
 import { Slider } from "@/components/ui/slider";
 import { toast } from "@/hooks/use-toast";
 import { convertTextToSpeech } from "@/ai/flows/text-to-speech-flow";
+import { cn } from "@/lib/utils";
 
 function formatTime(seconds: number) {
+  if (isNaN(seconds)) return "0:00";
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = Math.floor(seconds % 60);
   return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
 }
 
-function AudioPlayer({ text }: { text: string }) {
+function AudioPlayer({ text, onWordHighlight }: { text: string; onWordHighlight: (word: string | null) => void; }) {
   const [audioSrc, setAudioSrc] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,17 +34,20 @@ function AudioPlayer({ text }: { text: string }) {
   const [volume, setVolume] = useState(1);
 
   const audioRef = useRef<HTMLAudioElement>(null);
+  const wordTimestampsRef = useRef<Map<string, { start: number, end: number }>>(new Map());
 
   useEffect(() => {
     async function generateAudio() {
       try {
         setIsLoading(true);
         setError(null);
+        // This is a simplified approach. A real implementation would need
+        // the TTS API to return word-level timestamps.
         const { audioDataUri } = await convertTextToSpeech({ text });
         setAudioSrc(audioDataUri);
       } catch (e: any) {
         console.error(e);
-        setError("Audio could not be loaded due to high demand. Please try again later.");
+        setError("Audio could not be loaded. This may be due to API rate limits.");
         toast({
             variant: "destructive",
             title: "Audio Generation Failed",
@@ -59,8 +64,9 @@ function AudioPlayer({ text }: { text: string }) {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
+        onWordHighlight(null);
       } else {
-        audioRef.current.play();
+        audio_current.play();
       }
       setIsPlaying(!isPlaying);
     }
@@ -68,8 +74,18 @@ function AudioPlayer({ text }: { text: string }) {
 
   const handleTimeUpdate = () => {
     if (audioRef.current) {
-      setCurrentTime(audioRef.current.currentTime);
-      setProgress((audioRef.current.currentTime / audioRef.current.duration) * 100);
+      const time = audioRef.current.currentTime;
+      setCurrentTime(time);
+      setProgress((time / audioRef.current.duration) * 100);
+
+      // Simplified highlighting logic
+      const words = text.split(/\s+/);
+      const approxWordTime = audioRef.current.duration / words.length;
+      const currentWordIndex = Math.floor(time / approxWordTime);
+      const currentWord = words[currentWordIndex];
+      if (currentWord) {
+        onWordHighlight(currentWord.replace(/[.,;!?—]$/, ''));
+      }
     }
   };
 
@@ -108,35 +124,34 @@ function AudioPlayer({ text }: { text: string }) {
 
   if (isLoading) {
     return (
-      <Card>
+      <Card className="bg-card/50">
         <CardContent className="p-4 flex items-center justify-center gap-4">
           <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary"></div>
-          <p className="text-muted-foreground">Generating audio...</p>
+          <p className="text-foreground/70">Generating audio...</p>
         </CardContent>
       </Card>
     );
   }
 
-  if (error) {
+  if (error || !audioSrc) {
      return null;
   }
 
-  if (!audioSrc) {
-    return null;
-  }
-
   return (
-    <Card>
+    <Card className="bg-card/50 shadow-lg">
         <CardContent className="p-4 flex items-center gap-4">
             <audio
                 ref={audioRef}
                 src={audioSrc}
                 onTimeUpdate={handleTimeUpdate}
                 onLoadedMetadata={handleLoadedMetadata}
-                onEnded={() => setIsPlaying(false)}
+                onEnded={() => {
+                  setIsPlaying(false);
+                  onWordHighlight(null);
+                }}
             />
             <Button onClick={togglePlayPause} variant="ghost" size="icon">
-                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+                {isPlaying ? <Pause className="w-6 h-6 text-primary" /> : <Play className="w-6 h-6" />}
             </Button>
             <div className="flex-grow flex items-center gap-3">
                 <span className="text-sm font-mono">{formatTime(currentTime)}</span>
@@ -149,8 +164,8 @@ function AudioPlayer({ text }: { text: string }) {
                 />
                 <span className="text-sm font-mono">{formatTime(duration)}</span>
             </div>
-             <Button onClick={changePlaybackRate} variant="ghost" size="sm" className="w-20">
-                Speed: {playbackRate}x
+             <Button onClick={changePlaybackRate} variant="ghost" size="sm" className="w-24">
+                {playbackRate}x Speed
             </Button>
             <Button onClick={toggleMute} variant="ghost" size="icon">
                 {volume > 0 ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
@@ -162,44 +177,43 @@ function AudioPlayer({ text }: { text: string }) {
 
 
 // InteractiveText Component
-function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
+function InteractiveText({ text, difficultWords, highlightedWord }: { text: string; difficultWords: DifficultWord[], highlightedWord: string | null }) {
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
     
     const paragraphs = text.split('\n\n');
     
     return (
-        <div className="font-serif text-lg/relaxed space-y-6">
+        <div className="font-body text-lg/relaxed space-y-6 text-foreground/90">
             {paragraphs.map((paragraph, pIndex) => {
-                const words = paragraph.split(/(\s+)/); // Split by spaces, keeping them
+                const parts = paragraph.split(/(\s+)/); // Split by spaces, keeping them
                 return (
                     <p key={pIndex}>
-                        {words.map((part, index) => {
-                            const isWord = part.trim() !== '';
-                            if (!isWord) {
-                                return <span key={index}>{part}</span>;
-                            }
-                            
-                            const wordPart = part.trim().replace(/[.,;!?—]$/, '');
+                        {parts.map((part, index) => {
+                            const wordOnly = part.trim().replace(/[.,;!?—]$/, '');
+                            const isHighlighted = highlightedWord && wordOnly.toLowerCase() === highlightedWord.toLowerCase();
 
-                            if (difficultWordsMap.has(wordPart.toLowerCase())) {
-                                const wordData = difficultWordsMap.get(wordPart.toLowerCase())!;
+                            if (difficultWordsMap.has(wordOnly.toLowerCase())) {
+                                const wordData = difficultWordsMap.get(wordOnly.toLowerCase())!;
                                 return (
                                     <Popover key={index}>
                                         <PopoverTrigger asChild>
-                                            <span className="cursor-pointer font-bold text-primary hover:underline">{part}</span>
+                                            <span className={cn(
+                                                "cursor-pointer font-bold text-primary/80 hover:text-primary transition-colors",
+                                                isHighlighted && "bg-primary/30 rounded-md px-1"
+                                                )}>{part}</span>
                                         </PopoverTrigger>
-                                        <PopoverContent className="w-80">
+                                        <PopoverContent className="w-80 bg-background border-border shadow-2xl">
                                             <div className="space-y-2">
-                                                <h4 className="font-bold font-headline">{wordData.word}</h4>
-                                                <p className="text-sm">{wordData.definition}</p>
-                                                <p className="text-sm"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
-                                                <p className="text-sm"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
+                                                <h4 className="font-bold font-headline text-primary">{wordData.word}</h4>
+                                                <p className="text-sm text-foreground/90">{wordData.definition}</p>
+                                                <p className="text-sm text-foreground/90"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
+                                                <p className="text-sm text-foreground/90"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
                                             </div>
                                         </PopoverContent>
                                     </Popover>
                                 );
                             }
-                            return <span key={index}>{part}</span>;
+                            return <span key={index} className={cn(isHighlighted && "bg-primary/30 rounded-md")}>{part}</span>;
                         })}
                     </p>
                 )
@@ -245,14 +259,14 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
     if (showResults) {
         return (
-             <Card>
+             <Card className="bg-card/50 border-border/50 shadow-lg">
                 <CardHeader>
-                    <CardTitle className="font-headline">Quiz Results</CardTitle>
+                    <CardTitle className="font-headline text-2xl">Quiz Results</CardTitle>
                     <CardDescription>You scored {score} out of {questions.length}!</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <Progress value={(score / questions.length) * 100} className="mb-4" />
-                    <Button onClick={handleRestart}>Try Again</Button>
+                    <Progress value={(score / questions.length) * 100} className="mb-6" />
+                    <Button onClick={handleRestart} className="font-semibold">Try Again</Button>
                 </CardContent>
             </Card>
         )
@@ -261,46 +275,45 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
     const currentQuestion = questions[currentQuestionIndex];
 
     return (
-        <Card>
+        <Card className="bg-card/50 border-border/50 shadow-lg">
             <CardHeader>
-                <CardTitle className="font-headline">Quiz: Check Your Understanding</CardTitle>
+                <CardTitle className="font-headline text-2xl">Quiz: Check Your Understanding</CardTitle>
                 <CardDescription>Question {currentQuestionIndex + 1} of {questions.length}</CardDescription>
             </CardHeader>
             <CardContent>
-                <p className="font-semibold mb-4 text-lg">{currentQuestion.question}</p>
+                <p className="font-semibold mb-6 text-lg">{currentQuestion.question}</p>
                 <div className="space-y-3">
                     {currentQuestion.options.map((option, index) => {
                         const isCorrect = option === currentQuestion.correctAnswer;
                         const isSelected = option === selectedAnswer;
-                        let variant: "default" | "secondary" | "destructive" | "outline" = "outline";
+                        
+                        let stateClass = "bg-secondary hover:bg-secondary/80";
                         if (isAnswered) {
-                            if (isCorrect) variant = "default";
-                            else if (isSelected) variant = "destructive";
-                            else variant = "outline";
+                            if (isCorrect) stateClass = "bg-green-500/80 text-white";
+                            else if (isSelected) stateClass = "bg-red-500/80 text-white";
                         }
 
                         return (
                             <Button
                                 key={index}
-                                variant={variant}
-                                className="w-full justify-start h-auto py-3 text-left"
+                                className={cn("w-full justify-start h-auto py-3 text-left", stateClass)}
                                 onClick={() => handleAnswer(option)}
                                 disabled={isAnswered}
                             >
                                 {option}
-                                {isAnswered && isCorrect && <CheckCircle className="ml-auto w-5 h-5 text-primary-foreground" />}
+                                {isAnswered && isCorrect && <CheckCircle className="ml-auto w-5 h-5" />}
                                 {isAnswered && isSelected && !isCorrect && <XCircle className="ml-auto w-5 h-5" />}
                             </Button>
                         );
                     })}
                 </div>
                 {isAnswered && (
-                    <div className="mt-4 p-4 bg-muted rounded-lg">
+                    <div className="mt-6 p-4 bg-muted/50 rounded-lg">
                         <p><span className="font-bold">Explanation:</span> {currentQuestion.explanation}</p>
                     </div>
                 )}
                 <div className="mt-6 flex justify-end">
-                    {isAnswered && <Button onClick={handleNext}>
+                    {isAnswered && <Button onClick={handleNext} className="font-semibold">
                         {currentQuestionIndex < questions.length - 1 ? "Next Question" : "Show Results"}
                     </Button>}
                 </div>
@@ -311,47 +324,44 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
 // Main Client Component
 export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
+    const [highlightedWord, setHighlightedWord] = useState<string | null>(null);
     
     return (
-        <div>
-            {/* Audio Player */}
-             <div className="mb-8">
-                 <h2 className="font-headline text-3xl font-bold mb-4">Audio Narration</h2>
-                 <AudioPlayer text={work.fullText} />
-            </div>
-            
-            <Separator className="my-12" />
-
-            {/* Main Content */}
-            <div className="prose prose-lg max-w-none">
-                 <h2 className="font-headline text-3xl font-bold mt-12 mb-2">Full Text</h2>
-                 <p className="text-muted-foreground mb-4">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
+        <div className="space-y-16 md:space-y-24">
+            {/* Audio Player & Full Text */}
+            <section>
+                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Read & Listen</h2>
+                 <div className="sticky top-20 z-10 mb-8 backdrop-blur-sm p-2 -m-2 rounded-lg">
+                    <AudioPlayer text={work.fullText} onWordHighlight={setHighlightedWord} />
+                 </div>
+                 <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions, or press play to listen along.</p>
                 <InteractiveText 
                     text={work.fullText} 
-                    difficultWords={work.difficultWords} 
+                    difficultWords={work.difficultWords}
+                    highlightedWord={highlightedWord}
                 />
-            </div>
+            </section>
             
-            <Separator className="my-12" />
+            <Separator className="bg-border/30" />
 
             {/* Content Analysis */}
             <section className="space-y-8">
-                <h2 className="font-headline text-3xl font-bold">Content Analysis</h2>
-                <Card>
+                <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Content Analysis</h2>
+                <Card className="bg-card/50 border-border/50 shadow-lg">
                     <CardHeader><CardTitle className="font-headline">Summary</CardTitle></CardHeader>
-                    <CardContent><p>{work.contentAnalysis.summary}</p></CardContent>
+                    <CardContent><p className="text-foreground/80">{work.contentAnalysis.summary}</p></CardContent>
                 </Card>
-                 <Card>
+                 <Card className="bg-card/50 border-border/50 shadow-lg">
                     <CardHeader><CardTitle className="font-headline">Themes</CardTitle></CardHeader>
                     <CardContent>
-                        <ul className="list-disc pl-5 space-y-1">
+                        <ul className="list-disc pl-5 space-y-1 text-foreground/80">
                             {work.contentAnalysis.themes.map((theme, i) => <li key={i}>{theme}</li>)}
                         </ul>
                     </CardContent>
                 </Card>
-                 <Card>
+                 <Card className="bg-card/50 border-border/50 shadow-lg">
                     <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
-                    <CardContent>
+                    <CardContent className="text-foreground/80">
                         {work.contentAnalysis.literaryDevices.map((ld, i) => (
                             <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
                         ))}
@@ -359,38 +369,39 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                 </Card>
             </section>
             
-            <Separator className="my-12" />
+            <Separator className="bg-border/30" />
 
             {/* Author Info */}
             <section>
-                 <h2 className="font-headline text-3xl font-bold mb-8">About the Author</h2>
-                 <Card>
-                    <CardContent className="p-6">
+                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">About the Author</h2>
+                 <Card className="bg-card/50 border-border/50 shadow-lg">
+                    <CardContent className="p-8 text-foreground/80">
                         {work.authorInfo.biography && <p className="mb-4">{work.authorInfo.biography}</p>}
                         {work.authorInfo.writingStyle && <p><strong>Writing Style:</strong> {work.authorInfo.writingStyle}</p>}
                     </CardContent>
                  </Card>
             </section>
 
-            <Separator className="my-12" />
+            <Separator className="bg-border/30" />
 
             {/* FAQs */}
             <section>
-                <h2 className="font-headline text-3xl font-bold mb-8">Frequently Asked Questions</h2>
-                <Accordion type="single" collapsible className="w-full">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                <Accordion type="single" collapsible className="w-full bg-card/50 border border-border/50 rounded-lg shadow-lg">
                     {work.faqs.map((faq, index) => (
-                        <AccordionItem value={`item-${index}`} key={index}>
-                            <AccordionTrigger className="font-semibold text-left">{faq.question}</AccordionTrigger>
-                            <AccordionContent>{faq.answer}</AccordionContent>
+                        <AccordionItem value={`item-${index}`} key={index} className={cn(index === work.faqs.length - 1 && "border-b-0")}>
+                            <AccordionTrigger className="font-semibold text-left p-6 text-lg">{faq.question}</AccordionTrigger>
+                            <AccordionContent className="px-6 text-foreground/80">{faq.answer}</AccordionContent>
                         </AccordionItem>
                     ))}
                 </Accordion>
             </section>
             
-            <Separator className="my-12" />
+            <Separator className="bg-border/30" />
 
             {/* Quiz */}
             <section>
+                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Test Your Knowledge</h2>
                 <Quiz questions={work.quiz} />
             </section>
         </div>

@@ -16,21 +16,21 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-card/80 backdrop-blur-lg border-b sticky top-0 z-50">
+    <header className="bg-transparent backdrop-blur-lg border-b border-border/30 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary">
-            <BookMarked className="w-8 h-8 text-accent" />
-            <span>ReadMe</span>
+            <BookMarked className="w-8 h-8 text-foreground" />
+            <span className="text-foreground">ReadMe</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-headline text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="font-headline text-md font-medium text-foreground/80 hover:text-primary transition-colors"
               >
                 {item.label}
               </Link>
@@ -46,15 +46,15 @@ export function Header() {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px]">
+              <SheetContent side="right" className="w-[280px] bg-background/90 backdrop-blur-xl">
                 <SheetHeader>
                   <SheetTitle className="sr-only">Menu</SheetTitle>
                 </SheetHeader>
                 <div className="p-4">
                     <div className="flex justify-between items-center mb-8">
                          <Link href="/" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                            <BookMarked className="w-8 h-8 text-accent" />
-                            <span>ReadMe</span>
+                            <BookMarked className="w-8 h-8 text-foreground" />
+                            <span className="text-foreground">ReadMe</span>
                         </Link>
                         <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                             <X className="h-6 w-6" />

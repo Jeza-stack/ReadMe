@@ -18,23 +18,23 @@ export function BlogClient({ posts, categories }: { posts: BlogPost[]; categorie
 
   return (
     <div>
-      <div className="mb-12 p-6 bg-card border rounded-lg">
+      <div className="mb-12 p-6 bg-card/50 border border-border/50 rounded-lg shadow-lg">
         <div className="grid md:grid-cols-2 gap-4 items-end">
             <div>
-                <label htmlFor="search" className="block text-sm font-medium mb-1">Search Posts</label>
+                <label htmlFor="search" className="block text-sm font-medium mb-2">Search Posts</label>
                 <Input
                     id="search"
                     type="text"
                     placeholder="e.g. Communication..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full"
+                    className="w-full bg-input"
                 />
             </div>
             <div>
-                <label htmlFor="category" className="block text-sm font-medium mb-1">Filter by Category</label>
+                <label htmlFor="category" className="block text-sm font-medium mb-2">Filter by Category</label>
                  <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                    <SelectTrigger id="category" className="w-full">
+                    <SelectTrigger id="category" className="w-full bg-input">
                         <SelectValue placeholder="Select a category" />
                     </SelectTrigger>
                     <SelectContent>
@@ -57,7 +57,7 @@ export function BlogClient({ posts, categories }: { posts: BlogPost[]; categorie
       ) : (
         <div className="text-center py-16">
             <h3 className="font-headline text-2xl font-bold">No posts found</h3>
-            <p className="text-muted-foreground mt-2">Try adjusting your search or filter.</p>
+            <p className="text-foreground/70 mt-2">Try adjusting your search or filter.</p>
         </div>
       )}
     </div>

@@ -30,13 +30,13 @@ export default function LiteraryWorkPage({ params }: Props) {
 
   return (
     <div>
-      <div className="bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-accent font-semibold font-headline">{work.category}</p>
+      <div className="pt-16 pb-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-primary font-semibold font-headline">{work.category}</p>
             <h1 className="font-headline text-4xl md:text-6xl font-bold mt-2">{work.title}</h1>
-            <p className="mt-4 text-xl text-muted-foreground">by {work.author}</p>
-            <div className="mt-6">
+            <p className="mt-4 text-xl text-foreground/70">by {work.author}</p>
+            <div className="mt-8 flex justify-center">
               <SocialShare title={`${work.title} by ${work.author}`} />
             </div>
           </div>
