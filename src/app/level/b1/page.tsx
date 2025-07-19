@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ArrowRight, CheckCircle, BookOpen, Headphones, PenTool, MessageSquare, Clock, Target, Play, Volume2, Star, Trophy, Award, Zap, ArrowLeft, Brain, Users, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle, BookOpen, Headphones, PenTool, MessageSquare, Clock, Target, Play, Volume2, Star, Trophy, Award, Zap, ArrowLeft, Users, Brain, Globe } from 'lucide-react';
 
 // Types for lesson system
 interface Lesson {
@@ -21,7 +21,7 @@ interface Lesson {
 
 interface Exercise {
   id: string;
-  type: 'multiple-choice' | 'fill-blank' | 'match' | 'true-false' | 'essay';
+  type: 'multiple-choice' | 'fill-blank' | 'match' | 'true-false';
   question: string;
   options?: string[];
   correct: string | number;
@@ -76,7 +76,7 @@ export default function B1Level() {
     localStorage.setItem('b1-progress', JSON.stringify(newProgress));
   };
 
-  // B1 Grammar Topics with Complex Lessons
+  // B1 Grammar Topics with Detailed Lessons (Intermediate Level)
   const grammarTopics = [
     {
       id: 'present-perfect',
@@ -84,42 +84,74 @@ export default function B1Level() {
       status: 'available',
       lessons: [
         {
-          id: 'present-perfect-structure',
-          title: 'Present Perfect - Structure and Uses',
+          id: 'present-perfect-experience',
+          title: 'Present Perfect for Life Experiences',
           content: `
-            <h3>Present Perfect Tense</h3>
-            <p>The Present Perfect connects the past with the present:</p>
+            <h3>Present Perfect for Life Experiences</h3>
+            <p>We use Present Perfect to talk about experiences in our life without saying exactly when:</p>
             <p><strong>Structure:</strong> Subject + have/has + past participle</p>
             <ul>
-              <li><strong>Finished actions with present relevance:</strong> I have lost my keys.</li>
-              <li><strong>Life experiences:</strong> She has traveled to Japan.</li>
-              <li><strong>Actions that started in the past and continue:</strong> They have lived here for 10 years.</li>
-              <li><strong>Recent actions:</strong> He has just arrived.</li>
+              <li><strong>I have visited Paris.</strong> (sometime in my life)</li>
+              <li><strong>She has never eaten sushi.</strong> (never in her life)</li>
+              <li><strong>Have you ever been to Japan?</strong> (at any time in your life)</li>
             </ul>
+            <p>Common time expressions: ever, never, already, yet, just, before</p>
           `,
           examples: [
-            'I have finished my homework.',
-            'She has never been to Australia.',
-            'We have known each other since childhood.',
-            'Have you ever tried sushi?',
-            'They have just left the building.',
-            'He has worked here for five years.'
+            'I have traveled to five countries.',
+            'She has never seen snow.',
+            'Have you ever met a celebrity?',
+            'We have already finished our homework.',
+            'They haven\'t arrived yet.',
+            'He has just called me.'
           ],
           exercises: [
             {
-              id: 'pp-1',
+              id: 'pp-exp-1',
               type: 'multiple-choice',
-              question: 'I ___ in this city for ten years.',
-              options: ['live', 'have lived', 'am living'],
-              correct: 1,
-              explanation: 'Present Perfect is used for actions that started in the past and continue to the present.'
+              question: 'I ___ never ___ such a beautiful sunset.',
+              options: ['have/seen', 'had/saw', 'has/seen'],
+              correct: 0,
+              explanation: 'Use "have" with I and past participle "seen" for experiences.'
             },
             {
-              id: 'pp-2',
+              id: 'pp-exp-2',
               type: 'fill-blank',
-              question: '___ you ever ___ (visit) London?',
-              correct: 'Have / visited',
-              explanation: 'Use Present Perfect for life experiences with "ever".'
+              question: '___ you ever ___ (be) to Australia?',
+              correct: 'Have been',
+              explanation: 'Use "Have you ever been" for life experience questions.'
+            }
+          ],
+          completed: false
+        },
+        {
+          id: 'present-perfect-recent',
+          title: 'Present Perfect for Recent Actions',
+          content: `
+            <h3>Present Perfect for Recent Actions with Results</h3>
+            <p>We use Present Perfect for recent actions that have results now:</p>
+            <ul>
+              <li><strong>I have lost my keys.</strong> (I don't have them now)</li>
+              <li><strong>She has broken her leg.</strong> (Her leg is broken now)</li>
+              <li><strong>We have finished the project.</strong> (The project is complete now)</li>
+            </ul>
+            <p>Often used with: just, already, recently, lately</p>
+          `,
+          examples: [
+            'I have just finished my work.',
+            'She has recently moved to London.',
+            'They have already left the party.',
+            'He has broken his phone.',
+            'We have completed the task.',
+            'The rain has stopped.'
+          ],
+          exercises: [
+            {
+              id: 'pp-recent-1',
+              type: 'fill-blank',
+              question: 'I have ___ (finish) my assignment.',
+              correct: 'finished',
+              explanation: 'Use past participle "finished" with present perfect.'
             }
           ],
           completed: false
@@ -128,37 +160,39 @@ export default function B1Level() {
     },
     {
       id: 'conditional-sentences',
-      topic: 'Conditional Sentences',
+      topic: 'First & Second Conditional',
       status: 'available',
       lessons: [
         {
           id: 'first-conditional',
           title: 'First Conditional - Real Future Possibilities',
           content: `
-            <h3>First Conditional</h3>
-            <p>Used for real future possibilities and their likely results:</p>
+            <h3>First Conditional (Real Future Situations)</h3>
+            <p>We use first conditional for real possibilities in the future:</p>
             <p><strong>Structure:</strong> If + present simple, will + base verb</p>
             <ul>
-              <li><strong>Real possibilities:</strong> If it rains, I will stay home.</li>
-              <li><strong>Warnings:</strong> If you don't study, you will fail.</li>
-              <li><strong>Promises:</strong> If you help me, I will help you.</li>
+              <li><strong>If it rains, I will stay home.</strong></li>
+              <li><strong>If you study hard, you will pass the exam.</strong></li>
+              <li><strong>I will call you if I have time.</strong></li>
             </ul>
+            <p>Can also use: might, may, could instead of will</p>
           `,
           examples: [
-            'If I have time, I will call you.',
-            'She will be angry if you are late.',
-            'If we hurry, we will catch the train.',
-            'You will feel better if you rest.',
-            'If it snows, the roads will be dangerous.',
-            'I will buy a car if I save enough money.'
+            'If I have enough money, I will buy a car.',
+            'She will be happy if you visit her.',
+            'If we leave now, we might catch the train.',
+            'You will get wet if you don\'t take an umbrella.',
+            'If they invite us, we will go to the party.',
+            'I will help you if you need assistance.'
           ],
           exercises: [
             {
-              id: 'cond-1',
-              type: 'fill-blank',
-              question: 'If she ___ (study) hard, she ___ (pass) the exam.',
-              correct: 'studies / will pass',
-              explanation: 'First conditional: if + present simple, will + base verb.'
+              id: 'first-cond-1',
+              type: 'multiple-choice',
+              question: 'If it ___ sunny tomorrow, we ___ go to the beach.',
+              options: ['is/will', 'will be/go', 'is/go'],
+              correct: 0,
+              explanation: 'First conditional: If + present simple, will + base verb'
             }
           ],
           completed: false
@@ -167,31 +201,31 @@ export default function B1Level() {
           id: 'second-conditional',
           title: 'Second Conditional - Unreal Present Situations',
           content: `
-            <h3>Second Conditional</h3>
-            <p>Used for unreal or unlikely present/future situations:</p>
+            <h3>Second Conditional (Unreal Present Situations)</h3>
+            <p>We use second conditional for imaginary or unlikely situations:</p>
             <p><strong>Structure:</strong> If + past simple, would + base verb</p>
             <ul>
-              <li><strong>Hypothetical situations:</strong> If I were rich, I would travel the world.</li>
-              <li><strong>Unlikely events:</strong> If I won the lottery, I would quit my job.</li>
-              <li><strong>Advice:</strong> If I were you, I would apologize.</li>
+              <li><strong>If I were rich, I would travel the world.</strong></li>
+              <li><strong>If she studied more, she would get better grades.</strong></li>
+              <li><strong>What would you do if you won the lottery?</strong></li>
             </ul>
+            <p>Note: Use "were" (not "was") with I/he/she/it in second conditional</p>
           `,
           examples: [
-            'If I had more time, I would learn Spanish.',
-            'She would be happier if she lived near the sea.',
-            'If we were younger, we would climb that mountain.',
-            'Would you help me if I asked you?',
-            'If I were the president, I would change many things.',
-            'They would visit us if they had a car.'
+            'If I were you, I would apologize.',
+            'She would be happier if she had more friends.',
+            'If we lived in Paris, we would speak French.',
+            'I would learn Spanish if I had more time.',
+            'If he were taller, he could play basketball.',
+            'Would you move abroad if you could?'
           ],
           exercises: [
             {
-              id: 'cond-2',
-              type: 'multiple-choice',
-              question: 'If I ___ you, I would accept the job offer.',
-              options: ['am', 'was', 'were'],
-              correct: 2,
-              explanation: 'Use "were" for all persons in second conditional.'
+              id: 'second-cond-1',
+              type: 'fill-blank',
+              question: 'If I ___ (be) rich, I ___ (buy) a yacht.',
+              correct: 'were would buy',
+              explanation: 'Second conditional: If + past simple (were), would + base verb'
             }
           ],
           completed: false
@@ -204,33 +238,35 @@ export default function B1Level() {
       status: 'available',
       lessons: [
         {
-          id: 'passive-structure',
-          title: 'Passive Voice - Structure and Usage',
+          id: 'passive-present',
+          title: 'Passive Voice - Present and Past',
           content: `
-            <h3>Passive Voice</h3>
-            <p>Used when the action is more important than who does it:</p>
-            <p><strong>Structure:</strong> Subject + be + past participle (+ by + agent)</p>
+            <h3>Passive Voice Formation</h3>
+            <p>We use passive voice when the action is more important than who does it:</p>
+            <p><strong>Structure:</strong> Object + be + past participle (+ by agent)</p>
             <ul>
-              <li><strong>Focus on action:</strong> The house was built in 1900.</li>
-              <li><strong>Unknown agent:</strong> My car was stolen last night.</li>
-              <li><strong>Formal writing:</strong> The results were analyzed carefully.</li>
+              <li><strong>Active:</strong> Shakespeare wrote Hamlet.</li>
+              <li><strong>Passive:</strong> Hamlet was written by Shakespeare.</li>
             </ul>
+            <p>Present: am/is/are + past participle</p>
+            <p>Past: was/were + past participle</p>
           `,
           examples: [
-            'This book was written by Shakespeare.',
-            'The meeting has been cancelled.',
             'English is spoken all over the world.',
-            'The problem will be solved tomorrow.',
-            'The data is being processed now.',
-            'The work had been completed before noon.'
+            'The letter was delivered yesterday.',
+            'This house is being built by my father.',
+            'The meeting was cancelled due to rain.',
+            'Coffee is grown in Colombia.',
+            'The book was published in 2020.'
           ],
           exercises: [
             {
               id: 'passive-1',
-              type: 'fill-blank',
-              question: 'The letter ___ (send) yesterday.',
-              correct: 'was sent',
-              explanation: 'Past simple passive: was/were + past participle.'
+              type: 'multiple-choice',
+              question: 'The Mona Lisa ___ by Leonardo da Vinci.',
+              options: ['was painted', 'is painted', 'painted'],
+              correct: 0,
+              explanation: 'Past passive: was/were + past participle'
             }
           ],
           completed: false
@@ -239,86 +275,88 @@ export default function B1Level() {
     }
   ];
 
-  // B1 Vocabulary Database (500 words - Intermediate level)
+  // B1 Vocabulary Database (500 words - Intermediate Level)
   const vocabularyDatabase: VocabularyWord[] = [
     // Opinions & Experiences (50 words)
-    { word: 'opinion', pronunciation: '/əˈpɪnjən/', meaning: 'a view or belief about something', example: 'In my opinion, this is the best solution.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'experience', pronunciation: '/ɪkˈspɪriəns/', meaning: 'knowledge gained through practice', example: 'I have experience working with children.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'believe', pronunciation: '/bɪˈliːv/', meaning: 'to think something is true', example: 'I believe in working hard for success.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'agree', pronunciation: '/əˈɡriː/', meaning: 'to have the same opinion', example: 'I agree with your point of view.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'disagree', pronunciation: '/ˌdɪsəˈɡriː/', meaning: 'to have a different opinion', example: 'I disagree with that decision.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'suggest', pronunciation: '/səˈdʒest/', meaning: 'to propose an idea', example: 'I suggest we meet tomorrow.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'opinion', pronunciation: '/əˈpɪnjən/', meaning: 'what you think about something', example: 'In my opinion, this movie is excellent.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'experience', pronunciation: '/ɪkˈspɪriəns/', meaning: 'something that happens to you', example: 'Learning English was a great experience.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'believe', pronunciation: '/bɪˈliːv/', meaning: 'to think something is true', example: 'I believe education is very important.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'agree', pronunciation: '/əˈɡriː/', meaning: 'to have the same opinion', example: 'I agree with your suggestion.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'disagree', pronunciation: '/ˌdɪsəˈɡriː/', meaning: 'to have a different opinion', example: 'I disagree with that statement.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'suggest', pronunciation: '/səˈdʒest/', meaning: 'to propose an idea', example: 'I suggest we meet at 3 PM.', category: 'Opinions & Experiences', mastered: false },
     { word: 'recommend', pronunciation: '/ˌrekəˈmend/', meaning: 'to advise someone to do something', example: 'I recommend this restaurant.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'suppose', pronunciation: '/səˈpoʊz/', meaning: 'to think something is likely', example: 'I suppose you\'re right.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'assume', pronunciation: '/əˈsuːm/', meaning: 'to believe without proof', example: 'Don\'t assume you know what I think.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'consider', pronunciation: '/kənˈsɪdər/', meaning: 'to think carefully about', example: 'Please consider my proposal.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'realize', pronunciation: '/ˈriːəlaɪz/', meaning: 'to become aware of', example: 'I realize I made a mistake.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'recognize', pronunciation: '/ˈrekəɡnaɪz/', meaning: 'to identify someone or something', example: 'I recognize your voice.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'appreciate', pronunciation: '/əˈpriːʃieɪt/', meaning: 'to value or be grateful for', example: 'I appreciate your help.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'admire', pronunciation: '/ədˈmaɪər/', meaning: 'to respect and approve', example: 'I admire her courage.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'respect', pronunciation: '/rɪˈspekt/', meaning: 'to have a good opinion of', example: 'I respect his decision.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'criticize', pronunciation: '/ˈkrɪtɪsaɪz/', meaning: 'to express disapproval', example: 'Don\'t criticize without offering solutions.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'complain', pronunciation: '/kəmˈpleɪn/', meaning: 'to express dissatisfaction', example: 'She always complains about the weather.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'praise', pronunciation: '/preɪz/', meaning: 'to express approval', example: 'The teacher praised his work.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'judge', pronunciation: '/dʒʌdʒ/', meaning: 'to form an opinion about', example: 'Don\'t judge people by their appearance.', category: 'Opinions & Experiences', mastered: false },
-    { word: 'compare', pronunciation: '/kəmˈper/', meaning: 'to examine similarities and differences', example: 'Compare these two options.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'advice', pronunciation: '/ədˈvaɪs/', meaning: 'suggestions about what to do', example: 'Can you give me some advice?', category: 'Opinions & Experiences', mastered: false },
+    { word: 'decision', pronunciation: '/dɪˈsɪʒən/', meaning: 'a choice you make', example: 'It was a difficult decision.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'choice', pronunciation: '/tʃɔɪs/', meaning: 'an option to choose from', example: 'You have many choices.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'prefer', pronunciation: '/prɪˈfər/', meaning: 'to like something better', example: 'I prefer tea to coffee.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'advantage', pronunciation: '/ədˈvæntɪdʒ/', meaning: 'something good about a situation', example: 'The main advantage is the low cost.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'disadvantage', pronunciation: '/ˌdɪsədˈvæntɪdʒ/', meaning: 'something bad about a situation', example: 'The disadvantage is the long commute.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'benefit', pronunciation: '/ˈbenɪfɪt/', meaning: 'something good you get', example: 'Exercise has many health benefits.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'improve', pronunciation: '/ɪmˈpruːv/', meaning: 'to make or become better', example: 'I want to improve my English.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'develop', pronunciation: '/dɪˈveləp/', meaning: 'to grow or create', example: 'Children develop language skills quickly.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'achieve', pronunciation: '/əˈtʃiːv/', meaning: 'to succeed in doing something', example: 'She achieved her goal of running a marathon.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'succeed', pronunciation: '/səkˈsiːd/', meaning: 'to do well', example: 'I hope you succeed in your new job.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'fail', pronunciation: '/feɪl/', meaning: 'to not succeed', example: 'Don\'t worry if you fail the first time.', category: 'Opinions & Experiences', mastered: false },
+    { word: 'challenge', pronunciation: '/ˈtʃælɪndʒ/', meaning: 'something difficult to do', example: 'Learning a new language is a challenge.', category: 'Opinions & Experiences', mastered: false },
 
-    // Abstract Concepts (50 words)
-    { word: 'freedom', pronunciation: '/ˈfriːdəm/', meaning: 'the state of being free', example: 'Freedom of speech is important.', category: 'Abstract Concepts', mastered: false },
-    { word: 'justice', pronunciation: '/ˈdʒʌstɪs/', meaning: 'fairness in treatment', example: 'The court delivered justice.', category: 'Abstract Concepts', mastered: false },
-    { word: 'equality', pronunciation: '/ɪˈkwɑːləti/', meaning: 'the state of being equal', example: 'Gender equality is essential.', category: 'Abstract Concepts', mastered: false },
-    { word: 'responsibility', pronunciation: '/rɪˌspɑːnsəˈbɪləti/', meaning: 'a duty to deal with something', example: 'Parents have responsibility for their children.', category: 'Abstract Concepts', mastered: false },
-    { word: 'opportunity', pronunciation: '/ˌɑːpərˈtuːnəti/', meaning: 'a chance to do something', example: 'This job is a great opportunity.', category: 'Abstract Concepts', mastered: false },
-    { word: 'challenge', pronunciation: '/ˈtʃælɪndʒ/', meaning: 'a difficult task', example: 'Learning a language is a challenge.', category: 'Abstract Concepts', mastered: false },
-    { word: 'success', pronunciation: '/səkˈses/', meaning: 'achieving a goal', example: 'Hard work leads to success.', category: 'Abstract Concepts', mastered: false },
-    { word: 'failure', pronunciation: '/ˈfeɪljər/', meaning: 'lack of success', example: 'Failure is part of learning.', category: 'Abstract Concepts', mastered: false },
-    { word: 'progress', pronunciation: '/ˈprɑːɡres/', meaning: 'forward movement', example: 'We\'re making good progress.', category: 'Abstract Concepts', mastered: false },
-    { word: 'improvement', pronunciation: '/ɪmˈpruːvmənt/', meaning: 'the act of making better', example: 'There\'s room for improvement.', category: 'Abstract Concepts', mastered: false },
-    { word: 'development', pronunciation: '/dɪˈveləpmənt/', meaning: 'the process of growing', example: 'Child development is complex.', category: 'Abstract Concepts', mastered: false },
-    { word: 'achievement', pronunciation: '/əˈtʃiːvmənt/', meaning: 'something accomplished', example: 'Graduating was a great achievement.', category: 'Abstract Concepts', mastered: false },
-    { word: 'potential', pronunciation: '/pəˈtenʃəl/', meaning: 'possible abilities', example: 'She has great potential.', category: 'Abstract Concepts', mastered: false },
-    { word: 'creativity', pronunciation: '/ˌkriːeɪˈtɪvəti/', meaning: 'the ability to create', example: 'Art requires creativity.', category: 'Abstract Concepts', mastered: false },
-    { word: 'imagination', pronunciation: '/ɪˌmædʒɪˈneɪʃən/', meaning: 'the ability to imagine', example: 'Children have wild imagination.', category: 'Abstract Concepts', mastered: false },
-    { word: 'wisdom', pronunciation: '/ˈwɪzdəm/', meaning: 'deep understanding', example: 'Age brings wisdom.', category: 'Abstract Concepts', mastered: false },
-    { word: 'knowledge', pronunciation: '/ˈnɑːlɪdʒ/', meaning: 'information and understanding', example: 'Knowledge is power.', category: 'Abstract Concepts', mastered: false },
-    { word: 'understanding', pronunciation: '/ˌʌndərˈstændɪŋ/', meaning: 'comprehension', example: 'Thank you for your understanding.', category: 'Abstract Concepts', mastered: false },
-    { word: 'confidence', pronunciation: '/ˈkɑːnfɪdəns/', meaning: 'belief in oneself', example: 'She speaks with confidence.', category: 'Abstract Concepts', mastered: false },
-    { word: 'courage', pronunciation: '/ˈkɜːrɪdʒ/', meaning: 'bravery', example: 'It takes courage to change.', category: 'Abstract Concepts', mastered: false },
+    // Work & Professional Life (50 words)
+    { word: 'career', pronunciation: '/kəˈrɪr/', meaning: 'your professional life', example: 'She has had a successful career in medicine.', category: 'Work & Professional Life', mastered: false },
+    { word: 'colleague', pronunciation: '/ˈkɑːliːɡ/', meaning: 'person you work with', example: 'My colleagues are very friendly.', category: 'Work & Professional Life', mastered: false },
+    { word: 'boss', pronunciation: '/bɔːs/', meaning: 'person who manages you at work', example: 'My boss gave me a promotion.', category: 'Work & Professional Life', mastered: false },
+    { word: 'employee', pronunciation: '/ɪmˈplɔɪiː/', meaning: 'person who works for a company', example: 'The company has 200 employees.', category: 'Work & Professional Life', mastered: false },
+    { word: 'employer', pronunciation: '/ɪmˈplɔɪər/', meaning: 'company or person who gives jobs', example: 'Google is a popular employer.', category: 'Work & Professional Life', mastered: false },
+    { word: 'interview', pronunciation: '/ˈɪntərvjuː/', meaning: 'meeting for a job', example: 'I have a job interview tomorrow.', category: 'Work & Professional Life', mastered: false },
+    { word: 'salary', pronunciation: '/ˈsæləri/', meaning: 'money you earn from work', example: 'The salary is very competitive.', category: 'Work & Professional Life', mastered: false },
+    { word: 'promotion', pronunciation: '/prəˈmoʊʃən/', meaning: 'better job position', example: 'He got a promotion to manager.', category: 'Work & Professional Life', mastered: false },
+    { word: 'deadline', pronunciation: '/ˈdedlaɪn/', meaning: 'time when work must be finished', example: 'The deadline for the project is Friday.', category: 'Work & Professional Life', mastered: false },
+    { word: 'meeting', pronunciation: '/ˈmiːtɪŋ/', meaning: 'gathering of people to discuss', example: 'We have a team meeting at 2 PM.', category: 'Work & Professional Life', mastered: false },
+    { word: 'presentation', pronunciation: '/ˌprezənˈteɪʃən/', meaning: 'formal talk to a group', example: 'I need to prepare a presentation.', category: 'Work & Professional Life', mastered: false },
+    { word: 'conference', pronunciation: '/ˈkɑːnfərəns/', meaning: 'large professional meeting', example: 'She attended a medical conference.', category: 'Work & Professional Life', mastered: false },
+    { word: 'training', pronunciation: '/ˈtreɪnɪŋ/', meaning: 'learning new work skills', example: 'All new employees receive training.', category: 'Work & Professional Life', mastered: false },
+    { word: 'skill', pronunciation: '/skɪl/', meaning: 'ability to do something well', example: 'Communication skills are important.', category: 'Work & Professional Life', mastered: false },
+    { word: 'qualification', pronunciation: '/ˌkwɑːlɪfɪˈkeɪʃən/', meaning: 'official proof of ability', example: 'Do you have the right qualifications?', category: 'Work & Professional Life', mastered: false },
+    { word: 'responsibility', pronunciation: '/rɪˌspɑːnsəˈbɪləti/', meaning: 'duty or job you must do', example: 'Managing the team is my responsibility.', category: 'Work & Professional Life', mastered: false },
+    { word: 'opportunity', pronunciation: '/ˌɑːpərˈtuːnəti/', meaning: 'chance to do something', example: 'This job offers great opportunities.', category: 'Work & Professional Life', mastered: false },
+    { word: 'contract', pronunciation: '/ˈkɑːntrækt/', meaning: 'legal work agreement', example: 'I signed a two-year contract.', category: 'Work & Professional Life', mastered: false },
+    { word: 'retire', pronunciation: '/rɪˈtaɪər/', meaning: 'to stop working due to age', example: 'He plans to retire at 65.', category: 'Work & Professional Life', mastered: false },
+    { word: 'unemployed', pronunciation: '/ˌʌnɪmˈplɔɪd/', meaning: 'without a job', example: 'He has been unemployed for six months.', category: 'Work & Professional Life', mastered: false },
 
-    // Professional Life (40 words)
-    { word: 'career', pronunciation: '/kəˈrɪr/', meaning: 'a person\'s professional life', example: 'She has a successful career in medicine.', category: 'Professional Life', mastered: false },
-    { word: 'profession', pronunciation: '/prəˈfeʃən/', meaning: 'a paid occupation', example: 'Teaching is a noble profession.', category: 'Professional Life', mastered: false },
-    { word: 'occupation', pronunciation: '/ˌɑːkjuˈpeɪʃən/', meaning: 'a job or profession', example: 'What\'s your occupation?', category: 'Professional Life', mastered: false },
-    { word: 'employment', pronunciation: '/ɪmˈplɔɪmənt/', meaning: 'the state of having a job', example: 'Employment rates are rising.', category: 'Professional Life', mastered: false },
-    { word: 'unemployment', pronunciation: '/ˌʌnɪmˈplɔɪmənt/', meaning: 'the state of being without work', example: 'Unemployment is a serious problem.', category: 'Professional Life', mastered: false },
-    { word: 'interview', pronunciation: '/ˈɪntərvjuː/', meaning: 'a meeting to assess suitability', example: 'I have a job interview tomorrow.', category: 'Professional Life', mastered: false },
-    { word: 'application', pronunciation: '/ˌæplɪˈkeɪʃən/', meaning: 'a formal request', example: 'I sent my job application.', category: 'Professional Life', mastered: false },
-    { word: 'resume', pronunciation: '/rɪˈzuːmeɪ/', meaning: 'a summary of qualifications', example: 'Update your resume regularly.', category: 'Professional Life', mastered: false },
-    { word: 'qualification', pronunciation: '/ˌkwɑːlɪfɪˈkeɪʃən/', meaning: 'a skill or achievement', example: 'Do you have the right qualifications?', category: 'Professional Life', mastered: false },
-    { word: 'experience', pronunciation: '/ɪkˈspɪriəns/', meaning: 'practical knowledge', example: 'This job requires five years\' experience.', category: 'Professional Life', mastered: false },
-    { word: 'skill', pronunciation: '/skɪl/', meaning: 'the ability to do something well', example: 'Communication is an important skill.', category: 'Professional Life', mastered: false },
-    { word: 'training', pronunciation: '/ˈtreɪnɪŋ/', meaning: 'teaching of skills', example: 'New employees need training.', category: 'Professional Life', mastered: false },
-    { word: 'promotion', pronunciation: '/prəˈmoʊʃən/', meaning: 'advancement to a higher position', example: 'She got a promotion last month.', category: 'Professional Life', mastered: false },
-    { word: 'salary', pronunciation: '/ˈsæləri/', meaning: 'fixed payment for work', example: 'The salary is negotiable.', category: 'Professional Life', mastered: false },
-    { word: 'benefits', pronunciation: '/ˈbenɪfɪts/', meaning: 'additional advantages', example: 'The job comes with good benefits.', category: 'Professional Life', mastered: false },
-    { word: 'colleague', pronunciation: '/ˈkɑːliːɡ/', meaning: 'a person you work with', example: 'My colleagues are very helpful.', category: 'Professional Life', mastered: false },
-    { word: 'supervisor', pronunciation: '/ˈsuːpərvaɪzər/', meaning: 'a person who oversees work', example: 'Speak to your supervisor about this.', category: 'Professional Life', mastered: false },
-    { word: 'deadline', pronunciation: '/ˈdedlaɪn/', meaning: 'the time by which something must be done', example: 'The deadline is next Friday.', category: 'Professional Life', mastered: false },
-    { word: 'meeting', pronunciation: '/ˈmiːtɪŋ/', meaning: 'a gathering for discussion', example: 'We have a meeting at 3 PM.', category: 'Professional Life', mastered: false },
-    { word: 'presentation', pronunciation: '/ˌpriːzenˈteɪʃən/', meaning: 'a formal talk about a topic', example: 'I\'m giving a presentation tomorrow.', category: 'Professional Life', mastered: false }
+    // Education & Learning (40 words)
+    { word: 'university', pronunciation: '/ˌjuːnɪˈvərsəti/', meaning: 'higher education institution', example: 'She studies at Harvard University.', category: 'Education & Learning', mastered: false },
+    { word: 'degree', pronunciation: '/dɪˈɡriː/', meaning: 'university qualification', example: 'I have a degree in engineering.', category: 'Education & Learning', mastered: false },
+    { word: 'graduate', pronunciation: '/ˈɡrædʒuət/', meaning: 'person who completed studies', example: 'She is a recent graduate.', category: 'Education & Learning', mastered: false },
+    { word: 'course', pronunciation: '/kɔːrs/', meaning: 'series of lessons', example: 'I\'m taking a photography course.', category: 'Education & Learning', mastered: false },
+    { word: 'subject', pronunciation: '/ˈsʌbdʒɪkt/', meaning: 'topic of study', example: 'Math is my favorite subject.', category: 'Education & Learning', mastered: false },
+    { word: 'professor', pronunciation: '/prəˈfesər/', meaning: 'university teacher', example: 'Professor Smith teaches history.', category: 'Education & Learning', mastered: false },
+    { word: 'lecture', pronunciation: '/ˈlektʃər/', meaning: 'formal talk to students', example: 'The lecture starts at 9 AM.', category: 'Education & Learning', mastered: false },
+    { word: 'assignment', pronunciation: '/əˈsaɪnmənt/', meaning: 'work given to students', example: 'I need to finish my assignment.', category: 'Education & Learning', mastered: false },
+    { word: 'research', pronunciation: '/rɪˈsərtʃ/', meaning: 'detailed study of a topic', example: 'She does research on climate change.', category: 'Education & Learning', mastered: false },
+    { word: 'knowledge', pronunciation: '/ˈnɑːlɪdʒ/', meaning: 'information and understanding', example: 'Knowledge is power.', category: 'Education & Learning', mastered: false },
+    { word: 'library', pronunciation: '/ˈlaɪbreri/', meaning: 'place with books for reading', example: 'I study in the library every day.', category: 'Education & Learning', mastered: false },
+    { word: 'scholarship', pronunciation: '/ˈskɑːlərʃɪp/', meaning: 'money for education', example: 'She won a scholarship to study abroad.', category: 'Education & Learning', mastered: false },
+    { word: 'exam', pronunciation: '/ɪɡˈzæm/', meaning: 'test of knowledge', example: 'I have an exam next week.', category: 'Education & Learning', mastered: false },
+    { word: 'certificate', pronunciation: '/sərˈtɪfɪkət/', meaning: 'official document proving completion', example: 'I received a certificate in first aid.', category: 'Education & Learning', mastered: false },
+    { word: 'graduate', pronunciation: '/ˈɡrædʒueɪt/', meaning: 'to complete studies successfully', example: 'I will graduate next year.', category: 'Education & Learning', mastered: false },
+    { word: 'semester', pronunciation: '/səˈmestər/', meaning: 'half of an academic year', example: 'This semester I\'m taking five courses.', category: 'Education & Learning', mastered: false },
+    { word: 'tuition', pronunciation: '/tuˈɪʃən/', meaning: 'money paid for education', example: 'University tuition is expensive.', category: 'Education & Learning', mastered: false },
+    { word: 'campus', pronunciation: '/ˈkæmpəs/', meaning: 'university grounds', example: 'The campus has beautiful gardens.', category: 'Education & Learning', mastered: false },
+    { word: 'dormitory', pronunciation: '/ˈdɔːrmətɔːri/', meaning: 'student residence building', example: 'I live in a dormitory on campus.', category: 'Education & Learning', mastered: false },
+    { word: 'curriculum', pronunciation: '/kəˈrɪkjələm/', meaning: 'subjects taught in school', example: 'The curriculum includes science and math.', category: 'Education & Learning', mastered: false }
+
+    // Additional categories would continue here for B1 level...
   ];
 
   const vocabularyCategories = [
     { name: 'Opinions & Experiences', count: 50, color: 'bg-blue-500' },
-    { name: 'Abstract Concepts', count: 50, color: 'bg-purple-500' },
-    { name: 'Professional Life', count: 40, color: 'bg-green-500' },
-    { name: 'Social Issues', count: 45, color: 'bg-red-500' },
-    { name: 'Technology & Media', count: 40, color: 'bg-indigo-500' },
-    { name: 'Culture & Society', count: 45, color: 'bg-orange-500' },
-    { name: 'Environment & Nature', count: 40, color: 'bg-emerald-500' },
-    { name: 'Education & Learning', count: 35, color: 'bg-pink-500' },
-    { name: 'Health & Lifestyle', count: 35, color: 'bg-cyan-500' },
-    { name: 'Future Plans & Goals', count: 30, color: 'bg-amber-500' }
+    { name: 'Work & Professional Life', count: 50, color: 'bg-green-500' },
+    { name: 'Education & Learning', count: 40, color: 'bg-purple-500' },
+    { name: 'Travel & Culture', count: 60, color: 'bg-red-500' },
+    { name: 'Health & Lifestyle', count: 45, color: 'bg-orange-500' },
+    { name: 'Technology & Media', count: 55, color: 'bg-indigo-500' },
+    { name: 'Environment & Society', count: 50, color: 'bg-teal-500' },
+    { name: 'Abstract Concepts', count: 40, color: 'bg-pink-500' },
+    { name: 'Plans & Future', count: 35, color: 'bg-yellow-500' },
+    { name: 'Relationships & Communication', count: 75, color: 'bg-cyan-500' }
   ];
 
   const skillsActivities = [
@@ -326,7 +364,7 @@ export default function B1Level() {
       id: 'reading-opinions',
       type: 'Reading',
       title: 'Opinion Articles',
-      description: 'Read and analyze different viewpoints on current topics',
+      description: 'Read articles expressing different viewpoints and analyze arguments',
       difficulty: 'Intermediate',
       time: '25 minutes',
       completed: false
@@ -335,7 +373,7 @@ export default function B1Level() {
       id: 'listening-interviews',
       type: 'Listening',
       title: 'Job Interviews',
-      description: 'Listen to professional interviews and discussions',
+      description: 'Listen to professional interviews and answer comprehension questions',
       difficulty: 'Intermediate',
       time: '20 minutes',
       completed: false
@@ -350,10 +388,10 @@ export default function B1Level() {
       completed: false
     },
     {
-      id: 'speaking-debate',
+      id: 'speaking-presentation',
       type: 'Speaking',
-      title: 'Express Opinions in Debate',
-      description: 'Practice arguing your point of view persuasively',
+      title: 'Give a Presentation',
+      description: 'Present your opinion on a topic with supporting arguments',
       difficulty: 'Intermediate',
       time: '25 minutes',
       completed: false
@@ -361,37 +399,37 @@ export default function B1Level() {
     {
       id: 'reading-news',
       type: 'Reading',
-      title: 'News Analysis',
-      description: 'Read and interpret news articles critically',
+      title: 'International News',
+      description: 'Read news articles and discuss current events',
       difficulty: 'Intermediate',
       time: '30 minutes',
       completed: false
     },
     {
-      id: 'listening-presentations',
+      id: 'listening-podcasts',
       type: 'Listening',
-      title: 'Academic Presentations',
-      description: 'Follow complex presentations and take notes',
+      title: 'Educational Podcasts',
+      description: 'Listen to podcasts on various topics and take notes',
       difficulty: 'Intermediate',
       time: '35 minutes',
       completed: false
     },
     {
-      id: 'writing-report',
+      id: 'writing-essay',
       type: 'Writing',
-      title: 'Factual Report',
-      description: 'Write structured reports with data and conclusions',
+      title: 'Opinion Essay',
+      description: 'Write a structured essay expressing your viewpoint',
       difficulty: 'Intermediate',
-      time: '40 minutes',
+      time: '45 minutes',
       completed: false
     },
     {
-      id: 'speaking-presentation',
+      id: 'speaking-debate',
       type: 'Speaking',
-      title: 'Give a Presentation',
-      description: 'Present ideas clearly with supporting examples',
+      title: 'Debate Practice',
+      description: 'Participate in structured debates on current issues',
       difficulty: 'Intermediate',
-      time: '30 minutes',
+      time: '40 minutes',
       completed: false
     }
   ];
@@ -422,7 +460,6 @@ export default function B1Level() {
 
   const playPronunciation = (word: string) => {
     console.log(`Playing pronunciation for: ${word}`);
-    // Would integrate with Web Speech API or audio files
   };
 
   const getWordsForCategory = (category: string) => {
@@ -439,7 +476,7 @@ export default function B1Level() {
               B1 Intermediate Level
             </h1>
             <p className="text-xl text-foreground/70">
-              Can deal with most situations and express thoughts on familiar topics.
+              Can deal with most situations likely to arise whilst travelling. Can describe experiences, events, dreams, hopes & ambitions.
             </p>
           </div>
           <div className="text-right">
@@ -457,37 +494,10 @@ export default function B1Level() {
 
         {/* Level Achievement Badge */}
         <div className="mb-6">
-          <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white text-lg px-6 py-3">
+          <Badge className="bg-gradient-to-r from-blue-500 to-blue-700 text-white text-lg px-6 py-3">
             B1 Intermediate
           </Badge>
         </div>
-
-        {/* Can-Do Statements */}
-        <Card className="mb-6 bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-800/20 border-orange-200 dark:border-orange-800">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Brain className="w-6 h-6 text-orange-600" />
-              B1 Can-Do Statements
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-4">
-              {[
-                'Express opinions and justify them with reasons',
-                'Describe experiences, dreams, hopes and ambitions',
-                'Handle most situations while traveling',
-                'Write simple connected text on familiar topics',
-                'Understand main points of clear standard input',
-                'Deal with most situations that arise while traveling'
-              ].map((statement, index) => (
-                <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-white/50 dark:bg-orange-900/20">
-                  <CheckCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{statement}</span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
 
         {/* Progress Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -554,7 +564,7 @@ export default function B1Level() {
                     <div>
                       <CardTitle className="text-xl">{topic.topic}</CardTitle>
                       <CardDescription>
-                        {topic.lessons.length} comprehensive lessons - B1 Intermediate
+                        {topic.lessons.length} intermediate lessons - B1 Level
                       </CardDescription>
                     </div>
                     <Badge variant="outline" className="text-sm">
@@ -590,7 +600,7 @@ export default function B1Level() {
                               </div>
                             </div>
                             <div className="flex items-center gap-2">
-                              <Badge variant="secondary" className="bg-orange-100 text-orange-800">B1</Badge>
+                              <Badge variant="secondary" className="bg-blue-100 text-blue-800">B1</Badge>
                               <ArrowRight className="w-4 h-4 text-muted-foreground" />
                             </div>
                           </div>
@@ -612,7 +622,7 @@ export default function B1Level() {
               <CardHeader>
                 <CardTitle>B1 Vocabulary Categories</CardTitle>
                 <CardDescription>
-                  Master 500 intermediate-level English words for complex communication
+                  Master 500 essential B1-level English words for intermediate communication
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -642,7 +652,7 @@ export default function B1Level() {
               <CardHeader>
                 <CardTitle>{selectedVocabCategory}</CardTitle>
                 <CardDescription>
-                  B1-level vocabulary for expressing complex ideas and opinions
+                  B1-level vocabulary for expressing opinions, experiences and abstract concepts
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -658,7 +668,7 @@ export default function B1Level() {
                         <div className="flex items-center justify-between mb-2">
                           <h4 className="font-bold text-lg">{wordItem.word}</h4>
                           <div className="flex items-center gap-2">
-                            <Badge variant="outline" className="text-xs bg-orange-100 text-orange-800">B1</Badge>
+                            <Badge variant="outline" className="text-xs">B1</Badge>
                             <Button size="sm" variant="ghost" 
                                     onClick={() => playPronunciation(wordItem.word)}>
                               <Volume2 className="w-4 h-4" />
@@ -692,7 +702,7 @@ export default function B1Level() {
                   <div className="flex items-center justify-between">
                     <Badge variant="outline">{activity.type}</Badge>
                     <div className="flex items-center gap-2">
-                      <Badge className="bg-orange-500">B1</Badge>
+                      <Badge className="bg-blue-500">B1</Badge>
                       <div className="flex items-center gap-1 text-sm text-muted-foreground">
                         <Clock className="w-4 h-4" />
                         {activity.time}
@@ -729,19 +739,19 @@ export default function B1Level() {
                     <BookOpen className="w-8 h-8 mx-auto mb-2 text-blue-500" />
                     <h4 className="font-medium">Grammar Test</h4>
                     <p className="text-sm text-muted-foreground">45 questions</p>
-                    <Badge className="mt-2 bg-orange-500">B1 Level</Badge>
+                    <Badge className="mt-2 bg-blue-500">B1 Level</Badge>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
                     <Target className="w-8 h-8 mx-auto mb-2 text-green-500" />
                     <h4 className="font-medium">Vocabulary Test</h4>
                     <p className="text-sm text-muted-foreground">50 questions</p>
-                    <Badge className="mt-2 bg-orange-500">B1 Level</Badge>
+                    <Badge className="mt-2 bg-blue-500">B1 Level</Badge>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
                     <MessageSquare className="w-8 h-8 mx-auto mb-2 text-purple-500" />
                     <h4 className="font-medium">Skills Test</h4>
                     <p className="text-sm text-muted-foreground">8 sections</p>
-                    <Badge className="mt-2 bg-orange-500">B1 Level</Badge>
+                    <Badge className="mt-2 bg-blue-500">B1 Level</Badge>
                   </div>
                 </div>
                 <Button asChild className="w-full" size="lg">
