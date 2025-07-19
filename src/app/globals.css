@@ -4,66 +4,48 @@
 
 @layer base {
   :root {
-    --background: 212 100% 13%; /* #002244 */
-    --foreground: 210 100% 97%; /* #EDF6FF */
-
-    --card: 212 100% 16%; /* Slightly lighter blue */
-    --card-foreground: 210 100% 97%;
-
-    --popover: 212 100% 13%;
-    --popover-foreground: 210 100% 97%;
-
-    --primary: 31 100% 50%; /* #FF8800 */
-    --primary-foreground: 212 100% 13%;
-
-    --secondary: 212 100% 25%;
-    --secondary-foreground: 31 100% 50%;
-
-    --muted: 212 100% 20%;
-    --muted-foreground: 210 14% 65%;
-
-    --accent: 31 100% 60%;
-    --accent-foreground: 212 100% 13%;
-
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 212 100% 25%;
-    --input: 212 100% 25%;
-    --ring: 31 100% 50%;
-    
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
     --radius: 0.75rem;
   }
 
   .dark {
-    /* Keeping dark theme consistent with the new base theme for now */
-    --background: 212 100% 13%; /* #002244 */
-    --foreground: 210 100% 97%; /* #EDF6FF */
-
-    --card: 212 100% 16%;
-    --card-foreground: 210 100% 97%;
-
-    --popover: 212 100% 13%;
-    --popover-foreground: 210 100% 97%;
-
-    --primary: 31 100% 50%; /* #FF8800 */
-    --primary-foreground: 212 100% 13%;
-
-    --secondary: 212 100% 25%;
-    --secondary-foreground: 31 100% 50%;
-
-    --muted: 212 100% 20%;
-    --muted-foreground: 210 14% 65%;
-
-    --accent: 31 100% 60%;
-    --accent-foreground: 212 100% 13%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 212 100% 25%;
-    --input: 212 100% 25%;
-    --ring: 31 100% 50%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
   }
 }
 
@@ -77,10 +59,56 @@
 }
 
 @layer utilities {
-  .sunrise-gradient {
-    @apply bg-gradient-to-br from-[#002244] via-[#1a3a5a] to-[#5a3a1a];
+  /* Grid background pattern */
+  .bg-grid-slate-100 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.05)'%3e%3cpath d='m0 .5h32m-32 32v-32'/%3e%3c/svg%3e");
   }
-  .sunrise-gradient-rev {
-    @apply bg-gradient-to-tl from-[#002244] via-[#1a3a5a] to-[#5a3a1a];
+  
+  .bg-grid-slate-700\/25 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(51 65 85 / 0.25)'%3e%3cpath d='m0 .5h32m-32 32v-32'/%3e%3c/svg%3e");
+  }
+
+  /* Animation delays */
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  /* Backdrop blur utilities */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+
+  /* Text gradient utilities */
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Mask image utilities */
+  .\[mask-image\:linear-gradient\(0deg\,white\,rgba\(255\,255\,255\,0\.6\)\)\] {
+    mask-image: linear-gradient(0deg, white, rgba(255, 255, 255, 0.6));
+  }
+
+  .dark\:\[mask-image\:linear-gradient\(0deg\,rgba\(255\,255\,255\,0\.1\)\,rgba\(255\,255\,255\,0\.5\)\)\] {
+    mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
   }
 }

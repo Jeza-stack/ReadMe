@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={cn("font-body antialiased", fontBody.variable, fontHeadline.variable, "min-h-screen flex flex-col sunrise-gradient")}>
+      <body className={cn("font-body antialiased", fontBody.variable, fontHeadline.variable, "min-h-screen flex flex-col")}>
         <Header />
         <main className="flex-grow">
           {children}
