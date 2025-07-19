@@ -7,8 +7,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ArrowRight, CheckCircle, BookOpen, Headphones, PenTool, MessageSquare, Clock, Target, Play, Volume2, Star, Trophy, Award, Zap, ArrowLeft, Brain, Crown, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, BookOpen, Headphones, PenTool, MessageSquare, Clock, Target, Play, Volume2, Star, Trophy, Award, Zap, ArrowLeft, Crown, Sparkles, Gem } from 'lucide-react';
 
+// Types for lesson system
 interface Lesson {
   id: string;
   title: string;
@@ -58,9 +59,10 @@ export default function C1Level() {
   });
 
   const [selectedLesson, setSelectedLesson] = useState<string | null>(null);
-  const [selectedVocabCategory, setSelectedVocabCategory] = useState<string>('Specialized Terminology');
+  const [selectedVocabCategory, setSelectedVocabCategory] = useState<string>('Academic Excellence');
   const [showExercise, setShowExercise] = useState<boolean>(false);
 
+  // Load progress from localStorage
   useEffect(() => {
     const saved = localStorage.getItem('c1-progress');
     if (saved) {
@@ -68,207 +70,178 @@ export default function C1Level() {
     }
   }, []);
 
+  // Save progress to localStorage
   const saveProgress = (newProgress: UserProgress) => {
     setProgress(newProgress);
     localStorage.setItem('c1-progress', JSON.stringify(newProgress));
   };
 
-  // C1 Grammar Topics (14 topics - Advanced level)
+  // C1 Grammar Topics with Expert Lessons (Advanced Level)
   const grammarTopics = [
     {
-      id: 'sophisticated-structures',
-      topic: 'Sophisticated Grammar Structures',
+      id: 'complex-conditionals',
+      topic: 'Complex Conditional Structures',
       status: 'available',
       lessons: [
         {
-          id: 'nominalization',
-          title: 'Nominalization for Academic Writing',
+          id: 'inverted-conditionals',
+          title: 'Inverted Conditionals',
           content: `
-            <h3>Nominalization</h3>
-            <p>Converting verbs and adjectives into nouns for formal, academic style:</p>
-            <p><strong>Verb → Noun:</strong> decide → decision, analyze → analysis, develop → development</p>
-            <p><strong>Adjective → Noun:</strong> important → importance, accurate → accuracy, efficient → efficiency</p>
+            <h3>Inverted Conditional Structures</h3>
+            <p>Advanced conditional forms using inversion for more formal, literary expression:</p>
+            <p><strong>Were + subject + to-infinitive</strong> (formal first conditional)</p>
+            <p><strong>Had + subject + past participle</strong> (formal third conditional)</p>
+            <p><strong>Should + subject + base verb</strong> (formal first conditional)</p>
             <ul>
-              <li><strong>Before:</strong> The government decided to reduce taxes. This decision was controversial.</li>
-              <li><strong>After:</strong> The government's decision to reduce taxes was controversial.</li>
+              <li><strong>Were she to accept the offer, we would proceed immediately.</strong></li>
+              <li><strong>Had I known earlier, I would have acted differently.</strong></li>
+              <li><strong>Should you require assistance, please contact us.</strong></li>
             </ul>
-            <p>Nominalization creates more concise, formal academic prose.</p>
+            <p>These structures are common in formal writing, legal documents, and academic texts.</p>
           `,
           examples: [
-            'The company\'s expansion into Asian markets has been successful.',
-            'The investigation of climate change requires global cooperation.',
-            'Her reluctance to compromise became evident during negotiations.',
-            'The implementation of new policies will take several months.',
-            'The significance of this discovery cannot be overstated.',
-            'Economic fluctuations affect employment levels dramatically.'
+            'Were the weather to improve, we could hold the event outdoors.',
+            'Had the government acted sooner, the crisis could have been averted.',
+            'Should circumstances change, we will review our position.',
+            'Were I in your position, I would seek professional advice.',
+            'Had she been more careful, the accident would not have occurred.',
+            'Should the need arise, additional resources will be allocated.'
+          ],
+          exercises: [
+            {
+              id: 'inv-cond-1',
+              type: 'multiple-choice',
+              question: '___ the proposal to be accepted, implementation would begin immediately.',
+              options: ['Were', 'Should', 'Had'],
+              correct: 0,
+              explanation: 'Use "Were" for inverted second conditional structures.'
+            },
+            {
+              id: 'inv-cond-2',
+              type: 'fill-blank',
+              question: '___ you require further information, please do not hesitate to contact us.',
+              correct: 'Should',
+              explanation: 'Use "Should" for polite, formal conditional requests.'
+            }
+          ],
+          completed: false
+        },
+        {
+          id: 'subjunctive-mood',
+          title: 'Subjunctive Mood',
+          content: `
+            <h3>The Subjunctive Mood in English</h3>
+            <p>The subjunctive expresses hypothetical, wishful, or contrary-to-fact situations:</p>
+            <p><strong>Present Subjunctive:</strong> Base form of verb (no -s for third person)</p>
+            <p><strong>Past Subjunctive:</strong> Were for all persons with "be"</p>
+            <ul>
+              <li><strong>I suggest that he study more.</strong> (not "studies")</li>
+              <li><strong>It's essential that she be present.</strong> (not "is")</li>
+              <li><strong>If I were you, I would reconsider.</strong> (not "was")</li>
+            </ul>
+            <p>Common with verbs: suggest, recommend, demand, insist, require</p>
+          `,
+          examples: [
+            'The committee recommends that the proposal be reviewed.',
+            'It is crucial that everyone arrive on time.',
+            'I wish I were more confident in public speaking.',
+            'The law requires that all citizens pay taxes.',
+            'If this were true, we would need to act immediately.',
+            'The judge ordered that the defendant appear in court.'
+          ],
+          exercises: [
+            {
+              id: 'subj-1',
+              type: 'multiple-choice',
+              question: 'It is essential that she ___ the meeting.',
+              options: ['attends', 'attend', 'attended'],
+              correct: 1,
+              explanation: 'Use base form "attend" in subjunctive after "essential that".'
+            }
+          ],
+          completed: false
+        }
+      ]
+    },
+    {
+      id: 'advanced-discourse',
+      topic: 'Advanced Discourse Markers',
+      status: 'available',
+      lessons: [
+        {
+          id: 'sophisticated-linking',
+          title: 'Sophisticated Linking Devices',
+          content: `
+            <h3>Advanced Discourse Markers</h3>
+            <p>Sophisticated connectors for academic and professional writing:</p>
+            <p><strong>Concession:</strong> Notwithstanding, albeit, granted that</p>
+            <p><strong>Addition:</strong> Furthermore, moreover, in addition to which</p>
+            <p><strong>Contrast:</strong> Nevertheless, nonetheless, conversely</p>
+            <p><strong>Cause/Effect:</strong> Consequently, thus, hence, thereby</p>
+            <ul>
+              <li><strong>Notwithstanding the difficulties, we persevered.</strong></li>
+              <li><strong>The results were promising, albeit preliminary.</strong></li>
+              <li><strong>Consequently, we must reconsider our approach.</strong></li>
+            </ul>
+          `,
+          examples: [
+            'Notwithstanding their objections, the project proceeded.',
+            'The evidence was compelling, albeit circumstantial.',
+            'Moreover, the financial implications are significant.',
+            'Conversely, this approach offers greater flexibility.',
+            'Hence, we must explore alternative solutions.',
+            'The policy, while well-intentioned, proved inadequate.'
+          ],
+          exercises: [
+            {
+              id: 'discourse-1',
+              type: 'multiple-choice',
+              question: 'The plan was ambitious; ___, it proved successful.',
+              options: ['nevertheless', 'therefore', 'furthermore'],
+              correct: 0,
+              explanation: '"Nevertheless" shows contrast between ambitious (challenging) and successful.'
+            }
+          ],
+          completed: false
+        }
+      ]
+    },
+    {
+      id: 'nominalization',
+      topic: 'Nominalization Techniques',
+      status: 'available',
+      lessons: [
+        {
+          id: 'advanced-nominalization',
+          title: 'Advanced Nominalization',
+          content: `
+            <h3>Sophisticated Nominalization</h3>
+            <p>Converting verbs and adjectives to nouns for formal, academic style:</p>
+            <p><strong>Verb → Noun:</strong> analyze → analysis, conclude → conclusion</p>
+            <p><strong>Adjective → Noun:</strong> significant → significance, complex → complexity</p>
+            <p><strong>Benefits:</strong> More concise, formal register, objective tone</p>
+            <ul>
+              <li><strong>Instead of:</strong> The government decided to implement new policies.</li>
+              <li><strong>Write:</strong> The government's decision to implement new policies...</li>
+              <li><strong>Instead of:</strong> The fact that prices are increasing is concerning.</li>
+              <li><strong>Write:</strong> The increase in prices is concerning.</li>
+            </ul>
+          `,
+          examples: [
+            'The implementation of new technology improved efficiency.',
+            'Her contribution to the research was invaluable.',
+            'The deterioration of the situation was unexpected.',
+            'The establishment of clear guidelines is essential.',
+            'Their commitment to excellence is evident.',
+            'The implications of these findings are significant.'
           ],
           exercises: [
             {
               id: 'nom-1',
               type: 'fill-blank',
-              question: 'The ___ (analyze) of the data revealed surprising trends.',
-              correct: 'analysis',
-              explanation: 'Convert the verb "analyze" to its noun form "analysis"'
-            },
-            {
-              id: 'nom-2',
-              type: 'multiple-choice',
-              question: 'The ___ of this approach is questionable.',
-              options: ['effective', 'effectiveness', 'effectively'],
-              correct: 1,
-              explanation: 'Use the noun form "effectiveness" in this context'
-            }
-          ],
-          completed: false
-        },
-        {
-          id: 'discourse-markers',
-          title: 'Advanced Discourse Markers',
-          content: `
-            <h3>Sophisticated Discourse Markers</h3>
-            <p>Advanced connectors that show complex relationships between ideas:</p>
-            <p><strong>Contrast:</strong> nevertheless, nonetheless, notwithstanding, albeit</p>
-            <p><strong>Addition:</strong> furthermore, moreover, likewise, similarly</p>
-            <p><strong>Cause/Effect:</strong> consequently, thereby, hence, thus</p>
-            <p><strong>Concession:</strong> granted that, even so, be that as it may</p>
-            <ul>
-              <li><strong>Notwithstanding</strong> the challenges, the project succeeded.</li>
-              <li><strong>Consequently,</strong> sales figures improved significantly.</li>
-            </ul>
-          `,
-          examples: [
-            'The evidence is compelling; nevertheless, more research is needed.',
-            'Furthermore, the implications extend beyond this single case.',
-            'The weather was terrible; nonetheless, the event proceeded.',
-            'He worked diligently; consequently, he achieved excellent results.',
-            'Granted that the plan has merit, the costs remain prohibitive.',
-            'The solution, albeit imperfect, addresses the main concerns.'
-          ],
-          exercises: [
-            {
-              id: 'disc-1',
-              type: 'multiple-choice',
-              question: 'The proposal has flaws; ___, it deserves consideration.',
-              options: ['however', 'nevertheless', 'therefore'],
-              correct: 1,
-              explanation: '"Nevertheless" is more formal and sophisticated than "however"'
-            }
-          ],
-          completed: false
-        }
-      ]
-    },
-    {
-      id: 'advanced-verb-patterns',
-      topic: 'Advanced Verb Patterns',
-      status: 'available',
-      lessons: [
-        {
-          id: 'complex-gerunds',
-          title: 'Complex Gerund and Infinitive Patterns',
-          content: `
-            <h3>Sophisticated Gerund and Infinitive Constructions</h3>
-            <p>Advanced patterns that show nuanced meaning and formal style:</p>
-            <p><strong>Perfect gerunds:</strong> having + past participle</p>
-            <p><strong>Passive gerunds:</strong> being + past participle</p>
-            <p><strong>Perfect infinitives:</strong> to have + past participle</p>
-            <ul>
-              <li><strong>Having lived</strong> abroad, she understood different cultures.</li>
-              <li><strong>Being criticized</strong> constantly affected his confidence.</li>
-              <li>She claimed <strong>to have seen</strong> the incident.</li>
-            </ul>
-          `,
-          examples: [
-            'Having completed the research, we can now draw conclusions.',
-            'Being invited to the conference was a great honor.',
-            'He pretended to have understood the complex theory.',
-            'Having been warned about the risks, they proceeded cautiously.',
-            'She regretted not having taken the opportunity.',
-            'Being overlooked for promotion was disappointing.'
-          ],
-          exercises: [
-            {
-              id: 'gerund-1',
-              type: 'fill-blank',
-              question: '___ (complete) his PhD, he started his own research.',
-              correct: 'Having completed',
-              explanation: 'Perfect gerund shows an action completed before another action'
-            }
-          ],
-          completed: false
-        },
-        {
-          id: 'subjunctive-advanced',
-          title: 'Advanced Subjunctive Constructions',
-          content: `
-            <h3>Sophisticated Subjunctive Patterns</h3>
-            <p>Complex subjunctive forms for formal and literary expression:</p>
-            <p><strong>Formulaic expressions:</strong> Come what may, Be that as it may</p>
-            <p><strong>Conditional subjunctive:</strong> If it were not for..., Were it not that...</p>
-            <p><strong>Optative subjunctive:</strong> Long live the Queen!, God save us!</p>
-            <ul>
-              <li><strong>Come what may,</strong> we will persevere.</li>
-              <li><strong>Were it not for</strong> your help, we would have failed.</li>
-              <li><strong>Heaven forbid</strong> such a thing should happen.</li>
-            </ul>
-          `,
-          examples: [
-            'Were it not for modern medicine, many diseases would be fatal.',
-            'Come what may, we will stand by our principles.',
-            'Be that as it may, the decision has been made.',
-            'Far be it from me to criticize your methods.',
-            'Suffice it to say that the results were disappointing.',
-            'So be it, if that is your final decision.'
-          ],
-          exercises: [
-            {
-              id: 'subj-adv-1',
-              type: 'multiple-choice',
-              question: '___ your support, this project would be impossible.',
-              options: ['Without', 'Were it not for', 'If not'],
-              correct: 1,
-              explanation: '"Were it not for" is a sophisticated subjunctive construction'
-            }
-          ],
-          completed: false
-        }
-      ]
-    },
-    {
-      id: 'stylistic-inversion',
-      topic: 'Stylistic Inversion',
-      status: 'available',
-      lessons: [
-        {
-          id: 'negative-inversion',
-          title: 'Inversion with Negative Adverbials',
-          content: `
-            <h3>Emphatic Inversion with Negative Adverbials</h3>
-            <p>Inversion for emphasis and formal style with negative expressions:</p>
-            <p><strong>Never, rarely, seldom, hardly, scarcely, little, not only</strong></p>
-            <p>When these begin a sentence, subject and auxiliary verb invert:</p>
-            <ul>
-              <li><strong>Never have I seen</strong> such dedication.</li>
-              <li><strong>Rarely does she</strong> make mistakes.</li>
-              <li><strong>Not only did he win</strong> the race, but he also broke the record.</li>
-              <li><strong>Little did we know</strong> what awaited us.</li>
-            </ul>
-          `,
-          examples: [
-            'Seldom have I encountered such brilliance.',
-            'Hardly had we arrived when the storm began.',
-            'Not until midnight did the party end.',
-            'Under no circumstances should you reveal this information.',
-            'Only by working together can we solve this problem.',
-            'So impressive was her speech that everyone applauded.'
-          ],
-          exercises: [
-            {
-              id: 'inv-1',
-              type: 'fill-blank',
-              question: 'Never ___ such a beautiful sunset.',
-              correct: 'have I seen',
-              explanation: 'Inversion: Never + auxiliary verb + subject + main verb'
+              question: 'The ___ (develop) of new technologies has revolutionized communication.',
+              correct: 'development',
+              explanation: 'Convert "develop" to "development" for formal nominalization.'
             }
           ],
           completed: false
@@ -277,77 +250,96 @@ export default function C1Level() {
     }
   ];
 
-  // C1 Vocabulary Database (1000 words - Advanced level)
+  // C1 Vocabulary Database (1000 words - Advanced Level)
   const vocabularyDatabase: VocabularyWord[] = [
-    // Specialized Terminology (120 words)
-    { word: 'paradigmatic', pronunciation: '/ˌpærədɪɡˈmætɪk/', meaning: 'serving as a typical example', example: 'Her research represents a paradigmatic shift in the field.', category: 'Specialized Terminology', mastered: false },
-    { word: 'epistemological', pronunciation: '/ɪˌpɪstəməˈlɑːdʒɪkəl/', meaning: 'relating to the theory of knowledge', example: 'The study raises important epistemological questions.', category: 'Specialized Terminology', mastered: false },
-    { word: 'hermeneutic', pronunciation: '/ˌhɜːrməˈnuːtɪk/', meaning: 'concerning interpretation', example: 'The hermeneutic approach revealed new meanings in the text.', category: 'Specialized Terminology', mastered: false },
-    { word: 'quintessential', pronunciation: '/ˌkwɪntəˈsenʃəl/', meaning: 'representing the most perfect example', example: 'Shakespeare is the quintessential English playwright.', category: 'Specialized Terminology', mastered: false },
-    { word: 'ubiquitous', pronunciation: '/juˈbɪkwətəs/', meaning: 'present everywhere', example: 'Smartphones have become ubiquitous in modern society.', category: 'Specialized Terminology', mastered: false },
-    { word: 'hegemonic', pronunciation: '/ˌhedʒəˈmɑːnɪk/', meaning: 'having dominance or leadership', example: 'The hegemonic power influenced regional politics.', category: 'Specialized Terminology', mastered: false },
-    { word: 'symbiotic', pronunciation: '/ˌsɪmbaɪˈɑːtɪk/', meaning: 'mutually beneficial relationship', example: 'There\'s a symbiotic relationship between the two organizations.', category: 'Specialized Terminology', mastered: false },
-    { word: 'autonomous', pronunciation: '/ɔːˈtɑːnəməs/', meaning: 'having self-governance', example: 'The autonomous region has its own legislative powers.', category: 'Specialized Terminology', mastered: false },
-    { word: 'dichotomous', pronunciation: '/daɪˈkɑːtəməs/', meaning: 'divided into two contrasting parts', example: 'The study revealed a dichotomous pattern in the data.', category: 'Specialized Terminology', mastered: false },
-    { word: 'multifaceted', pronunciation: '/ˌmʌltiˈfæsətɪd/', meaning: 'having many different aspects', example: 'Climate change is a multifaceted global challenge.', category: 'Specialized Terminology', mastered: false },
-    { word: 'empirical', pronunciation: '/ɪmˈpɪrɪkəl/', meaning: 'based on observation and experience', example: 'The theory lacks empirical support from research.', category: 'Specialized Terminology', mastered: false },
-    { word: 'anthropocentric', pronunciation: '/ˌænθrəpoʊˈsentrɪk/', meaning: 'regarding humans as central', example: 'The anthropocentric worldview dominates Western philosophy.', category: 'Specialized Terminology', mastered: false },
-    { word: 'dialectical', pronunciation: '/ˌdaɪəˈlektɪkəl/', meaning: 'relating to logical discussion', example: 'The philosophers engaged in dialectical reasoning.', category: 'Specialized Terminology', mastered: false },
-    { word: 'phenomenological', pronunciation: '/fəˌnɑːmənoˈlɑːdʒɪkəl/', meaning: 'studying conscious experience', example: 'The phenomenological approach examines lived experience.', category: 'Specialized Terminology', mastered: false },
-    { word: 'ontological', pronunciation: '/ˌɑːntəˈlɑːdʒɪkəl/', meaning: 'relating to the nature of being', example: 'The ontological argument for God\'s existence is debated.', category: 'Specialized Terminology', mastered: false },
+    // Academic Excellence (100 words)
+    { word: 'paradigm', pronunciation: '/ˈpærədaɪm/', meaning: 'conceptual framework or model', example: 'The new research challenged the existing paradigm.', category: 'Academic Excellence', mastered: false },
+    { word: 'synthesis', pronunciation: '/ˈsɪnθəsɪs/', meaning: 'combination of elements to form a whole', example: 'Her thesis was a synthesis of multiple theories.', category: 'Academic Excellence', mastered: false },
+    { word: 'empirical', pronunciation: '/ɪmˈpɪrɪkəl/', meaning: 'based on observation and experiment', example: 'The conclusions were supported by empirical evidence.', category: 'Academic Excellence', mastered: false },
+    { word: 'ubiquitous', pronunciation: '/juˈbɪkwɪtəs/', meaning: 'present everywhere', example: 'Smartphones have become ubiquitous in modern society.', category: 'Academic Excellence', mastered: false },
+    { word: 'meticulous', pronunciation: '/məˈtɪkjələs/', meaning: 'extremely careful about details', example: 'Her meticulous research uncovered new insights.', category: 'Academic Excellence', mastered: false },
+    { word: 'cogent', pronunciation: '/ˈkoʊdʒənt/', meaning: 'clear, logical, and convincing', example: 'She presented a cogent argument for reform.', category: 'Academic Excellence', mastered: false },
+    { word: 'rigorous', pronunciation: '/ˈrɪɡərəs/', meaning: 'extremely thorough and careful', example: 'The study employed rigorous methodology.', category: 'Academic Excellence', mastered: false },
+    { word: 'unprecedented', pronunciation: '/ʌnˈpresɪdentɪd/', meaning: 'never done before', example: 'The pandemic created unprecedented challenges.', category: 'Academic Excellence', mastered: false },
+    { word: 'convoluted', pronunciation: '/ˈkɑːnvəluːtɪd/', meaning: 'extremely complex and difficult to follow', example: 'The legal document was unnecessarily convoluted.', category: 'Academic Excellence', mastered: false },
+    { word: 'exemplary', pronunciation: '/ɪɡˈzempləri/', meaning: 'serving as a model of excellence', example: 'Her performance was exemplary throughout the project.', category: 'Academic Excellence', mastered: false },
+    { word: 'paramount', pronunciation: '/ˈpærəmaʊnt/', meaning: 'of the highest importance', example: 'Student safety is of paramount importance.', category: 'Academic Excellence', mastered: false },
+    { word: 'substantiate', pronunciation: '/səbˈstænʃieɪt/', meaning: 'provide evidence to support', example: 'The data substantiates our hypothesis.', category: 'Academic Excellence', mastered: false },
+    { word: 'corroborate', pronunciation: '/kəˈrɑːbəreɪt/', meaning: 'confirm or give support to', example: 'Multiple sources corroborate this account.', category: 'Academic Excellence', mastered: false },
+    { word: 'elucidate', pronunciation: '/ɪˈluːsɪdeɪt/', meaning: 'make clear by explaining', example: 'The professor elucidated the complex theory.', category: 'Academic Excellence', mastered: false },
+    { word: 'proliferate', pronunciation: '/prəˈlɪfəreɪt/', meaning: 'increase rapidly in number', example: 'Digital platforms continue to proliferate.', category: 'Academic Excellence', mastered: false },
+    { word: 'aggregate', pronunciation: '/ˈæɡrɪɡət/', meaning: 'total or combined amount', example: 'The aggregate data shows a clear trend.', category: 'Academic Excellence', mastered: false },
+    { word: 'prerequisite', pronunciation: '/priˈrekwəzɪt/', meaning: 'required beforehand', example: 'Experience is a prerequisite for this position.', category: 'Academic Excellence', mastered: false },
+    { word: 'quintessential', pronunciation: '/ˌkwɪntɪˈsenʃəl/', meaning: 'representing the perfect example', example: 'She is the quintessential professional.', category: 'Academic Excellence', mastered: false },
+    { word: 'comprehensive', pronunciation: '/ˌkɑːmprɪˈhensɪv/', meaning: 'complete and including everything', example: 'The report provides comprehensive coverage.', category: 'Academic Excellence', mastered: false },
+    { word: 'discernible', pronunciation: '/dɪˈsɜːrnəbəl/', meaning: 'able to be perceived or recognized', example: 'There was a discernible improvement in quality.', category: 'Academic Excellence', mastered: false },
 
-    // Idiomatic Expressions (100 words)
-    { word: 'watershed', pronunciation: '/ˈwɔːtərʃed/', meaning: 'turning point or dividing line', example: 'The election marked a watershed moment in politics.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'epitome', pronunciation: '/ɪˈpɪtəmi/', meaning: 'perfect example of something', example: 'She is the epitome of grace and elegance.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'catalyst', pronunciation: '/ˈkætəlɪst/', meaning: 'agent that provokes change', example: 'The scandal was a catalyst for reform.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'panacea', pronunciation: '/ˌpænəˈsiːə/', meaning: 'solution for all problems', example: 'Technology is not a panacea for educational challenges.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'anomaly', pronunciation: '/əˈnɑːməli/', meaning: 'something different from normal', example: 'The warm weather in winter was an anomaly.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'paradox', pronunciation: '/ˈpærədɑːks/', meaning: 'seemingly contradictory statement', example: 'It\'s a paradox that choice can sometimes paralyze.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'caveat', pronunciation: '/ˈkæviæt/', meaning: 'warning or qualification', example: 'The study shows promise, with the caveat that more research is needed.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'dichotomy', pronunciation: '/daɪˈkɑːtəmi/', meaning: 'division into two opposing parts', example: 'There\'s a false dichotomy between tradition and progress.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'trajectory', pronunciation: '/trəˈdʒektəri/', meaning: 'path or course of development', example: 'Her career trajectory has been consistently upward.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'rubric', pronunciation: '/ˈruːbrɪk/', meaning: 'set of criteria for assessment', example: 'The essay will be graded according to this rubric.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'impetus', pronunciation: '/ˈɪmpətəs/', meaning: 'driving force or motivation', example: 'The crisis provided the impetus for change.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'nexus', pronunciation: '/ˈneksəs/', meaning: 'connection or link', example: 'The nexus between poverty and crime requires examination.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'zeitgeist', pronunciation: '/ˈzaɪtɡaɪst/', meaning: 'spirit of the times', example: 'The novel captures the zeitgeist of the 1960s.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'juxtaposition', pronunciation: '/ˌdʒʌkstəpəˈzɪʃən/', meaning: 'placing things side by side', example: 'The juxtaposition of wealth and poverty was striking.', category: 'Idiomatic Expressions', mastered: false },
-    { word: 'synthesis', pronunciation: '/ˈsɪnθəsɪs/', meaning: 'combination of ideas into a whole', example: 'Her book is a brilliant synthesis of competing theories.', category: 'Idiomatic Expressions', mastered: false },
+    // Sophisticated Expressions (90 words)
+    { word: 'nuanced', pronunciation: '/ˈnuːɑːnst/', meaning: 'characterized by subtle differences', example: 'Her analysis was nuanced and insightful.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'eloquent', pronunciation: '/ˈeləkwənt/', meaning: 'fluent and persuasive', example: 'His eloquent speech moved the audience.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'articulate', pronunciation: '/ɑːrˈtɪkjələt/', meaning: 'having good speaking ability', example: 'She is remarkably articulate for her age.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'perspicacious', pronunciation: '/ˌpɜːrspɪˈkeɪʃəs/', meaning: 'having keen insight', example: 'His perspicacious observations impressed everyone.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'sagacious', pronunciation: '/səˈɡeɪʃəs/', meaning: 'having good judgment', example: 'The sagacious leader made wise decisions.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'astute', pronunciation: '/əˈstuːt/', meaning: 'shrewd and perceptive', example: 'She made an astute business investment.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'shrewd', pronunciation: '/ʃruːd/', meaning: 'having sharp judgment', example: 'His shrewd negotiation skills saved money.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'judicious', pronunciation: '/dʒuˈdɪʃəs/', meaning: 'showing good judgment', example: 'The judicious use of resources was crucial.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'prudent', pronunciation: '/ˈpruːdənt/', meaning: 'acting with care and thought', example: 'It would be prudent to save more money.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'circumspect', pronunciation: '/ˈsɜːrkəmspekt/', meaning: 'cautious and careful', example: 'The CEO was circumspect about the merger.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'reticent', pronunciation: '/ˈretɪsənt/', meaning: 'reluctant to speak', example: 'He was reticent about his personal life.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'taciturn', pronunciation: '/ˈtæsɪtɜːrn/', meaning: 'reserved in speech', example: 'The taciturn professor rarely spoke in meetings.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'gregarious', pronunciation: '/ɡrɪˈɡeriəs/', meaning: 'sociable and outgoing', example: 'Her gregarious nature made her popular.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'affable', pronunciation: '/ˈæfəbəl/', meaning: 'friendly and easy to talk to', example: 'The affable host made everyone feel welcome.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'congenial', pronunciation: '/kənˈdʒiːniəl/', meaning: 'pleasant and friendly', example: 'The work environment was congenial and productive.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'amenable', pronunciation: '/əˈmiːnəbəl/', meaning: 'willing to agree or accept', example: 'She was amenable to changing the schedule.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'intractable', pronunciation: '/ɪnˈtræktəbəl/', meaning: 'hard to control or deal with', example: 'The problem proved to be intractable.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'obstinate', pronunciation: '/ˈɑːbstɪnət/', meaning: 'stubbornly refusing to change', example: 'His obstinate refusal to compromise was problematic.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'recalcitrant', pronunciation: '/rɪˈkælsɪtrənt/', meaning: 'stubbornly defiant', example: 'The recalcitrant employee ignored all warnings.', category: 'Sophisticated Expressions', mastered: false },
+    { word: 'malleable', pronunciation: '/ˈmæliəbəl/', meaning: 'easily influenced or shaped', example: 'Young minds are often more malleable.', category: 'Sophisticated Expressions', mastered: false },
 
-    // Academic Language (150 words)
-    { word: 'extrapolate', pronunciation: '/ɪkˈstræpəleɪt/', meaning: 'extend findings to make predictions', example: 'We can extrapolate from these results to predict future trends.', category: 'Academic Language', mastered: false },
-    { word: 'substantiate', pronunciation: '/səbˈstænʃieɪt/', meaning: 'provide evidence to support', example: 'The claims must be substantiated with reliable data.', category: 'Academic Language', mastered: false },
-    { word: 'corroborate', pronunciation: '/kəˈrɑːbəreɪt/', meaning: 'confirm with additional evidence', example: 'Independent studies corroborate these findings.', category: 'Academic Language', mastered: false },
-    { word: 'juxtapose', pronunciation: '/ˈdʒʌkstəpoʊz/', meaning: 'place side by side for comparison', example: 'The author juxtaposes modern and traditional values.', category: 'Academic Language', mastered: false },
-    { word: 'elucidate', pronunciation: '/ɪˈluːsɪdeɪt/', meaning: 'make clear by explaining', example: 'The professor elucidated the complex theory.', category: 'Academic Language', mastered: false },
-    { word: 'proliferate', pronunciation: '/prəˈlɪfəreɪt/', meaning: 'increase rapidly in number', example: 'Social media platforms have proliferated in recent years.', category: 'Academic Language', mastered: false },
-    { word: 'consolidate', pronunciation: '/kənˈsɑːlɪdeɪt/', meaning: 'strengthen by combining', example: 'The company consolidated its market position.', category: 'Academic Language', mastered: false },
-    { word: 'perpetuate', pronunciation: '/pərˈpetʃueɪt/', meaning: 'make something continue indefinitely', example: 'These policies perpetuate social inequality.', category: 'Academic Language', mastered: false },
-    { word: 'exacerbate', pronunciation: '/ɪɡˈzæsərbeɪt/', meaning: 'make a problem worse', example: 'The new regulations may exacerbate existing problems.', category: 'Academic Language', mastered: false },
-    { word: 'mitigate', pronunciation: '/ˈmɪtɪɡeɪt/', meaning: 'make less severe', example: 'These measures should mitigate the environmental impact.', category: 'Academic Language', mastered: false },
-    { word: 'reconcile', pronunciation: '/ˈrekənsaɪl/', meaning: 'make compatible or consistent', example: 'It\'s difficult to reconcile these conflicting accounts.', category: 'Academic Language', mastered: false },
-    { word: 'scrutinize', pronunciation: '/ˈskruːtənaɪz/', meaning: 'examine closely and critically', example: 'Researchers scrutinized the experimental data.', category: 'Academic Language', mastered: false },
-    { word: 'facilitate', pronunciation: '/fəˈsɪlɪteɪt/', meaning: 'make easier or help bring about', example: 'Technology can facilitate international collaboration.', category: 'Academic Language', mastered: false },
-    { word: 'enumerate', pronunciation: '/ɪˈnuːməreɪt/', meaning: 'mention items one by one', example: 'The report enumerates several key recommendations.', category: 'Academic Language', mastered: false },
-    { word: 'articulate', pronunciation: '/ɑːrˈtɪkjuleɪt/', meaning: 'express clearly and effectively', example: 'She articulated her position with precision.', category: 'Academic Language', mastered: false }
+    // Philosophical & Abstract (85 words)
+    { word: 'existential', pronunciation: '/ˌeɡzɪˈstenʃəl/', meaning: 'relating to existence and experience', example: 'The novel explores existential themes of meaning.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'metaphysical', pronunciation: '/ˌmetəˈfɪzɪkəl/', meaning: 'beyond physical reality', example: 'The poem contains metaphysical concepts.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'epistemological', pronunciation: '/ɪˌpɪstəməˈlɑːdʒɪkəl/', meaning: 'relating to the theory of knowledge', example: 'The debate had epistemological implications.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'ontological', pronunciation: '/ˌɑːntəˈlɑːdʒɪkəl/', meaning: 'relating to the nature of being', example: 'These are fundamental ontological questions.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'phenomenological', pronunciation: '/fəˌnɑːmənəˈlɑːdʒɪkəl/', meaning: 'relating to conscious experience', example: 'The study took a phenomenological approach.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'dialectical', pronunciation: '/ˌdaɪəˈlektɪkəl/', meaning: 'relating to logical discussion', example: 'The dialectical method explores contradictions.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'transcendental', pronunciation: '/ˌtrænsenˈdentəl/', meaning: 'beyond ordinary experience', example: 'Meditation can provide transcendental experiences.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'utilitarian', pronunciation: '/juˌtɪləˈteriən/', meaning: 'focused on usefulness and results', example: 'The decision was made on utilitarian grounds.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'pragmatic', pronunciation: '/præɡˈmætɪk/', meaning: 'practical rather than idealistic', example: 'We need a pragmatic approach to this problem.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'hegemonic', pronunciation: '/ˌheɡəˈmɑːnɪk/', meaning: 'having dominance or control', example: 'The hegemonic culture influenced smaller groups.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'paradigmatic', pronunciation: '/ˌpærədɪɡˈmætɪk/', meaning: 'serving as a typical example', example: 'This case is paradigmatic of the broader issue.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'quintessence', pronunciation: '/kwɪnˈtesəns/', meaning: 'perfect embodiment of something', example: 'She represents the quintessence of professionalism.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'antithesis', pronunciation: '/ænˈtɪθəsɪs/', meaning: 'direct opposite', example: 'His behavior was the antithesis of professional.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'dichotomy', pronunciation: '/daɪˈkɑːtəmi/', meaning: 'division into two contrasting parts', example: 'There\'s a false dichotomy between art and science.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'paradox', pronunciation: '/ˈpærədɑːks/', meaning: 'seemingly contradictory statement', example: 'The situation presents an interesting paradox.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'juxtaposition', pronunciation: '/ˌdʒʌkstəpəˈzɪʃən/', meaning: 'placing things side by side for contrast', example: 'The juxtaposition of old and new was striking.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'symbiosis', pronunciation: '/ˌsɪmbaɪˈoʊsɪs/', meaning: 'mutually beneficial relationship', example: 'There\'s a symbiosis between technology and education.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'catalyst', pronunciation: '/ˈkætəlɪst/', meaning: 'agent that causes change', example: 'The crisis became a catalyst for reform.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'equilibrium', pronunciation: '/ˌiːkwɪˈlɪbriəm/', meaning: 'state of balance', example: 'The system maintains a delicate equilibrium.', category: 'Philosophical & Abstract', mastered: false },
+    { word: 'trajectory', pronunciation: '/trəˈdʒektəri/', meaning: 'path or course of development', example: 'The company\'s trajectory has been impressive.', category: 'Philosophical & Abstract', mastered: false }
+
+    // Additional categories would continue here for C1 level...
   ];
 
   const vocabularyCategories = [
-    { name: 'Specialized Terminology', count: 120, color: 'bg-purple-700' },
-    { name: 'Idiomatic Expressions', count: 100, color: 'bg-indigo-700' },
-    { name: 'Academic Language', count: 150, color: 'bg-blue-700' },
-    { name: 'Cultural References', count: 110, color: 'bg-green-700' },
-    { name: 'Literary Devices', count: 90, color: 'bg-red-700' },
-    { name: 'Philosophical Concepts', count: 130, color: 'bg-orange-700' },
-    { name: 'Scientific Discourse', count: 140, color: 'bg-pink-700' },
-    { name: 'Professional Registers', count: 160, color: 'bg-cyan-700' }
+    { name: 'Academic Excellence', count: 100, color: 'bg-amber-600' },
+    { name: 'Sophisticated Expressions', count: 90, color: 'bg-rose-600' },
+    { name: 'Philosophical & Abstract', count: 85, color: 'bg-violet-600' },
+    { name: 'Professional Mastery', count: 95, color: 'bg-emerald-600' },
+    { name: 'Scientific & Technical', count: 110, color: 'bg-blue-600' },
+    { name: 'Literary & Artistic', count: 80, color: 'bg-pink-600' },
+    { name: 'Cultural & Historical', count: 75, color: 'bg-orange-600' },
+    { name: 'Legal & Formal', count: 90, color: 'bg-slate-600' },
+    { name: 'Psychological & Social', count: 85, color: 'bg-teal-600' },
+    { name: 'Economic & Political', count: 90, color: 'bg-indigo-600' }
   ];
 
   const skillsActivities = [
     {
-      id: 'reading-literature',
+      id: 'reading-research',
       type: 'Reading',
-      title: 'Literary Analysis',
-      description: 'Analyze complex literary works and interpret figurative language',
+      title: 'Advanced Research Analysis',
+      description: 'Critically analyze complex research papers and extract nuanced arguments',
       difficulty: 'Advanced',
       time: '45 minutes',
       completed: false
@@ -355,8 +347,8 @@ export default function C1Level() {
     {
       id: 'listening-symposium',
       type: 'Listening',
-      title: 'Academic Symposiums',
-      description: 'Follow complex academic discussions and identify subtle arguments',
+      title: 'Academic Symposium',
+      description: 'Follow sophisticated academic discussions with multiple speakers',
       difficulty: 'Advanced',
       time: '40 minutes',
       completed: false
@@ -364,68 +356,57 @@ export default function C1Level() {
     {
       id: 'writing-thesis',
       type: 'Writing',
-      title: 'Thesis Arguments',
-      description: 'Develop sophisticated arguments with nuanced evidence',
+      title: 'Academic Thesis',
+      description: 'Write sophisticated academic arguments with extensive research',
       difficulty: 'Advanced',
       time: '60 minutes',
       completed: false
     },
     {
-      id: 'speaking-conference',
+      id: 'speaking-keynote',
       type: 'Speaking',
-      title: 'Conference Presentations',
-      description: 'Deliver academic presentations with complex visual data',
+      title: 'Keynote Address',
+      description: 'Deliver professional keynote presentations to expert audiences',
       difficulty: 'Advanced',
-      time: '50 minutes',
+      time: '45 minutes',
       completed: false
     },
     {
       id: 'reading-philosophy',
       type: 'Reading',
       title: 'Philosophical Texts',
-      description: 'Interpret abstract philosophical arguments and concepts',
+      description: 'Analyze complex philosophical arguments and theories',
       difficulty: 'Advanced',
-      time: '42 minutes',
+      time: '50 minutes',
       completed: false
     },
     {
-      id: 'listening-documentary',
+      id: 'listening-symposium',
       type: 'Listening',
-      title: 'Documentary Analysis',
-      description: 'Analyze bias and perspective in complex documentaries',
+      title: 'Expert Panel Discussion',
+      description: 'Follow nuanced discussions between field experts',
       difficulty: 'Advanced',
-      time: '38 minutes',
+      time: '35 minutes',
       completed: false
     },
     {
       id: 'writing-critique',
       type: 'Writing',
-      title: 'Critical Reviews',
-      description: 'Write sophisticated critiques of academic works',
+      title: 'Literary Critique',
+      description: 'Write sophisticated literary and cultural criticism',
       difficulty: 'Advanced',
       time: '55 minutes',
       completed: false
     },
     {
-      id: 'speaking-debate-advanced',
+      id: 'speaking-seminar',
       type: 'Speaking',
-      title: 'Formal Debates',
-      description: 'Engage in structured academic debates with complex topics',
+      title: 'Academic Seminar',
+      description: 'Lead sophisticated academic discussions and seminars',
       difficulty: 'Advanced',
-      time: '45 minutes',
+      time: '50 minutes',
       completed: false
     }
-  ];
-
-  const canDoStatements = [
-    'I can understand a wide range of demanding, longer texts and recognize implicit meaning',
-    'I can express myself fluently and spontaneously without much obvious searching for expressions',
-    'I can use language flexibly and effectively for social, academic and professional purposes',
-    'I can produce clear, well-structured, detailed text on complex subjects',
-    'I can present clear, detailed descriptions of complex subjects integrating sub-themes',
-    'I can understand extended speech even when it is not clearly structured',
-    'I can read complex factual and literary texts and appreciate distinctions of style',
-    'I can express myself spontaneously at length with natural colloquial flow'
   ];
 
   // Functions for interactivity
@@ -470,17 +451,17 @@ export default function C1Level() {
               C1 Advanced Level
             </h1>
             <p className="text-xl text-foreground/70">
-              Can use language flexibly for social, academic and professional purposes.
+              Can express ideas fluently and spontaneously. Can use language flexibly and effectively for social, academic and professional purposes.
             </p>
           </div>
           <div className="text-right">
             <div className="flex items-center gap-4 mb-2">
-              <Crown className="w-6 h-6 text-yellow-600" />
+              <Crown className="w-6 h-6 text-yellow-500" />
               <span className="text-2xl font-bold text-foreground">{progress.points}</span>
               <span className="text-foreground/70">points</span>
             </div>
             <div className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-purple-500" />
+              <Sparkles className="w-5 h-5 text-orange-500" />
               <span className="text-foreground/70">{progress.streak} day streak</span>
             </div>
           </div>
@@ -488,41 +469,19 @@ export default function C1Level() {
 
         {/* Level Achievement Badge */}
         <div className="mb-6">
-          <Badge className="bg-gradient-to-r from-purple-600 to-purple-800 text-white text-lg px-6 py-3">
+          <Badge className="bg-gradient-to-r from-amber-500 to-amber-700 text-white text-lg px-6 py-3">
+            <Crown className="w-4 h-4 mr-2" />
             C1 Advanced
           </Badge>
         </div>
 
-        {/* Can-Do Statements */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Brain className="w-6 h-6 text-purple-700" />
-              What You Can Do at C1 Level
-            </CardTitle>
-            <CardDescription>
-              CEFR Can-Do Statements for Advanced learners
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-4">
-              {canDoStatements.map((statement, index) => (
-                <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-purple-50 dark:bg-purple-950/20">
-                  <CheckCircle className="w-5 h-5 text-purple-700 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{statement}</span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Progress Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <Card className="border-purple-200 dark:border-purple-800">
+          <Card className="border-amber-200 dark:border-amber-800">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <BookOpen className="w-6 h-6 text-purple-700" />
+                  <BookOpen className="w-6 h-6 text-amber-500" />
                   <span className="font-semibold">Grammar</span>
                 </div>
                 <Badge variant="secondary">{progress.completedLessons.length}/35</Badge>
@@ -532,11 +491,11 @@ export default function C1Level() {
             </CardContent>
           </Card>
 
-          <Card className="border-indigo-200 dark:border-indigo-800">
+          <Card className="border-green-200 dark:border-green-800">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <Target className="w-6 h-6 text-indigo-700" />
+                  <Target className="w-6 h-6 text-green-500" />
                   <span className="font-semibold">Vocabulary</span>
                 </div>
                 <Badge variant="secondary">{progress.masteredWords.length}/1000</Badge>
@@ -546,11 +505,11 @@ export default function C1Level() {
             </CardContent>
           </Card>
 
-          <Card className="border-green-200 dark:border-green-800">
+          <Card className="border-rose-200 dark:border-rose-800">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <MessageSquare className="w-6 h-6 text-green-700" />
+                  <MessageSquare className="w-6 h-6 text-rose-500" />
                   <span className="font-semibold">Skills Practice</span>
                 </div>
                 <Badge variant="secondary">0/35</Badge>
@@ -581,7 +540,7 @@ export default function C1Level() {
                     <div>
                       <CardTitle className="text-xl">{topic.topic}</CardTitle>
                       <CardDescription>
-                        {topic.lessons.length} sophisticated lessons - C1 Advanced
+                        {topic.lessons.length} expert lessons - C1 Level
                       </CardDescription>
                     </div>
                     <Badge variant="outline" className="text-sm">
@@ -598,14 +557,14 @@ export default function C1Level() {
                       return (
                         <div key={lesson.id} 
                              className={`p-4 border rounded-lg cursor-pointer transition-all hover:shadow-md ${
-                               isCompleted ? 'bg-purple-50 border-purple-200 dark:bg-purple-950/20 dark:border-purple-800' : 
+                               isCompleted ? 'bg-green-50 border-green-200 dark:bg-green-950/20 dark:border-green-800' : 
                                'hover:bg-muted/50'
                              }`}
                              onClick={() => setSelectedLesson(`${topic.id}-${lesson.id}`)}>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                               {isCompleted ? (
-                                <CheckCircle className="w-5 h-5 text-purple-700" />
+                                <CheckCircle className="w-5 h-5 text-green-600" />
                               ) : (
                                 <div className="w-5 h-5 border-2 border-muted-foreground rounded-full" />
                               )}
@@ -617,7 +576,7 @@ export default function C1Level() {
                               </div>
                             </div>
                             <div className="flex items-center gap-2">
-                              <Badge variant="secondary" className="bg-purple-100 text-purple-800">C1</Badge>
+                              <Badge variant="secondary" className="bg-amber-100 text-amber-800">C1</Badge>
                               <ArrowRight className="w-4 h-4 text-muted-foreground" />
                             </div>
                           </div>
@@ -634,15 +593,16 @@ export default function C1Level() {
         {/* Vocabulary Tab */}
         <TabsContent value="vocabulary" className="space-y-6">
           <div className="grid gap-6">
+            {/* Category Selector */}
             <Card>
               <CardHeader>
                 <CardTitle>C1 Vocabulary Categories</CardTitle>
                 <CardDescription>
-                  Master 1000 advanced words including specialized terminology, idiomatic expressions, and academic language
+                  Master 1000 sophisticated C1-level English words for expert communication
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-4 gap-4 mb-6">
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
                   {vocabularyCategories.map((category) => (
                     <div key={category.name}
                          className={`p-4 border rounded-lg cursor-pointer transition-all hover:shadow-md ${
@@ -653,8 +613,8 @@ export default function C1Level() {
                       <div className="flex items-center gap-3">
                         <div className={`w-4 h-4 rounded-full ${category.color}`} />
                         <div>
-                          <h4 className="font-medium text-sm">{category.name}</h4>
-                          <p className="text-xs text-muted-foreground">{category.count} words</p>
+                          <h4 className="font-medium">{category.name}</h4>
+                          <p className="text-sm text-muted-foreground">{category.count} words</p>
                         </div>
                       </div>
                     </div>
@@ -663,11 +623,12 @@ export default function C1Level() {
               </CardContent>
             </Card>
 
+            {/* Word Cards */}
             <Card>
               <CardHeader>
                 <CardTitle>{selectedVocabCategory}</CardTitle>
                 <CardDescription>
-                  Advanced C1-level vocabulary for sophisticated academic and professional communication
+                  C1-level vocabulary for expert expression and professional excellence
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -678,12 +639,12 @@ export default function C1Level() {
                     return (
                       <div key={wordItem.word} 
                            className={`p-4 border rounded-lg transition-all hover:shadow-md ${
-                             isMastered ? 'bg-purple-50 border-purple-200 dark:bg-purple-950/20 dark:border-purple-800' : ''
+                             isMastered ? 'bg-green-50 border-green-200 dark:bg-green-950/20 dark:border-green-800' : ''
                            }`}>
                         <div className="flex items-center justify-between mb-2">
                           <h4 className="font-bold text-lg">{wordItem.word}</h4>
                           <div className="flex items-center gap-2">
-                            <Badge variant="outline" className="text-xs bg-purple-100 text-purple-800">C1</Badge>
+                            <Badge variant="outline" className="text-xs">C1</Badge>
                             <Button size="sm" variant="ghost" 
                                     onClick={() => playPronunciation(wordItem.word)}>
                               <Volume2 className="w-4 h-4" />
@@ -717,7 +678,7 @@ export default function C1Level() {
                   <div className="flex items-center justify-between">
                     <Badge variant="outline">{activity.type}</Badge>
                     <div className="flex items-center gap-2">
-                      <Badge className="bg-purple-700">C1</Badge>
+                      <Badge className="bg-amber-500">C1</Badge>
                       <div className="flex items-center gap-1 text-sm text-muted-foreground">
                         <Clock className="w-4 h-4" />
                         {activity.time}
@@ -730,7 +691,7 @@ export default function C1Level() {
                 <CardFooter>
                   <Button className="w-full">
                     <Play className="w-4 h-4 mr-2" />
-                    Start Advanced Activity
+                    Start Expert Activity
                   </Button>
                 </CardFooter>
               </Card>
@@ -744,39 +705,33 @@ export default function C1Level() {
             <CardHeader>
               <CardTitle>C1 Advanced Assessment</CardTitle>
               <CardDescription>
-                Comprehensive assessment to evaluate your C1-level mastery of sophisticated English
+                Test your C1-level knowledge with comprehensive advanced assessment
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <div className="grid md:grid-cols-4 gap-4">
+                <div className="grid md:grid-cols-3 gap-4">
                   <div className="text-center p-4 border rounded-lg">
-                    <BookOpen className="w-8 h-8 mx-auto mb-2 text-purple-700" />
+                    <BookOpen className="w-8 h-8 mx-auto mb-2 text-amber-500" />
                     <h4 className="font-medium">Grammar Test</h4>
                     <p className="text-sm text-muted-foreground">65 questions</p>
-                    <Badge className="mt-2 bg-purple-700">C1 Level</Badge>
+                    <Badge className="mt-2 bg-amber-500">C1 Level</Badge>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
-                    <Target className="w-8 h-8 mx-auto mb-2 text-indigo-700" />
+                    <Target className="w-8 h-8 mx-auto mb-2 text-green-500" />
                     <h4 className="font-medium">Vocabulary Test</h4>
-                    <p className="text-sm text-muted-foreground">70 questions</p>
-                    <Badge className="mt-2 bg-purple-700">C1 Level</Badge>
+                    <p className="text-sm text-muted-foreground">75 questions</p>
+                    <Badge className="mt-2 bg-amber-500">C1 Level</Badge>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
-                    <MessageSquare className="w-8 h-8 mx-auto mb-2 text-green-700" />
-                    <h4 className="font-medium">Speaking Test</h4>
-                    <p className="text-sm text-muted-foreground">Advanced tasks</p>
-                    <Badge className="mt-2 bg-purple-700">C1 Level</Badge>
-                  </div>
-                  <div className="text-center p-4 border rounded-lg">
-                    <PenTool className="w-8 h-8 mx-auto mb-2 text-red-700" />
-                    <h4 className="font-medium">Writing Test</h4>
-                    <p className="text-sm text-muted-foreground">Complex compositions</p>
-                    <Badge className="mt-2 bg-purple-700">C1 Level</Badge>
+                    <MessageSquare className="w-8 h-8 mx-auto mb-2 text-rose-500" />
+                    <h4 className="font-medium">Skills Test</h4>
+                    <p className="text-sm text-muted-foreground">12 sections</p>
+                    <Badge className="mt-2 bg-amber-500">C1 Level</Badge>
                   </div>
                 </div>
                 <Button asChild className="w-full" size="lg">
-                  <Link href="/assessment/c1">Take C1 Assessment</Link>
+                  <Link href="/assessment">Take C1 Assessment</Link>
                 </Button>
               </div>
             </CardContent>
