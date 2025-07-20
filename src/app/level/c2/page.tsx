@@ -48,6 +48,7 @@ interface UserProgress {
 }
 
 export default function C2Level() {
+  const [mounted, setMounted] = useState(false);
   const [progress, setProgress] = useState<UserProgress>({
     grammarProgress: 0,
     vocabularyProgress: 0,
@@ -62,11 +63,17 @@ export default function C2Level() {
   const [selectedVocabCategory, setSelectedVocabCategory] = useState<string>('Native Fluency');
   const [showExercise, setShowExercise] = useState<boolean>(false);
 
-  // Load progress from localStorage
+  // Prevent hydration mismatch by only running on client
   useEffect(() => {
+    setMounted(true);
     const saved = localStorage.getItem('c2-progress');
     if (saved) {
-      setProgress(JSON.parse(saved));
+      try {
+        setProgress(JSON.parse(saved));
+      } catch (error) {
+        console.error('Error loading progress:', error);
+        localStorage.removeItem('c2-progress');
+      }
     }
   }, []);
 
@@ -443,6 +450,20 @@ export default function C2Level() {
   const getWordsForCategory = (category: string) => {
     return vocabularyDatabase.filter(word => word.category === category);
   };
+
+  // Show loading state during hydration to prevent mismatch
+  if (!mounted) {
+    return (
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-lg text-muted-foreground">Loading C2 Level...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
