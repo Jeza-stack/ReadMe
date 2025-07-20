@@ -48,6 +48,7 @@ interface UserProgress {
 }
 
 export default function B2Level() {
+  const [mounted, setMounted] = useState(false);
   const [progress, setProgress] = useState<UserProgress>({
     grammarProgress: 0,
     vocabularyProgress: 0,
@@ -62,11 +63,17 @@ export default function B2Level() {
   const [selectedVocabCategory, setSelectedVocabCategory] = useState<string>('Academic & Professional');
   const [showExercise, setShowExercise] = useState<boolean>(false);
 
-  // Load progress from localStorage
+  // Prevent hydration mismatch by only running on client
   useEffect(() => {
+    setMounted(true);
     const saved = localStorage.getItem('b2-progress');
     if (saved) {
-      setProgress(JSON.parse(saved));
+      try {
+        setProgress(JSON.parse(saved));
+      } catch (error) {
+        console.error('Error loading progress:', error);
+        localStorage.removeItem('b2-progress');
+      }
     }
   }, []);
 
