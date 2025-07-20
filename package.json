@@ -8,6 +8,8 @@
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
+    "deploy": "npm run build && npm run export",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
