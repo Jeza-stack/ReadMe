@@ -7,15 +7,12 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+  // Focus on CEFR platform routes only
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+    }
+    return config
   },
 }
 
