@@ -77,10 +77,26 @@ export default function A1Level() {
     }
   }, []);
 
-  // Save progress to localStorage
+  // Save progress to localStorage with safety checks
   const saveProgress = (newProgress: UserProgress) => {
-    setProgress(newProgress);
-    localStorage.setItem('a1-progress', JSON.stringify(newProgress));
+    if (!mounted) return; // Prevent updates if component unmounted
+    
+    // Ensure progress values don't exceed 100%
+    const safeProgress = {
+      ...newProgress,
+      grammarProgress: Math.min(100, Math.max(0, newProgress.grammarProgress)),
+      vocabularyProgress: Math.min(100, Math.max(0, newProgress.vocabularyProgress)),
+      skillsProgress: Math.min(100, Math.max(0, newProgress.skillsProgress))
+    };
+    
+    setProgress(safeProgress);
+    
+    try {
+      localStorage.setItem('a1-progress', JSON.stringify(safeProgress));
+    } catch (error) {
+      console.error('Failed to save progress to localStorage:', error);
+      // Fallback: could implement alternative storage or user notification
+    }
   };
 
   // Grammar Topics with Detailed Lessons
@@ -496,7 +512,9 @@ export default function A1Level() {
     
     if (!newProgress.completedLessons.includes(lessonKey)) {
       newProgress.completedLessons.push(lessonKey);
-      newProgress.grammarProgress = Math.min(100, newProgress.grammarProgress + (100 / 20)); // 20 total lessons
+      // Calculate progress based on actual completed lessons, not increment
+      const totalLessons = grammarTopics.reduce((total, topic) => total + topic.lessons.length, 0);
+      newProgress.grammarProgress = (newProgress.completedLessons.length / totalLessons) * 100;
       newProgress.points += 10;
       saveProgress(newProgress);
     }
@@ -507,7 +525,9 @@ export default function A1Level() {
     
     if (!newProgress.masteredWords.includes(word)) {
       newProgress.masteredWords.push(word);
-      newProgress.vocabularyProgress = Math.min(100, newProgress.vocabularyProgress + (100 / 150)); // 150 total words
+      // Calculate progress based on actual mastered words, not increment
+      const totalWords = vocabularyDatabase.length;
+      newProgress.vocabularyProgress = (newProgress.masteredWords.length / totalWords) * 100;
       newProgress.points += 5;
       saveProgress(newProgress);
     }

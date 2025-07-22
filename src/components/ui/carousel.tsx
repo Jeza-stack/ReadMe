@@ -87,6 +87,12 @@ const Carousel = React.forwardRef<
 
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
+        // Only handle keyboard navigation if the carousel is focused
+        const target = event.target as HTMLElement
+        if (!target.closest('[role="region"][aria-roledescription="carousel"]')) {
+          return
+        }
+        
         if (event.key === "ArrowLeft") {
           event.preventDefault()
           scrollPrev()
@@ -116,6 +122,7 @@ const Carousel = React.forwardRef<
       api.on("select", onSelect)
 
       return () => {
+        api?.off("reInit", onSelect)
         api?.off("select", onSelect)
       }
     }, [api, onSelect])
