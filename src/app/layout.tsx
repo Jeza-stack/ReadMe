@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-// Simple navigation for CEFR platform
+import { Navigation } from '@/components/navigation';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Inter, Poppins } from 'next/font/google';
@@ -42,16 +42,7 @@ export default function RootLayout({
         <link rel="preload" href="/favicon.ico" as="image" />
       </head>
       <body className={cn("font-body antialiased", fontBody.variable, fontHeadline.variable, "min-h-screen flex flex-col")}>
-        <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-          <div className="container mx-auto px-4 h-14 flex items-center">
-            <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">EN</span>
-              </div>
-              <span className="font-bold text-xl">CEFR English</span>
-            </div>
-          </div>
-        </header>
+        <Navigation />
         <main className="flex-grow">
           {children}
         </main>
