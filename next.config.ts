@@ -18,6 +18,29 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Performance optimizations
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
+  // Bundle analyzer (set ANALYZE=true to enable)
+  ...(process.env.ANALYZE === 'true' && {
+    webpack: (config: any) => {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+          reportFilename: 'bundle-analyzer-report.html',
+        })
+      );
+      return config;
+    },
+  }),
+  // Enable static optimization where possible
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: 'out',
 };
 
 export default nextConfig;
