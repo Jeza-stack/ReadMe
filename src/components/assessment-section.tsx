@@ -73,15 +73,39 @@ export function AssessmentSection() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.level) {
+    
+    // Simple validation
+    if (!formData.name || !formData.email) {
       alert('Please fill in all required fields');
       return;
     }
-    // Process form submission - in real app, this would send to backend
-    console.log('Assessment form submitted:', formData);
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+    
+    // Show success message
+    alert(`Thank you, ${formData.name}! Your assessment request has been submitted. We'll contact you soon at ${formData.email}!`);
+    
+    // Reset form and start assessment
+    setFormData({ name: '', email: '', level: '', goals: '' });
     setShowForm(false);
     setIsStarted(true);
     setCurrentStep(1);
+    
+    // Simulate assessment progress
+    const interval = setInterval(() => {
+      setCurrentStep(prev => {
+        if (prev >= 4) {
+          clearInterval(interval);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 2000);
   };
 
   const handleInputChange = (field: string, value: string) => {

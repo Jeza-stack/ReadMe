@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Navigation } from '@/components/navigation';
+import { GlobalScripts } from '@/components/global-scripts';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Inter, Poppins } from 'next/font/google';
@@ -51,6 +52,7 @@ export default function RootLayout({
             <p>&copy; 2024 CEFR English Learning Platform. Made with ❤️ for English learners worldwide.</p>
           </div>
         </footer>
+        <GlobalScripts />
         <Toaster />
       </body>
     </html>

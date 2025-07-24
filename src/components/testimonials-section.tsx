@@ -3,6 +3,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star, Quote } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const testimonials = [
   {
@@ -44,6 +45,11 @@ const testimonials = [
 ];
 
 export function TestimonialsSection() {
+  const { elementRef, isVisible } = useScrollAnimation({
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  });
+
   return (
     <section id="testimonials" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
@@ -56,7 +62,12 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div 
+          ref={elementRef}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="pt-6">

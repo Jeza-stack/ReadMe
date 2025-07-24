@@ -17,6 +17,19 @@ export function Navigation() {
     { href: '#contact', label: 'Contact' },
   ];
 
+  // Smooth scrolling function for anchor links
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    setIsOpen(false); // Close mobile menu after navigation
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -35,12 +48,13 @@ export function Navigation() {
           <ul className="nav-menu hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link 
+                <a
                   href={item.href}
-                  className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium"
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
+                  className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium cursor-pointer"
                 >
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
             <li>
@@ -70,17 +84,17 @@ export function Navigation() {
           <ul className="py-4 space-y-2">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link 
+                <a
                   href={item.href}
-                  className="block px-2 py-3 text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-md transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
+                  className="block px-2 py-3 text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-md transition-colors duration-200 cursor-pointer"
                 >
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
             <li className="pt-2">
-              <Button 
+              <Button
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
                 onClick={() => setIsOpen(false)}
               >

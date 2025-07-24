@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { cefrLevels } from '@/data/cefr-levels';
+import { useStaggeredScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface LevelCardProps {
   level: {
@@ -21,9 +22,12 @@ interface LevelCardProps {
     activities: number;
     features: string[];
   };
+  index: number;
+  isVisible: boolean;
+  elementRef: (el: HTMLElement | null) => void;
 }
 
-function LevelCard({ level }: LevelCardProps) {
+function LevelCard({ level, index, isVisible, elementRef }: LevelCardProps) {
   const skillsByLevel = {
     'A1': [
       'Basic greetings and introductions',
@@ -66,7 +70,17 @@ function LevelCard({ level }: LevelCardProps) {
   const skills = skillsByLevel[level.level as keyof typeof skillsByLevel] || level.features;
 
   return (
-    <Card className={`level-card group ${level.borderColor} border-2`}>
+    <Card 
+      ref={elementRef}
+      className={`level-card group ${level.borderColor} border-2 transition-all duration-600 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-5'
+      }`}
+      style={{
+        transitionDelay: `${index * 100}ms`
+      }}
+    >
       <CardHeader className={`${level.bgColor} rounded-t-lg`}>
         <div className="flex items-center justify-between">
           <CardTitle className={`text-2xl font-bold ${level.textColor}`}>
@@ -131,6 +145,11 @@ function LevelCard({ level }: LevelCardProps) {
 }
 
 export function LevelsGrid() {
+  const { setElementRef, isVisible } = useStaggeredScrollAnimation({
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
   return (
     <section id="levels" className="py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
@@ -145,8 +164,14 @@ export function LevelsGrid() {
         </div>
 
         <div className="levels-grid">
-          {cefrLevels.map((level) => (
-            <LevelCard key={level.level} level={level} />
+          {cefrLevels.map((level, index) => (
+            <LevelCard 
+              key={level.level} 
+              level={level} 
+              index={index}
+              isVisible={isVisible(index)}
+              elementRef={setElementRef(index)}
+            />
           ))}
         </div>
 
