@@ -5,11 +5,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, Clock, Target, BookOpen, Headphones, PenTool, MessageSquare } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { CheckCircle, Clock, Target, BookOpen, Headphones, PenTool, MessageSquare, User, Mail, GraduationCap, Target as TargetIcon } from 'lucide-react';
 
 export function AssessmentSection() {
   const [isStarted, setIsStarted] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    level: '',
+    goals: ''
+  });
 
   const assessmentFeatures = [
     {
@@ -61,6 +71,35 @@ export function AssessmentSection() {
     }
   ];
 
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.level) {
+      alert('Please fill in all required fields');
+      return;
+    }
+    // Process form submission - in real app, this would send to backend
+    console.log('Assessment form submitted:', formData);
+    setShowForm(false);
+    setIsStarted(true);
+    setCurrentStep(1);
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const levelOptions = [
+    { value: 'complete-beginner', label: 'Complete Beginner' },
+    { value: 'a1', label: 'A1 - Beginner' },
+    { value: 'a2', label: 'A2 - Elementary' },
+    { value: 'b1', label: 'B1 - Intermediate' },
+    { value: 'b2', label: 'B2 - Upper Intermediate' },
+    { value: 'c1', label: 'C1 - Advanced' },
+  ];
+
   return (
     <section id="assessment" className="py-20 bg-gradient-to-b from-background to-blue-50/20 dark:to-blue-950/20">
       <div className="container mx-auto px-4">
@@ -73,7 +112,7 @@ export function AssessmentSection() {
           </p>
         </div>
 
-        {!isStarted ? (
+        {!isStarted && !showForm ? (
           <div className="max-w-4xl mx-auto">
             {/* Assessment Features */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -93,9 +132,9 @@ export function AssessmentSection() {
             {/* Main Assessment Card */}
             <Card className="max-w-2xl mx-auto">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl mb-2">Free English Level Assessment</CardTitle>
+                <CardTitle className="text-2xl mb-2">Ready to Master English?</CardTitle>
                 <CardDescription className="text-lg">
-                  Discover your CEFR level and get personalized recommendations
+                  Take our free assessment and discover your perfect starting point.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -125,7 +164,7 @@ export function AssessmentSection() {
                   <Button 
                     size="lg" 
                     className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-lg px-8"
-                    onClick={() => setIsStarted(true)}
+                    onClick={() => setShowForm(true)}
                   >
                     Start Free Assessment
                   </Button>
@@ -133,6 +172,116 @@ export function AssessmentSection() {
                     No registration required • Takes 15-20 minutes
                   </p>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
+        ) : showForm ? (
+          // Assessment Form
+          <div className="max-w-2xl mx-auto">
+            <Card className="assessment-section">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl mb-2">Ready to Master English?</CardTitle>
+                <CardDescription className="text-lg">
+                  Take our free assessment and discover your perfect starting point.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleFormSubmit} className="assessment-form space-y-6">
+                  {/* Full Name */}
+                  <div className="form-group space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      Full Name *
+                    </label>
+                    <Input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      placeholder="Enter your full name"
+                      required
+                      className="w-full"
+                    />
+                  </div>
+
+                  {/* Email Address */}
+                  <div className="form-group space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <Mail className="w-4 h-4" />
+                      Email Address *
+                    </label>
+                    <Input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      placeholder="your.email@example.com"
+                      required
+                      className="w-full"
+                    />
+                  </div>
+
+                  {/* Current English Level */}
+                  <div className="form-group space-y-2">
+                    <label htmlFor="level" className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <GraduationCap className="w-4 h-4" />
+                      Current English Level *
+                    </label>
+                    <Select 
+                      value={formData.level} 
+                      onValueChange={(value) => handleInputChange('level', value)}
+                    >
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select your level" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {levelOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Learning Goals */}
+                  <div className="form-group space-y-2">
+                    <label htmlFor="goals" className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <TargetIcon className="w-4 h-4" />
+                      Learning Goals
+                    </label>
+                    <Textarea
+                      id="goals"
+                      name="goals"
+                      value={formData.goals}
+                      onChange={(e) => handleInputChange('goals', e.target.value)}
+                      placeholder="What do you want to achieve with English?"
+                      rows={4}
+                      className="w-full"
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="text-center pt-4">
+                    <Button 
+                      type="submit" 
+                      size="lg"
+                      className="cta-button w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-lg px-8"
+                    >
+                      Start Free Assessment
+                    </Button>
+                    <Button 
+                      type="button" 
+                      variant="ghost" 
+                      onClick={() => setShowForm(false)}
+                      className="mt-2 text-sm"
+                    >
+                      Back to Overview
+                    </Button>
+                  </div>
+                </form>
               </CardContent>
             </Card>
           </div>
