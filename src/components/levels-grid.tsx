@@ -66,7 +66,7 @@ function LevelCard({ level }: LevelCardProps) {
   const skills = skillsByLevel[level.level as keyof typeof skillsByLevel] || level.features;
 
   return (
-    <Card className={`level-card group transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${level.borderColor} border-2`}>
+    <Card className={`level-card group ${level.borderColor} border-2`}>
       <CardHeader className={`${level.bgColor} rounded-t-lg`}>
         <div className="flex items-center justify-between">
           <CardTitle className={`text-2xl font-bold ${level.textColor}`}>
@@ -144,7 +144,7 @@ export function LevelsGrid() {
           </p>
         </div>
 
-        <div className="levels-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="levels-grid">
           {cefrLevels.map((level) => (
             <LevelCard key={level.level} level={level} />
           ))}

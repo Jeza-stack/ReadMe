@@ -101,7 +101,7 @@ export function AssessmentSection() {
   ];
 
   return (
-    <section id="assessment" className="py-20 bg-gradient-to-b from-background to-blue-50/20 dark:to-blue-950/20">
+    <section id="assessment" className="assessment-section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold font-headline mb-4">
@@ -185,8 +185,8 @@ export function AssessmentSection() {
                   Take our free assessment and discover your perfect starting point.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleFormSubmit} className="assessment-form space-y-6">
+                             <CardContent className="assessment-form">
+                <form onSubmit={handleFormSubmit} className="space-y-6">
                   {/* Full Name */}
                   <div className="form-group space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-foreground flex items-center gap-2">

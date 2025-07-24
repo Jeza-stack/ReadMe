@@ -18,15 +18,17 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="navbar border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-      <div className="nav-container container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <nav className="navbar">
+      <div className="nav-container">
+        <div className="flex items-center justify-between w-full">
           {/* Logo */}
-          <div className="nav-logo flex items-center space-x-2">
-            <div className="h-10 w-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">CE</span>
+          <div className="nav-logo">
+            <div className="flex items-center space-x-2">
+              <div className="h-10 w-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">CE</span>
+              </div>
+              <span className="font-headline">CEFR Excellence</span>
             </div>
-            <span className="font-bold text-xl font-headline">CEFR Excellence</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -62,10 +64,10 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         <div className={cn(
-          "md:hidden transition-all duration-300 ease-in-out overflow-hidden",
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          "nav-menu md:hidden transition-all duration-300 ease-in-out overflow-hidden",
+          isOpen ? "active max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}>
-          <ul className="py-4 space-y-2 border-t border-border/50">
+          <ul className="py-4 space-y-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link 
