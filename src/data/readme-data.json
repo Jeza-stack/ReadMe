@@ -773,37 +773,40 @@
               ]
             },
             {
-              "title": "Macbeth - The Banquet Scene",
-              "slug": "macbeth-banquet-scene",
+              "title": "Othello - The Climax Scene",
+              "slug": "othello-climax-scene",
               "category": "Unit II: Scenes From Shakespeare",
               "author": "William Shakespeare",
-              "fullText": "**LADY MACBETH**\nMy royal lord,\nYou do not give the cheer. The feast is sold\nThat is not often vouched, while 'tis a-making,\n'Tis given with welcome. To feed were best at home;\nFrom thence, the sauce to meat is ceremony;\nMeeting were bare without it.\n\n**MACBETH**\nSweet remembrancer!\nNow, good digestion wait on appetite,\nAnd health on both!\n\n(Enter the GHOST OF BANQUO, and sits in MACBETH's place)\n\n**LENNOX**\nMay't please your highness sit.\n\n**MACBETH**\nThe table's full.\n\n**LENNOX**\nHere is a place reserved, sir.\n\n**MACBETH**\nWhere?\n\n**LENNOX**\nHere, my good lord. What is't that moves your highness?\n\n**MACBETH**\nWhich of you have done this?\n\n**LORDS**\nWhat, my good lord?\n\n**MACBETH**\nThou canst not say I did it. Never shake\nThy gory locks at me.\n\n**ROSS**\nGentlemen, rise: his highness is not well.\n\n**LADY MACBETH**\nSit, worthy friends. My lord is often thus,\nAnd hath been from his youth. Pray you, keep seat.\nThe fit is momentary; upon a thought\nHe will again be well. If much you note him,\nYou shall offend him and extend his passion.\nFeed, and regard him not. — Are you a man?\n\n**MACBETH**\nAy, and a bold one, that dare look on that\nWhich might appal the devil.\n\n**LADY MACBETH**\nO proper stuff!\nThis is the very painting of your fear.\nThis is the air-drawn dagger which you said\nLed you to Duncan. O, these flaws and starts,\nImpostors to true fear, would well become\nA woman's story at a winter's fire,\nAuthorized by her grandam. Shame itself!\nWhy do you make such faces? When all's done,\nYou look but on a stool.",
+              "fullText": "**OTHELLO**\nIt is the cause, it is the cause, my soul.\nLet me not name it to you, you chaste stars!\nIt is the cause. Yet I'll not shed her blood,\nNor scar that whiter skin of hers than snow,\nAnd smooth as monumental alabaster.\nYet she must die, else she'll betray more men.\nPut out the light, and then put out the light.\nIf I quench thee, thou flaming minister,\nI can again thy former light restore,\nShould I repent me. But once put out thy light,\nThou cunning'st pattern of excelling nature,\nI know not where is that Promethean heat\nThat can thy light relume.\n\n(He kisses DESDEMONA)\n\n**DESDEMONA**\nWho's there? Othello?\n\n**OTHELLO**\nAy, Desdemona.\n\n**DESDEMONA**\nWill you come to bed, my lord?\n\n**OTHELLO**\nHave you prayed tonight, Desdemona?",
               "difficultWords": [
-                { "word": "Gory", "definition": "Involving or showing violence and bloodshed.", "connotation": "Suggests bloody, gruesome imagery.", "example": "Never shake thy gory locks at me." },
-                { "word": "Appal", "definition": "Greatly dismay or horrify.", "connotation": "To shock or disgust someone to a great extent.", "example": "The sight would appal the devil." }
+                { "word": "Alabaster", "definition": "A fine-grained white or translucent stone.", "connotation": "Associated with purity, beauty, and perfection.", "example": "Smooth as monumental alabaster." },
+                { "word": "Promethean", "definition": "Relating to Prometheus, who stole fire from the gods.", "connotation": "Suggests divine or creative power.", "example": "That Promethean heat that can thy light relume." },
+                { "word": "Relume", "definition": "To light again or rekindle.", "connotation": "To restore light or life.", "example": "I know not where is that Promethean heat that can thy light relume." }
               ],
               "authorInfo": {
-                "biography": "William Shakespeare (1564-1616) is widely regarded as the greatest writer in the English language. 'Macbeth' is one of his darkest and most powerful tragedies.",
-                "historicalContext": "The play was likely written in 1606, during the reign of James I, who had a known interest in witchcraft and the supernatural.",
-                "writingStyle": "Characterized by dense, powerful language, psychological depth, and a swift, almost breathless, pace.",
-                "majorWorks": ["Hamlet", "Romeo and Juliet", "King Lear", "Othello"],
+                "biography": "William Shakespeare (1564-1616) is the most influential writer in English literature. His tragedies explore timeless human themes through rich language and complex characters.",
+                "historicalContext": "Othello was written around 1603, exploring themes of race, jealousy, and manipulation in Venetian society.",
+                "writingStyle": "Othello is a tragedy about love, jealousy, race, and betrayal. It remains deeply relevant in today's world.",
+                "majorWorks": ["Hamlet", "Othello", "King Lear", "Macbeth"],
                 "influence": "Shakespeare's influence on literature, theatre, and the English language itself is unparalleled."
               },
               "contentAnalysis": {
-                "summary": "During a royal banquet to celebrate his coronation, Macbeth sees the ghost of Banquo—the friend he just had murdered—sitting in his chair. No one else can see the ghost. Macbeth's terrified reaction disrupts the feast, causing confusion and suspicion among his lords. Lady Macbeth tries desperately to cover for him, dismissing his outburst as a recurring illness, while privately scorning him for his weakness.",
-                "themes": ["Guilt", "Paranoia", "The Supernatural", "Appearance vs. Reality"],
+                "summary": "In this emotionally intense climax, Othello enters Desdemona's room while she sleeps. Struggling with jealousy and manipulated by Iago's lies, he contemplates killing her. He believes she has betrayed him, but cannot bring himself to destroy her purity. Despite his inner turmoil, he tragically proceeds to smother her. This scene reveals the tragic collision of love, betrayal, and manipulation.",
+                "themes": ["Jealousy", "Manipulation and Deception", "Tragic Love", "Reputation and Honour", "Race and Identity"],
                 "literaryDevices": [
-                  { "device": "Dramatic Irony", "example": "The audience knows that Macbeth is seeing the ghost of the man he murdered, but the other characters on stage are clueless and confused." },
-                  { "device": "Hallucination", "example": "The ghost is a physical manifestation of Macbeth's overwhelming guilt and paranoia." }
+                  { "device": "Foreshadowing", "example": "Othello's lines about 'putting out the light' foreshadow Desdemona's death." },
+                  { "device": "Metaphor", "example": "Comparing Desdemona to light emphasizes her purity." },
+                  { "device": "Irony", "example": "Othello believes he is delivering justice, but the audience knows he is tragically misled." },
+                  { "device": "Symbolism", "example": "Light and darkness represent truth and ignorance." }
                 ],
-                "criticalAnalysis": "This scene is the public turning point of the play. Macbeth's private guilt erupts into a public spectacle, shattering the image of the calm, competent king he is trying to project. It marks the beginning of his public unraveling and the lords' growing suspicion of his legitimacy.",
-                "relevance": "The scene is a powerful psychological study of how guilt can torment the mind, blurring the line between the real and the imaginary and leading to self-destruction."
+                "criticalAnalysis": "This scene represents the tragic culmination of Iago's manipulation and Othello's fatal flaw of jealousy. The imagery of light and darkness permeates the scene, reflecting the moral confusion that leads to this devastating act.",
+                "relevance": "The scene remains powerfully relevant in exploring themes of domestic violence, racial prejudice, and the destructive power of jealousy and manipulation in relationships."
               },
               "faqs": [
-                { "question": "Can anyone else see Banquo's ghost?", "answer": "No, only Macbeth can see the ghost. It is a manifestation of his own guilt and is invisible to everyone else at the banquet." }
+                { "question": "Why does Othello ask Desdemona to pray before killing her?", "answer": "Othello wants her to die without sin, showing that he still believes in justice—even while committing an unjust act." }
               ],
               "quiz": [
-                { "question": "How does Lady Macbeth explain her husband's strange behavior to their guests?", "options": ["She says he is drunk", "She says he is joking", "She says he has had fits like this since he was young", "She says he is angry at the lords"], "correctAnswer": "She says he has had fits like this since he was young", "explanation": "She tries to normalize his terrifying outburst by claiming it's a 'momentary fit' from a recurring illness to prevent the guests from becoming too suspicious." }
+                { "question": "Why does Othello hesitate before killing Desdemona?", "options": ["He is waiting for Iago's signal", "He still loves her and struggles with guilt", "He is unsure of her identity", "He wants witnesses present"], "correctAnswer": "He still loves her and struggles with guilt", "explanation": "Despite his jealousy and belief in her betrayal, Othello's love for Desdemona causes him to hesitate and struggle with the terrible act he believes he must commit." }
               ]
             },
             {
