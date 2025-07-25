@@ -2,182 +2,18 @@
 "use client";
 
 import type { LiteraryWork, DifficultWord, QuizQuestion, Faq } from "@/lib/types";
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { CheckCircle, XCircle, Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { CheckCircle, XCircle } from "lucide-react";
 import { Progress } from "./ui/progress";
 import { Separator } from "./ui/separator";
-import { Slider } from "@/components/ui/slider";
-import { toast } from "@/hooks/use-toast";
-import { convertTextToSpeech } from "@/ai/flows/text-to-speech-flow";
 import { cn } from "@/lib/utils";
 
-function formatTime(seconds: number) {
-  if (isNaN(seconds)) return "0:00";
-  const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = Math.floor(seconds % 60);
-  return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-}
-
-function AudioPlayer({ text, onWordHighlight }: { text: string; onWordHighlight: (word: string | null) => void; }) {
-  const [audioSrc, setAudioSrc] = useState<string | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [progress, setProgress] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [playbackRate, setPlaybackRate] = useState(1);
-  const [volume, setVolume] = useState(1);
-
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const wordTimestampsRef = useRef<Map<string, { start: number, end: number }>>(new Map());
-
-  useEffect(() => {
-    async function generateAudio() {
-      try {
-        setIsLoading(true);
-        setError(null);
-        // This is a simplified approach. A real implementation would need
-        // the TTS API to return word-level timestamps.
-        const { audioDataUri } = await convertTextToSpeech({ text });
-        setAudioSrc(audioDataUri);
-      } catch (e: any) {
-        console.error(e);
-        setError("Audio could not be loaded. This may be due to API rate limits.");
-        toast({
-            variant: "destructive",
-            title: "Audio Generation Failed",
-            description: "Could not generate audio due to high demand. Please try again later.",
-        });
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    generateAudio();
-  }, [text]);
-
-  const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-        onWordHighlight(null);
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const handleTimeUpdate = () => {
-    if (audioRef.current) {
-      const time = audioRef.current.currentTime;
-      setCurrentTime(time);
-      setProgress((time / audioRef.current.duration) * 100);
-
-      // Simplified highlighting logic
-      const words = text.split(/\s+/);
-      const approxWordTime = audioRef.current.duration / words.length;
-      const currentWordIndex = Math.floor(time / approxWordTime);
-      const currentWord = words[currentWordIndex];
-      if (currentWord) {
-        onWordHighlight(currentWord.replace(/[.,;!?—]$/, ''));
-      }
-    }
-  };
-
-  const handleLoadedMetadata = () => {
-    if (audioRef.current) {
-      setDuration(audioRef.current.duration);
-    }
-  };
-  
-  const handleSeek = (value: number[]) => {
-    if (audioRef.current) {
-      const seekTime = (value[0] / 100) * duration;
-      audioRef.current.currentTime = seekTime;
-      setProgress(value[0]);
-    }
-  };
-
-  const changePlaybackRate = () => {
-    const rates = [1, 1.5, 2];
-    const currentIndex = rates.indexOf(playbackRate);
-    const nextIndex = (currentIndex + 1) % rates.length;
-    const newRate = rates[nextIndex];
-    setPlaybackRate(newRate);
-    if (audioRef.current) {
-      audioRef.current.playbackRate = newRate;
-    }
-  };
-  
-  const toggleMute = () => {
-      const newVolume = volume > 0 ? 0 : 1;
-      setVolume(newVolume);
-      if(audioRef.current) {
-          audioRef.current.volume = newVolume;
-      }
-  }
-
-  if (isLoading) {
-    return (
-      <Card className="bg-card/50">
-        <CardContent className="p-4 flex items-center justify-center gap-4">
-          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary"></div>
-          <p className="text-foreground/70">Generating audio...</p>
-        </CardContent>
-      </Card>
-    );
-  }
-
-  if (error || !audioSrc) {
-     return null;
-  }
-
-  return (
-    <Card className="bg-card/50 shadow-lg">
-        <CardContent className="p-4 flex items-center gap-4">
-            <audio
-                ref={audioRef}
-                src={audioSrc}
-                onTimeUpdate={handleTimeUpdate}
-                onLoadedMetadata={handleLoadedMetadata}
-                onEnded={() => {
-                  setIsPlaying(false);
-                  onWordHighlight(null);
-                }}
-            />
-            <Button onClick={togglePlayPause} variant="ghost" size="icon">
-                {isPlaying ? <Pause className="w-6 h-6 text-primary" /> : <Play className="w-6 h-6" />}
-            </Button>
-            <div className="flex-grow flex items-center gap-3">
-                <span className="text-sm font-mono">{formatTime(currentTime)}</span>
-                <Slider
-                    value={[progress]}
-                    max={100}
-                    step={1}
-                    onValueChange={handleSeek}
-                    className="w-full"
-                />
-                <span className="text-sm font-mono">{formatTime(duration)}</span>
-            </div>
-             <Button onClick={changePlaybackRate} variant="ghost" size="sm" className="w-24">
-                {playbackRate}x Speed
-            </Button>
-            <Button onClick={toggleMute} variant="ghost" size="icon">
-                {volume > 0 ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
-            </Button>
-        </CardContent>
-    </Card>
-  );
-}
-
-
 // InteractiveText Component
-function InteractiveText({ text, difficultWords, highlightedWord }: { text: string; difficultWords: DifficultWord[], highlightedWord: string | null }) {
+function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
     
     const paragraphs = text.split('\n\n');
@@ -190,17 +26,13 @@ function InteractiveText({ text, difficultWords, highlightedWord }: { text: stri
                     <p key={pIndex}>
                         {parts.map((part, index) => {
                             const wordOnly = part.trim().replace(/[.,;!?—]$/, '');
-                            const isHighlighted = highlightedWord && wordOnly.toLowerCase() === highlightedWord.toLowerCase();
 
                             if (difficultWordsMap.has(wordOnly.toLowerCase())) {
                                 const wordData = difficultWordsMap.get(wordOnly.toLowerCase())!;
                                 return (
                                     <Popover key={index}>
                                         <PopoverTrigger asChild>
-                                            <span className={cn(
-                                                "cursor-pointer font-bold text-primary/80 hover:text-primary transition-colors",
-                                                isHighlighted && "bg-primary/30 rounded-md px-1"
-                                                )}>{part}</span>
+                                            <span className="cursor-pointer font-bold text-primary/80 hover:text-primary transition-colors">{part}</span>
                                         </PopoverTrigger>
                                         <PopoverContent className="w-80 bg-background border-border shadow-2xl">
                                             <div className="space-y-2">
@@ -213,7 +45,7 @@ function InteractiveText({ text, difficultWords, highlightedWord }: { text: stri
                                     </Popover>
                                 );
                             }
-                            return <span key={index} className={cn(isHighlighted && "bg-primary/30 rounded-md")}>{part}</span>;
+                            return <span key={index}>{part}</span>;
                         })}
                     </p>
                 )
@@ -324,21 +156,15 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
 // Main Client Component
 export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
-    const [highlightedWord, setHighlightedWord] = useState<string | null>(null);
-    
     return (
         <div className="space-y-16 md:space-y-24">
-            {/* Audio Player & Full Text */}
+            {/* Full Text */}
             <section>
-                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Read & Listen</h2>
-                 <div className="sticky top-20 z-10 mb-8 backdrop-blur-sm p-2 -m-2 rounded-lg">
-                    <AudioPlayer text={work.fullText} onWordHighlight={setHighlightedWord} />
-                 </div>
+                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Read</h2>
                  <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
                 <InteractiveText 
                     text={work.fullText} 
                     difficultWords={work.difficultWords}
-                    highlightedWord={highlightedWord}
                 />
             </section>
             

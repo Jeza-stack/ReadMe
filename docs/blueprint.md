@@ -6,7 +6,6 @@
 - Interactive Components: Implement interactive elements for an engaging experience, like expandable content sections and integrated quizzes.
 - Blog Posts Preview: Show related blog posts with title, category, and a snippet of content.
 - Interactive Glossary: Highlight 15-20 difficult words per piece and display their meaning, connotation, and example when clicked.
-- Audio Narration: Integrate controls for text-to-speech functionality, highlighting the current text while it's being read, as a tool for all content.
 - Social Sharing: Enable social sharing options for the educational content and blog posts.
 
 ## Style Guidelines:
