@@ -58,6 +58,50 @@
   }
 }
 
+/* Tooltip styles for poem definitions */
+@layer components {
+  .poem-tooltip {
+    @apply relative cursor-help border-b border-dotted border-primary/60 text-primary font-medium;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .poem-tooltip:hover {
+    @apply text-primary border-primary;
+  }
+  
+  .poem-tooltip:hover::after {
+    content: attr(title);
+    @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-popover text-popover-foreground text-sm rounded-md shadow-lg border border-border z-50 whitespace-nowrap;
+    animation: tooltipFadeIn 0.2s ease-in-out;
+  }
+  
+  .poem-tooltip:hover::before {
+    content: '';
+    @apply absolute bottom-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-popover z-40;
+    margin-bottom: -4px;
+  }
+  
+  @keyframes tooltipFadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  /* Poem content styling */
+  .poem-content p {
+    @apply mb-6 leading-relaxed;
+  }
+  
+  .poem-content br {
+    @apply mb-2;
+  }
+}
+
 @layer utilities {
   /* Grid background pattern */
   .bg-grid-slate-100 {

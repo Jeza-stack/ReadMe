@@ -14,6 +14,25 @@ import { cn } from "@/lib/utils";
 
 // InteractiveText Component
 function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
+    // Check if the text contains HTML tags (indicating new structured format)
+    const isHTMLContent = text.includes('<p>') || text.includes('<br/>');
+    
+    if (isHTMLContent) {
+        // For HTML content, add the poem-tooltip class to spans with title attributes
+        const processedHTML = text.replace(
+            /<span title="([^"]*)">/g, 
+            '<span title="$1" class="poem-tooltip">'
+        );
+        
+        return (
+            <div 
+                className="poem-content font-body text-lg/relaxed space-y-6 text-foreground/90"
+                dangerouslySetInnerHTML={{ __html: processedHTML }}
+            />
+        );
+    }
+    
+    // Legacy handling for plain text content
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
     
     const paragraphs = text.split('\n\n');
@@ -48,7 +67,7 @@ function InteractiveText({ text, difficultWords }: { text: string; difficultWord
                             return <span key={index}>{part}</span>;
                         })}
                     </p>
-                )
+                );
             })}
         </div>
     );
@@ -161,7 +180,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             {/* Full Text */}
             <section>
                  <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Read</h2>
-                 <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
+                 <p className="text-foreground/70 mb-8 text-center">Hover over <span className="text-primary font-bold border-b border-dotted border-primary/60">highlighted words</span> for definitions.</p>
                 <InteractiveText 
                     text={work.fullText} 
                     difficultWords={work.difficultWords}
