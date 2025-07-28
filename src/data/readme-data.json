@@ -582,7 +582,7 @@
           "name": "Unit I: Poetry",
           "works": [
             {
-              "title": "The Voice of the Mountains",
+              "title": "The Voice of the Mountain",
               "slug": "the-voice-of-the-mountains",
               "category": "Unit I: Poetry",
               "author": "Mamang Dai",
@@ -626,10 +626,10 @@
                 "relevance": ""
               },
               "faqs": [
-                { "question": "What does the 'voice of the mountains' signify?", "answer": "It signifies a deep, ancestral identity that is inseparable from the land. The speaker's voice is the land's voice, and vice-versa. It represents a complete fusion of person and place, embodying timeless wisdom and the spirit of nature." }
+                { "question": "What does the 'voice of the mountain' signify?", "answer": "It signifies a deep, ancestral identity that is inseparable from the land. The speaker's voice is the land's voice, and vice-versa. It represents a complete fusion of person and place, embodying timeless wisdom and the spirit of nature." }
               ],
               "quiz": [
-                { "question": "What is the central theme of 'The Voice of the Mountains'?", "options": ["Political protest", "A travel diary", "The fusion of self-identity with nature", "A love story"], "correctAnswer": "The fusion of self-identity with nature", "explanation": "The speaker repeatedly identifies themselves with the river, mountains, and sky, showing that their identity is completely intertwined with their natural environment." }
+                { "question": "What is the central theme of 'The Voice of the Mountain'?", "options": ["Political protest", "A travel diary", "The fusion of self-identity with nature", "A love story"], "correctAnswer": "The fusion of self-identity with nature", "explanation": "The speaker repeatedly identifies themselves with the river, mountains, and sky, showing that their identity is completely intertwined with their natural environment." }
               ]
             },
             {
