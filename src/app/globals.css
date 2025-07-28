@@ -100,6 +100,63 @@
   .poem-content br {
     @apply mb-2;
   }
+
+  /* Tryst with Destiny speech styling */
+  .tryst-speech {
+    @apply space-y-6;
+  }
+  
+  .tryst-speech header {
+    @apply text-center mb-8;
+  }
+  
+  .tryst-speech h2 {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-primary;
+  }
+  
+  .tryst-speech h3 {
+    @apply text-xl md:text-2xl text-foreground/80 mb-6;
+  }
+  
+  .tryst-speech blockquote {
+    @apply bg-muted/30 border-l-4 border-primary pl-6 py-4 my-6 italic text-foreground/90 rounded-r-lg;
+  }
+  
+  .tryst-speech blockquote p {
+    @apply mb-4 last:mb-0 leading-relaxed;
+  }
+  
+  .tryst-speech hr {
+    @apply border-border my-8;
+  }
+  
+  /* Responsive video container */
+  .video-container {
+    @apply w-full max-w-2xl mx-auto my-8;
+  }
+  
+  .video-container iframe {
+    @apply rounded-lg shadow-lg;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .tryst-speech h2 {
+      @apply text-2xl;
+    }
+    
+    .tryst-speech h3 {
+      @apply text-lg;
+    }
+    
+    .tryst-speech blockquote {
+      @apply pl-4 text-sm;
+    }
+    
+    .video-container {
+      @apply mx-4;
+    }
+  }
 }
 
 @layer utilities {
