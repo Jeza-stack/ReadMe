@@ -7,18 +7,18 @@ export interface DifficultWord {
 
 export interface AuthorInfo {
   biography: string;
-  historicalContext: string;
+  historicalContext?: string;
   writingStyle: string;
-  majorWorks: string[];
-  influence: string;
+  majorWorks?: string[];
+  influence?: string;
 }
 
 export interface ContentAnalysis {
   summary: string;
-  themes: string[];
-  literaryDevices: { device: string; example: string }[];
-  criticalAnalysis: string;
-  relevance: string;
+  themes?: string[];
+  literaryDevices?: { device: string; example: string }[];
+  criticalAnalysis?: string;
+  relevance?: string;
 }
 
 export interface Faq {
