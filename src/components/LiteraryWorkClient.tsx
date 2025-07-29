@@ -181,14 +181,14 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                     <CardHeader><CardTitle className="font-headline">Themes</CardTitle></CardHeader>
                     <CardContent>
                         <ul className="list-disc pl-5 space-y-1 text-foreground/80">
-                            {work.contentAnalysis.themes.map((theme, i) => <li key={i}>{theme}</li>)}
+                            {(work.contentAnalysis?.themes || []).map((theme, i) => <li key={i}>{theme}</li>)}
                         </ul>
                     </CardContent>
                 </Card>
                  <Card className="bg-card/50 border-border/50 shadow-lg">
                     <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
                     <CardContent className="text-foreground/80">
-                        {work.contentAnalysis.literaryDevices.map((ld, i) => (
+                        {(work.contentAnalysis?.literaryDevices || []).map((ld, i) => (
                             <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
                         ))}
                     </CardContent>
