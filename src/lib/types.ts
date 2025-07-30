@@ -39,6 +39,8 @@ export interface LiteraryWork {
   category: string;
   author: string;
   fullText: string;
+  videoUrl?: string;
+  videoEmbedId?: string;
   difficultWords: DifficultWord[];
   authorInfo: AuthorInfo;
   contentAnalysis: ContentAnalysis;

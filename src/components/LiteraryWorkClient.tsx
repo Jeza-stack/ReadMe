@@ -168,6 +168,40 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                 />
             </section>
             
+            {/* Video Section */}
+            {work.videoUrl && work.videoEmbedId && (
+                <>
+                    <Separator className="bg-border/30" />
+                    <section>
+                        <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">🎥 Watch the Historic Speech</h2>
+                        <div className="flex justify-center">
+                            <div className="w-full max-w-4xl">
+                                <div className="relative aspect-video">
+                                    <iframe 
+                                        className="absolute inset-0 w-full h-full rounded-lg shadow-lg"
+                                        src={`https://www.youtube.com/embed/${work.videoEmbedId}`}
+                                        title={`${work.title} by ${work.author}`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    />
+                                </div>
+                                <p className="text-center mt-4 text-foreground/70">
+                                    <a 
+                                        href={work.videoUrl} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="text-primary hover:text-primary/80 transition-colors underline"
+                                    >
+                                        Watch on YouTube
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </>
+            )}
+            
             <Separator className="bg-border/30" />
 
             {/* Content Analysis */}
