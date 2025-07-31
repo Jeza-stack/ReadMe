@@ -158,10 +158,19 @@ export default function A1Level() {
                         </div>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        <Button className="w-full" variant="outline">
-                          <Clock className="w-4 h-4 mr-2" />
-                          Start Learning
-                        </Button>
+                        {index === 0 ? (
+                          <Link href="/level/a1/verb-to-be">
+                            <Button className="w-full" variant="outline">
+                              <Clock className="w-4 h-4 mr-2" />
+                              Start Learning
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Button className="w-full" variant="outline" disabled>
+                            <Clock className="w-4 h-4 mr-2" />
+                            Coming Soon
+                          </Button>
+                        )}
                       </CardContent>
                     </Card>
                   ))}
