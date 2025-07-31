@@ -8,10 +8,19 @@ interface Answer {
   [key: string]: string;
 }
 
+interface QuestionResult {
+  id: string;
+  question: string;
+  userAnswer: string;
+  correctAnswer: string;
+  isCorrect: boolean;
+}
+
 export default function A1ToBeLesson() {
   const [userAnswers, setUserAnswers] = useState<Answer>({});
   const [feedback, setFeedback] = useState<string>('');
   const [showResults, setShowResults] = useState<boolean>(false);
+  const [questionResults, setQuestionResults] = useState<QuestionResult[]>([]);
 
   const correctAnswers: Answer = {
     "q1_be": "am",
@@ -23,6 +32,16 @@ export default function A1ToBeLesson() {
     "q7_be": "are"
   };
 
+  const questions = [
+    { id: 'q1_be', question: '1. I ____ happy.' },
+    { id: 'q2_be', question: '2. She ____ from Spain.' },
+    { id: 'q3_be', question: '3. They ____ students.' },
+    { id: 'q4_be', question: '4. He ____ my brother.' },
+    { id: 'q5_be', question: '5. You ____ new here.' },
+    { id: 'q6_be', question: '6. It ____ a small cat.' },
+    { id: 'q7_be', question: '7. We ____ friends.' }
+  ];
+
   const handleInputChange = (questionId: string, value: string) => {
     setUserAnswers(prev => ({
       ...prev,
@@ -33,26 +52,46 @@ export default function A1ToBeLesson() {
   const checkAnswers = () => {
     let correctCount = 0;
     const totalQuestions = Object.keys(correctAnswers).length;
+    const results: QuestionResult[] = [];
 
-    for (const id in correctAnswers) {
-      if (userAnswers[id] === correctAnswers[id]) {
+    // Analyze each question
+    questions.forEach((q) => {
+      const userAnswer = (userAnswers[q.id] || '').trim().toLowerCase();
+      const correctAnswer = correctAnswers[q.id];
+      const isCorrect = userAnswer === correctAnswer;
+      
+      if (isCorrect) {
         correctCount++;
       }
-    }
 
+      results.push({
+        id: q.id,
+        question: q.question,
+        userAnswer: userAnswer || '(no answer)',
+        correctAnswer: correctAnswer,
+        isCorrect: isCorrect
+      });
+    });
+
+    setQuestionResults(results);
     setShowResults(true);
+    
     if (correctCount === totalQuestions) {
-      setFeedback(`Excellent! You got all ${correctCount} answers correct!`);
+      setFeedback(`🎉 Excellent! You got all ${correctCount} answers correct!`);
     } else {
-      setFeedback(`You got ${correctCount} out of ${totalQuestions} correct. Keep practicing!`);
+      setFeedback(`📊 You got ${correctCount} out of ${totalQuestions} correct. Review the detailed feedback below to improve!`);
     }
   };
 
   const getInputBorderColor = (questionId: string) => {
     if (!showResults) return 'border-gray-400';
-    return userAnswers[questionId] === correctAnswers[questionId] 
-      ? 'border-green-600' 
-      : 'border-red-600';
+    const result = questionResults.find(r => r.id === questionId);
+    if (!result) return 'border-gray-400';
+    return result.isCorrect ? 'border-green-600 border-4' : 'border-red-600 border-4';
+  };
+
+  const getQuestionResult = (questionId: string) => {
+    return questionResults.find(r => r.id === questionId);
   };
 
   return (
@@ -288,44 +327,97 @@ export default function A1ToBeLesson() {
             <CardTitle className="text-2xl text-green-700 font-bold">Practice Exercise: Complete with 'am', 'is', or 'are'</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-5">
-              {[
-                { id: 'q1_be', question: '1. I ____ happy.' },
-                { id: 'q2_be', question: '2. She ____ from Spain.' },
-                { id: 'q3_be', question: '3. They ____ students.' },
-                { id: 'q4_be', question: '4. He ____ my brother.' },
-                { id: 'q5_be', question: '5. You ____ new here.' },
-                { id: 'q6_be', question: '6. It ____ a small cat.' },
-                { id: 'q7_be', question: '7. We ____ friends.' }
-              ].map((item) => (
-                <div key={item.id} className="flex items-center gap-4">
-                  <span className="min-w-[250px] text-gray-900 font-bold text-lg">{item.question}</span>
-                  <input
-                    type="text"
-                    className={`border-3 rounded-lg px-4 py-2 w-36 focus:outline-none focus:ring-3 focus:ring-blue-400 text-gray-900 font-semibold text-lg ${getInputBorderColor(item.id)}`}
-                    value={userAnswers[item.id] || ''}
-                    onChange={(e) => handleInputChange(item.id, e.target.value)}
-                    placeholder="am/is/are"
-                  />
-                </div>
-              ))}
+            <div className="space-y-6">
+              {questions.map((item) => {
+                const result = getQuestionResult(item.id);
+                return (
+                  <div key={item.id} className="space-y-2">
+                    <div className="flex items-center gap-4">
+                      <span className="min-w-[250px] text-gray-900 font-bold text-lg">{item.question}</span>
+                      <input
+                        type="text"
+                        className={`border-3 rounded-lg px-4 py-2 w-36 focus:outline-none focus:ring-3 focus:ring-blue-400 text-gray-900 font-semibold text-lg ${getInputBorderColor(item.id)}`}
+                        value={userAnswers[item.id] || ''}
+                        onChange={(e) => handleInputChange(item.id, e.target.value)}
+                        placeholder="am/is/are"
+                        disabled={showResults}
+                      />
+                      {showResults && result?.isCorrect && (
+                        <span className="text-green-700 font-bold text-lg">✓ Correct!</span>
+                      )}
+                    </div>
+                    
+                    {showResults && result && !result.isCorrect && (
+                      <div className="ml-4 p-3 bg-red-50 border-l-4 border-red-400 rounded">
+                        <div className="text-red-800 font-semibold">
+                          <span className="text-red-600">✗ Your answer:</span> <span className="font-bold">"{result.userAnswer}"</span>
+                        </div>
+                        <div className="text-green-800 font-semibold mt-1">
+                          <span className="text-green-600">✓ Correct answer:</span> <span className="font-bold text-green-700">"{result.correctAnswer}"</span>
+                        </div>
+                        <div className="text-gray-700 text-sm mt-2 italic">
+                          {item.question.replace('____', `"${result.correctAnswer}"`)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
               
-              <div className="pt-6">
-                <Button 
-                  onClick={checkAnswers}
-                  className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg font-bold"
-                >
-                  Check Answers
-                </Button>
+              <div className="pt-6 flex gap-4">
+                {!showResults ? (
+                  <Button 
+                    onClick={checkAnswers}
+                    className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg font-bold"
+                  >
+                    Check Answers
+                  </Button>
+                ) : (
+                  <Button 
+                    onClick={() => {
+                      setShowResults(false);
+                      setFeedback('');
+                      setQuestionResults([]);
+                      setUserAnswers({});
+                    }}
+                    className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-bold"
+                  >
+                    Try Again
+                  </Button>
+                )}
               </div>
               
               {feedback && (
                 <div className={`mt-6 p-4 rounded-lg text-xl font-bold ${
                   feedback.includes('Excellent') 
                     ? 'bg-green-200 text-green-800 border-2 border-green-400' 
-                    : 'bg-red-200 text-red-800 border-2 border-red-400'
+                    : 'bg-blue-200 text-blue-800 border-2 border-blue-400'
                 }`}>
                   {feedback}
+                </div>
+              )}
+
+              {showResults && questionResults.length > 0 && (
+                <div className="mt-6 p-4 bg-gray-50 rounded-lg border-2 border-gray-300">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">📋 Detailed Results Summary:</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-green-700">✓ Correct Answers ({questionResults.filter(r => r.isCorrect).length}):</h4>
+                      {questionResults.filter(r => r.isCorrect).map(result => (
+                        <div key={result.id} className="text-sm text-green-800 bg-green-100 px-3 py-1 rounded">
+                          {result.question.replace('____', `"${result.correctAnswer}"`)}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-red-700">✗ Incorrect Answers ({questionResults.filter(r => !r.isCorrect).length}):</h4>
+                      {questionResults.filter(r => !r.isCorrect).map(result => (
+                        <div key={result.id} className="text-sm text-red-800 bg-red-100 px-3 py-1 rounded">
+                          {result.question.replace('____', `"${result.correctAnswer}"`)}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
