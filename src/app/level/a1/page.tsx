@@ -8,12 +8,12 @@ import { ArrowRight, CheckCircle, BookOpen, Headphones, PenTool, MessageSquare, 
 
 export default function A1Level() {
   const grammarTopics = [
-    { topic: 'The Verb "To Be"', status: 'available', lessons: 1, href: '/level/a1/verb-to-be' },
-    { topic: 'Articles (a, an, the)', status: 'available', lessons: 1, href: '/level/a1/articles' },
-    { topic: 'Personal Pronouns', status: 'available', lessons: 1, href: '/level/a1/pronouns' },
-    { topic: 'Question Words', status: 'available', lessons: 1, href: '/level/a1/questions' },
-    { topic: 'Numbers & Basic Math', status: 'available', lessons: 1, href: '/level/a1/numbers' },
-    { topic: 'Demonstratives (this, that)', status: 'coming-soon', lessons: 1, href: null }
+    { topic: 'Present Simple (be, have, do)', status: 'available', lessons: 5 },
+    { topic: 'Articles (a, an, the)', status: 'available', lessons: 3 },
+    { topic: 'Personal Pronouns', status: 'available', lessons: 4 },
+    { topic: 'Basic Question Words', status: 'available', lessons: 3 },
+    { topic: 'Numbers 1-100', status: 'available', lessons: 2 },
+    { topic: 'Demonstratives (this, that)', status: 'available', lessons: 3 }
   ];
 
   const vocabularyThemes = [
@@ -158,8 +158,8 @@ export default function A1Level() {
                         </div>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        {item.href ? (
-                          <Link href={item.href}>
+                        {index === 0 ? (
+                          <Link href="/level/a1/verb-to-be">
                             <Button className="w-full" variant="outline">
                               <Clock className="w-4 h-4 mr-2" />
                               Start Learning
