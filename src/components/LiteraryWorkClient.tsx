@@ -119,7 +119,7 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
                         const isCorrect = option === currentQuestion.correctAnswer;
                         const isSelected = option === selectedAnswer;
                         
-                        let stateClass = "bg-secondary hover:bg-secondary/80";
+                        let stateClass = "bg-secondary text-secondary-foreground hover:bg-secondary/80";
                         if (isAnswered) {
                             if (isCorrect) stateClass = "bg-green-500/80 text-white";
                             else if (isSelected) stateClass = "bg-red-500/80 text-white";
