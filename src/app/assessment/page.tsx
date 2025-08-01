@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ArrowRight, Clock, CheckCircle, FileText, Headphones, MessageSquare, BookOpen, Award, Target } from 'lucide-react';
+import QuickAssessment from '@/components/QuickAssessment';
 
 export default function AssessmentPage() {
   const assessmentTypes = [
@@ -115,9 +116,18 @@ export default function AssessmentPage() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full">
-                  Start {assessment.type}
-                </Button>
+                {assessment.type === 'Quick Assessment' ? (
+                  <Link href="/assessment/quick">
+                    <Button className="w-full">
+                      Start {assessment.type}
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button className="w-full" disabled>
+                    Start {assessment.type}
+                    <span className="ml-2 text-xs">(Coming Soon)</span>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -334,10 +344,12 @@ export default function AssessmentPage() {
               Take the assessment now and start your personalized English learning journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="font-headline font-semibold text-lg">
-                Start Quick Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <Link href="/assessment/quick">
+                <Button size="lg" className="font-headline font-semibold text-lg w-full sm:w-auto">
+                  Start Quick Assessment
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="font-headline font-semibold text-lg">
                 View Sample Questions
               </Button>
