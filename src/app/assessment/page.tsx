@@ -350,9 +350,11 @@ export default function AssessmentPage() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="font-headline font-semibold text-lg">
-                View Sample Questions
-              </Button>
+              <Link href="/assessment/samples">
+                <Button size="lg" variant="outline" className="font-headline font-semibold text-lg w-full sm:w-auto">
+                  View Sample Questions
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>
