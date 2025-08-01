@@ -12,7 +12,7 @@ export default function A1Level() {
     { topic: 'The Verb "To Have"', status: 'available', lessons: 1, href: '/level/a1/to-have' },
     { topic: 'The Verb "To Do" (Auxiliary)', status: 'available', lessons: 1, href: '/level/a1/to-do' },
     { topic: 'Present Simple (Regular Verbs)', status: 'available', lessons: 1, href: '/level/a1/present-simple' },
-    { topic: 'Articles (a, an, the)', status: 'coming-soon', lessons: 1, href: null },
+    { topic: 'Articles (a, an, the)', status: 'available', lessons: 1, href: '/level/a1/articles' },
     { topic: 'Personal Pronouns', status: 'coming-soon', lessons: 1, href: null }
   ];
 
