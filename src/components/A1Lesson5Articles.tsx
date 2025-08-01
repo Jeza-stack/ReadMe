@@ -21,12 +21,6 @@ export default function A1Lesson5Articles() {
   const [feedback, setFeedback] = useState<string>('');
   const [showResults, setShowResults] = useState<boolean>(false);
   const [questionResults, setQuestionResults] = useState<QuestionResult[]>([]);
-  
-  // AI Sentence Checker States
-  const [userSentence, setUserSentence] = useState<string>('');
-  const [aiResponse, setAiResponse] = useState<string>('');
-  const [aiError, setAiError] = useState<string>('');
-  const [isCheckingAI, setIsCheckingAI] = useState<boolean>(false);
 
   const correctAnswers: Answer = {
     "q1_articles": "a",
@@ -87,47 +81,6 @@ export default function A1Lesson5Articles() {
       setFeedback(`🎉 Excellent! You got all ${correctCount} answers correct!`);
     } else {
       setFeedback(`📊 You got ${correctCount} out of ${totalQuestions} correct. Review the detailed feedback below to improve!`);
-    }
-  };
-
-  // AI Sentence Checking Function
-  const checkSentenceWithAI = async () => {
-    if (!userSentence.trim()) {
-      setAiError('Please type a sentence to check.');
-      setAiResponse('');
-      return;
-    }
-
-    setIsCheckingAI(true);
-    setAiError('');
-    setAiResponse('');
-
-    try {
-      // Note: In a real implementation, you'd call your backend API that handles the Gemini API
-      // For now, we'll simulate the AI response with detailed article analysis
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
-      
-      // This is a simulation - in production, replace with actual API call
-      const simulatedResponse = analyzeArticleUsage(userSentence);
-      setAiResponse(simulatedResponse);
-      
-    } catch (error) {
-      setAiError('Error checking sentence. Please try again.');
-      console.error('AI Error:', error);
-    } finally {
-      setIsCheckingAI(false);
-    }
-  };
-
-  // Simulated AI Analysis (replace with actual API in production)
-  const analyzeArticleUsage = (sentence: string): string => {
-    const lowerSentence = sentence.toLowerCase();
-    
-    // Basic article analysis simulation
-    if (lowerSentence.includes('a ') || lowerSentence.includes('an ') || lowerSentence.includes('the ')) {
-      return `✅ **Good job!** Your sentence uses articles. Here's my analysis:\n\n"${sentence}"\n\n🔍 **Article Analysis:**\n- Articles help specify nouns\n- 'A/An' for first mentions or general items\n- 'The' for specific items both speaker and listener know\n\n💡 **Tip:** Always ask "Is this specific or general?" when choosing articles.`;
-    } else {
-      return `🤔 **Analysis:** I notice your sentence doesn't use articles (a, an, the).\n\n"${sentence}"\n\n💭 **Consider:** Could you add an article to make it more natural? For example:\n- Add "a" or "an" before singular countable nouns\n- Add "the" before specific nouns\n\n📝 **Try rewriting:** "${sentence}" → Could become more specific with articles!`;
     }
   };
 
@@ -273,58 +226,6 @@ export default function A1Lesson5Articles() {
               </ul>
             </div>
           </section>
-
-          {/* AI Sentence Checker Feature */}
-          <Card className="bg-purple-50 border-purple-400 border-2 mb-8 sm:mb-10">
-            <CardHeader className="pb-3 sm:pb-4">
-              <CardTitle className="text-lg sm:text-xl lg:text-2xl text-purple-700 font-bold flex items-center gap-2">
-                ✨ AI Article Checker ✨
-              </CardTitle>
-              <p className="text-purple-600 text-sm sm:text-base">
-                Type a sentence using articles (a, an, the) and get instant AI feedback!
-              </p>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <textarea
-                  value={userSentence}
-                  onChange={(e) => setUserSentence(e.target.value)}
-                  className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 text-gray-900 text-sm sm:text-base"
-                  rows={3}
-                  placeholder="Example: I have a dog. The dog is very friendly."
-                />
-                
-                <Button 
-                  onClick={checkSentenceWithAI}
-                  disabled={isCheckingAI}
-                  className="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-base sm:text-lg font-bold flex items-center justify-center gap-2"
-                >
-                  {isCheckingAI ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Checking...
-                    </>
-                  ) : (
-                    <>
-                      ✨ Check My Sentence ✨
-                    </>
-                  )}
-                </Button>
-
-                {aiResponse && (
-                  <div className="mt-4 p-4 bg-blue-50 text-blue-800 rounded-lg border-2 border-blue-200">
-                    <div className="whitespace-pre-line text-sm sm:text-base">{aiResponse}</div>
-                  </div>
-                )}
-
-                {aiError && (
-                  <div className="mt-4 p-4 bg-red-50 text-red-800 rounded-lg border-2 border-red-200">
-                    <div className="text-sm sm:text-base">{aiError}</div>
-                  </div>
-                )}
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Practice Exercise */}
           <Card className="bg-green-100 border-green-400 border-2">
