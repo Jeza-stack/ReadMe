@@ -392,15 +392,15 @@ export default function QuickAssessment() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                    <span className="font-medium text-sm sm:text-base">Grammar Questions</span>
+                    <span className="font-medium text-sm sm:text-base text-gray-900">Grammar Questions</span>
                     <Badge variant="secondary">8 questions</Badge>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
-                    <span className="font-medium text-sm sm:text-base">Vocabulary Questions</span>
+                    <span className="font-medium text-sm sm:text-base text-gray-900">Vocabulary Questions</span>
                     <Badge variant="secondary">8 questions</Badge>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
-                    <span className="font-medium text-sm sm:text-base">Reading Comprehension</span>
+                    <span className="font-medium text-sm sm:text-base text-gray-900">Reading Comprehension</span>
                     <Badge variant="secondary">4 questions</Badge>
                   </div>
                 </div>
