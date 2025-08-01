@@ -10,9 +10,9 @@ export default function A1Level() {
   const grammarTopics = [
     { topic: 'The Verb "To Be"', status: 'available', lessons: 1, href: '/level/a1/verb-to-be' },
     { topic: 'The Verb "To Have"', status: 'available', lessons: 1, href: '/level/a1/to-have' },
+    { topic: 'The Verb "To Do" (Auxiliary)', status: 'available', lessons: 1, href: '/level/a1/to-do' },
     { topic: 'Articles (a, an, the)', status: 'coming-soon', lessons: 1, href: null },
     { topic: 'Personal Pronouns', status: 'coming-soon', lessons: 1, href: null },
-    { topic: 'Question Words', status: 'coming-soon', lessons: 1, href: null },
     { topic: 'Demonstratives (this, that)', status: 'coming-soon', lessons: 1, href: null }
   ];
 
