@@ -74,24 +74,30 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
   }, [currentWordIndex]);
 
   const getVocabularyData = () => {
-    if (theme === 'Personal Information') {
+    const themeMap = {
+      'Personal Information': 'personal-information',
+      'Family & Relationships': 'family-relationships',
+      'Colors & Basic Adjectives': 'colors-adjectives',
+      'Food & Drinks': 'food-drinks',
+      'Days, Months, Time': 'days-months-time',
+      'Basic Verbs': 'basic-verbs'
+    };
+
+    const themeKey = themeMap[theme as keyof typeof themeMap];
+    
+    if (themeKey && vocabularyData.a1[themeKey]) {
       return {
-        vocabulary: vocabularyData.a1['personal-information'].vocabulary as VocabularyWord[],
-        exercises: vocabularyData.a1['personal-information'].exercises,
-        grammarFocus: vocabularyData.a1['personal-information'].grammarFocus
-      };
-    } else if (theme === 'Family & Relationships') {
-      return {
-        vocabulary: vocabularyData.a1['family-relationships'].vocabulary as VocabularyWord[],
-        exercises: vocabularyData.a1['family-relationships'].exercises,
-        grammarFocus: vocabularyData.a1['family-relationships'].grammarFocus
+        vocabulary: vocabularyData.a1[themeKey].vocabulary as VocabularyWord[],
+        exercises: vocabularyData.a1[themeKey].exercises,
+        grammarFocus: vocabularyData.a1[themeKey].grammarFocus
       };
     }
-    // Default to family relationships
+    
+    // Default fallback
     return {
-      vocabulary: vocabularyData.a1['family-relationships'].vocabulary as VocabularyWord[],
-      exercises: vocabularyData.a1['family-relationships'].exercises,
-      grammarFocus: vocabularyData.a1['family-relationships'].grammarFocus
+      vocabulary: vocabularyData.a1['personal-information'].vocabulary as VocabularyWord[],
+      exercises: vocabularyData.a1['personal-information'].exercises,
+      grammarFocus: vocabularyData.a1['personal-information'].grammarFocus
     };
   };
 
@@ -398,12 +404,24 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
             <Card className="max-w-2xl mx-auto">
               <CardHeader>
                 <CardTitle>
-                  Grammar Focus: {grammarFocus.presentSimple ? 'Present Simple' : 'Possessive Adjectives'}
+                  Grammar Focus: {
+                    grammarFocus.presentSimple ? 'Present Simple' :
+                    grammarFocus.possessiveAdjectives ? 'Possessive Adjectives' :
+                    grammarFocus.basicAdjectives ? 'Basic Adjectives and Colors' :
+                    grammarFocus.likesDislikes ? 'Likes and Dislikes' :
+                    'Grammar Focus'
+                  }
                 </CardTitle>
                 <CardDescription>
                   {grammarFocus.presentSimple ? 
                     'Learn to use present simple to talk about yourself' :
-                    'Learn to use my, your, his, her, their with family members'
+                    grammarFocus.possessiveAdjectives ?
+                    'Learn to use my, your, his, her, their with family members' :
+                    grammarFocus.basicAdjectives ?
+                    'Learn to use basic adjectives and colors to describe objects' :
+                    grammarFocus.likesDislikes ?
+                    'Learn to express food preferences using like and don\'t like' :
+                    'Learn grammar rules for this vocabulary theme'
                   }
                 </CardDescription>
               </CardHeader>
@@ -411,17 +429,12 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
                 <div>
                   <h4 className="font-medium mb-3">Examples:</h4>
                   <div className="space-y-2">
-                    {grammarFocus.presentSimple ? 
-                      grammarFocus.presentSimple.examples.map((example, index) => (
+                    {(grammarFocus.presentSimple || grammarFocus.possessiveAdjectives || grammarFocus.basicAdjectives || grammarFocus.likesDislikes) ? 
+                      (grammarFocus.presentSimple || grammarFocus.possessiveAdjectives || grammarFocus.basicAdjectives || grammarFocus.likesDislikes).examples.map((example, index) => (
                         <div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
                           <p className="text-gray-700 dark:text-gray-300">{example}</p>
                         </div>
-                      )) :
-                      grammarFocus.possessiveAdjectives.examples.map((example, index) => (
-                        <div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
-                          <p className="text-gray-700 dark:text-gray-300">{example}</p>
-                        </div>
-                      ))
+                      )) : null
                     }
                   </div>
                 </div>
@@ -429,19 +442,13 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
                 <div>
                   <h4 className="font-medium mb-3">Rules:</h4>
                   <ul className="space-y-2">
-                    {grammarFocus.presentSimple ? 
-                      grammarFocus.presentSimple.rules.map((rule, index) => (
+                    {(grammarFocus.presentSimple || grammarFocus.possessiveAdjectives || grammarFocus.basicAdjectives || grammarFocus.likesDislikes) ? 
+                      (grammarFocus.presentSimple || grammarFocus.possessiveAdjectives || grammarFocus.basicAdjectives || grammarFocus.likesDislikes).rules.map((rule, index) => (
                         <li key={index} className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-700 dark:text-gray-300">{rule}</span>
                         </li>
-                      )) :
-                      grammarFocus.possessiveAdjectives.rules.map((rule, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 dark:text-gray-300">{rule}</span>
-                        </li>
-                      ))
+                      )) : null
                     }
                   </ul>
                 </div>

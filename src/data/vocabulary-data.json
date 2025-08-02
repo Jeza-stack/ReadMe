@@ -983,6 +983,2057 @@
         "progressTracking": true,
         "adaptiveLearning": true
       }
+    },
+    "colors-adjectives": {
+      "theme": "Colors & Basic Adjectives",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can understand and use basic color vocabulary",
+          "I can describe objects using simple adjectives",
+          "I can identify colors in everyday situations",
+          "I can use basic adjectives to describe people and things"
+        ],
+        "vocabularyRange": "15 essential colors and adjectives",
+        "grammarFocus": "Basic adjectives and color descriptions",
+        "communicationFunctions": [
+          "Describing colors",
+          "Using basic adjectives",
+          "Identifying objects by color",
+          "Describing appearance"
+        ]
+      },
+      "vocabulary": [
+        {
+          "id": 1,
+          "word": "red",
+          "translation": "vermelho",
+          "phonetic": "/red/",
+          "partOfSpeech": "adjective",
+          "definition": "The color of blood or fire",
+          "example": "The apple is red.",
+          "image": "🔴",
+          "audioUrl": "/audio/red.mp3",
+          "difficulty": "basic",
+          "category": "colors",
+          "relatedWords": ["dark red", "light red", "bright red"],
+          "usageNotes": "Used to describe objects that are red in color"
+        },
+        {
+          "id": 2,
+          "word": "blue",
+          "translation": "azul",
+          "phonetic": "/bluː/",
+          "partOfSpeech": "adjective",
+          "definition": "The color of the sky",
+          "example": "The sky is blue.",
+          "image": "🔵",
+          "audioUrl": "/audio/blue.mp3",
+          "difficulty": "basic",
+          "category": "colors",
+          "relatedWords": ["dark blue", "light blue", "navy blue"],
+          "usageNotes": "Used to describe objects that are blue in color"
+        },
+        {
+          "id": 3,
+          "word": "green",
+          "translation": "verde",
+          "phonetic": "/ɡriːn/",
+          "partOfSpeech": "adjective",
+          "definition": "The color of grass and leaves",
+          "example": "The grass is green.",
+          "image": "🟢",
+          "audioUrl": "/audio/green.mp3",
+          "difficulty": "basic",
+          "category": "colors",
+          "relatedWords": ["dark green", "light green", "forest green"],
+          "usageNotes": "Used to describe objects that are green in color"
+        },
+        {
+          "id": 4,
+          "word": "yellow",
+          "translation": "amarelo",
+          "phonetic": "/ˈjeləʊ/",
+          "partOfSpeech": "adjective",
+          "definition": "The color of the sun",
+          "example": "The banana is yellow.",
+          "image": "🟡",
+          "audioUrl": "/audio/yellow.mp3",
+          "difficulty": "basic",
+          "category": "colors",
+          "relatedWords": ["bright yellow", "light yellow", "golden yellow"],
+          "usageNotes": "Used to describe objects that are yellow in color"
+        },
+        {
+          "id": 5,
+          "word": "black",
+          "translation": "preto",
+          "phonetic": "/blæk/",
+          "partOfSpeech": "adjective",
+          "definition": "The color of night",
+          "example": "The car is black.",
+          "image": "⚫",
+          "audioUrl": "/audio/black.mp3",
+          "difficulty": "basic",
+          "category": "colors",
+          "relatedWords": ["dark", "jet black", "charcoal"],
+          "usageNotes": "Used to describe objects that are black in color"
+        },
+        {
+          "id": 6,
+          "word": "white",
+          "translation": "branco",
+          "phonetic": "/waɪt/",
+          "partOfSpeech": "adjective",
+          "definition": "The color of snow",
+          "example": "The paper is white.",
+          "image": "⚪",
+          "audioUrl": "/audio/white.mp3",
+          "difficulty": "basic",
+          "category": "colors",
+          "relatedWords": ["pure white", "off-white", "cream"],
+          "usageNotes": "Used to describe objects that are white in color"
+        },
+        {
+          "id": 7,
+          "word": "big",
+          "translation": "grande",
+          "phonetic": "/bɪɡ/",
+          "partOfSpeech": "adjective",
+          "definition": "Large in size",
+          "example": "The house is big.",
+          "image": "🏠",
+          "audioUrl": "/audio/big.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["large", "huge", "enormous"],
+          "usageNotes": "Used to describe size of objects or people"
+        },
+        {
+          "id": 8,
+          "word": "small",
+          "translation": "pequeno",
+          "phonetic": "/smɔːl/",
+          "partOfSpeech": "adjective",
+          "definition": "Little in size",
+          "example": "The cat is small.",
+          "image": "🐱",
+          "audioUrl": "/audio/small.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["little", "tiny", "mini"],
+          "usageNotes": "Used to describe size of objects or people"
+        },
+        {
+          "id": 9,
+          "word": "tall",
+          "translation": "alto",
+          "phonetic": "/tɔːl/",
+          "partOfSpeech": "adjective",
+          "definition": "High in height",
+          "example": "The man is tall.",
+          "image": "👨",
+          "audioUrl": "/audio/tall.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["high", "towering", "lofty"],
+          "usageNotes": "Used to describe height of people or objects"
+        },
+        {
+          "id": 10,
+          "word": "short",
+          "translation": "baixo",
+          "phonetic": "/ʃɔːt/",
+          "partOfSpeech": "adjective",
+          "definition": "Low in height",
+          "example": "The woman is short.",
+          "image": "👩",
+          "audioUrl": "/audio/short.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["low", "small", "petite"],
+          "usageNotes": "Used to describe height of people or objects"
+        },
+        {
+          "id": 11,
+          "word": "good",
+          "translation": "bom",
+          "phonetic": "/ɡʊd/",
+          "partOfSpeech": "adjective",
+          "definition": "Of high quality or positive",
+          "example": "The food is good.",
+          "image": "👍",
+          "audioUrl": "/audio/good.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["nice", "great", "excellent"],
+          "usageNotes": "Used to describe quality or positive characteristics"
+        },
+        {
+          "id": 12,
+          "word": "bad",
+          "translation": "ruim",
+          "phonetic": "/bæd/",
+          "partOfSpeech": "adjective",
+          "definition": "Of low quality or negative",
+          "example": "The weather is bad.",
+          "image": "👎",
+          "audioUrl": "/audio/bad.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["poor", "terrible", "awful"],
+          "usageNotes": "Used to describe quality or negative characteristics"
+        },
+        {
+          "id": 13,
+          "word": "new",
+          "translation": "novo",
+          "phonetic": "/njuː/",
+          "partOfSpeech": "adjective",
+          "definition": "Recently made or acquired",
+          "example": "I have a new car.",
+          "image": "🆕",
+          "audioUrl": "/audio/new.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["fresh", "recent", "modern"],
+          "usageNotes": "Used to describe recently acquired or made items"
+        },
+        {
+          "id": 14,
+          "word": "old",
+          "translation": "velho",
+          "phonetic": "/əʊld/",
+          "partOfSpeech": "adjective",
+          "definition": "Having existed for a long time",
+          "example": "The book is old.",
+          "image": "📚",
+          "audioUrl": "/audio/old.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["aged", "ancient", "vintage"],
+          "usageNotes": "Used to describe items that have existed for a long time"
+        },
+        {
+          "id": 15,
+          "word": "beautiful",
+          "translation": "bonito",
+          "phonetic": "/ˈbjuːtɪfʊl/",
+          "partOfSpeech": "adjective",
+          "definition": "Pleasant to look at",
+          "example": "The flower is beautiful.",
+          "image": "🌸",
+          "audioUrl": "/audio/beautiful.mp3",
+          "difficulty": "basic",
+          "category": "adjectives",
+          "relatedWords": ["pretty", "lovely", "gorgeous"],
+          "usageNotes": "Used to describe attractive appearance"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "matching",
+          "title": "Match Colors and Adjectives",
+          "description": "Match the color or adjective with its definition",
+          "items": [
+            {
+              "word": "red",
+              "definition": "The color of blood or fire",
+              "correct": true
+            },
+            {
+              "word": "big",
+              "definition": "Large in size",
+              "correct": true
+            },
+            {
+              "word": "beautiful",
+              "definition": "Pleasant to look at",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "type": "fill-in-blank",
+          "title": "Complete Color Descriptions",
+          "description": "Fill in the blanks with the correct color or adjective",
+          "items": [
+            {
+              "sentence": "The sky is ___.",
+              "correctAnswer": "blue",
+              "hint": "Color of the sky"
+            },
+            {
+              "sentence": "The house is ___.",
+              "correctAnswer": "big",
+              "hint": "Large in size"
+            },
+            {
+              "sentence": "The flower is ___.",
+              "correctAnswer": "beautiful",
+              "hint": "Pleasant to look at"
+            }
+          ]
+        },
+        {
+          "type": "conversation",
+          "title": "Color and Adjective Conversation",
+          "description": "Practice describing objects using colors and adjectives",
+          "scenarios": [
+            {
+              "question": "What color is your car?",
+              "sampleAnswer": "My car is red."
+            },
+            {
+              "question": "How tall is your friend?",
+              "sampleAnswer": "My friend is tall."
+            },
+            {
+              "question": "Is your house big or small?",
+              "sampleAnswer": "My house is big."
+            },
+            {
+              "question": "What do you think of this picture?",
+              "sampleAnswer": "This picture is beautiful."
+            }
+          ]
+        }
+      ],
+      "grammarFocus": {
+        "basicAdjectives": {
+          "title": "Basic Adjectives and Colors",
+          "description": "Learn to use basic adjectives and colors to describe objects",
+          "examples": [
+            "The car is red.",
+            "The house is big.",
+            "The man is tall.",
+            "The food is good.",
+            "The flower is beautiful."
+          ],
+          "rules": [
+            "Use adjectives after 'is' to describe objects",
+            "Colors are adjectives that describe appearance",
+            "Size adjectives describe how big or small something is",
+            "Quality adjectives describe how good or bad something is",
+            "Adjectives come after the verb 'to be'"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
+    "food-drinks": {
+      "theme": "Food & Drinks",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can understand and use basic food and drink vocabulary",
+          "I can order food and drinks in simple situations",
+          "I can describe what I like and don't like to eat",
+          "I can ask for basic food items"
+        ],
+        "vocabularyRange": "30 essential food and drink words",
+        "grammarFocus": "Likes and dislikes (I like, I don't like)",
+        "communicationFunctions": [
+          "Ordering food and drinks",
+          "Expressing food preferences",
+          "Describing basic meals",
+          "Asking for food items"
+        ]
+      },
+      "vocabulary": [
+        {
+          "id": 1,
+          "word": "bread",
+          "translation": "pão",
+          "phonetic": "/bred/",
+          "partOfSpeech": "noun",
+          "definition": "A food made from flour and water",
+          "example": "I eat bread for breakfast.",
+          "image": "🍞",
+          "audioUrl": "/audio/bread.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["toast", "sandwich", "roll"],
+          "usageNotes": "Used for breakfast, sandwiches, and meals"
+        },
+        {
+          "id": 2,
+          "word": "rice",
+          "translation": "arroz",
+          "phonetic": "/raɪs/",
+          "partOfSpeech": "noun",
+          "definition": "A grain used as food",
+          "example": "I like rice with chicken.",
+          "image": "🍚",
+          "audioUrl": "/audio/rice.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["white rice", "brown rice", "fried rice"],
+          "usageNotes": "Common staple food in many cultures"
+        },
+        {
+          "id": 3,
+          "word": "meat",
+          "translation": "carne",
+          "phonetic": "/miːt/",
+          "partOfSpeech": "noun",
+          "definition": "Animal flesh used as food",
+          "example": "I don't eat meat.",
+          "image": "🥩",
+          "audioUrl": "/audio/meat.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["beef", "chicken", "pork"],
+          "usageNotes": "Includes beef, chicken, pork, and other animal proteins"
+        },
+        {
+          "id": 4,
+          "word": "fish",
+          "translation": "peixe",
+          "phonetic": "/fɪʃ/",
+          "partOfSpeech": "noun",
+          "definition": "Sea animal used as food",
+          "example": "I like fish.",
+          "image": "🐟",
+          "audioUrl": "/audio/fish.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["salmon", "tuna", "cod"],
+          "usageNotes": "Healthy protein source from the sea"
+        },
+        {
+          "id": 5,
+          "word": "chicken",
+          "translation": "frango",
+          "phonetic": "/ˈtʃɪkɪn/",
+          "partOfSpeech": "noun",
+          "definition": "Bird meat used as food",
+          "example": "I eat chicken for dinner.",
+          "image": "🍗",
+          "audioUrl": "/audio/chicken.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["breast", "leg", "wing"],
+          "usageNotes": "Popular and versatile meat option"
+        },
+        {
+          "id": 6,
+          "word": "egg",
+          "translation": "ovo",
+          "phonetic": "/eɡ/",
+          "partOfSpeech": "noun",
+          "definition": "Bird's egg used as food",
+          "example": "I eat eggs for breakfast.",
+          "image": "🥚",
+          "audioUrl": "/audio/egg.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["boiled", "fried", "scrambled"],
+          "usageNotes": "Common breakfast food and cooking ingredient"
+        },
+        {
+          "id": 7,
+          "word": "milk",
+          "translation": "leite",
+          "phonetic": "/mɪlk/",
+          "partOfSpeech": "noun",
+          "definition": "White liquid from cows",
+          "example": "I drink milk every day.",
+          "image": "🥛",
+          "audioUrl": "/audio/milk.mp3",
+          "difficulty": "basic",
+          "category": "drinks",
+          "relatedWords": ["chocolate milk", "skim milk", "whole milk"],
+          "usageNotes": "Common breakfast drink and cooking ingredient"
+        },
+        {
+          "id": 8,
+          "word": "water",
+          "translation": "água",
+          "phonetic": "/ˈwɔːtər/",
+          "partOfSpeech": "noun",
+          "definition": "Clear liquid for drinking",
+          "example": "I drink water every day.",
+          "image": "💧",
+          "audioUrl": "/audio/water.mp3",
+          "difficulty": "basic",
+          "category": "drinks",
+          "relatedWords": ["hot water", "cold water", "mineral water"],
+          "usageNotes": "Essential for life, drink daily"
+        },
+        {
+          "id": 9,
+          "word": "coffee",
+          "translation": "café",
+          "phonetic": "/ˈkɒfi/",
+          "partOfSpeech": "noun",
+          "definition": "Hot drink made from coffee beans",
+          "example": "I drink coffee in the morning.",
+          "image": "☕",
+          "audioUrl": "/audio/coffee.mp3",
+          "difficulty": "basic",
+          "category": "drinks",
+          "relatedWords": ["black coffee", "milk coffee", "espresso"],
+          "usageNotes": "Popular morning drink, can be hot or cold"
+        },
+        {
+          "id": 10,
+          "word": "tea",
+          "translation": "chá",
+          "phonetic": "/tiː/",
+          "partOfSpeech": "noun",
+          "definition": "Hot drink made from tea leaves",
+          "example": "I like green tea.",
+          "image": "🫖",
+          "audioUrl": "/audio/tea.mp3",
+          "difficulty": "basic",
+          "category": "drinks",
+          "relatedWords": ["green tea", "black tea", "herbal tea"],
+          "usageNotes": "Popular drink, can be hot or cold"
+        },
+        {
+          "id": 11,
+          "word": "apple",
+          "translation": "maçã",
+          "phonetic": "/ˈæpl/",
+          "partOfSpeech": "noun",
+          "definition": "Round fruit with red or green skin",
+          "example": "I eat an apple every day.",
+          "image": "🍎",
+          "audioUrl": "/audio/apple.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["red apple", "green apple", "apple juice"],
+          "usageNotes": "Common fruit, good for health"
+        },
+        {
+          "id": 12,
+          "word": "banana",
+          "translation": "banana",
+          "phonetic": "/bəˈnɑːnə/",
+          "partOfSpeech": "noun",
+          "definition": "Yellow curved fruit",
+          "example": "I like bananas.",
+          "image": "🍌",
+          "audioUrl": "/audio/banana.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["ripe banana", "green banana", "banana bread"],
+          "usageNotes": "Popular fruit, good for energy"
+        },
+        {
+          "id": 13,
+          "word": "orange",
+          "translation": "laranja",
+          "phonetic": "/ˈɒrɪndʒ/",
+          "partOfSpeech": "noun",
+          "definition": "Round orange fruit",
+          "example": "I eat an orange for vitamin C.",
+          "image": "🍊",
+          "audioUrl": "/audio/orange.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["orange juice", "mandarin", "tangerine"],
+          "usageNotes": "Good source of vitamin C"
+        },
+        {
+          "id": 14,
+          "word": "tomato",
+          "translation": "tomate",
+          "phonetic": "/təˈmɑːtəʊ/",
+          "partOfSpeech": "noun",
+          "definition": "Red round vegetable",
+          "example": "I use tomatoes in my salad.",
+          "image": "🍅",
+          "audioUrl": "/audio/tomato.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["cherry tomato", "tomato sauce", "ketchup"],
+          "usageNotes": "Used in salads, sauces, and cooking"
+        },
+        {
+          "id": 15,
+          "word": "potato",
+          "translation": "batata",
+          "phonetic": "/pəˈteɪtəʊ/",
+          "partOfSpeech": "noun",
+          "definition": "Brown vegetable that grows underground",
+          "example": "I like mashed potatoes.",
+          "image": "🥔",
+          "audioUrl": "/audio/potato.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["french fries", "baked potato", "potato chips"],
+          "usageNotes": "Versatile vegetable, can be cooked many ways"
+        },
+        {
+          "id": 16,
+          "word": "carrot",
+          "translation": "cenoura",
+          "phonetic": "/ˈkærət/",
+          "partOfSpeech": "noun",
+          "definition": "Orange vegetable that grows underground",
+          "example": "I eat carrots for my eyes.",
+          "image": "🥕",
+          "audioUrl": "/audio/carrot.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["baby carrot", "carrot juice", "carrot cake"],
+          "usageNotes": "Good for eyesight, can be eaten raw or cooked"
+        },
+        {
+          "id": 17,
+          "word": "onion",
+          "translation": "cebola",
+          "phonetic": "/ˈʌnjən/",
+          "partOfSpeech": "noun",
+          "definition": "Round vegetable with layers",
+          "example": "I use onions in my cooking.",
+          "image": "🧅",
+          "audioUrl": "/audio/onion.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["red onion", "white onion", "green onion"],
+          "usageNotes": "Common cooking ingredient, adds flavor"
+        },
+        {
+          "id": 18,
+          "word": "cheese",
+          "translation": "queijo",
+          "phonetic": "/tʃiːz/",
+          "partOfSpeech": "noun",
+          "definition": "Dairy product made from milk",
+          "example": "I like cheese on my pizza.",
+          "image": "🧀",
+          "audioUrl": "/audio/cheese.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["cheddar", "mozzarella", "parmesan"],
+          "usageNotes": "Used in sandwiches, pizza, and cooking"
+        },
+        {
+          "id": 19,
+          "word": "butter",
+          "translation": "manteiga",
+          "phonetic": "/ˈbʌtər/",
+          "partOfSpeech": "noun",
+          "definition": "Fat made from cream",
+          "example": "I use butter on my bread.",
+          "image": "🧈",
+          "audioUrl": "/audio/butter.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["margarine", "olive oil", "spread"],
+          "usageNotes": "Used for cooking and spreading on bread"
+        },
+        {
+          "id": 20,
+          "word": "sugar",
+          "translation": "açúcar",
+          "phonetic": "/ˈʃʊɡər/",
+          "partOfSpeech": "noun",
+          "definition": "Sweet white substance",
+          "example": "I put sugar in my coffee.",
+          "image": "🍯",
+          "audioUrl": "/audio/sugar.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["white sugar", "brown sugar", "honey"],
+          "usageNotes": "Used to sweeten food and drinks"
+        },
+        {
+          "id": 21,
+          "word": "salt",
+          "translation": "sal",
+          "phonetic": "/sɔːlt/",
+          "partOfSpeech": "noun",
+          "definition": "White substance that makes food taste better",
+          "example": "I add salt to my food.",
+          "image": "🧂",
+          "audioUrl": "/audio/salt.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["sea salt", "table salt", "seasoning"],
+          "usageNotes": "Used to flavor food, don't use too much"
+        },
+        {
+          "id": 22,
+          "word": "pizza",
+          "translation": "pizza",
+          "phonetic": "/ˈpiːtsə/",
+          "partOfSpeech": "noun",
+          "definition": "Round food with cheese and toppings",
+          "example": "I like pizza.",
+          "image": "🍕",
+          "audioUrl": "/audio/pizza.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["pepperoni", "margherita", "cheese pizza"],
+          "usageNotes": "Popular fast food, many varieties"
+        },
+        {
+          "id": 23,
+          "word": "hamburger",
+          "translation": "hambúrguer",
+          "phonetic": "/ˈhæmbɜːɡər/",
+          "partOfSpeech": "noun",
+          "definition": "Meat patty in a bun",
+          "example": "I eat hamburgers at the restaurant.",
+          "image": "🍔",
+          "audioUrl": "/audio/hamburger.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["cheeseburger", "beef burger", "chicken burger"],
+          "usageNotes": "Popular fast food, can have different toppings"
+        },
+        {
+          "id": 24,
+          "word": "salad",
+          "translation": "salada",
+          "phonetic": "/ˈsæləd/",
+          "partOfSpeech": "noun",
+          "definition": "Mix of vegetables",
+          "example": "I eat salad for lunch.",
+          "image": "🥗",
+          "audioUrl": "/audio/salad.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["green salad", "fruit salad", "caesar salad"],
+          "usageNotes": "Healthy food, good for diet"
+        },
+        {
+          "id": 25,
+          "word": "soup",
+          "translation": "sopa",
+          "phonetic": "/suːp/",
+          "partOfSpeech": "noun",
+          "definition": "Hot liquid food",
+          "example": "I eat soup when I'm sick.",
+          "image": "🍲",
+          "audioUrl": "/audio/soup.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["chicken soup", "vegetable soup", "tomato soup"],
+          "usageNotes": "Good when sick, many varieties"
+        },
+        {
+          "id": 26,
+          "word": "cake",
+          "translation": "bolo",
+          "phonetic": "/keɪk/",
+          "partOfSpeech": "noun",
+          "definition": "Sweet baked food",
+          "example": "I eat cake on my birthday.",
+          "image": "🎂",
+          "audioUrl": "/audio/cake.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["birthday cake", "chocolate cake", "wedding cake"],
+          "usageNotes": "Popular dessert, especially for celebrations"
+        },
+        {
+          "id": 27,
+          "word": "ice cream",
+          "translation": "sorvete",
+          "phonetic": "/aɪs kriːm/",
+          "partOfSpeech": "noun",
+          "definition": "Cold sweet dessert",
+          "example": "I like chocolate ice cream.",
+          "image": "🍦",
+          "audioUrl": "/audio/ice-cream.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["vanilla", "strawberry", "chocolate"],
+          "usageNotes": "Popular dessert, many flavors"
+        },
+        {
+          "id": 28,
+          "word": "chocolate",
+          "translation": "chocolate",
+          "phonetic": "/ˈtʃɒklət/",
+          "partOfSpeech": "noun",
+          "definition": "Sweet brown food made from cocoa",
+          "example": "I like dark chocolate.",
+          "image": "🍫",
+          "audioUrl": "/audio/chocolate.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["dark chocolate", "milk chocolate", "white chocolate"],
+          "usageNotes": "Popular sweet, many varieties"
+        },
+        {
+          "id": 29,
+          "word": "wine",
+          "translation": "vinho",
+          "phonetic": "/waɪn/",
+          "partOfSpeech": "noun",
+          "definition": "Alcoholic drink made from grapes",
+          "example": "I drink wine with dinner.",
+          "image": "🍷",
+          "audioUrl": "/audio/wine.mp3",
+          "difficulty": "basic",
+          "category": "drinks",
+          "relatedWords": ["red wine", "white wine", "rose wine"],
+          "usageNotes": "Alcoholic drink, for adults only"
+        },
+        {
+          "id": 30,
+          "word": "beer",
+          "translation": "cerveja",
+          "phonetic": "/bɪər/",
+          "partOfSpeech": "noun",
+          "definition": "Alcoholic drink made from grains",
+          "example": "I drink beer with friends.",
+          "image": "🍺",
+          "audioUrl": "/audio/beer.mp3",
+          "difficulty": "basic",
+          "category": "drinks",
+          "relatedWords": ["lager", "ale", "stout"],
+          "usageNotes": "Alcoholic drink, for adults only"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "matching",
+          "title": "Match Food and Drinks",
+          "description": "Match the food or drink with its definition",
+          "items": [
+            {
+              "word": "bread",
+              "definition": "A food made from flour and water",
+              "correct": true
+            },
+            {
+              "word": "milk",
+              "definition": "White liquid from cows",
+              "correct": true
+            },
+            {
+              "word": "apple",
+              "definition": "Round fruit with red or green skin",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "type": "fill-in-blank",
+          "title": "Complete Food Sentences",
+          "description": "Fill in the blanks with the correct food or drink vocabulary",
+          "items": [
+            {
+              "sentence": "I eat ___ for breakfast.",
+              "correctAnswer": "bread",
+              "hint": "Made from flour and water"
+            },
+            {
+              "sentence": "I drink ___ every day.",
+              "correctAnswer": "water",
+              "hint": "Clear liquid for drinking"
+            },
+            {
+              "sentence": "I like ___ ice cream.",
+              "correctAnswer": "chocolate",
+              "hint": "Sweet brown food"
+            }
+          ]
+        },
+        {
+          "type": "conversation",
+          "title": "Food and Drink Conversation",
+          "description": "Practice talking about food preferences and ordering",
+          "scenarios": [
+            {
+              "question": "What do you like to eat for breakfast?",
+              "sampleAnswer": "I like to eat bread and eggs for breakfast."
+            },
+            {
+              "question": "What's your favorite drink?",
+              "sampleAnswer": "My favorite drink is coffee."
+            },
+            {
+              "question": "Do you like vegetables?",
+              "sampleAnswer": "Yes, I like carrots and tomatoes."
+            },
+            {
+              "question": "What do you eat for dinner?",
+              "sampleAnswer": "I eat rice and chicken for dinner."
+            }
+          ]
+        }
+      ],
+      "grammarFocus": {
+        "likesDislikes": {
+          "title": "Likes and Dislikes",
+          "description": "Learn to express food preferences using like and don't like",
+          "examples": [
+            "I like pizza.",
+            "I don't like fish.",
+            "I like coffee.",
+            "I don't like tea.",
+            "I like chocolate ice cream."
+          ],
+          "rules": [
+            "Use 'I like' to express positive preferences",
+            "Use 'I don't like' to express negative preferences",
+            "Add 's' to like when talking about he/she/it",
+            "Use 'Do you like?' to ask about preferences",
+            "Use 'What do you like?' to ask for preferences"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
+    "days-months-time": {
+      "theme": "Days, Months, Time",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can understand and use basic time vocabulary",
+          "I can talk about days of the week and months",
+          "I can tell the time in simple situations",
+          "I can schedule basic appointments"
+        ],
+        "vocabularyRange": "20 essential time-related words",
+        "grammarFocus": "Present simple for schedules and routines",
+        "communicationFunctions": [
+          "Telling time",
+          "Talking about days and months",
+          "Scheduling activities",
+          "Describing routines"
+        ]
+      },
+      "vocabulary": [
+        {
+          "id": 1,
+          "word": "Monday",
+          "translation": "segunda-feira",
+          "phonetic": "/ˈmʌndeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The first day of the working week",
+          "example": "I go to work on Monday.",
+          "image": "📅",
+          "audioUrl": "/audio/monday.mp3",
+          "difficulty": "basic",
+          "category": "days",
+          "relatedWords": ["Mon", "weekday", "workday"],
+          "usageNotes": "First day of the week in many countries"
+        },
+        {
+          "id": 2,
+          "word": "Tuesday",
+          "translation": "terça-feira",
+          "phonetic": "/ˈtjuːzdeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The second day of the week",
+          "example": "I have a meeting on Tuesday.",
+          "image": "📅",
+          "audioUrl": "/audio/tuesday.mp3",
+          "difficulty": "basic",
+          "category": "days",
+          "relatedWords": ["Tue", "weekday", "workday"],
+          "usageNotes": "Second day of the working week"
+        },
+        {
+          "id": 3,
+          "word": "Wednesday",
+          "translation": "quarta-feira",
+          "phonetic": "/ˈwenzdeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The third day of the week",
+          "example": "I go to the gym on Wednesday.",
+          "image": "📅",
+          "audioUrl": "/audio/wednesday.mp3",
+          "difficulty": "basic",
+          "category": "days",
+          "relatedWords": ["Wed", "weekday", "workday"],
+          "usageNotes": "Middle of the working week"
+        },
+        {
+          "id": 4,
+          "word": "Thursday",
+          "translation": "quinta-feira",
+          "phonetic": "/ˈθɜːzdeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The fourth day of the week",
+          "example": "I have class on Thursday.",
+          "image": "📅",
+          "audioUrl": "/audio/thursday.mp3",
+          "difficulty": "basic",
+          "category": "days",
+          "relatedWords": ["Thu", "weekday", "workday"],
+          "usageNotes": "Fourth day of the working week"
+        },
+        {
+          "id": 5,
+          "word": "Friday",
+          "translation": "sexta-feira",
+          "phonetic": "/ˈfraɪdeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The fifth day of the week",
+          "example": "I finish work on Friday.",
+          "image": "📅",
+          "audioUrl": "/audio/friday.mp3",
+          "difficulty": "basic",
+          "category": "days",
+          "relatedWords": ["Fri", "weekday", "workday"],
+          "usageNotes": "Last day of the working week"
+        },
+        {
+          "id": 6,
+          "word": "Saturday",
+          "translation": "sábado",
+          "phonetic": "/ˈsætədeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The sixth day of the week",
+          "example": "I sleep late on Saturday.",
+          "image": "📅",
+          "audioUrl": "/audio/saturday.mp3",
+          "difficulty": "basic",
+          "category": "days",
+          "relatedWords": ["Sat", "weekend", "day off"],
+          "usageNotes": "First day of the weekend"
+        },
+        {
+          "id": 7,
+          "word": "Sunday",
+          "translation": "domingo",
+          "phonetic": "/ˈsʌndeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The seventh day of the week",
+          "example": "I rest on Sunday.",
+          "image": "📅",
+          "audioUrl": "/audio/sunday.mp3",
+          "difficulty": "basic",
+          "category": "days",
+          "relatedWords": ["Sun", "weekend", "day off"],
+          "usageNotes": "Last day of the week, day of rest"
+        },
+        {
+          "id": 8,
+          "word": "January",
+          "translation": "janeiro",
+          "phonetic": "/ˈdʒænjueri/",
+          "partOfSpeech": "noun",
+          "definition": "The first month of the year",
+          "example": "My birthday is in January.",
+          "image": "❄️",
+          "audioUrl": "/audio/january.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Jan", "winter", "new year"],
+          "usageNotes": "First month, winter in northern hemisphere"
+        },
+        {
+          "id": 9,
+          "word": "February",
+          "translation": "fevereiro",
+          "phonetic": "/ˈfebrueri/",
+          "partOfSpeech": "noun",
+          "definition": "The second month of the year",
+          "example": "Valentine's Day is in February.",
+          "image": "💝",
+          "audioUrl": "/audio/february.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Feb", "winter", "valentine"],
+          "usageNotes": "Shortest month, winter in northern hemisphere"
+        },
+        {
+          "id": 10,
+          "word": "March",
+          "translation": "março",
+          "phonetic": "/mɑːtʃ/",
+          "partOfSpeech": "noun",
+          "definition": "The third month of the year",
+          "example": "Spring begins in March.",
+          "image": "🌸",
+          "audioUrl": "/audio/march.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Mar", "spring", "equinox"],
+          "usageNotes": "Spring begins in northern hemisphere"
+        },
+        {
+          "id": 11,
+          "word": "April",
+          "translation": "abril",
+          "phonetic": "/ˈeɪprəl/",
+          "partOfSpeech": "noun",
+          "definition": "The fourth month of the year",
+          "example": "It rains a lot in April.",
+          "image": "🌧️",
+          "audioUrl": "/audio/april.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Apr", "spring", "rain"],
+          "usageNotes": "Spring month, known for rain"
+        },
+        {
+          "id": 12,
+          "word": "May",
+          "translation": "maio",
+          "phonetic": "/meɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The fifth month of the year",
+          "example": "Flowers bloom in May.",
+          "image": "🌺",
+          "audioUrl": "/audio/may.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["spring", "flowers", "bloom"],
+          "usageNotes": "Late spring, flowers blooming"
+        },
+        {
+          "id": 13,
+          "word": "June",
+          "translation": "junho",
+          "phonetic": "/dʒuːn/",
+          "partOfSpeech": "noun",
+          "definition": "The sixth month of the year",
+          "example": "Summer begins in June.",
+          "image": "☀️",
+          "audioUrl": "/audio/june.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Jun", "summer", "solstice"],
+          "usageNotes": "Summer begins in northern hemisphere"
+        },
+        {
+          "id": 14,
+          "word": "July",
+          "translation": "julho",
+          "phonetic": "/dʒuˈlaɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The seventh month of the year",
+          "example": "It's hot in July.",
+          "image": "🔥",
+          "audioUrl": "/audio/july.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Jul", "summer", "hot"],
+          "usageNotes": "Summer month, often very hot"
+        },
+        {
+          "id": 15,
+          "word": "August",
+          "translation": "agosto",
+          "phonetic": "/ˈɔːɡəst/",
+          "partOfSpeech": "noun",
+          "definition": "The eighth month of the year",
+          "example": "I go on vacation in August.",
+          "image": "🏖️",
+          "audioUrl": "/audio/august.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Aug", "summer", "vacation"],
+          "usageNotes": "Summer month, popular for vacations"
+        },
+        {
+          "id": 16,
+          "word": "September",
+          "translation": "setembro",
+          "phonetic": "/sepˈtembər/",
+          "partOfSpeech": "noun",
+          "definition": "The ninth month of the year",
+          "example": "School starts in September.",
+          "image": "📚",
+          "audioUrl": "/audio/september.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Sep", "autumn", "school"],
+          "usageNotes": "Autumn begins, school starts"
+        },
+        {
+          "id": 17,
+          "word": "October",
+          "translation": "outubro",
+          "phonetic": "/ɒkˈtəʊbər/",
+          "partOfSpeech": "noun",
+          "definition": "The tenth month of the year",
+          "example": "Leaves fall in October.",
+          "image": "🍂",
+          "audioUrl": "/audio/october.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Oct", "autumn", "fall"],
+          "usageNotes": "Autumn month, leaves changing color"
+        },
+        {
+          "id": 18,
+          "word": "November",
+          "translation": "novembro",
+          "phonetic": "/nəʊˈvembər/",
+          "partOfSpeech": "noun",
+          "definition": "The eleventh month of the year",
+          "example": "It gets cold in November.",
+          "image": "🍁",
+          "audioUrl": "/audio/november.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Nov", "autumn", "cold"],
+          "usageNotes": "Late autumn, getting colder"
+        },
+        {
+          "id": 19,
+          "word": "December",
+          "translation": "dezembro",
+          "phonetic": "/dɪˈsembər/",
+          "partOfSpeech": "noun",
+          "definition": "The twelfth month of the year",
+          "example": "Christmas is in December.",
+          "image": "🎄",
+          "audioUrl": "/audio/december.mp3",
+          "difficulty": "basic",
+          "category": "months",
+          "relatedWords": ["Dec", "winter", "christmas"],
+          "usageNotes": "Winter begins, holiday season"
+        },
+        {
+          "id": 20,
+          "word": "time",
+          "translation": "tempo",
+          "phonetic": "/taɪm/",
+          "partOfSpeech": "noun",
+          "definition": "The measurement of hours, minutes, and seconds",
+          "example": "What time is it?",
+          "image": "⏰",
+          "audioUrl": "/audio/time.mp3",
+          "difficulty": "basic",
+          "category": "time",
+          "relatedWords": ["clock", "hour", "minute"],
+          "usageNotes": "Used to ask about or tell the time"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "matching",
+          "title": "Match Days and Months",
+          "description": "Match the day or month with its definition",
+          "items": [
+            {
+              "word": "Monday",
+              "definition": "The first day of the working week",
+              "correct": true
+            },
+            {
+              "word": "January",
+              "definition": "The first month of the year",
+              "correct": true
+            },
+            {
+              "word": "time",
+              "definition": "The measurement of hours, minutes, and seconds",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "type": "fill-in-blank",
+          "title": "Complete Time Sentences",
+          "description": "Fill in the blanks with the correct time vocabulary",
+          "items": [
+            {
+              "sentence": "I go to work on ___.",
+              "correctAnswer": "Monday",
+              "hint": "First day of the working week"
+            },
+            {
+              "sentence": "My birthday is in ___.",
+              "correctAnswer": "January",
+              "hint": "First month of the year"
+            },
+            {
+              "sentence": "What ___ is it?",
+              "correctAnswer": "time",
+              "hint": "Measurement of hours and minutes"
+            }
+          ]
+        },
+        {
+          "type": "conversation",
+          "title": "Time and Schedule Conversation",
+          "description": "Practice talking about days, months, and schedules",
+          "scenarios": [
+            {
+              "question": "What day is it today?",
+              "sampleAnswer": "Today is Monday."
+            },
+            {
+              "question": "What month is your birthday?",
+              "sampleAnswer": "My birthday is in January."
+            },
+            {
+              "question": "What time do you wake up?",
+              "sampleAnswer": "I wake up at 7 o'clock."
+            },
+            {
+              "question": "What do you do on weekends?",
+              "sampleAnswer": "I rest on Saturday and Sunday."
+            }
+          ]
+        }
+      ],
+      "grammarFocus": {
+        "presentSimple": {
+          "title": "Present Simple for Schedules",
+          "description": "Learn to use present simple to talk about routines and schedules",
+          "examples": [
+            "I work on Monday.",
+            "School starts in September.",
+            "I wake up at 7 o'clock.",
+            "I go to bed at 10 o'clock.",
+            "I have lunch at 12 o'clock."
+          ],
+          "rules": [
+            "Use present simple for regular routines",
+            "Use 'on' with days of the week",
+            "Use 'in' with months",
+            "Use 'at' with specific times",
+            "Add 's' to verbs with he/she/it"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
+    "basic-verbs": {
+      "theme": "Basic Verbs",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can understand and use basic action verbs",
+          "I can describe what I do in daily life",
+          "I can talk about simple actions and activities",
+          "I can use present simple for routines"
+        ],
+        "vocabularyRange": "40 essential action verbs",
+        "grammarFocus": "Present simple for daily routines and actions",
+        "communicationFunctions": [
+          "Describing daily activities",
+          "Talking about actions",
+          "Expressing routines",
+          "Describing what people do"
+        ]
+      },
+      "vocabulary": [
+        {
+          "id": 1,
+          "word": "go",
+          "translation": "ir",
+          "phonetic": "/ɡəʊ/",
+          "partOfSpeech": "verb",
+          "definition": "To move from one place to another",
+          "example": "I go to work every day.",
+          "image": "🚶",
+          "audioUrl": "/audio/go.mp3",
+          "difficulty": "basic",
+          "category": "movement",
+          "relatedWords": ["walk", "travel", "move"],
+          "usageNotes": "Most common verb for movement"
+        },
+        {
+          "id": 2,
+          "word": "come",
+          "translation": "vir",
+          "phonetic": "/kʌm/",
+          "partOfSpeech": "verb",
+          "definition": "To move toward the speaker",
+          "example": "Come here, please.",
+          "image": "👋",
+          "audioUrl": "/audio/come.mp3",
+          "difficulty": "basic",
+          "category": "movement",
+          "relatedWords": ["arrive", "approach", "reach"],
+          "usageNotes": "Used when moving toward the speaker"
+        },
+        {
+          "id": 3,
+          "word": "walk",
+          "translation": "andar",
+          "phonetic": "/wɔːk/",
+          "partOfSpeech": "verb",
+          "definition": "To move on foot",
+          "example": "I walk to school.",
+          "image": "🚶‍♂️",
+          "audioUrl": "/audio/walk.mp3",
+          "difficulty": "basic",
+          "category": "movement",
+          "relatedWords": ["stroll", "hike", "step"],
+          "usageNotes": "Moving on foot, slower than running"
+        },
+        {
+          "id": 4,
+          "word": "run",
+          "translation": "correr",
+          "phonetic": "/rʌn/",
+          "partOfSpeech": "verb",
+          "definition": "To move quickly on foot",
+          "example": "I run in the park.",
+          "image": "🏃",
+          "audioUrl": "/audio/run.mp3",
+          "difficulty": "basic",
+          "category": "movement",
+          "relatedWords": ["sprint", "jog", "race"],
+          "usageNotes": "Fast movement on foot"
+        },
+        {
+          "id": 5,
+          "word": "sit",
+          "translation": "sentar",
+          "phonetic": "/sɪt/",
+          "partOfSpeech": "verb",
+          "definition": "To rest on your bottom",
+          "example": "I sit on the chair.",
+          "image": "🪑",
+          "audioUrl": "/audio/sit.mp3",
+          "difficulty": "basic",
+          "category": "position",
+          "relatedWords": ["rest", "relax", "settle"],
+          "usageNotes": "Resting position on a surface"
+        },
+        {
+          "id": 6,
+          "word": "stand",
+          "translation": "ficar em pé",
+          "phonetic": "/stænd/",
+          "partOfSpeech": "verb",
+          "definition": "To be on your feet",
+          "example": "I stand in line.",
+          "image": "👤",
+          "audioUrl": "/audio/stand.mp3",
+          "difficulty": "basic",
+          "category": "position",
+          "relatedWords": ["rise", "upright", "erect"],
+          "usageNotes": "Position on your feet"
+        },
+        {
+          "id": 7,
+          "word": "sleep",
+          "translation": "dormir",
+          "phonetic": "/sliːp/",
+          "partOfSpeech": "verb",
+          "definition": "To rest with eyes closed",
+          "example": "I sleep at night.",
+          "image": "😴",
+          "audioUrl": "/audio/sleep.mp3",
+          "difficulty": "basic",
+          "category": "rest",
+          "relatedWords": ["rest", "nap", "doze"],
+          "usageNotes": "Natural rest state"
+        },
+        {
+          "id": 8,
+          "word": "wake",
+          "translation": "acordar",
+          "phonetic": "/weɪk/",
+          "partOfSpeech": "verb",
+          "definition": "To stop sleeping",
+          "example": "I wake up at 7 o'clock.",
+          "image": "🌅",
+          "audioUrl": "/audio/wake.mp3",
+          "difficulty": "basic",
+          "category": "rest",
+          "relatedWords": ["awake", "rise", "get up"],
+          "usageNotes": "To become conscious after sleeping"
+        },
+        {
+          "id": 9,
+          "word": "eat",
+          "translation": "comer",
+          "phonetic": "/iːt/",
+          "partOfSpeech": "verb",
+          "definition": "To put food in your mouth",
+          "example": "I eat breakfast.",
+          "image": "🍽️",
+          "audioUrl": "/audio/eat.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["consume", "dine", "have"],
+          "usageNotes": "Basic action for consuming food"
+        },
+        {
+          "id": 10,
+          "word": "drink",
+          "translation": "beber",
+          "phonetic": "/drɪŋk/",
+          "partOfSpeech": "verb",
+          "definition": "To take liquid into your mouth",
+          "example": "I drink water.",
+          "image": "🥤",
+          "audioUrl": "/audio/drink.mp3",
+          "difficulty": "basic",
+          "category": "food",
+          "relatedWords": ["sip", "gulp", "consume"],
+          "usageNotes": "Basic action for consuming liquids"
+        },
+        {
+          "id": 11,
+          "word": "work",
+          "translation": "trabalhar",
+          "phonetic": "/wɜːk/",
+          "partOfSpeech": "verb",
+          "definition": "To do a job for money",
+          "example": "I work in an office.",
+          "image": "💼",
+          "audioUrl": "/audio/work.mp3",
+          "difficulty": "basic",
+          "category": "activity",
+          "relatedWords": ["job", "employment", "labor"],
+          "usageNotes": "Paid employment or effort"
+        },
+        {
+          "id": 12,
+          "word": "study",
+          "translation": "estudar",
+          "phonetic": "/ˈstʌdi/",
+          "partOfSpeech": "verb",
+          "definition": "To learn something",
+          "example": "I study English.",
+          "image": "📚",
+          "audioUrl": "/audio/study.mp3",
+          "difficulty": "basic",
+          "category": "learning",
+          "relatedWords": ["learn", "read", "research"],
+          "usageNotes": "Learning through effort"
+        },
+        {
+          "id": 13,
+          "word": "read",
+          "translation": "ler",
+          "phonetic": "/riːd/",
+          "partOfSpeech": "verb",
+          "definition": "To look at words and understand them",
+          "example": "I read books.",
+          "image": "📖",
+          "audioUrl": "/audio/read.mp3",
+          "difficulty": "basic",
+          "category": "learning",
+          "relatedWords": ["scan", "peruse", "browse"],
+          "usageNotes": "Understanding written text"
+        },
+        {
+          "id": 14,
+          "word": "write",
+          "translation": "escrever",
+          "phonetic": "/raɪt/",
+          "partOfSpeech": "verb",
+          "definition": "To make words with a pen or pencil",
+          "example": "I write letters.",
+          "image": "✍️",
+          "audioUrl": "/audio/write.mp3",
+          "difficulty": "basic",
+          "category": "communication",
+          "relatedWords": ["compose", "create", "draft"],
+          "usageNotes": "Creating written text"
+        },
+        {
+          "id": 15,
+          "word": "speak",
+          "translation": "falar",
+          "phonetic": "/spiːk/",
+          "partOfSpeech": "verb",
+          "definition": "To use your voice to say words",
+          "example": "I speak English.",
+          "image": "🗣️",
+          "audioUrl": "/audio/speak.mp3",
+          "difficulty": "basic",
+          "category": "communication",
+          "relatedWords": ["talk", "say", "tell"],
+          "usageNotes": "Using voice to communicate"
+        },
+        {
+          "id": 16,
+          "word": "listen",
+          "translation": "ouvir",
+          "phonetic": "/ˈlɪsn/",
+          "partOfSpeech": "verb",
+          "definition": "To pay attention to sounds",
+          "example": "I listen to music.",
+          "image": "👂",
+          "audioUrl": "/audio/listen.mp3",
+          "difficulty": "basic",
+          "category": "communication",
+          "relatedWords": ["hear", "pay attention", "focus"],
+          "usageNotes": "Paying attention to sounds"
+        },
+        {
+          "id": 17,
+          "word": "watch",
+          "translation": "assistir",
+          "phonetic": "/wɒtʃ/",
+          "partOfSpeech": "verb",
+          "definition": "To look at something for a time",
+          "example": "I watch TV.",
+          "image": "📺",
+          "audioUrl": "/audio/watch.mp3",
+          "difficulty": "basic",
+          "category": "activity",
+          "relatedWords": ["view", "observe", "see"],
+          "usageNotes": "Looking at something for entertainment"
+        },
+        {
+          "id": 18,
+          "word": "play",
+          "translation": "jogar",
+          "phonetic": "/pleɪ/",
+          "partOfSpeech": "verb",
+          "definition": "To do something for fun",
+          "example": "I play football.",
+          "image": "⚽",
+          "audioUrl": "/audio/play.mp3",
+          "difficulty": "basic",
+          "category": "activity",
+          "relatedWords": ["game", "sport", "fun"],
+          "usageNotes": "Activity for enjoyment"
+        },
+        {
+          "id": 19,
+          "word": "buy",
+          "translation": "comprar",
+          "phonetic": "/baɪ/",
+          "partOfSpeech": "verb",
+          "definition": "To get something by paying money",
+          "example": "I buy food.",
+          "image": "🛒",
+          "audioUrl": "/audio/buy.mp3",
+          "difficulty": "basic",
+          "category": "commerce",
+          "relatedWords": ["purchase", "shop", "get"],
+          "usageNotes": "Getting something with money"
+        },
+        {
+          "id": 20,
+          "word": "sell",
+          "translation": "vender",
+          "phonetic": "/sel/",
+          "partOfSpeech": "verb",
+          "definition": "To give something for money",
+          "example": "I sell my car.",
+          "image": "💰",
+          "audioUrl": "/audio/sell.mp3",
+          "difficulty": "basic",
+          "category": "commerce",
+          "relatedWords": ["trade", "exchange", "offer"],
+          "usageNotes": "Giving something for money"
+        },
+        {
+          "id": 21,
+          "word": "open",
+          "translation": "abrir",
+          "phonetic": "/ˈəʊpən/",
+          "partOfSpeech": "verb",
+          "definition": "To make something not closed",
+          "example": "I open the door.",
+          "image": "🚪",
+          "audioUrl": "/audio/open.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["unlock", "start", "begin"],
+          "usageNotes": "Making something accessible"
+        },
+        {
+          "id": 22,
+          "word": "close",
+          "translation": "fechar",
+          "phonetic": "/kləʊz/",
+          "partOfSpeech": "verb",
+          "definition": "To make something not open",
+          "example": "I close the window.",
+          "image": "❌",
+          "audioUrl": "/audio/close.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["shut", "lock", "end"],
+          "usageNotes": "Making something inaccessible"
+        },
+        {
+          "id": 23,
+          "word": "start",
+          "translation": "começar",
+          "phonetic": "/stɑːt/",
+          "partOfSpeech": "verb",
+          "definition": "To begin something",
+          "example": "I start work at 9.",
+          "image": "▶️",
+          "audioUrl": "/audio/start.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["begin", "commence", "initiate"],
+          "usageNotes": "Beginning an activity"
+        },
+        {
+          "id": 24,
+          "word": "stop",
+          "translation": "parar",
+          "phonetic": "/stɒp/",
+          "partOfSpeech": "verb",
+          "definition": "To end something",
+          "example": "I stop work at 5.",
+          "image": "⏹️",
+          "audioUrl": "/audio/stop.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["end", "finish", "halt"],
+          "usageNotes": "Ending an activity"
+        },
+        {
+          "id": 25,
+          "word": "help",
+          "translation": "ajudar",
+          "phonetic": "/help/",
+          "partOfSpeech": "verb",
+          "definition": "To make something easier for someone",
+          "example": "I help my friend.",
+          "image": "🤝",
+          "audioUrl": "/audio/help.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["assist", "support", "aid"],
+          "usageNotes": "Making something easier for others"
+        },
+        {
+          "id": 26,
+          "word": "find",
+          "translation": "encontrar",
+          "phonetic": "/faɪnd/",
+          "partOfSpeech": "verb",
+          "definition": "To discover something",
+          "example": "I find my keys.",
+          "image": "🔍",
+          "audioUrl": "/audio/find.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["discover", "locate", "search"],
+          "usageNotes": "Discovering something lost"
+        },
+        {
+          "id": 27,
+          "word": "give",
+          "translation": "dar",
+          "phonetic": "/ɡɪv/",
+          "partOfSpeech": "verb",
+          "definition": "To hand something to someone",
+          "example": "I give you a gift.",
+          "image": "🎁",
+          "audioUrl": "/audio/give.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["hand", "offer", "present"],
+          "usageNotes": "Handing something to someone"
+        },
+        {
+          "id": 28,
+          "word": "take",
+          "translation": "pegar",
+          "phonetic": "/teɪk/",
+          "partOfSpeech": "verb",
+          "definition": "To get something with your hands",
+          "example": "I take a book.",
+          "image": "📖",
+          "audioUrl": "/audio/take.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["grab", "pick", "get"],
+          "usageNotes": "Getting something with hands"
+        },
+        {
+          "id": 29,
+          "word": "put",
+          "translation": "colocar",
+          "phonetic": "/pʊt/",
+          "partOfSpeech": "verb",
+          "definition": "To place something somewhere",
+          "example": "I put the book on the table.",
+          "image": "📚",
+          "audioUrl": "/audio/put.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["place", "set", "position"],
+          "usageNotes": "Placing something in a location"
+        },
+        {
+          "id": 30,
+          "word": "make",
+          "translation": "fazer",
+          "phonetic": "/meɪk/",
+          "partOfSpeech": "verb",
+          "definition": "To create something",
+          "example": "I make coffee.",
+          "image": "☕",
+          "audioUrl": "/audio/make.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["create", "build", "produce"],
+          "usageNotes": "Creating or producing something"
+        },
+        {
+          "id": 31,
+          "word": "do",
+          "translation": "fazer",
+          "phonetic": "/duː/",
+          "partOfSpeech": "verb",
+          "definition": "To perform an action",
+          "example": "I do my homework.",
+          "image": "📝",
+          "audioUrl": "/audio/do.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["perform", "execute", "accomplish"],
+          "usageNotes": "Performing any action"
+        },
+        {
+          "id": 32,
+          "word": "get",
+          "translation": "obter",
+          "phonetic": "/ɡet/",
+          "partOfSpeech": "verb",
+          "definition": "To receive or obtain something",
+          "example": "I get a letter.",
+          "image": "📬",
+          "audioUrl": "/audio/get.mp3",
+          "difficulty": "basic",
+          "category": "action",
+          "relatedWords": ["receive", "obtain", "acquire"],
+          "usageNotes": "Receiving or obtaining something"
+        },
+        {
+          "id": 33,
+          "word": "know",
+          "translation": "saber",
+          "phonetic": "/nəʊ/",
+          "partOfSpeech": "verb",
+          "definition": "To have information about something",
+          "example": "I know the answer.",
+          "image": "🧠",
+          "audioUrl": "/audio/know.mp3",
+          "difficulty": "basic",
+          "category": "mental",
+          "relatedWords": ["understand", "realize", "recognize"],
+          "usageNotes": "Having information or understanding"
+        },
+        {
+          "id": 34,
+          "word": "think",
+          "translation": "pensar",
+          "phonetic": "/θɪŋk/",
+          "partOfSpeech": "verb",
+          "definition": "To use your mind",
+          "example": "I think about the problem.",
+          "image": "💭",
+          "audioUrl": "/audio/think.mp3",
+          "difficulty": "basic",
+          "category": "mental",
+          "relatedWords": ["consider", "reflect", "ponder"],
+          "usageNotes": "Using your mind to consider"
+        },
+        {
+          "id": 35,
+          "word": "want",
+          "translation": "querer",
+          "phonetic": "/wɒnt/",
+          "partOfSpeech": "verb",
+          "definition": "To desire something",
+          "example": "I want a new car.",
+          "image": "🎯",
+          "audioUrl": "/audio/want.mp3",
+          "difficulty": "basic",
+          "category": "mental",
+          "relatedWords": ["desire", "wish", "need"],
+          "usageNotes": "Expressing desire for something"
+        },
+        {
+          "id": 36,
+          "word": "like",
+          "translation": "gostar",
+          "phonetic": "/laɪk/",
+          "partOfSpeech": "verb",
+          "definition": "To enjoy something",
+          "example": "I like music.",
+          "image": "👍",
+          "audioUrl": "/audio/like.mp3",
+          "difficulty": "basic",
+          "category": "mental",
+          "relatedWords": ["enjoy", "love", "prefer"],
+          "usageNotes": "Expressing positive feeling"
+        },
+        {
+          "id": 37,
+          "word": "see",
+          "translation": "ver",
+          "phonetic": "/siː/",
+          "partOfSpeech": "verb",
+          "definition": "To use your eyes",
+          "example": "I see a bird.",
+          "image": "👁️",
+          "audioUrl": "/audio/see.mp3",
+          "difficulty": "basic",
+          "category": "senses",
+          "relatedWords": ["look", "watch", "observe"],
+          "usageNotes": "Using your eyes to perceive"
+        },
+        {
+          "id": 38,
+          "word": "hear",
+          "translation": "ouvir",
+          "phonetic": "/hɪər/",
+          "partOfSpeech": "verb",
+          "definition": "To use your ears",
+          "example": "I hear music.",
+          "image": "👂",
+          "audioUrl": "/audio/hear.mp3",
+          "difficulty": "basic",
+          "category": "senses",
+          "relatedWords": ["listen", "perceive", "detect"],
+          "usageNotes": "Using your ears to perceive"
+        },
+        {
+          "id": 39,
+          "word": "feel",
+          "translation": "sentir",
+          "phonetic": "/fiːl/",
+          "partOfSpeech": "verb",
+          "definition": "To experience emotion or touch",
+          "example": "I feel happy.",
+          "image": "💝",
+          "audioUrl": "/audio/feel.mp3",
+          "difficulty": "basic",
+          "category": "senses",
+          "relatedWords": ["experience", "sense", "touch"],
+          "usageNotes": "Experiencing emotion or physical sensation"
+        },
+        {
+          "id": 40,
+          "word": "live",
+          "translation": "viver",
+          "phonetic": "/lɪv/",
+          "partOfSpeech": "verb",
+          "definition": "To be alive and exist",
+          "example": "I live in London.",
+          "image": "🏠",
+          "audioUrl": "/audio/live.mp3",
+          "difficulty": "basic",
+          "category": "existence",
+          "relatedWords": ["reside", "dwell", "exist"],
+          "usageNotes": "Being alive and existing in a place"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "matching",
+          "title": "Match Basic Verbs",
+          "description": "Match the verb with its definition",
+          "items": [
+            {
+              "word": "go",
+              "definition": "To move from one place to another",
+              "correct": true
+            },
+            {
+              "word": "eat",
+              "definition": "To put food in your mouth",
+              "correct": true
+            },
+            {
+              "word": "work",
+              "definition": "To do a job for money",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "type": "fill-in-blank",
+          "title": "Complete Verb Sentences",
+          "description": "Fill in the blanks with the correct verb",
+          "items": [
+            {
+              "sentence": "I ___ to work every day.",
+              "correctAnswer": "go",
+              "hint": "To move from one place to another"
+            },
+            {
+              "sentence": "I ___ breakfast in the morning.",
+              "correctAnswer": "eat",
+              "hint": "To put food in your mouth"
+            },
+            {
+              "sentence": "I ___ in an office.",
+              "correctAnswer": "work",
+              "hint": "To do a job for money"
+            }
+          ]
+        },
+        {
+          "type": "conversation",
+          "title": "Daily Activities Conversation",
+          "description": "Practice talking about daily activities using basic verbs",
+          "scenarios": [
+            {
+              "question": "What do you do in the morning?",
+              "sampleAnswer": "I wake up, eat breakfast, and go to work."
+            },
+            {
+              "question": "What do you do at work?",
+              "sampleAnswer": "I work on my computer and help customers."
+            },
+            {
+              "question": "What do you do in the evening?",
+              "sampleAnswer": "I watch TV, read a book, and go to bed."
+            },
+            {
+              "question": "What do you like to do?",
+              "sampleAnswer": "I like to play sports and listen to music."
+            }
+          ]
+        }
+      ],
+      "grammarFocus": {
+        "presentSimple": {
+          "title": "Present Simple for Daily Routines",
+          "description": "Learn to use present simple to talk about daily activities and routines",
+          "examples": [
+            "I go to work every day.",
+            "I eat breakfast at 8 o'clock.",
+            "I work in an office.",
+            "I study English.",
+            "I like music."
+          ],
+          "rules": [
+            "Use present simple for regular routines",
+            "Add 's' to verbs with he/she/it",
+            "Use 'do/does' for questions",
+            "Use 'don't/doesn't' for negatives",
+            "Use time expressions like 'every day', 'always', 'usually'"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
     }
   }
 }
