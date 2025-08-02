@@ -1,7 +1,7 @@
-import A1Lesson5Articles from '@/components/A1Lesson5Articles';
+import A1GrammarChapter5 from '@/components/A1GrammarChapter5';
 
 export default function ArticlesPage() {
-  return <A1Lesson5Articles />;
+  return <A1GrammarChapter5 />;
 }
 
 export const metadata = {

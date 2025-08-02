@@ -17,12 +17,12 @@ export default function A1Level() {
   ];
 
   const vocabularyThemes = [
-    { theme: 'Personal Information', words: 25, status: 'available' },
-    { theme: 'Family & Relationships', words: 20, status: 'available' },
-    { theme: 'Colors & Basic Adjectives', words: 15, status: 'available' },
-    { theme: 'Food & Drinks', words: 30, status: 'available' },
-    { theme: 'Days, Months, Time', words: 20, status: 'available' },
-    { theme: 'Basic Verbs', words: 40, status: 'available' }
+    { theme: 'Personal Information', words: 25, status: 'available', href: '/level/a1/personal-vocabulary' },
+    { theme: 'Family & Relationships', words: 25, status: 'available', href: '/level/a1/family-vocabulary' },
+    { theme: 'Colors & Basic Adjectives', words: 15, status: 'available', href: '/level/a1/colors-vocabulary' },
+    { theme: 'Food & Drinks', words: 30, status: 'available', href: '/level/a1/food-vocabulary' },
+    { theme: 'Days, Months, Time', words: 20, status: 'available', href: '/level/a1/time-vocabulary' },
+    { theme: 'Basic Verbs', words: 40, status: 'available', href: '/level/a1/verbs-vocabulary' }
   ];
 
   const skills = [
@@ -197,8 +197,10 @@ export default function A1Level() {
                         <CardDescription>{theme.words} words</CardDescription>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        <Button className="w-full" variant="outline">
-                          Learn Words
+                        <Button className="w-full" variant="outline" asChild>
+                          <Link href={theme.href}>
+                            Learn Words
+                          </Link>
                         </Button>
                       </CardContent>
                     </Card>
