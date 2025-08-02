@@ -83,20 +83,23 @@ export default function A1SkillsPractice({ skill, level }: SkillsPracticeProps) 
       let correctCount = 0;
       const currentContent = currentActivityData.content[0];
       
-      currentContent.questions.forEach((question: any, index: number) => {
-        if (selectedAnswers[index] === question.correct) {
-          correctCount++;
+      // Type guard to check if content has questions
+      if ('questions' in currentContent && currentContent.questions) {
+        currentContent.questions.forEach((question: any, index: number) => {
+          if (selectedAnswers[index] === question.correct) {
+            correctCount++;
+          }
+        });
+        
+        const percentage = (correctCount / currentContent.questions.length) * 100;
+        setScore(percentage);
+        setShowResults(true);
+        
+        if (percentage >= 70) {
+          const newCompleted = new Set(completedActivities);
+          newCompleted.add(currentActivity);
+          setCompletedActivities(newCompleted);
         }
-      });
-      
-      const percentage = (correctCount / currentContent.questions.length) * 100;
-      setScore(percentage);
-      setShowResults(true);
-      
-      if (percentage >= 70) {
-        const newCompleted = new Set(completedActivities);
-        newCompleted.add(currentActivity);
-        setCompletedActivities(newCompleted);
       }
     }
   };
@@ -238,35 +241,37 @@ export default function A1SkillsPractice({ skill, level }: SkillsPracticeProps) 
                       <h3 className="font-semibold mb-4">Read the text:</h3>
                       <div className="bg-white dark:bg-gray-800 p-4 rounded border">
                         <pre className="whitespace-pre-wrap text-sm leading-relaxed">
-                          {currentActivityData.content[0].text}
+                          {'text' in currentActivityData.content[0] ? currentActivityData.content[0].text : ''}
                         </pre>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <h3 className="font-semibold">Answer the questions:</h3>
-                      {currentActivityData.content[0].questions.map((question: any, qIndex: number) => (
-                        <div key={qIndex} className="space-y-3">
-                          <p className="font-medium">{question.question}</p>
-                          <div className="grid gap-2">
-                            {question.options.map((option: string, oIndex: number) => (
-                              <Button
-                                key={oIndex}
-                                variant={selectedAnswers[qIndex] === oIndex ? "default" : "outline"}
-                                className="justify-start text-left h-auto p-3"
-                                onClick={() => handleAnswerSelect(oIndex)}
-                              >
-                                <div className="w-4 h-4 rounded-full border-2 mr-3 flex-shrink-0 flex items-center justify-center">
-                                  {selectedAnswers[qIndex] === oIndex && (
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                  )}
-                                </div>
-                                {option}
-                              </Button>
-                            ))}
+                      {'questions' in currentActivityData.content[0] && currentActivityData.content[0].questions && 
+                        currentActivityData.content[0].questions.map((question: any, qIndex: number) => (
+                          <div key={qIndex} className="space-y-3">
+                            <p className="font-medium">{question.question}</p>
+                            <div className="grid gap-2">
+                              {question.options.map((option: string, oIndex: number) => (
+                                <Button
+                                  key={oIndex}
+                                  variant={selectedAnswers[qIndex] === oIndex ? "default" : "outline"}
+                                  className="justify-start text-left h-auto p-3"
+                                  onClick={() => handleAnswerSelect(oIndex)}
+                                >
+                                  <div className="w-4 h-4 rounded-full border-2 mr-3 flex-shrink-0 flex items-center justify-center">
+                                    {selectedAnswers[qIndex] === oIndex && (
+                                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                                    )}
+                                  </div>
+                                  {option}
+                                </Button>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))
+                      }
                     </div>
                   </div>
                 )}
@@ -291,35 +296,37 @@ export default function A1SkillsPractice({ skill, level }: SkillsPracticeProps) 
                       </div>
                       <div className="mt-4 p-4 bg-white dark:bg-gray-800 rounded border">
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                          Audio: "{currentActivityData.content[0].audioText}"
+                          Audio: "{'audioText' in currentActivityData.content[0] ? currentActivityData.content[0].audioText : ''}"
                         </p>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <h3 className="font-semibold">Answer the questions:</h3>
-                      {currentActivityData.content[0].questions.map((question: any, qIndex: number) => (
-                        <div key={qIndex} className="space-y-3">
-                          <p className="font-medium">{question.question}</p>
-                          <div className="grid gap-2">
-                            {question.options.map((option: string, oIndex: number) => (
-                              <Button
-                                key={oIndex}
-                                variant={selectedAnswers[qIndex] === oIndex ? "default" : "outline"}
-                                className="justify-start text-left h-auto p-3"
-                                onClick={() => handleAnswerSelect(oIndex)}
-                              >
-                                <div className="w-4 h-4 rounded-full border-2 mr-3 flex-shrink-0 flex items-center justify-center">
-                                  {selectedAnswers[qIndex] === oIndex && (
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                  )}
-                                </div>
-                                {option}
-                              </Button>
-                            ))}
+                      {'questions' in currentActivityData.content[0] && currentActivityData.content[0].questions && 
+                        currentActivityData.content[0].questions.map((question: any, qIndex: number) => (
+                          <div key={qIndex} className="space-y-3">
+                            <p className="font-medium">{question.question}</p>
+                            <div className="grid gap-2">
+                              {question.options.map((option: string, oIndex: number) => (
+                                <Button
+                                  key={oIndex}
+                                  variant={selectedAnswers[qIndex] === oIndex ? "default" : "outline"}
+                                  className="justify-start text-left h-auto p-3"
+                                  onClick={() => handleAnswerSelect(oIndex)}
+                                >
+                                  <div className="w-4 h-4 rounded-full border-2 mr-3 flex-shrink-0 flex items-center justify-center">
+                                    {selectedAnswers[qIndex] === oIndex && (
+                                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                                    )}
+                                  </div>
+                                  {option}
+                                </Button>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))
+                      }
                     </div>
                   </div>
                 )}
@@ -330,9 +337,9 @@ export default function A1SkillsPractice({ skill, level }: SkillsPracticeProps) 
                     <div className="bg-muted/50 p-6 rounded-lg">
                       <h3 className="font-semibold mb-4">Writing Task:</h3>
                       <div className="space-y-4">
-                        <p className="text-sm">{currentActivityData.content[0].scenario}</p>
+                        <p className="text-sm">{'scenario' in currentActivityData.content[0] ? currentActivityData.content[0].scenario : ''}</p>
                         
-                        {currentActivityData.content[0].template && (
+                        {'template' in currentActivityData.content[0] && currentActivityData.content[0].template && (
                           <div className="bg-white dark:bg-gray-800 p-4 rounded border">
                             <h4 className="font-medium mb-2">Template:</h4>
                             <div className="space-y-2 text-sm">
@@ -343,7 +350,7 @@ export default function A1SkillsPractice({ skill, level }: SkillsPracticeProps) 
                           </div>
                         )}
 
-                        {currentActivityData.content[0].prompts && (
+                        {'prompts' in currentActivityData.content[0] && currentActivityData.content[0].prompts && (
                           <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded">
                             <h4 className="font-medium mb-2">Writing Prompts:</h4>
                             <ul className="space-y-1 text-sm">
@@ -381,9 +388,9 @@ export default function A1SkillsPractice({ skill, level }: SkillsPracticeProps) 
                     <div className="bg-muted/50 p-6 rounded-lg">
                       <h3 className="font-semibold mb-4">Speaking Task:</h3>
                       <div className="space-y-4">
-                        <p className="text-sm">{currentActivityData.content[0].scenario}</p>
+                        <p className="text-sm">{'scenario' in currentActivityData.content[0] ? currentActivityData.content[0].scenario : ''}</p>
                         
-                        {currentActivityData.content[0].dialogue && (
+                        {'dialogue' in currentActivityData.content[0] && currentActivityData.content[0].dialogue && (
                           <div className="bg-white dark:bg-gray-800 p-4 rounded border">
                             <h4 className="font-medium mb-2">Sample Dialogue:</h4>
                             <div className="space-y-2 text-sm">
@@ -397,7 +404,7 @@ export default function A1SkillsPractice({ skill, level }: SkillsPracticeProps) 
                           </div>
                         )}
 
-                        {currentActivityData.content[0].phrases && (
+                        {'phrases' in currentActivityData.content[0] && currentActivityData.content[0].phrases && (
                           <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded">
                             <h4 className="font-medium mb-2">Useful Phrases:</h4>
                             <div className="grid gap-2">
