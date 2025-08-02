@@ -1,5 +1,499 @@
 {
   "a1": {
+    "personal-information": {
+      "theme": "Personal Information",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can introduce myself with basic personal information",
+          "I can ask and answer questions about personal details",
+          "I can provide basic information about myself",
+          "I can understand simple personal questions"
+        ],
+        "vocabularyRange": "25 essential personal information words",
+        "grammarFocus": "Present simple (I am, I have, I live)",
+        "communicationFunctions": [
+          "Introducing yourself",
+          "Asking about personal details",
+          "Providing basic information",
+          "Understanding personal questions"
+        ]
+      },
+      "vocabulary": [
+        {
+          "id": 1,
+          "word": "name",
+          "translation": "nome",
+          "phonetic": "/neɪm/",
+          "partOfSpeech": "noun",
+          "definition": "What someone is called",
+          "example": "My name is Maria.",
+          "image": "👤",
+          "audioUrl": "/audio/name.mp3",
+          "difficulty": "basic",
+          "category": "identity",
+          "relatedWords": ["first name", "last name", "full name"],
+          "usageNotes": "Used to identify yourself or ask about someone's identity"
+        },
+        {
+          "id": 2,
+          "word": "age",
+          "translation": "idade",
+          "phonetic": "/eɪdʒ/",
+          "partOfSpeech": "noun",
+          "definition": "How old someone is",
+          "example": "I am 25 years old.",
+          "image": "🎂",
+          "audioUrl": "/audio/age.mp3",
+          "difficulty": "basic",
+          "category": "identity",
+          "relatedWords": ["years old", "birthday", "young", "old"],
+          "usageNotes": "Usually asked as 'How old are you?'"
+        },
+        {
+          "id": 3,
+          "word": "country",
+          "translation": "país",
+          "phonetic": "/ˈkʌntri/",
+          "partOfSpeech": "noun",
+          "definition": "A nation or land",
+          "example": "I am from Brazil.",
+          "image": "🌍",
+          "audioUrl": "/audio/country.mp3",
+          "difficulty": "basic",
+          "category": "location",
+          "relatedWords": ["nation", "homeland", "origin"],
+          "usageNotes": "Used to describe where you are from"
+        },
+        {
+          "id": 4,
+          "word": "city",
+          "translation": "cidade",
+          "phonetic": "/ˈsɪti/",
+          "partOfSpeech": "noun",
+          "definition": "A large town",
+          "example": "I live in São Paulo.",
+          "image": "🏙️",
+          "audioUrl": "/audio/city.mp3",
+          "difficulty": "basic",
+          "category": "location",
+          "relatedWords": ["town", "village", "capital"],
+          "usageNotes": "Used to describe where you live"
+        },
+        {
+          "id": 5,
+          "word": "address",
+          "translation": "endereço",
+          "phonetic": "/əˈdres/",
+          "partOfSpeech": "noun",
+          "definition": "Where someone lives",
+          "example": "What is your address?",
+          "image": "🏠",
+          "audioUrl": "/audio/address.mp3",
+          "difficulty": "basic",
+          "category": "location",
+          "relatedWords": ["street", "house", "home"],
+          "usageNotes": "Used for forms and official documents"
+        },
+        {
+          "id": 6,
+          "word": "phone",
+          "translation": "telefone",
+          "phonetic": "/foʊn/",
+          "partOfSpeech": "noun",
+          "definition": "A device for making calls",
+          "example": "What is your phone number?",
+          "image": "📱",
+          "audioUrl": "/audio/phone.mp3",
+          "difficulty": "basic",
+          "category": "contact",
+          "relatedWords": ["mobile", "cellphone", "number"],
+          "usageNotes": "Can refer to mobile or landline phone"
+        },
+        {
+          "id": 7,
+          "word": "email",
+          "translation": "email",
+          "phonetic": "/ˈiːmeɪl/",
+          "partOfSpeech": "noun",
+          "definition": "Electronic mail",
+          "example": "My email is john@example.com",
+          "image": "📧",
+          "audioUrl": "/audio/email.mp3",
+          "difficulty": "basic",
+          "category": "contact",
+          "relatedWords": ["e-mail", "mail", "address"],
+          "usageNotes": "Used for electronic communication"
+        },
+        {
+          "id": 8,
+          "word": "job",
+          "translation": "trabalho",
+          "phonetic": "/dʒɒb/",
+          "partOfSpeech": "noun",
+          "definition": "What you do for work",
+          "example": "I am a teacher.",
+          "image": "💼",
+          "audioUrl": "/audio/job.mp3",
+          "difficulty": "basic",
+          "category": "work",
+          "relatedWords": ["work", "profession", "occupation"],
+          "usageNotes": "Used to describe your profession"
+        },
+        {
+          "id": 9,
+          "word": "student",
+          "translation": "estudante",
+          "phonetic": "/ˈstjuːdənt/",
+          "partOfSpeech": "noun",
+          "definition": "Someone who studies",
+          "example": "I am a student.",
+          "image": "🎓",
+          "audioUrl": "/audio/student.mp3",
+          "difficulty": "basic",
+          "category": "education",
+          "relatedWords": ["pupil", "learner", "school"],
+          "usageNotes": "Used for someone who is learning"
+        },
+        {
+          "id": 10,
+          "word": "school",
+          "translation": "escola",
+          "phonetic": "/skuːl/",
+          "partOfSpeech": "noun",
+          "definition": "A place for learning",
+          "example": "I go to school.",
+          "image": "🏫",
+          "audioUrl": "/audio/school.mp3",
+          "difficulty": "basic",
+          "category": "education",
+          "relatedWords": ["university", "college", "education"],
+          "usageNotes": "Can refer to any educational institution"
+        },
+        {
+          "id": 11,
+          "word": "language",
+          "translation": "idioma",
+          "phonetic": "/ˈlæŋɡwɪdʒ/",
+          "partOfSpeech": "noun",
+          "definition": "A system of communication",
+          "example": "I speak English and Portuguese.",
+          "image": "🗣️",
+          "audioUrl": "/audio/language.mp3",
+          "difficulty": "basic",
+          "category": "communication",
+          "relatedWords": ["tongue", "speech", "communication"],
+          "usageNotes": "Used to describe what languages you know"
+        },
+        {
+          "id": 12,
+          "word": "hobby",
+          "translation": "passatempo",
+          "phonetic": "/ˈhɒbi/",
+          "partOfSpeech": "noun",
+          "definition": "Something you do for fun",
+          "example": "My hobby is reading.",
+          "image": "🎨",
+          "audioUrl": "/audio/hobby.mp3",
+          "difficulty": "basic",
+          "category": "interests",
+          "relatedWords": ["interest", "pastime", "activity"],
+          "usageNotes": "Used to describe what you like to do"
+        },
+        {
+          "id": 13,
+          "word": "birthday",
+          "translation": "aniversário",
+          "phonetic": "/ˈbɜːθdeɪ/",
+          "partOfSpeech": "noun",
+          "definition": "The day you were born",
+          "example": "My birthday is on March 15th.",
+          "image": "🎉",
+          "audioUrl": "/audio/birthday.mp3",
+          "difficulty": "basic",
+          "category": "identity",
+          "relatedWords": ["birth date", "anniversary", "celebration"],
+          "usageNotes": "Used to tell when you were born"
+        },
+        {
+          "id": 14,
+          "word": "height",
+          "translation": "altura",
+          "phonetic": "/haɪt/",
+          "partOfSpeech": "noun",
+          "definition": "How tall someone is",
+          "example": "I am 170 centimeters tall.",
+          "image": "📏",
+          "audioUrl": "/audio/height.mp3",
+          "difficulty": "basic",
+          "category": "physical",
+          "relatedWords": ["tall", "short", "measurement"],
+          "usageNotes": "Used to describe physical appearance"
+        },
+        {
+          "id": 15,
+          "word": "weight",
+          "translation": "peso",
+          "phonetic": "/weɪt/",
+          "partOfSpeech": "noun",
+          "definition": "How heavy someone is",
+          "example": "I weigh 65 kilograms.",
+          "image": "⚖️",
+          "audioUrl": "/audio/weight.mp3",
+          "difficulty": "basic",
+          "category": "physical",
+          "relatedWords": ["heavy", "light", "measurement"],
+          "usageNotes": "Used to describe physical characteristics"
+        },
+        {
+          "id": 16,
+          "word": "hair",
+          "translation": "cabelo",
+          "phonetic": "/heə/",
+          "partOfSpeech": "noun",
+          "definition": "The hair on your head",
+          "example": "I have brown hair.",
+          "image": "💇‍♀️",
+          "audioUrl": "/audio/hair.mp3",
+          "difficulty": "basic",
+          "category": "appearance",
+          "relatedWords": ["blonde", "black", "long", "short"],
+          "usageNotes": "Used to describe hair color and style"
+        },
+        {
+          "id": 17,
+          "word": "eyes",
+          "translation": "olhos",
+          "phonetic": "/aɪz/",
+          "partOfSpeech": "noun",
+          "definition": "The organs you see with",
+          "example": "I have blue eyes.",
+          "image": "👁️",
+          "audioUrl": "/audio/eyes.mp3",
+          "difficulty": "basic",
+          "category": "appearance",
+          "relatedWords": ["eye color", "brown", "green", "blue"],
+          "usageNotes": "Used to describe eye color"
+        },
+        {
+          "id": 18,
+          "word": "married",
+          "translation": "casado",
+          "phonetic": "/ˈmærid/",
+          "partOfSpeech": "adjective",
+          "definition": "Having a husband or wife",
+          "example": "I am married.",
+          "image": "💍",
+          "audioUrl": "/audio/married.mp3",
+          "difficulty": "basic",
+          "category": "status",
+          "relatedWords": ["single", "divorced", "relationship"],
+          "usageNotes": "Used to describe relationship status"
+        },
+        {
+          "id": 19,
+          "word": "single",
+          "translation": "solteiro",
+          "phonetic": "/ˈsɪŋɡəl/",
+          "partOfSpeech": "adjective",
+          "definition": "Not married",
+          "example": "I am single.",
+          "image": "👤",
+          "audioUrl": "/audio/single.mp3",
+          "difficulty": "basic",
+          "category": "status",
+          "relatedWords": ["unmarried", "available", "relationship"],
+          "usageNotes": "Used to describe relationship status"
+        },
+        {
+          "id": 20,
+          "word": "nationality",
+          "translation": "nacionalidade",
+          "phonetic": "/ˌnæʃəˈnæləti/",
+          "partOfSpeech": "noun",
+          "definition": "Your country of origin",
+          "example": "I am Brazilian.",
+          "image": "🏳️",
+          "audioUrl": "/audio/nationality.mp3",
+          "difficulty": "basic",
+          "category": "identity",
+          "relatedWords": ["citizen", "origin", "heritage"],
+          "usageNotes": "Used to describe your country of origin"
+        },
+        {
+          "id": 21,
+          "word": "passport",
+          "translation": "passaporte",
+          "phonetic": "/ˈpɑːspɔːt/",
+          "partOfSpeech": "noun",
+          "definition": "Official travel document",
+          "example": "I have a Brazilian passport.",
+          "image": "📄",
+          "audioUrl": "/audio/passport.mp3",
+          "difficulty": "basic",
+          "category": "documents",
+          "relatedWords": ["document", "travel", "identification"],
+          "usageNotes": "Used for international travel"
+        },
+        {
+          "id": 22,
+          "word": "ID",
+          "translation": "identidade",
+          "phonetic": "/ˌaɪ ˈdiː/",
+          "partOfSpeech": "noun",
+          "definition": "Identification document",
+          "example": "I have my ID card.",
+          "image": "🆔",
+          "audioUrl": "/audio/id.mp3",
+          "difficulty": "basic",
+          "category": "documents",
+          "relatedWords": ["identification", "card", "document"],
+          "usageNotes": "Short for 'identification'"
+        },
+        {
+          "id": 23,
+          "word": "signature",
+          "translation": "assinatura",
+          "phonetic": "/ˈsɪɡnətʃə/",
+          "partOfSpeech": "noun",
+          "definition": "Your written name",
+          "example": "Please sign your signature here.",
+          "image": "✍️",
+          "audioUrl": "/audio/signature.mp3",
+          "difficulty": "basic",
+          "category": "documents",
+          "relatedWords": ["sign", "autograph", "name"],
+          "usageNotes": "Used on official documents"
+        },
+        {
+          "id": 24,
+          "word": "photo",
+          "translation": "foto",
+          "phonetic": "/ˈfoʊtəʊ/",
+          "partOfSpeech": "noun",
+          "definition": "A picture of someone",
+          "example": "I need a photo for my passport.",
+          "image": "📸",
+          "audioUrl": "/audio/photo.mp3",
+          "difficulty": "basic",
+          "category": "documents",
+          "relatedWords": ["picture", "image", "portrait"],
+          "usageNotes": "Used for documents and identification"
+        },
+        {
+          "id": 25,
+          "word": "emergency",
+          "translation": "emergência",
+          "phonetic": "/ɪˈmɜːdʒənsi/",
+          "partOfSpeech": "noun",
+          "definition": "A serious situation needing immediate help",
+          "example": "What is your emergency contact?",
+          "image": "🚨",
+          "audioUrl": "/audio/emergency.mp3",
+          "difficulty": "basic",
+          "category": "contact",
+          "relatedWords": ["urgent", "help", "contact"],
+          "usageNotes": "Used for emergency situations"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "matching",
+          "title": "Match Personal Information",
+          "description": "Match the personal information word with its definition",
+          "items": [
+            {
+              "word": "name",
+              "definition": "What someone is called",
+              "correct": true
+            },
+            {
+              "word": "age",
+              "definition": "How old someone is",
+              "correct": true
+            },
+            {
+              "word": "country",
+              "definition": "A nation or land",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "type": "fill-in-blank",
+          "title": "Complete Personal Information",
+          "description": "Fill in the blanks with the correct personal information vocabulary",
+          "items": [
+            {
+              "sentence": "My ___ is John.",
+              "correctAnswer": "name",
+              "hint": "What you are called"
+            },
+            {
+              "sentence": "I am 25 years ___.",
+              "correctAnswer": "old",
+              "hint": "Age indicator"
+            },
+            {
+              "sentence": "I am from ___.",
+              "correctAnswer": "Brazil",
+              "hint": "Your country"
+            }
+          ]
+        },
+        {
+          "type": "conversation",
+          "title": "Personal Information Conversation",
+          "description": "Practice asking and answering questions about personal information",
+          "scenarios": [
+            {
+              "question": "What is your name?",
+              "sampleAnswer": "My name is Maria Silva."
+            },
+            {
+              "question": "How old are you?",
+              "sampleAnswer": "I am 23 years old."
+            },
+            {
+              "question": "Where are you from?",
+              "sampleAnswer": "I am from Brazil."
+            },
+            {
+              "question": "What do you do?",
+              "sampleAnswer": "I am a student."
+            }
+          ]
+        }
+      ],
+      "grammarFocus": {
+        "presentSimple": {
+          "title": "Present Simple for Personal Information",
+          "description": "Learn to use present simple to talk about yourself",
+          "examples": [
+            "I am Maria.",
+            "I am 25 years old.",
+            "I live in São Paulo.",
+            "I am a student.",
+            "I speak Portuguese."
+          ],
+          "rules": [
+            "Use 'I am' for identity and characteristics",
+            "Use 'I have' for possessions and features",
+            "Use 'I live' for location",
+            "Use 'I work' or 'I am a' for profession",
+            "Use 'I speak' for languages"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
     "family-relationships": {
       "theme": "Family & Relationships",
       "level": "A1",

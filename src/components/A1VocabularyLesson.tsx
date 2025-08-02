@@ -54,9 +54,29 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
   const [exerciseAnswers, setExerciseAnswers] = useState<string[]>([]);
   const [showResults, setShowResults] = useState(false);
 
-  const vocabulary = vocabularyData.a1['family-relationships'].vocabulary as VocabularyWord[];
-  const exercises = vocabularyData.a1['family-relationships'].exercises;
-  const grammarFocus = vocabularyData.a1['family-relationships'].grammarFocus;
+  const getVocabularyData = () => {
+    if (theme === 'Personal Information') {
+      return {
+        vocabulary: vocabularyData.a1['personal-information'].vocabulary as VocabularyWord[],
+        exercises: vocabularyData.a1['personal-information'].exercises,
+        grammarFocus: vocabularyData.a1['personal-information'].grammarFocus
+      };
+    } else if (theme === 'Family & Relationships') {
+      return {
+        vocabulary: vocabularyData.a1['family-relationships'].vocabulary as VocabularyWord[],
+        exercises: vocabularyData.a1['family-relationships'].exercises,
+        grammarFocus: vocabularyData.a1['family-relationships'].grammarFocus
+      };
+    }
+    // Default to family relationships
+    return {
+      vocabulary: vocabularyData.a1['family-relationships'].vocabulary as VocabularyWord[],
+      exercises: vocabularyData.a1['family-relationships'].exercises,
+      grammarFocus: vocabularyData.a1['family-relationships'].grammarFocus
+    };
+  };
+
+  const { vocabulary, exercises, grammarFocus } = getVocabularyData();
 
   const currentWord = vocabulary[currentWordIndex];
   const progress = (completedWords.size / vocabulary.length) * 100;
@@ -114,9 +134,9 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
           <Badge className="bg-green-500 text-white mb-4">
             {level} Level - {theme}
           </Badge>
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Family & Relationships</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">{theme}</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Learn 25 essential family vocabulary words with interactive exercises
+            Learn 25 essential {theme.toLowerCase()} vocabulary words with interactive exercises
           </p>
         </div>
 
