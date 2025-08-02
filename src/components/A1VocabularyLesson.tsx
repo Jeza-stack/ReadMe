@@ -54,6 +54,25 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
   const [exerciseAnswers, setExerciseAnswers] = useState<string[]>([]);
   const [showResults, setShowResults] = useState(false);
 
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        previousWord();
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        nextWord();
+      } else if (event.key === ' ') {
+        event.preventDefault();
+        playAudio();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentWordIndex]);
+
   const getVocabularyData = () => {
     if (theme === 'Personal Information') {
       return {
@@ -80,6 +99,20 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
 
   const currentWord = vocabulary[currentWordIndex];
   const progress = (completedWords.size / vocabulary.length) * 100;
+
+  // Screen reader announcement
+  useEffect(() => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = `Word ${currentWordIndex + 1} of ${vocabulary.length}: ${currentWord.word}`;
+    document.body.appendChild(announcement);
+    
+    return () => {
+      document.body.removeChild(announcement);
+    };
+  }, [currentWordIndex, currentWord.word, vocabulary.length]);
 
   const playAudio = () => {
     setIsPlaying(true);
@@ -187,21 +220,25 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
                 </div>
                 <CardTitle className="text-2xl mb-2">{currentWord.word}</CardTitle>
                 <div className="text-4xl mb-4">{currentWord.image}</div>
-                <div className="flex justify-center gap-2 mb-4">
+                <div className="flex justify-center gap-3 mb-4">
                   <Button
                     variant="outline"
-                    size="sm"
+                    size="lg"
                     onClick={playAudio}
                     disabled={isPlaying}
+                    className="min-h-[44px] min-w-[44px]"
+                    aria-label={isPlaying ? "Pause pronunciation" : "Play pronunciation"}
                   >
-                    {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                    {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
                   </Button>
                   <Button
                     variant="outline"
-                    size="sm"
+                    size="lg"
                     onClick={toggleFavorite}
+                    className="min-h-[44px] min-w-[44px]"
+                    aria-label={favoriteWords.has(currentWord.id) ? "Remove from favorites" : "Add to favorites"}
                   >
-                    <Star className={`w-4 h-4 ${favoriteWords.has(currentWord.id) ? 'fill-yellow-400 text-yellow-400' : ''}`} />
+                    <Star className={`w-5 h-5 ${favoriteWords.has(currentWord.id) ? 'fill-yellow-400 text-yellow-400' : ''}`} />
                   </Button>
                 </div>
               </CardHeader>
@@ -360,42 +397,73 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
           <TabsContent value="grammar">
             <Card className="max-w-2xl mx-auto">
               <CardHeader>
-                <CardTitle>Grammar Focus: Possessive Adjectives</CardTitle>
+                <CardTitle>
+                  Grammar Focus: {grammarFocus.presentSimple ? 'Present Simple' : 'Possessive Adjectives'}
+                </CardTitle>
                 <CardDescription>
-                  Learn to use my, your, his, her, their with family members
+                  {grammarFocus.presentSimple ? 
+                    'Learn to use present simple to talk about yourself' :
+                    'Learn to use my, your, his, her, their with family members'
+                  }
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
                   <h4 className="font-medium mb-3">Examples:</h4>
                   <div className="space-y-2">
-                    {grammarFocus.possessiveAdjectives.examples.map((example, index) => (
-                      <div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
-                        <p className="text-gray-700 dark:text-gray-300">{example}</p>
-                      </div>
-                    ))}
+                    {grammarFocus.presentSimple ? 
+                      grammarFocus.presentSimple.examples.map((example, index) => (
+                        <div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+                          <p className="text-gray-700 dark:text-gray-300">{example}</p>
+                        </div>
+                      )) :
+                      grammarFocus.possessiveAdjectives.examples.map((example, index) => (
+                        <div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+                          <p className="text-gray-700 dark:text-gray-300">{example}</p>
+                        </div>
+                      ))
+                    }
                   </div>
                 </div>
 
                 <div>
                   <h4 className="font-medium mb-3">Rules:</h4>
                   <ul className="space-y-2">
-                    {grammarFocus.possessiveAdjectives.rules.map((rule, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700 dark:text-gray-300">{rule}</span>
-                      </li>
-                    ))}
+                    {grammarFocus.presentSimple ? 
+                      grammarFocus.presentSimple.rules.map((rule, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700 dark:text-gray-300">{rule}</span>
+                        </li>
+                      )) :
+                      grammarFocus.possessiveAdjectives.rules.map((rule, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700 dark:text-gray-300">{rule}</span>
+                        </li>
+                      ))
+                    }
                   </ul>
                 </div>
 
                 <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
                   <h4 className="font-medium mb-2">🎯 CEFR A1 Can-Do Statements:</h4>
                   <ul className="space-y-1 text-sm">
-                    <li>• I can understand and use basic family vocabulary</li>
-                    <li>• I can introduce my family members</li>
-                    <li>• I can ask and answer simple questions about family</li>
-                    <li>• I can describe basic family relationships</li>
+                    {theme === 'Personal Information' ? (
+                      <>
+                        <li>• I can introduce myself with basic personal information</li>
+                        <li>• I can ask and answer questions about personal details</li>
+                        <li>• I can provide basic information about myself</li>
+                        <li>• I can understand simple personal questions</li>
+                      </>
+                    ) : (
+                      <>
+                        <li>• I can understand and use basic family vocabulary</li>
+                        <li>• I can introduce my family members</li>
+                        <li>• I can ask and answer simple questions about family</li>
+                        <li>• I can describe basic family relationships</li>
+                      </>
+                    )}
                   </ul>
                 </div>
               </CardContent>
@@ -404,28 +472,32 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
         </Tabs>
 
         {/* Mobile Navigation */}
-        <div className="fixed bottom-4 left-4 right-4 md:hidden">
-          <Card>
+        <div className="fixed bottom-4 left-4 right-4 md:hidden z-50">
+          <Card className="shadow-lg">
             <CardContent className="p-4">
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
-                  size="sm"
+                  size="lg"
                   onClick={previousWord}
                   disabled={currentWordIndex === 0}
+                  className="min-h-[44px] min-w-[44px]"
+                  aria-label="Previous word"
                 >
-                  <ArrowLeft className="w-4 h-4" />
+                  <ArrowLeft className="w-5 h-5" />
                 </Button>
-                <span className="text-sm font-medium">
-                  {currentWordIndex + 1}/{vocabulary.length}
+                <span className="text-sm font-medium px-4">
+                  {currentWordIndex + 1} of {vocabulary.length}
                 </span>
                 <Button
                   variant="outline"
-                  size="sm"
+                  size="lg"
                   onClick={nextWord}
                   disabled={currentWordIndex === vocabulary.length - 1}
+                  className="min-h-[44px] min-w-[44px]"
+                  aria-label="Next word"
                 >
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
             </CardContent>
