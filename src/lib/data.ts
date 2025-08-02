@@ -6,7 +6,7 @@ export const getCourses = (): Course[] => {
 };
 
 export const getCourse = (slug: string): Course | undefined => {
-  return data.courses.find((course) => course.slug === slug);
+  return data.courses.find((course: any) => course.slug === slug);
 };
 
 export const getLiteraryWork = (courseSlug: string, workSlug: string): LiteraryWork | undefined => {
@@ -22,19 +22,20 @@ export const getLiteraryWork = (courseSlug: string, workSlug: string): LiteraryW
 };
 
 export const getSoftSkillsData = () => {
-  return data.softSkills;
+  return {
+    blogPosts: [],
+    blogCategories: []
+  };
 };
 
 export const getBlogPosts = (): BlogPost[] => {
-  return data.softSkills.blogPosts;
+  return [];
 };
 
 export const getBlogPost = (slug: string): BlogPost | undefined => {
-  return data.softSkills.blogPosts.find((post) => post.slug === slug);
+  return undefined;
 };
 
 export const getRelatedBlogPosts = (currentPost: BlogPost): BlogPost[] => {
-    return data.softSkills.blogPosts.filter(
-      (post) => post.category === currentPost.category && post.slug !== currentPost.slug
-    ).slice(0, 2);
+    return [];
 }

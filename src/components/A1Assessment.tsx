@@ -59,7 +59,7 @@ export default function A1Assessment({ type, testType }: AssessmentProps) {
 
   const getTestData = () => {
     if (type === 'practice' && testType) {
-      return assessmentData.a1.practiceTests[testType];
+      return assessmentData.a1.practiceTests[testType as keyof typeof assessmentData.a1.practiceTests];
     } else if (type === 'final') {
       return assessmentData.a1.finalAssessment;
     }
