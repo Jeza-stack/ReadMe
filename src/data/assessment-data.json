@@ -373,5 +373,393 @@
         ]
       }
     }
+  },
+  "a2": {
+    "practiceTests": {
+      "grammar": {
+        "title": "A2 Grammar Practice Test",
+        "description": "Test your understanding of A2 grammar concepts including past simple, present continuous, and modal verbs",
+        "timeLimit": 20,
+        "questions": [
+          {
+            "id": "grammar-1",
+            "type": "multiple-choice",
+            "question": "Complete the sentence: 'I ___ to the cinema last weekend.'",
+            "options": ["go", "went", "gone", "going"],
+            "correct": 1,
+            "explanation": "Use 'went' (past simple) for completed actions in the past."
+          },
+          {
+            "id": "grammar-2",
+            "type": "multiple-choice",
+            "question": "Which sentence is correct?",
+            "options": ["I am working now", "I working now", "I work now", "I works now"],
+            "correct": 0,
+            "explanation": "Use present continuous (am/is/are + -ing) for actions happening now."
+          },
+          {
+            "id": "grammar-3",
+            "type": "multiple-choice",
+            "question": "Complete: 'This is ___ book I have ever read.'",
+            "options": ["good", "better", "best", "the best"],
+            "correct": 3,
+            "explanation": "Use 'the best' (superlative) when comparing one thing to all others."
+          },
+          {
+            "id": "grammar-4",
+            "type": "multiple-choice",
+            "question": "Which modal verb is correct: 'You ___ see a doctor if you feel sick.'",
+            "options": ["can", "could", "should", "would"],
+            "correct": 2,
+            "explanation": "Use 'should' for advice or recommendations."
+          },
+          {
+            "id": "grammar-5",
+            "type": "multiple-choice",
+            "question": "Complete: 'I ___ to visit my grandmother next week.'",
+            "options": ["am going", "go", "going", "goes"],
+            "correct": 0,
+            "explanation": "Use 'going to' for planned future actions."
+          },
+          {
+            "id": "grammar-6",
+            "type": "multiple-choice",
+            "question": "Which preposition is correct: 'I'll meet you ___ 3 PM.'",
+            "options": ["in", "on", "at", "by"],
+            "correct": 2,
+            "explanation": "Use 'at' for specific times."
+          },
+          {
+            "id": "grammar-7",
+            "type": "multiple-choice",
+            "question": "Complete: 'She ___ her keys yesterday.'",
+            "options": ["lose", "lost", "losing", "loses"],
+            "correct": 1,
+            "explanation": "Use 'lost' (past simple) for completed actions in the past."
+          },
+          {
+            "id": "grammar-8",
+            "type": "multiple-choice",
+            "question": "Which sentence uses the present continuous correctly?",
+            "options": ["I am study English", "I am studying English", "I studying English", "I study English now"],
+            "correct": 1,
+            "explanation": "Present continuous requires 'am/is/are' + verb + -ing."
+          },
+          {
+            "id": "grammar-9",
+            "type": "multiple-choice",
+            "question": "Complete: 'This restaurant is ___ than the other one.'",
+            "options": ["expensive", "more expensive", "most expensive", "expensiver"],
+            "correct": 1,
+            "explanation": "Use 'more + adjective' for comparative forms of long adjectives."
+          },
+          {
+            "id": "grammar-10",
+            "type": "multiple-choice",
+            "question": "Which modal verb expresses ability?",
+            "options": ["should", "can", "must", "will"],
+            "correct": 1,
+            "explanation": "'Can' expresses ability or possibility."
+          }
+        ]
+      },
+      "vocabulary": {
+        "title": "A2 Vocabulary Practice Test",
+        "description": "Test your A2 vocabulary knowledge including shopping, travel, health, and work terms",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "vocab-1",
+            "type": "multiple-choice",
+            "question": "What do you call a reduction in price?",
+            "options": ["Receipt", "Discount", "Brand", "Size"],
+            "correct": 1,
+            "explanation": "A discount is a reduction in price."
+          },
+          {
+            "id": "vocab-2",
+            "type": "multiple-choice",
+            "question": "Which word means 'pain in your head'?",
+            "options": ["Fever", "Headache", "Throat", "Stomach"],
+            "correct": 1,
+            "explanation": "A headache is pain in your head."
+          },
+          {
+            "id": "vocab-3",
+            "type": "multiple-choice",
+            "question": "What do you call a person you work with?",
+            "options": ["Boss", "Colleague", "Customer", "Client"],
+            "correct": 1,
+            "explanation": "A colleague is a person you work with."
+          },
+          {
+            "id": "vocab-4",
+            "type": "multiple-choice",
+            "question": "Which word means 'a gentle wind'?",
+            "options": ["Storm", "Breeze", "Thunder", "Fog"],
+            "correct": 1,
+            "explanation": "A breeze is a gentle wind."
+          },
+          {
+            "id": "vocab-5",
+            "type": "multiple-choice",
+            "question": "What do you call an activity you do for pleasure in your free time?",
+            "options": ["Work", "Hobby", "Meeting", "Deadline"],
+            "correct": 1,
+            "explanation": "A hobby is an activity you do for pleasure in your free time."
+          },
+          {
+            "id": "vocab-6",
+            "type": "multiple-choice",
+            "question": "Which word means 'a piece of paper showing what you bought'?",
+            "options": ["Ticket", "Receipt", "Passport", "Boarding pass"],
+            "correct": 1,
+            "explanation": "A receipt shows what you bought and how much you paid."
+          },
+          {
+            "id": "vocab-7",
+            "type": "multiple-choice",
+            "question": "What do you call a planned meeting with a doctor?",
+            "options": ["Prescription", "Appointment", "Symptom", "Medicine"],
+            "correct": 1,
+            "explanation": "An appointment is a planned meeting with a doctor."
+          },
+          {
+            "id": "vocab-8",
+            "type": "multiple-choice",
+            "question": "Which word means 'the place you are traveling to'?",
+            "options": ["Route", "Destination", "Platform", "Schedule"],
+            "correct": 1,
+            "explanation": "A destination is the place you are traveling to."
+          },
+          {
+            "id": "vocab-9",
+            "type": "multiple-choice",
+            "question": "What do you call a funny movie or show?",
+            "options": ["Drama", "Comedy", "Novel", "Concert"],
+            "correct": 1,
+            "explanation": "A comedy is a funny movie, play, or show."
+          },
+          {
+            "id": "vocab-10",
+            "type": "multiple-choice",
+            "question": "Which word means 'the money you earn for your work'?",
+            "options": ["Price", "Salary", "Fare", "Discount"],
+            "correct": 1,
+            "explanation": "A salary is the money you earn for your work."
+          }
+        ]
+      },
+      "listening": {
+        "title": "A2 Listening Practice Test",
+        "description": "Test your listening comprehension skills with everyday conversations and announcements",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "listening-1",
+            "type": "multiple-choice",
+            "question": "Listen to the conversation: 'Excuse me, where are the fitting rooms?' 'They're on the second floor, next to the escalator.' Where are the fitting rooms?",
+            "options": ["First floor", "Second floor", "Third floor", "Ground floor"],
+            "correct": 1,
+            "explanation": "The fitting rooms are on the second floor."
+          },
+          {
+            "id": "listening-2",
+            "type": "multiple-choice",
+            "question": "Listen to the announcement: 'Flight BA123 to London is now boarding at Gate 7. Please have your boarding pass ready.' What flight is boarding?",
+            "options": ["BA123", "BA124", "BA125", "BA126"],
+            "correct": 0,
+            "explanation": "Flight BA123 is boarding."
+          },
+          {
+            "id": "listening-3",
+            "type": "multiple-choice",
+            "question": "Listen to the conversation: 'I have a terrible headache.' 'You should take some medicine and rest.' What should the person do?",
+            "options": ["Go to work", "Take medicine and rest", "See a doctor immediately", "Drink coffee"],
+            "correct": 1,
+            "explanation": "The person should take medicine and rest."
+          },
+          {
+            "id": "listening-4",
+            "type": "multiple-choice",
+            "question": "Listen to the weather report: 'Today will be sunny with a high of 25 degrees Celsius.' What's the weather like today?",
+            "options": ["Rainy", "Sunny", "Cloudy", "Snowy"],
+            "correct": 1,
+            "explanation": "Today will be sunny."
+          },
+          {
+            "id": "listening-5",
+            "type": "multiple-choice",
+            "question": "Listen to the conversation: 'What's your hobby?' 'I love reading novels and going to concerts.' What are the person's hobbies?",
+            "options": ["Reading and music", "Reading novels and concerts", "Reading and concerts", "Novels and concerts"],
+            "correct": 1,
+            "explanation": "The person's hobbies are reading novels and going to concerts."
+          }
+        ]
+      },
+      "reading": {
+        "title": "A2 Reading Practice Test",
+        "description": "Test your reading comprehension with short texts about everyday situations",
+        "timeLimit": 20,
+        "questions": [
+          {
+            "id": "reading-1",
+            "type": "multiple-choice",
+            "question": "Read the text: 'SALE! All items 50% off this weekend only. Don't miss this great opportunity to save money on clothing, electronics, and home goods.' What is happening this weekend?",
+            "options": ["A regular shopping day", "A 50% off sale", "A store opening", "A holiday"],
+            "correct": 1,
+            "explanation": "There's a 50% off sale this weekend."
+          },
+          {
+            "id": "reading-2",
+            "type": "multiple-choice",
+            "question": "Read the text: 'Dear Mr. Johnson, Thank you for your application. We would like to invite you for an interview on Friday, March 15th at 2:00 PM. Please bring your resume and arrive 10 minutes early.' What should Mr. Johnson bring to the interview?",
+            "options": ["A gift", "His resume", "A friend", "Lunch"],
+            "correct": 1,
+            "explanation": "Mr. Johnson should bring his resume."
+          },
+          {
+            "id": "reading-3",
+            "type": "multiple-choice",
+            "question": "Read the text: 'Weather Forecast: Today will be cloudy with occasional rain. High temperature 18°C, low temperature 12°C. Bring an umbrella if you're going out.' What should you bring if going out?",
+            "options": ["A coat", "An umbrella", "Sunglasses", "A hat"],
+            "correct": 1,
+            "explanation": "You should bring an umbrella if going out."
+          },
+          {
+            "id": "reading-4",
+            "type": "multiple-choice",
+            "question": "Read the text: 'Doctor's Office: We are closed on weekends. For emergencies, please call 911. Regular appointments available Monday-Friday 9 AM-5 PM.' When is the doctor's office open?",
+            "options": ["Every day", "Monday-Friday", "Weekends only", "Evenings only"],
+            "correct": 1,
+            "explanation": "The doctor's office is open Monday-Friday."
+          },
+          {
+            "id": "reading-5",
+            "type": "multiple-choice",
+            "question": "Read the text: 'Train Schedule: The 8:30 AM train to Central Station has been delayed by 15 minutes due to technical difficulties. We apologize for any inconvenience.' How long is the train delayed?",
+            "options": ["5 minutes", "10 minutes", "15 minutes", "30 minutes"],
+            "correct": 2,
+            "explanation": "The train is delayed by 15 minutes."
+          }
+        ]
+      }
+    },
+    "finalAssessment": {
+      "title": "A2 Level Final Assessment",
+      "description": "Comprehensive evaluation of A2 level skills and knowledge",
+      "timeLimit": 60,
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Grammar & Vocabulary",
+          "questions": [
+            {
+              "id": "final-1",
+              "type": "multiple-choice",
+              "question": "Complete: 'I ___ to the cinema last night.'",
+              "options": ["go", "went", "gone", "going"],
+              "correct": 1,
+              "explanation": "Use past simple for completed actions in the past."
+            },
+            {
+              "id": "final-2",
+              "type": "multiple-choice",
+              "question": "Which word means 'a reduction in price'?",
+              "options": ["Receipt", "Discount", "Brand", "Sale"],
+              "correct": 1,
+              "explanation": "A discount is a reduction in price."
+            },
+            {
+              "id": "final-3",
+              "type": "multiple-choice",
+              "question": "Complete: 'You ___ see a doctor if you feel sick.'",
+              "options": ["can", "could", "should", "would"],
+              "correct": 2,
+              "explanation": "Use 'should' for advice."
+            },
+            {
+              "id": "final-4",
+              "type": "multiple-choice",
+              "question": "What do you call a person you work with?",
+              "options": ["Boss", "Colleague", "Customer", "Client"],
+              "correct": 1,
+              "explanation": "A colleague is a person you work with."
+            },
+            {
+              "id": "final-5",
+              "type": "multiple-choice",
+              "question": "Complete: 'I ___ to visit my grandmother next week.'",
+              "options": ["am going", "go", "going", "goes"],
+              "correct": 0,
+              "explanation": "Use 'going to' for planned future actions."
+            }
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Reading Comprehension",
+          "questions": [
+            {
+              "id": "final-6",
+              "type": "multiple-choice",
+              "question": "Read: 'SALE! All items 30% off. Limited time offer. No returns on sale items.' What percentage discount is offered?",
+              "options": ["20%", "30%", "40%", "50%"],
+              "correct": 1,
+              "explanation": "The sale offers 30% off."
+            },
+            {
+              "id": "final-7",
+              "type": "multiple-choice",
+              "question": "Read: 'Weather: Sunny today, high 25°C. Perfect day for outdoor activities.' What's the weather like?",
+              "options": ["Rainy", "Sunny", "Cloudy", "Snowy"],
+              "correct": 1,
+              "explanation": "The weather is sunny."
+            },
+            {
+              "id": "final-8",
+              "type": "multiple-choice",
+              "question": "Read: 'Doctor's appointment available on Tuesday at 3 PM. Please call to confirm.' When is the appointment?",
+              "options": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+              "correct": 1,
+              "explanation": "The appointment is on Tuesday."
+            }
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Listening Comprehension",
+          "questions": [
+            {
+              "id": "final-9",
+              "type": "multiple-choice",
+              "question": "Listen: 'The train to Central Station is now boarding at Platform 3.' Where should passengers go?",
+              "options": ["Platform 1", "Platform 2", "Platform 3", "Platform 4"],
+              "correct": 2,
+              "explanation": "Passengers should go to Platform 3."
+            },
+            {
+              "id": "final-10",
+              "type": "multiple-choice",
+              "question": "Listen: 'I have a terrible headache and fever.' What symptoms does the person have?",
+              "options": ["Headache only", "Fever only", "Headache and fever", "No symptoms"],
+              "correct": 2,
+              "explanation": "The person has both headache and fever."
+            }
+          ]
+        }
+      ],
+      "passingScore": 70,
+      "certificate": {
+        "title": "A2 Elementary English Certificate",
+        "description": "This certificate confirms completion of A2 level English studies",
+        "criteria": [
+          "Demonstrated understanding of basic grammar structures",
+          "Showed ability to communicate in simple everyday situations",
+          "Comprehended short texts and simple conversations",
+          "Used appropriate vocabulary for routine tasks"
+        ]
+      }
+    }
   }
 }

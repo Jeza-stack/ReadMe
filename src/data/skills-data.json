@@ -633,5 +633,479 @@
         }
       }
     }
+  },
+  "a2": {
+    "reading": {
+      "skill": "Reading",
+      "level": "A2",
+      "description": "Short, simple texts on familiar topics",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can read very short, simple texts",
+          "I can find specific, predictable information in simple everyday material",
+          "I can understand short, simple personal letters",
+          "I can understand simple written directions"
+        ],
+        "textTypes": [
+          "Personal letters",
+          "Simple articles",
+          "Advertisements",
+          "Basic instructions",
+          "Weather reports",
+          "Simple emails"
+        ],
+        "readingStrategies": [
+          "Skimming for main ideas",
+          "Scanning for specific information",
+          "Understanding vocabulary in context",
+          "Identifying key details"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "reading-1",
+          "title": "Shopping Advertisements",
+          "description": "Read and understand simple shopping advertisements",
+          "type": "comprehension",
+          "content": [
+            {
+              "text": "SUMMER SALE! All clothing 50% off this weekend only. Don't miss this great opportunity to save money on shirts, pants, dresses, and shoes. Limited time offer. No returns on sale items.",
+              "questions": [
+                {
+                  "question": "What is the discount percentage?",
+                  "options": ["25%", "50%", "75%", "100%"],
+                  "correct": 1
+                },
+                {
+                  "question": "When is the sale available?",
+                  "options": ["All month", "This weekend only", "Next week", "All year"],
+                  "correct": 1
+                },
+                {
+                  "question": "What items are on sale?",
+                  "options": ["Only shoes", "Only shirts", "Clothing items", "Electronics"],
+                  "correct": 2
+                }
+              ]
+            },
+            {
+              "text": "NEW RESTAURANT OPENING! Grand Opening this Friday at 6 PM. Free appetizer with any main course. Located at 123 Main Street. Call 555-0123 for reservations.",
+              "questions": [
+                {
+                  "question": "When is the restaurant opening?",
+                  "options": ["Thursday", "Friday", "Saturday", "Sunday"],
+                  "correct": 1
+                },
+                {
+                  "question": "What is the special offer?",
+                  "options": ["Free dessert", "Free appetizer", "Free drink", "Free main course"],
+                  "correct": 1
+                },
+                {
+                  "question": "What should you do to get a table?",
+                  "options": ["Just show up", "Call 555-0123", "Send an email", "Visit the website"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-2",
+          "title": "Personal Letters",
+          "description": "Read and understand simple personal letters",
+          "type": "comprehension",
+          "content": [
+            {
+              "text": "Dear Maria,\n\nThank you for your letter. I am very happy to hear that you are doing well in your new job. The weather here has been very nice lately - sunny and warm.\n\nI am planning to visit you next month. I will arrive on March 15th at 2:00 PM. Can you meet me at the train station?\n\nPlease let me know if this time works for you.\n\nBest regards,\nAna",
+              "questions": [
+                {
+                  "question": "What is the weather like where Ana is?",
+                  "options": ["Cold and rainy", "Sunny and warm", "Snowy", "Cloudy"],
+                  "correct": 1
+                },
+                {
+                  "question": "When will Ana arrive?",
+                  "options": ["March 10th", "March 15th", "March 20th", "March 25th"],
+                  "correct": 1
+                },
+                {
+                  "question": "Where should Maria meet Ana?",
+                  "options": ["At the airport", "At the train station", "At the bus station", "At the hotel"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-3",
+          "title": "Weather Reports",
+          "description": "Read and understand simple weather forecasts",
+          "type": "comprehension",
+          "content": [
+            {
+              "text": "WEATHER FORECAST\n\nToday: Sunny with a high of 25°C. Light breeze in the afternoon.\n\nTomorrow: Cloudy with occasional rain. High temperature 18°C, low temperature 12°C.\n\nWednesday: Partly cloudy. High 22°C, low 15°C.\n\nDon't forget your umbrella tomorrow!",
+              "questions": [
+                {
+                  "question": "What's the weather like today?",
+                  "options": ["Rainy", "Sunny", "Cloudy", "Snowy"],
+                  "correct": 1
+                },
+                {
+                  "question": "What should you bring tomorrow?",
+                  "options": ["Sunglasses", "An umbrella", "A coat", "A hat"],
+                  "correct": 1
+                },
+                {
+                  "question": "What's the temperature today?",
+                  "options": ["18°C", "22°C", "25°C", "30°C"],
+                  "correct": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "listening": {
+      "skill": "Listening",
+      "level": "A2",
+      "description": "Phrases and vocabulary about immediate needs",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can understand phrases and vocabulary about immediate needs",
+          "I can understand simple announcements and messages",
+          "I can understand simple conversations about familiar topics",
+          "I can understand basic directions and instructions"
+        ],
+        "audioTypes": [
+          "Announcements",
+          "Simple interviews",
+          "Basic dialogues",
+          "Weather reports",
+          "Travel information",
+          "Shopping conversations"
+        ],
+        "listeningStrategies": [
+          "Listening for key words",
+          "Understanding main ideas",
+          "Following simple instructions",
+          "Identifying specific information"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "listening-1",
+          "title": "Shopping Conversations",
+          "description": "Listen to simple shopping conversations",
+          "type": "comprehension",
+          "content": [
+            {
+              "audioScript": "Customer: Excuse me, where are the fitting rooms?\nSalesperson: They're on the second floor, next to the escalator.\nCustomer: Thank you. And do you have this shirt in a larger size?\nSalesperson: Let me check. Yes, we have it in large and extra large.\nCustomer: Perfect. I'll take the large one.",
+              "questions": [
+                {
+                  "question": "Where are the fitting rooms?",
+                  "options": ["First floor", "Second floor", "Third floor", "Ground floor"],
+                  "correct": 1
+                },
+                {
+                  "question": "What size does the customer want?",
+                  "options": ["Small", "Medium", "Large", "Extra large"],
+                  "correct": 2
+                },
+                {
+                  "question": "What does the customer want to buy?",
+                  "options": ["Pants", "A shirt", "Shoes", "A dress"],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "audioScript": "Customer: How much does this cost?\nSalesperson: This item is $25.99.\nCustomer: Is there a discount?\nSalesperson: Yes, there's a 20% discount on all items this week.\nCustomer: Great! I'll take it.",
+              "questions": [
+                {
+                  "question": "What's the original price?",
+                  "options": ["$20.99", "$25.99", "$30.99", "$35.99"],
+                  "correct": 1
+                },
+                {
+                  "question": "What's the discount percentage?",
+                  "options": ["10%", "15%", "20%", "25%"],
+                  "correct": 2
+                },
+                {
+                  "question": "How long is the discount available?",
+                  "options": ["One day", "This week", "This month", "All year"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "listening-2",
+          "title": "Travel Announcements",
+          "description": "Listen to travel announcements and information",
+          "type": "comprehension",
+          "content": [
+            {
+              "audioScript": "Attention passengers. Flight BA123 to London is now boarding at Gate 7. Please have your boarding pass ready. We will begin boarding in 10 minutes.",
+              "questions": [
+                {
+                  "question": "What flight is boarding?",
+                  "options": ["BA123", "BA124", "BA125", "BA126"],
+                  "correct": 0
+                },
+                {
+                  "question": "Where is the flight going?",
+                  "options": ["Paris", "London", "Berlin", "Rome"],
+                  "correct": 1
+                },
+                {
+                  "question": "At which gate should passengers go?",
+                  "options": ["Gate 5", "Gate 6", "Gate 7", "Gate 8"],
+                  "correct": 2
+                }
+              ]
+            },
+            {
+              "audioScript": "The train to Central Station has been delayed by 15 minutes due to technical difficulties. We apologize for any inconvenience. The next train will arrive at 3:45 PM.",
+              "questions": [
+                {
+                  "question": "How long is the delay?",
+                  "options": ["5 minutes", "10 minutes", "15 minutes", "30 minutes"],
+                  "correct": 2
+                },
+                {
+                  "question": "What's the reason for the delay?",
+                  "options": ["Weather", "Technical difficulties", "Staff shortage", "Track maintenance"],
+                  "correct": 1
+                },
+                {
+                  "question": "When will the next train arrive?",
+                  "options": ["3:30 PM", "3:45 PM", "4:00 PM", "4:15 PM"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "listening-3",
+          "title": "Weather Reports",
+          "description": "Listen to weather forecasts and reports",
+          "type": "comprehension",
+          "content": [
+            {
+              "audioScript": "Good morning. Today's weather forecast: Sunny skies with a high of 25 degrees Celsius. Light breeze in the afternoon. Perfect weather for outdoor activities.",
+              "questions": [
+                {
+                  "question": "What's the weather like today?",
+                  "options": ["Rainy", "Sunny", "Cloudy", "Snowy"],
+                  "correct": 1
+                },
+                {
+                  "question": "What's the high temperature?",
+                  "options": ["20°C", "25°C", "30°C", "35°C"],
+                  "correct": 1
+                },
+                {
+                  "question": "What's the wind like?",
+                  "options": ["Strong wind", "Light breeze", "No wind", "Stormy"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "writing": {
+      "skill": "Writing",
+      "level": "A2",
+      "description": "Simple connected text on familiar topics",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can write short, simple notes and messages",
+          "I can write a simple personal letter",
+          "I can write about everyday activities",
+          "I can fill in simple forms"
+        ],
+        "textTypes": [
+          "Personal letters",
+          "Simple descriptions",
+          "Basic stories",
+          "Email messages",
+          "Notes and messages",
+          "Simple forms"
+        ],
+        "writingStrategies": [
+          "Using simple sentences",
+          "Connecting ideas with basic conjunctions",
+          "Describing personal experiences",
+          "Expressing simple opinions"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "writing-1",
+          "title": "Personal Letters",
+          "description": "Write simple personal letters",
+          "type": "composition",
+          "content": [
+            {
+              "prompt": "Write a letter to a friend about your recent vacation. Include: where you went, what you did, and how you felt about it.",
+              "guidelines": [
+                "Use simple past tense",
+                "Include basic details",
+                "Express your feelings",
+                "Ask about your friend"
+              ],
+              "example": "Dear Sarah,\n\nI hope you are well. I just returned from my vacation in Paris. It was wonderful!\n\nI visited the Eiffel Tower and the Louvre Museum. The weather was sunny and warm. I ate delicious French food every day.\n\nI really enjoyed my trip. Paris is a beautiful city. I took many photos.\n\nHow are you? What have you been doing?\n\nBest regards,\nMaria"
+            }
+          ]
+        },
+        {
+          "id": "writing-2",
+          "title": "Email Messages",
+          "description": "Write simple email messages",
+          "type": "composition",
+          "content": [
+            {
+              "prompt": "Write an email to your colleague about a meeting. Include: when the meeting is, what it's about, and what to bring.",
+              "guidelines": [
+                "Use clear, simple language",
+                "Include all necessary information",
+                "Be polite and professional",
+                "Use appropriate email format"
+              ],
+              "example": "Subject: Meeting Tomorrow\n\nHi John,\n\nI hope this email finds you well.\n\nWe have a team meeting tomorrow at 2:00 PM in Conference Room A. The meeting is about the new project schedule.\n\nPlease bring your project notes and any questions you have.\n\nLet me know if you can attend.\n\nBest regards,\nMaria"
+            }
+          ]
+        },
+        {
+          "id": "writing-3",
+          "title": "Simple Descriptions",
+          "description": "Write simple descriptions of people, places, and things",
+          "type": "composition",
+          "content": [
+            {
+              "prompt": "Describe your favorite restaurant. Include: what kind of food it serves, where it is, and why you like it.",
+              "guidelines": [
+                "Use descriptive adjectives",
+                "Include basic details",
+                "Express your opinion",
+                "Use simple sentences"
+              ],
+              "example": "My favorite restaurant is called 'Pizza Palace'. It is an Italian restaurant in the city center. They serve delicious pizza and pasta.\n\nThe restaurant is small but cozy. The staff is very friendly. The prices are reasonable.\n\nI like this restaurant because the food is always fresh and tasty. I go there every week with my friends."
+            }
+          ]
+        }
+      ]
+    },
+    "speaking": {
+      "skill": "Speaking",
+      "level": "A2",
+      "description": "Simple conversations about routine matters",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can communicate in simple routine tasks",
+          "I can describe my family, living conditions, and educational background",
+          "I can describe in simple terms aspects of my background",
+          "I can make simple requests and ask for information"
+        ],
+        "conversationTypes": [
+          "Describe experiences",
+          "Make requests",
+          "Give opinions",
+          "Talk about plans",
+          "Ask for information",
+          "Express preferences"
+        ],
+        "speakingStrategies": [
+          "Using simple vocabulary",
+          "Asking for clarification",
+          "Expressing basic opinions",
+          "Describing personal experiences"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "speaking-1",
+          "title": "Shopping Conversations",
+          "description": "Practice shopping conversations",
+          "type": "dialogue",
+          "content": [
+            {
+              "scenario": "You are in a clothing store. You want to buy a shirt.",
+              "dialogue": [
+                "You: Excuse me, do you have this shirt in blue?",
+                "Salesperson: Let me check. Yes, we have it in blue. What size do you need?",
+                "You: I need a medium size.",
+                "Salesperson: Here you are. Would you like to try it on?",
+                "You: Yes, please. Where are the fitting rooms?",
+                "Salesperson: They're over there, next to the mirror.",
+                "You: Thank you. How much does it cost?",
+                "Salesperson: It's $35.99.",
+                "You: That's perfect. I'll take it."
+              ],
+              "practicePoints": [
+                "Asking about availability",
+                "Requesting sizes",
+                "Asking about prices",
+                "Making purchases"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "speaking-2",
+          "title": "Making Plans",
+          "description": "Practice making plans and arrangements",
+          "type": "dialogue",
+          "content": [
+            {
+              "scenario": "You are making plans to meet a friend for dinner.",
+              "dialogue": [
+                "You: Hi, are you free this weekend?",
+                "Friend: Yes, I am. What do you have in mind?",
+                "You: Would you like to have dinner on Saturday?",
+                "Friend: That sounds great! What time?",
+                "You: How about 7:00 PM?",
+                "Friend: Perfect. Where should we meet?",
+                "You: Let's meet at the Italian restaurant downtown.",
+                "Friend: Good idea. I'll see you there at 7:00 PM.",
+                "You: Great! See you then."
+              ],
+              "practicePoints": [
+                "Making invitations",
+                "Suggesting times and places",
+                "Confirming arrangements",
+                "Expressing agreement"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "speaking-3",
+          "title": "Describing Experiences",
+          "description": "Practice describing personal experiences",
+          "type": "monologue",
+          "content": [
+            {
+              "scenario": "Describe your last vacation",
+              "guidelines": [
+                "Use past simple tense",
+                "Include basic details",
+                "Express your feelings",
+                "Use descriptive words"
+              ],
+              "example": "Last summer, I went to the beach with my family. We stayed in a small hotel near the ocean. The weather was sunny and warm every day.\n\nWe spent our time swimming in the sea and walking on the beach. I also tried surfing for the first time. It was difficult but fun.\n\nThe food was delicious, especially the fresh seafood. We ate at local restaurants every evening.\n\nI really enjoyed my vacation. It was relaxing and exciting at the same time. I would like to go back next year."
+            }
+          ]
+        }
+      ]
+    }
   }
 }
