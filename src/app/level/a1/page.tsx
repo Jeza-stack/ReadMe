@@ -30,25 +30,29 @@ export default function A1Level() {
       name: 'Reading',
       icon: <BookOpen className="w-6 h-6" />,
       description: 'Simple texts about familiar topics',
-      activities: ['Personal ads', 'Simple emails', 'Basic signs', 'Short messages']
+      activities: ['Personal ads', 'Simple emails', 'Basic signs', 'Short messages'],
+      href: '/level/a1/reading-practice'
     },
     {
       name: 'Listening',
       icon: <Headphones className="w-6 h-6" />,
       description: 'Slow, clear speech about familiar matters',
-      activities: ['Introductions', 'Simple directions', 'Basic conversations', 'Phone numbers']
+      activities: ['Introductions', 'Simple directions', 'Basic conversations', 'Phone numbers'],
+      href: '/level/a1/listening-practice'
     },
     {
       name: 'Writing',
       icon: <PenTool className="w-6 h-6" />,
       description: 'Simple phrases and sentences',
-      activities: ['Fill forms', 'Write postcards', 'Short notes', 'Personal details']
+      activities: ['Fill forms', 'Write postcards', 'Short notes', 'Personal details'],
+      href: '/level/a1/writing-practice'
     },
     {
       name: 'Speaking',
       icon: <MessageSquare className="w-6 h-6" />,
       description: 'Simple phrases about yourself and familiar topics',
-      activities: ['Introduce yourself', 'Ask for things', 'Basic conversations', 'Describe people']
+      activities: ['Introduce yourself', 'Ask for things', 'Basic conversations', 'Describe people'],
+      href: '/level/a1/speaking-practice'
     }
   ];
 
@@ -231,8 +235,10 @@ export default function A1Level() {
                           <span className="text-sm">{activity}</span>
                         </div>
                       ))}
-                      <Button className="w-full mt-4">
-                        Practice {skill.name}
+                      <Button className="w-full mt-4" asChild>
+                        <Link href={skill.href}>
+                          Practice {skill.name}
+                        </Link>
                       </Button>
                     </div>
                   </CardContent>

@@ -1,0 +1,637 @@
+{
+  "a1": {
+    "reading": {
+      "skill": "Reading",
+      "level": "A1",
+      "description": "Simple texts about familiar topics",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can understand familiar names, words and very simple sentences",
+          "I can read very short, simple texts",
+          "I can find specific, predictable information in simple everyday material",
+          "I can understand short, simple messages on postcards"
+        ],
+        "textTypes": [
+          "Personal ads",
+          "Simple emails",
+          "Basic signs",
+          "Short messages"
+        ],
+        "readingStrategies": [
+          "Skimming for main ideas",
+          "Scanning for specific information",
+          "Understanding basic vocabulary in context"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "reading-1",
+          "title": "Personal Ads",
+          "description": "Read and understand simple personal advertisements",
+          "type": "comprehension",
+          "content": [
+            {
+              "text": "WANTED: English teacher for children. Part-time, weekends. Call 555-0123.",
+              "questions": [
+                {
+                  "question": "What job is being offered?",
+                  "options": ["English teacher", "Math teacher", "Science teacher", "Music teacher"],
+                  "correct": 0
+                },
+                {
+                  "question": "When is the job available?",
+                  "options": ["Weekdays", "Weekends", "Evenings", "Mornings"],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "text": "FOR SALE: Red car, 2018, good condition. $5,000. Phone: 555-0456",
+              "questions": [
+                {
+                  "question": "What color is the car?",
+                  "options": ["Blue", "Red", "Green", "White"],
+                  "correct": 1
+                },
+                {
+                  "question": "How much does the car cost?",
+                  "options": ["$3,000", "$4,000", "$5,000", "$6,000"],
+                  "correct": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-2",
+          "title": "Simple Emails",
+          "description": "Read and understand basic email messages",
+          "type": "comprehension",
+          "content": [
+            {
+              "text": "Hi Maria,\n\nThank you for your email. I am happy to help you with your English homework.\n\nPlease come to my office tomorrow at 2:00 PM.\n\nBest regards,\nMr. Johnson",
+              "questions": [
+                {
+                  "question": "Who is the email from?",
+                  "options": ["Maria", "Mr. Johnson", "The office", "The teacher"],
+                  "correct": 1
+                },
+                {
+                  "question": "What time is the meeting?",
+                  "options": ["1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-3",
+          "title": "Basic Signs",
+          "description": "Understand common signs and notices",
+          "type": "recognition",
+          "content": [
+            {
+              "text": "EXIT",
+              "questions": [
+                {
+                  "question": "What does this sign mean?",
+                  "options": ["Enter", "Exit", "Stop", "Go"],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "text": "NO SMOKING",
+              "questions": [
+                {
+                  "question": "What does this sign tell you?",
+                  "options": ["You can smoke here", "You cannot smoke here", "Smoking is allowed", "Smoking is optional"],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "text": "OPEN 9:00 AM - 6:00 PM",
+              "questions": [
+                {
+                  "question": "When does this place close?",
+                  "options": ["9:00 AM", "6:00 PM", "9:00 PM", "6:00 AM"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reading-4",
+          "title": "Short Messages",
+          "description": "Read and understand brief text messages",
+          "type": "comprehension",
+          "content": [
+            {
+              "text": "Hi! Are you free tomorrow? Let's meet for coffee at 3 PM.",
+              "questions": [
+                {
+                  "question": "What does the person want to do?",
+                  "options": ["Go shopping", "Meet for coffee", "Go to work", "Stay home"],
+                  "correct": 1
+                },
+                {
+                  "question": "What time is the meeting?",
+                  "options": ["2 PM", "3 PM", "4 PM", "5 PM"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment": {
+        "criteria": [
+          "Can understand basic vocabulary in context",
+          "Can identify main ideas in simple texts",
+          "Can find specific information in short texts",
+          "Can understand simple instructions and notices"
+        ],
+        "scoring": {
+          "excellent": "90-100%",
+          "good": "70-89%",
+          "satisfactory": "50-69%",
+          "needsImprovement": "Below 50%"
+        }
+      }
+    },
+    "listening": {
+      "skill": "Listening",
+      "level": "A1",
+      "description": "Slow, clear speech about familiar matters",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can understand when someone speaks very slowly and clearly",
+          "I can understand simple questions about personal information",
+          "I can understand numbers, prices and times",
+          "I can understand simple directions"
+        ],
+        "listeningTypes": [
+          "Introductions",
+          "Simple directions",
+          "Basic conversations",
+          "Phone numbers"
+        ],
+        "listeningStrategies": [
+          "Focusing on key words",
+          "Understanding numbers and times",
+          "Following simple instructions"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "listening-1",
+          "title": "Introductions",
+          "description": "Listen to and understand simple introductions",
+          "type": "comprehension",
+          "content": [
+            {
+              "audioText": "Hi, I'm Sarah. I'm from Canada. I'm a student. Nice to meet you.",
+              "questions": [
+                {
+                  "question": "What is the person's name?",
+                  "options": ["Sarah", "Canada", "Student", "Nice"],
+                  "correct": 0
+                },
+                {
+                  "question": "Where is she from?",
+                  "options": ["England", "Canada", "Australia", "America"],
+                  "correct": 1
+                },
+                {
+                  "question": "What does she do?",
+                  "options": ["Teacher", "Student", "Doctor", "Engineer"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "listening-2",
+          "title": "Simple Directions",
+          "description": "Listen to and follow basic directions",
+          "type": "comprehension",
+          "content": [
+            {
+              "audioText": "Go straight ahead. Turn left at the bank. The restaurant is on your right.",
+              "questions": [
+                {
+                  "question": "What should you do first?",
+                  "options": ["Turn left", "Turn right", "Go straight", "Stop"],
+                  "correct": 2
+                },
+                {
+                  "question": "Where should you turn left?",
+                  "options": ["At the restaurant", "At the bank", "At the corner", "At the traffic light"],
+                  "correct": 1
+                },
+                {
+                  "question": "Where is the restaurant?",
+                  "options": ["On your left", "On your right", "Straight ahead", "Behind you"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "listening-3",
+          "title": "Basic Conversations",
+          "description": "Listen to simple everyday conversations",
+          "type": "comprehension",
+          "content": [
+            {
+              "audioText": "A: How are you today?\nB: I'm fine, thank you. And you?\nA: I'm very well, thanks.",
+              "questions": [
+                {
+                  "question": "How is person B feeling?",
+                  "options": ["Sad", "Fine", "Tired", "Angry"],
+                  "correct": 1
+                },
+                {
+                  "question": "How is person A feeling?",
+                  "options": ["Okay", "Very well", "Not good", "Tired"],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "listening-4",
+          "title": "Phone Numbers",
+          "description": "Listen to and understand phone numbers",
+          "type": "recognition",
+          "content": [
+            {
+              "audioText": "My phone number is 555-1234.",
+              "questions": [
+                {
+                  "question": "What is the phone number?",
+                  "options": ["555-1234", "555-1243", "555-1324", "555-1342"],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "audioText": "Call me at 555-9876.",
+              "questions": [
+                {
+                  "question": "What is the phone number?",
+                  "options": ["555-9876", "555-9867", "555-9786", "555-9768"],
+                  "correct": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment": {
+        "criteria": [
+          "Can understand slow, clear speech",
+          "Can identify key information in conversations",
+          "Can understand simple questions and answers",
+          "Can follow basic directions"
+        ],
+        "scoring": {
+          "excellent": "90-100%",
+          "good": "70-89%",
+          "satisfactory": "50-69%",
+          "needsImprovement": "Below 50%"
+        }
+      }
+    },
+    "writing": {
+      "skill": "Writing",
+      "level": "A1",
+      "description": "Simple phrases and sentences",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can write simple isolated phrases and sentences",
+          "I can write a short, simple postcard",
+          "I can fill in forms with personal details",
+          "I can write simple sentences about myself"
+        ],
+        "writingTypes": [
+          "Fill forms",
+          "Write postcards",
+          "Short notes",
+          "Personal details"
+        ],
+        "writingStrategies": [
+          "Using basic vocabulary correctly",
+          "Writing simple sentences",
+          "Filling in forms accurately"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "writing-1",
+          "title": "Fill Forms",
+          "description": "Practice filling out basic forms with personal information",
+          "type": "form-filling",
+          "content": [
+            {
+              "formTitle": "Hotel Registration Form",
+              "fields": [
+                {
+                  "label": "First Name",
+                  "type": "text",
+                  "required": true,
+                  "example": "John"
+                },
+                {
+                  "label": "Last Name",
+                  "type": "text",
+                  "required": true,
+                  "example": "Smith"
+                },
+                {
+                  "label": "Date of Birth",
+                  "type": "date",
+                  "required": true,
+                  "example": "15/03/1990"
+                },
+                {
+                  "label": "Email Address",
+                  "type": "email",
+                  "required": true,
+                  "example": "john.smith@email.com"
+                },
+                {
+                  "label": "Phone Number",
+                  "type": "tel",
+                  "required": true,
+                  "example": "+1-555-123-4567"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "writing-2",
+          "title": "Write Postcards",
+          "description": "Practice writing simple postcard messages",
+          "type": "creative-writing",
+          "content": [
+            {
+              "scenario": "You are on vacation in Paris. Write a postcard to your friend.",
+              "template": {
+                "greeting": "Dear [Friend's Name],",
+                "body": "I am in Paris. The weather is [weather]. I am staying at [hotel name]. Today I [activity]. The food is [description]. I miss you!",
+                "closing": "Love, [Your Name]"
+              },
+              "prompts": [
+                "Write about the weather",
+                "Describe your hotel",
+                "Tell about one activity you did",
+                "Describe the food"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "writing-3",
+          "title": "Short Notes",
+          "description": "Practice writing brief messages and notes",
+          "type": "message-writing",
+          "content": [
+            {
+              "scenario": "Write a note to your roommate",
+              "template": "Hi [Name],\n\n[Your message here]\n\nThanks,\n[Your name]",
+              "examples": [
+                "I'm going to the store. I'll be back at 3 PM.",
+                "Please buy milk and bread. I'll pay you back.",
+                "I'm not feeling well today. I'm staying in bed.",
+                "The meeting is at 2 PM tomorrow. Don't forget!"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "writing-4",
+          "title": "Personal Details",
+          "description": "Practice writing about yourself and personal information",
+          "type": "descriptive-writing",
+          "content": [
+            {
+              "topic": "My Family",
+              "prompts": [
+                "Write about your family members",
+                "Describe their jobs",
+                "Write about where they live",
+                "Describe their personalities"
+              ],
+              "example": "My family is small. I have one brother and one sister. My brother is a teacher. My sister is a doctor. We live in London."
+            },
+            {
+              "topic": "My Daily Routine",
+              "prompts": [
+                "Write about what you do in the morning",
+                "Describe your work or school day",
+                "Write about your evening activities",
+                "Describe your weekend routine"
+              ],
+              "example": "I wake up at 7 AM. I have breakfast at 7:30 AM. I go to work at 8 AM. I work until 5 PM. I have dinner at 7 PM."
+            }
+          ]
+        }
+      ],
+      "assessment": {
+        "criteria": [
+          "Can write simple sentences correctly",
+          "Can fill forms with personal information",
+          "Can write basic messages and notes",
+          "Can use basic punctuation correctly"
+        ],
+        "scoring": {
+          "excellent": "90-100%",
+          "good": "70-89%",
+          "satisfactory": "50-69%",
+          "needsImprovement": "Below 50%"
+        }
+      }
+    },
+    "speaking": {
+      "skill": "Speaking",
+      "level": "A1",
+      "description": "Simple phrases about yourself and familiar topics",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can interact in a simple way if the other person speaks slowly",
+          "I can ask and answer simple questions about personal details",
+          "I can introduce myself and others",
+          "I can ask for things and respond to simple requests"
+        ],
+        "speakingTypes": [
+          "Introduce yourself",
+          "Ask for things",
+          "Basic conversations",
+          "Describe people"
+        ],
+        "speakingStrategies": [
+          "Using simple vocabulary",
+          "Speaking slowly and clearly",
+          "Asking for clarification when needed"
+        ]
+      },
+      "practiceActivities": [
+        {
+          "id": "speaking-1",
+          "title": "Introduce Yourself",
+          "description": "Practice introducing yourself and others",
+          "type": "conversation",
+          "content": [
+            {
+              "scenario": "Meeting someone new",
+              "dialogue": {
+                "personA": "Hi, I'm [Name]. Nice to meet you.",
+                "personB": "Hello, I'm [Name]. Nice to meet you too.",
+                "personA": "Where are you from?",
+                "personB": "I'm from [Country]. And you?",
+                "personA": "I'm from [Country]. What do you do?",
+                "personB": "I'm a [job]. What about you?",
+                "personA": "I'm a [job]. Do you like [hobby]?",
+                "personB": "Yes, I do. / No, I don't."
+              },
+              "prompts": [
+                "Say your name clearly",
+                "Tell where you are from",
+                "Describe your job or studies",
+                "Ask about the other person"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "speaking-2",
+          "title": "Ask for Things",
+          "description": "Practice asking for things and making simple requests",
+          "type": "requests",
+          "content": [
+            {
+              "scenario": "At a restaurant",
+              "phrases": [
+                "Can I have a menu, please?",
+                "I'd like a coffee, please.",
+                "How much is this?",
+                "Can I have the bill, please?",
+                "Thank you very much."
+              ],
+              "responses": [
+                "Here you are.",
+                "That's $5.50.",
+                "You're welcome.",
+                "No problem."
+              ]
+            },
+            {
+              "scenario": "At a store",
+              "phrases": [
+                "Do you have [item]?",
+                "How much does this cost?",
+                "Can I try this on?",
+                "Where is the [item]?",
+                "I'll take this, please."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "speaking-3",
+          "title": "Basic Conversations",
+          "description": "Practice everyday conversations",
+          "type": "dialogue",
+          "content": [
+            {
+              "topic": "Weather",
+              "conversation": [
+                "A: How's the weather today?",
+                "B: It's sunny and warm.",
+                "A: Do you like this weather?",
+                "B: Yes, I do. It's perfect for walking.",
+                "A: What's the temperature?",
+                "B: It's about 25 degrees Celsius."
+              ]
+            },
+            {
+              "topic": "Food",
+              "conversation": [
+                "A: What's your favorite food?",
+                "B: I like pizza. What about you?",
+                "A: I like pasta. Do you cook?",
+                "B: Yes, I cook sometimes. I'm not very good at it.",
+                "A: What do you usually eat for breakfast?",
+                "B: I usually have coffee and toast."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "speaking-4",
+          "title": "Describe People",
+          "description": "Practice describing people's appearance and personality",
+          "type": "description",
+          "content": [
+            {
+              "topic": "Physical Appearance",
+              "vocabulary": [
+                "tall/short",
+                "thin/fat",
+                "young/old",
+                "beautiful/handsome",
+                "long/short hair",
+                "blue/brown/green eyes"
+              ],
+              "sentences": [
+                "She is tall and thin.",
+                "He has short brown hair.",
+                "She has blue eyes.",
+                "He is young and handsome."
+              ]
+            },
+            {
+              "topic": "Personality",
+              "vocabulary": [
+                "friendly",
+                "shy",
+                "funny",
+                "serious",
+                "kind",
+                "smart"
+              ],
+              "sentences": [
+                "My friend is very friendly.",
+                "She is shy but kind.",
+                "He is funny and smart.",
+                "My teacher is serious but nice."
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment": {
+        "criteria": [
+          "Can introduce self and others",
+          "Can ask and answer simple questions",
+          "Can make simple requests",
+          "Can describe people and things"
+        ],
+        "scoring": {
+          "excellent": "90-100%",
+          "good": "70-89%",
+          "satisfactory": "50-69%",
+          "needsImprovement": "Below 50%"
+        }
+      }
+    }
+  }
+}
