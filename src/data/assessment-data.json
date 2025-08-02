@@ -1,0 +1,377 @@
+{
+  "a1": {
+    "practiceTests": {
+      "grammar": {
+        "title": "Grammar Practice Test",
+        "description": "Test your understanding of A1 grammar concepts",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "grammar-1",
+            "type": "multiple-choice",
+            "question": "Which article is correct: 'I have ___ apple.'",
+            "options": ["a", "an", "the", "no article"],
+            "correct": 1,
+            "explanation": "Use 'an' before words that start with vowel sounds (a, e, i, o, u)."
+          },
+          {
+            "id": "grammar-2",
+            "type": "multiple-choice",
+            "question": "Complete the sentence: 'She ___ a student.'",
+            "options": ["am", "is", "are", "be"],
+            "correct": 1,
+            "explanation": "Use 'is' with he/she/it in present simple."
+          },
+          {
+            "id": "grammar-3",
+            "type": "multiple-choice",
+            "question": "Which is correct: 'This is ___ book.'",
+            "options": ["my", "I", "me", "mine"],
+            "correct": 0,
+            "explanation": "Use 'my' as a possessive adjective before nouns."
+          },
+          {
+            "id": "grammar-4",
+            "type": "multiple-choice",
+            "question": "Complete: 'They ___ from London.'",
+            "options": ["am", "is", "are", "be"],
+            "correct": 2,
+            "explanation": "Use 'are' with they/we/you in present simple."
+          },
+          {
+            "id": "grammar-5",
+            "type": "multiple-choice",
+            "question": "Which question is correct?",
+            "options": ["Where you live?", "Where do you live?", "Where you do live?", "Where live you?"],
+            "correct": 1,
+            "explanation": "Use 'do/does' to form questions in present simple."
+          }
+        ]
+      },
+      "vocabulary": {
+        "title": "Vocabulary Practice Test",
+        "description": "Test your A1 vocabulary knowledge",
+        "timeLimit": 10,
+        "questions": [
+          {
+            "id": "vocab-1",
+            "type": "multiple-choice",
+            "question": "What color is the sky on a sunny day?",
+            "options": ["Red", "Blue", "Green", "Yellow"],
+            "correct": 1,
+            "explanation": "The sky is typically blue on sunny days."
+          },
+          {
+            "id": "vocab-2",
+            "type": "multiple-choice",
+            "question": "Which word means 'not big'?",
+            "options": ["Tall", "Small", "Long", "Wide"],
+            "correct": 1,
+            "explanation": "Small is the opposite of big."
+          },
+          {
+            "id": "vocab-3",
+            "type": "multiple-choice",
+            "question": "What do you call your mother's sister?",
+            "options": ["Sister", "Aunt", "Cousin", "Friend"],
+            "correct": 1,
+            "explanation": "Your mother's sister is your aunt."
+          },
+          {
+            "id": "vocab-4",
+            "type": "multiple-choice",
+            "question": "Which is a fruit?",
+            "options": ["Carrot", "Apple", "Potato", "Onion"],
+            "correct": 1,
+            "explanation": "Apple is a fruit, the others are vegetables."
+          },
+          {
+            "id": "vocab-5",
+            "type": "multiple-choice",
+            "question": "What do you use to write on paper?",
+            "options": ["Fork", "Pen", "Phone", "Book"],
+            "correct": 1,
+            "explanation": "A pen is used to write on paper."
+          }
+        ]
+      },
+      "listening": {
+        "title": "Listening Practice Test",
+        "description": "Test your listening comprehension skills",
+        "timeLimit": 12,
+        "questions": [
+          {
+            "id": "listen-1",
+            "type": "audio-question",
+            "audioText": "Hi, I'm Maria. I'm 25 years old. I live in Madrid. I'm a teacher.",
+            "question": "How old is Maria?",
+            "options": ["20", "25", "30", "35"],
+            "correct": 1,
+            "explanation": "Maria says she is 25 years old."
+          },
+          {
+            "id": "listen-2",
+            "type": "audio-question",
+            "audioText": "My phone number is 555-1234. Please call me tomorrow.",
+            "question": "What is the phone number?",
+            "options": ["555-1234", "555-1243", "555-1324", "555-1342"],
+            "correct": 0,
+            "explanation": "The speaker says the number is 555-1234."
+          },
+          {
+            "id": "listen-3",
+            "type": "audio-question",
+            "audioText": "The weather is sunny and warm today. It's perfect for a walk.",
+            "question": "What is the weather like?",
+            "options": ["Rainy and cold", "Sunny and warm", "Cloudy and cool", "Windy and cold"],
+            "correct": 1,
+            "explanation": "The speaker says it's sunny and warm."
+          },
+          {
+            "id": "listen-4",
+            "type": "audio-question",
+            "audioText": "I like pizza and pasta. My favorite food is Italian.",
+            "question": "What is the person's favorite food?",
+            "options": ["Chinese", "Italian", "Mexican", "Japanese"],
+            "correct": 1,
+            "explanation": "The speaker says their favorite food is Italian."
+          },
+          {
+            "id": "listen-5",
+            "type": "audio-question",
+            "audioText": "The meeting is at 3 PM tomorrow. Don't be late.",
+            "question": "When is the meeting?",
+            "options": ["Today at 3 PM", "Tomorrow at 3 PM", "Next week at 3 PM", "Yesterday at 3 PM"],
+            "correct": 1,
+            "explanation": "The speaker says the meeting is tomorrow at 3 PM."
+          }
+        ]
+      },
+      "reading": {
+        "title": "Reading Practice Test",
+        "description": "Test your reading comprehension skills",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "read-1",
+            "type": "text-question",
+            "text": "WANTED: English teacher for children. Part-time, weekends. Call 555-0123.",
+            "question": "What job is being offered?",
+            "options": ["Math teacher", "English teacher", "Science teacher", "Music teacher"],
+            "correct": 1,
+            "explanation": "The ad says 'English teacher for children'."
+          },
+          {
+            "id": "read-2",
+            "type": "text-question",
+            "text": "Hi Maria, Thank you for your email. I am happy to help you with your English homework. Please come to my office tomorrow at 2:00 PM. Best regards, Mr. Johnson",
+            "question": "Who is the email from?",
+            "options": ["Maria", "Mr. Johnson", "The office", "The teacher"],
+            "correct": 1,
+            "explanation": "The email is signed 'Mr. Johnson'."
+          },
+          {
+            "id": "read-3",
+            "type": "text-question",
+            "text": "EXIT",
+            "question": "What does this sign mean?",
+            "options": ["Enter", "Exit", "Stop", "Go"],
+            "correct": 1,
+            "explanation": "EXIT means the way out."
+          },
+          {
+            "id": "read-4",
+            "type": "text-question",
+            "text": "Hi! Are you free tomorrow? Let's meet for coffee at 3 PM.",
+            "question": "What does the person want to do?",
+            "options": ["Go shopping", "Meet for coffee", "Go to work", "Stay home"],
+            "correct": 1,
+            "explanation": "The message says 'Let's meet for coffee'."
+          },
+          {
+            "id": "read-5",
+            "type": "text-question",
+            "text": "OPEN 9:00 AM - 6:00 PM",
+            "question": "When does this place close?",
+            "options": ["9:00 AM", "6:00 PM", "9:00 PM", "6:00 AM"],
+            "correct": 1,
+            "explanation": "The sign shows closing time is 6:00 PM."
+          }
+        ]
+      }
+    },
+    "finalAssessment": {
+      "title": "A1 Final Assessment",
+      "description": "Complete evaluation of your A1 level skills",
+      "timeLimit": 45,
+      "sections": {
+        "speaking": {
+          "title": "Speaking Assessment",
+          "description": "Record your responses to speaking prompts",
+          "questions": [
+            {
+              "id": "speak-1",
+              "type": "speaking",
+              "prompt": "Introduce yourself. Say your name, age, where you're from, and what you do.",
+              "timeLimit": 30,
+              "criteria": [
+                "Clear pronunciation",
+                "Correct grammar",
+                "Complete information",
+                "Confident delivery"
+              ]
+            },
+            {
+              "id": "speak-2",
+              "type": "speaking",
+              "prompt": "Describe your family. Talk about your parents, siblings, and where you live.",
+              "timeLimit": 45,
+              "criteria": [
+                "Use of family vocabulary",
+                "Present simple tense",
+                "Possessive adjectives",
+                "Clear descriptions"
+              ]
+            },
+            {
+              "id": "speak-3",
+              "type": "speaking",
+              "prompt": "Ask for directions to the nearest restaurant.",
+              "timeLimit": 30,
+              "criteria": [
+                "Polite requests",
+                "Question formation",
+                "Clear communication",
+                "Appropriate vocabulary"
+              ]
+            }
+          ]
+        },
+        "writing": {
+          "title": "Writing Assessment",
+          "description": "Complete writing tasks to demonstrate your skills",
+          "tasks": [
+            {
+              "id": "write-1",
+              "type": "writing",
+              "task": "Write a short email to a friend about your weekend plans.",
+              "requirements": [
+                "Use proper email format",
+                "Include greeting and closing",
+                "Write 3-4 sentences",
+                "Use present simple tense"
+              ],
+              "wordLimit": "50-80 words",
+              "timeLimit": 15
+            },
+            {
+              "id": "write-2",
+              "type": "writing",
+              "task": "Fill out a hotel registration form with your personal information.",
+              "requirements": [
+                "Complete all required fields",
+                "Use correct personal information",
+                "Write clearly and legibly",
+                "Follow form format"
+              ],
+              "timeLimit": 10
+            },
+            {
+              "id": "write-3",
+              "type": "writing",
+              "task": "Write a short note to your roommate about a meeting tomorrow.",
+              "requirements": [
+                "Clear message",
+                "Include time and place",
+                "Use simple sentences",
+                "Write 2-3 sentences"
+              ],
+              "wordLimit": "30-50 words",
+              "timeLimit": 10
+            }
+          ]
+        },
+        "comprehensive": {
+          "title": "Comprehensive Test",
+          "description": "Mixed questions covering all A1 skills",
+          "questions": [
+            {
+              "id": "comp-1",
+              "type": "multiple-choice",
+              "category": "grammar",
+              "question": "Which sentence is correct?",
+              "options": [
+                "I am student.",
+                "I am a student.",
+                "I am student a.",
+                "I student am."
+              ],
+              "correct": 1,
+              "explanation": "Use 'a/an' before singular countable nouns."
+            },
+            {
+              "id": "comp-2",
+              "type": "multiple-choice",
+              "category": "vocabulary",
+              "question": "What is the opposite of 'hot'?",
+              "options": ["Warm", "Cold", "Cool", "Nice"],
+              "correct": 1,
+              "explanation": "Cold is the opposite of hot."
+            },
+            {
+              "id": "comp-3",
+              "type": "audio-question",
+              "category": "listening",
+              "audioText": "My name is John. I'm from Canada. I speak English and French.",
+              "question": "What languages does John speak?",
+              "options": [
+                "Only English",
+                "Only French", 
+                "English and French",
+                "English and Spanish"
+              ],
+              "correct": 2,
+              "explanation": "John says he speaks English and French."
+            },
+            {
+              "id": "comp-4",
+              "type": "text-question",
+              "category": "reading",
+              "text": "FOR SALE: Red car, 2018, good condition. $5,000. Phone: 555-0456",
+              "question": "How much does the car cost?",
+              "options": ["$3,000", "$4,000", "$5,000", "$6,000"],
+              "correct": 2,
+              "explanation": "The ad shows the price is $5,000."
+            },
+            {
+              "id": "comp-5",
+              "type": "multiple-choice",
+              "category": "grammar",
+              "question": "Complete: 'She ___ her homework every day.'",
+              "options": ["do", "does", "doing", "done"],
+              "correct": 1,
+              "explanation": "Use 'does' with he/she/it in present simple."
+            }
+          ]
+        }
+      },
+      "scoring": {
+        "passingScore": 70,
+        "excellent": "90-100%",
+        "good": "70-89%",
+        "satisfactory": "50-69%",
+        "needsImprovement": "Below 50%"
+      },
+      "certificate": {
+        "title": "A1 Level Certificate",
+        "description": "Certificate of completion for A1 level",
+        "criteria": [
+          "Complete all assessment sections",
+          "Achieve minimum 70% overall score",
+          "Demonstrate all four skills",
+          "Meet CEFR A1 standards"
+        ]
+      }
+    }
+  }
+}

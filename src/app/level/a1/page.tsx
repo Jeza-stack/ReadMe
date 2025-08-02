@@ -270,8 +270,10 @@ export default function A1Level() {
                         <li>• Listening comprehension</li>
                         <li>• Reading comprehension</li>
                       </ul>
-                      <Button className="w-full mt-4" variant="outline">
-                        Take Practice Test
+                      <Button className="w-full mt-4" variant="outline" asChild>
+                        <Link href="/level/a1/assessment">
+                          Take Practice Test
+                        </Link>
                       </Button>
                     </CardContent>
                   </Card>
@@ -288,8 +290,10 @@ export default function A1Level() {
                         <li>• Comprehensive test</li>
                         <li>• Progress certificate</li>
                       </ul>
-                      <Button className="w-full mt-4" disabled>
-                        Unlock with Progress
+                      <Button className="w-full mt-4" asChild>
+                        <Link href="/level/a1/assessment">
+                          Start Final Assessment
+                        </Link>
                       </Button>
                     </CardContent>
                   </Card>
