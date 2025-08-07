@@ -715,6 +715,69 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Unit IV: Language Competency",
+          "works": [
+            {
+              "title": "Writing Letters and Emails",
+              "slug": "writing-letters-and-emails",
+              "category": "Unit IV: Language Competency",
+              "author": "ReadMe Studio",
+              "fullText": "Effective written communication is a cornerstone of professionalism. Whether formal or informal, the structure of your letters and emails matters.\n\n**Formal Letter/Email Structure:**\n1.  **Salutation:** Use a formal greeting like 'Dear Mr. Smith,', 'Dear Dr. Evans,', or 'Dear Hiring Manager,'.\n2.  **Opening:** State your purpose directly. 'I am writing to apply for the Project Manager position advertised on LinkedIn.'\n3.  **Body:** Provide the necessary details, information, or arguments in clear, concise paragraphs.\n4.  **Closing:** Summarize your main point or state the desired next step. 'I have attached my resume for your consideration and look forward to hearing from you.'\n5.  **Sign-off:** Use a formal closing like 'Sincerely,', 'Yours faithfully,', or 'Best regards,'.\n\n**Informal Email Structure (to colleagues):**\n1.  **Salutation:** A friendly greeting like 'Hi Sarah,', 'Hello Team,', or just the name is often sufficient.\n2.  **Opening:** Can be more conversational. 'Hope you're having a good week. Just a quick question about the Q3 report...'\n3.  **Body:** Keep it brief and to the point. Use bullet points for clarity if needed.\n4.  **Closing:** A simple call to action or closing statement. 'Let me know your thoughts when you have a moment.'\n5.  **Sign-off:** Informal but professional closings like 'Thanks,', 'Best,', or 'Cheers,'.",
+              "difficultWords": [
+                { "word": "Salutation", "definition": "A greeting used in a letter or other written or non-written communication.", "connotation": "The opening line of a letter, like 'Dear Sir'.", "example": "Choose an appropriate salutation for your email." },
+                { "word": "Concise", "definition": "Giving a lot of information clearly and in a few words; brief but comprehensive.", "connotation": "Implies being efficient and direct in communication.", "example": "Keep your email body concise and to the point." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "writingStyle": "Practical, clear, and focused on actionable advice for professional communication."
+              },
+              "contentAnalysis": {
+                "summary": "This lesson outlines the essential components of writing both formal and informal letters and emails. It provides a clear, step-by-step structure for each, covering the salutation, opening, body paragraphs, closing, and sign-off, with examples tailored to a professional context.",
+                "themes": ["Professional Communication", "Written Etiquette", "Email Writing"],
+                "relevance": "Mastering the structure of professional correspondence is a fundamental skill required in virtually every modern job."
+              },
+              "faqs": [
+                { "question": "When should I use 'Sincerely' vs. 'Best regards'?", "answer": "'Sincerely' is a very traditional and formal closing, perfect for cover letters or official correspondence. 'Best regards' is also formal but slightly warmer and more modern, making it a safe and excellent choice for most professional emails." }
+              ],
+              "quiz": [
+                { "question": "What is the primary purpose of the opening statement in a formal email?", "options": ["To ask how the person is doing", "To state your purpose for writing directly", "To tell a personal story", "To use a friendly greeting"], "correctAnswer": "To state your purpose for writing directly", "explanation": "In formal communication, it is best to be direct and immediately state the reason for your message to respect the recipient's time." }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit V: English for Workplace",
+          "works": [
+            {
+              "title": "Data Interpretation and Reporting",
+              "slug": "data-interpretation-reporting",
+              "category": "Unit V: English for Workplace",
+              "author": "ReadMe Studio",
+              "fullText": "Interpreting data and reporting the findings is a critical workplace skill. The goal is to turn raw data into a clear, understandable story.\n\n**Key Language for Reporting Trends:**\n*   **Upward Trend:** 'Sales **increased sharply** in the third quarter.' Other verbs: *rose, grew, climbed, surged*.\n*   **Downward Trend:** 'Employee turnover **decreased steadily** over the past year.' Other verbs: *fell, dropped, declined, slumped*.\n*   **No Change:** 'The market share **remained stable** between May and June.' Other phrases: *held steady, did not change, stabilized at*.\n*   **Fluctuation:** 'Product engagement **fluctuated** throughout the year, with peaks in summer.' Other verbs: *varied, was volatile*.\n\n**Structure of a Simple Data Report:**\n1.  **Introduction:** State the purpose of the report and the data being analyzed. ('This report analyzes website traffic data from Q1 to Q2 2024.')\n2.  **Key Findings (The 'What'):** Present the most important trends or insights from the data. Use clear topic sentences. ('Overall, website traffic increased by 15%. The most significant growth came from organic search.')\n3.  **Interpretation (The 'So What'):** Explain what these findings mean. Why did this happen? What are the implications? ('This increase is likely due to our new SEO strategy. It suggests we should continue investing in content marketing.')\n4.  **Conclusion/Recommendation (The 'Now What'):** Summarize the findings and recommend the next steps. ('In conclusion, the data shows our SEO efforts are successful. We recommend doubling the content budget for Q3.')",
+              "difficultWords": [
+                { "word": "Interpretation", "definition": "The action of explaining the meaning of something.", "connotation": "Goes beyond just stating facts to explain their significance.", "example": "Data interpretation is a key skill." },
+                { "word": "Fluctuate", "definition": "To rise and fall irregularly in number or amount.", "connotation": "Describes unpredictable, up-and-down movement.", "example": "Prices fluctuated throughout the year." },
+                { "word": "Implication", "definition": "The conclusion that can be drawn from something, although it is not explicitly stated.", "connotation": "The future consequences or effects of a finding.", "example": "The implication is that we need to change our strategy." }
+              ],
+              "authorInfo": {
+                "biography": "This content was created by the educational team at ReadMe Studio.",
+                "writingStyle": "Clear, structured, and focused on providing practical frameworks and vocabulary."
+              },
+              "contentAnalysis": {
+                "summary": "This lesson teaches the language and structure needed for effective data interpretation and reporting. It provides key vocabulary for describing trends (upward, downward, stable) and outlines a four-part structure for a data report: Introduction, Key Findings, Interpretation (the 'so what'), and Conclusion/Recommendation (the 'now what').",
+                "themes": ["Data Analysis", "Business Communication", "Reporting", "Analytical Skills"],
+                "relevance": "The ability to transform raw numbers into a compelling narrative with actionable insights is a highly valuable skill in any data-driven organization."
+              },
+              "faqs": [
+                { "question": "What is the most important part of a data report?", "answer": "While all parts are necessary, the 'Interpretation' (the 'So What?') is often the most valuable. This is where you go beyond just stating the facts and explain what the data actually means for the business, which is what decision-makers need to know." }
+              ],
+              "quiz": [
+                { "question": "Which phrase is best for describing a downward trend?", "options": ["Sales surged", "Sales remained stable", "Sales fluctuated", "Sales declined"], "correctAnswer": "Sales declined", "explanation": "'Declined' is a standard verb used to describe a downward movement in data." }
+              ]
+            }
+          ]
         }
       ]
     }
