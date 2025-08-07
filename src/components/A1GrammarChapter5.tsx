@@ -383,13 +383,13 @@ export default function A1GrammarChapter5() {
                       </h3>
                     </div>
 
-                    {exercises[currentExercise].type === "multiple-choice" && (
+                    {exercises[currentExercise].type === "multiple-choice" && Array.isArray(exercises[currentExercise].questions) && (
                       <div className="space-y-4">
                         {exercises[currentExercise].questions.map((question, index) => (
                           <Card key={index} className="p-4">
                             <h4 className="font-medium mb-3">{question.question}</h4>
                             <div className="space-y-2">
-                              {question.options.map((option, optionIndex) => (
+                              {Array.isArray(question.options) && question.options.map((option, optionIndex) => (
                                 <Button
                                   key={optionIndex}
                                   variant="outline"
@@ -443,11 +443,11 @@ export default function A1GrammarChapter5() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {exercises[2].scenarios.map((scenario, index) => (
+                  {exercises[2] && Array.isArray(exercises[2].scenarios) && exercises[2].scenarios.map((scenario, index) => (
                     <Card key={index} className="p-4">
                       <h4 className="font-medium mb-3">{scenario.situation}</h4>
                       <div className="space-y-2 mb-4">
-                        {scenario.dialogue.map((line, lineIndex) => (
+                        {Array.isArray(scenario.dialogue) && scenario.dialogue.map((line, lineIndex) => (
                           <div key={lineIndex} className="p-2 bg-gray-50 dark:bg-gray-800 rounded">
                             <p className="text-gray-700 dark:text-gray-300">{line}</p>
                           </div>

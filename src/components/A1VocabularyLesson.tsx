@@ -278,11 +278,11 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
 
                     {exercises[currentExercise].type === 'matching' && (
                       <div className="space-y-4">
-                        {exercises[currentExercise].items.map((item, index) => (
+                        {Array.isArray(exercises[currentExercise].items) && exercises[currentExercise].items.map((item, index) => (
                           <Card key={index} className="p-4">
                             <div className="flex justify-between items-center">
-                              <span className="font-medium">{item.word}</span>
-                              <span className="text-gray-600">{item.definition}</span>
+                              <span className="font-medium">{'word' in item ? item.word : ''}</span>
+                              <span className="text-gray-600">{'definition' in item ? item.definition : ''}</span>
                             </div>
                           </Card>
                         ))}
@@ -291,10 +291,10 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
 
                     {exercises[currentExercise].type === 'fill-in-blank' && (
                       <div className="space-y-4">
-                        {exercises[currentExercise].items.map((item, index) => (
+                        {Array.isArray(exercises[currentExercise].items) && exercises[currentExercise].items.map((item, index) => (
                           <div key={index} className="space-y-2">
                             <p className="text-gray-700">
-                              {item.sentence.replace('___', '_____')}
+                              {'sentence' in item ? item.sentence.replace('___', '_____') : ''}
                             </p>
                             <input
                               type="text"
@@ -307,7 +307,7 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
                                 setExerciseAnswers(newAnswers);
                               }}
                             />
-                            <p className="text-sm text-gray-500">Hint: {item.hint}</p>
+                            <p className="text-sm text-gray-500">Hint: {'hint' in item ? item.hint : ''}</p>
                           </div>
                         ))}
                       </div>
