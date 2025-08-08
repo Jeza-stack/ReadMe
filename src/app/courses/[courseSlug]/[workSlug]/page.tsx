@@ -3,14 +3,7 @@ import { notFound } from 'next/navigation';
 import LiteraryWorkClient from '@/components/LiteraryWorkClient';
 import { SocialShare } from '@/components/SocialShare';
 
-type Props = {
-  params: {
-    courseSlug: string;
-    workSlug: string;
-  };
-};
-
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: any) {
   const work = getLiteraryWork(params.courseSlug, params.workSlug);
   if (!work) {
     return { title: 'Work not found' };
@@ -21,7 +14,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function LiteraryWorkPage({ params }: Props) {
+export default function LiteraryWorkPage({ params }: any) {
   const work = getLiteraryWork(params.courseSlug, params.workSlug);
 
   if (!work) {

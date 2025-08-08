@@ -38,8 +38,12 @@ function InteractiveText({ text, difficultWords }: { text: string; difficultWord
                                             <div className="space-y-2">
                                                 <h4 className="font-bold font-headline text-primary">{wordData.word}</h4>
                                                 <p className="text-sm text-foreground/90">{wordData.definition}</p>
-                                                <p className="text-sm text-foreground/90"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
-                                                <p className="text-sm text-foreground/90"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
+                                                {wordData.connotation && (
+                                                  <p className="text-sm text-foreground/90"><span className="font-semibold">Connotation:</span> {wordData.connotation}</p>
+                                                )}
+                                                {wordData.example && (
+                                                  <p className="text-sm text-foreground/90"><span className="font-semibold">Example:</span> <em>"{wordData.example}"</em></p>
+                                                )}
                                             </div>
                                         </PopoverContent>
                                     </Popover>
@@ -222,9 +226,13 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                  <Card className="bg-card/50 border-border/50 shadow-lg">
                     <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
                     <CardContent className="text-foreground/80">
-                        {work.contentAnalysis.literaryDevices.map((ld, i) => (
-                            <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
-                        ))}
+                        {Array.isArray(work.contentAnalysis.literaryDevices) ? (
+                          work.contentAnalysis.literaryDevices.map((ld, i) => (
+                              <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
+                          ))
+                        ) : (
+                          <p className="text-sm text-foreground/70">No literary devices listed.</p>
+                        )}
                     </CardContent>
                 </Card>
             </section>

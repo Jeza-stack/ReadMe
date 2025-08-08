@@ -1,24 +1,24 @@
 export interface DifficultWord {
   word: string;
   definition: string;
-  connotation: string;
-  example: string;
+  connotation?: string;
+  example?: string;
 }
 
 export interface AuthorInfo {
   biography: string;
-  historicalContext: string;
-  writingStyle: string;
-  majorWorks: string[];
-  influence: string;
+  historicalContext?: string;
+  writingStyle?: string;
+  majorWorks?: string[];
+  influence?: string;
 }
 
 export interface ContentAnalysis {
   summary: string;
   themes: string[];
-  literaryDevices: { device: string; example: string }[];
-  criticalAnalysis: string;
-  relevance: string;
+  literaryDevices?: { device: string; example: string }[];
+  criticalAnalysis?: string;
+  relevance?: string;
 }
 
 export interface Faq {

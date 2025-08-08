@@ -385,11 +385,11 @@ export default function A1GrammarChapter5() {
 
                     {exercises[currentExercise].type === "multiple-choice" && Array.isArray(exercises[currentExercise].questions) && (
                       <div className="space-y-4">
-                        {exercises[currentExercise].questions.map((question, index) => (
+                        {exercises[currentExercise].questions.map((question: any, index: number) => (
                           <Card key={index} className="p-4">
-                            <h4 className="font-medium mb-3">{question.question}</h4>
+                            <h4 className="font-medium mb-3">{(question as { question?: string }).question ?? ''}</h4>
                             <div className="space-y-2">
-                              {Array.isArray(question.options) && question.options.map((option, optionIndex) => (
+                              {Array.isArray((question as { options?: string[] }).options) && (question as { options: string[] }).options.map((option: string, optionIndex: number) => (
                                 <Button
                                   key={optionIndex}
                                   variant="outline"
