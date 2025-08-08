@@ -1,16 +1,34 @@
-import { getLiteraryWork } from '@/lib/data';
+import { getLiteraryWork, getCourses } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import LiteraryWorkClient from '@/components/LiteraryWorkClient';
 import { SocialShare } from '@/components/SocialShare';
+
+export async function generateStaticParams() {
+  const params: { courseSlug: string; workSlug: string }[] = [];
+  getCourses().forEach((c) => c.categories.forEach((cat) => cat.works.forEach((w) => params.push({ courseSlug: c.slug, workSlug: w.slug }))));
+  return params;
+}
 
 export async function generateMetadata({ params }: any) {
   const work = getLiteraryWork(params.courseSlug, params.workSlug);
   if (!work) {
     return { title: 'Work not found' };
   }
+  const url = `https://example.com/courses/${params.courseSlug}/${params.workSlug}`;
   return {
     title: `${work.title} by ${work.author} | ReadMe`,
     description: `An analysis of ${work.title}, part of the ${params.courseSlug} course.`,
+    openGraph: {
+      title: `${work.title} | ReadMe`,
+      description: `Study ${work.title} by ${work.author}`,
+      type: 'article',
+      url,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${work.title} | ReadMe`,
+      description: `Study ${work.title} by ${work.author}`,
+    },
   };
 }
 
