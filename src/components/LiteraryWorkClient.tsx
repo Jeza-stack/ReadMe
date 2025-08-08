@@ -222,9 +222,13 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                  <Card className="bg-card/50 border-border/50 shadow-lg">
                     <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
                     <CardContent className="text-foreground/80">
-                        {work.contentAnalysis.literaryDevices.map((ld, i) => (
+                        {work.contentAnalysis.literaryDevices?.length ? (
+                          work.contentAnalysis.literaryDevices.map((ld, i) => (
                             <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
-                        ))}
+                          ))
+                        ) : (
+                          <p className="text-sm text-foreground/60">No literary devices listed.</p>
+                        )}
                     </CardContent>
                 </Card>
             </section>
