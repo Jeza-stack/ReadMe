@@ -1,17 +1,33 @@
-import { getCourse } from '@/lib/data';
+import { getCourse, getCourses } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { BookText, ChevronRight } from 'lucide-react';
+
+export async function generateStaticParams() {
+  return getCourses().map((c) => ({ courseSlug: c.slug }));
+}
 
 export async function generateMetadata({ params }: any) {
   const course = getCourse(params.courseSlug);
   if (!course) {
     return { title: 'Course not found' };
   }
+  const url = `https://example.com/courses/${course.slug}`;
   return {
     title: `${course.name} Syllabus | ReadMe`,
     description: course.description,
+    openGraph: {
+      title: `${course.name} Syllabus | ReadMe`,
+      description: course.description,
+      type: 'website',
+      url,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${course.name} Syllabus | ReadMe`,
+      description: course.description,
+    },
   };
 }
 
