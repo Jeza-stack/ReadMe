@@ -188,6 +188,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
+                                        loading="lazy"
                                     />
                                 </div>
                                 <p className="text-center mt-4 text-foreground/70">

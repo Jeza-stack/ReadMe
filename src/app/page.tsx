@@ -152,9 +152,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" />
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 dark:bg-blue-800 rounded-full blur-xl opacity-70 animate-pulse" />
-        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-200 dark:bg-purple-800 rounded-full blur-xl opacity-70 animate-pulse delay-1000" />
-        <div className="absolute bottom-20 left-20 w-24 h-24 bg-green-200 dark:bg-green-800 rounded-full blur-xl opacity-70 animate-pulse delay-500" />
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 dark:bg-blue-800 rounded-full blur-xl opacity-70 motion-safe:animate-pulse" />
+        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-200 dark:bg-purple-800 rounded-full blur-xl opacity-70 motion-safe:animate-pulse delay-1000" />
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-green-200 dark:bg-green-800 rounded-full blur-xl opacity-70 motion-safe:animate-pulse delay-500" />
 
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 flex justify-center">
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
           
           {/* Stats Row */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="mt-16 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center items-center mb-2 text-blue-600 dark:text-blue-400">
