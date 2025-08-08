@@ -4,14 +4,9 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookText, ChevronRight } from 'lucide-react';
 
-type Props = {
-  params: {
-    courseSlug: string;
-  };
-};
-
-export async function generateMetadata({ params }: Props) {
-  const course = getCourse(params.courseSlug);
+export async function generateMetadata({ params }: { params?: any }) {
+  const p = (await params) || params;
+  const course = getCourse(p?.courseSlug as string);
   if (!course) {
     return { title: 'Course not found' };
   }
@@ -21,8 +16,9 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function CoursePage({ params }: Props) {
-  const course = getCourse(params.courseSlug);
+export default function CoursePage({ params }: { params?: any }) {
+  const p = params as { courseSlug?: string };
+  const course = getCourse(p?.courseSlug || '');
 
   if (!course) {
     notFound();

@@ -7,14 +7,9 @@ import { Clock, UserCircle } from 'lucide-react';
 import { BlogPostCard } from '@/components/BlogPostCard';
 import { Separator } from '@/components/ui/separator';
 
-type Props = {
-  params: {
-    postSlug: string;
-  };
-};
-
-export async function generateMetadata({ params }: Props) {
-  const post = getBlogPost(params.postSlug);
+export async function generateMetadata({ params }: { params?: any }) {
+  const p = (await params) || params;
+  const post = getBlogPost(p?.postSlug as string);
   if (!post) {
     return { title: 'Post not found' };
   }
@@ -24,8 +19,9 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getBlogPost(params.postSlug);
+export default function BlogPostPage({ params }: { params?: any }) {
+  const p = params as { postSlug?: string };
+  const post = getBlogPost(p?.postSlug || '');
 
   if (!post) {
     notFound();

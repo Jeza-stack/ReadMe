@@ -105,7 +105,25 @@ export default function A1GrammarChapter5() {
     }
   ];
 
-  const exercises = [
+  type MultipleChoiceQuestion = {
+    question: string;
+    options: string[];
+    correct: number;
+    explanation: string;
+  };
+
+  type FillInBlankQuestion = {
+    sentence: string;
+    answers: string[];
+    explanation: string;
+  };
+
+  type Exercise =
+    | { type: 'multiple-choice'; title: string; questions: MultipleChoiceQuestion[] }
+    | { type: 'fill-in-blank'; title: string; questions: FillInBlankQuestion[] }
+    | { type: 'conversation'; title: string; scenarios: { situation: string; dialogue: string[]; focus: string }[] };
+
+  const exercises: Exercise[] = [
     {
       type: "multiple-choice",
       title: "Choose the correct article",
@@ -383,13 +401,13 @@ export default function A1GrammarChapter5() {
                       </h3>
                     </div>
 
-                    {exercises[currentExercise].type === "multiple-choice" && Array.isArray(exercises[currentExercise].questions) && (
+                    {exercises[currentExercise].type === "multiple-choice" && Array.isArray((exercises[currentExercise] as { type: 'multiple-choice'; questions: MultipleChoiceQuestion[] }).questions) && (
                       <div className="space-y-4">
-                        {exercises[currentExercise].questions.map((question, index) => (
+                        {(exercises[currentExercise] as { type: 'multiple-choice'; questions: MultipleChoiceQuestion[] }).questions.map((question: MultipleChoiceQuestion, index: number) => (
                           <Card key={index} className="p-4">
                             <h4 className="font-medium mb-3">{question.question}</h4>
                             <div className="space-y-2">
-                              {Array.isArray(question.options) && question.options.map((option, optionIndex) => (
+                              {Array.isArray(question.options) && question.options.map((option: string, optionIndex: number) => (
                                 <Button
                                   key={optionIndex}
                                   variant="outline"
@@ -443,11 +461,11 @@ export default function A1GrammarChapter5() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {exercises[2] && Array.isArray(exercises[2].scenarios) && exercises[2].scenarios.map((scenario, index) => (
+                  {exercises[2] && exercises[2].type === 'conversation' && Array.isArray(exercises[2].scenarios) && (exercises[2].scenarios as { situation: string; dialogue: string[]; focus: string }[]).map((scenario, index) => (
                     <Card key={index} className="p-4">
                       <h4 className="font-medium mb-3">{scenario.situation}</h4>
                       <div className="space-y-2 mb-4">
-                        {Array.isArray(scenario.dialogue) && scenario.dialogue.map((line, lineIndex) => (
+                        {Array.isArray(scenario.dialogue) && scenario.dialogue.map((line: string, lineIndex: number) => (
                           <div key={lineIndex} className="p-2 bg-gray-50 dark:bg-gray-800 rounded">
                             <p className="text-gray-700 dark:text-gray-300">{line}</p>
                           </div>

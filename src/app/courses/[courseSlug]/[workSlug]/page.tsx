@@ -4,25 +4,24 @@ import LiteraryWorkClient from '@/components/LiteraryWorkClient';
 import { SocialShare } from '@/components/SocialShare';
 
 type Props = {
-  params: {
-    courseSlug: string;
-    workSlug: string;
-  };
+  params: { courseSlug: string; workSlug: string } | Promise<{ courseSlug: string; workSlug: string }>;
 };
 
-export async function generateMetadata({ params }: Props) {
-  const work = getLiteraryWork(params.courseSlug, params.workSlug);
+export async function generateMetadata({ params }: { params?: any }) {
+  const p = (await params) || params;
+  const work = getLiteraryWork(p?.courseSlug as string, p?.workSlug as string);
   if (!work) {
     return { title: 'Work not found' };
   }
   return {
     title: `${work.title} by ${work.author} | ReadMe`,
-    description: `An analysis of ${work.title}, part of the ${params.courseSlug} course.`,
+    description: `An analysis of ${work.title}, part of the ${p?.courseSlug} course.`,
   };
 }
 
-export default function LiteraryWorkPage({ params }: Props) {
-  const work = getLiteraryWork(params.courseSlug, params.workSlug);
+export default function LiteraryWorkPage({ params }: { params?: any }) {
+  const p = params as { courseSlug?: string; workSlug?: string };
+  const work = getLiteraryWork((p?.courseSlug || '') as string, (p?.workSlug || '') as string);
 
   if (!work) {
     notFound();
