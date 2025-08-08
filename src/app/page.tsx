@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, BookOpen, BrainCircuit, Target, Users, Award, CheckCircle, Star, Play, Globe, TrendingUp, Zap, Shield } from 'lucide-react';
+import { CourseCard } from '@/components/CourseCard';
 
 export default function Home() {
   const cefrLevels = [
@@ -237,6 +238,43 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Courses Section */}
+      <section className="py-24 bg-white dark:bg-slate-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="font-headline text-4xl md:text-6xl font-bold mb-6 text-slate-900 dark:text-white">
+              Featured Courses
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Explore our core tracks designed for structured learning and professional growth.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <CourseCard
+              title="English I"
+              description="Foundational course in English literature and language competency."
+              href="/courses/english-1"
+              icon={<BookOpen className="w-8 h-8" />}
+              cta="Explore English I"
+            />
+            <CourseCard
+              title="English III"
+              description="Advanced course covering complex literary works and modern communication."
+              href="/courses/english-3"
+              icon={<BookOpen className="w-8 h-8" />}
+              cta="Explore English III"
+            />
+            <CourseCard
+              title="Soft Skills"
+              description="Articles and insights on communication, leadership, and workplace excellence."
+              href="/soft-skills"
+              icon={<Users className="w-8 h-8" />}
+              cta="Read Soft Skills"
+            />
           </div>
         </div>
       </section>
