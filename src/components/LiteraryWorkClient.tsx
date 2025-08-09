@@ -11,6 +11,8 @@ import { CheckCircle, XCircle } from "lucide-react";
 import { Progress } from "./ui/progress";
 import { Separator } from "./ui/separator";
 import { cn } from "@/lib/utils";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 // InteractiveText Component
 function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
@@ -160,16 +162,28 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
 // Main Client Component
 export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
+    const isStructuredUnit = /unit iv|unit v/i.test(work.category);
+    const looksLikeMarkdown = /(^|\n)[\-*]\s|\*\*|`|\d+\./.test(work.fullText || '');
     return (
         <div className="space-y-16 md:space-y-24">
             {/* Full Text */}
             <section>
                  <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Read</h2>
-                 <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
-                <InteractiveText 
-                    text={work.fullText} 
-                    difficultWords={work.difficultWords}
-                />
+                 {!isStructuredUnit && !looksLikeMarkdown && (
+                   <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
+                 )}
+                {isStructuredUnit || looksLikeMarkdown ? (
+                  <article className="prose prose-lg max-w-none dark:prose-invert">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {work.fullText || ''}
+                    </ReactMarkdown>
+                  </article>
+                ) : (
+                  <InteractiveText 
+                      text={work.fullText} 
+                      difficultWords={work.difficultWords}
+                  />
+                )}
             </section>
             
             {/* Video Section */}
@@ -209,70 +223,86 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             
             <Separator className="bg-border/30" />
 
-            {/* Content Analysis */}
-            <section className="space-y-8">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Content Analysis</h2>
-                <Card className="bg-card/50 border-border/50 shadow-lg">
-                    <CardHeader><CardTitle className="font-headline">Summary</CardTitle></CardHeader>
-                    <CardContent><p className="text-foreground/80">{work.contentAnalysis.summary}</p></CardContent>
-                </Card>
-                 <Card className="bg-card/50 border-border/50 shadow-lg">
-                    <CardHeader><CardTitle className="font-headline">Themes</CardTitle></CardHeader>
-                    <CardContent>
-                        <ul className="list-disc pl-5 space-y-1 text-foreground/80">
-                            {work.contentAnalysis.themes.map((theme, i) => <li key={i}>{theme}</li>)}
-                        </ul>
-                    </CardContent>
-                </Card>
-                 <Card className="bg-card/50 border-border/50 shadow-lg">
-                    <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
-                    <CardContent className="text-foreground/80">
-                        {Array.isArray(work.contentAnalysis.literaryDevices) ? (
+            {/* Content Analysis (optional) */}
+            {!isStructuredUnit && work.contentAnalysis && (
+              <section className="space-y-8">
+                  <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Content Analysis</h2>
+                  {work.contentAnalysis.summary && (
+                    <Card className="bg-card/50 border-border/50 shadow-lg">
+                        <CardHeader><CardTitle className="font-headline">Summary</CardTitle></CardHeader>
+                        <CardContent><p className="text-foreground/80">{work.contentAnalysis.summary}</p></CardContent>
+                    </Card>
+                  )}
+                  {Array.isArray(work.contentAnalysis.themes) && work.contentAnalysis.themes.length > 0 && (
+                    <Card className="bg-card/50 border-border/50 shadow-lg">
+                        <CardHeader><CardTitle className="font-headline">Themes</CardTitle></CardHeader>
+                        <CardContent>
+                            <ul className="list-disc pl-5 space-y-1 text-foreground/80">
+                                {work.contentAnalysis.themes.map((theme, i) => <li key={i}>{theme}</li>)}
+                            </ul>
+                        </CardContent>
+                    </Card>
+                  )}
+                  <Card className="bg-card/50 border-border/50 shadow-lg">
+                      <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
+                      <CardContent className="prose prose-lg max-w-none dark:prose-invert">
+                        {Array.isArray(work.contentAnalysis.literaryDevices) && work.contentAnalysis.literaryDevices.length > 0 ? (
                           work.contentAnalysis.literaryDevices.map((ld, i) => (
                               <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
                           ))
                         ) : (
                           <p className="text-sm text-foreground/70">No literary devices listed.</p>
                         )}
-                    </CardContent>
-                </Card>
-            </section>
+                      </CardContent>
+                  </Card>
+              </section>
+            )}
             
             <Separator className="bg-border/30" />
 
-            {/* Author Info */}
-            <section>
-                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">About the Author</h2>
-                 <Card className="bg-card/50 border-border/50 shadow-lg">
-                    <CardContent className="p-8 text-foreground/80">
-                        {work.authorInfo.biography && <p className="mb-4">{work.authorInfo.biography}</p>}
-                        {work.authorInfo.writingStyle && <p><strong>Writing Style:</strong> {work.authorInfo.writingStyle}</p>}
-                    </CardContent>
-                 </Card>
-            </section>
+            {/* Author Info (optional) */}
+            {!isStructuredUnit && (work.authorInfo?.biography || work.authorInfo?.writingStyle) && (
+              <section>
+                   <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">About the Author</h2>
+                   <Card className="bg-card/50 border-border/50 shadow-lg">
+                      <CardContent className="p-8 text-foreground/80 prose prose-lg max-w-none dark:prose-invert">
+                          {work.authorInfo?.biography && <p className="mb-4">{work.authorInfo.biography}</p>}
+                          {work.authorInfo?.writingStyle && <p><strong>Writing Style:</strong> {work.authorInfo.writingStyle}</p>}
+                      </CardContent>
+                   </Card>
+              </section>
+            )}
 
             <Separator className="bg-border/30" />
 
             {/* FAQs */}
-            <section>
-                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-                <Accordion type="single" collapsible className="w-full bg-card/50 border border-border/50 rounded-lg shadow-lg">
-                    {work.faqs.map((faq, index) => (
-                        <AccordionItem value={`item-${index}`} key={index} className={cn(index === work.faqs.length - 1 && "border-b-0")}>
-                            <AccordionTrigger className="font-semibold text-left p-6 text-lg">{faq.question}</AccordionTrigger>
-                            <AccordionContent className="px-6 text-foreground/80">{faq.answer}</AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
-            </section>
+            {Array.isArray(work.faqs) && work.faqs.length > 0 && (
+              <section>
+                  <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                  <Accordion type="single" collapsible className="w-full bg-card/50 border border-border/50 rounded-lg shadow-lg">
+                      {work.faqs.map((faq, index) => (
+                          <AccordionItem value={`item-${index}`} key={index} className={cn(index === work.faqs.length - 1 && "border-b-0")}>
+                              <AccordionTrigger className="font-semibold text-left p-6 text-lg">{faq.question}</AccordionTrigger>
+                              <AccordionContent className="px-6 text-foreground/80 prose dark:prose-invert">
+                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                  {faq.answer}
+                                </ReactMarkdown>
+                              </AccordionContent>
+                          </AccordionItem>
+                      ))}
+                  </Accordion>
+              </section>
+            )}
             
             <Separator className="bg-border/30" />
 
             {/* Quiz */}
-            <section>
-                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Test Your Knowledge</h2>
-                <Quiz questions={work.quiz} />
-            </section>
+            {Array.isArray(work.quiz) && work.quiz.length > 0 && (
+              <section>
+                  <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Test Your Knowledge</h2>
+                  <Quiz questions={work.quiz} />
+              </section>
+            )}
         </div>
     );
 }
