@@ -223,7 +223,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             <Separator className="bg-border/30" />
 
             {/* Content Analysis (optional) */}
-            {work.contentAnalysis && (
+            {!isStructuredUnit && work.contentAnalysis && (
               <section className="space-y-8">
                   <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Content Analysis</h2>
                   {work.contentAnalysis.summary && (
@@ -260,7 +260,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             <Separator className="bg-border/30" />
 
             {/* Author Info (optional) */}
-            {(work.authorInfo?.biography || work.authorInfo?.writingStyle) && (
+            {!isStructuredUnit && (work.authorInfo?.biography || work.authorInfo?.writingStyle) && (
               <section>
                    <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">About the Author</h2>
                    <Card className="bg-card/50 border-border/50 shadow-lg">
