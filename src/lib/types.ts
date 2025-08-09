@@ -6,7 +6,7 @@ export interface DifficultWord {
 }
 
 export interface AuthorInfo {
-  biography: string;
+  biography?: string;
   historicalContext?: string;
   writingStyle?: string;
   majorWorks?: string[];
@@ -14,8 +14,8 @@ export interface AuthorInfo {
 }
 
 export interface ContentAnalysis {
-  summary: string;
-  themes: string[];
+  summary?: string;
+  themes?: string[];
   literaryDevices?: { device: string; example: string }[];
   criticalAnalysis?: string;
   relevance?: string;
@@ -42,8 +42,8 @@ export interface LiteraryWork {
   videoUrl?: string;
   videoEmbedId?: string;
   difficultWords: DifficultWord[];
-  authorInfo: AuthorInfo;
-  contentAnalysis: ContentAnalysis;
+  authorInfo?: AuthorInfo;
+  contentAnalysis?: ContentAnalysis;
   faqs: Faq[];
   quiz: QuizQuestion[];
 }
