@@ -47,24 +47,18 @@ if (Array.isArray(data.courses)) {
           const works = Array.isArray(unit.works) ? unit.works : [];
           works.forEach(work => {
             const removed = {};
+            // Remove top-level fields
             targetFields.forEach(f => {
               if (work[f] !== undefined) {
                 removed[f] = work[f];
                 delete work[f];
               }
-              // also check nested authorInfo.writingStyle or aboutTheAuthor
-              if (f === 'writingStyle' && work.authorInfo && work.authorInfo.writingStyle !== undefined) {
-                if (!removed.authorInfo) removed.authorInfo = {};
-                removed.authorInfo.writingStyle = work.authorInfo.writingStyle;
-                delete work.authorInfo.writingStyle;
-              }
-              if (f === 'aboutTheAuthor' && work.authorInfo && work.authorInfo.aboutTheAuthor !== undefined) {
-                if (!removed.authorInfo) removed.authorInfo = {};
-                removed.authorInfo.aboutTheAuthor = work.authorInfo.aboutTheAuthor;
-                delete work.authorInfo.aboutTheAuthor;
-              }
-              // If removing summary/themes at top level was requested but not present, skip
             });
+            // Remove entire authorInfo block if present
+            if (work.authorInfo !== undefined) {
+              removed.authorInfo = work.authorInfo;
+              delete work.authorInfo;
+            }
             if (Object.keys(removed).length) {
               archive.removed.push({
                 course: course.name || course.title || course.slug,
@@ -95,17 +89,11 @@ if (Array.isArray(data.courses)) {
                 removed[f] = work[f];
                 delete work[f];
               }
-              if (f === 'writingStyle' && work.authorInfo && work.authorInfo.writingStyle !== undefined) {
-                if (!removed.authorInfo) removed.authorInfo = {};
-                removed.authorInfo.writingStyle = work.authorInfo.writingStyle;
-                delete work.authorInfo.writingStyle;
-              }
-              if (f === 'aboutTheAuthor' && work.authorInfo && work.authorInfo.aboutTheAuthor !== undefined) {
-                if (!removed.authorInfo) removed.authorInfo = {};
-                removed.authorInfo.aboutTheAuthor = work.authorInfo.aboutTheAuthor;
-                delete work.authorInfo.aboutTheAuthor;
-              }
             });
+            if (work.authorInfo !== undefined) {
+              removed.authorInfo = work.authorInfo;
+              delete work.authorInfo;
+            }
             if (Object.keys(removed).length) {
               archive.removed.push({ course: key, unit: unit.title || uName, workTitle: work.title || 'untitled', removed });
               console.log('Removed:', key, '>', uName, '>', work.title || 'untitled', Object.keys(removed));
