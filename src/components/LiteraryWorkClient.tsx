@@ -162,16 +162,27 @@ function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
 // Main Client Component
 export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
+    const isStructuredUnit = /unit iv|unit v/i.test(work.category);
     return (
         <div className="space-y-16 md:space-y-24">
             {/* Full Text */}
             <section>
                  <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Read</h2>
-                 <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
-                <InteractiveText 
-                    text={work.fullText} 
-                    difficultWords={work.difficultWords}
-                />
+                 {!isStructuredUnit && (
+                   <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
+                 )}
+                {isStructuredUnit ? (
+                  <article className="prose prose-lg max-w-none dark:prose-invert">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {work.fullText || ''}
+                    </ReactMarkdown>
+                  </article>
+                ) : (
+                  <InteractiveText 
+                      text={work.fullText} 
+                      difficultWords={work.difficultWords}
+                  />
+                )}
             </section>
             
             {/* Video Section */}
