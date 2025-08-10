@@ -2466,7 +2466,7 @@
               "slug": "othello-climax-scene",
               "category": "Unit II: Scenes From Shakespeare",
               "author": "William Shakespeare",
-              "fullText": "**OTHELLO**\nIt is the cause, it is the cause, my soul.\nLet me not name it to you, you chaste stars!\nIt is the cause. Yet I'll not shed her blood,\nNor scar that whiter skin of hers than snow,\nAnd smooth as monumental alabaster.\nYet she must die, else she'll betray more men.\nPut out the light, and then put out the light.\nIf I quench thee, thou flaming minister,\nI can again thy former light restore,\nShould I repent me. But once put out thy light,\nThou cunning'st pattern of excelling nature,\nI know not where is that Promethean heat\nThat can thy light relume.\n\n(He kisses DESDEMONA)\n\n**DESDEMONA**\nWho's there? Othello?\n\n**OTHELLO**\nAy, Desdemona.\n\n**DESDEMONA**\nWill you come to bed, my lord?\n\n**OTHELLO**\nHave you prayed tonight, Desdemona?",
+              "fullText": "**OTHELLO**\nIt is the cause, it is the cause, my soul.\nLet me not name it to you, you chaste stars!\nIt is the cause. Yet I'll not shed her blood,\nNor scar that whiter skin of hers than snow,\nAnd smooth as monumental alabaster.\nYet she must die, else she'll betray more men.\nPut out the light, and then put out the light.\nIf I quench thee, thou flaming minister,\nI can again thy former light restore,\nShould I repent me. But once put out thy light,\nThou cunning'st pattern of excelling nature,\nI know not where is that Promethean heat\nThat can thy light relume.\n\n(He kisses DESDEMONA)\n\n**DESDEMONA**\nWho's there? Othello?\n\n**OTHELLO**\nAy, Desdemona.\n\n**DESDEMONA**\nWill you come to bed, my lord?\n\n**OTHELLO**\nHave you prayed tonight, Desdemona?\n\n[ACT V — Closing Passage]\n\nCASSIO: This did I fear, but thought he had no weapon,\nFor he was great of heart.\n\nLODOVICO: [To Iago.] O Spartan dog,\nMore fell than anguish, hunger, or the sea,\nLook on the tragic loading of this bed.\nThis is thy work. The object poisons sight,\nLet it be hid. Gratiano, keep the house,\nAnd seize upon the fortunes of the Moor,\nFor they succeed on you. To you, lord governor,\nRemains the censure of this hellish villain.\nThe time, the place, the torture, O, enforce it!\nMyself will straight aboard, and to the state\nThis heavy act with heavy heart relate.\n\n[Exeunt.]",
               "difficultWords": [
                 {
                   "word": "Alabaster",
@@ -2485,6 +2485,66 @@
                   "definition": "To light again or rekindle.",
                   "connotation": "To restore light or life.",
                   "example": "I know not where is that Promethean heat that can thy light relume."
+                },
+                {
+                  "word": "Spartan",
+                  "definition": "From Sparta; here, meaning harsh or very tough. Context: Lodovico insults Iago as cruel."
+                },
+                {
+                  "word": "fell",
+                  "definition": "Fierce or cruel. Context: More cruel than pain, hunger, or the sea."
+                },
+                {
+                  "word": "anguish",
+                  "definition": "Severe pain or suffering."
+                },
+                {
+                  "word": "tragic",
+                  "definition": "Very sad or terrible. Context: The scene on the bed is tragic."
+                },
+                {
+                  "word": "loading",
+                  "definition": "Burden or weight. Context: The bed is loaded with tragedy (the bodies)."
+                },
+                {
+                  "word": "object",
+                  "definition": "Thing seen; sight. Context: The sight poisons the eyes."
+                },
+                {
+                  "word": "seize",
+                  "definition": "Take hold of by force or authority. Context: Take Othello’s property."
+                },
+                {
+                  "word": "fortunes",
+                  "definition": "Wealth or property. Context: Othello’s goods."
+                },
+                {
+                  "word": "succeed",
+                  "definition": "To go to the next person; pass to. Context: The property passes to you."
+                },
+                {
+                  "word": "censure",
+                  "definition": "Judgment or punishment. Context: Decide how to punish the villain."
+                },
+                {
+                  "word": "hellish",
+                  "definition": "Very evil; like hell. Context: Describes Iago."
+                },
+                {
+                  "word": "enforce",
+                  "definition": "Carry out strongly; make happen. Context: Enforce time, place, and torture."
+                },
+                {
+                  "word": "aboard",
+                  "definition": "On board a ship. Context: Lodovico will go to the ship."
+                },
+                {
+                  "word": "relate",
+                  "definition": "Tell or report. Context: Report the heavy act to the state."
+                },
+                {
+                  "word": "heavy",
+                  "definition": "Very sad or serious. Context: A heavy (sad) act and a heavy heart."
                 }
               ],
               "authorInfo": {
