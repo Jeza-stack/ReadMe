@@ -1670,30 +1670,9 @@
               "title": "A Song of Hope",
               "slug": "a-song-of-hope",
               "category": "Unit I: Poetry",
-              "author": "Oodgeroo Noonuccal (Kath Walker)",
-              "fullText": "Look up, my people,\nthe dawn is breaking\nThe world is waking\nTo a bright new day\nWhen none defame us\nNo restriction tame us\nNor colour shame us\nNor sneer dismay.\n\nNow brood no more\nOn the years behind you\nThe hope assigned you\nShall the past replace\nWhen a juster justice\nGrown stronger\nPoints the bone no longer\nAt a darker race.\n\nSo long we waited\nBound and frustrated\nTill hate be hated\nAnd caste deposed\nNow light shall guide us\nNo goal denied us\nAnd all doors open\nThat long were closed.\n\nSee plain the promise\nDark freedom-lover!\nNight's nearly over\nAnd though long the climb\nNew rights will greet us\nNew mateship meet us\nAnd joy complete us\nIn our new Dream Time.\n\nTo our fathers' fathers\nThe pain, the sorrow;\nTo our children's children\nthe glad tomorrow.",
-              "difficultWords": [
-                { "word": "defame", "definition": "to say bad things about someone that are not true" },
-                { "word": "restriction", "definition": "a rule that stops you from doing something" },
-                { "word": "tame", "definition": "to control something wild or strong" },
-                { "word": "sneer", "definition": "to make a face that shows you do not like or respect someone" },
-                { "word": "dismay", "definition": "a feeling of sadness and disappointment" },
-                { "word": "brood", "definition": "to think sadly or angrily about something for a long time" },
-                { "word": "assigned", "definition": "given to someone for a specific purpose" },
-                { "word": "juster", "definition": "more fair" },
-                { "word": "stronger", "definition": "having more power or force" },
-                { "word": "bound", "definition": "tied up or held back" },
-                { "word": "frustrated", "definition": "feeling angry or upset because you cannot do what you want" },
-                { "word": "hate", "definition": "a very strong feeling of dislike" },
-                { "word": "caste", "definition": "a social group or class that people are born into" },
-                { "word": "deposed", "definition": "removed from power" },
-                { "word": "promise", "definition": "a statement that you will definitely do something" },
-                { "word": "climb", "definition": "to go up something, often with difficulty" },
-                { "word": "mateship", "definition": "a feeling of friendship and loyalty" },
-                { "word": "dream", "definition": "in Aboriginal culture, the Dreamtime is a special time when the world was created" },
-                { "word": "sorrow", "definition": "a feeling of deep sadness" },
-                { "word": "glad", "definition": "happy" }
-              ],
+              "author": "Oodgeroo Noonuccal",
+              "fullText": "Look up, my people,\nThe dawn is breaking;\nThe world is waking,\nTo a new day.\nListen, my people,\nThe drums are beating;\nThe world is waiting,\nFor a new way.\n\nNow is the time for all of us\nTo stand up and be counted;\nTo show the world that we are one,\nOne people, one nation, one blood.\n\nLet the old ways die,\nLet the new ways be born;\nLet the old hate go,\nLet the new love be formed.\n\nFor we are the future,\nAnd the future is now.",
+              "difficultWords": [],
               "authorInfo": {
                 "biography": "Oodgeroo Noonuccal (born Kathleen Ruska, later Kath Walker; 1920-1993) was an Aboriginal Australian political activist, artist, and poet. She was a campaigner for Aboriginal rights and one of the first Aboriginal Australians to publish a book of verse.",
                 "historicalContext": "She wrote during a crucial period of the Aboriginal rights movement in Australia, fighting for citizenship rights, land rights, and an end to systemic discrimination.",
@@ -1705,12 +1684,13 @@
                 "influence": "Oodgeroo's work was instrumental in bringing Aboriginal issues to the forefront of Australian consciousness and inspiring a new generation of Indigenous writers and activists."
               },
               "contentAnalysis": {
-                "summary": "\"A Song of Hope\" is a powerful poem by Oodgeroo Noonuccal (Kath Walker), a prominent Aboriginal Australian poet and activist. It serves as a call to action and a source of inspiration for Indigenous Australians.\n\nThe poem's central message is that despite past injustices and suffering, a new era of equality and respect is dawning. It encourages Indigenous people to stop dwelling on past \"dismay\" and \"sorrow\" and instead look forward with optimism to a time of \"juster justice.\"\n\nNoonuccal uses vivid imagery, contrasting the darkness of the past with the light of a new day. She celebrates the resilience of her people and looks forward to a future where their culture is honored in a new \"Dream Time.\" The poem's hopeful and determined tone makes it a rallying cry for freedom, unity, and a better \"tomorrow\" for generations to come.",
+                "summary": "This poem is a powerful and optimistic call to action for her people. It urges them to look towards a new beginning ('the dawn is breaking') and to unite as 'one people'. The poem calls for leaving behind old hatreds and embracing a new future built on unity and love.",
                 "themes": [
-                  "Hope – Strong optimism for the future of Indigenous Australians.",
-                  "Justice and Equality – Calls for fairness and equal rights.",
-                  "Reconciliation – Envisions unity beyond hate and caste.",
-                  "Resilience – Honors the perseverance of Aboriginal people."
+                  "Hope",
+                  "Unity",
+                  "Activism",
+                  "Aboriginal Rights",
+                  "Change"
                 ],
                 "literaryDevices": [
                   {
