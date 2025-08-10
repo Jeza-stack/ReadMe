@@ -165,15 +165,15 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
     const isStructuredUnit = /unit iv|unit v/i.test(work.category);
     const looksLikeMarkdown = /(^|\n)[\-*]\s|\*\*|`|\d+\./.test(work.fullText || '');
     return (
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-12 md:space-y-24">
             {/* Full Text */}
             <section>
-                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Read</h2>
+                 <h2 className="font-headline text-2xl xs:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center">Read</h2>
                  {!isStructuredUnit && !looksLikeMarkdown && (
-                   <p className="text-foreground/70 mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
+                   <p className="text-sm xs:text-base text-foreground/70 mb-6 md:mb-8 text-center">Click on <span className="text-primary font-bold">bolded words</span> for definitions.</p>
                  )}
                 {isStructuredUnit || looksLikeMarkdown ? (
-                  <article className="prose prose-lg max-w-none dark:prose-invert">
+                  <article className="prose prose-base xs:prose-lg max-w-none dark:prose-invert">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {work.fullText || ''}
                     </ReactMarkdown>
@@ -191,7 +191,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                 <>
                     <Separator className="bg-border/30" />
                     <section>
-                        <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">🎥 Watch the Historic Speech</h2>
+                        <h2 className="font-headline text-2xl xs:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center">🎥 Watch the Historic Speech</h2>
                         <div className="flex justify-center">
                             <div className="w-full max-w-4xl">
                                 <div className="relative aspect-video">
@@ -226,7 +226,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             {/* Content Analysis (optional) */}
             {!isStructuredUnit && work.contentAnalysis && (
               <section className="space-y-8">
-                  <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Content Analysis</h2>
+                  <h2 className="font-headline text-2xl xs:text-3xl md:text-4xl font-bold text-center">Content Analysis</h2>
                   {work.contentAnalysis.summary && (
                     <Card className="bg-card/50 border-border/50 shadow-lg">
                         <CardHeader><CardTitle className="font-headline">Summary</CardTitle></CardHeader>
@@ -245,7 +245,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
                   )}
                   <Card className="bg-card/50 border-border/50 shadow-lg">
                       <CardHeader><CardTitle className="font-headline">Literary Devices</CardTitle></CardHeader>
-                      <CardContent className="prose prose-lg max-w-none dark:prose-invert">
+                      <CardContent className="prose prose-base xs:prose-lg max-w-none dark:prose-invert">
                         {Array.isArray(work.contentAnalysis.literaryDevices) && work.contentAnalysis.literaryDevices.length > 0 ? (
                           work.contentAnalysis.literaryDevices.map((ld, i) => (
                               <p key={i} className="mb-2"><strong>{ld.device}:</strong> <em>"{ld.example}"</em></p>
@@ -263,9 +263,9 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             {/* Author Info (optional) */}
             {!isStructuredUnit && (work.authorInfo?.biography || work.authorInfo?.writingStyle) && (
               <section>
-                   <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">About the Author</h2>
+                   <h2 className="font-headline text-2xl xs:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center">About the Author</h2>
                    <Card className="bg-card/50 border-border/50 shadow-lg">
-                      <CardContent className="p-8 text-foreground/80 prose prose-lg max-w-none dark:prose-invert">
+                      <CardContent className="p-6 md:p-8 text-foreground/80 prose prose-base xs:prose-lg max-w-none dark:prose-invert">
                           {work.authorInfo?.biography && <p className="mb-4">{work.authorInfo.biography}</p>}
                           {work.authorInfo?.writingStyle && <p><strong>Writing Style:</strong> {work.authorInfo.writingStyle}</p>}
                       </CardContent>
@@ -278,12 +278,12 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             {/* FAQs */}
             {Array.isArray(work.faqs) && work.faqs.length > 0 && (
               <section>
-                  <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                  <h2 className="font-headline text-2xl xs:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center">Frequently Asked Questions</h2>
                   <Accordion type="single" collapsible className="w-full bg-card/50 border border-border/50 rounded-lg shadow-lg">
                       {work.faqs.map((faq, index) => (
                           <AccordionItem value={`item-${index}`} key={index} className={cn(index === work.faqs.length - 1 && "border-b-0")}>
                               <AccordionTrigger className="font-semibold text-left p-6 text-lg">{faq.question}</AccordionTrigger>
-                              <AccordionContent className="px-6 text-foreground/80 prose dark:prose-invert">
+                              <AccordionContent className="px-4 xs:px-6 text-foreground/80 prose prose-base xs:prose-lg dark:prose-invert">
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                   {faq.answer}
                                 </ReactMarkdown>
@@ -299,7 +299,7 @@ export default function LiteraryWorkClient({ work }: { work: LiteraryWork }) {
             {/* Quiz */}
             {Array.isArray(work.quiz) && work.quiz.length > 0 && (
               <section>
-                  <h2 className="font-headline text-3xl md:text-4xl font-bold mb-8 text-center">Test Your Knowledge</h2>
+                  <h2 className="font-headline text-2xl xs:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center">Test Your Knowledge</h2>
                   <Quiz questions={work.quiz} />
               </section>
             )}
