@@ -191,16 +191,16 @@ export default function Home() {
           </div>
           
           {/* Stats Row */}
-          <div className="mt-16 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="mt-10 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center items-center mb-2 text-blue-600 dark:text-blue-400">
                   {stat.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+                <div className="text-2xl xs:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
                   {stat.number}
                 </div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">
+                <div className="text-xs xs:text-sm text-slate-600 dark:text-slate-400">
                   {stat.label}
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function Home() {
               Explore our core tracks designed for structured learning and professional growth.
             </p>
           </div>
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             <CourseCard
               title="English I"
               description="Foundational course in English literature and language competency."
@@ -291,7 +291,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {cefrLevels.map((level, index) => (
               <Card key={level.level} className={`group relative overflow-hidden border ${level.borderColor} hover:border-opacity-50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${level.bgColor}`}>
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{background: `linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to))`}} />

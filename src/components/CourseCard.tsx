@@ -18,13 +18,13 @@ export function CourseCard({
   return (
     <Link href={href} className="block">
       <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50">
-        <CardContent className="p-6">
+        <CardContent className="p-4 xs:p-5 md:p-6">
           {icon && <div className="mb-4 text-primary">{icon}</div>}
-          <CardTitle className="font-headline text-2xl font-bold mb-2">{title}</CardTitle>
-          <CardDescription className="text-foreground/70 leading-relaxed">
+          <CardTitle className="font-headline text-xl xs:text-2xl font-bold mb-2">{title}</CardTitle>
+          <CardDescription className="text-sm xs:text-base text-foreground/70 leading-relaxed">
             {description}
           </CardDescription>
-          <div className="mt-6">
+          <div className="mt-4 xs:mt-6">
             <Button className="font-semibold">{cta}</Button>
           </div>
         </CardContent>

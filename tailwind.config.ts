@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xxs: '320px',
+        xs: '480px',
+      },
       fontFamily: {
         body: ['Literata', 'serif'],
         headline: ['Space Grotesk', 'sans-serif'],
