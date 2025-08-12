@@ -1,49 +1,14 @@
-import type { Metadata } from 'next';
+import readmeData from '@/data/readme-data.json';
 import CourseDetail from '@/components/CourseDetail';
-import softSkills from '@/data/courses/soft-skills-mastery.json';
+import { Metadata } from 'next';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const url = `https://example.com/courses/${softSkills.slug}`;
-  return {
-    title: softSkills.seo?.title || softSkills.title,
-    description: softSkills.seo?.description || softSkills.description,
-    openGraph: {
-      title: softSkills.seo?.title || softSkills.title,
-      description: softSkills.seo?.description || softSkills.description,
-      type: 'website',
-      url,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: softSkills.seo?.title || softSkills.title,
-      description: softSkills.seo?.description || softSkills.description,
-    },
-    alternates: { canonical: url },
-  };
-}
+export const metadata: Metadata = {
+  title: 'Soft Skills Mastery — Practical Soft Skills for 2025',
+  description: '20-week blended program teaching emotional intelligence, communication, teamwork, leadership, and career readiness.'
+};
 
-export default function SoftSkillsCoursePage() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: softSkills.title,
-            description: softSkills.description,
-            provider: { '@type': 'Organization', name: 'ReadMe' },
-            hasCourseInstance: {
-              '@type': 'CourseInstance',
-              courseMode: softSkills.format,
-              courseWorkload: `${softSkills.durationWeeks} weeks`,
-              educationalLevel: 'All levels',
-            },
-          }),
-        }}
-      />
-      <CourseDetail />
-    </>
-  );
+export default function Page() {
+  const course = (readmeData.courses || []).find((c: any) => c.slug === 'soft-skills-mastery');
+  if (!course) return <div className="container mx-auto p-6">Course not found.</div>;
+  return <CourseDetail course={course} />;
 }
