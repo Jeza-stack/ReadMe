@@ -39,31 +39,35 @@ interface VocabularyWord {
   usageNotes: string;
 }
 
-interface VocabularyLessonProps {
-  theme: string;
-  level: string;
-}
-
-export default function A1VocabularyLesson({ theme, level }: VocabularyLessonProps) {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [showTranslation, setShowTranslation] = useState(false);
-  const [completedWords, setCompletedWords] = useState<Set<number>>(new Set());
-  const [favoriteWords, setFavoriteWords] = useState<Set<number>>(new Set());
-  const [currentExercise, setCurrentExercise] = useState(0);
-  const [exerciseAnswers, setExerciseAnswers] = useState<string[]>([]);
-  const [showResults, setShowResults] = useState(false);
-
-  const vocabulary = vocabularyData.a1['family-relationships'].vocabulary as VocabularyWord[];
-  const exercises = vocabularyData.a1['family-relationships'].exercises;
-  const grammarFocus = vocabularyData.a1['family-relationships'].grammarFocus;
+type DataA1 = typeof vocabularyData.a1;
+ type DatasetKey = keyof DataA1;
+ 
+ interface VocabularyLessonProps {
+   theme: string;
+   level: string;
+   datasetKey?: DatasetKey;
+ }
+ 
+ export default function A1VocabularyLesson({ theme, level, datasetKey = 'family-relationships' as DatasetKey }: VocabularyLessonProps) {
+   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+   const [isPlaying, setIsPlaying] = useState(false);
+   const [showTranslation, setShowTranslation] = useState(false);
+   const [completedWords, setCompletedWords] = useState<Set<number>>(new Set());
+   const [favoriteWords, setFavoriteWords] = useState<Set<number>>(new Set());
+   const [currentExercise, setCurrentExercise] = useState(0);
+   const [exerciseAnswers, setExerciseAnswers] = useState<string[]>([]);
+   const [showResults, setShowResults] = useState(false);
+ 
+   const lessonData = vocabularyData.a1[datasetKey] as any;
+   const vocabulary = (lessonData?.vocabulary || []) as VocabularyWord[];
+   const exercises = lessonData?.exercises || [];
+   const grammarFocus = lessonData?.grammarFocus || {};
 
   const currentWord = vocabulary[currentWordIndex];
-  const progress = (completedWords.size / vocabulary.length) * 100;
+  const progress = (completedWords.size / Math.max(vocabulary.length, 1)) * 100;
 
   const playAudio = () => {
     setIsPlaying(true);
-    // Simulate audio playback
     setTimeout(() => setIsPlaying(false), 2000);
   };
 
@@ -106,6 +110,11 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
     setShowResults(false);
   };
 
+  // Determine grammar topic dynamically (first key of grammarFocus object)
+  const grammarKeys = Object.keys(grammarFocus || {});
+  const selectedGrammarKey = grammarKeys.length > 0 ? grammarKeys[0] : '';
+  const grammarTopic = selectedGrammarKey ? grammarFocus[selectedGrammarKey] : null;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-6">
@@ -114,9 +123,9 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
           <Badge className="bg-green-500 text-white mb-4">
             {level} Level - {theme}
           </Badge>
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Family & Relationships</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">{lessonData?.theme || theme}</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Learn 25 essential family vocabulary words with interactive exercises
+            {Array.isArray(vocabulary) ? `Learn ${vocabulary.length} essential words with interactive exercises` : 'Interactive vocabulary lesson'}
           </p>
         </div>
 
@@ -165,8 +174,8 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </div>
-                <CardTitle className="text-2xl mb-2">{currentWord.word}</CardTitle>
-                <div className="text-4xl mb-4">{currentWord.image}</div>
+                <CardTitle className="text-2xl mb-2">{currentWord?.word || '—'}</CardTitle>
+                <div className="text-4xl mb-4">{currentWord?.image || '🔤'}</div>
                 <div className="flex justify-center gap-2 mb-4">
                   <Button
                     variant="outline"
@@ -180,23 +189,25 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
                     variant="outline"
                     size="sm"
                     onClick={toggleFavorite}
+                    disabled={!currentWord}
                   >
-                    <Star className={`w-4 h-4 ${favoriteWords.has(currentWord.id) ? 'fill-yellow-400 text-yellow-400' : ''}`} />
+                    <Star className={`w-4 h-4 ${currentWord && favoriteWords.has(currentWord.id) ? 'fill-yellow-400 text-yellow-400' : ''}`} />
                   </Button>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 {/* Phonetic and Translation */}
                 <div className="text-center">
-                  <p className="text-gray-600 mb-2">{currentWord.phonetic}</p>
+                  <p className="text-gray-600 mb-2">{currentWord?.phonetic || ''}</p>
                   <Button
                     variant="outline"
                     onClick={() => setShowTranslation(!showTranslation)}
                     className="w-full"
+                    disabled={!currentWord}
                   >
                     {showTranslation ? 'Hide' : 'Show'} Translation
                   </Button>
-                  {showTranslation && (
+                  {showTranslation && currentWord && (
                     <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                       <p className="text-lg font-medium">{currentWord.translation}</p>
                     </div>
@@ -207,52 +218,58 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-medium mb-2">Definition:</h4>
-                    <p className="text-gray-700 dark:text-gray-300">{currentWord.definition}</p>
+                    <p className="text-gray-700 dark:text-gray-300">{currentWord?.definition || ''}</p>
                   </div>
                   <div>
                     <h4 className="font-medium mb-2">Example:</h4>
-                    <p className="text-gray-700 dark:text-gray-300 italic">"{currentWord.example}"</p>
+                    <p className="text-gray-700 dark:text-gray-300 italic">{currentWord ? `"${currentWord.example}"` : ''}</p>
                   </div>
                 </div>
 
                 {/* Usage Notes */}
-                <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-                  <h4 className="font-medium mb-2">💡 Usage Note:</h4>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">{currentWord.usageNotes}</p>
-                </div>
+                {currentWord && (
+                  <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+                    <h4 className="font-medium mb-2">💡 Usage Note:</h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">{currentWord.usageNotes}</p>
+                  </div>
+                )}
 
                 {/* Related Words */}
-                <div>
-                  <h4 className="font-medium mb-2">Related Words:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {currentWord.relatedWords.map((word, index) => (
-                      <Badge key={index} variant="secondary">
-                        {word}
-                      </Badge>
-                    ))}
+                {currentWord && (
+                  <div>
+                    <h4 className="font-medium mb-2">Related Words:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {currentWord.relatedWords.map((word, index) => (
+                        <Badge key={index} variant="secondary">
+                          {word}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Action Buttons */}
-                <div className="flex gap-2 pt-4">
-                  <Button
-                    onClick={markAsCompleted}
-                    className="flex-1"
-                    variant={completedWords.has(currentWord.id) ? "default" : "outline"}
-                  >
-                    {completedWords.has(currentWord.id) ? (
-                      <>
-                        <CheckCircle className="w-4 h-4 mr-2" />
-                        Completed
-                      </>
-                    ) : (
-                      <>
-                        <CheckCircle className="w-4 h-4 mr-2" />
-                        Mark Complete
-                      </>
-                    )}
-                  </Button>
-                </div>
+                {currentWord && (
+                  <div className="flex gap-2 pt-4">
+                    <Button
+                      onClick={markAsCompleted}
+                      className="flex-1"
+                      variant={completedWords.has(currentWord.id) ? 'default' : 'outline'}
+                    >
+                      {completedWords.has(currentWord.id) ? (
+                        <>
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          Completed
+                        </>
+                      ) : (
+                        <>
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          Mark Complete
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </TabsContent>
@@ -278,7 +295,7 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
 
                     {exercises[currentExercise].type === 'matching' && (
                       <div className="space-y-4">
-                        {Array.isArray(exercises[currentExercise].items) && exercises[currentExercise].items.map((item, index) => (
+                        {Array.isArray(exercises[currentExercise].items) && exercises[currentExercise].items.map((item: any, index: number) => (
                           <Card key={index} className="p-4">
                             <div className="flex justify-between items-center">
                               <span className="font-medium">{'word' in item ? item.word : ''}</span>
@@ -291,7 +308,7 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
 
                     {exercises[currentExercise].type === 'fill-in-blank' && (
                       <div className="space-y-4">
-                        {Array.isArray(exercises[currentExercise].items) && exercises[currentExercise].items.map((item, index) => (
+                        {Array.isArray(exercises[currentExercise].items) && exercises[currentExercise].items.map((item: any, index: number) => (
                           <div key={index} className="space-y-2">
                             <p className="text-gray-700">
                               {'sentence' in item ? item.sentence.replace('___', '_____') : ''}
@@ -340,44 +357,52 @@ export default function A1VocabularyLesson({ theme, level }: VocabularyLessonPro
           <TabsContent value="grammar">
             <Card className="max-w-2xl mx-auto">
               <CardHeader>
-                <CardTitle>Grammar Focus: Possessive Adjectives</CardTitle>
+                <CardTitle>
+                  {grammarTopic?.title ? `Grammar Focus: ${grammarTopic.title}` : 'Grammar Focus'}
+                </CardTitle>
                 <CardDescription>
-                  Learn to use my, your, his, her, their with family members
+                  {grammarTopic?.description || 'Key grammar for this topic'}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div>
-                  <h4 className="font-medium mb-3">Examples:</h4>
-                  <div className="space-y-2">
-                    {grammarFocus.possessiveAdjectives.examples.map((example, index) => (
-                      <div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
-                        <p className="text-gray-700 dark:text-gray-300">{example}</p>
-                      </div>
-                    ))}
+                {grammarTopic?.examples && (
+                  <div>
+                    <h4 className="font-medium mb-3">Examples:</h4>
+                    <div className="space-y-2">
+                      {grammarTopic.examples.map((example: string, index: number) => (
+                        <div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+                          <p className="text-gray-700 dark:text-gray-300">{example}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <div>
-                  <h4 className="font-medium mb-3">Rules:</h4>
-                  <ul className="space-y-2">
-                    {grammarFocus.possessiveAdjectives.rules.map((rule, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700 dark:text-gray-300">{rule}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {grammarTopic?.rules && (
+                  <div>
+                    <h4 className="font-medium mb-3">Rules:</h4>
+                    <ul className="space-y-2">
+                      {grammarTopic.rules.map((rule: string, index: number) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700 dark:text-gray-300">{rule}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                  <h4 className="font-medium mb-2">🎯 CEFR A1 Can-Do Statements:</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• I can understand and use basic family vocabulary</li>
-                    <li>• I can introduce my family members</li>
-                    <li>• I can ask and answer simple questions about family</li>
-                    <li>• I can describe basic family relationships</li>
-                  </ul>
-                </div>
+                {/* CEFR - display from mapping if available */}
+                {lessonData?.cefrMapping?.canDoStatements && (
+                  <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                    <h4 className="font-medium mb-2">🎯 CEFR A1 Can-Do Statements:</h4>
+                    <ul className="space-y-1 text-sm">
+                      {lessonData.cefrMapping.canDoStatements.map((s: string, i: number) => (
+                        <li key={i}>• {s}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </TabsContent>

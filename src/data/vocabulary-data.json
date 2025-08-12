@@ -489,6 +489,411 @@
         "progressTracking": true,
         "adaptiveLearning": true
       }
+    },
+    "personal-information": {
+      "theme": "Personal Information",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can say and ask for personal details",
+          "I can spell my name and give my phone number",
+          "I can fill in simple forms with personal information",
+          "I can introduce myself and others"
+        ],
+        "vocabularyRange": "25 essential personal details",
+        "grammarFocus": "Verb 'to be' for identity; possessive adjectives (my, your)",
+        "communicationFunctions": [
+          "Introducing yourself",
+          "Exchanging contact details",
+          "Talking about nationality and age",
+          "Completing simple forms"
+        ]
+      },
+      "vocabulary": [
+        {"id":1,"word":"name","translation":"nome","phonetic":"/neɪm/","partOfSpeech":"noun","definition":"What a person or thing is called","example":"My name is Ana.","image":"📝","audioUrl":"/audio/name.mp3","difficulty":"basic","category":"personal details","relatedWords":["first name","last name","nickname"],"usageNotes":"Use 'My name is …' to introduce yourself"},
+        {"id":2,"word":"first name","translation":"primeiro nome","phonetic":"/ˌfɜːst ˈneɪm/","partOfSpeech":"noun","definition":"A person's given name","example":"Her first name is Maria.","image":"🪪","audioUrl":"/audio/first-name.mp3","difficulty":"basic","category":"personal details","relatedWords":["given name","name","last name"],"usageNotes":"Also called given name"},
+        {"id":3,"word":"last name","translation":"sobrenome","phonetic":"/ˌlɑːst ˈneɪm/","partOfSpeech":"noun","definition":"A family name","example":"His last name is Silva.","image":"🧾","audioUrl":"/audio/last-name.mp3","difficulty":"basic","category":"personal details","relatedWords":["family name","surname","name"],"usageNotes":"Also called family name or surname"},
+        {"id":4,"word":"age","translation":"idade","phonetic":"/eɪdʒ/","partOfSpeech":"noun","definition":"How many years someone has lived","example":"I am 20 years old.","image":"🎂","audioUrl":"/audio/age.mp3","difficulty":"basic","category":"personal details","relatedWords":["years old","birthday","date of birth"],"usageNotes":"Use 'to be': I am 20 years old (not 'I have 20 years')"},
+        {"id":5,"word":"address","translation":"endereço","phonetic":"/əˈdres/","partOfSpeech":"noun","definition":"The place where you live","example":"My address is 10 Main Street.","image":"🏠","audioUrl":"/audio/address.mp3","difficulty":"basic","category":"contact info","relatedWords":["street","city","postcode"],"usageNotes":"Use numbers before street names: 10 Main Street"},
+        {"id":6,"word":"street","translation":"rua","phonetic":"/striːt/","partOfSpeech":"noun","definition":"A road in a city or town","example":"I live on Green Street.","image":"🛣️","audioUrl":"/audio/street.mp3","difficulty":"basic","category":"contact info","relatedWords":["road","avenue","address"],"usageNotes":"Use 'on' with street: live on Green Street"},
+        {"id":7,"word":"city","translation":"cidade","phonetic":"/ˈsɪti/","partOfSpeech":"noun","definition":"A large town","example":"My city is São Paulo.","image":"🏙️","audioUrl":"/audio/city.mp3","difficulty":"basic","category":"contact info","relatedWords":["town","country","address"],"usageNotes":"Capitalize city names"},
+        {"id":8,"word":"country","translation":"país","phonetic":"/ˈkʌntri/","partOfSpeech":"noun","definition":"A nation","example":"My country is Brazil.","image":"🗺️","audioUrl":"/audio/country.mp3","difficulty":"basic","category":"identity","relatedWords":["nationality","passport","city"],"usageNotes":"Capitalize country names"},
+        {"id":9,"word":"phone number","translation":"número de telefone","phonetic":"/ˈfəʊn ˌnʌmbər/","partOfSpeech":"noun","definition":"Digits used to call someone","example":"My phone number is 555-1234.","image":"📱","audioUrl":"/audio/phone-number.mp3","difficulty":"basic","category":"contact info","relatedWords":["call","mobile","contact"],"usageNotes":"Say numbers clearly: five five five one two three four"},
+        {"id":10,"word":"email","translation":"e-mail","phonetic":"/ˈiːmeɪl/","partOfSpeech":"noun","definition":"Electronic mail address","example":"My email is ana@example.com.","image":"✉️","audioUrl":"/audio/email.mp3","difficulty":"basic","category":"contact info","relatedWords":["address","contact","message"],"usageNotes":"Use 'at' and 'dot' when spelling: at example dot com"},
+        {"id":11,"word":"job","translation":"emprego","phonetic":"/dʒɒb/","partOfSpeech":"noun","definition":"Work you do to earn money","example":"My job is cashier.","image":"💼","audioUrl":"/audio/job.mp3","difficulty":"basic","category":"identity","relatedWords":["work","occupation","profession"],"usageNotes":"Use 'I am a …' or 'I work as a …'"},
+        {"id":12,"word":"student","translation":"estudante","phonetic":"/ˈstjuːdənt/","partOfSpeech":"noun","definition":"A person who studies at a school","example":"I am a student.","image":"🎓","audioUrl":"/audio/student.mp3","difficulty":"basic","category":"identity","relatedWords":["school","learn","teacher"],"usageNotes":"Use 'a' before consonant sounds: a student"},
+        {"id":13,"word":"teacher","translation":"professor/professora","phonetic":"/ˈtiːtʃər/","partOfSpeech":"noun","definition":"A person who teaches","example":"She is a teacher.","image":"👩‍🏫","audioUrl":"/audio/teacher.mp3","difficulty":"basic","category":"identity","relatedWords":["teach","school","student"],"usageNotes":"Use 'a' or 'an' depending on sound"},
+        {"id":14,"word":"friend","translation":"amigo/amiga","phonetic":"/frend/","partOfSpeech":"noun","definition":"A person you like and know well","example":"He is my friend.","image":"🧑‍🤝‍🧑","audioUrl":"/audio/friend.mp3","difficulty":"basic","category":"relationships","relatedWords":["buddy","mate","classmate"],"usageNotes":"Plural: friends"},
+        {"id":15,"word":"family name","translation":"sobrenome","phonetic":"/ˈfæməli neɪm/","partOfSpeech":"noun","definition":"Another word for last name","example":"Her family name is Souza.","image":"🧾","audioUrl":"/audio/family-name.mp3","difficulty":"basic","category":"personal details","relatedWords":["surname","last name","name"],"usageNotes":"Synonym of surname"},
+        {"id":16,"word":"birthday","translation":"aniversário","phonetic":"/ˈbɜːθdeɪ/","partOfSpeech":"noun","definition":"The day you were born","example":"My birthday is in May.","image":"🎂","audioUrl":"/audio/birthday.mp3","difficulty":"basic","category":"personal details","relatedWords":["age","date of birth","party"],"usageNotes":"Use 'in' with months: in May"},
+        {"id":17,"word":"date of birth","translation":"data de nascimento","phonetic":"/ˌdeɪt əv ˈbɜːθ/","partOfSpeech":"noun","definition":"Exact day you were born","example":"Please write your date of birth.","image":"📅","audioUrl":"/audio/date-of-birth.mp3","difficulty":"basic","category":"personal details","relatedWords":["birthday","age","ID"],"usageNotes":"Abbreviation: DOB"},
+        {"id":18,"word":"nationality","translation":"nacionalidade","phonetic":"/ˌnæʃəˈnæləti/","partOfSpeech":"noun","definition":"The country you are from","example":"My nationality is Brazilian.","image":"🌎","audioUrl":"/audio/nationality.mp3","difficulty":"basic","category":"identity","relatedWords":["country","passport","citizen"],"usageNotes":"Adjective form: Brazilian, American, etc."},
+        {"id":19,"word":"passport","translation":"passaporte","phonetic":"/ˈpɑːspɔːt/","partOfSpeech":"noun","definition":"Official document for travel","example":"I have a passport.","image":"🛂","audioUrl":"/audio/passport.mp3","difficulty":"basic","category":"identity","relatedWords":["ID card","visa","document"],"usageNotes":"Carry when traveling"},
+        {"id":20,"word":"ID card","translation":"carteira de identidade","phonetic":"/ˌaɪ ˈdiː kɑːd/","partOfSpeech":"noun","definition":"Identity card","example":"Please show your ID card.","image":"🪪","audioUrl":"/audio/id-card.mp3","difficulty":"basic","category":"identity","relatedWords":["passport","document","name"],"usageNotes":"Also 'identity card'"},
+        {"id":21,"word":"number","translation":"número","phonetic":"/ˈnʌmbər/","partOfSpeech":"noun","definition":"A symbol that shows quantity","example":"Write your house number here.","image":"🔢","audioUrl":"/audio/number.mp3","difficulty":"basic","category":"personal details","relatedWords":["digit","phone","address"],"usageNotes":"Phone number, house number, etc."},
+        {"id":22,"word":"male","translation":"masculino","phonetic":"/meɪl/","partOfSpeech":"adjective","definition":"Man or boy","example":"Tick male or female.","image":"👨","audioUrl":"/audio/male.mp3","difficulty":"basic","category":"identity","relatedWords":["man","boy","gender"],"usageNotes":"Opposite of female"},
+        {"id":23,"word":"female","translation":"feminino","phonetic":"/ˈfiːmeɪl/","partOfSpeech":"adjective","definition":"Woman or girl","example":"She is female.","image":"👩","audioUrl":"/audio/female.mp3","difficulty":"basic","category":"identity","relatedWords":["woman","girl","gender"],"usageNotes":"Opposite of male"},
+        {"id":24,"word":"single","translation":"solteiro/solteira","phonetic":"/ˈsɪŋɡl/","partOfSpeech":"adjective","definition":"Not married","example":"I am single.","image":"🙂","audioUrl":"/audio/single.mp3","difficulty":"basic","category":"identity","relatedWords":["married","status","divorced"],"usageNotes":"Marital status"},
+        {"id":25,"word":"married","translation":"casado/casada","phonetic":"/ˈmærid/","partOfSpeech":"adjective","definition":"Having a husband or wife","example":"They are married.","image":"💍","audioUrl":"/audio/married.mp3","difficulty":"basic","category":"identity","relatedWords":["single","husband","wife"],"usageNotes":"Marital status"}
+      ],
+      "exercises": [
+        {"type":"matching","title":"Personal Details Match","description":"Match the word to its meaning","items":[{"word":"address","definition":"The place where you live","correct":true},{"word":"nationality","definition":"The country you are from","correct":true},{"word":"phone number","definition":"Digits used to call someone","correct":true}]},
+        {"type":"fill-in-blank","title":"Introduce Yourself","description":"Complete with correct words","items":[{"sentence":"My ___ is Lucas.","correctAnswer":"name","hint":"What people call you"},{"sentence":"I am 22 years ___","correctAnswer":"old","hint":"Age phrase"},{"sentence":"My ___ is 21 Green Street.","correctAnswer":"address","hint":"Where you live"}]},
+        {"type":"conversation","title":"Meeting Someone","description":"Practice asking and giving personal information","scenarios":[{"question":"What is your name?","sampleAnswer":"My name is Ana.","hint":"Use 'My name is …'"},{"question":"Where are you from?","sampleAnswer":"I am from Brazil.","hint":"Use 'I am from …'"},{"question":"What is your phone number?","sampleAnswer":"It is 555-1234.","hint":"Say numbers clearly"}]}
+      ],
+      "grammarFocus": {
+        "beVerbBasics": {
+          "title": "Verb 'To Be' for Personal Information",
+          "description": "Use 'am', 'is', 'are' to talk about name, age, nationality",
+          "examples": [
+            "I am Ana. You are Pedro.",
+            "She is 20 years old.",
+            "We are Brazilian.",
+            "My name is Maria.",
+            "Are you a student? Yes, I am."
+          ],
+          "rules": [
+            "Use 'am' with I; 'is' with he/she/it; 'are' with you/we/they",
+            "Age uses 'to be': I am 20 years old",
+            "Use contractions in speech: I'm, you're, he's",
+            "Word order in questions: Are you from Brazil?",
+            "Use 'my/your/his/her' with names and family"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
+    "colors-basic-adjectives": {
+      "theme": "Colors & Basic Adjectives",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can name common colors",
+          "I can describe simple qualities (size, age)",
+          "I can use adjectives before nouns",
+          "I can compare simple things using 'more' and 'less'"
+        ],
+        "vocabularyRange": "15 essential colors and adjectives",
+        "grammarFocus": "Adjective position and basic order",
+        "communicationFunctions": [
+          "Describing objects",
+          "Talking about appearance",
+          "Choosing and shopping",
+          "Giving simple opinions"
+        ]
+      },
+      "vocabulary": [
+        {"id":1,"word":"red","translation":"vermelho","phonetic":"/red/","partOfSpeech":"adjective","definition":"Color of blood","example":"I have a red shirt.","image":"🟥","audioUrl":"/audio/red.mp3","difficulty":"basic","category":"colors","relatedWords":["pink","orange","color"],"usageNotes":"Adjective goes before noun: red shirt"},
+        {"id":2,"word":"blue","translation":"azul","phonetic":"/bluː/","partOfSpeech":"adjective","definition":"Color of the sky","example":"The sky is blue.","image":"🟦","audioUrl":"/audio/blue.mp3","difficulty":"basic","category":"colors","relatedWords":["navy","light blue","color"],"usageNotes":"Can say light/dark blue"},
+        {"id":3,"word":"green","translation":"verde","phonetic":"/ɡriːn/","partOfSpeech":"adjective","definition":"Color of grass","example":"She likes green apples.","image":"🟩","audioUrl":"/audio/green.mp3","difficulty":"basic","category":"colors","relatedWords":["lime","olive","color"],"usageNotes":"Use 'green' as adjective or noun"},
+        {"id":4,"word":"yellow","translation":"amarelo","phonetic":"/ˈjeləʊ/","partOfSpeech":"adjective","definition":"Bright color of the sun","example":"The bag is yellow.","image":"🟨","audioUrl":"/audio/yellow.mp3","difficulty":"basic","category":"colors","relatedWords":["gold","color","orange"],"usageNotes":"Common in traffic signs"},
+        {"id":5,"word":"black","translation":"preto","phonetic":"/blæk/","partOfSpeech":"adjective","definition":"Very dark color","example":"He wears black shoes.","image":"⬛","audioUrl":"/audio/black.mp3","difficulty":"basic","category":"colors","relatedWords":["dark","white","color"],"usageNotes":"Opposite of white"},
+        {"id":6,"word":"white","translation":"branco","phonetic":"/waɪt/","partOfSpeech":"adjective","definition":"Color of snow","example":"The paper is white.","image":"⬜","audioUrl":"/audio/white.mp3","difficulty":"basic","category":"colors","relatedWords":["light","black","color"],"usageNotes":"Opposite of black"},
+        {"id":7,"word":"small","translation":"pequeno","phonetic":"/smɔːl/","partOfSpeech":"adjective","definition":"Not big","example":"A small cup of coffee, please.","image":"🤏","audioUrl":"/audio/small.mp3","difficulty":"basic","category":"size","relatedWords":["little","tiny","big"],"usageNotes":"Before nouns: small house"},
+        {"id":8,"word":"big","translation":"grande","phonetic":"/bɪɡ/","partOfSpeech":"adjective","definition":"Large in size","example":"They have a big dog.","image":"🦮","audioUrl":"/audio/big.mp3","difficulty":"basic","category":"size","relatedWords":["large","huge","small"],"usageNotes":"Opposite of small"},
+        {"id":9,"word":"tall","translation":"alto","phonetic":"/tɔːl/","partOfSpeech":"adjective","definition":"Of great height","example":"He is tall.","image":"📏","audioUrl":"/audio/tall.mp3","difficulty":"basic","category":"size","relatedWords":["short","height","high"],"usageNotes":"Use for people and things"},
+        {"id":10,"word":"short","translation":"baixo/curto","phonetic":"/ʃɔːt/","partOfSpeech":"adjective","definition":"Not tall or not long","example":"She has short hair.","image":"✂️","audioUrl":"/audio/short.mp3","difficulty":"basic","category":"size","relatedWords":["tall","long","small"],"usageNotes":"Opposite of tall/long"},
+        {"id":11,"word":"old","translation":"velho","phonetic":"/əʊld/","partOfSpeech":"adjective","definition":"Having lived for many years","example":"This is an old book.","image":"📚","audioUrl":"/audio/old.mp3","difficulty":"basic","category":"age","relatedWords":["new","young","ancient"],"usageNotes":"Opposite of new/young"},
+        {"id":12,"word":"young","translation":"jovem","phonetic":"/jʌŋ/","partOfSpeech":"adjective","definition":"Not old","example":"They are young.","image":"🧒","audioUrl":"/audio/young.mp3","difficulty":"basic","category":"age","relatedWords":["teen","child","old"],"usageNotes":"Opposite of old"},
+        {"id":13,"word":"beautiful","translation":"bonito/bonita","phonetic":"/ˈbjuːtɪfl/","partOfSpeech":"adjective","definition":"Very pretty","example":"What a beautiful day!","image":"🌸","audioUrl":"/audio/beautiful.mp3","difficulty":"basic","category":"opinions","relatedWords":["pretty","nice","ugly"],"usageNotes":"Polite compliment"},
+        {"id":14,"word":"ugly","translation":"feio/feia","phonetic":"/ˈʌɡli/","partOfSpeech":"adjective","definition":"Not beautiful","example":"The shoes are ugly.","image":"🥴","audioUrl":"/audio/ugly.mp3","difficulty":"basic","category":"opinions","relatedWords":["bad","beautiful","pretty"],"usageNotes":"Use carefully; can be rude"},
+        {"id":15,"word":"new","translation":"novo/nova","phonetic":"/njuː/","partOfSpeech":"adjective","definition":"Not old","example":"I bought a new phone.","image":"📱","audioUrl":"/audio/new.mp3","difficulty":"basic","category":"age","relatedWords":["old","brand-new","modern"],"usageNotes":"Opposite of old"}
+      ],
+      "exercises": [
+        {"type":"matching","title":"Colors Match","description":"Match colors with objects","items":[{"word":"red","definition":"Color of blood","correct":true},{"word":"blue","definition":"Color of the sky","correct":true},{"word":"green","definition":"Color of grass","correct":true}]},
+        {"type":"fill-in-blank","title":"Describe the Object","description":"Use a color or adjective","items":[{"sentence":"I want a ___ T-shirt.","correctAnswer":"blue","hint":"A color"},{"sentence":"She has ___ hair.","correctAnswer":"short","hint":"Not long"},{"sentence":"This is a ___ phone.","correctAnswer":"new","hint":"Opposite of old"}]},
+        {"type":"conversation","title":"Shopping Talk","description":"Practice choosing items by color/size","scenarios":[{"question":"What color do you like?","sampleAnswer":"I like green.","hint":"Use 'I like …'"},{"question":"Do you want a small or big cup?","sampleAnswer":"A small cup, please.","hint":"Use size adjectives"},{"question":"How is the dress?","sampleAnswer":"It is beautiful.","hint":"Use adjectives before nouns"}]}
+      ],
+      "grammarFocus": {
+        "adjectiveBasics": {
+          "title": "Adjectives: Position and Basic Order",
+          "description": "Use adjectives before nouns; one or two adjectives before a noun",
+          "examples": [
+            "a red car",
+            "a big house",
+            "a beautiful old city",
+            "blue eyes",
+            "small black bag"
+          ],
+          "rules": [
+            "Adjectives usually come before nouns in English",
+            "Color adjectives go after opinion/size (a beautiful red dress)",
+            "Do not add plural to adjectives (two big houses)",
+            "Use 'more' for longer adjectives to compare (more beautiful)",
+            "Use 'than' in comparisons (bigger than)"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
+    "food-drinks": {
+      "theme": "Food & Drinks",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can name common foods and drinks",
+          "I can order simple food and drinks",
+          "I can talk about meals and preferences",
+          "I can ask for prices and quantities"
+        ],
+        "vocabularyRange": "30 essential foods and drinks",
+        "grammarFocus": "Countable/uncountable nouns; some/any",
+        "communicationFunctions": [
+          "Ordering in a café",
+          "Shopping for food",
+          "Talking about meals",
+          "Expressing likes and dislikes"
+        ]
+      },
+      "vocabulary": [
+        {"id":1,"word":"water","translation":"água","phonetic":"/ˈwɔːtər/","partOfSpeech":"noun","definition":"A clear liquid for drinking","example":"I drink water every day.","image":"💧","audioUrl":"/audio/water.mp3","difficulty":"basic","category":"drinks","relatedWords":["juice","tea","drink"],"usageNotes":"Uncountable: some water"},
+        {"id":2,"word":"tea","translation":"chá","phonetic":"/tiː/","partOfSpeech":"noun","definition":"A hot drink made with leaves","example":"She likes tea with milk.","image":"🍵","audioUrl":"/audio/tea.mp3","difficulty":"basic","category":"drinks","relatedWords":["coffee","cup","drink"],"usageNotes":"Serve hot or cold"},
+        {"id":3,"word":"coffee","translation":"café","phonetic":"/ˈkɒfi/","partOfSpeech":"noun","definition":"A hot drink from coffee beans","example":"He drinks coffee in the morning.","image":"☕","audioUrl":"/audio/coffee.mp3","difficulty":"basic","category":"drinks","relatedWords":["espresso","milk","sugar"],"usageNotes":"Common breakfast drink"},
+        {"id":4,"word":"milk","translation":"leite","phonetic":"/mɪlk/","partOfSpeech":"noun","definition":"White liquid from cows","example":"I prefer milk in my tea.","image":"🥛","audioUrl":"/audio/milk.mp3","difficulty":"basic","category":"drinks","relatedWords":["dairy","cheese","butter"],"usageNotes":"Uncountable: some milk"},
+        {"id":5,"word":"juice","translation":"suco","phonetic":"/dʒuːs/","partOfSpeech":"noun","definition":"Drink made from fruit","example":"Orange juice is my favorite.","image":"🧃","audioUrl":"/audio/juice.mp3","difficulty":"basic","category":"drinks","relatedWords":["apple juice","fruit","drink"],"usageNotes":"Can be orange, apple, etc."},
+        {"id":6,"word":"bread","translation":"pão","phonetic":"/bred/","partOfSpeech":"noun","definition":"Baked food made from flour","example":"We eat bread for breakfast.","image":"🍞","audioUrl":"/audio/bread.mp3","difficulty":"basic","category":"food","relatedWords":["toast","butter","sandwich"],"usageNotes":"Uncountable in general sense"},
+        {"id":7,"word":"rice","translation":"arroz","phonetic":"/raɪs/","partOfSpeech":"noun","definition":"Small white grains eaten as food","example":"Rice is common in many countries.","image":"🍚","audioUrl":"/audio/rice.mp3","difficulty":"basic","category":"food","relatedWords":["beans","meal","plate"],"usageNotes":"Uncountable in general sense"},
+        {"id":8,"word":"egg","translation":"ovo","phonetic":"/eɡ/","partOfSpeech":"noun","definition":"Food from a chicken","example":"I eat an egg for breakfast.","image":"🥚","audioUrl":"/audio/egg.mp3","difficulty":"basic","category":"food","relatedWords":["boiled","fried","omelet"],"usageNotes":"Use 'an' before vowel sound"},
+        {"id":9,"word":"apple","translation":"maçã","phonetic":"/ˈæpl/","partOfSpeech":"noun","definition":"A round fruit","example":"He eats an apple.","image":"🍎","audioUrl":"/audio/apple.mp3","difficulty":"basic","category":"fruit","relatedWords":["fruit","red","green"],"usageNotes":"Countable: an apple/two apples"},
+        {"id":10,"word":"banana","translation":"banana","phonetic":"/bəˈnɑːnə/","partOfSpeech":"noun","definition":"A long yellow fruit","example":"Bananas are sweet.","image":"🍌","audioUrl":"/audio/banana.mp3","difficulty":"basic","category":"fruit","relatedWords":["fruit","yellow","apple"],"usageNotes":"Countable"},
+        {"id":11,"word":"orange","translation":"laranja","phonetic":"/ˈɒrɪndʒ/","partOfSpeech":"noun","definition":"A round orange fruit","example":"I like orange juice.","image":"🍊","audioUrl":"/audio/orange.mp3","difficulty":"basic","category":"fruit","relatedWords":["fruit","juice","apple"],"usageNotes":"Also the name of a color"},
+        {"id":12,"word":"chicken","translation":"frango","phonetic":"/ˈtʃɪkɪn/","partOfSpeech":"noun","definition":"Meat from a chicken","example":"We had chicken for dinner.","image":"🍗","audioUrl":"/audio/chicken.mp3","difficulty":"basic","category":"food","relatedWords":["meat","fish","rice"],"usageNotes":"Countable for animals; uncountable as meat"},
+        {"id":13,"word":"fish","translation":"peixe","phonetic":"/fɪʃ/","partOfSpeech":"noun","definition":"Animal from water used as food","example":"He eats fish on Fridays.","image":"🐟","audioUrl":"/audio/fish.mp3","difficulty":"basic","category":"food","relatedWords":["seafood","meat","salad"],"usageNotes":"Plural is fish or fishes"},
+        {"id":14,"word":"meat","translation":"carne","phonetic":"/miːt/","partOfSpeech":"noun","definition":"Food from animals","example":"They don't eat meat.","image":"🥩","audioUrl":"/audio/meat.mp3","difficulty":"basic","category":"food","relatedWords":["chicken","beef","pork"],"usageNotes":"Uncountable"},
+        {"id":15,"word":"vegetable","translation":"legume/verdura","phonetic":"/ˈvedʒtəbl/","partOfSpeech":"noun","definition":"Plant used as food","example":"Eat more vegetables.","image":"🥦","audioUrl":"/audio/vegetable.mp3","difficulty":"basic","category":"food","relatedWords":["salad","broccoli","carrot"],"usageNotes":"Often plural: vegetables"},
+        {"id":16,"word":"salad","translation":"salada","phonetic":"/ˈsæləd/","partOfSpeech":"noun","definition":"Cold dish with vegetables","example":"I want a green salad.","image":"🥗","audioUrl":"/audio/salad.mp3","difficulty":"basic","category":"food","relatedWords":["vegetable","tomato","cucumber"],"usageNotes":"Countable/uncountable"},
+        {"id":17,"word":"soup","translation":"sopa","phonetic":"/suːp/","partOfSpeech":"noun","definition":"Hot liquid food","example":"Tomato soup is tasty.","image":"🍲","audioUrl":"/audio/soup.mp3","difficulty":"basic","category":"food","relatedWords":["bowl","spoon","hot"],"usageNotes":"Uncountable in general"},
+        {"id":18,"word":"sugar","translation":"açúcar","phonetic":"/ˈʃʊɡər/","partOfSpeech":"noun","definition":"Sweet substance","example":"No sugar in my coffee, please.","image":"🍬","audioUrl":"/audio/sugar.mp3","difficulty":"basic","category":"ingredients","relatedWords":["sweet","salt","coffee"],"usageNotes":"Uncountable"},
+        {"id":19,"word":"salt","translation":"sal","phonetic":"/sɒlt/","partOfSpeech":"noun","definition":"White crystal used in food","example":"Add a little salt.","image":"🧂","audioUrl":"/audio/salt.mp3","difficulty":"basic","category":"ingredients","relatedWords":["pepper","spice","salted"],"usageNotes":"Uncountable in general"},
+        {"id":20,"word":"pepper","translation":"pimenta/pimentão","phonetic":"/ˈpepər/","partOfSpeech":"noun","definition":"Spice or vegetable","example":"Black pepper is spicy.","image":"🌶️","audioUrl":"/audio/pepper.mp3","difficulty":"basic","category":"ingredients","relatedWords":["salt","spice","hot"],"usageNotes":"Can be spice or vegetable"},
+        {"id":21,"word":"cheese","translation":"queijo","phonetic":"/tʃiːz/","partOfSpeech":"noun","definition":"Food from milk","example":"I like cheese on bread.","image":"🧀","audioUrl":"/audio/cheese.mp3","difficulty":"basic","category":"food","relatedWords":["milk","butter","sandwich"],"usageNotes":"Uncountable in general"},
+        {"id":22,"word":"butter","translation":"manteiga","phonetic":"/ˈbʌtər/","partOfSpeech":"noun","definition":"Fatty food from milk","example":"Put butter on toast.","image":"🧈","audioUrl":"/audio/butter.mp3","difficulty":"basic","category":"food","relatedWords":["bread","cheese","dairy"],"usageNotes":"Uncountable"},
+        {"id":23,"word":"breakfast","translation":"café da manhã","phonetic":"/ˈbrekfəst/","partOfSpeech":"noun","definition":"Morning meal","example":"We have eggs for breakfast.","image":"🍳","audioUrl":"/audio/breakfast.mp3","difficulty":"basic","category":"meals","relatedWords":["lunch","dinner","meal"],"usageNotes":"Three meals: breakfast, lunch, dinner"},
+        {"id":24,"word":"lunch","translation":"almoço","phonetic":"/lʌntʃ/","partOfSpeech":"noun","definition":"Midday meal","example":"Lunch is at 12.","image":"🥪","audioUrl":"/audio/lunch.mp3","difficulty":"basic","category":"meals","relatedWords":["breakfast","dinner","snack"],"usageNotes":"Common time 12:00–14:00"},
+        {"id":25,"word":"dinner","translation":"jantar","phonetic":"/ˈdɪnər/","partOfSpeech":"noun","definition":"Evening meal","example":"We eat dinner at 7.","image":"🍽️","audioUrl":"/audio/dinner.mp3","difficulty":"basic","category":"meals","relatedWords":["lunch","meal","evening"],"usageNotes":"Main evening meal"},
+        {"id":26,"word":"snack","translation":"lanche","phonetic":"/snæk/","partOfSpeech":"noun","definition":"Small amount of food between meals","example":"I eat a snack at 4.","image":"🍪","audioUrl":"/audio/snack.mp3","difficulty":"basic","category":"meals","relatedWords":["break","food","cookie"],"usageNotes":"Countable"},
+        {"id":27,"word":"hungry","translation":"com fome","phonetic":"/ˈhʌŋɡri/","partOfSpeech":"adjective","definition":"Needing food","example":"I am hungry.","image":"😋","audioUrl":"/audio/hungry.mp3","difficulty":"basic","category":"feelings","relatedWords":["thirsty","eat","food"],"usageNotes":"Use with 'be': I am hungry"},
+        {"id":28,"word":"thirsty","translation":"com sede","phonetic":"/ˈθɜːsti/","partOfSpeech":"adjective","definition":"Needing drink","example":"He is thirsty.","image":"🥤","audioUrl":"/audio/thirsty.mp3","difficulty":"basic","category":"feelings","relatedWords":["hungry","drink","water"],"usageNotes":"Use with 'be': He is thirsty"},
+        {"id":29,"word":"plate","translation":"prato","phonetic":"/pleɪt/","partOfSpeech":"noun","definition":"Flat dish for food","example":"Put the salad on the plate.","image":"🍽️","audioUrl":"/audio/plate.mp3","difficulty":"basic","category":"tableware","relatedWords":["bowl","cup","fork"],"usageNotes":"Countable"},
+        {"id":30,"word":"cup","translation":"xícara","phonetic":"/kʌp/","partOfSpeech":"noun","definition":"Small container for drinks","example":"A cup of tea, please.","image":"🫖","audioUrl":"/audio/cup.mp3","difficulty":"basic","category":"tableware","relatedWords":["glass","mug","plate"],"usageNotes":"Countable"}
+      ],
+      "exercises": [
+        {"type":"matching","title":"Food Groups","description":"Match foods with their group","items":[{"word":"bread","definition":"Baked food from flour","correct":true},{"word":"apple","definition":"A round fruit","correct":true},{"word":"milk","definition":"White drink from cows","correct":true}]},
+        {"type":"fill-in-blank","title":"At the Café","description":"Complete the order","items":[{"sentence":"I would like a ___ of coffee.","correctAnswer":"cup","hint":"Tableware"},{"sentence":"No ___, please.","correctAnswer":"sugar","hint":"Sweet ingredient"},{"sentence":"We eat ___ for breakfast.","correctAnswer":"bread","hint":"Baked food"}]},
+        {"type":"conversation","title":"Ordering Food","description":"Practice ordering in a café","scenarios":[{"question":"What would you like?","sampleAnswer":"A sandwich and a juice, please.","hint":"Use 'would like'"},{"question":"Anything else?","sampleAnswer":"No, thank you.","hint":"Polite response"},{"question":"For here or to go?","sampleAnswer":"To go, please.","hint":"Common café question"}]}
+      ],
+      "grammarFocus": {
+        "countableBasics": {
+          "title": "Countable and Uncountable; Some/Any",
+          "description": "Know which foods are countable and how to use some/any",
+          "examples": [
+            "some water, some rice",
+            "an egg, two eggs",
+            "any sugar?",
+            "some apples",
+            "I don't have any milk."
+          ],
+          "rules": [
+            "Use 'some' in positive sentences and offers",
+            "Use 'any' in negatives and questions",
+            "Countable nouns have singular/plural forms",
+            "Uncountable nouns do not take 'a/an'",
+            "Use 'a' or 'an' with singular countable nouns"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
+    "days-months-time": {
+      "theme": "Days, Months, Time",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can say days of the week",
+          "I can say months of the year",
+          "I can talk about parts of the day",
+          "I can talk about simple schedules"
+        ],
+        "vocabularyRange": "20 essential time words",
+        "grammarFocus": "Capitalization and prepositions of time",
+        "communicationFunctions": [
+          "Talking about schedules",
+          "Making appointments",
+          "Saying dates",
+          "Talking about routines"
+        ]
+      },
+      "vocabulary": [
+        {"id":1,"word":"Monday","translation":"segunda-feira","phonetic":"/ˈmʌndeɪ/","partOfSpeech":"noun","definition":"First day of the work week","example":"I work on Monday.","image":"📅","audioUrl":"/audio/monday.mp3","difficulty":"basic","category":"days","relatedWords":["Tuesday","week","day"],"usageNotes":"Days are capitalized"},
+        {"id":2,"word":"Tuesday","translation":"terça-feira","phonetic":"/ˈtjuːzdeɪ/","partOfSpeech":"noun","definition":"Second day of the work week","example":"Class is on Tuesday.","image":"📅","audioUrl":"/audio/tuesday.mp3","difficulty":"basic","category":"days","relatedWords":["Monday","Wednesday","week"],"usageNotes":"Days are capitalized"},
+        {"id":3,"word":"Wednesday","translation":"quarta-feira","phonetic":"/ˈwenzdeɪ/","partOfSpeech":"noun","definition":"Middle of the week","example":"We meet on Wednesday.","image":"📅","audioUrl":"/audio/wednesday.mp3","difficulty":"basic","category":"days","relatedWords":["Tuesday","Thursday","week"],"usageNotes":"'d' is silent"},
+        {"id":4,"word":"Thursday","translation":"quinta-feira","phonetic":"/ˈθɜːzdeɪ/","partOfSpeech":"noun","definition":"Fourth day of the week","example":"The lesson is on Thursday.","image":"📅","audioUrl":"/audio/thursday.mp3","difficulty":"basic","category":"days","relatedWords":["Wednesday","Friday","week"],"usageNotes":"Days are capitalized"},
+        {"id":5,"word":"Friday","translation":"sexta-feira","phonetic":"/ˈfraɪdeɪ/","partOfSpeech":"noun","definition":"Last work day","example":"Friday is my favorite day.","image":"📅","audioUrl":"/audio/friday.mp3","difficulty":"basic","category":"days","relatedWords":["Thursday","Saturday","weekend"],"usageNotes":"Days are capitalized"},
+        {"id":6,"word":"Saturday","translation":"sábado","phonetic":"/ˈsætədeɪ/","partOfSpeech":"noun","definition":"Weekend day","example":"We relax on Saturday.","image":"📅","audioUrl":"/audio/saturday.mp3","difficulty":"basic","category":"days","relatedWords":["Sunday","weekend","day"],"usageNotes":"Days are capitalized"},
+        {"id":7,"word":"Sunday","translation":"domingo","phonetic":"/ˈsʌndeɪ/","partOfSpeech":"noun","definition":"Weekend day","example":"Sunday is a quiet day.","image":"📅","audioUrl":"/audio/sunday.mp3","difficulty":"basic","category":"days","relatedWords":["Saturday","weekend","day"],"usageNotes":"Days are capitalized"},
+        {"id":8,"word":"January","translation":"janeiro","phonetic":"/ˈdʒænjuəri/","partOfSpeech":"noun","definition":"First month","example":"January is cold.","image":"📆","audioUrl":"/audio/january.mp3","difficulty":"basic","category":"months","relatedWords":["February","month","year"],"usageNotes":"Months are capitalized"},
+        {"id":9,"word":"February","translation":"fevereiro","phonetic":"/ˈfebruəri/","partOfSpeech":"noun","definition":"Second month","example":"February has 28 days.","image":"📆","audioUrl":"/audio/february.mp3","difficulty":"basic","category":"months","relatedWords":["January","March","year"],"usageNotes":"Months are capitalized"},
+        {"id":10,"word":"March","translation":"março","phonetic":"/mɑːtʃ/","partOfSpeech":"noun","definition":"Third month","example":"Classes start in March.","image":"📆","audioUrl":"/audio/march.mp3","difficulty":"basic","category":"months","relatedWords":["April","month","year"],"usageNotes":"Use 'in' with months"},
+        {"id":11,"word":"April","translation":"abril","phonetic":"/ˈeɪprəl/","partOfSpeech":"noun","definition":"Fourth month","example":"My birthday is in April.","image":"📆","audioUrl":"/audio/april.mp3","difficulty":"basic","category":"months","relatedWords":["March","May","year"],"usageNotes":"Use 'in' with months"},
+        {"id":12,"word":"May","translation":"maio","phonetic":"/meɪ/","partOfSpeech":"noun","definition":"Fifth month","example":"May is sunny.","image":"📆","audioUrl":"/audio/may.mp3","difficulty":"basic","category":"months","relatedWords":["April","June","year"],"usageNotes":"Short name"},
+        {"id":13,"word":"June","translation":"junho","phonetic":"/dʒuːn/","partOfSpeech":"noun","definition":"Sixth month","example":"School ends in June.","image":"📆","audioUrl":"/audio/june.mp3","difficulty":"basic","category":"months","relatedWords":["May","July","year"],"usageNotes":"Use 'in' with months"},
+        {"id":14,"word":"July","translation":"julho","phonetic":"/dʒʊˈlaɪ/","partOfSpeech":"noun","definition":"Seventh month","example":"We travel in July.","image":"📆","audioUrl":"/audio/july.mp3","difficulty":"basic","category":"months","relatedWords":["June","August","year"],"usageNotes":"Use 'in' with months"},
+        {"id":15,"word":"morning","translation":"manhã","phonetic":"/ˈmɔːnɪŋ/","partOfSpeech":"noun","definition":"Early part of the day","example":"I wake up in the morning.","image":"🌅","audioUrl":"/audio/morning.mp3","difficulty":"basic","category":"time of day","relatedWords":["afternoon","evening","night"],"usageNotes":"Use 'in the morning'"},
+        {"id":16,"word":"afternoon","translation":"tarde","phonetic":"/ˌɑːftəˈnuːn/","partOfSpeech":"noun","definition":"Middle part of the day","example":"We study in the afternoon.","image":"🌞","audioUrl":"/audio/afternoon.mp3","difficulty":"basic","category":"time of day","relatedWords":["morning","evening","noon"],"usageNotes":"Use 'in the afternoon'"},
+        {"id":17,"word":"evening","translation":"noite (início)","phonetic":"/ˈiːvnɪŋ/","partOfSpeech":"noun","definition":"End of the day before night","example":"They walk in the evening.","image":"🌆","audioUrl":"/audio/evening.mp3","difficulty":"basic","category":"time of day","relatedWords":["night","afternoon","sunset"],"usageNotes":"Use 'in the evening'"},
+        {"id":18,"word":"night","translation":"noite","phonetic":"/naɪt/","partOfSpeech":"noun","definition":"Dark time after evening","example":"Good night!","image":"🌙","audioUrl":"/audio/night.mp3","difficulty":"basic","category":"time of day","relatedWords":["evening","midnight","sleep"],"usageNotes":"Use 'at night'"},
+        {"id":19,"word":"today","translation":"hoje","phonetic":"/təˈdeɪ/","partOfSpeech":"adverb","definition":"This day","example":"I have a test today.","image":"📅","audioUrl":"/audio/today.mp3","difficulty":"basic","category":"time words","relatedWords":["yesterday","tomorrow","now"],"usageNotes":"No preposition needed"},
+        {"id":20,"word":"tomorrow","translation":"amanhã","phonetic":"/təˈmɒrəʊ/","partOfSpeech":"adverb","definition":"The day after today","example":"See you tomorrow.","image":"📅","audioUrl":"/audio/tomorrow.mp3","difficulty":"basic","category":"time words","relatedWords":["today","yesterday","soon"],"usageNotes":"No preposition needed"}
+      ],
+      "exercises": [
+        {"type":"matching","title":"Days and Months","description":"Match the day or month with a fact","items":[{"word":"Monday","definition":"First day of the work week","correct":true},{"word":"January","definition":"First month","correct":true},{"word":"evening","definition":"End of the day before night","correct":true}]},
+        {"type":"fill-in-blank","title":"When Is It?","description":"Complete with a time word","items":[{"sentence":"My class is on ___.","correctAnswer":"Tuesday","hint":"A day"},{"sentence":"Her birthday is in ___.","correctAnswer":"April","hint":"A month"},{"sentence":"We sleep at ___.","correctAnswer":"night","hint":"Time of day"}]},
+        {"type":"conversation","title":"Making Plans","description":"Practice talking about schedules","scenarios":[{"question":"When is the meeting?","sampleAnswer":"It is on Monday morning.","hint":"Use prepositions on/in/at"},{"question":"What month is your vacation?","sampleAnswer":"In July.","hint":"Use 'in' with months"},{"question":"See you ___.","sampleAnswer":"See you tomorrow!","hint":"Time word"}]}
+      ],
+      "grammarFocus": {
+        "timePrepositions": {
+          "title": "Prepositions of Time (on, in, at)",
+          "description": "Use the correct preposition with days, months, and parts of the day",
+          "examples": [
+            "on Monday",
+            "in April",
+            "at night",
+            "in the morning",
+            "on Tuesday evening"
+          ],
+          "rules": [
+            "Use 'on' with days and dates",
+            "Use 'in' with months, years, and long periods",
+            "Use 'at' with precise times and 'night'",
+            "Capitalize days and months",
+            "Do not use a preposition before 'today' or 'tomorrow'"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
+    },
+    "basic-verbs": {
+      "theme": "Basic Verbs",
+      "level": "A1",
+      "cefrMapping": {
+        "canDoStatements": [
+          "I can talk about daily routines with simple verbs",
+          "I can ask and answer basic questions in the present",
+          "I can express likes, needs, and wants",
+          "I can use do/does in simple questions"
+        ],
+        "vocabularyRange": "40 essential everyday verbs",
+        "grammarFocus": "Present Simple tense; do/does; third-person -s",
+        "communicationFunctions": [
+          "Describing routines",
+          "Asking and answering questions",
+          "Talking about habits",
+          "Giving simple instructions"
+        ]
+      },
+      "vocabulary": [
+        {"id":1,"word":"be","translation":"ser/estar","phonetic":"/biː/","partOfSpeech":"verb","definition":"To exist; identity or state","example":"I am happy.","image":"🪪","audioUrl":"/audio/be.mp3","difficulty":"basic","category":"auxiliary","relatedWords":["am","is","are"],"usageNotes":"Irregular; I am, you are, he/she is"},
+        {"id":2,"word":"have","translation":"ter","phonetic":"/hæv/","partOfSpeech":"verb","definition":"To own or possess","example":"They have a car.","image":"🚗","audioUrl":"/audio/have.mp3","difficulty":"basic","category":"common verbs","relatedWords":["has","get","own"],"usageNotes":"Third person: has"},
+        {"id":3,"word":"do","translation":"fazer","phonetic":"/duː/","partOfSpeech":"verb","definition":"To perform an action","example":"I do my homework.","image":"✅","audioUrl":"/audio/do.mp3","difficulty":"basic","category":"common verbs","relatedWords":["make","work","task"],"usageNotes":"Auxiliary for questions/negatives"},
+        {"id":4,"word":"go","translation":"ir","phonetic":"/ɡəʊ/","partOfSpeech":"verb","definition":"To move to another place","example":"We go to school.","image":"🏫","audioUrl":"/audio/go.mp3","difficulty":"basic","category":"movement","relatedWords":["come","walk","leave"],"usageNotes":"Third person: goes"},
+        {"id":5,"word":"come","translation":"vir","phonetic":"/kʌm/","partOfSpeech":"verb","definition":"To move towards the speaker","example":"Come here, please.","image":"👋","audioUrl":"/audio/come.mp3","difficulty":"basic","category":"movement","relatedWords":["go","arrive","return"],"usageNotes":"—"},
+        {"id":6,"word":"eat","translation":"comer","phonetic":"/iːt/","partOfSpeech":"verb","definition":"To take food","example":"She eats breakfast at 8.","image":"🍽️","audioUrl":"/audio/eat.mp3","difficulty":"basic","category":"daily routines","relatedWords":["drink","food","meal"],"usageNotes":"Third person: eats"},
+        {"id":7,"word":"drink","translation":"beber","phonetic":"/drɪŋk/","partOfSpeech":"verb","definition":"To take liquid","example":"He drinks water.","image":"🥤","audioUrl":"/audio/drink.mp3","difficulty":"basic","category":"daily routines","relatedWords":["eat","water","juice"],"usageNotes":"Third person: drinks"},
+        {"id":8,"word":"read","translation":"ler","phonetic":"/riːd/","partOfSpeech":"verb","definition":"To look at and understand written words","example":"I read a book.","image":"📖","audioUrl":"/audio/read.mp3","difficulty":"basic","category":"study","relatedWords":["book","write","study"],"usageNotes":"Past: read /red/"},
+        {"id":9,"word":"write","translation":"escrever","phonetic":"/raɪt/","partOfSpeech":"verb","definition":"To make words on paper or screen","example":"They write emails.","image":"✍️","audioUrl":"/audio/write.mp3","difficulty":"basic","category":"study","relatedWords":["read","pen","text"],"usageNotes":"Third person: writes"},
+        {"id":10,"word":"speak","translation":"falar","phonetic":"/spiːk/","partOfSpeech":"verb","definition":"To say words","example":"We speak English.","image":"🗣️","audioUrl":"/audio/speak.mp3","difficulty":"basic","category":"communication","relatedWords":["talk","say","language"],"usageNotes":"Third person: speaks"},
+        {"id":11,"word":"listen","translation":"escutar","phonetic":"/ˈlɪsn/","partOfSpeech":"verb","definition":"To pay attention to sound","example":"Listen to the teacher.","image":"🎧","audioUrl":"/audio/listen.mp3","difficulty":"basic","category":"communication","relatedWords":["hear","music","audio"],"usageNotes":"Use 'to': listen to music"},
+        {"id":12,"word":"see","translation":"ver","phonetic":"/siː/","partOfSpeech":"verb","definition":"To notice with your eyes","example":"I see a bird.","image":"👀","audioUrl":"/audio/see.mp3","difficulty":"basic","category":"senses","relatedWords":["look","watch","view"],"usageNotes":"—"},
+        {"id":13,"word":"hear","translation":"ouvir","phonetic":"/hɪə(r)/","partOfSpeech":"verb","definition":"To notice with your ears","example":"Do you hear that sound?","image":"👂","audioUrl":"/audio/hear.mp3","difficulty":"basic","category":"senses","relatedWords":["listen","sound","noise"],"usageNotes":"—"},
+        {"id":14,"word":"make","translation":"fazer","phonetic":"/meɪk/","partOfSpeech":"verb","definition":"To create or produce","example":"She makes a cake.","image":"🎂","audioUrl":"/audio/make.mp3","difficulty":"basic","category":"common verbs","relatedWords":["do","build","create"],"usageNotes":"Collocation: make a decision"},
+        {"id":15,"word":"take","translation":"pegar/levar","phonetic":"/teɪk/","partOfSpeech":"verb","definition":"To carry or accept","example":"Take an umbrella.","image":"🌂","audioUrl":"/audio/take.mp3","difficulty":"basic","category":"common verbs","relatedWords":["bring","get","give"],"usageNotes":"Phrasal: take off, take out"},
+        {"id":16,"word":"give","translation":"dar","phonetic":"/ɡɪv/","partOfSpeech":"verb","definition":"To hand to someone","example":"Give me the book, please.","image":"🎁","audioUrl":"/audio/give.mp3","difficulty":"basic","category":"common verbs","relatedWords":["receive","offer","present"],"usageNotes":"—"},
+        {"id":17,"word":"get","translation":"obter/receber","phonetic":"/ɡet/","partOfSpeech":"verb","definition":"To receive or obtain","example":"I get many emails.","image":"📥","audioUrl":"/audio/get.mp3","difficulty":"basic","category":"common verbs","relatedWords":["receive","take","give"],"usageNotes":"Many meanings; common phrasals"},
+        {"id":18,"word":"want","translation":"querer","phonetic":"/wɒnt/","partOfSpeech":"verb","definition":"To wish for something","example":"I want a new phone.","image":"📱","audioUrl":"/audio/want.mp3","difficulty":"basic","category":"feelings","relatedWords":["need","like","prefer"],"usageNotes":"—"},
+        {"id":19,"word":"need","translation":"precisar","phonetic":"/niːd/","partOfSpeech":"verb","definition":"To require","example":"We need more time.","image":"⏳","audioUrl":"/audio/need.mp3","difficulty":"basic","category":"feelings","relatedWords":["must","have to","want"],"usageNotes":"—"},
+        {"id":20,"word":"like","translation":"gostar","phonetic":"/laɪk/","partOfSpeech":"verb","definition":"To enjoy","example":"They like music.","image":"🎵","audioUrl":"/audio/like.mp3","difficulty":"basic","category":"feelings","relatedWords":["love","enjoy","prefer"],"usageNotes":"Use -ing after like: like playing"},
+        {"id":21,"word":"love","translation":"amar","phonetic":"/lʌv/","partOfSpeech":"verb","definition":"To like very much","example":"I love my family.","image":"❤️","audioUrl":"/audio/love.mp3","difficulty":"basic","category":"feelings","relatedWords":["like","enjoy","hate"],"usageNotes":"Strong feeling"},
+        {"id":22,"word":"live","translation":"viver/morar","phonetic":"/lɪv/","partOfSpeech":"verb","definition":"To have your home in a place","example":"I live in Rio.","image":"🏠","audioUrl":"/audio/live.mp3","difficulty":"basic","category":"daily routines","relatedWords":["stay","reside","home"],"usageNotes":"Use 'in' + city/country"},
+        {"id":23,"word":"work","translation":"trabalhar","phonetic":"/wɜːk/","partOfSpeech":"verb","definition":"To do a job","example":"She works at a bank.","image":"🏦","audioUrl":"/audio/work.mp3","difficulty":"basic","category":"daily routines","relatedWords":["job","office","company"],"usageNotes":"Third person: works"},
+        {"id":24,"word":"study","translation":"estudar","phonetic":"/ˈstʌdi/","partOfSpeech":"verb","definition":"To learn about something","example":"We study English.","image":"📚","audioUrl":"/audio/study.mp3","difficulty":"basic","category":"study","relatedWords":["learn","read","school"],"usageNotes":"—"},
+        {"id":25,"word":"play","translation":"brincar/jogar","phonetic":"/pleɪ/","partOfSpeech":"verb","definition":"To enjoy a game or instrument","example":"They play football.","image":"⚽","audioUrl":"/audio/play.mp3","difficulty":"basic","category":"leisure","relatedWords":["game","sport","music"],"usageNotes":"Play + sport/game/instrument"},
+        {"id":26,"word":"open","translation":"abrir","phonetic":"/ˈəʊpən/","partOfSpeech":"verb","definition":"To move something to use it","example":"Open the door, please.","image":"🚪","audioUrl":"/audio/open.mp3","difficulty":"basic","category":"common verbs","relatedWords":["close","door","start"],"usageNotes":"—"},
+        {"id":27,"word":"close","translation":"fechar","phonetic":"/kləʊz/","partOfSpeech":"verb","definition":"To shut something","example":"Close the window.","image":"🪟","audioUrl":"/audio/close.mp3","difficulty":"basic","category":"common verbs","relatedWords":["open","shut","end"],"usageNotes":"Pronounced /kləʊz/ (not /klɒs/)"},
+        {"id":28,"word":"start","translation":"começar","phonetic":"/stɑːt/","partOfSpeech":"verb","definition":"To begin","example":"The class starts at 9.","image":"🟢","audioUrl":"/audio/start.mp3","difficulty":"basic","category":"common verbs","relatedWords":["begin","finish","open"],"usageNotes":"Third person: starts"},
+        {"id":29,"word":"finish","translation":"terminar","phonetic":"/ˈfɪnɪʃ/","partOfSpeech":"verb","definition":"To end","example":"We finish at five.","image":"🔚","audioUrl":"/audio/finish.mp3","difficulty":"basic","category":"common verbs","relatedWords":["end","start","complete"],"usageNotes":"Third person: finishes"},
+        {"id":30,"word":"buy","translation":"comprar","phonetic":"/baɪ/","partOfSpeech":"verb","definition":"To get something with money","example":"I buy food at the market.","image":"🛒","audioUrl":"/audio/buy.mp3","difficulty":"basic","category":"shopping","relatedWords":["sell","pay","shop"],"usageNotes":"Past: bought"},
+        {"id":31,"word":"sell","translation":"vender","phonetic":"/sel/","partOfSpeech":"verb","definition":"To give something for money","example":"They sell books.","image":"📚","audioUrl":"/audio/sell.mp3","difficulty":"basic","category":"shopping","relatedWords":["buy","shop","market"],"usageNotes":"Past: sold"},
+        {"id":32,"word":"pay","translation":"pagar","phonetic":"/peɪ/","partOfSpeech":"verb","definition":"To give money for something","example":"Please pay at the cashier.","image":"💳","audioUrl":"/audio/pay.mp3","difficulty":"basic","category":"shopping","relatedWords":["buy","sell","price"],"usageNotes":"Pay for + noun"},
+        {"id":33,"word":"learn","translation":"aprender","phonetic":"/lɜːn/","partOfSpeech":"verb","definition":"To get knowledge or skills","example":"We learn new words.","image":"🧠","audioUrl":"/audio/learn.mp3","difficulty":"basic","category":"study","relatedWords":["study","teach","know"],"usageNotes":"—"},
+        {"id":34,"word":"teach","translation":"ensinar","phonetic":"/tiːtʃ/","partOfSpeech":"verb","definition":"To help someone learn","example":"He teaches English.","image":"👨‍🏫","audioUrl":"/audio/teach.mp3","difficulty":"basic","category":"study","relatedWords":["learn","school","student"],"usageNotes":"Third person: teaches"},
+        {"id":35,"word":"walk","translation":"andar/caminhar","phonetic":"/wɔːk/","partOfSpeech":"verb","definition":"To move on foot","example":"I walk to work.","image":"🚶","audioUrl":"/audio/walk.mp3","difficulty":"basic","category":"movement","relatedWords":["run","go","come"],"usageNotes":"—"},
+        {"id":36,"word":"run","translation":"correr","phonetic":"/rʌn/","partOfSpeech":"verb","definition":"To move fast on foot","example":"They run in the park.","image":"🏃","audioUrl":"/audio/run.mp3","difficulty":"basic","category":"movement","relatedWords":["walk","race","go"],"usageNotes":"Third person: runs"},
+        {"id":37,"word":"sit","translation":"sentar","phonetic":"/sɪt/","partOfSpeech":"verb","definition":"To rest on a chair","example":"Please sit down.","image":"🪑","audioUrl":"/audio/sit.mp3","difficulty":"basic","category":"movement","relatedWords":["stand","chair","seat"],"usageNotes":"—"},
+        {"id":38,"word":"stand","translation":"ficar de pé","phonetic":"/stænd/","partOfSpeech":"verb","definition":"To be on your feet","example":"Stand up, please.","image":"🧍","audioUrl":"/audio/stand.mp3","difficulty":"basic","category":"movement","relatedWords":["sit","rise","move"],"usageNotes":"—"},
+        {"id":39,"word":"sleep","translation":"dormir","phonetic":"/sliːp/","partOfSpeech":"verb","definition":"To rest at night","example":"I sleep at 11.","image":"😴","audioUrl":"/audio/sleep.mp3","difficulty":"basic","category":"daily routines","relatedWords":["wake up","bed","night"],"usageNotes":"Third person: sleeps"},
+        {"id":40,"word":"wake up","translation":"acordar","phonetic":"/ˈweɪk ˌʌp/","partOfSpeech":"phrasal verb","definition":"To stop sleeping","example":"She wakes up early.","image":"⏰","audioUrl":"/audio/wake-up.mp3","difficulty":"basic","category":"daily routines","relatedWords":["sleep","get up","alarm"],"usageNotes":"Third person: wakes up"}
+      ],
+      "exercises": [
+        {"type":"matching","title":"Verb Meanings","description":"Match verbs to their meanings","items":[{"word":"eat","definition":"To take food","correct":true},{"word":"listen","definition":"To pay attention to sound","correct":true},{"word":"go","definition":"To move to another place","correct":true}]},
+        {"type":"fill-in-blank","title":"Daily Routines","description":"Complete with the correct verb (base form)","items":[{"sentence":"I ___ breakfast at 8.","correctAnswer":"eat","hint":"Food"},{"sentence":"They ___ to school.","correctAnswer":"go","hint":"Movement"},{"sentence":"We ___ English every day.","correctAnswer":"study","hint":"Learning"}]},
+        {"type":"conversation","title":"Asking About Routines","description":"Practice using do/does in questions","scenarios":[{"question":"What time do you wake up?","sampleAnswer":"I wake up at 7.","hint":"Use do with I/you/we/they"},{"question":"Does she work on Monday?","sampleAnswer":"Yes, she does.","hint":"Use does with he/she/it"},{"question":"What do you do after work?","sampleAnswer":"I go home and read.","hint":"Use base verb after do"}]}
+      ],
+      "grammarFocus": {
+        "presentSimpleBasics": {
+          "title": "Present Simple: Affirmative, Negative, Questions",
+          "description": "Use do/does for questions and negatives; add -s for he/she/it",
+          "examples": [
+            "I work. She works.",
+            "Do you like tea? Yes, I do.",
+            "He doesn't drink coffee.",
+            "They study English.",
+            "Does she live in Rio?"
+          ],
+          "rules": [
+            "Add -s or -es to verbs with he/she/it",
+            "Use 'do/does' to make questions",
+            "Use 'do not/does not' for negatives",
+            "Use base verb after do/does",
+            "Adverbs of frequency go before the main verb (I usually get up at 7)"
+          ]
+        }
+      },
+      "mobileFeatures": {
+        "swipeNavigation": true,
+        "audioSupport": true,
+        "touchFriendly": true,
+        "offlineAccess": true,
+        "progressTracking": true,
+        "adaptiveLearning": true
+      }
     }
   }
 }
