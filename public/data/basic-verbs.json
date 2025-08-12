@@ -18,51 +18,874 @@
     ]
   },
   "vocabulary": [
-    {"id":1,"word":"be","translation":"ser/estar","phonetic":"/biː/","partOfSpeech":"verb","definition":"To exist; identity or state","example":"I am happy.","image":"🪪","audioUrl":"/audio/be.mp3","difficulty":"basic","category":"auxiliary","relatedWords":["am","is","are"],"usageNotes":"Irregular; I am, you are, he/she is"},
-    {"id":2,"word":"have","translation":"ter","phonetic":"/hæv/","partOfSpeech":"verb","definition":"To own or possess","example":"They have a car.","image":"🚗","audioUrl":"/audio/have.mp3","difficulty":"basic","category":"common verbs","relatedWords":["has","get","own"],"usageNotes":"Third person: has"},
-    {"id":3,"word":"do","translation":"fazer","phonetic":"/duː/","partOfSpeech":"verb","definition":"To perform an action","example":"I do my homework.","image":"✅","audioUrl":"/audio/do.mp3","difficulty":"basic","category":"common verbs","relatedWords":["make","work","task"],"usageNotes":"Auxiliary for questions/negatives"},
-    {"id":4,"word":"go","translation":"ir","phonetic":"/ɡəʊ/","partOfSpeech":"verb","definition":"To move to another place","example":"We go to school.","image":"🏫","audioUrl":"/audio/go.mp3","difficulty":"basic","category":"movement","relatedWords":["come","walk","leave"],"usageNotes":"Third person: goes"},
-    {"id":5,"word":"come","translation":"vir","phonetic":"/kʌm/","partOfSpeech":"verb","definition":"To move towards the speaker","example":"Come here, please.","image":"👋","audioUrl":"/audio/come.mp3","difficulty":"basic","category":"movement","relatedWords":["go","arrive","return"],"usageNotes":"—"},
-    {"id":6,"word":"eat","translation":"comer","phonetic":"/iːt/","partOfSpeech":"verb","definition":"To take food","example":"She eats breakfast at 8.","image":"🍽️","audioUrl":"/audio/eat.mp3","difficulty":"basic","category":"daily routines","relatedWords":["drink","food","meal"],"usageNotes":"Third person: eats"},
-    {"id":7,"word":"drink","translation":"beber","phonetic":"/drɪŋk/","partOfSpeech":"verb","definition":"To take liquid","example":"He drinks water.","image":"🥤","audioUrl":"/audio/drink.mp3","difficulty":"basic","category":"daily routines","relatedWords":["eat","water","juice"],"usageNotes":"Third person: drinks"},
-    {"id":8,"word":"read","translation":"ler","phonetic":"/riːd/","partOfSpeech":"verb","definition":"To look at and understand written words","example":"I read a book.","image":"📖","audioUrl":"/audio/read.mp3","difficulty":"basic","category":"study","relatedWords":["book","write","study"],"usageNotes":"Past: read /red/"},
-    {"id":9,"word":"write","translation":"escrever","phonetic":"/raɪt/","partOfSpeech":"verb","definition":"To make words on paper or screen","example":"They write emails.","image":"✍️","audioUrl":"/audio/write.mp3","difficulty":"basic","category":"study","relatedWords":["read","pen","text"],"usageNotes":"Third person: writes"},
-    {"id":10,"word":"speak","translation":"falar","phonetic":"/spiːk/","partOfSpeech":"verb","definition":"To say words","example":"We speak English.","image":"🗣️","audioUrl":"/audio/speak.mp3","difficulty":"basic","category":"communication","relatedWords":["talk","say","language"],"usageNotes":"Third person: speaks"},
-    {"id":11,"word":"listen","translation":"escutar","phonetic":"/ˈlɪsn/","partOfSpeech":"verb","definition":"To pay attention to sound","example":"Listen to the teacher.","image":"🎧","audioUrl":"/audio/listen.mp3","difficulty":"basic","category":"communication","relatedWords":["hear","music","audio"],"usageNotes":"Use 'to': listen to music"},
-    {"id":12,"word":"see","translation":"ver","phonetic":"/siː/","partOfSpeech":"verb","definition":"To notice with your eyes","example":"I see a bird.","image":"👀","audioUrl":"/audio/see.mp3","difficulty":"basic","category":"senses","relatedWords":["look","watch","view"],"usageNotes":"—"},
-    {"id":13,"word":"hear","translation":"ouvir","phonetic":"/hɪə(r)/","partOfSpeech":"verb","definition":"To notice with your ears","example":"Do you hear that sound?","image":"👂","audioUrl":"/audio/hear.mp3","difficulty":"basic","category":"senses","relatedWords":["listen","sound","noise"],"usageNotes":"—"},
-    {"id":14,"word":"make","translation":"fazer","phonetic":"/meɪk/","partOfSpeech":"verb","definition":"To create or produce","example":"She makes a cake.","image":"🎂","audioUrl":"/audio/make.mp3","difficulty":"basic","category":"common verbs","relatedWords":["do","build","create"],"usageNotes":"Collocation: make a decision"},
-    {"id":15,"word":"take","translation":"pegar/levar","phonetic":"/teɪk/","partOfSpeech":"verb","definition":"To carry or accept","example":"Take an umbrella.","image":"🌂","audioUrl":"/audio/take.mp3","difficulty":"basic","category":"common verbs","relatedWords":["bring","get","give"],"usageNotes":"Phrasal: take off, take out"},
-    {"id":16,"word":"give","translation":"dar","phonetic":"/ɡɪv/","partOfSpeech":"verb","definition":"To hand to someone","example":"Give me the book, please.","image":"🎁","audioUrl":"/audio/give.mp3","difficulty":"basic","category":"common verbs","relatedWords":["receive","offer","present"],"usageNotes":"—"},
-    {"id":17,"word":"get","translation":"obter/receber","phonetic":"/ɡet/","partOfSpeech":"verb","definition":"To receive or obtain","example":"I get many emails.","image":"📥","audioUrl":"/audio/get.mp3","difficulty":"basic","category":"common verbs","relatedWords":["receive","take","give"],"usageNotes":"Many meanings; common phrasals"},
-    {"id":18,"word":"want","translation":"querer","phonetic":"/wɒnt/","partOfSpeech":"verb","definition":"To wish for something","example":"I want a new phone.","image":"📱","audioUrl":"/audio/want.mp3","difficulty":"basic","category":"feelings","relatedWords":["need","like","prefer"],"usageNotes":"—"},
-    {"id":19,"word":"need","translation":"precisar","phonetic":"/niːd/","partOfSpeech":"verb","definition":"To require","example":"We need more time.","image":"⏳","audioUrl":"/audio/need.mp3","difficulty":"basic","category":"feelings","relatedWords":["must","have to","want"],"usageNotes":"—"},
-    {"id":20,"word":"like","translation":"gostar","phonetic":"/laɪk/","partOfSpeech":"verb","definition":"To enjoy","example":"They like music.","image":"🎵","audioUrl":"/audio/like.mp3","difficulty":"basic","category":"feelings","relatedWords":["love","enjoy","prefer"],"usageNotes":"Use -ing after like: like playing"},
-    {"id":21,"word":"love","translation":"amar","phonetic":"/lʌv/","partOfSpeech":"verb","definition":"To like very much","example":"I love my family.","image":"❤️","audioUrl":"/audio/love.mp3","difficulty":"basic","category":"feelings","relatedWords":["like","enjoy","hate"],"usageNotes":"Strong feeling"},
-    {"id":22,"word":"live","translation":"viver/morar","phonetic":"/lɪv/","partOfSpeech":"verb","definition":"To have your home in a place","example":"I live in Rio.","image":"🏠","audioUrl":"/audio/live.mp3","difficulty":"basic","category":"daily routines","relatedWords":["stay","reside","home"],"usageNotes":"Use 'in' + city/country"},
-    {"id":23,"word":"work","translation":"trabalhar","phonetic":"/wɜːk/","partOfSpeech":"verb","definition":"To do a job","example":"She works at a bank.","image":"🏦","audioUrl":"/audio/work.mp3","difficulty":"basic","category":"daily routines","relatedWords":["job","office","company"],"usageNotes":"Third person: works"},
-    {"id":24,"word":"study","translation":"estudar","phonetic":"/ˈstʌdi/","partOfSpeech":"verb","definition":"To learn about something","example":"We study English.","image":"📚","audioUrl":"/audio/study.mp3","difficulty":"basic","category":"study","relatedWords":["learn","read","school"],"usageNotes":"—"},
-    {"id":25,"word":"play","translation":"brincar/jogar","phonetic":"/pleɪ/","partOfSpeech":"verb","definition":"To enjoy a game or instrument","example":"They play football.","image":"⚽","audioUrl":"/audio/play.mp3","difficulty":"basic","category":"leisure","relatedWords":["game","sport","music"],"usageNotes":"Play + sport/game/instrument"},
-    {"id":26,"word":"open","translation":"abrir","phonetic":"/ˈəʊpən/","partOfSpeech":"verb","definition":"To move something to use it","example":"Open the door, please.","image":"🚪","audioUrl":"/audio/open.mp3","difficulty":"basic","category":"common verbs","relatedWords":["close","door","start"],"usageNotes":"—"},
-    {"id":27,"word":"close","translation":"fechar","phonetic":"/kləʊz/","partOfSpeech":"verb","definition":"To shut something","example":"Close the window.","image":"🪟","audioUrl":"/audio/close.mp3","difficulty":"basic","category":"common verbs","relatedWords":["open","shut","end"],"usageNotes":"Pronounced /kləʊz/ (not /klɒs/)"},
-    {"id":28,"word":"start","translation":"começar","phonetic":"/stɑːt/","partOfSpeech":"verb","definition":"To begin","example":"The class starts at 9.","image":"🟢","audioUrl":"/audio/start.mp3","difficulty":"basic","category":"common verbs","relatedWords":["begin","finish","open"],"usageNotes":"Third person: starts"},
-    {"id":29,"word":"finish","translation":"terminar","phonetic":"/ˈfɪnɪʃ/","partOfSpeech":"verb","definition":"To end","example":"We finish at five.","image":"🔚","audioUrl":"/audio/finish.mp3","difficulty":"basic","category":"common verbs","relatedWords":["end","start","complete"],"usageNotes":"Third person: finishes"},
-    {"id":30,"word":"buy","translation":"comprar","phonetic":"/baɪ/","partOfSpeech":"verb","definition":"To get something with money","example":"I buy food at the market.","image":"🛒","audioUrl":"/audio/buy.mp3","difficulty":"basic","category":"shopping","relatedWords":["sell","pay","shop"],"usageNotes":"Past: bought"},
-    {"id":31,"word":"sell","translation":"vender","phonetic":"/sel/","partOfSpeech":"verb","definition":"To give something for money","example":"They sell books.","image":"📚","audioUrl":"/audio/sell.mp3","difficulty":"basic","category":"shopping","relatedWords":["buy","shop","market"],"usageNotes":"Past: sold"},
-    {"id":32,"word":"pay","translation":"pagar","phonetic":"/peɪ/","partOfSpeech":"verb","definition":"To give money for something","example":"Please pay at the cashier.","image":"💳","audioUrl":"/audio/pay.mp3","difficulty":"basic","category":"shopping","relatedWords":["buy","sell","price"],"usageNotes":"Pay for + noun"},
-    {"id":33,"word":"learn","translation":"aprender","phonetic":"/lɜːn/","partOfSpeech":"verb","definition":"To get knowledge or skills","example":"We learn new words.","image":"🧠","audioUrl":"/audio/learn.mp3","difficulty":"basic","category":"study","relatedWords":["study","teach","know"],"usageNotes":"—"},
-    {"id":34,"word":"teach","translation":"ensinar","phonetic":"/tiːtʃ/","partOfSpeech":"verb","definition":"To help someone learn","example":"He teaches English.","image":"👨‍🏫","audioUrl":"/audio/teach.mp3","difficulty":"basic","category":"study","relatedWords":["learn","school","student"],"usageNotes":"Third person: teaches"},
-    {"id":35,"word":"walk","translation":"andar/caminhar","phonetic":"/wɔːk/","partOfSpeech":"verb","definition":"To move on foot","example":"I walk to work.","image":"🚶","audioUrl":"/audio/walk.mp3","difficulty":"basic","category":"movement","relatedWords":["run","go","come"],"usageNotes":"—"},
-    {"id":36,"word":"run","translation":"correr","phonetic":"/rʌn/","partOfSpeech":"verb","definition":"To move fast on foot","example":"They run in the park.","image":"🏃","audioUrl":"/audio/run.mp3","difficulty":"basic","category":"movement","relatedWords":["walk","race","go"],"usageNotes":"Third person: runs"},
-    {"id":37,"word":"sit","translation":"sentar","phonetic":"/sɪt/","partOfSpeech":"verb","definition":"To rest on a chair","example":"Please sit down.","image":"🪑","audioUrl":"/audio/sit.mp3","difficulty":"basic","category":"movement","relatedWords":["stand","chair","seat"],"usageNotes":"—"},
-    {"id":38,"word":"stand","translation":"ficar de pé","phonetic":"/stænd/","partOfSpeech":"verb","definition":"To be on your feet","example":"Stand up, please.","image":"🧍","audioUrl":"/audio/stand.mp3","difficulty":"basic","category":"movement","relatedWords":["sit","rise","move"],"usageNotes":"—"},
-    {"id":39,"word":"sleep","translation":"dormir","phonetic":"/sliːp/","partOfSpeech":"verb","definition":"To rest at night","example":"I sleep at 11.","image":"😴","audioUrl":"/audio/sleep.mp3","difficulty":"basic","category":"daily routines","relatedWords":["wake up","bed","night"],"usageNotes":"Third person: sleeps"},
-    {"id":40,"word":"wake up","translation":"acordar","phonetic":"/ˈweɪk ˌʌp/","partOfSpeech":"phrasal verb","definition":"To stop sleeping","example":"She wakes up early.","image":"⏰","audioUrl":"/audio/wake-up.mp3","difficulty":"basic","category":"daily routines","relatedWords":["sleep","get up","alarm"],"usageNotes":"Third person: wakes up"}
+    {
+      "id": 1,
+      "word": "be",
+      "translation": "ser/estar",
+      "phonetic": "/biː/",
+      "partOfSpeech": "verb",
+      "definition": "To exist; identity or state",
+      "example": "I am happy.",
+      "image": "🪪",
+      "audioUrl": "/audio/be.mp3",
+      "difficulty": "basic",
+      "category": "auxiliary",
+      "relatedWords": [
+        "am",
+        "is",
+        "are"
+      ],
+      "usageNotes": "Irregular; I am, you are, he/she is",
+      "audio": "/audio/be.mp3"
+    },
+    {
+      "id": 2,
+      "word": "have",
+      "translation": "ter",
+      "phonetic": "/hæv/",
+      "partOfSpeech": "verb",
+      "definition": "To own or possess",
+      "example": "They have a car.",
+      "image": "🚗",
+      "audioUrl": "/audio/have.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "has",
+        "get",
+        "own"
+      ],
+      "usageNotes": "Third person: has",
+      "audio": "/audio/have.mp3"
+    },
+    {
+      "id": 3,
+      "word": "do",
+      "translation": "fazer",
+      "phonetic": "/duː/",
+      "partOfSpeech": "verb",
+      "definition": "To perform an action",
+      "example": "I do my homework.",
+      "image": "✅",
+      "audioUrl": "/audio/do.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "make",
+        "work",
+        "task"
+      ],
+      "usageNotes": "Auxiliary for questions/negatives",
+      "audio": "/audio/do.mp3"
+    },
+    {
+      "id": 4,
+      "word": "go",
+      "translation": "ir",
+      "phonetic": "/ɡəʊ/",
+      "partOfSpeech": "verb",
+      "definition": "To move to another place",
+      "example": "We go to school.",
+      "image": "🏫",
+      "audioUrl": "/audio/go.mp3",
+      "difficulty": "basic",
+      "category": "movement",
+      "relatedWords": [
+        "come",
+        "walk",
+        "leave"
+      ],
+      "usageNotes": "Third person: goes",
+      "audio": "/audio/go.mp3"
+    },
+    {
+      "id": 5,
+      "word": "come",
+      "translation": "vir",
+      "phonetic": "/kʌm/",
+      "partOfSpeech": "verb",
+      "definition": "To move towards the speaker",
+      "example": "Come here, please.",
+      "image": "👋",
+      "audioUrl": "/audio/come.mp3",
+      "difficulty": "basic",
+      "category": "movement",
+      "relatedWords": [
+        "go",
+        "arrive",
+        "return"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/come.mp3"
+    },
+    {
+      "id": 6,
+      "word": "eat",
+      "translation": "comer",
+      "phonetic": "/iːt/",
+      "partOfSpeech": "verb",
+      "definition": "To take food",
+      "example": "She eats breakfast at 8.",
+      "image": "🍽️",
+      "audioUrl": "/audio/eat.mp3",
+      "difficulty": "basic",
+      "category": "daily routines",
+      "relatedWords": [
+        "drink",
+        "food",
+        "meal"
+      ],
+      "usageNotes": "Third person: eats",
+      "audio": "/audio/eat.mp3"
+    },
+    {
+      "id": 7,
+      "word": "drink",
+      "translation": "beber",
+      "phonetic": "/drɪŋk/",
+      "partOfSpeech": "verb",
+      "definition": "To take liquid",
+      "example": "He drinks water.",
+      "image": "🥤",
+      "audioUrl": "/audio/drink.mp3",
+      "difficulty": "basic",
+      "category": "daily routines",
+      "relatedWords": [
+        "eat",
+        "water",
+        "juice"
+      ],
+      "usageNotes": "Third person: drinks",
+      "audio": "/audio/drink.mp3"
+    },
+    {
+      "id": 8,
+      "word": "read",
+      "translation": "ler",
+      "phonetic": "/riːd/",
+      "partOfSpeech": "verb",
+      "definition": "To look at and understand written words",
+      "example": "I read a book.",
+      "image": "📖",
+      "audioUrl": "/audio/read.mp3",
+      "difficulty": "basic",
+      "category": "study",
+      "relatedWords": [
+        "book",
+        "write",
+        "study"
+      ],
+      "usageNotes": "Past: read /red/",
+      "audio": "/audio/read.mp3"
+    },
+    {
+      "id": 9,
+      "word": "write",
+      "translation": "escrever",
+      "phonetic": "/raɪt/",
+      "partOfSpeech": "verb",
+      "definition": "To make words on paper or screen",
+      "example": "They write emails.",
+      "image": "✍️",
+      "audioUrl": "/audio/write.mp3",
+      "difficulty": "basic",
+      "category": "study",
+      "relatedWords": [
+        "read",
+        "pen",
+        "text"
+      ],
+      "usageNotes": "Third person: writes",
+      "audio": "/audio/write.mp3"
+    },
+    {
+      "id": 10,
+      "word": "speak",
+      "translation": "falar",
+      "phonetic": "/spiːk/",
+      "partOfSpeech": "verb",
+      "definition": "To say words",
+      "example": "We speak English.",
+      "image": "🗣️",
+      "audioUrl": "/audio/speak.mp3",
+      "difficulty": "basic",
+      "category": "communication",
+      "relatedWords": [
+        "talk",
+        "say",
+        "language"
+      ],
+      "usageNotes": "Third person: speaks",
+      "audio": "/audio/speak.mp3"
+    },
+    {
+      "id": 11,
+      "word": "listen",
+      "translation": "escutar",
+      "phonetic": "/ˈlɪsn/",
+      "partOfSpeech": "verb",
+      "definition": "To pay attention to sound",
+      "example": "Listen to the teacher.",
+      "image": "🎧",
+      "audioUrl": "/audio/listen.mp3",
+      "difficulty": "basic",
+      "category": "communication",
+      "relatedWords": [
+        "hear",
+        "music",
+        "audio"
+      ],
+      "usageNotes": "Use 'to': listen to music",
+      "audio": "/audio/listen.mp3"
+    },
+    {
+      "id": 12,
+      "word": "see",
+      "translation": "ver",
+      "phonetic": "/siː/",
+      "partOfSpeech": "verb",
+      "definition": "To notice with your eyes",
+      "example": "I see a bird.",
+      "image": "👀",
+      "audioUrl": "/audio/see.mp3",
+      "difficulty": "basic",
+      "category": "senses",
+      "relatedWords": [
+        "look",
+        "watch",
+        "view"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/see.mp3"
+    },
+    {
+      "id": 13,
+      "word": "hear",
+      "translation": "ouvir",
+      "phonetic": "/hɪə(r)/",
+      "partOfSpeech": "verb",
+      "definition": "To notice with your ears",
+      "example": "Do you hear that sound?",
+      "image": "👂",
+      "audioUrl": "/audio/hear.mp3",
+      "difficulty": "basic",
+      "category": "senses",
+      "relatedWords": [
+        "listen",
+        "sound",
+        "noise"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/hear.mp3"
+    },
+    {
+      "id": 14,
+      "word": "make",
+      "translation": "fazer",
+      "phonetic": "/meɪk/",
+      "partOfSpeech": "verb",
+      "definition": "To create or produce",
+      "example": "She makes a cake.",
+      "image": "🎂",
+      "audioUrl": "/audio/make.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "do",
+        "build",
+        "create"
+      ],
+      "usageNotes": "Collocation: make a decision",
+      "audio": "/audio/make.mp3"
+    },
+    {
+      "id": 15,
+      "word": "take",
+      "translation": "pegar/levar",
+      "phonetic": "/teɪk/",
+      "partOfSpeech": "verb",
+      "definition": "To carry or accept",
+      "example": "Take an umbrella.",
+      "image": "🌂",
+      "audioUrl": "/audio/take.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "bring",
+        "get",
+        "give"
+      ],
+      "usageNotes": "Phrasal: take off, take out",
+      "audio": "/audio/take.mp3"
+    },
+    {
+      "id": 16,
+      "word": "give",
+      "translation": "dar",
+      "phonetic": "/ɡɪv/",
+      "partOfSpeech": "verb",
+      "definition": "To hand to someone",
+      "example": "Give me the book, please.",
+      "image": "🎁",
+      "audioUrl": "/audio/give.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "receive",
+        "offer",
+        "present"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/give.mp3"
+    },
+    {
+      "id": 17,
+      "word": "get",
+      "translation": "obter/receber",
+      "phonetic": "/ɡet/",
+      "partOfSpeech": "verb",
+      "definition": "To receive or obtain",
+      "example": "I get many emails.",
+      "image": "📥",
+      "audioUrl": "/audio/get.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "receive",
+        "take",
+        "give"
+      ],
+      "usageNotes": "Many meanings; common phrasals",
+      "audio": "/audio/get.mp3"
+    },
+    {
+      "id": 18,
+      "word": "want",
+      "translation": "querer",
+      "phonetic": "/wɒnt/",
+      "partOfSpeech": "verb",
+      "definition": "To wish for something",
+      "example": "I want a new phone.",
+      "image": "📱",
+      "audioUrl": "/audio/want.mp3",
+      "difficulty": "basic",
+      "category": "feelings",
+      "relatedWords": [
+        "need",
+        "like",
+        "prefer"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/want.mp3"
+    },
+    {
+      "id": 19,
+      "word": "need",
+      "translation": "precisar",
+      "phonetic": "/niːd/",
+      "partOfSpeech": "verb",
+      "definition": "To require",
+      "example": "We need more time.",
+      "image": "⏳",
+      "audioUrl": "/audio/need.mp3",
+      "difficulty": "basic",
+      "category": "feelings",
+      "relatedWords": [
+        "must",
+        "have to",
+        "want"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/need.mp3"
+    },
+    {
+      "id": 20,
+      "word": "like",
+      "translation": "gostar",
+      "phonetic": "/laɪk/",
+      "partOfSpeech": "verb",
+      "definition": "To enjoy",
+      "example": "They like music.",
+      "image": "🎵",
+      "audioUrl": "/audio/like.mp3",
+      "difficulty": "basic",
+      "category": "feelings",
+      "relatedWords": [
+        "love",
+        "enjoy",
+        "prefer"
+      ],
+      "usageNotes": "Use -ing after like: like playing",
+      "audio": "/audio/like.mp3"
+    },
+    {
+      "id": 21,
+      "word": "love",
+      "translation": "amar",
+      "phonetic": "/lʌv/",
+      "partOfSpeech": "verb",
+      "definition": "To like very much",
+      "example": "I love my family.",
+      "image": "❤️",
+      "audioUrl": "/audio/love.mp3",
+      "difficulty": "basic",
+      "category": "feelings",
+      "relatedWords": [
+        "like",
+        "enjoy",
+        "hate"
+      ],
+      "usageNotes": "Strong feeling",
+      "audio": "/audio/love.mp3"
+    },
+    {
+      "id": 22,
+      "word": "live",
+      "translation": "viver/morar",
+      "phonetic": "/lɪv/",
+      "partOfSpeech": "verb",
+      "definition": "To have your home in a place",
+      "example": "I live in Rio.",
+      "image": "🏠",
+      "audioUrl": "/audio/live.mp3",
+      "difficulty": "basic",
+      "category": "daily routines",
+      "relatedWords": [
+        "stay",
+        "reside",
+        "home"
+      ],
+      "usageNotes": "Use 'in' + city/country",
+      "audio": "/audio/live.mp3"
+    },
+    {
+      "id": 23,
+      "word": "work",
+      "translation": "trabalhar",
+      "phonetic": "/wɜːk/",
+      "partOfSpeech": "verb",
+      "definition": "To do a job",
+      "example": "She works at a bank.",
+      "image": "🏦",
+      "audioUrl": "/audio/work.mp3",
+      "difficulty": "basic",
+      "category": "daily routines",
+      "relatedWords": [
+        "job",
+        "office",
+        "company"
+      ],
+      "usageNotes": "Third person: works",
+      "audio": "/audio/work.mp3"
+    },
+    {
+      "id": 24,
+      "word": "study",
+      "translation": "estudar",
+      "phonetic": "/ˈstʌdi/",
+      "partOfSpeech": "verb",
+      "definition": "To learn about something",
+      "example": "We study English.",
+      "image": "📚",
+      "audioUrl": "/audio/study.mp3",
+      "difficulty": "basic",
+      "category": "study",
+      "relatedWords": [
+        "learn",
+        "read",
+        "school"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/study.mp3"
+    },
+    {
+      "id": 25,
+      "word": "play",
+      "translation": "brincar/jogar",
+      "phonetic": "/pleɪ/",
+      "partOfSpeech": "verb",
+      "definition": "To enjoy a game or instrument",
+      "example": "They play football.",
+      "image": "⚽",
+      "audioUrl": "/audio/play.mp3",
+      "difficulty": "basic",
+      "category": "leisure",
+      "relatedWords": [
+        "game",
+        "sport",
+        "music"
+      ],
+      "usageNotes": "Play + sport/game/instrument",
+      "audio": "/audio/play.mp3"
+    },
+    {
+      "id": 26,
+      "word": "open",
+      "translation": "abrir",
+      "phonetic": "/ˈəʊpən/",
+      "partOfSpeech": "verb",
+      "definition": "To move something to use it",
+      "example": "Open the door, please.",
+      "image": "🚪",
+      "audioUrl": "/audio/open.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "close",
+        "door",
+        "start"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/open.mp3"
+    },
+    {
+      "id": 27,
+      "word": "close",
+      "translation": "fechar",
+      "phonetic": "/kləʊz/",
+      "partOfSpeech": "verb",
+      "definition": "To shut something",
+      "example": "Close the window.",
+      "image": "🪟",
+      "audioUrl": "/audio/close.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "open",
+        "shut",
+        "end"
+      ],
+      "usageNotes": "Pronounced /kləʊz/ (not /klɒs/)",
+      "audio": "/audio/close.mp3"
+    },
+    {
+      "id": 28,
+      "word": "start",
+      "translation": "começar",
+      "phonetic": "/stɑːt/",
+      "partOfSpeech": "verb",
+      "definition": "To begin",
+      "example": "The class starts at 9.",
+      "image": "🟢",
+      "audioUrl": "/audio/start.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "begin",
+        "finish",
+        "open"
+      ],
+      "usageNotes": "Third person: starts",
+      "audio": "/audio/start.mp3"
+    },
+    {
+      "id": 29,
+      "word": "finish",
+      "translation": "terminar",
+      "phonetic": "/ˈfɪnɪʃ/",
+      "partOfSpeech": "verb",
+      "definition": "To end",
+      "example": "We finish at five.",
+      "image": "🔚",
+      "audioUrl": "/audio/finish.mp3",
+      "difficulty": "basic",
+      "category": "common verbs",
+      "relatedWords": [
+        "end",
+        "start",
+        "complete"
+      ],
+      "usageNotes": "Third person: finishes",
+      "audio": "/audio/finish.mp3"
+    },
+    {
+      "id": 30,
+      "word": "buy",
+      "translation": "comprar",
+      "phonetic": "/baɪ/",
+      "partOfSpeech": "verb",
+      "definition": "To get something with money",
+      "example": "I buy food at the market.",
+      "image": "🛒",
+      "audioUrl": "/audio/buy.mp3",
+      "difficulty": "basic",
+      "category": "shopping",
+      "relatedWords": [
+        "sell",
+        "pay",
+        "shop"
+      ],
+      "usageNotes": "Past: bought",
+      "audio": "/audio/buy.mp3"
+    },
+    {
+      "id": 31,
+      "word": "sell",
+      "translation": "vender",
+      "phonetic": "/sel/",
+      "partOfSpeech": "verb",
+      "definition": "To give something for money",
+      "example": "They sell books.",
+      "image": "📚",
+      "audioUrl": "/audio/sell.mp3",
+      "difficulty": "basic",
+      "category": "shopping",
+      "relatedWords": [
+        "buy",
+        "shop",
+        "market"
+      ],
+      "usageNotes": "Past: sold",
+      "audio": "/audio/sell.mp3"
+    },
+    {
+      "id": 32,
+      "word": "pay",
+      "translation": "pagar",
+      "phonetic": "/peɪ/",
+      "partOfSpeech": "verb",
+      "definition": "To give money for something",
+      "example": "Please pay at the cashier.",
+      "image": "💳",
+      "audioUrl": "/audio/pay.mp3",
+      "difficulty": "basic",
+      "category": "shopping",
+      "relatedWords": [
+        "buy",
+        "sell",
+        "price"
+      ],
+      "usageNotes": "Pay for + noun",
+      "audio": "/audio/pay.mp3"
+    },
+    {
+      "id": 33,
+      "word": "learn",
+      "translation": "aprender",
+      "phonetic": "/lɜːn/",
+      "partOfSpeech": "verb",
+      "definition": "To get knowledge or skills",
+      "example": "We learn new words.",
+      "image": "🧠",
+      "audioUrl": "/audio/learn.mp3",
+      "difficulty": "basic",
+      "category": "study",
+      "relatedWords": [
+        "study",
+        "teach",
+        "know"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/learn.mp3"
+    },
+    {
+      "id": 34,
+      "word": "teach",
+      "translation": "ensinar",
+      "phonetic": "/tiːtʃ/",
+      "partOfSpeech": "verb",
+      "definition": "To help someone learn",
+      "example": "He teaches English.",
+      "image": "👨‍🏫",
+      "audioUrl": "/audio/teach.mp3",
+      "difficulty": "basic",
+      "category": "study",
+      "relatedWords": [
+        "learn",
+        "school",
+        "student"
+      ],
+      "usageNotes": "Third person: teaches",
+      "audio": "/audio/teach.mp3"
+    },
+    {
+      "id": 35,
+      "word": "walk",
+      "translation": "andar/caminhar",
+      "phonetic": "/wɔːk/",
+      "partOfSpeech": "verb",
+      "definition": "To move on foot",
+      "example": "I walk to work.",
+      "image": "🚶",
+      "audioUrl": "/audio/walk.mp3",
+      "difficulty": "basic",
+      "category": "movement",
+      "relatedWords": [
+        "run",
+        "go",
+        "come"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/walk.mp3"
+    },
+    {
+      "id": 36,
+      "word": "run",
+      "translation": "correr",
+      "phonetic": "/rʌn/",
+      "partOfSpeech": "verb",
+      "definition": "To move fast on foot",
+      "example": "They run in the park.",
+      "image": "🏃",
+      "audioUrl": "/audio/run.mp3",
+      "difficulty": "basic",
+      "category": "movement",
+      "relatedWords": [
+        "walk",
+        "race",
+        "go"
+      ],
+      "usageNotes": "Third person: runs",
+      "audio": "/audio/run.mp3"
+    },
+    {
+      "id": 37,
+      "word": "sit",
+      "translation": "sentar",
+      "phonetic": "/sɪt/",
+      "partOfSpeech": "verb",
+      "definition": "To rest on a chair",
+      "example": "Please sit down.",
+      "image": "🪑",
+      "audioUrl": "/audio/sit.mp3",
+      "difficulty": "basic",
+      "category": "movement",
+      "relatedWords": [
+        "stand",
+        "chair",
+        "seat"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/sit.mp3"
+    },
+    {
+      "id": 38,
+      "word": "stand",
+      "translation": "ficar de pé",
+      "phonetic": "/stænd/",
+      "partOfSpeech": "verb",
+      "definition": "To be on your feet",
+      "example": "Stand up, please.",
+      "image": "🧍",
+      "audioUrl": "/audio/stand.mp3",
+      "difficulty": "basic",
+      "category": "movement",
+      "relatedWords": [
+        "sit",
+        "rise",
+        "move"
+      ],
+      "usageNotes": "—",
+      "audio": "/audio/stand.mp3"
+    },
+    {
+      "id": 39,
+      "word": "sleep",
+      "translation": "dormir",
+      "phonetic": "/sliːp/",
+      "partOfSpeech": "verb",
+      "definition": "To rest at night",
+      "example": "I sleep at 11.",
+      "image": "😴",
+      "audioUrl": "/audio/sleep.mp3",
+      "difficulty": "basic",
+      "category": "daily routines",
+      "relatedWords": [
+        "wake up",
+        "bed",
+        "night"
+      ],
+      "usageNotes": "Third person: sleeps",
+      "audio": "/audio/sleep.mp3"
+    },
+    {
+      "id": 40,
+      "word": "wake up",
+      "translation": "acordar",
+      "phonetic": "/ˈweɪk ˌʌp/",
+      "partOfSpeech": "phrasal verb",
+      "definition": "To stop sleeping",
+      "example": "She wakes up early.",
+      "image": "⏰",
+      "audioUrl": "/audio/wake-up.mp3",
+      "difficulty": "basic",
+      "category": "daily routines",
+      "relatedWords": [
+        "sleep",
+        "get up",
+        "alarm"
+      ],
+      "usageNotes": "Third person: wakes up",
+      "audio": "/audio/wake-up.mp3"
+    }
   ],
   "exercises": [
-    {"type":"matching","title":"Verb Meanings","description":"Match verbs to their meanings","items":[{"word":"eat","definition":"To take food","correct":true},{"word":"listen","definition":"To pay attention to sound","correct":true},{"word":"go","definition":"To move to another place","correct":true}]},
-    {"type":"fill-in-blank","title":"Daily Routines","description":"Complete with the correct verb (base form)","items":[{"sentence":"I ___ breakfast at 8.","correctAnswer":"eat","hint":"Food"},{"sentence":"They ___ to school.","correctAnswer":"go","hint":"Movement"},{"sentence":"We ___ English every day.","correctAnswer":"study","hint":"Learning"}]},
-    {"type":"conversation","title":"Asking About Routines","description":"Practice using do/does in questions","scenarios":[{"question":"What time do you wake up?","sampleAnswer":"I wake up at 7.","hint":"Use do with I/you/we/they"},{"question":"Does she work on Monday?","sampleAnswer":"Yes, she does.","hint":"Use does with he/she/it"},{"question":"What do you do after work?","sampleAnswer":"I go home and read.","hint":"Use base verb after do"}]}
+    {
+      "type": "matching",
+      "title": "Verb Meanings",
+      "description": "Match verbs to their meanings",
+      "items": [
+        {
+          "word": "eat",
+          "definition": "To take food",
+          "correct": true
+        },
+        {
+          "word": "listen",
+          "definition": "To pay attention to sound",
+          "correct": true
+        },
+        {
+          "word": "go",
+          "definition": "To move to another place",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "title": "Daily Routines",
+      "description": "Complete with the correct verb (base form)",
+      "items": [
+        {
+          "sentence": "I ___ breakfast at 8.",
+          "correctAnswer": "eat",
+          "hint": "Food"
+        },
+        {
+          "sentence": "They ___ to school.",
+          "correctAnswer": "go",
+          "hint": "Movement"
+        },
+        {
+          "sentence": "We ___ English every day.",
+          "correctAnswer": "study",
+          "hint": "Learning"
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Asking About Routines",
+      "description": "Practice using do/does in questions",
+      "scenarios": [
+        {
+          "question": "What time do you wake up?",
+          "sampleAnswer": "I wake up at 7.",
+          "hint": "Use do with I/you/we/they"
+        },
+        {
+          "question": "Does she work on Monday?",
+          "sampleAnswer": "Yes, she does.",
+          "hint": "Use does with he/she/it"
+        },
+        {
+          "question": "What do you do after work?",
+          "sampleAnswer": "I go home and read.",
+          "hint": "Use base verb after do"
+        }
+      ]
+    }
   ],
   "grammarFocus": {
     "presentSimpleBasics": {

@@ -1,0 +1,140 @@
+Audio Verification Report
+2025-08-12T12:48:01.808Z
+
+✅ OK entries:
+
+❌ Missing audio:
+MISS - basic-verbs.json -> be :: file not found at /audio/be.mp3
+MISS - basic-verbs.json -> have :: file not found at /audio/have.mp3
+MISS - basic-verbs.json -> do :: file not found at /audio/do.mp3
+MISS - basic-verbs.json -> go :: file not found at /audio/go.mp3
+MISS - basic-verbs.json -> come :: file not found at /audio/come.mp3
+MISS - basic-verbs.json -> eat :: file not found at /audio/eat.mp3
+MISS - basic-verbs.json -> drink :: file not found at /audio/drink.mp3
+MISS - basic-verbs.json -> read :: file not found at /audio/read.mp3
+MISS - basic-verbs.json -> write :: file not found at /audio/write.mp3
+MISS - basic-verbs.json -> speak :: file not found at /audio/speak.mp3
+MISS - basic-verbs.json -> listen :: file not found at /audio/listen.mp3
+MISS - basic-verbs.json -> see :: file not found at /audio/see.mp3
+MISS - basic-verbs.json -> hear :: file not found at /audio/hear.mp3
+MISS - basic-verbs.json -> make :: file not found at /audio/make.mp3
+MISS - basic-verbs.json -> take :: file not found at /audio/take.mp3
+MISS - basic-verbs.json -> give :: file not found at /audio/give.mp3
+MISS - basic-verbs.json -> get :: file not found at /audio/get.mp3
+MISS - basic-verbs.json -> want :: file not found at /audio/want.mp3
+MISS - basic-verbs.json -> need :: file not found at /audio/need.mp3
+MISS - basic-verbs.json -> like :: file not found at /audio/like.mp3
+MISS - basic-verbs.json -> love :: file not found at /audio/love.mp3
+MISS - basic-verbs.json -> live :: file not found at /audio/live.mp3
+MISS - basic-verbs.json -> work :: file not found at /audio/work.mp3
+MISS - basic-verbs.json -> study :: file not found at /audio/study.mp3
+MISS - basic-verbs.json -> play :: file not found at /audio/play.mp3
+MISS - basic-verbs.json -> open :: file not found at /audio/open.mp3
+MISS - basic-verbs.json -> close :: file not found at /audio/close.mp3
+MISS - basic-verbs.json -> start :: file not found at /audio/start.mp3
+MISS - basic-verbs.json -> finish :: file not found at /audio/finish.mp3
+MISS - basic-verbs.json -> buy :: file not found at /audio/buy.mp3
+MISS - basic-verbs.json -> sell :: file not found at /audio/sell.mp3
+MISS - basic-verbs.json -> pay :: file not found at /audio/pay.mp3
+MISS - basic-verbs.json -> learn :: file not found at /audio/learn.mp3
+MISS - basic-verbs.json -> teach :: file not found at /audio/teach.mp3
+MISS - basic-verbs.json -> walk :: file not found at /audio/walk.mp3
+MISS - basic-verbs.json -> run :: file not found at /audio/run.mp3
+MISS - basic-verbs.json -> sit :: file not found at /audio/sit.mp3
+MISS - basic-verbs.json -> stand :: file not found at /audio/stand.mp3
+MISS - basic-verbs.json -> sleep :: file not found at /audio/sleep.mp3
+MISS - basic-verbs.json -> wake up :: file not found at /audio/wake-up.mp3
+MISS - colors-basic-adjectives.json -> red :: file not found at /audio/red.mp3
+MISS - colors-basic-adjectives.json -> blue :: file not found at /audio/blue.mp3
+MISS - colors-basic-adjectives.json -> green :: file not found at /audio/green.mp3
+MISS - colors-basic-adjectives.json -> yellow :: file not found at /audio/yellow.mp3
+MISS - colors-basic-adjectives.json -> black :: file not found at /audio/black.mp3
+MISS - colors-basic-adjectives.json -> white :: file not found at /audio/white.mp3
+MISS - colors-basic-adjectives.json -> small :: file not found at /audio/small.mp3
+MISS - colors-basic-adjectives.json -> big :: file not found at /audio/big.mp3
+MISS - colors-basic-adjectives.json -> tall :: file not found at /audio/tall.mp3
+MISS - colors-basic-adjectives.json -> short :: file not found at /audio/short.mp3
+MISS - colors-basic-adjectives.json -> old :: file not found at /audio/old.mp3
+MISS - colors-basic-adjectives.json -> young :: file not found at /audio/young.mp3
+MISS - colors-basic-adjectives.json -> beautiful :: file not found at /audio/beautiful.mp3
+MISS - colors-basic-adjectives.json -> ugly :: file not found at /audio/ugly.mp3
+MISS - colors-basic-adjectives.json -> new :: file not found at /audio/new.mp3
+MISS - days-months-time.json -> Monday :: file not found at /audio/monday.mp3
+MISS - days-months-time.json -> Tuesday :: file not found at /audio/tuesday.mp3
+MISS - days-months-time.json -> Wednesday :: file not found at /audio/wednesday.mp3
+MISS - days-months-time.json -> Thursday :: file not found at /audio/thursday.mp3
+MISS - days-months-time.json -> Friday :: file not found at /audio/friday.mp3
+MISS - days-months-time.json -> Saturday :: file not found at /audio/saturday.mp3
+MISS - days-months-time.json -> Sunday :: file not found at /audio/sunday.mp3
+MISS - days-months-time.json -> January :: file not found at /audio/january.mp3
+MISS - days-months-time.json -> February :: file not found at /audio/february.mp3
+MISS - days-months-time.json -> March :: file not found at /audio/march.mp3
+MISS - days-months-time.json -> April :: file not found at /audio/april.mp3
+MISS - days-months-time.json -> May :: file not found at /audio/may.mp3
+MISS - days-months-time.json -> June :: file not found at /audio/june.mp3
+MISS - days-months-time.json -> July :: file not found at /audio/july.mp3
+MISS - days-months-time.json -> morning :: file not found at /audio/morning.mp3
+MISS - days-months-time.json -> afternoon :: file not found at /audio/afternoon.mp3
+MISS - days-months-time.json -> evening :: file not found at /audio/evening.mp3
+MISS - days-months-time.json -> night :: file not found at /audio/night.mp3
+MISS - days-months-time.json -> today :: file not found at /audio/today.mp3
+MISS - days-months-time.json -> tomorrow :: file not found at /audio/tomorrow.mp3
+MISS - food-drinks.json -> water :: file not found at /audio/water.mp3
+MISS - food-drinks.json -> tea :: file not found at /audio/tea.mp3
+MISS - food-drinks.json -> coffee :: file not found at /audio/coffee.mp3
+MISS - food-drinks.json -> milk :: file not found at /audio/milk.mp3
+MISS - food-drinks.json -> juice :: file not found at /audio/juice.mp3
+MISS - food-drinks.json -> bread :: file not found at /audio/bread.mp3
+MISS - food-drinks.json -> rice :: file not found at /audio/rice.mp3
+MISS - food-drinks.json -> egg :: file not found at /audio/egg.mp3
+MISS - food-drinks.json -> apple :: file not found at /audio/apple.mp3
+MISS - food-drinks.json -> banana :: file not found at /audio/banana.mp3
+MISS - food-drinks.json -> orange :: file not found at /audio/orange.mp3
+MISS - food-drinks.json -> chicken :: file not found at /audio/chicken.mp3
+MISS - food-drinks.json -> fish :: file not found at /audio/fish.mp3
+MISS - food-drinks.json -> meat :: file not found at /audio/meat.mp3
+MISS - food-drinks.json -> vegetable :: file not found at /audio/vegetable.mp3
+MISS - food-drinks.json -> salad :: file not found at /audio/salad.mp3
+MISS - food-drinks.json -> soup :: file not found at /audio/soup.mp3
+MISS - food-drinks.json -> sugar :: file not found at /audio/sugar.mp3
+MISS - food-drinks.json -> salt :: file not found at /audio/salt.mp3
+MISS - food-drinks.json -> pepper :: file not found at /audio/pepper.mp3
+MISS - food-drinks.json -> cheese :: file not found at /audio/cheese.mp3
+MISS - food-drinks.json -> butter :: file not found at /audio/butter.mp3
+MISS - food-drinks.json -> breakfast :: file not found at /audio/breakfast.mp3
+MISS - food-drinks.json -> lunch :: file not found at /audio/lunch.mp3
+MISS - food-drinks.json -> dinner :: file not found at /audio/dinner.mp3
+MISS - food-drinks.json -> snack :: file not found at /audio/snack.mp3
+MISS - food-drinks.json -> hungry :: file not found at /audio/hungry.mp3
+MISS - food-drinks.json -> thirsty :: file not found at /audio/thirsty.mp3
+MISS - food-drinks.json -> plate :: file not found at /audio/plate.mp3
+MISS - food-drinks.json -> cup :: file not found at /audio/cup.mp3
+MISS - personal-information.json -> name :: file not found at /audio/name.mp3
+MISS - personal-information.json -> first name :: file not found at /audio/first-name.mp3
+MISS - personal-information.json -> last name :: file not found at /audio/last-name.mp3
+MISS - personal-information.json -> age :: file not found at /audio/age.mp3
+MISS - personal-information.json -> address :: file not found at /audio/address.mp3
+MISS - personal-information.json -> street :: file not found at /audio/street.mp3
+MISS - personal-information.json -> city :: file not found at /audio/city.mp3
+MISS - personal-information.json -> country :: file not found at /audio/country.mp3
+MISS - personal-information.json -> phone number :: file not found at /audio/phone-number.mp3
+MISS - personal-information.json -> email :: file not found at /audio/email.mp3
+MISS - personal-information.json -> job :: file not found at /audio/job.mp3
+MISS - personal-information.json -> student :: file not found at /audio/student.mp3
+MISS - personal-information.json -> teacher :: file not found at /audio/teacher.mp3
+MISS - personal-information.json -> friend :: file not found at /audio/friend.mp3
+MISS - personal-information.json -> family name :: file not found at /audio/family-name.mp3
+MISS - personal-information.json -> birthday :: file not found at /audio/birthday.mp3
+MISS - personal-information.json -> date of birth :: file not found at /audio/date-of-birth.mp3
+MISS - personal-information.json -> nationality :: file not found at /audio/nationality.mp3
+MISS - personal-information.json -> passport :: file not found at /audio/passport.mp3
+MISS - personal-information.json -> ID card :: file not found at /audio/id-card.mp3
+MISS - personal-information.json -> number :: file not found at /audio/number.mp3
+MISS - personal-information.json -> male :: file not found at /audio/male.mp3
+MISS - personal-information.json -> female :: file not found at /audio/female.mp3
+MISS - personal-information.json -> single :: file not found at /audio/single.mp3
+MISS - personal-information.json -> married :: file not found at /audio/married.mp3
+
+⚠ Empty audio files:
+
+Errors:
