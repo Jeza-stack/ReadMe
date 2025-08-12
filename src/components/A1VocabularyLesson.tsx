@@ -21,7 +21,7 @@ import {
   Users,
   Heart
 } from 'lucide-react';
-import vocabularyData from '@/data/vocabulary-data.json';
+import { A1_DATASETS, DatasetKey } from '@/data/vocabulary';
 
 interface VocabularyWord {
   id: number;
@@ -39,10 +39,7 @@ interface VocabularyWord {
   usageNotes: string;
 }
 
-type DataA1 = typeof vocabularyData.a1;
- type DatasetKey = keyof DataA1;
- 
- interface VocabularyLessonProps {
+interface VocabularyLessonProps {
    theme: string;
    level: string;
    datasetKey?: DatasetKey;
@@ -58,7 +55,7 @@ type DataA1 = typeof vocabularyData.a1;
    const [exerciseAnswers, setExerciseAnswers] = useState<string[]>([]);
    const [showResults, setShowResults] = useState(false);
  
-   const lessonData = vocabularyData.a1[datasetKey] as any;
+   const lessonData = A1_DATASETS[datasetKey] as any;
    const vocabulary = (lessonData?.vocabulary || []) as VocabularyWord[];
    const exercises = lessonData?.exercises || [];
    const grammarFocus = lessonData?.grammarFocus || {};

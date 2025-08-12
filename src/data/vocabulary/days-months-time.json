@@ -1,0 +1,75 @@
+{
+  "theme": "Days, Months, Time",
+  "level": "A1",
+  "cefrMapping": {
+    "canDoStatements": [
+      "I can say days of the week",
+      "I can say months of the year",
+      "I can talk about parts of the day",
+      "I can talk about simple schedules"
+    ],
+    "vocabularyRange": "20 essential time words",
+    "grammarFocus": "Capitalization and prepositions of time",
+    "communicationFunctions": [
+      "Talking about schedules",
+      "Making appointments",
+      "Saying dates",
+      "Talking about routines"
+    ]
+  },
+  "vocabulary": [
+    {"id":1,"word":"Monday","translation":"segunda-feira","phonetic":"/ˈmʌndeɪ/","partOfSpeech":"noun","definition":"First day of the work week","example":"I work on Monday.","image":"📅","audioUrl":"/audio/monday.mp3","difficulty":"basic","category":"days","relatedWords":["Tuesday","week","day"],"usageNotes":"Days are capitalized"},
+    {"id":2,"word":"Tuesday","translation":"terça-feira","phonetic":"/ˈtjuːzdeɪ/","partOfSpeech":"noun","definition":"Second day of the work week","example":"Class is on Tuesday.","image":"📅","audioUrl":"/audio/tuesday.mp3","difficulty":"basic","category":"days","relatedWords":["Monday","Wednesday","week"],"usageNotes":"Days are capitalized"},
+    {"id":3,"word":"Wednesday","translation":"quarta-feira","phonetic":"/ˈwenzdeɪ/","partOfSpeech":"noun","definition":"Middle of the week","example":"We meet on Wednesday.","image":"📅","audioUrl":"/audio/wednesday.mp3","difficulty":"basic","category":"days","relatedWords":["Tuesday","Thursday","week"],"usageNotes":"'d' is silent"},
+    {"id":4,"word":"Thursday","translation":"quinta-feira","phonetic":"/ˈθɜːzdeɪ/","partOfSpeech":"noun","definition":"Fourth day of the week","example":"The lesson is on Thursday.","image":"📅","audioUrl":"/audio/thursday.mp3","difficulty":"basic","category":"days","relatedWords":["Wednesday","Friday","week"],"usageNotes":"Days are capitalized"},
+    {"id":5,"word":"Friday","translation":"sexta-feira","phonetic":"/ˈfraɪdeɪ/","partOfSpeech":"noun","definition":"Last work day","example":"Friday is my favorite day.","image":"📅","audioUrl":"/audio/friday.mp3","difficulty":"basic","category":"days","relatedWords":["Thursday","Saturday","weekend"],"usageNotes":"Days are capitalized"},
+    {"id":6,"word":"Saturday","translation":"sábado","phonetic":"/ˈsætədeɪ/","partOfSpeech":"noun","definition":"Weekend day","example":"We relax on Saturday.","image":"📅","audioUrl":"/audio/saturday.mp3","difficulty":"basic","category":"days","relatedWords":["Sunday","weekend","day"],"usageNotes":"Days are capitalized"},
+    {"id":7,"word":"Sunday","translation":"domingo","phonetic":"/ˈsʌndeɪ/","partOfSpeech":"noun","definition":"Weekend day","example":"Sunday is a quiet day.","image":"📅","audioUrl":"/audio/sunday.mp3","difficulty":"basic","category":"days","relatedWords":["Saturday","weekend","day"],"usageNotes":"Days are capitalized"},
+    {"id":8,"word":"January","translation":"janeiro","phonetic":"/ˈdʒænjuəri/","partOfSpeech":"noun","definition":"First month","example":"January is cold.","image":"📆","audioUrl":"/audio/january.mp3","difficulty":"basic","category":"months","relatedWords":["February","month","year"],"usageNotes":"Months are capitalized"},
+    {"id":9,"word":"February","translation":"fevereiro","phonetic":"/ˈfebruəri/","partOfSpeech":"noun","definition":"Second month","example":"February has 28 days.","image":"📆","audioUrl":"/audio/february.mp3","difficulty":"basic","category":"months","relatedWords":["January","March","year"],"usageNotes":"Months are capitalized"},
+    {"id":10,"word":"March","translation":"março","phonetic":"/mɑːtʃ/","partOfSpeech":"noun","definition":"Third month","example":"Classes start in March.","image":"📆","audioUrl":"/audio/march.mp3","difficulty":"basic","category":"months","relatedWords":["April","month","year"],"usageNotes":"Use 'in' with months"},
+    {"id":11,"word":"April","translation":"abril","phonetic":"/ˈeɪprəl/","partOfSpeech":"noun","definition":"Fourth month","example":"My birthday is in April.","image":"📆","audioUrl":"/audio/april.mp3","difficulty":"basic","category":"months","relatedWords":["March","May","year"],"usageNotes":"Use 'in' with months"},
+    {"id":12,"word":"May","translation":"maio","phonetic":"/meɪ/","partOfSpeech":"noun","definition":"Fifth month","example":"May is sunny.","image":"📆","audioUrl":"/audio/may.mp3","difficulty":"basic","category":"months","relatedWords":["April","June","year"],"usageNotes":"Short name"},
+    {"id":13,"word":"June","translation":"junho","phonetic":"/dʒuːn/","partOfSpeech":"noun","definition":"Sixth month","example":"School ends in June.","image":"📆","audioUrl":"/audio/june.mp3","difficulty":"basic","category":"months","relatedWords":["May","July","year"],"usageNotes":"Use 'in' with months"},
+    {"id":14,"word":"July","translation":"julho","phonetic":"/dʒʊˈlaɪ/","partOfSpeech":"noun","definition":"Seventh month","example":"We travel in July.","image":"📆","audioUrl":"/audio/july.mp3","difficulty":"basic","category":"months","relatedWords":["June","August","year"],"usageNotes":"Use 'in' with months"},
+    {"id":15,"word":"morning","translation":"manhã","phonetic":"/ˈmɔːnɪŋ/","partOfSpeech":"noun","definition":"Early part of the day","example":"I wake up in the morning.","image":"🌅","audioUrl":"/audio/morning.mp3","difficulty":"basic","category":"time of day","relatedWords":["afternoon","evening","night"],"usageNotes":"Use 'in the morning"},
+    {"id":16,"word":"afternoon","translation":"tarde","phonetic":"/ˌɑːftəˈnuːn/","partOfSpeech":"noun","definition":"Middle part of the day","example":"We study in the afternoon.","image":"🌞","audioUrl":"/audio/afternoon.mp3","difficulty":"basic","category":"time of day","relatedWords":["morning","evening","noon"],"usageNotes":"Use 'in the afternoon'"},
+    {"id":17,"word":"evening","translation":"noite (início)","phonetic":"/ˈiːvnɪŋ/","partOfSpeech":"noun","definition":"End of the day before night","example":"They walk in the evening.","image":"🌆","audioUrl":"/audio/evening.mp3","difficulty":"basic","category":"time of day","relatedWords":["night","afternoon","sunset"],"usageNotes":"Use 'in the evening'"},
+    {"id":18,"word":"night","translation":"noite","phonetic":"/naɪt/","partOfSpeech":"noun","definition":"Dark time after evening","example":"Good night!","image":"🌙","audioUrl":"/audio/night.mp3","difficulty":"basic","category":"time of day","relatedWords":["evening","midnight","sleep"],"usageNotes":"Use 'at night'"},
+    {"id":19,"word":"today","translation":"hoje","phonetic":"/təˈdeɪ/","partOfSpeech":"adverb","definition":"This day","example":"I have a test today.","image":"📅","audioUrl":"/audio/today.mp3","difficulty":"basic","category":"time words","relatedWords":["yesterday","tomorrow","now"],"usageNotes":"No preposition needed"},
+    {"id":20,"word":"tomorrow","translation":"amanhã","phonetic":"/təˈmɒrəʊ/","partOfSpeech":"adverb","definition":"The day after today","example":"See you tomorrow.","image":"📅","audioUrl":"/audio/tomorrow.mp3","difficulty":"basic","category":"time words","relatedWords":["today","yesterday","soon"],"usageNotes":"No preposition needed"}
+  ],
+  "exercises": [
+    {"type":"matching","title":"Days and Months","description":"Match the day or month with a fact","items":[{"word":"Monday","definition":"First day of the work week","correct":true},{"word":"January","definition":"First month","correct":true},{"word":"evening","definition":"End of the day before night","correct":true}]},
+    {"type":"fill-in-blank","title":"When Is It?","description":"Complete with a time word","items":[{"sentence":"My class is on ___.","correctAnswer":"Tuesday","hint":"A day"},{"sentence":"Her birthday is in ___.","correctAnswer":"April","hint":"A month"},{"sentence":"We sleep at ___.","correctAnswer":"night","hint":"Time of day"}]},
+    {"type":"conversation","title":"Making Plans","description":"Practice talking about schedules","scenarios":[{"question":"When is the meeting?","sampleAnswer":"It is on Monday morning.","hint":"Use prepositions on/in/at"},{"question":"What month is your vacation?","sampleAnswer":"In July.","hint":"Use 'in' with months"},{"question":"See you ___.","sampleAnswer":"See you tomorrow!","hint":"Time word"}]}
+  ],
+  "grammarFocus": {
+    "timePrepositions": {
+      "title": "Prepositions of Time (on, in, at)",
+      "description": "Use the correct preposition with days, months, and parts of the day",
+      "examples": [
+        "on Monday",
+        "in April",
+        "at night",
+        "in the morning",
+        "on Tuesday evening"
+      ],
+      "rules": [
+        "Use 'on' with days and dates",
+        "Use 'in' with months, years, and long periods",
+        "Use 'at' with precise times and 'night'",
+        "Capitalize days and months",
+        "Do not use a preposition before 'today' or 'tomorrow'"
+      ]
+    }
+  },
+  "mobileFeatures": {
+    "swipeNavigation": true,
+    "audioSupport": true,
+    "touchFriendly": true,
+    "offlineAccess": true,
+    "progressTracking": true,
+    "adaptiveLearning": true
+  }
+}

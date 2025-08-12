@@ -5,6 +5,7 @@ export default function FamilyVocabularyPage() {
     <A1VocabularyLesson 
       theme="Family & Relationships" 
       level="A1" 
+      datasetKey="family-relationships"
     />
   );
 }
