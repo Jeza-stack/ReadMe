@@ -24,6 +24,16 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.75rem;
+
+    /* Communicative-English vibrant palette */
+    --ce-deep-navy: #0A1330;
+    --ce-mid-blue: #1A2B5E;
+    --ce-warm-orange: #FF8C42;
+    --ce-golden-yellow: #FFD166;
+    --ce-magenta: #FF4D6D;
+    --ce-magenta-hover: #FF6D87; /* ~10% brighter */
+    --ce-text-primary: #F5F6FA;
+    --ce-text-secondary: #B0B3C6;
   }
 
   .dark {
@@ -46,6 +56,16 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 94.1%;
+
+    /* Keep CE palette identical in dark mode for brand consistency */
+    --ce-deep-navy: #0A1330;
+    --ce-mid-blue: #1A2B5E;
+    --ce-warm-orange: #FF8C42;
+    --ce-golden-yellow: #FFD166;
+    --ce-magenta: #FF4D6D;
+    --ce-magenta-hover: #FF6D87;
+    --ce-text-primary: #F5F6FA;
+    --ce-text-secondary: #B0B3C6;
   }
 }
 

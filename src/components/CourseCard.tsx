@@ -16,16 +16,33 @@ export function CourseCard({
   cta?: string;
 }) {
   return (
-    <Link href={href} className="block">
-      <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50">
+    <Link href={href} className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--ce-golden-yellow)] focus-visible:ring-offset-transparent rounded-xl">
+      <Card
+        className="group relative overflow-hidden border-0 transition duration-200
+          bg-[linear-gradient(135deg,var(--ce-deep-navy),var(--ce-mid-blue))]
+          text-[var(--ce-text-primary)]
+          shadow-[0_4px_12px_rgba(0,0,0,0.3)]
+          hover:shadow-[0_6px_16px_rgba(0,0,0,0.35)]
+          hover:-translate-y-1 rounded-xl"
+      >
         <CardContent className="p-4 xs:p-5 md:p-6">
-          {icon && <div className="mb-4 text-primary">{icon}</div>}
-          <CardTitle className="font-headline text-xl xs:text-2xl font-bold mb-2">{title}</CardTitle>
-          <CardDescription className="text-sm xs:text-base text-foreground/70 leading-relaxed">
+          {icon && (
+            <div className="mb-4 text-[var(--ce-warm-orange)]">
+              {icon}
+            </div>
+          )}
+          <CardTitle className="font-headline text-xl xs:text-2xl font-bold mb-2 text-[var(--ce-golden-yellow)]">
+            {title}
+          </CardTitle>
+          <CardDescription className="text-sm xs:text-base leading-relaxed text-[var(--ce-text-secondary)]">
             {description}
           </CardDescription>
           <div className="mt-4 xs:mt-6">
-            <Button className="font-semibold">{cta}</Button>
+            <Button
+              className="font-semibold bg-[var(--ce-magenta)] text-[var(--ce-text-primary)] hover:bg-[var(--ce-magenta-hover)] border-0"
+            >
+              {cta}
+            </Button>
           </div>
         </CardContent>
       </Card>
