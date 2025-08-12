@@ -32,7 +32,8 @@ interface VocabularyWord {
   definition: string;
   example: string;
   image: string;
-  audioUrl: string;
+  audioUrl?: string;
+  audio?: string;
   difficulty: string;
   category: string;
   relatedWords: string[];
@@ -46,14 +47,15 @@ interface VocabularyLessonProps {
  }
  
  export default function A1VocabularyLesson({ theme, level, datasetKey = 'family-relationships' as DatasetKey }: VocabularyLessonProps) {
-   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-   const [isPlaying, setIsPlaying] = useState(false);
-   const [showTranslation, setShowTranslation] = useState(false);
-   const [completedWords, setCompletedWords] = useState<Set<number>>(new Set());
-   const [favoriteWords, setFavoriteWords] = useState<Set<number>>(new Set());
-   const [currentExercise, setCurrentExercise] = useState(0);
-   const [exerciseAnswers, setExerciseAnswers] = useState<string[]>([]);
-   const [showResults, setShowResults] = useState(false);
+     const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoadingAudio, setIsLoadingAudio] = useState(false);
+  const [showTranslation, setShowTranslation] = useState(false);
+  const [completedWords, setCompletedWords] = useState<Set<number>>(new Set());
+  const [favoriteWords, setFavoriteWords] = useState<Set<number>>(new Set());
+  const [currentExercise, setCurrentExercise] = useState(0);
+  const [exerciseAnswers, setExerciseAnswers] = useState<string[]>([]);
+  const [showResults, setShowResults] = useState(false);
  
    const lessonData = A1_DATASETS[datasetKey] as any;
    const vocabulary = (lessonData?.vocabulary || []) as VocabularyWord[];
@@ -63,9 +65,75 @@ interface VocabularyLessonProps {
   const currentWord = vocabulary[currentWordIndex];
   const progress = (completedWords.size / Math.max(vocabulary.length, 1)) * 100;
 
-  const playAudio = () => {
-    setIsPlaying(true);
-    setTimeout(() => setIsPlaying(false), 2000);
+  // Audio handling with caching and graceful fallback
+  const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
+  const audioSrc: string | undefined = currentWord ? (currentWord.audio || currentWord.audioUrl) : undefined;
+
+  useEffect(() => {
+    let isCancelled = false;
+    setIsLoadingAudio(!!audioSrc);
+    setIsPlaying(false);
+    if (!audioSrc) {
+      setAudioElement(null);
+      setIsLoadingAudio(false);
+      return;
+    }
+    const absoluteSrc = audioSrc.startsWith('/') ? audioSrc : `/${audioSrc}`;
+    const audio = new Audio(absoluteSrc);
+    audio.preload = 'auto';
+    const handleCanPlay = () => {
+      if (isCancelled) return;
+      setIsLoadingAudio(false);
+    };
+    const handleEnded = () => {
+      if (isCancelled) return;
+      setIsPlaying(false);
+    };
+    const handleError = () => {
+      if (isCancelled) return;
+      setIsLoadingAudio(false);
+      setIsPlaying(false);
+    };
+    audio.addEventListener('canplaythrough', handleCanPlay);
+    audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('error', handleError);
+    setAudioElement(audio);
+    return () => {
+      isCancelled = true;
+      audio.pause();
+      audio.removeEventListener('canplaythrough', handleCanPlay);
+      audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('error', handleError);
+    };
+  }, [audioSrc]);
+
+  useEffect(() => {
+    // Warm preload of the next word's audio for smoother UX
+    const next = vocabulary[currentWordIndex + 1];
+    const nextSrc = next ? (next.audio || next.audioUrl) : undefined;
+    if (!nextSrc) return;
+    const src = nextSrc.startsWith('/') ? nextSrc : `/${nextSrc}`;
+    const preloadAudio = new Audio(src);
+    preloadAudio.preload = 'auto';
+    // Do not attach to state; allow GC to collect
+  }, [currentWordIndex, vocabulary]);
+
+  const playAudio = async () => {
+    if (!audioElement) return;
+    try {
+      // Always start from the beginning for consistent pronunciation
+      audioElement.currentTime = 0;
+      await audioElement.play();
+      setIsPlaying(true);
+    } catch (err) {
+      setIsPlaying(false);
+    }
+  };
+
+  const pauseAudio = () => {
+    if (!audioElement) return;
+    audioElement.pause();
+    setIsPlaying(false);
   };
 
   const toggleFavorite = () => {
@@ -177,8 +245,9 @@ interface VocabularyLessonProps {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={playAudio}
-                    disabled={isPlaying}
+                    onClick={() => (isPlaying ? pauseAudio() : playAudio())}
+                    disabled={!audioSrc || isLoadingAudio}
+                    aria-label={isPlaying ? 'Pause pronunciation' : 'Play pronunciation'}
                   >
                     {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                   </Button>
