@@ -270,10 +270,10 @@ export default function Home() {
             />
             <CourseCard
               title="Soft Skills"
-              description="Articles and insights on communication, leadership, and workplace excellence."
-              href="/soft-skills"
+              description="Soft Skills Mastery: From Beginner to Expert — 20-week practical program."
+              href="/courses/soft-skills-mastery"
               icon={<Users className="w-8 h-8" />}
-              cta="Read Soft Skills"
+              cta="Explore Soft Skills Mastery"
             />
           </div>
         </div>
