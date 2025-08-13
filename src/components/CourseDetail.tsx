@@ -1,16 +1,17 @@
 import React from 'react';
-import ModuleAccordion, { WEF_SKILL_TAGS } from './ModuleAccordion';
+import ModuleAccordion, { SKILL_INFO } from './ModuleAccordion';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import canonical from '@/data/courses/soft-skills-mastery.json';
 
 export default function CourseDetail({ course }: { course: any }) {
   // Merge passed course header (from readme-data.json) with canonical module data
   const merged = { ...canonical, ...course } as any;
   const legend = [
-    { skill: 'Active Learning & Learning Strategies', color: '#1E88E5', icon: '📘' },
-    { skill: 'Complex Problem Solving', color: '#F4511E', icon: '🧩' },
-    { skill: 'Creativity, Originality & Initiative', color: '#8E24AA', icon: '💡' },
-    { skill: 'Critical Thinking & Analysis', color: '#43A047', icon: '🔍' },
-    { skill: 'Communication & Collaboration', color: '#E53935', icon: '💬' },
+    { key: 'Analytical Thinking' },
+    { key: 'Complex Problem Solving' as any, fallback: { color: '#F4511E', icon: '🧩', description: 'Devising effective solutions for multi-faceted challenges.' } },
+    { key: 'Creative Thinking' },
+    { key: 'Critical Thinking & Analysis' as any, fallback: { color: '#43A047', icon: '🔍', description: 'Evaluating information to form reasoned judgments.' } },
+    { key: 'Curiosity and Lifelong Learning' },
   ];
   return (
     <main className="container mx-auto px-4 py-12">
@@ -26,18 +27,40 @@ export default function CourseDetail({ course }: { course: any }) {
       {/* Legend */}
       <section aria-label="WEF skills legend" className="mb-8">
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-          {legend.map((item) => (
-            <div key={item.skill} className="flex items-center rounded-lg shadow-sm bg-white dark:bg-gray-800 px-4 py-2" aria-label={`Skill: ${item.skill}`}>
-              <span
-                aria-hidden
-                className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full"
-                style={{ backgroundColor: item.color }}
-              >
-                <span className="text-white text-sm leading-none">{item.icon}</span>
-              </span>
-              <span className="text-sm font-medium">{item.skill}</span>
-            </div>
-          ))}
+          {legend.map((item) => {
+            const data = SKILL_INFO[item.key as keyof typeof SKILL_INFO] || item.fallback;
+            if (!data) return null;
+            return (
+              <TooltipProvider key={String(item.key)} delayDuration={150}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex items-center rounded-lg shadow-sm bg-white dark:bg-gray-800 px-4 py-2 cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary" aria-describedby={`legend-${item.key}`}>
+                      <span
+                        aria-hidden
+                        className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full"
+                        style={{ backgroundColor: data.color }}
+                      >
+                        <span className="text-white text-sm leading-none">{data.icon}</span>
+                      </span>
+                      <span className="text-sm font-medium">{String(item.key)}</span>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent id={`legend-${item.key}`} className="overflow-visible bg-white dark:bg-gray-800 text-slate-900 dark:text-white max-w-[250px] p-3">
+                    <div className="relative">
+                      <span className="absolute -top-2 left-4 h-3 w-3 rotate-45 bg-white dark:bg-gray-800 shadow-sm" aria-hidden />
+                      <div className="flex items-start gap-2">
+                        <span className="text-base" aria-hidden>{data.icon}</span>
+                        <div>
+                          <div className="font-semibold">{String(item.key)}</div>
+                          <div className="text-sm opacity-90">{data.description}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            );
+          })}
         </div>
       </section>
 

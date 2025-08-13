@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export interface ModuleItem {
   id: string;
@@ -14,13 +15,67 @@ export interface ModuleItem {
   activities: string[];
 }
 
-// WEF 2025 skill mapping per module id
-export const WEF_SKILL_TAGS: Record<string, { label: string; color: string; icon: string }> = {
-  m1: { label: 'Active Learning & Learning Strategies', color: '#1E88E5', icon: '📘' },
-  m2: { label: 'Communication & Collaboration', color: '#E53935', icon: '💬' },
-  m3: { label: 'Complex Problem Solving', color: '#F4511E', icon: '🧩' },
-  m4: { label: 'Critical Thinking & Analysis', color: '#43A047', icon: '🔍' },
-  m5: { label: 'Creativity, Originality & Initiative', color: '#8E24AA', icon: '💡' },
+// Enriched WEF 2025 skill info
+export const SKILL_INFO: Record<string, { color: string; icon: string; description: string }> = {
+  'Analytical Thinking': {
+    color: '#1E88E5',
+    icon: '🧠',
+    description: 'Breaking down complex problems into clear, logical steps for effective solutions.'
+  },
+  'Creative Thinking': {
+    color: '#FFB300',
+    icon: '💡',
+    description: 'Generating original ideas and transforming them into innovative, real-world outcomes.'
+  },
+  'Resilience, Flexibility and Agility': {
+    color: '#43A047',
+    icon: '🌱',
+    description: 'Adapting quickly to change and bouncing back stronger from challenges.'
+  },
+  'Motivation and Self-awareness': {
+    color: '#F4511E',
+    icon: '🔥',
+    description: 'Understanding yourself and staying driven to reach your personal and professional goals.'
+  },
+  'Curiosity and Lifelong Learning': {
+    color: '#8E24AA',
+    icon: '🔍',
+    description: 'Actively seeking new knowledge and skills to keep growing in a changing world.'
+  },
+  'Systems Thinking': {
+    color: '#00ACC1',
+    icon: '🔄',
+    description: 'Seeing the bigger picture and understanding how parts connect within complex systems.'
+  },
+  'AI and Big Data': {
+    color: '#5E35B1',
+    icon: '🤖',
+    description: 'Using artificial intelligence and data analysis to make smarter, faster decisions.'
+  },
+  'Leadership and Social Influence': {
+    color: '#D81B60',
+    icon: '🌟',
+    description: 'Inspiring, guiding, and influencing others to achieve shared goals.'
+  },
+  'Talent Management': {
+    color: '#6D4C41',
+    icon: '🧩',
+    description: 'Recognizing and developing the potential in yourself and others.'
+  },
+  'Service Orientation and Customer Service': {
+    color: '#009688',
+    icon: '🤝',
+    description: 'Providing value, care, and solutions that truly meet people’s needs.'
+  },
+};
+
+// Map modules to a primary WEF skill key
+export const MODULE_SKILL_MAP: Record<string, keyof typeof SKILL_INFO> = {
+  m1: 'Motivation and Self-awareness',
+  m2: 'Communication & Collaboration' as any, // fallback if present elsewhere
+  m3: 'Talent Management',
+  m4: 'Leadership and Social Influence',
+  m5: 'Curiosity and Lifelong Learning',
 };
 
 export function ModuleAccordionList({ modules }: { modules: ModuleItem[] }) {
@@ -84,7 +139,13 @@ export function ModuleAccordionList({ modules }: { modules: ModuleItem[] }) {
 
 export default function ModuleAccordion({ module }: { module: any }) {
   const [open, setOpen] = useState(false);
-  const tag = WEF_SKILL_TAGS[module?.id as string];
+  const skillKey = MODULE_SKILL_MAP[module?.id as string];
+  // Support legacy mapping key if using Communication & Collaboration not defined in SKILL_INFO
+  const legacyComm = skillKey === ('Communication & Collaboration' as any);
+  const skill = legacyComm
+    ? { color: '#E53935', icon: '💬', description: 'Exchanging ideas clearly and working effectively with others.' }
+    : SKILL_INFO[skillKey as string];
+
   return (
     <article className="border rounded-lg p-4">
       <button
@@ -97,15 +158,36 @@ export default function ModuleAccordion({ module }: { module: any }) {
             <h3 className="text-lg font-semibold break-words">
               {module.title}{' '}
             </h3>
-            {tag && (
-              <span
-                className="inline-flex items-center gap-1 rounded shadow text-white"
-                style={{ backgroundColor: tag.color, padding: '0.25rem 0.5rem', fontSize: '0.75rem' }}
-                aria-label={`Primary skill: ${tag.label}`}
-              >
-                <span aria-hidden>{tag.icon}</span>
-                <span className="leading-none">{tag.label}</span>
-              </span>
+            {skill && (
+              <TooltipProvider delayDuration={150}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span
+                      className="inline-flex items-center gap-1 rounded shadow text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                      style={{ backgroundColor: skill.color, padding: '0.25rem 0.5rem', fontSize: '0.75rem' }}
+                      aria-describedby={`skill-${module.id}`}
+                    >
+                      <span aria-hidden>{skill.icon}</span>
+                      <span className="leading-none">{skillKey}</span>
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent
+                    id={`skill-${module.id}`}
+                    className="overflow-visible bg-white dark:bg-gray-800 text-slate-900 dark:text-white max-w-[250px] p-3"
+                  >
+                    <div className="relative">
+                      <span className="absolute -top-2 left-4 h-3 w-3 rotate-45 bg-white dark:bg-gray-800 shadow-sm" aria-hidden />
+                      <div className="flex items-start gap-2">
+                        <span className="text-base" aria-hidden>{skill.icon}</span>
+                        <div>
+                          <div className="font-semibold">{skillKey}</div>
+                          <div className="text-sm opacity-90">{skill.description}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             )}
           </div>
           <p className="text-sm text-muted-foreground">{module.weeks} • {module.hours} total</p>
