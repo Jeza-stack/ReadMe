@@ -157,10 +157,13 @@ export default function A2Level() {
                           <Badge variant="secondary">{item.lessons} lessons</Badge>
                         </div>
                       </CardHeader>
-                      <CardContent className="pt-0">
+                      <CardContent className="pt-0 space-y-2">
                         <Button className="w-full" variant="outline">
                           <Clock className="w-4 h-4 mr-2" />
                           Start Learning
+                        </Button>
+                        <Button asChild className="w-full" variant="default">
+                          <Link href="/grammar/a2">Explore A2 Grammar Module</Link>
                         </Button>
                       </CardContent>
                     </Card>
