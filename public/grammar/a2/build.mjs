@@ -8,6 +8,19 @@ const template = fs.readFileSync(path.join(base,'template.html'),'utf8');
 const lessonsDir = path.join(base,'lessons');
 if(!fs.existsSync(lessonsDir)) fs.mkdirSync(lessonsDir, {recursive:true});
 
+function getCount(l){
+  if (Array.isArray(l.questions)) return l.questions.length;
+  const t = l.task || {};
+  switch(t.type){
+    case 'dragmatch': return (t.pairs||[]).length;
+    case 'correct': return (t.items||[]).length;
+    case 'timedQA': return (t.items||[]).length;
+    case 'interview': return (t.items||[]).length;
+    case 'storyOrder': return (t.lines||[]).length;
+    default: return 0;
+  }
+}
+
 const indexItems = [];
 for (const l of data.lessons){
   const html = template
@@ -15,7 +28,7 @@ for (const l of data.lessons){
     .replace('{{DATA_JSON}}', JSON.stringify(l));
   const out = path.join(lessonsDir, `${l.slug}.html`);
   fs.writeFileSync(out, html, 'utf8');
-  indexItems.push({ title:l.title, slug:l.slug, topic:l.topic, canDo:l.canDo, count:l.questions.length });
+  indexItems.push({ title:l.title, slug:l.slug, topic:l.topic, canDo:l.canDo, count:getCount(l) });
 }
 
 // group mapping per specification
