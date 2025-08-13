@@ -17,6 +17,11 @@ export default function SoftSkillsPage() {
                 <p className="mt-4 text-lg text-foreground/70">
                     Enhance your professional toolkit with our curated articles on leadership, communication, productivity, and more.
                 </p>
+                <div className="mt-6">
+                  <a href="/courses/soft-skills-mastery" className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold bg-primary text-primary-foreground hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary">
+                    Explore the 20-week Soft Skills Mastery Course
+                  </a>
+                </div>
             </div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">

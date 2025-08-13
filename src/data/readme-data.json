@@ -3398,6 +3398,15 @@
         }
       ]
     }
+    ,
+    {
+      "name": "Soft Skills Mastery",
+      "slug": "soft-skills-mastery",
+      "description": "20-week blended program teaching emotional intelligence, communication, teamwork, leadership, and career readiness aligned with WEF 2025 skills.",
+      "image": "https://placehold.co/600x400.png",
+      "dataAiHint": "soft skills",
+      "categories": []
+    }
   ],
   "softSkills": {
     "blogCategories": [
