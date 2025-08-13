@@ -140,6 +140,82 @@ export default function A2Level() {
 
           {/* Grammar Tab */}
           <TabsContent value="grammar">
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle>A2 Grammar Plan – CEFR-Aligned, Vocabulary-Integrated, Gamified</CardTitle>
+                <CardDescription>
+                  A guided roadmap connecting grammar with vocabulary and game-like tasks
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 rounded-lg border border-border/40">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-semibold">1. Past Simple (Regular & Irregular) – 6 Lessons</h3>
+                      <Badge variant="secondary">6 lessons</Badge>
+                    </div>
+                    <p className="text-sm text-foreground/70 mb-2"><span className="font-medium">CEFR Goal:</span> Describe past events, routines, and experiences.</p>
+                    <p className="text-sm text-foreground/70 mb-4"><span className="font-medium">Linked Vocabulary Themes:</span> Travel & Holidays, Daily Routines, Common Verbs.</p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="text-left text-foreground/60">
+                            <th className="py-2 pr-4">Lesson</th>
+                            <th className="py-2 pr-4">Focus</th>
+                            <th className="py-2 pr-4">Vocabulary Integration</th>
+                            <th className="py-2">Gamified Tasks (Static Site)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-t border-border/30">
+                            <td className="py-2 pr-4">1</td>
+                            <td className="py-2 pr-4">Past Simple – Regular Verbs</td>
+                            <td className="py-2 pr-4">Daily routine verbs (play, walk, cook)</td>
+                            <td className="py-2">Click-the-correct-form quiz (JS instant feedback)</td>
+                          </tr>
+                          <tr className="border-t border-border/30">
+                            <td className="py-2 pr-4">2</td>
+                            <td className="py-2 pr-4">Past Simple – Irregular Verbs (go, have, eat...)</td>
+                            <td className="py-2 pr-4">Travel verbs (go, visit, buy)</td>
+                            <td className="py-2">Drag-and-drop matching (base form ↔ past form)</td>
+                          </tr>
+                          <tr className="border-t border-border/30">
+                            <td className="py-2 pr-4">3</td>
+                            <td className="py-2 pr-4">Affirmative & Negative Forms</td>
+                            <td className="py-2 pr-4">Weekend activities vocabulary</td>
+                            <td className="py-2">“Correct the sentence” challenge</td>
+                          </tr>
+                          <tr className="border-t border-border/30">
+                            <td className="py-2 pr-4">4</td>
+                            <td className="py-2 pr-4">Yes/No Questions</td>
+                            <td className="py-2 pr-4">Holiday vocabulary</td>
+                            <td className="py-2">Timed Q&A game: students answer in 30s</td>
+                          </tr>
+                          <tr className="border-t border-border/30">
+                            <td className="py-2 pr-4">5</td>
+                            <td className="py-2 pr-4">Wh- Questions</td>
+                            <td className="py-2 pr-4">Events vocabulary (concert, party)</td>
+                            <td className="py-2">“Interview game” – question generator</td>
+                          </tr>
+                          <tr className="border-t border-border/30">
+                            <td className="py-2 pr-4">6</td>
+                            <td className="py-2 pr-4">Storytelling</td>
+                            <td className="py-2 pr-4">Mixed past tense vocabulary</td>
+                            <td className="py-2">Story-builder: reorder sentences to form a story</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div className="mt-4">
+                      <Button asChild>
+                        <Link href="/grammar/a2">Open A2 Grammar Module</Link>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle>A2 Grammar Topics</CardTitle>
