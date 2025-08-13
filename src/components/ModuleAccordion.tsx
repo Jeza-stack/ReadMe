@@ -15,12 +15,12 @@ export interface ModuleItem {
 }
 
 // WEF 2025 skill mapping per module id
-const WEF_SKILL_TAGS: Record<string, { label: string; color: string; icon: string }> = {
-  m1: { label: 'Active Learning', color: '#1E88E5', icon: '📘' },
+export const WEF_SKILL_TAGS: Record<string, { label: string; color: string; icon: string }> = {
+  m1: { label: 'Active Learning & Learning Strategies', color: '#1E88E5', icon: '📘' },
   m2: { label: 'Communication & Collaboration', color: '#E53935', icon: '💬' },
   m3: { label: 'Complex Problem Solving', color: '#F4511E', icon: '🧩' },
   m4: { label: 'Critical Thinking & Analysis', color: '#43A047', icon: '🔍' },
-  m5: { label: 'Creativity & Initiative', color: '#8E24AA', icon: '💡' },
+  m5: { label: 'Creativity, Originality & Initiative', color: '#8E24AA', icon: '💡' },
 };
 
 export function ModuleAccordionList({ modules }: { modules: ModuleItem[] }) {
