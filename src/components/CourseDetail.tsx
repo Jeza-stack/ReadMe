@@ -1,36 +1,44 @@
 import React from 'react';
-import courseData from '@/data/courses/soft-skills-mastery.json';
-import { ModuleAccordion, ModuleItem } from '@/components/ModuleAccordion';
-import { CourseCTA } from '@/components/CourseCTA';
+import ModuleAccordion from './ModuleAccordion';
+import canonical from '@/data/courses/soft-skills-mastery.json';
 
-type CourseHeader = { name?: string; description?: string };
-
-export default function CourseDetail({ course }: { course: CourseHeader }) {
-  const modules = (courseData.modules as ModuleItem[]) || [];
-  const title = course?.name || (courseData as any).title;
-  const description = course?.description || (courseData as any).description;
-  const subtitle = (courseData as any).subtitle;
+export default function CourseDetail({ course }: { course: any }) {
+  // Merge passed course header (from readme-data.json) with canonical module data
+  const merged = { ...canonical, ...course } as any;
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-10">
-          <h1 className="font-headline text-4xl md:text-6xl font-bold">{title}</h1>
-          {subtitle && <p className="mt-3 text-lg text-foreground/70">{subtitle}</p>}
-          {description && <p className="mt-5 text-foreground/80">{description}</p>}
-          <div className="mt-4 text-sm text-foreground/60">
-            <span>Duration: {(courseData as any).durationWeeks} weeks</span>
-            <span className="mx-2">•</span>
-            <span>Format: {(courseData as any).format}</span>
-          </div>
-        </header>
-        <section aria-labelledby="modules-heading">
-          <h2 id="modules-heading" className="sr-only">Course Modules</h2>
-          <ModuleAccordion modules={modules} />
-        </section>
-        <section className="mt-10">
-          <CourseCTA enrollHref="#enroll" syllabusHref="#syllabus" />
-        </section>
-      </div>
-    </div>
+    <main className="container mx-auto px-4 py-12">
+      <header className="mb-8">
+        <h1 className="text-3xl md:text-5xl font-extrabold">{merged.title || merged.name}</h1>
+        <p className="mt-2 text-lg text-muted-foreground">{merged.subtitle}</p>
+        <p className="mt-4 max-w-3xl">{merged.description}</p>
+        <div className="mt-4 flex gap-3">
+          <a href="#enroll" className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-white">Enroll / Learn More</a>
+        </div>
+      </header>
+
+      <section aria-labelledby="modules" className="space-y-6">
+        <h2 id="modules" className="text-2xl font-bold">Course Modules</h2>
+        <div className="space-y-4">
+          {(merged.modules || []).map((m: any) => (
+            <ModuleAccordion key={m.id} module={m} />
+          ))}
+        </div>
+      </section>
+
+      <aside className="mt-10">
+        <h3 className="text-xl font-semibold">Course details</h3>
+        <ul className="mt-3 space-y-2 text-sm">
+          <li><strong>Duration:</strong> {merged.durationWeeks} weeks</li>
+          <li><strong>Format:</strong> {merged.format}</li>
+          <li><strong>Certificate:</strong> {merged.certificate?.award}</li>
+        </ul>
+      </aside>
+
+      <section id="enroll" className="mt-12">
+        <h3 className="text-xl font-bold">Enroll</h3>
+        <p className="mt-2">Enrollment is open. Complete the modules and submit a final portfolio to receive a digital certificate.</p>
+        <a className="mt-4 inline-block rounded bg-accent px-4 py-2 text-white" href="/contact">Contact to enroll</a>
+      </section>
+    </main>
   );
 }
