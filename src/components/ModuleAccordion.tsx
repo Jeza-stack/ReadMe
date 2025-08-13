@@ -14,6 +14,15 @@ export interface ModuleItem {
   activities: string[];
 }
 
+// WEF 2025 skill mapping per module id
+const WEF_SKILL_TAGS: Record<string, { label: string; color: string; icon: string }> = {
+  m1: { label: 'Active Learning', color: '#1E88E5', icon: '📘' },
+  m2: { label: 'Communication & Collaboration', color: '#E53935', icon: '💬' },
+  m3: { label: 'Complex Problem Solving', color: '#F4511E', icon: '🧩' },
+  m4: { label: 'Critical Thinking & Analysis', color: '#43A047', icon: '🔍' },
+  m5: { label: 'Creativity & Initiative', color: '#8E24AA', icon: '💡' },
+};
+
 export function ModuleAccordionList({ modules }: { modules: ModuleItem[] }) {
   return (
     <div className="space-y-4">
@@ -75,18 +84,33 @@ export function ModuleAccordionList({ modules }: { modules: ModuleItem[] }) {
 
 export default function ModuleAccordion({ module }: { module: any }) {
   const [open, setOpen] = useState(false);
+  const tag = WEF_SKILL_TAGS[module?.id as string];
   return (
     <article className="border rounded-lg p-4">
       <button
         onClick={() => setOpen(!open)}
         aria-expanded={open}
-        className="w-full flex justify-between items-center"
+        className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-2"
       >
-        <div>
-          <h3 className="text-lg font-semibold">{module.title} <span className="text-sm text-muted-foreground">({module.level})</span></h3>
+        <div className="flex-1 min-w-0">
+          <div className="flex flex-col xs:flex-row xs:items-center xs:flex-wrap gap-2">
+            <h3 className="text-lg font-semibold break-words">
+              {module.title}{' '}
+            </h3>
+            {tag && (
+              <span
+                className="inline-flex items-center gap-1 rounded shadow text-white"
+                style={{ backgroundColor: tag.color, padding: '0.25rem 0.5rem', fontSize: '0.75rem' }}
+                aria-label={`Primary skill: ${tag.label}`}
+              >
+                <span aria-hidden>{tag.icon}</span>
+                <span className="leading-none">{tag.label}</span>
+              </span>
+            )}
+          </div>
           <p className="text-sm text-muted-foreground">{module.weeks} • {module.hours} total</p>
         </div>
-        <span className="ml-4">{open ? '−' : '+'}</span>
+        <span className="ml-0 md:ml-4 self-end md:self-auto">{open ? '−' : '+'}</span>
       </button>
 
       {open && (
