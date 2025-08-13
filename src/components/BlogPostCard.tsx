@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import { Clock } from 'lucide-react';
 
-export function BlogPostCard({ post }: { post: BlogPost }) {
+export function BlogPostCard({ post, showExcerpt = true }: { post: BlogPost; showExcerpt?: boolean }) {
   return (
     <Card className="flex flex-col overflow-hidden group bg-card/50 border-border/50 shadow-lg hover:border-primary/50 transition-all duration-300">
         <Link href={`/soft-skills/${post.slug}`} className="block overflow-hidden">
@@ -27,7 +27,7 @@ export function BlogPostCard({ post }: { post: BlogPost }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-foreground/60 text-sm line-clamp-3">{post.content}</p>
+        {showExcerpt && <p className="text-foreground/60 text-sm line-clamp-3">{post.content}</p>}
       </CardContent>
       <CardFooter>
         <div className="flex items-center text-sm text-foreground/60 gap-2">

@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { BlogPostCard } from './BlogPostCard';
 
-export function BlogClient({ posts, categories }: { posts: BlogPost[]; categories: string[] }) {
+export function BlogClient({ posts, categories, showControls = true, showExcerpt = true }: { posts: BlogPost[]; categories: string[]; showControls?: boolean; showExcerpt?: boolean }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -18,40 +18,42 @@ export function BlogClient({ posts, categories }: { posts: BlogPost[]; categorie
 
   return (
     <div>
-      <div className="mb-12 p-6 bg-card/50 border border-border/50 rounded-lg shadow-lg">
-        <div className="grid md:grid-cols-2 gap-4 items-end">
-            <div>
-                <label htmlFor="search" className="block text-sm font-medium mb-2">Search Posts</label>
-                <Input
-                    id="search"
-                    type="text"
-                    placeholder="e.g. Communication..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full bg-input"
-                />
-            </div>
-            <div>
-                <label htmlFor="category" className="block text-sm font-medium mb-2">Filter by Category</label>
-                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                    <SelectTrigger id="category" className="w-full bg-input">
-                        <SelectValue placeholder="Select a category" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="all">All Categories</SelectItem>
-                        {categories.map((category) => (
-                        <SelectItem key={category} value={category}>{category}</SelectItem>
-                        ))}
-                    </SelectContent>
-                </Select>
-            </div>
+      {showControls && (
+        <div className="mb-12 p-6 bg-card/50 border border-border/50 rounded-lg shadow-lg">
+          <div className="grid md:grid-cols-2 gap-4 items-end">
+              <div>
+                  <label htmlFor="search" className="block text-sm font-medium mb-2">Search Posts</label>
+                  <Input
+                      id="search"
+                      type="text"
+                      placeholder="e.g. Communication..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full bg-input"
+                  />
+              </div>
+              <div>
+                  <label htmlFor="category" className="block text-sm font-medium mb-2">Filter by Category</label>
+                   <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                      <SelectTrigger id="category" className="w-full bg-input">
+                          <SelectValue placeholder="Select a category" />
+                      </SelectTrigger>
+                      <SelectContent>
+                          <SelectItem value="all">All Categories</SelectItem>
+                          {categories.map((category) => (
+                          <SelectItem key={category} value={category}>{category}</SelectItem>
+                          ))}
+                      </SelectContent>
+                  </Select>
+              </div>
+          </div>
         </div>
-      </div>
+      )}
       
       {filteredPosts.length > 0 ? (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.map((post) => (
-            <BlogPostCard key={post.slug} post={post} />
+            <BlogPostCard key={post.slug} post={post} showExcerpt={showExcerpt} />
           ))}
         </div>
       ) : (
