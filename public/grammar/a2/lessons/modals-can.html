@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Can — Ability & Possibility</title>
+  <link rel="stylesheet" href="../assets/grammar.css" />
+</head>
+<body>
+  <header class="lesson">
+    <div class="container">
+      <h1>Can — Ability & Possibility</h1>
+      <div class="progress"><span id="progress"></span></div>
+      <p class="meta">Topic: <span id="topicName"></span> • Difficulty: A2 • Time: 10–15 mins</p>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <section class="card">
+        <h2>Can‑Do</h2>
+        <p id="canDo"></p>
+      </section>
+      <section class="row">
+        <div class="col card">
+          <h2>Grammar Rule</h2>
+          <div id="rule"></div>
+        </div>
+        <div class="col card">
+          <h2>Examples</h2>
+          <div id="examples"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Interactive Practice</h2>
+        <div id="practice"></div>
+      </section>
+
+      <section class="card">
+        <h2>Timed Challenge</h2>
+        <p class="timer">Time left: —</p>
+        <button id="challengeBtn" class="btn">Start 60s Challenge</button>
+        <p id="summary" class="small"></p>
+      </section>
+
+      <section class="card badge">
+        <img id="badgeImg" alt="Badge" />
+        <h2>Badge Unlocked!</h2>
+        <p class="small">Saved to your device. Keep going to unlock the next lesson.</p>
+        <p><a class="link" href="../index.html">Back to A2 Grammar Index</a></p>
+      </section>
+    </div>
+  </main>
+
+  <section id="gate" class="container card" style="display:none">
+    <h2>Locked</h2>
+    <p>Finish the previous lesson to unlock this one.</p>
+    <p><a class="link" href="../index.html">See your progress</a></p>
+  </section>
+
+  <script id="lesson-data" type="application/json">{"slug":"modals-can","topic":"Modal Verbs","topicKey":"modals","badge":"../assets/badges/a2-modals.png","title":"Can — Ability & Possibility","canDo":"Talk about what you can/can’t do.","ruleHTML":"<p><b>can</b> + base verb; negative: <b>can’t</b>.</p>","examplesHTML":"<ul><li>I <b>can</b> swim. She <b>can’t</b> drive.</li></ul>","challengeSeconds":60,"nextSlug":"modals-could","questions":[{"prompt":"I ___ speak Spanish a little.","options":[{"text":"can","correct":true},{"text":"could"},{"text":"am can"}]},{"prompt":"He ___ (not) come today.","options":[{"text":"can’t","correct":true},{"text":"don’t can"},{"text":"isn’t can"}]},{"prompt":"___ you help me?","options":[{"text":"Can","correct":true},{"text":"Do"},{"text":"Are"}]}]}</script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>
