@@ -269,11 +269,11 @@ export default function Home() {
               cta="Explore English III"
             />
             <CourseCard
-              title="Soft Skills"
-              description="Articles and insights on communication, leadership, and workplace excellence."
-              href="/soft-skills"
+              title="Soft Skills Mastery"
+              description="20-week CEFR-aligned program for communication, teamwork, leadership, and career readiness."
+              href="/courses/soft-skills-mastery"
               icon={<Users className="w-8 h-8" />}
-              cta="Read Soft Skills"
+              cta="Explore Soft Skills Mastery"
             />
           </div>
         </div>
