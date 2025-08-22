@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://read-me-self.vercel.app/sitemap.xml
