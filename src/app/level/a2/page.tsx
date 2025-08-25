@@ -54,8 +54,8 @@ export default async function A2Level() {
   // Load vocabulary categories server-side
   const vocabPath = path.join(process.cwd(), 'src', 'data', 'vocabulary', 'a2.json');
   const vocabRaw = await fs.readFile(vocabPath, 'utf-8');
-  const vocabData = JSON.parse(vocabRaw) as Record<string, { words: WordEntry[]; meta?: { expectedCount?: number } }>;
-  const vocabCategories = Object.entries(vocabData).map(([category, entry]) => ({ category, total: entry.words.length }));
+  const vocabJson = JSON.parse(vocabRaw) as { categories: { title: string; slug: string; words: WordEntry[] }[] };
+  const vocabCategories = (vocabJson.categories || []).map((c) => ({ category: c.title, slug: c.slug, total: c.words.length }));
 
   const vocabularyThemes = [
     { theme: 'Shopping & Services', words: 40, status: 'available' },
@@ -224,8 +224,8 @@ export default async function A2Level() {
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
-                  {vocabCategories.map(({ category, total }, index) => {
-                    const slug = encodeURIComponent(category.replace(/\s+/g, '-').toLowerCase());
+                  {vocabCategories.map(({ category, slug, total }, index) => {
+                    const href = `/level/a2/vocabulary/${encodeURIComponent(slug)}`;
                     return (
                       <Card key={index} className="border border-border/50">
                         <CardHeader className="pb-3">
@@ -234,7 +234,7 @@ export default async function A2Level() {
                         </CardHeader>
                         <CardContent className="pt-0">
                           <Button asChild className="w-full" variant="outline">
-                            <Link href={`/level/a2/vocabulary/${slug}`}>Learn Words</Link>
+                            <Link href={href}>Learn Words</Link>
                           </Button>
                         </CardContent>
                       </Card>

@@ -8,25 +8,20 @@ const LEVEL = 'a2';
 async function getData() {
   const file = path.join(process.cwd(), 'src', 'data', 'vocabulary', 'a2.json');
   const raw = await fs.readFile(file, 'utf-8');
-  return JSON.parse(raw) as Record<string, { words: WordEntry[] }>;
+  return JSON.parse(raw) as { categories: { title: string; slug: string; words: WordEntry[] }[] };
 }
 
 export async function generateStaticParams() {
   const data = await getData();
-  return Object.keys(data).map((category) => ({
-    category: encodeURIComponent(category.replace(/\s+/g, '-').toLowerCase()),
-  }));
+  return (data.categories || []).map((c) => ({ category: encodeURIComponent(c.slug) }));
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
   const data = await getData();
   const raw = decodeURIComponent(category);
-  const norm = (s: string) => s.replace(/[-_]/g, ' ').toLowerCase().replace(/\s+/g, ' ').trim();
-  const matchedCategory = Object.keys(data).find(
-    (cat) => norm(cat) === norm(raw) || norm(cat) === raw
-  );
-  if (!matchedCategory) {
+  const matched = (data.categories || []).find((c) => c.slug === raw);
+  if (!matched) {
     return (
       <div className="min-h-screen p-8">
         <div className="max-w-4xl mx-auto">
@@ -37,16 +32,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     );
   }
 
-  const entry = data[matchedCategory];
+  const entry = matched;
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold">{matchedCategory}</h1>
+          <h1 className="text-2xl font-bold">{entry.title}</h1>
           <p className="text-sm text-foreground/60">{entry.words.length} words</p>
         </div>
 
-        <VocabularyList level={LEVEL} category={matchedCategory} words={entry.words} />
+        <VocabularyList level={LEVEL} category={entry.title} words={entry.words} />
 
         <div className="mt-8">
           <Link href="/level/a2" className="text-sm">← Back to A2</Link>
