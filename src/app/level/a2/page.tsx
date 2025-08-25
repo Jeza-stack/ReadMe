@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import path from 'path';
+import fs from 'fs/promises';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,15 +8,48 @@ import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ArrowRight, CheckCircle, BookOpen, Headphones, PenTool, MessageSquare, Clock, Target } from 'lucide-react';
 
-export default function A2Level() {
-  const grammarTopics = [
-    { topic: 'Past Simple (regular & irregular)', status: 'available', lessons: 6 },
-    { topic: 'Present Continuous', status: 'available', lessons: 4 },
-    { topic: 'Comparative & Superlative', status: 'available', lessons: 5 },
-    { topic: 'Modal Verbs (can, could, should)', status: 'available', lessons: 4 },
-    { topic: 'Future (going to, will)', status: 'available', lessons: 5 },
-    { topic: 'Prepositions of Time & Place', status: 'available', lessons: 3 }
-  ];
+type A2Lesson = {
+  slug: string;
+  topic: string;
+  topicKey: 'past' | 'present' | 'comp' | 'modals' | 'future' | 'prep';
+  badge: string;
+  title: string;
+  canDo: string;
+};
+
+type TopicInfo = { topic: string; lessons: number; firstSlug: string };
+
+async function getA2GrammarTopics(): Promise<TopicInfo[]> {
+  const filePath = path.join(process.cwd(), 'public', 'grammar', 'a2', 'data', 'lessons.json');
+  const raw = await fs.readFile(filePath, 'utf-8');
+  const json: { lessons: A2Lesson[] } = JSON.parse(raw);
+  const groups = new Map<string, { topic: string; firstSlug: string; count: number }>();
+  for (const l of json.lessons) {
+    const key = l.topicKey;
+    if (!groups.has(key)) groups.set(key, { topic: l.topic, firstSlug: l.slug, count: 0 });
+    const g = groups.get(key)!;
+    g.count += 1;
+  }
+  const order: Array<keyof typeof topicTitles> = ['past','present','comp','modals','future','prep'];
+  const result: TopicInfo[] = [];
+  for (const k of order) {
+    const g = groups.get(k);
+    if (g) result.push({ topic: topicTitles[k], lessons: g.count, firstSlug: g.firstSlug });
+  }
+  return result;
+}
+
+const topicTitles = {
+  past: 'Past Simple (regular & irregular)',
+  present: 'Present Continuous',
+  comp: 'Comparative & Superlative',
+  modals: 'Modal Verbs (can, could, should)',
+  future: 'Future (going to, will)',
+  prep: 'Prepositions of Time & Place'
+} as const;
+
+export default async function A2Level() {
+  const grammarTopics = await getA2GrammarTopics();
 
   const vocabularyThemes = [
     { theme: 'Shopping & Services', words: 40, status: 'available' },
@@ -158,9 +193,11 @@ export default function A2Level() {
                         </div>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        <Button className="w-full" variant="outline">
-                          <Clock className="w-4 h-4 mr-2" />
-                          Start Learning
+                        <Button asChild className="w-full" variant="outline">
+                          <Link href={`/level/a2/grammar/${item.firstSlug}`}>
+                            <Clock className="w-4 h-4 mr-2" />
+                            Start Learning
+                          </Link>
                         </Button>
                       </CardContent>
                     </Card>
