@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A2 Grammar – Past Simple (Themed)</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --surface: #0f172a;
+      --muted: #1e293b;
+      --text: #e5e7eb;
+      --subtext: #94a3b8;
+      --accent: #3b82f6;
+      --accent-strong: #1d4ed8;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --radius: 16px;
+    }
+    body { background: var(--bg); color: var(--text); }
+    .card { background: linear-gradient(180deg, rgba(15,23,42,.92), rgba(15,23,42,.86)); border: 1px solid var(--muted); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+    .pill { border: 1px solid var(--muted); border-radius: 9999px; }
+    .btn { background: var(--accent); color: white; border-radius: 10px; padding: .5rem 1rem; transition: transform .08s ease, box-shadow .2s ease, background .2s ease; }
+    .btn:hover { background: var(--accent-strong); box-shadow: 0 8px 25px rgba(59,130,246,.35); }
+    .btn:active { transform: translateY(1px); }
+    .btn-ghost { background: rgba(59,130,246,.08); color: var(--text); border: 1px solid rgba(59,130,246,.25); }
+    .lesson-link { background: rgba(15,23,42,.9); border: 1px solid var(--muted); border-radius: 10px; }
+    .lesson-link:hover { border-color: var(--accent); }
+    .active-lesson { background: linear-gradient(180deg, rgba(29,78,216,.85), rgba(29,78,216,.65)); border-color: rgba(59,130,246,.7); color: white; }
+    .completed-lesson { background: linear-gradient(180deg, rgba(34,197,94,.35), rgba(34,197,94,.25)); border-color: rgba(34,197,94,.55); }
+    .correct { background-color: rgba(34,197,94,.18) !important; border-color: rgba(34,197,94,.6) !important; }
+    .incorrect { background-color: rgba(239,68,68,.15) !important; border-color: rgba(239,68,68,.45) !important; }
+    .progress-wrap { background: rgba(148,163,184,.15); border-radius: 9999px; height: 10px; overflow: hidden; }
+    .progress-bar { height: 10px; width: 0%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); transition: width .25s ease; }
+    .badge { color: #fff; background: linear-gradient(135deg, #f59e0b, #fbbf24); border-radius: 9999px; padding: .25rem .6rem; font-size: .8rem; }
+    .kbd { background: rgba(148,163,184,.12); border: 1px solid rgba(148,163,184,.25); border-radius: 6px; padding: 0 .4rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .focusable:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col md:flex-row">
+  <aside class="card w-full md:w-72 p-5 md:sticky md:top-0 md:h-screen md:overflow-y-auto">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-5 h-5 rounded-full" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);"></div>
+      <h2 class="text-lg font-semibold tracking-wide">CEFR A2 · Past Simple</h2>
+    </div>
+    <p class="text-sm text-[--subtext] mb-4">Complete each section. Progress saves in this browser.</p>
+    <div class="space-y-2" id="lessonNav">
+      <button class="lesson-link w-full text-left p-3 transition focusable" data-target="intro">1. Form & Usage</button>
+      <button class="lesson-link w-full text-left p-3 transition focusable" data-target="regular">2. Regular Verbs</button>
+      <button class="lesson-link w-full text-left p-3 transition focusable" data-target="irregular">3. Irregular Verbs</button>
+      <button class="lesson-link w-full text-left p-3 transition focusable" data-target="neg-qs">4. Negatives & Questions</button>
+      <button class="lesson-link w-full text-left p-3 transition focusable" data-target="practice">5. Practice</button>
+      <div class="pt-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-sm text-[--subtext]">Overall Progress</span>
+          <span class="badge text-xs" id="progressPct">0%</span>
+        </div>
+        <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+    </div>
+  </aside>
+  <main class="flex-1 p-5 md:p-8 space-y-6">
+    <header class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold">Past Simple</h1>
+        <p class="text-[--subtext]">Talk about finished actions in the past</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="badge">A2</span>
+        <button id="resetBtn" class="btn-ghost px-3 py-2 rounded-md focusable" title="Reset progress">Reset</button>
+      </div>
+    </header>
+
+    <section id="intro" class="card p-5 space-y-4">
+      <h2 class="text-xl font-semibold">1) Form & Usage</h2>
+      <p class="text-[--subtext]">We use Past Simple for finished actions in the past. Time markers: yesterday, last week, in 2010.</p>
+      <ul class="list-disc pl-6 text-[--subtext]">
+        <li>Affirmative: Subject + past verb (regular: verb + -ed)</li>
+        <li>Negative: Subject + did not (didn't) + base verb</li>
+        <li>Question: Did + subject + base verb?</li>
+      </ul>
+    </section>
+
+    <section id="regular" class="card p-5 space-y-4">
+      <h2 class="text-xl font-semibold">2) Regular Verbs</h2>
+      <p class="text-[--subtext]">Most verbs add -ed: play → played. Spelling changes: study → studied, stop → stopped.</p>
+      <div class="grid gap-3 md:grid-cols-2">
+        <div class="p-3 rounded-lg pill flex items-center justify-between">
+          <span>work →</span>
+          <span class="font-semibold">worked</span>
+        </div>
+        <div class="p-3 rounded-lg pill flex items-center justify-between">
+          <span>plan →</span>
+          <span class="font-semibold">planned</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="irregular" class="card p-5 space-y-4">
+      <h2 class="text-xl font-semibold">3) Irregular Verbs</h2>
+      <p class="text-[--subtext]">Some verbs are irregular: go → went, have → had, buy → bought.</p>
+      <div class="grid gap-3 md:grid-cols-3">
+        <div class="p-3 rounded-lg pill flex items-center justify-between"><span>go</span><span class="font-semibold">went</span></div>
+        <div class="p-3 rounded-lg pill flex items-center justify-between"><span>have</span><span class="font-semibold">had</span></div>
+        <div class="p-3 rounded-lg pill flex items-center justify-between"><span>buy</span><span class="font-semibold">bought</span></div>
+      </div>
+    </section>
+
+    <section id="neg-qs" class="card p-5 space-y-4">
+      <h2 class="text-xl font-semibold">4) Negatives & Questions</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="p-4 rounded-lg pill">
+          <p>Negative: I <strong>didn't</strong> watch TV.</p>
+        </div>
+        <div class="p-4 rounded-lg pill">
+          <p>Question: <strong>Did</strong> you watch TV?</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice" class="card p-5 space-y-6">
+      <div class="flex items-center gap-3">
+        <h2 class="text-xl font-semibold">5) Practice</h2>
+        <span class="text-[--subtext] text-sm">Complete the tasks</span>
+      </div>
+
+      <div class="space-y-3" id="quiz-mcq">
+        <h3 class="font-semibold">A) Multiple choice</h3>
+        <div class="grid gap-3">
+          <div class="p-3 border border-[--muted] rounded-lg" data-qid="mc1">
+            <p class="mb-2">1. We ___ dinner at 7 p.m. yesterday.</p>
+            <div class="grid gap-2 md:grid-cols-3">
+              <button class="btn-ghost py-2 rounded-md option" data-value="eat">eat</button>
+              <button class="btn-ghost py-2 rounded-md option" data-value="ate">ate</button>
+              <button class="btn-ghost py-2 rounded-md option" data-value="eaten">eaten</button>
+            </div>
+          </div>
+          <div class="p-3 border border-[--muted] rounded-lg" data-qid="mc2">
+            <p class="mb-2">2. ___ you go to the concert?</p>
+            <div class="grid gap-2 md:grid-cols-3">
+              <button class="btn-ghost py-2 rounded-md option" data-value="Do">Do</button>
+              <button class="btn-ghost py-2 rounded-md option" data-value="Did">Did</button>
+              <button class="btn-ghost py-2 rounded-md option" data-value="Were">Were</button>
+            </div>
+          </div>
+        </div>
+        <button id="checkMcq" class="btn mt-2">Check answers</button>
+        <div id="mcqResult" class="text-sm text-[--subtext]"></div>
+      </div>
+
+      <div class="space-y-3" id="quiz-fill">
+        <h3 class="font-semibold">B) Fill in the blanks</h3>
+        <div class="p-3 border border-[--muted] rounded-lg" data-qid="fi1">
+          <label class="block mb-1 text-sm text-[--subtext]">3. She ____ (study) French last year.</label>
+          <input class="w-full bg-transparent border border-[--muted] rounded-md px-3 py-2 focusable" type="text" placeholder="your answer" />
+        </div>
+        <div class="p-3 border border-[--muted] rounded-lg" data-qid="fi2">
+          <label class="block mb-1 text-sm text-[--subtext]">4. They ____ (not watch) the match.</label>
+          <input class="w-full bg-transparent border border-[--muted] rounded-md px-3 py-2 focusable" type="text" placeholder="your answer" />
+        </div>
+        <button id="checkFill" class="btn mt-2">Check answers</button>
+        <div id="fillResult" class="text-sm text-[--subtext]"></div>
+      </div>
+
+      <div class="flex items-center gap-3 pt-2">
+        <button id="completeLesson" class="btn">Mark lesson complete</button>
+        <span class="text-[--subtext] text-sm">This updates your progress</span>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const STORAGE_KEY = 'a2-past-simple-progress-v1';
+    const state = loadProgress();
+
+    // Sidebar nav behavior
+    const lessonButtons = Array.from(document.querySelectorAll('#lessonNav button[data-target]'));
+    const sections = new Map(lessonButtons.map(btn => [btn.dataset.target, document.getElementById(btn.dataset.target)]));
+    function showSection(id) {
+      sections.forEach((el, key) => { el.style.display = key === id ? 'block' : 'none'; });
+      lessonButtons.forEach(b => b.classList.toggle('active-lesson', b.dataset.target === id));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    lessonButtons.forEach(btn => btn.addEventListener('click', () => showSection(btn.dataset.target)));
+
+    // Restore which section was last open
+    const initial = state.lastSection || 'intro';
+    showSection(initial);
+
+    // MCQ logic
+    const mcqAnswers = { mc1: 'ate', mc2: 'Did' };
+    document.getElementById('checkMcq').addEventListener('click', () => {
+      let correct = 0; let total = 0;
+      document.querySelectorAll('#quiz-mcq [data-qid]').forEach(block => {
+        const qid = block.getAttribute('data-qid');
+        total += 1;
+        const selected = block.querySelector('.option.selected');
+        if (selected && selected.getAttribute('data-value') === mcqAnswers[qid]) {
+          block.classList.remove('incorrect');
+          block.classList.add('correct');
+          correct += 1;
+        } else {
+          block.classList.remove('correct');
+          block.classList.add('incorrect');
+        }
+      });
+      document.getElementById('mcqResult').textContent = `Score: ${correct}/${total}`;
+      state.scores.mcq = { correct, total };
+      state.completed.mcq = correct === total;
+      persist();
+      updateProgressUI();
+    });
+    document.querySelectorAll('#quiz-mcq .option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const block = btn.closest('[data-qid]');
+        block.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+
+    // Fill-in logic
+    const fillAnswers = { fi1: ['studied'], fi2: ["didn't watch", 'did not watch'] };
+    document.getElementById('checkFill').addEventListener('click', () => {
+      let correct = 0; let total = 0;
+      document.querySelectorAll('#quiz-fill [data-qid]').forEach(block => {
+        const qid = block.getAttribute('data-qid');
+        const input = block.querySelector('input');
+        total += 1;
+        const val = (input.value || '').trim().toLowerCase();
+        const ok = (fillAnswers[qid] || []).some(a => a.toLowerCase() === val);
+        if (ok) { block.classList.add('correct'); block.classList.remove('incorrect'); correct += 1; }
+        else { block.classList.add('incorrect'); block.classList.remove('correct'); }
+      });
+      document.getElementById('fillResult').textContent = `Score: ${correct}/${total}`;
+      state.scores.fill = { correct, total };
+      state.completed.fill = correct === total;
+      persist();
+      updateProgressUI();
+    });
+
+    // Complete lesson
+    document.getElementById('completeLesson').addEventListener('click', () => {
+      state.completed.lesson = true;
+      persist();
+      updateProgressUI();
+    });
+
+    // Persist last opened section
+    lessonButtons.forEach(btn => btn.addEventListener('click', () => {
+      state.lastSection = btn.dataset.target;
+      persist();
+    }));
+
+    // Reset
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    });
+
+    // Progress UI
+    function updateProgressUI() {
+      const totalSegments = 3; // mcq, fill, lesson
+      const done = ['mcq','fill','lesson'].filter(k => state.completed[k]).length;
+      const pct = Math.round((done / totalSegments) * 100);
+      const bar = document.getElementById('progressBar');
+      const pctEl = document.getElementById('progressPct');
+      bar.style.width = pct + '%';
+      pctEl.textContent = pct + '%';
+
+      // Mark buttons as completed
+      document.querySelectorAll('#lessonNav .lesson-link').forEach(btn => {
+        btn.classList.remove('completed-lesson');
+      });
+      if (state.completed.lesson) {
+        // mark practice as completed look
+        const practiceBtn = document.querySelector('#lessonNav [data-target="practice"]');
+        if (practiceBtn) practiceBtn.classList.add('completed-lesson');
+      }
+    }
+
+    function loadProgress() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return { completed: {}, scores: {}, lastSection: 'intro' };
+        const parsed = JSON.parse(raw);
+        return Object.assign({ completed: {}, scores: {}, lastSection: 'intro' }, parsed);
+      } catch (e) {
+        return { completed: {}, scores: {}, lastSection: 'intro' };
+      }
+    }
+    function persist() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    updateProgressUI();
+  </script>
+</body>
+</html>
+
