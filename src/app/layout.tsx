@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={cn("font-body antialiased", fontBody.variable, fontHeadline.variable, "min-h-screen flex flex-col")}>        
+      <body className={cn("font-body antialiased bg-[color:var(--ce-deep-navy)] text-[color:var(--ce-text-primary)]", fontBody.variable, fontHeadline.variable, "min-h-screen flex flex-col")}>        
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-2 rounded">Skip to main content</a>
         <Header />
         <main id="main" className="flex-grow">
