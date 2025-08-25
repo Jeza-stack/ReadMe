@@ -1,0 +1,51 @@
+{
+  "Shopping & Services": {
+    "meta": { "expectedCount": 40 },
+    "words": [
+      { "term": "price", "definition": "the amount of money expected or paid for something", "example": "The price of this shirt is reasonable." },
+      { "term": "cashier", "definition": "a person handling payments in a shop", "example": "The cashier gave me the receipt." },
+      { "term": "receipt", "definition": "a piece of paper showing proof of purchase", "example": "Keep your receipt in case you return it." }
+    ]
+  },
+  "Travel & Transportation": {
+    "meta": { "expectedCount": 35 },
+    "words": [
+      { "term": "ticket", "definition": "a piece of paper that shows you have paid to travel", "example": "I bought a train ticket." },
+      { "term": "platform", "definition": "the place where you get on the train", "example": "The train is on platform 2." },
+      { "term": "departure", "definition": "the act of leaving", "example": "The departure time is 9:30." }
+    ]
+  },
+  "Health & Body": {
+    "meta": { "expectedCount": 30 },
+    "words": [
+      { "term": "appointment", "definition": "a scheduled meeting with a doctor", "example": "I have a dentist appointment tomorrow." },
+      { "term": "symptom", "definition": "a sign that shows you are ill", "example": "A cough can be a symptom of a cold." },
+      { "term": "injury", "definition": "harm or damage to the body", "example": "He has a slight knee injury." }
+    ]
+  },
+  "Work & Jobs": {
+    "meta": { "expectedCount": 45 },
+    "words": [
+      { "term": "interview", "definition": "a formal meeting to evaluate a candidate for a job", "example": "She has a job interview next week." },
+      { "term": "resume", "definition": "a document listing your skills and experience", "example": "Update your resume before you apply." },
+      { "term": "salary", "definition": "the payment you get for your job", "example": "The salary is paid monthly." }
+    ]
+  },
+  "Weather & Seasons": {
+    "meta": { "expectedCount": 25 },
+    "words": [
+      { "term": "forecast", "definition": "a prediction of the weather", "example": "The forecast says it will rain tomorrow." },
+      { "term": "humidity", "definition": "the amount of moisture in the air", "example": "High humidity makes it feel hotter." },
+      { "term": "breeze", "definition": "a gentle wind", "example": "There was a cool breeze at the beach." }
+    ]
+  },
+  "Hobbies & Entertainment": {
+    "meta": { "expectedCount": 35 },
+    "words": [
+      { "term": "hobby", "definition": "an activity done for pleasure in free time", "example": "Painting is a relaxing hobby." },
+      { "term": "audience", "definition": "the group of people who watch a performance", "example": "The audience clapped loudly." },
+      { "term": "ticket", "definition": "a pass to attend an event", "example": "I bought tickets to the concert." }
+    ]
+  }
+}
+
