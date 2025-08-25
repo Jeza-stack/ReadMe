@@ -1,17 +1,23 @@
 {
-  "Home & Family": {
-    "meta": { "expectedCount": 30, "protected": true },
-    "words": [
-      { "term": "mother", "definition": "a female parent", "example": "My mother cooks dinner." },
-      { "term": "father", "definition": "a male parent", "example": "My father works at the bank." }
-    ]
-  },
-  "Food & Drink": {
-    "meta": { "expectedCount": 30, "protected": true },
-    "words": [
-      { "term": "bread", "definition": "a common food made from flour and water", "example": "She bought fresh bread." },
-      { "term": "water", "definition": "a clear liquid necessary for life", "example": "Drink water every day." }
-    ]
-  }
+  "categories": [
+    {
+      "title": "Home & Family",
+      "slug": "home-&-family",
+      "meta": { "expectedCount": 2, "protected": true },
+      "words": [
+        { "term": "mother", "definition": "a female parent", "example": "My mother cooks dinner." },
+        { "term": "father", "definition": "a male parent", "example": "My father works at the bank." }
+      ]
+    },
+    {
+      "title": "Food & Drink",
+      "slug": "food-&-drink",
+      "meta": { "expectedCount": 2, "protected": true },
+      "words": [
+        { "term": "bread", "definition": "a common food made from flour and water", "example": "She bought fresh bread." },
+        { "term": "water", "definition": "a clear liquid necessary for life", "example": "Drink water every day." }
+      ]
+    }
+  ]
 }
 
