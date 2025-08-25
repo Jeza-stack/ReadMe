@@ -3,7 +3,7 @@
     {
       "title": "Shopping & Services",
       "slug": "shopping-services",
-      "meta": { "expectedCount": 40 },
+      "meta": { "level": "A2", "expectedCount": 40 },
       "words": [
         { "term": "price", "definition": "the amount of money expected or paid for something", "example": "The price of this book is $10." },
         { "term": "cashier", "definition": "a person handling payments in a shop", "example": "The cashier gave me the change." },
@@ -50,7 +50,7 @@
     {
       "title": "Travel & Transportation",
       "slug": "travel-transportation",
-      "meta": { "expectedCount": 35 },
+      "meta": { "level": "A2", "expectedCount": 35 },
       "words": [
         { "term": "ticket", "definition": "a piece of paper that shows you have paid to travel", "example": "I bought a train ticket." },
         { "term": "passport", "definition": "an official document to travel abroad", "example": "Don’t forget your passport." },
@@ -129,7 +129,7 @@
     {
       "title": "Work & Jobs",
       "slug": "work-jobs",
-      "meta": { "expectedCount": 45 },
+      "meta": { "level": "A2", "expectedCount": 45 },
       "words": [
         { "term": "employee", "definition": "A person who works for a company or organization.", "example": "The new employee started work yesterday." },
         { "term": "employer", "definition": "A person or company that hires people to work.", "example": "The employer offered good benefits." },
@@ -180,7 +180,7 @@
     {
       "title": "Weather & Seasons",
       "slug": "weather-seasons",
-      "meta": { "expectedCount": 25 },
+      "meta": { "level": "A2", "expectedCount": 25 },
       "words": [
         { "term": "sunny", "definition": "When the sun is shining brightly.", "example": "It was sunny all afternoon." },
         { "term": "cloudy", "definition": "When the sky is covered with clouds.", "example": "The day was cloudy and gray." },
@@ -212,7 +212,7 @@
     {
       "title": "Hobbies & Entertainment",
       "slug": "hobbies-entertainment",
-      "meta": { "expectedCount": 35 },
+      "meta": { "level": "A2", "expectedCount": 35 },
       "words": [
         { "term": "hobby", "definition": "An activity you do for fun in your free time.", "example": "My hobby is painting." },
         { "term": "game", "definition": "An activity with rules that people play for fun.", "example": "They played a board game together." },
