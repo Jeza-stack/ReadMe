@@ -1,0 +1,418 @@
+{
+  "theme": "Colors & Basic Adjectives",
+  "level": "A1",
+  "cefrMapping": {
+    "canDoStatements": [
+      "I can name common colors",
+      "I can describe simple qualities (size, age)",
+      "I can use adjectives before nouns",
+      "I can compare simple things using 'more' and 'less'"
+    ],
+    "vocabularyRange": "15 essential colors and adjectives",
+    "grammarFocus": "Adjective position and basic order",
+    "communicationFunctions": [
+      "Describing objects",
+      "Talking about appearance",
+      "Choosing and shopping",
+      "Giving simple opinions"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": 1,
+      "word": "red",
+      "translation": "vermelho",
+      "phonetic": "/red/",
+      "partOfSpeech": "adjective",
+      "definition": "Color of blood",
+      "example": "I have a red shirt.",
+      "image": "🟥",
+      "audioUrl": "/audio/red.mp3",
+      "difficulty": "basic",
+      "category": "colors",
+      "relatedWords": [
+        "pink",
+        "orange",
+        "color"
+      ],
+      "usageNotes": "Adjective goes before noun: red shirt",
+      "audio": "/audio/red.mp3"
+    },
+    {
+      "id": 2,
+      "word": "blue",
+      "translation": "azul",
+      "phonetic": "/bluː/",
+      "partOfSpeech": "adjective",
+      "definition": "Color of the sky",
+      "example": "The sky is blue.",
+      "image": "🟦",
+      "audioUrl": "/audio/blue.mp3",
+      "difficulty": "basic",
+      "category": "colors",
+      "relatedWords": [
+        "navy",
+        "light blue",
+        "color"
+      ],
+      "usageNotes": "Can say light/dark blue",
+      "audio": "/audio/blue.mp3"
+    },
+    {
+      "id": 3,
+      "word": "green",
+      "translation": "verde",
+      "phonetic": "/ɡriːn/",
+      "partOfSpeech": "adjective",
+      "definition": "Color of grass",
+      "example": "She likes green apples.",
+      "image": "🟩",
+      "audioUrl": "/audio/green.mp3",
+      "difficulty": "basic",
+      "category": "colors",
+      "relatedWords": [
+        "lime",
+        "olive",
+        "color"
+      ],
+      "usageNotes": "Use 'green' as adjective or noun",
+      "audio": "/audio/green.mp3"
+    },
+    {
+      "id": 4,
+      "word": "yellow",
+      "translation": "amarelo",
+      "phonetic": "/ˈjeləʊ/",
+      "partOfSpeech": "adjective",
+      "definition": "Bright color of the sun",
+      "example": "The bag is yellow.",
+      "image": "🟨",
+      "audioUrl": "/audio/yellow.mp3",
+      "difficulty": "basic",
+      "category": "colors",
+      "relatedWords": [
+        "gold",
+        "color",
+        "orange"
+      ],
+      "usageNotes": "Common in traffic signs",
+      "audio": "/audio/yellow.mp3"
+    },
+    {
+      "id": 5,
+      "word": "black",
+      "translation": "preto",
+      "phonetic": "/blæk/",
+      "partOfSpeech": "adjective",
+      "definition": "Very dark color",
+      "example": "He wears black shoes.",
+      "image": "⬛",
+      "audioUrl": "/audio/black.mp3",
+      "difficulty": "basic",
+      "category": "colors",
+      "relatedWords": [
+        "dark",
+        "white",
+        "color"
+      ],
+      "usageNotes": "Opposite of white",
+      "audio": "/audio/black.mp3"
+    },
+    {
+      "id": 6,
+      "word": "white",
+      "translation": "branco",
+      "phonetic": "/waɪt/",
+      "partOfSpeech": "adjective",
+      "definition": "Color of snow",
+      "example": "The paper is white.",
+      "image": "⬜",
+      "audioUrl": "/audio/white.mp3",
+      "difficulty": "basic",
+      "category": "colors",
+      "relatedWords": [
+        "light",
+        "black",
+        "color"
+      ],
+      "usageNotes": "Opposite of black",
+      "audio": "/audio/white.mp3"
+    },
+    {
+      "id": 7,
+      "word": "small",
+      "translation": "pequeno",
+      "phonetic": "/smɔːl/",
+      "partOfSpeech": "adjective",
+      "definition": "Not big",
+      "example": "A small cup of coffee, please.",
+      "image": "🤏",
+      "audioUrl": "/audio/small.mp3",
+      "difficulty": "basic",
+      "category": "size",
+      "relatedWords": [
+        "little",
+        "tiny",
+        "big"
+      ],
+      "usageNotes": "Before nouns: small house",
+      "audio": "/audio/small.mp3"
+    },
+    {
+      "id": 8,
+      "word": "big",
+      "translation": "grande",
+      "phonetic": "/bɪɡ/",
+      "partOfSpeech": "adjective",
+      "definition": "Large in size",
+      "example": "They have a big dog.",
+      "image": "🦮",
+      "audioUrl": "/audio/big.mp3",
+      "difficulty": "basic",
+      "category": "size",
+      "relatedWords": [
+        "large",
+        "huge",
+        "small"
+      ],
+      "usageNotes": "Opposite of small",
+      "audio": "/audio/big.mp3"
+    },
+    {
+      "id": 9,
+      "word": "tall",
+      "translation": "alto",
+      "phonetic": "/tɔːl/",
+      "partOfSpeech": "adjective",
+      "definition": "Of great height",
+      "example": "He is tall.",
+      "image": "📏",
+      "audioUrl": "/audio/tall.mp3",
+      "difficulty": "basic",
+      "category": "size",
+      "relatedWords": [
+        "short",
+        "height",
+        "high"
+      ],
+      "usageNotes": "Use for people and things",
+      "audio": "/audio/tall.mp3"
+    },
+    {
+      "id": 10,
+      "word": "short",
+      "translation": "baixo/curto",
+      "phonetic": "/ʃɔːt/",
+      "partOfSpeech": "adjective",
+      "definition": "Not tall or not long",
+      "example": "She has short hair.",
+      "image": "✂️",
+      "audioUrl": "/audio/short.mp3",
+      "difficulty": "basic",
+      "category": "size",
+      "relatedWords": [
+        "tall",
+        "long",
+        "small"
+      ],
+      "usageNotes": "Opposite of tall/long",
+      "audio": "/audio/short.mp3"
+    },
+    {
+      "id": 11,
+      "word": "old",
+      "translation": "velho",
+      "phonetic": "/əʊld/",
+      "partOfSpeech": "adjective",
+      "definition": "Having lived for many years",
+      "example": "This is an old book.",
+      "image": "📚",
+      "audioUrl": "/audio/old.mp3",
+      "difficulty": "basic",
+      "category": "age",
+      "relatedWords": [
+        "new",
+        "young",
+        "ancient"
+      ],
+      "usageNotes": "Opposite of new/young",
+      "audio": "/audio/old.mp3"
+    },
+    {
+      "id": 12,
+      "word": "young",
+      "translation": "jovem",
+      "phonetic": "/jʌŋ/",
+      "partOfSpeech": "adjective",
+      "definition": "Not old",
+      "example": "They are young.",
+      "image": "🧒",
+      "audioUrl": "/audio/young.mp3",
+      "difficulty": "basic",
+      "category": "age",
+      "relatedWords": [
+        "teen",
+        "child",
+        "old"
+      ],
+      "usageNotes": "Opposite of old",
+      "audio": "/audio/young.mp3"
+    },
+    {
+      "id": 13,
+      "word": "beautiful",
+      "translation": "bonito/bonita",
+      "phonetic": "/ˈbjuːtɪfl/",
+      "partOfSpeech": "adjective",
+      "definition": "Very pretty",
+      "example": "What a beautiful day!",
+      "image": "🌸",
+      "audioUrl": "/audio/beautiful.mp3",
+      "difficulty": "basic",
+      "category": "opinions",
+      "relatedWords": [
+        "pretty",
+        "nice",
+        "ugly"
+      ],
+      "usageNotes": "Polite compliment",
+      "audio": "/audio/beautiful.mp3"
+    },
+    {
+      "id": 14,
+      "word": "ugly",
+      "translation": "feio/feia",
+      "phonetic": "/ˈʌɡli/",
+      "partOfSpeech": "adjective",
+      "definition": "Not beautiful",
+      "example": "The shoes are ugly.",
+      "image": "🥴",
+      "audioUrl": "/audio/ugly.mp3",
+      "difficulty": "basic",
+      "category": "opinions",
+      "relatedWords": [
+        "bad",
+        "beautiful",
+        "pretty"
+      ],
+      "usageNotes": "Use carefully; can be rude",
+      "audio": "/audio/ugly.mp3"
+    },
+    {
+      "id": 15,
+      "word": "new",
+      "translation": "novo/nova",
+      "phonetic": "/njuː/",
+      "partOfSpeech": "adjective",
+      "definition": "Not old",
+      "example": "I bought a new phone.",
+      "image": "📱",
+      "audioUrl": "/audio/new.mp3",
+      "difficulty": "basic",
+      "category": "age",
+      "relatedWords": [
+        "old",
+        "brand-new",
+        "modern"
+      ],
+      "usageNotes": "Opposite of old",
+      "audio": "/audio/new.mp3"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "matching",
+      "title": "Colors Match",
+      "description": "Match colors with objects",
+      "items": [
+        {
+          "word": "red",
+          "definition": "Color of blood",
+          "correct": true
+        },
+        {
+          "word": "blue",
+          "definition": "Color of the sky",
+          "correct": true
+        },
+        {
+          "word": "green",
+          "definition": "Color of grass",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "title": "Describe the Object",
+      "description": "Use a color or adjective",
+      "items": [
+        {
+          "sentence": "I want a ___ T-shirt.",
+          "correctAnswer": "blue",
+          "hint": "A color"
+        },
+        {
+          "sentence": "She has ___ hair.",
+          "correctAnswer": "short",
+          "hint": "Not long"
+        },
+        {
+          "sentence": "This is a ___ phone.",
+          "correctAnswer": "new",
+          "hint": "Opposite of old"
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Shopping Talk",
+      "description": "Practice choosing items by color/size",
+      "scenarios": [
+        {
+          "question": "What color do you like?",
+          "sampleAnswer": "I like green.",
+          "hint": "Use 'I like …'"
+        },
+        {
+          "question": "Do you want a small or big cup?",
+          "sampleAnswer": "A small cup, please.",
+          "hint": "Use size adjectives"
+        },
+        {
+          "question": "How is the dress?",
+          "sampleAnswer": "It is beautiful.",
+          "hint": "Use adjectives before nouns"
+        }
+      ]
+    }
+  ],
+  "grammarFocus": {
+    "adjectiveBasics": {
+      "title": "Adjectives: Position and Basic Order",
+      "description": "Use adjectives before nouns; one or two adjectives before a noun",
+      "examples": [
+        "a red car",
+        "a big house",
+        "a beautiful old city",
+        "blue eyes",
+        "small black bag"
+      ],
+      "rules": [
+        "Adjectives usually come before nouns in English",
+        "Color adjectives go after opinion/size (a beautiful red dress)",
+        "Do not add plural to adjectives (two big houses)",
+        "Use 'more' for longer adjectives to compare (more beautiful)",
+        "Use 'than' in comparisons (bigger than)"
+      ]
+    }
+  },
+  "mobileFeatures": {
+    "swipeNavigation": true,
+    "audioSupport": true,
+    "touchFriendly": true,
+    "offlineAccess": true,
+    "progressTracking": true,
+    "adaptiveLearning": true
+  }
+}

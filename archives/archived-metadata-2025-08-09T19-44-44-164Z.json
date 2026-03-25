@@ -1,0 +1,180 @@
+{
+  "timestamp": "2025-08-09T19-44-44-164Z",
+  "removed": [
+    {
+      "course": "English I",
+      "slug": "english-1",
+      "unit": "Unit IV: Language Competency",
+      "workTitle": "Vocabulary: Synonyms, Antonyms, and Word Formation",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio.",
+          "historicalContext": "",
+          "majorWorks": [],
+          "influence": ""
+        }
+      }
+    },
+    {
+      "course": "English I",
+      "slug": "english-1",
+      "unit": "Unit IV: Language Competency",
+      "workTitle": "Using Articles and Parts of Speech",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio.",
+          "historicalContext": "",
+          "majorWorks": [],
+          "influence": ""
+        }
+      }
+    },
+    {
+      "course": "English I",
+      "slug": "english-1",
+      "unit": "Unit IV: Language Competency",
+      "workTitle": "Error Correction Exercises",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio.",
+          "historicalContext": "",
+          "majorWorks": [],
+          "influence": ""
+        }
+      }
+    },
+    {
+      "course": "English I",
+      "slug": "english-1",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Self-introduction and Greetings",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio.",
+          "historicalContext": "",
+          "majorWorks": [],
+          "influence": ""
+        }
+      }
+    },
+    {
+      "course": "English I",
+      "slug": "english-1",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Introducing Others",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio.",
+          "historicalContext": "",
+          "majorWorks": [],
+          "influence": ""
+        }
+      }
+    },
+    {
+      "course": "English I",
+      "slug": "english-1",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Listening for General and Specific Information",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio.",
+          "historicalContext": "",
+          "majorWorks": [],
+          "influence": ""
+        }
+      }
+    },
+    {
+      "course": "English I",
+      "slug": "english-1",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Listening to and Giving Instructions/Directions",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio.",
+          "historicalContext": "",
+          "majorWorks": [],
+          "influence": ""
+        }
+      }
+    },
+    {
+      "course": "English III",
+      "slug": "english-3",
+      "unit": "Unit IV: Language Competency",
+      "workTitle": "Writing Letters and Emails",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio."
+        }
+      }
+    },
+    {
+      "course": "English III",
+      "slug": "english-3",
+      "unit": "Unit IV: Language Competency",
+      "workTitle": "Messaging on Social Media Platforms",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio."
+        }
+      }
+    },
+    {
+      "course": "English III",
+      "slug": "english-3",
+      "unit": "Unit IV: Language Competency",
+      "workTitle": "Netiquette and Email Etiquette",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio."
+        }
+      }
+    },
+    {
+      "course": "English III",
+      "slug": "english-3",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Data Interpretation and Reporting",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio."
+        }
+      }
+    },
+    {
+      "course": "English III",
+      "slug": "english-3",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Data Presentation and Analysis",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio."
+        }
+      }
+    },
+    {
+      "course": "English III",
+      "slug": "english-3",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Meeting Etiquette",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio."
+        }
+      }
+    },
+    {
+      "course": "English III",
+      "slug": "english-3",
+      "unit": "Unit V: English for Workplace",
+      "workTitle": "Online Meetings",
+      "removed": {
+        "authorInfo": {
+          "biography": "This content was created by the educational team at ReadMe Studio."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "home",
+    "title": "Welcome to CEFR English",
+    "content": "<p>Learn English at every CEFR level...</p>"
+  },
+  {
+    "slug": "about",
+    "title": "About CEFR English",
+    "content": "<p>Our mission is to provide quality language resources.</p>"
+  }
+]

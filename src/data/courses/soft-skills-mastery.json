@@ -1,0 +1,147 @@
+{
+  "slug": "soft-skills-mastery",
+  "title": "Soft Skills Mastery: From Beginner to Expert",
+  "subtitle": "Essential Skills for Personal and Professional Success",
+  "description": "This comprehensive program equips learners with learnable soft skills to thrive in professional and personal life. Structured into 5 modules, it emphasizes practical application, habit formation, and real-world scenarios, bridging the gap between education and industry needs.",
+  "durationWeeks": 20,
+  "format": "Blended (online modules, workshops, role-playing, group discussions)",
+  "targetAudience": "Beginners to advanced learners, including students, professionals, and career changers",
+  "prerequisites": "None",
+  "enrollment": {
+    "status": "open",
+    "certificate": "Digital certificate upon completion"
+  },
+  "assessmentsOverview": {
+    "quizzes": 20,
+    "reflectionJournals": 30,
+    "groupProjects": 30,
+    "finalPortfolio": 20
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Foundations of Self-Awareness & Personal Growth",
+      "level": "Beginner",
+      "weeks": "1-4",
+      "hours": "8-12",
+      "description": "Lays the groundwork for soft skills by exploring definitions, personal attributes, emotional intelligence, and habit-building techniques to foster a growth mindset.",
+      "keyTopics": [
+        "Understanding soft skills and their importance",
+        "Cultivating a positive attitude (SMART goals, affirmations)",
+        "Building character & emotional intelligence (integrity, empathy)",
+        "Fundamentals of habit formation (Four Laws, habit stacking)"
+      ],
+      "learningOutcomes": [
+        "Define soft skills and explain their role in career success",
+        "Apply strategies for positive attitude and character development",
+        "Use habit tools to build lasting behaviors",
+        "Enhance emotional intelligence for better self-management"
+      ],
+      "assessments": [
+        { "type": "reflection-journal", "weight": 30, "description": "Daily journaling and habit reflection" },
+        { "type": "quiz", "weight": 20, "description": "Quiz on attitude and habits" }
+      ],
+      "activities": ["Group discussions", "Daily journaling", "EQ self-assessment", "Habit plan"]
+    },
+    {
+      "id": "m2",
+      "title": "Effective Communication & Interpersonal Skills",
+      "level": "Intermediate",
+      "weeks": "5-8",
+      "hours": "10-12",
+      "description": "Focuses on building connections through verbal, non-verbal, written, and presentation methods, with emphasis on active listening and assertiveness.",
+      "keyTopics": [
+        "Core communication principles and audience awareness",
+        "Verbal & non-verbal communication",
+        "Active listening and assertiveness",
+        "Written communication and presentation skills"
+      ],
+      "learningOutcomes": [
+        "Deliver clear, audience-tailored messages",
+        "Practice active listening and assertiveness",
+        "Create professional written content",
+        "Present effectively with confidence"
+      ],
+      "assessments": [
+        { "type": "presentation-project", "weight": 50, "description": "Mock presentations with peer reviews" }
+      ],
+      "activities": ["Role-playing", "Video analysis", "Mock presentations", "Listening exercises"]
+    },
+    {
+      "id": "m3",
+      "title": "Teamwork & Problem-Solving Mastery",
+      "level": "Intermediate",
+      "weeks": "9-12",
+      "hours": "9-10",
+      "description": "Emphasizes collaboration, analytical thinking, and resilience to tackle challenges, incorporating creativity and adaptability for modern workplaces.",
+      "keyTopics": [
+        "Teamwork (roles, trust-building)",
+        "Critical thinking and structured problem-solving",
+        "Adaptability and resilience; AI tool literacy"
+      ],
+      "learningOutcomes": [
+        "Collaborate effectively in diverse teams",
+        "Apply structured problem-solving",
+        "Demonstrate flexibility and creative thinking",
+        "Build resilience through solution-focused approaches"
+      ],
+      "assessments": [
+        { "type": "team-challenge", "weight": 50, "description": "Team problem-solving challenge" }
+      ],
+      "activities": ["Group projects", "Scenario brainstorming", "Resilience simulations"]
+    },
+    {
+      "id": "m4",
+      "title": "Professional Conduct & Advanced Strategic Skills",
+      "level": "Advanced",
+      "weeks": "13-16",
+      "hours": "7-8",
+      "description": "Integrates skills into professional settings, covering efficiency, ethics, diversity, negotiation, and leadership for strategic career growth.",
+      "keyTopics": [
+        "Time management & work ethic",
+        "Cultural awareness & etiquette",
+        "Negotiation and leadership",
+        "Stress management"
+      ],
+      "learningOutcomes": [
+        "Manage time productively and maintain ethical conduct",
+        "Navigate diverse environments and negotiate effectively",
+        "Exhibit leadership and stress-management skills"
+      ],
+      "assessments": [
+        { "type": "negotiation-simulation", "weight": 50, "description": "Negotiation role-play evaluation" }
+      ],
+      "activities": ["Organizer creation", "Diversity role-plays", "Negotiation simulations", "Mentoring sessions"]
+    },
+    {
+      "id": "m5",
+      "title": "Continuous Growth & Career Readiness (Capstone)",
+      "level": "Expert Application",
+      "weeks": "17-20",
+      "hours": "6",
+      "description": "Capstone module for integrating skills into daily life and careers, with strategies for lifelong development and showcasing abilities.",
+      "keyTopics": [
+        "Applying soft skills holistically",
+        "Career readiness: resumes & interviews",
+        "Ongoing development: feedback, mentoring, AI-enhanced learning"
+      ],
+      "learningOutcomes": [
+        "Integrate skills across contexts",
+        "Demonstrate soft skills in career materials",
+        "Commit to continuous improvement"
+      ],
+      "assessments": [
+        { "type": "final-portfolio", "weight": 100, "description": "Final portfolio and self-evaluation (capstone)" }
+      ],
+      "activities": ["Mock interviews", "Skill inventory", "Final portfolio"]
+    }
+  ],
+  "certificate": {
+    "criteria": "Completion of all modules & final portfolio",
+    "award": "Digital Certificate"
+  },
+  "seo": {
+    "title": "Soft Skills Mastery — Practical Soft Skills for 2025",
+    "description": "20-week blended program teaching emotional intelligence, communication, teamwork, leadership, and career readiness aligned with WEF 2025 skills."
+  }
+}

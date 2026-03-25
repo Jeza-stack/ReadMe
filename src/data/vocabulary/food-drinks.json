@@ -1,0 +1,85 @@
+{
+  "theme": "Food & Drinks",
+  "level": "A1",
+  "cefrMapping": {
+    "canDoStatements": [
+      "I can name common foods and drinks",
+      "I can order simple food and drinks",
+      "I can talk about meals and preferences",
+      "I can ask for prices and quantities"
+    ],
+    "vocabularyRange": "30 essential foods and drinks",
+    "grammarFocus": "Countable/uncountable nouns; some/any",
+    "communicationFunctions": [
+      "Ordering in a café",
+      "Shopping for food",
+      "Talking about meals",
+      "Expressing likes and dislikes"
+    ]
+  },
+  "vocabulary": [
+    {"id":1,"word":"water","translation":"água","phonetic":"/ˈwɔːtər/","partOfSpeech":"noun","definition":"A clear liquid for drinking","example":"I drink water every day.","image":"💧","audioUrl":"/audio/water.mp3","difficulty":"basic","category":"drinks","relatedWords":["juice","tea","drink"],"usageNotes":"Uncountable: some water"},
+    {"id":2,"word":"tea","translation":"chá","phonetic":"/tiː/","partOfSpeech":"noun","definition":"A hot drink made with leaves","example":"She likes tea with milk.","image":"🍵","audioUrl":"/audio/tea.mp3","difficulty":"basic","category":"drinks","relatedWords":["coffee","cup","drink"],"usageNotes":"Serve hot or cold"},
+    {"id":3,"word":"coffee","translation":"café","phonetic":"/ˈkɒfi/","partOfSpeech":"noun","definition":"A hot drink from coffee beans","example":"He drinks coffee in the morning.","image":"☕","audioUrl":"/audio/coffee.mp3","difficulty":"basic","category":"drinks","relatedWords":["espresso","milk","sugar"],"usageNotes":"Common breakfast drink"},
+    {"id":4,"word":"milk","translation":"leite","phonetic":"/mɪlk/","partOfSpeech":"noun","definition":"White liquid from cows","example":"I prefer milk in my tea.","image":"🥛","audioUrl":"/audio/milk.mp3","difficulty":"basic","category":"drinks","relatedWords":["dairy","cheese","butter"],"usageNotes":"Uncountable: some milk"},
+    {"id":5,"word":"juice","translation":"suco","phonetic":"/dʒuːs/","partOfSpeech":"noun","definition":"Drink made from fruit","example":"Orange juice is my favorite.","image":"🧃","audioUrl":"/audio/juice.mp3","difficulty":"basic","category":"drinks","relatedWords":["apple juice","fruit","drink"],"usageNotes":"Can be orange, apple, etc."},
+    {"id":6,"word":"bread","translation":"pão","phonetic":"/bred/","partOfSpeech":"noun","definition":"Baked food made from flour","example":"We eat bread for breakfast.","image":"🍞","audioUrl":"/audio/bread.mp3","difficulty":"basic","category":"food","relatedWords":["toast","butter","sandwich"],"usageNotes":"Uncountable in general sense"},
+    {"id":7,"word":"rice","translation":"arroz","phonetic":"/raɪs/","partOfSpeech":"noun","definition":"Small white grains eaten as food","example":"Rice is common in many countries.","image":"🍚","audioUrl":"/audio/rice.mp3","difficulty":"basic","category":"food","relatedWords":["beans","meal","plate"],"usageNotes":"Uncountable in general sense"},
+    {"id":8,"word":"egg","translation":"ovo","phonetic":"/eɡ/","partOfSpeech":"noun","definition":"Food from a chicken","example":"I eat an egg for breakfast.","image":"🥚","audioUrl":"/audio/egg.mp3","difficulty":"basic","category":"food","relatedWords":["boiled","fried","omelet"],"usageNotes":"Use 'an' before vowel sound"},
+    {"id":9,"word":"apple","translation":"maçã","phonetic":"/ˈæpl/","partOfSpeech":"noun","definition":"A round fruit","example":"He eats an apple.","image":"🍎","audioUrl":"/audio/apple.mp3","difficulty":"basic","category":"fruit","relatedWords":["fruit","red","green"],"usageNotes":"Countable: an apple/two apples"},
+    {"id":10,"word":"banana","translation":"banana","phonetic":"/bəˈnɑːnə/","partOfSpeech":"noun","definition":"A long yellow fruit","example":"Bananas are sweet.","image":"🍌","audioUrl":"/audio/banana.mp3","difficulty":"basic","category":"fruit","relatedWords":["fruit","yellow","apple"],"usageNotes":"Countable"},
+    {"id":11,"word":"orange","translation":"laranja","phonetic":"/ˈɒrɪndʒ/","partOfSpeech":"noun","definition":"A round orange fruit","example":"I like orange juice.","image":"🍊","audioUrl":"/audio/orange.mp3","difficulty":"basic","category":"fruit","relatedWords":["fruit","juice","apple"],"usageNotes":"Also the name of a color"},
+    {"id":12,"word":"chicken","translation":"frango","phonetic":"/ˈtʃɪkɪn/","partOfSpeech":"noun","definition":"Meat from a chicken","example":"We had chicken for dinner.","image":"🍗","audioUrl":"/audio/chicken.mp3","difficulty":"basic","category":"food","relatedWords":["meat","fish","rice"],"usageNotes":"Countable for animals; uncountable as meat"},
+    {"id":13,"word":"fish","translation":"peixe","phonetic":"/fɪʃ/","partOfSpeech":"noun","definition":"Animal from water used as food","example":"He eats fish on Fridays.","image":"🐟","audioUrl":"/audio/fish.mp3","difficulty":"basic","category":"food","relatedWords":["seafood","meat","salad"],"usageNotes":"Plural is fish or fishes"},
+    {"id":14,"word":"meat","translation":"carne","phonetic":"/miːt/","partOfSpeech":"noun","definition":"Food from animals","example":"They don't eat meat.","image":"🥩","audioUrl":"/audio/meat.mp3","difficulty":"basic","category":"food","relatedWords":["chicken","beef","pork"],"usageNotes":"Uncountable"},
+    {"id":15,"word":"vegetable","translation":"legume/verdura","phonetic":"/ˈvedʒtəbl/","partOfSpeech":"noun","definition":"Plant used as food","example":"Eat more vegetables.","image":"🥦","audioUrl":"/audio/vegetable.mp3","difficulty":"basic","category":"food","relatedWords":["salad","broccoli","carrot"],"usageNotes":"Often plural: vegetables"},
+    {"id":16,"word":"salad","translation":"salada","phonetic":"/ˈsæləd/","partOfSpeech":"noun","definition":"Cold dish with vegetables","example":"I want a green salad.","image":"🥗","audioUrl":"/audio/salad.mp3","difficulty":"basic","category":"food","relatedWords":["vegetable","tomato","cucumber"],"usageNotes":"Countable/uncountable"},
+    {"id":17,"word":"soup","translation":"sopa","phonetic":"/suːp/","partOfSpeech":"noun","definition":"Hot liquid food","example":"Tomato soup is tasty.","image":"🍲","audioUrl":"/audio/soup.mp3","difficulty":"basic","category":"food","relatedWords":["bowl","spoon","hot"],"usageNotes":"Uncountable in general"},
+    {"id":18,"word":"sugar","translation":"açúcar","phonetic":"/ˈʃʊɡər/","partOfSpeech":"noun","definition":"Sweet substance","example":"No sugar in my coffee, please.","image":"🍬","audioUrl":"/audio/sugar.mp3","difficulty":"basic","category":"ingredients","relatedWords":["sweet","salt","coffee"],"usageNotes":"Uncountable"},
+    {"id":19,"word":"salt","translation":"sal","phonetic":"/sɒlt/","partOfSpeech":"noun","definition":"White crystal used in food","example":"Add a little salt.","image":"🧂","audioUrl":"/audio/salt.mp3","difficulty":"basic","category":"ingredients","relatedWords":["pepper","spice","salted"],"usageNotes":"Uncountable in general"},
+    {"id":20,"word":"pepper","translation":"pimenta/pimentão","phonetic":"/ˈpepər/","partOfSpeech":"noun","definition":"Spice or vegetable","example":"Black pepper is spicy.","image":"🌶️","audioUrl":"/audio/pepper.mp3","difficulty":"basic","category":"ingredients","relatedWords":["salt","spice","hot"],"usageNotes":"Can be spice or vegetable"},
+    {"id":21,"word":"cheese","translation":"queijo","phonetic":"/tʃiːz/","partOfSpeech":"noun","definition":"Food from milk","example":"I like cheese on bread.","image":"🧀","audioUrl":"/audio/cheese.mp3","difficulty":"basic","category":"food","relatedWords":["milk","butter","sandwich"],"usageNotes":"Uncountable in general"},
+    {"id":22,"word":"butter","translation":"manteiga","phonetic":"/ˈbʌtər/","partOfSpeech":"noun","definition":"Fatty food from milk","example":"Put butter on toast.","image":"🧈","audioUrl":"/audio/butter.mp3","difficulty":"basic","category":"food","relatedWords":["bread","cheese","dairy"],"usageNotes":"Uncountable"},
+    {"id":23,"word":"breakfast","translation":"café da manhã","phonetic":"/ˈbrekfəst/","partOfSpeech":"noun","definition":"Morning meal","example":"We have eggs for breakfast.","image":"🍳","audioUrl":"/audio/breakfast.mp3","difficulty":"basic","category":"meals","relatedWords":["lunch","dinner","meal"],"usageNotes":"Three meals: breakfast, lunch, dinner"},
+    {"id":24,"word":"lunch","translation":"almoço","phonetic":"/lʌntʃ/","partOfSpeech":"noun","definition":"Midday meal","example":"Lunch is at 12.","image":"🥪","audioUrl":"/audio/lunch.mp3","difficulty":"basic","category":"meals","relatedWords":["breakfast","dinner","snack"],"usageNotes":"Common time 12:00–14:00"},
+    {"id":25,"word":"dinner","translation":"jantar","phonetic":"/ˈdɪnər/","partOfSpeech":"noun","definition":"Evening meal","example":"We eat dinner at 7.","image":"🍽️","audioUrl":"/audio/dinner.mp3","difficulty":"basic","category":"meals","relatedWords":["lunch","meal","evening"],"usageNotes":"Main evening meal"},
+    {"id":26,"word":"snack","translation":"lanche","phonetic":"/snæk/","partOfSpeech":"noun","definition":"Small amount of food between meals","example":"I eat a snack at 4.","image":"🍪","audioUrl":"/audio/snack.mp3","difficulty":"basic","category":"meals","relatedWords":["break","food","cookie"],"usageNotes":"Countable"},
+    {"id":27,"word":"hungry","translation":"com fome","phonetic":"/ˈhʌŋɡri/","partOfSpeech":"adjective","definition":"Needing food","example":"I am hungry.","image":"😋","audioUrl":"/audio/hungry.mp3","difficulty":"basic","category":"feelings","relatedWords":["thirsty","eat","food"],"usageNotes":"Use with 'be': I am hungry"},
+    {"id":28,"word":"thirsty","translation":"com sede","phonetic":"/ˈθɜːsti/","partOfSpeech":"adjective","definition":"Needing drink","example":"He is thirsty.","image":"🥤","audioUrl":"/audio/thirsty.mp3","difficulty":"basic","category":"feelings","relatedWords":["hungry","drink","water"],"usageNotes":"Use with 'be': He is thirsty"},
+    {"id":29,"word":"plate","translation":"prato","phonetic":"/pleɪt/","partOfSpeech":"noun","definition":"Flat dish for food","example":"Put the salad on the plate.","image":"🍽️","audioUrl":"/audio/plate.mp3","difficulty":"basic","category":"tableware","relatedWords":["bowl","cup","fork"],"usageNotes":"Countable"},
+    {"id":30,"word":"cup","translation":"xícara","phonetic":"/kʌp/","partOfSpeech":"noun","definition":"Small container for drinks","example":"A cup of tea, please.","image":"🫖","audioUrl":"/audio/cup.mp3","difficulty":"basic","category":"tableware","relatedWords":["glass","mug","plate"],"usageNotes":"Countable"}
+  ],
+  "exercises": [
+    {"type":"matching","title":"Food Groups","description":"Match foods with their group","items":[{"word":"bread","definition":"Baked food from flour","correct":true},{"word":"apple","definition":"A round fruit","correct":true},{"word":"milk","definition":"White drink from cows","correct":true}]},
+    {"type":"fill-in-blank","title":"At the Café","description":"Complete the order","items":[{"sentence":"I would like a ___ of coffee.","correctAnswer":"cup","hint":"Tableware"},{"sentence":"No ___, please.","correctAnswer":"sugar","hint":"Sweet ingredient"},{"sentence":"We eat ___ for breakfast.","correctAnswer":"bread","hint":"Baked food"}]},
+    {"type":"conversation","title":"Ordering Food","description":"Practice ordering in a café","scenarios":[{"question":"What would you like?","sampleAnswer":"A sandwich and a juice, please.","hint":"Use 'would like'"},{"question":"Anything else?","sampleAnswer":"No, thank you.","hint":"Polite response"},{"question":"For here or to go?","sampleAnswer":"To go, please.","hint":"Common café question"}]}
+  ],
+  "grammarFocus": {
+    "countableBasics": {
+      "title": "Countable and Uncountable; Some/Any",
+      "description": "Know which foods are countable and how to use some/any",
+      "examples": [
+        "some water, some rice",
+        "an egg, two eggs",
+        "any sugar?",
+        "some apples",
+        "I don't have any milk."
+      ],
+      "rules": [
+        "Use 'some' in positive sentences and offers",
+        "Use 'any' in negatives and questions",
+        "Countable nouns have singular/plural forms",
+        "Uncountable nouns do not take 'a/an'",
+        "Use 'a' or 'an' with singular countable nouns"
+      ]
+    }
+  },
+  "mobileFeatures": {
+    "swipeNavigation": true,
+    "audioSupport": true,
+    "touchFriendly": true,
+    "offlineAccess": true,
+    "progressTracking": true,
+    "adaptiveLearning": true
+  }
+}

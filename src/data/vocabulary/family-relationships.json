@@ -1,0 +1,80 @@
+{
+  "theme": "Family & Relationships",
+  "level": "A1",
+  "cefrMapping": {
+    "canDoStatements": [
+      "I can understand and use basic family vocabulary",
+      "I can introduce my family members",
+      "I can ask and answer simple questions about family",
+      "I can describe basic family relationships"
+    ],
+    "vocabularyRange": "25 essential family-related words",
+    "grammarFocus": "Possessive adjectives (my, your, his, her, their)",
+    "communicationFunctions": [
+      "Introducing family members",
+      "Describing family relationships",
+      "Asking about family",
+      "Expressing family connections"
+    ]
+  },
+  "vocabulary": [
+    {"id":1,"word":"mother","translation":"mãe","phonetic":"/ˈmʌðər/","partOfSpeech":"noun","definition":"A female parent","example":"My mother is cooking dinner.","image":"👩","audioUrl":"/audio/mother.mp3","difficulty":"basic","category":"immediate family","relatedWords":["mom","mum","mama"],"usageNotes":"Formal: mother, Informal: mom/mum"},
+    {"id":2,"word":"father","translation":"pai","phonetic":"/ˈfɑːðər/","partOfSpeech":"noun","definition":"A male parent","example":"My father works in an office.","image":"👨","audioUrl":"/audio/father.mp3","difficulty":"basic","category":"immediate family","relatedWords":["dad","daddy","papa"],"usageNotes":"Formal: father, Informal: dad/daddy"},
+    {"id":3,"word":"sister","translation":"irmã","phonetic":"/ˈsɪstər/","partOfSpeech":"noun","definition":"A female sibling","example":"I have one sister and two brothers.","image":"👧","audioUrl":"/audio/sister.mp3","difficulty":"basic","category":"immediate family","relatedWords":["sis","sister"],"usageNotes":"Can be older or younger sister"},
+    {"id":4,"word":"brother","translation":"irmão","phonetic":"/ˈbrʌðər/","partOfSpeech":"noun","definition":"A male sibling","example":"My brother is taller than me.","image":"👦","audioUrl":"/audio/brother.mp3","difficulty":"basic","category":"immediate family","relatedWords":["bro","brother"],"usageNotes":"Can be older or younger brother"},
+    {"id":5,"word":"daughter","translation":"filha","phonetic":"/ˈdɔːtər/","partOfSpeech":"noun","definition":"A female child","example":"She has a daughter and a son.","image":"👧","audioUrl":"/audio/daughter.mp3","difficulty":"basic","category":"immediate family","relatedWords":["girl","child"],"usageNotes":"Used to describe a female child of any age"},
+    {"id":6,"word":"son","translation":"filho","phonetic":"/sʌn/","partOfSpeech":"noun","definition":"A male child","example":"Their son is five years old.","image":"👦","audioUrl":"/audio/son.mp3","difficulty":"basic","category":"immediate family","relatedWords":["boy","child"],"usageNotes":"Used to describe a male child of any age"},
+    {"id":7,"word":"grandmother","translation":"avó","phonetic":"/ˈɡrænmʌðər/","partOfSpeech":"noun","definition":"The mother of your parent","example":"My grandmother bakes cookies.","image":"👵","audioUrl":"/audio/grandmother.mp3","difficulty":"basic","category":"extended family","relatedWords":["grandma","granny","nana"],"usageNotes":"Formal: grandmother, Informal: grandma/granny"},
+    {"id":8,"word":"grandfather","translation":"avô","phonetic":"/ˈɡrænfɑːðər/","partOfSpeech":"noun","definition":"The father of your parent","example":"My grandfather likes fishing.","image":"👴","audioUrl":"/audio/grandfather.mp3","difficulty":"basic","category":"extended family","relatedWords":["grandpa","granddad","papa"],"usageNotes":"Formal: grandfather, Informal: grandpa/granddad"},
+    {"id":9,"word":"aunt","translation":"tia","phonetic":"/ɑːnt/","partOfSpeech":"noun","definition":"The sister of your parent","example":"My aunt lives in New York.","image":"👩","audioUrl":"/audio/aunt.mp3","difficulty":"basic","category":"extended family","relatedWords":["auntie","aunt"],"usageNotes":"Can also refer to your uncle's wife"},
+    {"id":10,"word":"uncle","translation":"tio","phonetic":"/ˈʌŋkl/","partOfSpeech":"noun","definition":"The brother of your parent","example":"My uncle drives a red car.","image":"👨","audioUrl":"/audio/uncle.mp3","difficulty":"basic","category":"extended family","relatedWords":["uncle"],"usageNotes":"Can also refer to your aunt's husband"},
+    {"id":11,"word":"cousin","translation":"primo/prima","phonetic":"/ˈkʌzn/","partOfSpeech":"noun","definition":"The child of your aunt or uncle","example":"I have three cousins.","image":"👶","audioUrl":"/audio/cousin.mp3","difficulty":"basic","category":"extended family","relatedWords":["cousin"],"usageNotes":"Can be male or female cousin"},
+    {"id":12,"word":"husband","translation":"marido","phonetic":"/ˈhʌzbənd/","partOfSpeech":"noun","definition":"A married man","example":"Her husband is a teacher.","image":"👨","audioUrl":"/audio/husband.mp3","difficulty":"basic","category":"relationships","relatedWords":["spouse","partner"],"usageNotes":"Used for married men"},
+    {"id":13,"word":"wife","translation":"esposa","phonetic":"/waɪf/","partOfSpeech":"noun","definition":"A married woman","example":"His wife is a doctor.","image":"👩","audioUrl":"/audio/wife.mp3","difficulty":"basic","category":"relationships","relatedWords":["spouse","partner"],"usageNotes":"Used for married women"},
+    {"id":14,"word":"baby","translation":"bebê","phonetic":"/ˈbeɪbi/","partOfSpeech":"noun","definition":"A very young child","example":"The baby is sleeping.","image":"👶","audioUrl":"/audio/baby.mp3","difficulty":"basic","category":"immediate family","relatedWords":["infant","child"],"usageNotes":"Usually refers to children under 2 years old"},
+    {"id":15,"word":"family","translation":"família","phonetic":"/ˈfæməli/","partOfSpeech":"noun","definition":"A group of people related by blood or marriage","example":"I love my family.","image":"👨‍👩‍👧‍👦","audioUrl":"/audio/family.mp3","difficulty":"basic","category":"general","relatedWords":["household","relatives"],"usageNotes":"Can refer to immediate or extended family"},
+    {"id":16,"word":"parents","translation":"pais","phonetic":"/ˈpeərənts/","partOfSpeech":"noun","definition":"Mother and father","example":"My parents are from Brazil.","image":"👨‍👩‍👧‍👦","audioUrl":"/audio/parents.mp3","difficulty":"basic","category":"immediate family","relatedWords":["mother","father"],"usageNotes":"Plural form of parent"},
+    {"id":17,"word":"children","translation":"crianças","phonetic":"/ˈtʃɪldrən/","partOfSpeech":"noun","definition":"Sons and daughters","example":"They have three children.","image":"👶👧👦","audioUrl":"/audio/children.mp3","difficulty":"basic","category":"immediate family","relatedWords":["kids","sons","daughters"],"usageNotes":"Plural form of child"},
+    {"id":18,"word":"grandparents","translation":"avós","phonetic":"/ˈɡrænpeərənts/","partOfSpeech":"noun","definition":"Grandmother and grandfather","example":"My grandparents live in the country.","image":"👴👵","audioUrl":"/audio/grandparents.mp3","difficulty":"basic","category":"extended family","relatedWords":["grandmother","grandfather"],"usageNotes":"Plural form referring to both grandmother and grandfather"},
+    {"id":19,"word":"siblings","translation":"irmãos","phonetic":"/ˈsɪblɪŋz/","partOfSpeech":"noun","definition":"Brothers and sisters","example":"I have two siblings.","image":"👧👦","audioUrl":"/audio/siblings.mp3","difficulty":"basic","category":"immediate family","relatedWords":["brothers","sisters"],"usageNotes":"Gender-neutral term for brothers and sisters"},
+    {"id":20,"word":"relatives","translation":"parentes","phonetic":"/ˈrelətɪvz/","partOfSpeech":"noun","definition":"People related by blood or marriage","example":"I have many relatives in Italy.","image":"👨‍👩‍👧‍👦","audioUrl":"/audio/relatives.mp3","difficulty":"basic","category":"extended family","relatedWords":["family","kin"],"usageNotes":"General term for extended family members"},
+    {"id":21,"word":"stepmother","translation":"madrasta","phonetic":"/ˈstepmʌðər/","partOfSpeech":"noun","definition":"The wife of your father (not your biological mother)","example":"My stepmother is very kind.","image":"👩","audioUrl":"/audio/stepmother.mp3","difficulty":"basic","category":"blended family","relatedWords":["stepmom","stepmother"],"usageNotes":"Used when parents are divorced or separated"},
+    {"id":22,"word":"stepfather","translation":"padrasto","phonetic":"/ˈstepfɑːðər/","partOfSpeech":"noun","definition":"The husband of your mother (not your biological father)","example":"My stepfather teaches math.","image":"👨","audioUrl":"/audio/stepfather.mp3","difficulty":"basic","category":"blended family","relatedWords":["stepdad","stepfather"],"usageNotes":"Used when parents are divorced or separated"},
+    {"id":23,"word":"twin","translation":"gêmeo","phonetic":"/twɪn/","partOfSpeech":"noun","definition":"One of two children born at the same time","example":"My twin sister looks like me.","image":"👯‍♀️","audioUrl":"/audio/twin.mp3","difficulty":"basic","category":"immediate family","relatedWords":["twin brother","twin sister"],"usageNotes":"Can be twin brother or twin sister"},
+    {"id":24,"word":"niece","translation":"sobrinha","phonetic":"/niːs/","partOfSpeech":"noun","definition":"The daughter of your brother or sister","example":"My niece is very smart.","image":"👧","audioUrl":"/audio/niece.mp3","difficulty":"basic","category":"extended family","relatedWords":["niece"],"usageNotes":"Female child of your sibling"},
+    {"id":25,"word":"nephew","translation":"sobrinho","phonetic":"/ˈnefjuː/","partOfSpeech":"noun","definition":"The son of your brother or sister","example":"My nephew likes soccer.","image":"👦","audioUrl":"/audio/nephew.mp3","difficulty":"basic","category":"extended family","relatedWords":["nephew"],"usageNotes":"Male child of your sibling"}
+  ],
+  "exercises": [
+    {"type":"matching","title":"Match Family Members","description":"Match the family member with their definition","items":[{"word":"mother","definition":"A female parent","correct":true},{"word":"father","definition":"A male parent","correct":true},{"word":"sister","definition":"A female sibling","correct":true}]},
+    {"type":"fill-in-blank","title":"Complete the Sentences","description":"Fill in the blanks with the correct family vocabulary","items":[{"sentence":"My ___ is cooking dinner.","correctAnswer":"mother","hint":"Female parent"},{"sentence":"I have one ___ and two brothers.","correctAnswer":"sister","hint":"Female sibling"},{"sentence":"My ___ works in an office.","correctAnswer":"father","hint":"Male parent"}]},
+    {"type":"conversation","title":"Family Conversation","description":"Practice asking and answering questions about family","scenarios":[{"question":"How many people are in your family?","sampleAnswer":"There are four people in my family: my mother, my father, my sister, and me."},{"question":"What does your mother do?","sampleAnswer":"My mother is a teacher."},{"question":"Do you have any brothers or sisters?","sampleAnswer":"Yes, I have one sister and one brother."}]}
+  ],
+  "grammarFocus": {
+    "possessiveAdjectives": {
+      "title": "Possessive Adjectives",
+      "description": "Learn to use my, your, his, her, their with family members",
+      "examples": [
+        "My mother is kind.",
+        "Your father works hard.",
+        "His sister is tall.",
+        "Her brother is young.",
+        "Their family is big."
+      ],
+      "rules": [
+        "Use 'my' for things that belong to you",
+        "Use 'your' for things that belong to the person you're talking to",
+        "Use 'his' for things that belong to a male",
+        "Use 'her' for things that belong to a female",
+        "Use 'their' for things that belong to more than one person"
+      ]
+    }
+  },
+  "mobileFeatures": {
+    "swipeNavigation": true,
+    "audioSupport": true,
+    "touchFriendly": true,
+    "offlineAccess": true,
+    "progressTracking": true,
+    "adaptiveLearning": true
+  }
+}

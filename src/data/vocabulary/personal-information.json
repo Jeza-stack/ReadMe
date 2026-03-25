@@ -1,0 +1,80 @@
+{
+  "theme": "Personal Information",
+  "level": "A1",
+  "cefrMapping": {
+    "canDoStatements": [
+      "I can say and ask for personal details",
+      "I can spell my name and give my phone number",
+      "I can fill in simple forms with personal information",
+      "I can introduce myself and others"
+    ],
+    "vocabularyRange": "25 essential personal details",
+    "grammarFocus": "Verb 'to be' for identity; possessive adjectives (my, your)",
+    "communicationFunctions": [
+      "Introducing yourself",
+      "Exchanging contact details",
+      "Talking about nationality and age",
+      "Completing simple forms"
+    ]
+  },
+  "vocabulary": [
+    {"id":1,"word":"name","translation":"nome","phonetic":"/neɪm/","partOfSpeech":"noun","definition":"What a person or thing is called","example":"My name is Ana.","image":"📝","audioUrl":"/audio/name.mp3","difficulty":"basic","category":"personal details","relatedWords":["first name","last name","nickname"],"usageNotes":"Use 'My name is …' to introduce yourself"},
+    {"id":2,"word":"first name","translation":"primeiro nome","phonetic":"/ˌfɜːst ˈneɪm/","partOfSpeech":"noun","definition":"A person's given name","example":"Her first name is Maria.","image":"🪪","audioUrl":"/audio/first-name.mp3","difficulty":"basic","category":"personal details","relatedWords":["given name","name","last name"],"usageNotes":"Also called given name"},
+    {"id":3,"word":"last name","translation":"sobrenome","phonetic":"/ˌlɑːst ˈneɪm/","partOfSpeech":"noun","definition":"A family name","example":"His last name is Silva.","image":"🧾","audioUrl":"/audio/last-name.mp3","difficulty":"basic","category":"personal details","relatedWords":["family name","surname","name"],"usageNotes":"Also called family name or surname"},
+    {"id":4,"word":"age","translation":"idade","phonetic":"/eɪdʒ/","partOfSpeech":"noun","definition":"How many years someone has lived","example":"I am 20 years old.","image":"🎂","audioUrl":"/audio/age.mp3","difficulty":"basic","category":"personal details","relatedWords":["years old","birthday","date of birth"],"usageNotes":"Use 'to be': I am 20 years old (not 'I have 20 years')"},
+    {"id":5,"word":"address","translation":"endereço","phonetic":"/əˈdres/","partOfSpeech":"noun","definition":"The place where you live","example":"My address is 10 Main Street.","image":"🏠","audioUrl":"/audio/address.mp3","difficulty":"basic","category":"contact info","relatedWords":["street","city","postcode"],"usageNotes":"Use numbers before street names: 10 Main Street"},
+    {"id":6,"word":"street","translation":"rua","phonetic":"/striːt/","partOfSpeech":"noun","definition":"A road in a city or town","example":"I live on Green Street.","image":"🛣️","audioUrl":"/audio/street.mp3","difficulty":"basic","category":"contact info","relatedWords":["road","avenue","address"],"usageNotes":"Use 'on' with street: live on Green Street"},
+    {"id":7,"word":"city","translation":"cidade","phonetic":"/ˈsɪti/","partOfSpeech":"noun","definition":"A large town","example":"My city is São Paulo.","image":"🏙️","audioUrl":"/audio/city.mp3","difficulty":"basic","category":"contact info","relatedWords":["town","country","address"],"usageNotes":"Capitalize city names"},
+    {"id":8,"word":"country","translation":"país","phonetic":"/ˈkʌntri/","partOfSpeech":"noun","definition":"A nation","example":"My country is Brazil.","image":"🗺️","audioUrl":"/audio/country.mp3","difficulty":"basic","category":"identity","relatedWords":["nationality","passport","city"],"usageNotes":"Capitalize country names"},
+    {"id":9,"word":"phone number","translation":"número de telefone","phonetic":"/ˈfəʊn ˌnʌmbər/","partOfSpeech":"noun","definition":"Digits used to call someone","example":"My phone number is 555-1234.","image":"📱","audioUrl":"/audio/phone-number.mp3","difficulty":"basic","category":"contact info","relatedWords":["call","mobile","contact"],"usageNotes":"Say numbers clearly: five five five one two three four"},
+    {"id":10,"word":"email","translation":"e-mail","phonetic":"/ˈiːmeɪl/","partOfSpeech":"noun","definition":"Electronic mail address","example":"My email is ana@example.com.","image":"✉️","audioUrl":"/audio/email.mp3","difficulty":"basic","category":"contact info","relatedWords":["address","contact","message"],"usageNotes":"Use 'at' and 'dot' when spelling: at example dot com"},
+    {"id":11,"word":"job","translation":"emprego","phonetic":"/dʒɒb/","partOfSpeech":"noun","definition":"Work you do to earn money","example":"My job is cashier.","image":"💼","audioUrl":"/audio/job.mp3","difficulty":"basic","category":"identity","relatedWords":["work","occupation","profession"],"usageNotes":"Use 'I am a …' or 'I work as a …'"},
+    {"id":12,"word":"student","translation":"estudante","phonetic":"/ˈstjuːdənt/","partOfSpeech":"noun","definition":"A person who studies at a school","example":"I am a student.","image":"🎓","audioUrl":"/audio/student.mp3","difficulty":"basic","category":"identity","relatedWords":["school","learn","teacher"],"usageNotes":"Use 'a' before consonant sounds: a student"},
+    {"id":13,"word":"teacher","translation":"professor/professora","phonetic":"/ˈtiːtʃər/","partOfSpeech":"noun","definition":"A person who teaches","example":"She is a teacher.","image":"👩‍🏫","audioUrl":"/audio/teacher.mp3","difficulty":"basic","category":"identity","relatedWords":["teach","school","student"],"usageNotes":"Use 'a' or 'an' depending on sound"},
+    {"id":14,"word":"friend","translation":"amigo/amiga","phonetic":"/frend/","partOfSpeech":"noun","definition":"A person you like and know well","example":"He is my friend.","image":"🧑‍🤝‍🧑","audioUrl":"/audio/friend.mp3","difficulty":"basic","category":"relationships","relatedWords":["buddy","mate","classmate"],"usageNotes":"Plural: friends"},
+    {"id":15,"word":"family name","translation":"sobrenome","phonetic":"/ˈfæməli neɪm/","partOfSpeech":"noun","definition":"Another word for last name","example":"Her family name is Souza.","image":"🧾","audioUrl":"/audio/family-name.mp3","difficulty":"basic","category":"personal details","relatedWords":["surname","last name","name"],"usageNotes":"Synonym of surname"},
+    {"id":16,"word":"birthday","translation":"aniversário","phonetic":"/ˈbɜːθdeɪ/","partOfSpeech":"noun","definition":"The day you were born","example":"My birthday is in May.","image":"🎂","audioUrl":"/audio/birthday.mp3","difficulty":"basic","category":"personal details","relatedWords":["age","date of birth","party"],"usageNotes":"Use 'in' with months: in May"},
+    {"id":17,"word":"date of birth","translation":"data de nascimento","phonetic":"/ˌdeɪt əv ˈbɜːθ/","partOfSpeech":"noun","definition":"Exact day you were born","example":"Please write your date of birth.","image":"📅","audioUrl":"/audio/date-of-birth.mp3","difficulty":"basic","category":"personal details","relatedWords":["birthday","age","ID"],"usageNotes":"Abbreviation: DOB"},
+    {"id":18,"word":"nationality","translation":"nacionalidade","phonetic":"/ˌnæʃəˈnæləti/","partOfSpeech":"noun","definition":"The country you are from","example":"My nationality is Brazilian.","image":"🌎","audioUrl":"/audio/nationality.mp3","difficulty":"basic","category":"identity","relatedWords":["country","passport","citizen"],"usageNotes":"Adjective form: Brazilian, American, etc."},
+    {"id":19,"word":"passport","translation":"passaporte","phonetic":"/ˈpɑːspɔːt/","partOfSpeech":"noun","definition":"Official document for travel","example":"I have a passport.","image":"🛂","audioUrl":"/audio/passport.mp3","difficulty":"basic","category":"identity","relatedWords":["ID card","visa","document"],"usageNotes":"Carry when traveling"},
+    {"id":20,"word":"ID card","translation":"carteira de identidade","phonetic":"/ˌaɪ ˈdiː kɑːd/","partOfSpeech":"noun","definition":"Identity card","example":"Please show your ID card.","image":"🪪","audioUrl":"/audio/id-card.mp3","difficulty":"basic","category":"identity","relatedWords":["passport","document","name"],"usageNotes":"Also 'identity card'"},
+    {"id":21,"word":"number","translation":"número","phonetic":"/ˈnʌmbər/","partOfSpeech":"noun","definition":"A symbol that shows quantity","example":"Write your house number here.","image":"🔢","audioUrl":"/audio/number.mp3","difficulty":"basic","category":"personal details","relatedWords":["digit","phone","address"],"usageNotes":"Phone number, house number, etc."},
+    {"id":22,"word":"male","translation":"masculino","phonetic":"/meɪl/","partOfSpeech":"adjective","definition":"Man or boy","example":"Tick male or female.","image":"👨","audioUrl":"/audio/male.mp3","difficulty":"basic","category":"identity","relatedWords":["man","boy","gender"],"usageNotes":"Opposite of female"},
+    {"id":23,"word":"female","translation":"feminino","phonetic":"/ˈfiːmeɪl/","partOfSpeech":"adjective","definition":"Woman or girl","example":"She is female.","image":"👩","audioUrl":"/audio/female.mp3","difficulty":"basic","category":"identity","relatedWords":["woman","girl","gender"],"usageNotes":"Opposite of male"},
+    {"id":24,"word":"single","translation":"solteiro/solteira","phonetic":"/ˈsɪŋɡl/","partOfSpeech":"adjective","definition":"Not married","example":"I am single.","image":"🙂","audioUrl":"/audio/single.mp3","difficulty":"basic","category":"identity","relatedWords":["married","status","divorced"],"usageNotes":"Marital status"},
+    {"id":25,"word":"married","translation":"casado/casada","phonetic":"/ˈmærid/","partOfSpeech":"adjective","definition":"Having a husband or wife","example":"They are married.","image":"💍","audioUrl":"/audio/married.mp3","difficulty":"basic","category":"identity","relatedWords":["single","husband","wife"],"usageNotes":"Marital status"}
+  ],
+  "exercises": [
+    {"type":"matching","title":"Personal Details Match","description":"Match the word to its meaning","items":[{"word":"address","definition":"The place where you live","correct":true},{"word":"nationality","definition":"The country you are from","correct":true},{"word":"phone number","definition":"Digits used to call someone","correct":true}]},
+    {"type":"fill-in-blank","title":"Introduce Yourself","description":"Complete with correct words","items":[{"sentence":"My ___ is Lucas.","correctAnswer":"name","hint":"What people call you"},{"sentence":"I am 22 years ___","correctAnswer":"old","hint":"Age phrase"},{"sentence":"My ___ is 21 Green Street.","correctAnswer":"address","hint":"Where you live"}]},
+    {"type":"conversation","title":"Meeting Someone","description":"Practice asking and giving personal information","scenarios":[{"question":"What is your name?","sampleAnswer":"My name is Ana.","hint":"Use 'My name is …'"},{"question":"Where are you from?","sampleAnswer":"I am from Brazil.","hint":"Use 'I am from …'"},{"question":"What is your phone number?","sampleAnswer":"It is 555-1234.","hint":"Say numbers clearly"}]}
+  ],
+  "grammarFocus": {
+    "beVerbBasics": {
+      "title": "Verb 'To Be' for Personal Information",
+      "description": "Use 'am', 'is', 'are' to talk about name, age, nationality",
+      "examples": [
+        "I am Ana. You are Pedro.",
+        "She is 20 years old.",
+        "We are Brazilian.",
+        "My name is Maria.",
+        "Are you a student? Yes, I am."
+      ],
+      "rules": [
+        "Use 'am' with I; 'is' with he/she/it; 'are' with you/we/they",
+        "Age uses 'to be': I am 20 years old",
+        "Use contractions in speech: I'm, you're, he's",
+        "Word order in questions: Are you from Brazil?",
+        "Use 'my/your/his/her' with names and family"
+      ]
+    }
+  },
+  "mobileFeatures": {
+    "swipeNavigation": true,
+    "audioSupport": true,
+    "touchFriendly": true,
+    "offlineAccess": true,
+    "progressTracking": true,
+    "adaptiveLearning": true
+  }
+}
