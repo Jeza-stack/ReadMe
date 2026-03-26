@@ -137,13 +137,15 @@ const courseFallbacks: Record<string, CourseData> = {
 };
 
 export async function generateStaticParams() {
-  const existing = getCourses().map((c) => ({ courseSlug: c.slug }));
+  const existing = getCourses()
+    .filter((c) => c && c.slug)
+    .map((c) => ({ courseSlug: c.slug }));
   const newSlugs = Object.keys(courseFallbacks).map((slug) => ({ courseSlug: slug }));
   return [...existing, ...newSlugs];
 }
 
 export async function generateMetadata({ params }: any) {
-  const slug: string = params.courseSlug;
+  const slug: string = params?.courseSlug ?? '';
   const existing = getCourse(slug);
   const fallback = courseFallbacks[slug];
   const name = existing?.name ?? fallback?.name ?? slug.replace(/-/g, ' ').toUpperCase();
@@ -165,16 +167,16 @@ export default function CoursePage({ params }: any) {
         description: existingCourse.description,
         slug: existingCourse.slug,
         categories: (existingCourse.categories ?? []).map((cat) => ({
-          name: cat.name,
-          works: (cat.works ?? []).map((w) => ({
-            slug: w.slug,
-            title: w.title,
-            author: (w as any).author,
+          name: cat.name ?? '',
+          works: (cat.works ?? []).filter((w) => w && w.slug && w.title).map((w) => ({
+            slug: w.slug ?? '',
+            title: w.title ?? '',
+            author: (w as any).author ?? 'Certified Instructor',
           })),
         })),
       }
     : courseFallbacks[slug] ?? {
-        name: slug.split('-').map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join(' '),
+        name: (slug ?? '').split('-').map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join(' '),
         description: 'Explore this programme on the CEFR English platform.',
         slug,
         categories: [
