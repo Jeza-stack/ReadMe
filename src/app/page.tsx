@@ -2,17 +2,17 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { 
-  ChevronDown, 
-  BookOpen, 
-  Users, 
-  SlidersHorizontal, 
-  X, 
-  BrainCircuit, 
-  Cpu, 
-  ShieldCheck, 
-  GraduationCap, 
-  ChevronLeft, 
+import {
+  ChevronDown,
+  BookOpen,
+  Users,
+  SlidersHorizontal,
+  X,
+  BrainCircuit,
+  Cpu,
+  ShieldCheck,
+  GraduationCap,
+  ChevronLeft,
   ChevronRight,
   Globe
 } from 'lucide-react';
@@ -180,7 +180,7 @@ export default function Home() {
     const matchesLevel = filters.level === 'all' || course.level === filters.level;
     const matchesDuration = filters.duration === 'all' || course.duration === filters.duration;
     const matchesDifficulty = filters.difficulty === 'all' || course.difficulty === filters.difficulty;
-    
+
     return matchesSubject && matchesLevel && matchesDuration && matchesDifficulty;
   });
 
@@ -189,41 +189,41 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-slate-950 flex flex-col animate-in fade-in duration-700">
-      
+
       {/* Harvard-Style Hero with SCU Gradient & Wave */}
       <section className="relative pt-24 pb-40 lg:pb-52 overflow-hidden bg-[linear-gradient(135deg,#021A42_0%,#043370_55%,#00A2C9_100%)] text-white">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-cyan-400/20 to-transparent blur-3xl pointer-events-none"></div>
-        
+
         <div className="container relative mx-auto px-4 md:px-8 z-10 max-w-6xl">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="inline-flex items-center rounded-full border border-cyan-400/30 bg-white/10 px-4 py-1.5 text-sm font-semibold text-cyan-50 backdrop-blur-md mb-8 animate-in slide-in-from-bottom-2 duration-500">
               Transforming Lives Through Language & Tech
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight font-headline animate-in slide-in-from-bottom-4 duration-700 delay-100 leading-tight">
               Catalogue of <br className="hidden lg:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-100 to-white">Professional Courses</span>
             </h1>
-            
+
             <p className="max-w-2xl text-lg md:text-xl text-cyan-50/80 leading-relaxed font-light mb-12 animate-in slide-in-from-bottom-4 duration-700 delay-200">
               Master the English language systematically with internationally recognized certifications, specialized technology, and essential soft skills training.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 animate-in slide-in-from-bottom-4 duration-700 delay-300">
-               <Button className="h-14 px-8 rounded-full bg-white text-[#043370] hover:bg-cyan-50 font-bold text-lg shadow-xl shadow-black/20" asChild>
-                 <Link href="#courses">
+              <Button className="h-14 px-8 rounded-full bg-white text-[#043370] hover:bg-cyan-50 font-bold text-lg shadow-xl shadow-black/20" asChild>
+                <Link href="#courses">
                   Browse the Catalogue
-                 </Link>
-               </Button>
-               <div className="flex -space-x-3 items-center">
-                 {[1,2,3,4].map(i => (
-                   <div key={i} className="w-10 h-10 rounded-full border-2 border-[#043370] bg-slate-200 overflow-hidden">
-                     <img src={`https://i.pravatar.cc/150?u=${i+10}`} alt="Student" className="w-full h-full object-cover" />
-                   </div>
-                 ))}
-                 <span className="ml-4 text-sm font-medium text-cyan-100 tracking-wide">+12k Learners Active</span>
-               </div>
+                </Link>
+              </Button>
+              <div className="flex -space-x-3 items-center">
+                {[1, 2, 3, 4].map(i => (
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-[#043370] bg-slate-200 overflow-hidden">
+                    <img src={`https://i.pravatar.cc/150?u=${i + 10}`} alt="Student" className="w-full h-full object-cover" />
+                  </div>
+                ))}
+                <span className="ml-4 text-sm font-medium text-cyan-100 tracking-wide">+12k Learners Active</span>
+              </div>
             </div>
           </div>
         </div>
@@ -246,30 +246,30 @@ export default function Home() {
               <SlidersHorizontal className="w-5 h-5 mr-3" />
               Course Select:
             </div>
-            
-            <FilterDropdown 
-              label="Subject Area" 
-              options={filterOptions.subject} 
+
+            <FilterDropdown
+              label="Subject Area"
+              options={filterOptions.subject}
               value={filters.subject}
-              onChange={(val) => { setFilters({...filters, subject: val}); setCurrentPage(1); }}
+              onChange={(val) => { setFilters({ ...filters, subject: val }); setCurrentPage(1); }}
             />
-            <FilterDropdown 
-              label="English Level" 
-              options={filterOptions.level} 
+            <FilterDropdown
+              label="English Level"
+              options={filterOptions.level}
               value={filters.level}
-              onChange={(val) => { setFilters({...filters, level: val}); setCurrentPage(1); }}
+              onChange={(val) => { setFilters({ ...filters, level: val }); setCurrentPage(1); }}
             />
-            <FilterDropdown 
-              label="Duration" 
-              options={filterOptions.duration} 
+            <FilterDropdown
+              label="Duration"
+              options={filterOptions.duration}
               value={filters.duration}
-              onChange={(val) => { setFilters({...filters, duration: val}); setCurrentPage(1); }}
+              onChange={(val) => { setFilters({ ...filters, duration: val }); setCurrentPage(1); }}
             />
-            <FilterDropdown 
-              label="Proficiency" 
-              options={filterOptions.difficulty} 
+            <FilterDropdown
+              label="Proficiency"
+              options={filterOptions.difficulty}
               value={filters.difficulty}
-              onChange={(val) => { setFilters({...filters, difficulty: val}); setCurrentPage(1); }}
+              onChange={(val) => { setFilters({ ...filters, difficulty: val }); setCurrentPage(1); }}
             />
           </div>
         </div>
@@ -277,7 +277,7 @@ export default function Home() {
 
       {/* Course Catalog Grid */}
       <section className="flex-1 py-16 lg:py-24 container mx-auto px-4 md:px-8 max-w-7xl">
-        
+
         <div className="flex flex-wrap items-center justify-between mb-12 pb-8 border-b border-slate-200 dark:border-white/10">
           <div className="flex flex-col gap-2">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-slate-800 dark:text-white">
@@ -287,9 +287,9 @@ export default function Home() {
               Displaying <span className="font-bold text-[#043370] dark:text-cyan-400">{filteredCourses.length}</span> programs available for enrollment
             </p>
           </div>
-          
+
           {hasActiveFilters && (
-            <button 
+            <button
               onClick={clearFilters}
               className="mt-4 md:mt-0 text-sm font-semibold text-[#043370] hover:text-[#00A2C9] dark:text-cyan-400 dark:hover:text-white flex items-center gap-2 transition-all p-2 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
             >
@@ -302,8 +302,8 @@ export default function Home() {
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {currentCourses.map((course, index) => (
-                <div 
-                  key={course.id} 
+                <div
+                  key={course.id}
                   className="animate-in fade-in slide-in-from-bottom-6 duration-700 fill-mode-both"
                   style={{ animationDelay: `${index * 120}ms` }}
                 >
@@ -321,33 +321,32 @@ export default function Home() {
 
             {totalPages > 1 && (
               <div className="mt-20 pt-10 border-t border-slate-200 dark:border-white/10 flex items-center justify-center gap-6">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
                   className="rounded-full w-12 h-12 p-0 border-slate-200 dark:border-white/10 hover:bg-[#043370] hover:text-white hover:border-[#043370] transition-all"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </Button>
-                
+
                 <div className="flex items-center gap-3">
                   {Array.from({ length: totalPages }).map((_, i) => (
                     <button
                       key={i + 1}
                       onClick={() => setCurrentPage(i + 1)}
-                      className={`w-12 h-12 rounded-full text-sm font-bold transition-all shadow-sm ${
-                        currentPage === i + 1 
-                          ? 'bg-[#043370] text-white' 
+                      className={`w-12 h-12 rounded-full text-sm font-bold transition-all shadow-sm ${currentPage === i + 1
+                          ? 'bg-[#043370] text-white'
                           : 'bg-white dark:bg-slate-900 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-white/5 border border-slate-200 dark:border-white/10'
-                      }`}
+                        }`}
                     >
                       {i + 1}
                     </button>
                   ))}
                 </div>
 
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
                   className="rounded-full w-12 h-12 p-0 border-slate-200 dark:border-white/10 hover:bg-[#043370] hover:text-white hover:border-[#043370] transition-all"

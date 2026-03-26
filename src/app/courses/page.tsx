@@ -28,6 +28,17 @@ const allCourses = [
     subject: 'Workshops',
   },
   {
+    id: 8,
+    title: 'CEFR English',
+    description: 'Master the Common European Framework of Reference for Languages. From A1 to C2, systematically advance your proficiency with international standards.',
+    href: '/courses/cefr-english',
+    icon: <BookOpen className="w-8 h-8" />,
+    level: 'All Levels',
+    duration: '24 Weeks',
+    difficulty: 'Advanced',
+    subject: 'Core English',
+  },
+  {
     id: 1,
     title: 'English I',
     description: 'Foundational course in English literature and language competency for beginners.',
@@ -115,10 +126,10 @@ export default function CoursesPage() {
     difficulty: ['Beginner', 'Elementary', 'Intermediate', 'Upper Intermediate', 'Advanced', 'Mastery'],
   };
 
-  const hasActiveFilters = 
-    filters.subject !== 'all' || 
-    filters.level !== 'all' || 
-    filters.duration !== 'all' || 
+  const hasActiveFilters =
+    filters.subject !== 'all' ||
+    filters.level !== 'all' ||
+    filters.duration !== 'all' ||
     filters.difficulty !== 'all';
 
   const clearFilters = () => {
@@ -132,14 +143,14 @@ export default function CoursesPage() {
 
   // Filter logic
   const filteredCourses = allCourses.filter((course) => {
-    const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          course.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      course.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesSubject = filters.subject === 'all' || course.subject === filters.subject;
     const matchesLevel = filters.level === 'all' || course.level === filters.level;
     const matchesDuration = filters.duration === 'all' || course.duration === filters.duration;
     const matchesDifficulty = filters.difficulty === 'all' || course.difficulty === filters.difficulty;
     const matchesTab = activeTab === 'All Results' || course.subject === activeTab;
-    
+
     return matchesSearch && matchesSubject && matchesLevel && matchesDuration && matchesDifficulty && matchesTab;
   });
 
@@ -150,12 +161,12 @@ export default function CoursesPage() {
         {/* Background Overlay for Depth */}
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan-400/20 to-transparent blur-3xl"></div>
-        
+
         <div className="container relative mx-auto px-4 md:px-8 z-10 max-w-6xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-10 tracking-tight font-headline">
             Search
           </h1>
-          
+
           {/* Large Pill Search Bar */}
           <div className="relative max-w-4xl mb-8 group">
             <div className="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
@@ -174,22 +185,21 @@ export default function CoursesPage() {
               </Button>
             </div>
           </div>
-          
+
           <div className="text-cyan-100 text-lg mb-8 font-medium">
             1 - {filteredCourses.length} of {allCourses.length} search results
           </div>
-          
+
           {/* SCU-style Category Tabs */}
           <div className="flex flex-wrap gap-2 mt-8">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 rounded-t-xl font-semibold text-lg transition-all duration-300 ${
-                  activeTab === tab 
-                    ? 'bg-white text-[#043370] shadow-[0_-4px_15px_rgba(0,0,0,0.1)]' 
+                className={`px-6 py-3 rounded-t-xl font-semibold text-lg transition-all duration-300 ${activeTab === tab
+                    ? 'bg-white text-[#043370] shadow-[0_-4px_15px_rgba(0,0,0,0.1)]'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}
+                  }`}
               >
                 {tab}
               </button>
@@ -215,30 +225,30 @@ export default function CoursesPage() {
               <SlidersHorizontal className="w-5 h-5 mr-2" />
               Filter By:
             </div>
-            
-            <FilterDropdown 
-              label="Subject Area" 
-              options={filterOptions.subject} 
+
+            <FilterDropdown
+              label="Subject Area"
+              options={filterOptions.subject}
               value={filters.subject}
-              onChange={(val) => setFilters({...filters, subject: val})}
+              onChange={(val) => setFilters({ ...filters, subject: val })}
             />
-            <FilterDropdown 
-              label="Level" 
-              options={filterOptions.level} 
+            <FilterDropdown
+              label="Level"
+              options={filterOptions.level}
               value={filters.level}
-              onChange={(val) => setFilters({...filters, level: val})}
+              onChange={(val) => setFilters({ ...filters, level: val })}
             />
-            <FilterDropdown 
-              label="Duration" 
-              options={filterOptions.duration} 
+            <FilterDropdown
+              label="Duration"
+              options={filterOptions.duration}
               value={filters.duration}
-              onChange={(val) => setFilters({...filters, duration: val})}
+              onChange={(val) => setFilters({ ...filters, duration: val })}
             />
-            <FilterDropdown 
-              label="Difficulty" 
-              options={filterOptions.difficulty} 
+            <FilterDropdown
+              label="Difficulty"
+              options={filterOptions.difficulty}
               value={filters.difficulty}
-              onChange={(val) => setFilters({...filters, difficulty: val})}
+              onChange={(val) => setFilters({ ...filters, difficulty: val })}
             />
           </div>
         </div>
@@ -252,7 +262,7 @@ export default function CoursesPage() {
             <h2 className="text-xl md:text-2xl font-serif text-slate-800 dark:text-slate-100">
               <span className="font-bold">{filteredCourses.length}</span> results found
             </h2>
-            
+
             {hasActiveFilters && (
               <div className="flex items-center gap-2 flex-wrap">
                 {Object.entries(filters).map(([key, value]) => {
@@ -261,8 +271,8 @@ export default function CoursesPage() {
                     <div key={key} className="flex items-center bg-white border dark:bg-slate-800 dark:border-slate-700 shadow-sm rounded px-3 py-1.5 text-sm">
                       <span className="text-slate-600 dark:text-slate-300 mr-2 uppercase text-xs font-bold tracking-wider">{key}:</span>
                       <span className="font-medium text-slate-900 dark:text-white mr-2">{value}</span>
-                      <button 
-                        onClick={() => setFilters({...filters, [key]: 'all'})}
+                      <button
+                        onClick={() => setFilters({ ...filters, [key]: 'all' })}
                         className="text-slate-400 hover:text-red-500 transition-colors"
                       >
                         <X className="w-4 h-4" />
@@ -270,7 +280,7 @@ export default function CoursesPage() {
                     </div>
                   );
                 })}
-                <button 
+                <button
                   onClick={clearFilters}
                   className="text-sm font-semibold text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 ml-2"
                 >
