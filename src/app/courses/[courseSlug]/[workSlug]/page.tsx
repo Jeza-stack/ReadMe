@@ -16,23 +16,25 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params }: any) {
-  const work = getLiteraryWork(params.courseSlug, params.workSlug);
+export async function generateMetadata({ params }: { params: Promise<{ courseSlug: string, workSlug: string }> }) {
+  const { courseSlug, workSlug } = await params;
+  const work = getLiteraryWork(courseSlug, workSlug);
   if (!work) return { title: 'Work not found' };
   return {
     title: `${work.title} by ${work.author} | CEFR English`,
-    description: `An analysis of ${work.title}, part of the ${params.courseSlug} course.`,
+    description: `An analysis of ${work.title}, part of the ${courseSlug} course.`,
   };
 }
 
-export default function LiteraryWorkPage({ params }: any) {
-  const work = getLiteraryWork(params.courseSlug, params.workSlug);
+export default async function LiteraryWorkPage({ params }: { params: Promise<{ courseSlug: string, workSlug: string }> }) {
+  const { courseSlug, workSlug } = await params;
+  const work = getLiteraryWork(courseSlug, workSlug);
   if (!work) notFound();
 
-  const existingCourse = getCourses().find(c => c.slug === params.courseSlug);
+  const existingCourse = getCourses().find(c => c.slug === courseSlug);
   const courseFallbacks: Record<string, any> = {};
-  const fallback = courseFallbacks[params.courseSlug];
-  const courseLabel = existingCourse?.name ?? fallback?.name ?? params.courseSlug
+  const fallback = courseFallbacks[courseSlug];
+  const courseLabel = existingCourse?.name ?? fallback?.name ?? courseSlug
     .split('-')
     .map((s: string) => s.charAt(0).toUpperCase() + s.slice(1))
     .join(' ');
@@ -42,7 +44,7 @@ export default function LiteraryWorkPage({ params }: any) {
       <BackNav 
         crumbs={[
           { label: 'Home', href: '/' },
-          { label: courseLabel, href: `/courses/${params.courseSlug}` }
+          { label: courseLabel, href: `/courses/${courseSlug}` }
         ]} 
         current={work.title} 
       />
@@ -73,7 +75,7 @@ export default function LiteraryWorkPage({ params }: any) {
       <div className="border-t border-slate-200 dark:border-slate-800 py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl flex justify-between items-center">
           <Link
-            href={`/courses/${params.courseSlug}`}
+            href={`/courses/${courseSlug}`}
             className="inline-flex items-center gap-2 font-semibold text-[#043370] dark:text-cyan-400 hover:text-[#00A2C9] dark:hover:text-[var(--ce-golden-yellow)] transition-colors group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
