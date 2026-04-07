@@ -140,7 +140,10 @@ export async function generateStaticParams() {
   const existing = getCourses()
     .filter((c) => c && c.slug)
     .map((c) => ({ courseSlug: c.slug }));
-  const newSlugs = Object.keys(courseFallbacks).map((slug) => ({ courseSlug: slug }));
+  const existingSlugs = new Set(existing.map((e) => e.courseSlug));
+  const newSlugs = Object.keys(courseFallbacks)
+    .filter((slug) => !existingSlugs.has(slug))
+    .map((slug) => ({ courseSlug: slug }));
   return [...existing, ...newSlugs];
 }
 
