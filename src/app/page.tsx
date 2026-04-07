@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense, useEffect } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import {
   ChevronDown,
   BookOpen,
@@ -153,6 +154,16 @@ const allCourses = [
 const ITEMS_PER_PAGE = 8;
 
 export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#f8fafc] dark:bg-slate-950 text-[#043370] dark:text-cyan-400 font-bold">Loading...</div>}>
+      <HomeContent />
+    </Suspense>
+  );
+}
+
+function HomeContent() {
+  const searchParams = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [filters, setFilters] = useState({
     subject: 'all',
@@ -168,11 +179,31 @@ export default function Home() {
     difficulty: Array.from(new Set(allCourses.map(c => c.difficulty))),
   };
 
-  const hasActiveFilters = Object.values(filters).some(v => v !== 'all');
+  useEffect(() => {
+    if (searchParams) {
+      const q = searchParams.get('search');
+      if (q) {
+        setSearchQuery(q);
+        setTimeout(() => {
+          const el = document.getElementById('courses');
+          if (el) {
+            const y = el.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 300);
+      }
+    }
+  }, [searchParams]);
+
+  const hasActiveFilters = Object.values(filters).some(v => v !== 'all') || searchQuery !== '';
 
   const clearFilters = () => {
     setFilters({ subject: 'all', level: 'all', duration: 'all', difficulty: 'all' });
+    setSearchQuery('');
     setCurrentPage(1);
+    if (searchQuery) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
   };
 
   const filteredCourses = allCourses.filter((course) => {
@@ -181,7 +212,12 @@ export default function Home() {
     const matchesDuration = filters.duration === 'all' || course.duration === filters.duration;
     const matchesDifficulty = filters.difficulty === 'all' || course.difficulty === filters.difficulty;
 
-    return matchesSubject && matchesLevel && matchesDuration && matchesDifficulty;
+    const matchesSearch = !searchQuery || 
+      course.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      course.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      course.level.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return matchesSubject && matchesLevel && matchesDuration && matchesDifficulty && matchesSearch;
   });
 
   const totalPages = Math.ceil(filteredCourses.length / ITEMS_PER_PAGE);
@@ -285,6 +321,11 @@ export default function Home() {
             </h2>
             <p className="text-slate-500 dark:text-slate-400 font-body">
               Displaying <span className="font-bold text-[#043370] dark:text-cyan-400">{filteredCourses.length}</span> programs available for enrollment
+              {searchQuery && (
+                <span className="ml-2">
+                  matching <span className="font-bold text-[#043370] dark:text-white">&quot;{searchQuery}&quot;</span>
+                </span>
+              )}
             </p>
           </div>
 
