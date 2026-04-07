@@ -147,8 +147,8 @@ export async function generateStaticParams() {
   return [...existing, ...newSlugs];
 }
 
-export async function generateMetadata({ params }: any) {
-  const slug: string = params?.courseSlug ?? '';
+export async function generateMetadata({ params }: { params: Promise<{ courseSlug: string }> }) {
+  const { courseSlug: slug } = await params;
   const existing = getCourse(slug);
   const fallback = courseFallbacks[slug];
   const name = existing?.name ?? fallback?.name ?? slug.replace(/-/g, ' ').toUpperCase();
@@ -159,8 +159,8 @@ export async function generateMetadata({ params }: any) {
   };
 }
 
-export default function CoursePage({ params }: any) {
-  const slug: string = params.courseSlug;
+export default async function CoursePage({ params }: { params: Promise<{ courseSlug: string }> }) {
+  const { courseSlug: slug } = await params;
   const existingCourse = getCourse(slug);
 
   // Build a unified typed object
