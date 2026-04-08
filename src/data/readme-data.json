@@ -2617,8 +2617,32 @@
                 {
                   "word": "Synthesizing",
                   "definition": "Combining a number of things into a coherent whole.",
-                  "connotation": "A high-level cognitive skill of bringing ideas together.",
+                  "connotation": "A high-level cognitive skill of bringing disparate data points together.",
                   "example": "The analyst synthesized the raw data into an actionable report."
+                },
+                {
+                  "word": "Skimming",
+                  "definition": "Reading or glancing through quickly to note only the important points.",
+                  "connotation": "A necessary survival skill for high-volume email workflows.",
+                  "example": "By skimming the executive summary, she understood the project's goal instantly."
+                },
+                {
+                  "word": "Scanning",
+                  "definition": "Looking quickly but thoroughly over a text in order to locate specific information.",
+                  "connotation": "Laser-focused extraction of single data points.",
+                  "example": "He was scanning the spreadsheet specifically for Q4 losses."
+                },
+                {
+                  "word": "Gist",
+                  "definition": "The substance or essence of a speech or text.",
+                  "connotation": "The absolute minimum viable information needed to respond.",
+                  "example": "I didn't read the whole book, but I got the gist of the plot."
+                },
+                {
+                  "word": "Graphic Literacy",
+                  "definition": "The ability to look at visual data (charts, graphs, diagrams) and extract meaning.",
+                  "connotation": "A fundamental corporate skill bridging mathematics and English.",
+                  "example": "Her graphic literacy allowed her to spot the downward sales trend immediately."
                 }
               ],
               "authorInfo": {
@@ -2636,18 +2660,30 @@
                   "Efficiency"
                 ],
                 "literaryDevices": [],
-                "criticalAnalysis": "Workplace English shifts the focus from literary interpretation to rapid accuracy and data synthesis.",
+                "criticalAnalysis": "Unit V acts as the bridge between academic theoretical English and hyper-functional corporate English. In academia, reading speed is secondary to deep philosophical comprehension. In the workplace, high-volume reading (skimming) and extremely rapid data extraction (scanning) are prerequisites for survival. By teaching graphic literacy and active note-making, the curriculum successfully detaches English from heavy literature and re-attaches it to utility, efficiency, and real-world economics.",
                 "relevance": "Absolute necessity for modern corporate and remote-work environments."
               },
               "faqs": [
                 {
-                  "question": "What is the difference between skimming and scanning?",
-                  "answer": "Skimming is for getting the main idea (reading headers, first sentences). Scanning is hunting for a specific keyword or number quickly."
+                  "question": "What is the exact functional difference between Skimming and Scanning?",
+                  "answer": "Skimming is used to get the general 'gist' or main idea of a large document (e.g., reading the first sentence of every paragraph). Scanning is used when you already know exactly what you are looking for, hunting for a specific keyword or number (e.g., finding a gate number on a flight board)."
+                },
+                {
+                  "question": "Why is note-TAKING considered passive while note-MAKING is active?",
+                  "answer": "Note-taking is mechanically transcribing exactly what someone is saying, word for word. Note-making requires active listening: the student digests the information and writes down their own synthesized interpretation and structural connections."
+                },
+                {
+                  "question": "How does Graphic Literacy apply to English competency?",
+                  "answer": "Modern workplace English heavily relies on interpreting data visually. If you cannot look at a Y-axis and an X-axis and subsequently write a localized, accurate sentence summarizing the trend, your English competency is incomplete."
+                },
+                {
+                  "question": "What is the Cornell Method of note-making?",
+                  "answer": "It is a highly structured system where the page is divided into a narrow left column (for main keywords/cues) and a wide right column (for actual notes), with a summary box at the bottom. It forces active synthesis."
                 }
               ],
               "quiz": [
                 {
-                  "question": "If you are looking at a flight departure board to find which gate goes to New York, are you skimming or scanning?",
+                  "question": "If you are looking at a crowded train departure board to find which platform goes to London, which reading technique are you using?",
                   "options": [
                     "Skimming",
                     "Scanning",
@@ -2655,7 +2691,40 @@
                     "Note-taking"
                   ],
                   "correctAnswer": "Scanning",
-                  "explanation": "You are looking for a highly specific piece of information (New York / Gate number), which involves scanning."
+                  "explanation": "You are looking for a highly specific, localized piece of information ( London / Platform number ), which is the definition of scanning."
+                },
+                {
+                  "question": "If you rapidly read the title, headings, and concluding paragraph of a 50-page report before a meeting to understand the overall topic, what are you doing?",
+                  "options": [
+                    "Deep Reading",
+                    "Scanning",
+                    "Skimming",
+                    "Editing"
+                  ],
+                  "correctAnswer": "Skimming",
+                  "explanation": "By hitting the major structural markers to get the 'gist' without reading every word, you are skimming."
+                },
+                {
+                  "question": "Which of the following describes 'Note-Making' rather than primitive 'Note-Taking'?",
+                  "options": [
+                    "Typing exactly what the lecturer says word-for-word",
+                    "Recording the audio on your phone",
+                    "Organizing the core ideas into your own custom flowchart",
+                    "Photographing the whiteboard"
+                  ],
+                  "correctAnswer": "Organizing the core ideas into your own custom flowchart",
+                  "explanation": "Note-making is an active process. Drawing a flowchart means you have synthesized the raw audio and converted it into a new structure."
+                },
+                {
+                  "question": "In a standard line graph representing corporate profits over a year, what does the horizontal X-axis typically represent?",
+                  "options": [
+                    "Total Revenue",
+                    "Time (Months)",
+                    "Employee count",
+                    "The company goal"
+                  ],
+                  "correctAnswer": "Time (Months)",
+                  "explanation": "Standard graphic literacy dictates that the independent variable (typically Time) rests on the horizontal X-axis, while the dependent variable (Profits) rests on the Y-axis."
                 }
               ]
             }
@@ -5443,10 +5512,34 @@
               "fullText": "ENGLISH FOR WORKPLACE\n\n1. Job Applications (Cover Letters, CV, Resume)\n- CV (Curriculum Vitae): A detailed, multi-page document outlining your entire academic and professional history. Used mostly in academia or Europe/Asia.\n- Resume: A short, targeted one-page summary of your experience specific to the job you are applying for (common in North America).\n- Cover Letter: A narrative document introducing the resume, explaining 'why' you are perfect for the company culture.\n\n2. Creating a Digital Profile (LinkedIn)\n- Headlines should be outcome-oriented rather than just a job title (e.g., 'Transforming Data into Insights | BI Analyst' rather than just 'Data Analyst').\n- The Summary must be written in the first person.\n\n3. Form Filling & Transactions\n- The language of UI/UX is highly specific: 'Submit', 'Authorize', 'Authenticate', 'Mandatory Fields'. Comprehending banking, railway, and online account creation jargon is basic survival English.\n\n4. Body Language (Kinesics)\n- Maintain a naturally upright posture.\n- Mirrored body language builds subconscious rapport.\n- Fidgeting (playing with pens, touching hair) communicates anxiety and under-confidence.",
               "difficultWords": [
                 {
-                  "word": "Kinesics",
-                  "definition": "The study of the way in which certain body movements and gestures serve as a form of non-verbal communication.",
-                  "connotation": "A scientific approach to body language.",
-                  "example": "Her kinesics during the interview showed extreme confidence."
+                  "word": "Curriculum Vitae (CV)",
+                  "definition": "A brief account of a person's education, qualifications, and previous experience, typically sent with a job application.",
+                  "connotation": "A highly academic, extremely comprehensive chronological document that can span several pages.",
+                  "example": "The professor submitted his 10-page CV outlining every publication."
+                },
+                {
+                  "word": "Resume",
+                  "definition": "A brief document summarizing a person's education, work experience, and skills.",
+                  "connotation": "A punchy, heavily tailored, one-to-two page document designed for immediate corporate impact.",
+                  "example": "She tailored her resume specifically for the marketing role."
+                },
+                {
+                  "word": "Chronological",
+                  "definition": "Starting with the earliest and following the order in which they occurred.",
+                  "connotation": "A rigid, expected timeline format in professional documentation.",
+                  "example": "List your employment history in reverse chronological order."
+                },
+                {
+                  "word": "Authentication",
+                  "definition": "The process or action of proving or showing something to be true, genuine, or valid.",
+                  "connotation": "A critical digital survival skill ensuring financial and data security.",
+                  "example": "Setting up two-factor authentication on the portal is mandatory."
+                },
+                {
+                  "word": "Digital Footprint",
+                  "definition": "The information about a particular person that exists on the internet as a result of their online activity.",
+                  "connotation": "A permanent, often inescapable public profile that employers rigorously search.",
+                  "example": "He aggressively cleaned up his digital footprint before the interview."
                 }
               ],
               "authorInfo": {
@@ -5464,21 +5557,71 @@
                   "Non-verbal communication"
                 ],
                 "literaryDevices": [],
-                "criticalAnalysis": "In the modern era, English proficiency guarantees nothing if a candidate's digital profile and physical presence are poorly communicated.",
+                "criticalAnalysis": "Unit V of English IV fundamentally shifts from theoretical English into high-stakes 'survival' English for the digital age. Writing an effective Resume or Covering Letter is less about vocabulary and entirely about narrative self-marketing and extreme brevity. Furthermore, teaching students the syntactical nature of digital forms (banking, train reservations, digital footprints) acknowledges that in the 21st century, the inability to navigate a digital interface or curate a secure online profile is functionally equivalent to illiteracy.",
                 "relevance": "Directly translates to a student's ability to get hired."
               },
-              "faqs": [],
+              "faqs": [
+                {
+                  "question": "What is the primary difference between a CV and a Resume?",
+                  "answer": "A Curriculum Vitae (CV) is static, extremely long, and comprehensive, detailing every academic publication, award, and job ever held. A Resume is dynamic, typically strictly one page, and highly tailored to highlight only the skills relevant to the specific job being applied for."
+                },
+                {
+                  "question": "Why is LinkedIn considered a 'Digital Profile' rather than just a digital resume?",
+                  "answer": "LinkedIn operates as a living network. While it holds resume data, advanced competency requires utilizing it for active networking, publishing industry thought-leadership, and managing an ongoing public 'brand', distinguishing it from a static PDF."
+                },
+                {
+                  "question": "What is the purpose of a Covering Letter if you already have a Resume?",
+                  "answer": "The Resume provides the raw data (the 'What' and 'When'). The Covering Letter provides the narrative (the 'Why' and 'How'). It allows you to directly target the hiring manager, explain employment gaps, and weave your data into a compelling argument for why you fit the company culture."
+                },
+                {
+                  "question": "What are the core technical writing skills needed for filling out complex online forms?",
+                  "answer": "Accuracy, abbreviation mastery, and strict adherence to specific data syntaxes (e.g., DD/MM/YYYY vs. MM/DD/YYYY, recognizing mandatory asterisks, and utilizing proper alphanumeric casing for secure passwords)."
+                }
+              ],
               "quiz": [
                 {
-                  "question": "Which document is typically a short, 1-page summary highly targeted toward a specific job application?",
+                  "question": "If you are applying for a highly academic research position at a university and need to list every paper you have ever published, which document should you use?",
                   "options": [
-                    "A Curriculum Vitae (CV)",
-                    "A Resume",
                     "A Cover Letter",
-                    "A LinkedIn Profile"
+                    "A Resume",
+                    "A Curriculum Vitae (CV)",
+                    "A LinkedIn Post"
                   ],
-                  "correctAnswer": "A Resume",
-                  "explanation": "A resume is a brief, targeted summary, whereas a CV is a comprehensive, multi-page academic and professional history."
+                  "correctAnswer": "A Curriculum Vitae (CV)",
+                  "explanation": "A CV is the standard academic document designed to be comprehensive and multi-page, holding all publications and deep history."
+                },
+                {
+                  "question": "What is the recommended maximum length for a standard corporate Resume for an entry-level candidate?",
+                  "options": [
+                    "One page",
+                    "Three pages",
+                    "Five pages",
+                    "Ten pages"
+                  ],
+                  "correctAnswer": "One page",
+                  "explanation": "For standard entry to mid-level corporate roles, a punchy, highly tailored one-page resume is widely considered the maximum effective length."
+                },
+                {
+                  "question": "When building a LinkedIn digital profile, what is often considered the most critical visually validating element alongside your experience?",
+                  "options": [
+                    "A list of your hobbies",
+                    "A professional, clear headshot photo",
+                    "Your political views",
+                    "Links to your video games"
+                  ],
+                  "correctAnswer": "A professional, clear headshot photo",
+                  "explanation": "A professional headshot massively increases profile engagement and establishes immediate legitimacy and trust in digital networks."
+                },
+                {
+                  "question": "In modern online manual forms (like banking or reservations), what does a small red asterisk (*) next to a field indicate?",
+                  "options": [
+                    "The field is optional",
+                    "The field is mathematically verified",
+                    "The field is mandatory and must be filled out",
+                    "The field contains an error"
+                  ],
+                  "correctAnswer": "The field is mandatory and must be filled out",
+                  "explanation": "The universally accepted UI syntax for online forms is that a red asterisk signifies a required field."
                 }
               ]
             }
