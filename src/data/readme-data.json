@@ -2487,7 +2487,38 @@
               "category": "Unit IV: Language Competency",
               "author": "Grammar Guide",
               "fullText": "LANGUAGE COMPETENCY CONCEPTS\n\n1. Homonyms, Homophones, Homographs, and Portmanteau words\n- Homophones: Sound the same, spelt differently (e.g., bare/bear, to/too/two).\n- Homographs: Spelt the same, pronounced differently (e.g., lead /lɛd/ vs lead /liːd/).\n- Homonyms: Both homophones and homographs—spelt and sound the same but mean different things (e.g., a tree 'bark' vs a dog's 'bark').\n- Portmanteau: A blend of words in which parts of multiple words are combined into a new word (e.g., smog = smoke + fog, brunch = breakfast + lunch).\n\n2. Verbs and Tenses & Subject-Verb Agreement\n- Rule 1: A singular subject takes a singular verb (He runs). A plural subject takes a plural verb (They run).\n- Rule 2: Two singular subjects connected by 'or' or 'nor' require a singular verb. (Neither John nor Mary is here.)\n- Rule 3: Ignore words that come between the subject and the verb (The colors of the rainbow are beautiful). \n\n3. Common Error Correction\n- Incorrect: One of the student is missing.\n- Correct: One of the students is missing. (Rule: 'One of the' is followed by a plural noun but a singular verb).\n- Incorrect: She is married with a doctor.\n- Correct: She is married to a doctor.",
-              "difficultWords": [],
+              "difficultWords": [
+                {
+                  "word": "Homophone",
+                  "definition": "Each of two or more words having the same pronunciation but different meanings, origins, or spelling.",
+                  "connotation": "A phonetic trap for writers communicating via text.",
+                  "example": "Understanding the difference between 'their', 'there', and 'they're' is crucial."
+                },
+                {
+                  "word": "Homograph",
+                  "definition": "Each of two or more words spelled the same but not necessarily pronounced the same and having different meanings and origins.",
+                  "connotation": "A visual trap that requires surrounding sentence context to decode.",
+                  "example": "Please record the record."
+                },
+                {
+                  "word": "Portmanteau",
+                  "definition": "A word blending the sounds and combining the meanings of two others.",
+                  "connotation": "Reflects the highly efficient, evolving, and modular nature of modern English.",
+                  "example": "Smog (smoke + fog) is a classic portmanteau."
+                },
+                {
+                  "word": "Syntax",
+                  "definition": "The arrangement of words and phrases to create well-formed sentences in a language.",
+                  "connotation": "The architectural invisible framework holding communication together.",
+                  "example": "His poor syntax made the email impossible to understand."
+                },
+                {
+                  "word": "Agreement",
+                  "definition": "The correspondence of a verb with its subject in person and number.",
+                  "connotation": "A rigid rule demonstrating grammatical harmony and precision.",
+                  "example": "Subject-verb agreement is the foundation of formal writing."
+                }
+              ],
               "authorInfo": {
                 "biography": "Based on 'Advanced English Grammar' by Martin Hewings and standard linguistic frameworks.",
                 "historicalContext": "Essential for standard professional English.",
@@ -2503,26 +2534,71 @@
                   "Vocabulary"
                 ],
                 "literaryDevices": [],
-                "criticalAnalysis": "Mastery of these rules marks the transition from conversational fluency to professional mastery.",
+                "criticalAnalysis": "Unlike literary prose, Language Competency demands an entirely different cognitive processing style. It removes the subjectivity of interpretation and replaces it with mathematical rigidity. The mastery of syntax (subject-verb agreement) and lexical nuance (homographs, portmanteaus) does not just correct bad writing—it eliminates ambiguity. In practical workplace scenarios, a misplaced preposition or a shattered verb agreement can completely alter the legal or operational directive of an email communication. Thus, studying structural grammar is studying the architecture of clarity.",
                 "relevance": "Critical for passing proficiency writing exams and conducting formal workplace communications."
               },
               "faqs": [
                 {
-                  "question": "What is a 'Portmanteau'?",
-                  "answer": "It is a word created by blending two words together, like 'Motel' (Motor + Hotel) or 'Podcast' (iPod + Broadcast)."
+                  "question": "What is the primary difference between a homophone and a homograph?",
+                  "answer": "A homophone sounds exactly the same but is incredibly different in spelling and meaning (like bare vs. bear). A homograph looks exactly the same in spelling, but has a wildly different meaning and sometimes a different pronunciation (like lead (metal) vs. lead (guide))."
+                },
+                {
+                  "question": "Why do Portmanteau words exist?",
+                  "answer": "Portmanteau words exist because language evolves efficiently to describe new cultural phenomena without requiring entirely new vocabulary. Instead of saying 'a broadcast on an iPod', the culture simply combined them into 'Podcast'."
+                },
+                {
+                  "question": "What is the golden rule of Subject-Verb Agreement?",
+                  "answer": "The central rule is that a singular subject must take a singular verb (The dog runs), and a plural subject must take a plural verb (The dogs run). Everything else layered between the subject and verb must be ignored by the writer."
+                },
+                {
+                  "question": "Why is the sentence 'One of my friend live in London' completely incorrect?",
+                  "answer": "The phrase 'One of my...' insists on a plural noun because you must have multiple items to select 'one' from (so 'friends'). However, the actual subject of the sentence is the singular 'One', meaning the verb must be singular ('lives'). Thus: 'One of my friends lives in London.'"
                 }
               ],
               "quiz": [
                 {
-                  "question": "Choose the correct sentence.",
+                  "question": "Which of the following is a classic example of a Portmanteau?",
                   "options": [
-                    "One of my friend live in London.",
-                    "One of my friends live in London.",
-                    "One of my friends lives in London.",
-                    "One of my friend lives in London."
+                    "Unbelievable",
+                    "Brunch",
+                    "Therefore",
+                    "Prehistoric"
                   ],
-                  "correctAnswer": "One of my friends lives in London.",
-                  "explanation": "The phrase 'One of the' must be followed by a plural noun ('friends') but since the actual subject is 'One', the verb must be singular ('lives')."
+                  "correctAnswer": "Brunch",
+                  "explanation": "Brunch is a perfect blend of the words 'Breakfast' and 'Lunch'."
+                },
+                {
+                  "question": "Which of the following pairs represent Homophones?",
+                  "options": [
+                    "Read / Read",
+                    "Bark / Bark",
+                    "There / Their",
+                    "Lead / Lead"
+                  ],
+                  "correctAnswer": "There / Their",
+                  "explanation": "They sound completely identical but have vastly different spellings and meanings."
+                },
+                {
+                  "question": "Identify the sentence with CORRECT subject-verb agreement:",
+                  "options": [
+                    "The group of students are waiting outside.",
+                    "Neither John nor Mary are here.",
+                    "The colors of the rainbow is beautiful.",
+                    "One of the students is missing."
+                  ],
+                  "correctAnswer": "One of the students is missing.",
+                  "explanation": "'One' is a singular subject, so 'is' is the correct singular verb, despite the plural noun 'students' appearing right next to it."
+                },
+                {
+                  "question": "Identify the sentence devoid of prepositional errors:",
+                  "options": [
+                    "She is married with a doctor.",
+                    "He prefers coffee than tea.",
+                    "She is married to a doctor.",
+                    "They discussed about the problem."
+                  ],
+                  "correctAnswer": "She is married to a doctor.",
+                  "explanation": "In English, the correct preposition for marriage is 'married to', not 'married with'."
                 }
               ]
             }
@@ -5241,10 +5317,34 @@
               "fullText": "LANGUAGE COMPETENCY CONCEPTS\n\n1. Refuting, Arguing & Debating\n- Refuting: To formally prove a statement or theory to be wrong or false. Requires transitional phrases like 'While I understand your point, the data suggests...' or 'That assumption overlooks...'.\n- Debating: A formalized structure of presenting an argument, requiring claim, evidence, and impact.\n\n2. Making Suggestions & Responding\n- Modals of Advice: Using 'could', 'should', 'might want to' instead of commands.\n- Asking for help: 'I would appreciate your insight on...' rather than 'Tell me how to...'.\n\n3. Interview Mechanics\n- Face to Face: Relies heavily on non-verbal cues. 55% of communication is physical.\n- Telephone: Requires hyper-articulation and active listening sounds ('I see', 'Yes', 'Understood') since physical cues are missing.\n- Video Conferencing: Involves managing digital latency, eye contact directly into the camera lens, and background curation.",
               "difficultWords": [
                 {
-                  "word": "Defensibility",
-                  "definition": "The quality of being justifiable by argument.",
-                  "connotation": "A robust, bulletproof argument.",
-                  "example": "The defensibility of your thesis is questionable."
+                  "word": "Refutation",
+                  "definition": "The action of proving a statement or theory to be wrong or false.",
+                  "connotation": "A highly aggressive, logic-driven dismantling of an opponent's core argument.",
+                  "example": "Her rapid refutation of his central thesis won the debate."
+                },
+                {
+                  "word": "Concede",
+                  "definition": "To admit that something is true or valid after first denying or resisting it.",
+                  "connotation": "Reflects intellectual maturity and conversational strategy.",
+                  "example": "I concede that your data is accurate, however, your conclusion is flawed."
+                },
+                {
+                  "word": "Rhetoric",
+                  "definition": "The art of effective or persuasive speaking or writing.",
+                  "connotation": "Often associated with political speeches or highly structured arguments.",
+                  "example": "His powerful rhetoric moved the entire audience."
+                },
+                {
+                  "word": "Rebuttal",
+                  "definition": "A contradiction; a counterargument offered in response to a claim.",
+                  "connotation": "A formalized, structured defense mechanism in debating.",
+                  "example": "The defense attorney presented a fierce rebuttal."
+                },
+                {
+                  "word": "Fallacy",
+                  "definition": "A mistaken belief, especially one based on unsound argument.",
+                  "connotation": "A fatal weakness in logic that completely invalidates an opponent's point.",
+                  "example": "Assuming correlation implies causation is a common logical fallacy."
                 }
               ],
               "authorInfo": {
@@ -5262,26 +5362,71 @@
                   "Adaptation"
                 ],
                 "literaryDevices": [],
-                "criticalAnalysis": "True fluency is not just vocabulary; it's the ability to modulate tone based on the emotional objective of the conversation.",
+                "criticalAnalysis": "Advanced Language Competency transitions the student from merely communicating to actively persuading. At the C1/C2 CEFR level, English is no longer just vocabulary and grammar; it is a weapon of rhetorical influence. Teaching advanced professionals how to structure rebuttals, execute logical refutations, and navigate the psychological asymmetry of digital interviews prepares them to dominate high-stakes environments, such as corporate boardrooms or international diplomatic relations.",
                 "relevance": "Essential for corporate environments and high-level academic discourse."
               },
               "faqs": [
                 {
-                  "question": "Why is telephone interviewing considered uniquely difficult?",
-                  "answer": "Because it completely strips away body language, forcing the candidate to rely 100% on tone of voice and articulation to convey enthusiasm and competence."
+                  "question": "What is the primary difference between Arguing and Debating?",
+                  "answer": "Arguing is typically driven by raw emotion and a desire to 'win' a personal conflict without rules. Debating is an advanced, highly structured intellectual exercise governed by logic, evidence, and strict rules of engagement, focused on finding objective truth."
+                },
+                {
+                  "question": "Why is 'Concession' considered a powerful debate tool instead of a weakness?",
+                  "answer": "Conceding a minor, objectively true point demonstrates intellectual honesty and rationality to the audience. It makes your subsequent counter-attacks far more credible because you are not arguing blindly."
+                },
+                {
+                  "question": "What are the core pillars of effectively giving advice?",
+                  "answer": "Effective advice is non-prescriptive. Instead of saying 'You MUST do this', advanced language competency suggests utilizing hypotheticals ('Have you considered...', 'If I were in that situation, I might...'). This removes defensiveness."
+                },
+                {
+                  "question": "How does the syntax of an Interview differ from a standard Conversation?",
+                  "answer": "An interview is inherently asymmetrical. One party holds the conversational power (asking questions), forcing the subject into defensive or highly curated explanations. Mastering interviews requires 'bridging'—answering the question briefly, then steering the topic to what you want to talk about."
                 }
               ],
               "quiz": [
                 {
-                  "question": "When video conferencing, what is the best way to simulate direct eye contact with the interviewer?",
+                  "question": "In formal debating, what is the action of proving an opponent's specific point false called?",
                   "options": [
-                    "Looking at their face on the screen",
-                    "Looking directly into your device's camera lens",
-                    "Looking at your own picture",
-                    "Closing your eyes and focusing on their voice"
+                    "A Conclusion",
+                    "A Thesis",
+                    "A Refutation",
+                    "A Concession"
                   ],
-                  "correctAnswer": "Looking directly into your device's camera lens",
-                  "explanation": "Looking at the screen makes it appear as if you are looking down. To create the illusion of eye contact, you must look directly into the camera lens."
+                  "correctAnswer": "A Refutation",
+                  "explanation": "Refutation is the specific, directed act of proving an opponent's argument entirely false using logic and evidence."
+                },
+                {
+                  "question": "Which phrase is the most highly effective, non-aggressive way to make a suggestion in a workplace?",
+                  "options": [
+                    "You need to fix this.",
+                    "Have you perhaps considered approaching it this way?",
+                    "Why did you do that?",
+                    "Do it differently."
+                  ],
+                  "correctAnswer": "Have you perhaps considered approaching it this way?",
+                  "explanation": "Advanced competency relies on hypotheticals and soft questions to suggest changes without triggering an ego response."
+                },
+                {
+                  "question": "What is a 'Logical Fallacy'?",
+                  "options": [
+                    "A mathematical truth",
+                    "A flawless argument",
+                    "A structural error in reasoning that invalidates an argument",
+                    "A persuasive speech"
+                  ],
+                  "correctAnswer": "A structural error in reasoning that invalidates an argument",
+                  "explanation": "A logical fallacy (like ad-hominem or a strawman argument) represents a fatal breakdown in the actual structural logic of a debate point."
+                },
+                {
+                  "question": "When participating in a video conference interview, which non-verbal communicative marker is absolutely critical?",
+                  "options": [
+                    "Crossing your arms tightly",
+                    "Looking directly into the camera lens, not the screen",
+                    "Whispering",
+                    "Leaning far back in the chair"
+                  ],
+                  "correctAnswer": "Looking directly into the camera lens, not the screen",
+                  "explanation": "Digital interviews require hacking non-verbal communication. Looking into the lens simulates direct eye contact, whereas looking at the screen appears disconnected."
                 }
               ]
             }
