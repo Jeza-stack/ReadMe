@@ -4140,6 +4140,492 @@
       ]
     },
     {
+      "name": "English IV",
+      "slug": "english-4",
+      "description": "Upper-intermediate course focused on high-level professional interactions, autobiographical literature, one-act plays, and nuanced expression in academic settings.",
+      "image": "https://placehold.co/600x400.png",
+      "dataAiHint": "business meeting and theater",
+      "categories": [
+        {
+          "name": "Unit I: Life Writing",
+          "works": [
+            {
+              "title": "I am Malala (Chapter 1 Excerpt)",
+              "slug": "i-am-malala",
+              "category": "Unit I: Life Writing",
+              "author": "Malala Yousafzai",
+              "fullText": "[Chapter 1 Excerpt: A Daughter is Born]\n\nWhen I was born, people in our village commiserated with my mother and nobody congratulated my father. I arrived at dawn as the last star blinked out. We Pashtuns see this as an auspicious sign. My father didn't have any money for the hospital or for a midwife, so a neighbor helped at my birth.\n\nI was a girl in a land where rifles are fired in celebration of a son, while daughters are hidden away behind a curtain, their role in life simply to prepare food and give birth to children.\n\nFor most Pashtuns, it's a gloomy day when a daughter is born. My father’s cousin, Jehan Sher Khan Yousafzai, was one of the few who came to celebrate my birth and even gave a handsome gift of money. Yet, my father, Ziauddin Yousafzai, a teacher and an activist, looked at my newborn face and famously declared, “I know there is something different about this child.” He named me after Malalai of Maiwand, the greatest heroine of Afghanistan.\n\nMalalai was the daughter of a shepherd... when the Afghan fighters were losing to the British troops in 1880, she marched onto the battlefield with a flag and shouted: 'Young love! If you do not fall in the battle of Maiwand, by God someone is saving you as a symbol of shame.'\n\nHer words inspired the men to fight harder, and they drove the British back. But Malalai herself was killed. My father always told me the story of Malalai to remind me that we all have a voice, and a responsibility to use it.",
+              "difficultWords": [
+                {
+                  "word": "Commiserated",
+                  "definition": "Express or feel sympathy or pity; sympathize.",
+                  "connotation": "Carries a tone of shared sadness or mourning, deeply ironic that it's used for a birth.",
+                  "example": "She went over to commiserate with him on his loss."
+                },
+                {
+                  "word": "Auspicious",
+                  "definition": "Conducive to success; favorable.",
+                  "connotation": "A lucky, blessed, or promising sign from nature.",
+                  "example": "It was not the most auspicious moment to hold an election."
+                }
+              ],
+              "authorInfo": {
+                "biography": "Malala Yousafzai (born 1997) is a Pakistani education activist and the youngest Nobel Prize laureate in history. She survived an assassination attempt by the Taliban strictly because of her advocacy for girls' education.",
+                "historicalContext": "The autobiography is set in the Swat Valley in Pakistan during the early 21st-century rise of the Taliban regime.",
+                "writingStyle": "Direct, personal, conversational, and highly emotive autobiographical prose.",
+                "majorWorks": [
+                  "I Am Malala: The Girl Who Stood Up for Education and Was Shot by the Taliban"
+                ],
+                "influence": "A global icon for female education, basic human rights, and peaceful defiance."
+              },
+              "contentAnalysis": {
+                "summary": "This excerpt introduces Malala's origin story, highlighting the extreme patriarchal norms of her Pashtun culture where daughters are mourned rather than celebrated. Her father's deliberate choice to name her after a famous Afghan warrior, Malalai of Maiwand, foreshadows her destiny as a brave voice for female empowerment.",
+                "themes": [
+                  "Patriarchy and Gender Inequality",
+                  "Identity and Naming",
+                  "Courage and Voice"
+                ],
+                "literaryDevices": [
+                  {
+                    "device": "Foreshadowing",
+                    "example": "Naming her after a teenage girl who was shot while rallying warriors deeply foreshadows Malala’s own future."
+                  },
+                  {
+                    "device": "Contrast",
+                    "example": "The stark contrast between the traditional weeping over her birth and her father's immediate pride."
+                  }
+                ],
+                "criticalAnalysis": "By beginning her memoir with the cultural sorrow regarding female birth, Malala immediately hooks the reader into understanding the immense societal friction she had to overcome.",
+                "relevance": "A profound text for understanding global women's rights and cross-cultural memoirs."
+              },
+              "faqs": [
+                {
+                  "question": "Why didn't people congratulate her father?",
+                  "answer": "Because in deeply traditional Pashtun culture of that era, the birth of a female child was viewed as a disappointment and an economic burden, as opposed to the celebration of a male heir."
+                }
+              ],
+              "quiz": [
+                {
+                  "question": "Who is Malala named after?",
+                  "options": [
+                    "Her grandmother",
+                    "An Afghan heroine who died rallying troops",
+                    "A famous Pakistani poet",
+                    "A local political leader"
+                  ],
+                  "correctAnswer": "An Afghan heroine who died rallying troops",
+                  "explanation": "Her father named her after Malalai of Maiwand, famous for rallying Afghan troops against the British before being killed."
+                }
+              ]
+            },
+            {
+              "title": "My Inventions (Chapter 2 Excerpt)",
+              "slug": "my-inventions",
+              "category": "Unit I: Life Writing",
+              "author": "Nikola Tesla",
+              "fullText": "[Chapter 2 Excerpt: My First Efforts In Invention]\n\nI shall dwell briefly on these extraordinary experiences, on account of their possible interest to students of psychology and physiology and also because this period of agony was of the greatest consequence on my mental development and subsequent labors.\n\nBut it is indispensable to relate first the circumstances and conditions which preceded them. From childhood I was compelled to concentrate attention upon myself. This caused me much suffering, but to my present view, it was a blessing in disguise for it has taught me to appreciate the inestimable value of introspection in the preservation of life, as well as a means of achievement.\n\nThe continuous mental exertion... undoubtedly trained my powers of observation to such a degree that I could often read the thoughts of my associates. The pressure of work and incessant thinking told upon me, and I suffered a nervous breakdown.\n\nIt is difficult to convey the anguish I suffered. My pulse would vary from a few to two hundred and sixty beats. I could hear the ticking of a watch with three rooms between me and the time-piece. A fly alighting on a table in the room would cause a dull thud in my ear.\n\nWhen I was a boy of seven or eight I loved to dismantle and re-assemble watches, though I was more successful in the former than in the latter operation... During this period my father was a strict disciplinarian. My exercises were to guess one another's thoughts, to discover the defects of some form or expression, to repeat long sentences and to perform mental calculations. These daily lessons were intended to strengthen memory and reason.",
+              "difficultWords": [
+                {
+                  "word": "Introspection",
+                  "definition": "The examination or observation of one's own mental and emotional processes.",
+                  "connotation": "Refers to deep self-analysis.",
+                  "example": "Quiet introspection can be extremely valuable."
+                },
+                {
+                  "word": "Incessant",
+                  "definition": "Continuing without pause or interruption (usually regarding something unpleasant).",
+                  "connotation": "Suggests a relentless, overwhelming continuity.",
+                  "example": "The incessant beat of the music kept him awake."
+                }
+              ],
+              "authorInfo": {
+                "biography": "Nikola Tesla (1856–1943) was a Serbian-American inventor, electrical engineer, and futurist best known for designing the modern alternating current (AC) electricity supply system.",
+                "historicalContext": "Written in 1919 for the Electrical Experimenter magazine, providing insight into the mind of a misunderstood genius during the industrial revolution.",
+                "writingStyle": "Highly clinical, introspective, dense, and emotionally detached yet revealing.",
+                "majorWorks": [
+                  "My Inventions (Autobiography)"
+                ],
+                "influence": "Considered the blueprint for eccentric genius, paving the way for modern electrical grids and wireless communication."
+              },
+              "contentAnalysis": {
+                "summary": "Tesla discusses how his childhood environment—characterized by immense focus, strict mental exercises prescribed by his father, and periods of excruciating sensory overload—shaped his inventive mind. He claims his intense introspection and mental fatigue actually heightened his sensitivity to the world.",
+                "themes": [
+                  "Genius and Madness",
+                  "The Burden of Intellect",
+                  "Sensory Perception"
+                ],
+                "literaryDevices": [
+                  {
+                    "device": "Hyperbole",
+                    "example": "'A fly alighting on a table in the room would cause a dull thud in my ear.' Used to express his severe hypersensitivity."
+                  }
+                ],
+                "criticalAnalysis": "Tesla's writing reflects the classic trope of the 'tortured genius'. His detailed physiological descriptions of his nervous breakdowns suggest he experienced what modern psychology might classify as hyperacusis or a sensory processing disorder.",
+                "relevance": "A fascinating look at the psychological toll of profound intelligence."
+              },
+              "faqs": [
+                {
+                  "question": "What did Tesla mean when he said 'I was more successful in the former than in the latter' about watches?",
+                  "answer": "He meant he was very good at taking watches apart (the former) but terrible at putting them back together (the latter)."
+                }
+              ],
+              "quiz": [
+                {
+                  "question": "How did Tesla describe his father's parenting style regarding his mental development?",
+                  "options": [
+                    "He was absent",
+                    "He was a strict disciplinarian forcing mental exercises",
+                    "He encouraged physical sports instead of academics",
+                    "He told Tesla to avoid thinking too hard"
+                  ],
+                  "correctAnswer": "He was a strict disciplinarian forcing mental exercises",
+                  "explanation": "Tesla explicitly states his father was a strict disciplinarian who forced him to do mental calculations and memory repetition."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit II: One Act Plays",
+          "works": [
+            {
+              "title": "The Zoo Story",
+              "slug": "the-zoo-story",
+              "category": "Unit II: One Act Plays",
+              "author": "Edward Albee",
+              "fullText": "[Core Summary and Passages of The Zoo Story]\n\nThe play explores themes of isolation, loneliness, miscommunication as anathematisation, social disparity and dehumanization in a commercial world.\n\nSetting: Central Park, New York City, on a Sunday afternoon.\n\nCharacters:\nPeter: A wealthy, middle-class publishing executive, reading a book on a bench.\nJerry: An isolated, restless, lower-class man who desperately wants to connect with another human being.\n\nJerry approaches Peter and forcefully starts a conversation, declaring, 'I've been to the zoo.' Despite Peter's discomfort, Jerry forces him to listen to his chaotic life story, detailing his horrific living conditions in a rooming house, his abusive landlady, and a disturbing story about how he tried to poison her dog to establish some kind of interaction.\n\nJerry says: 'Sometimes it's necessary to go a long distance out of the way in order to come back a short distance correctly.'\n\nAs the play climaxes, Jerry begins physically pushing Peter off his own bench, mocking his comfortable life. Jerry pulls out a knife and drops it, challenging Peter to a fight. When Peter holds the knife out in self-defense, Jerry willingly impales himself on it. \n\nDying, Jerry thanks Peter for finally interacting with him, wiping Peter's fingerprints off the handle so Peter won't be charged. Jerry's final act achieves the ultimate human connection he craved, albeit fatally.",
+              "difficultWords": [
+                {
+                  "word": "Anathematisation",
+                  "definition": "The act of cursing or condemning someone to isolation.",
+                  "connotation": "A deep, formal ostracization from society.",
+                  "example": "The anathematisation of the poor was a central theme."
+                },
+                {
+                  "word": "Impale",
+                  "definition": "Pierce or transfix with a sharp instrument.",
+                  "connotation": "A violent, deeply physical act of penetration.",
+                  "example": "He was impaled on the jagged fence."
+                }
+              ],
+              "authorInfo": {
+                "biography": "Edward Albee (1928–2016) was an American playwright known for works that examine the dark underlying realities of modern life.",
+                "historicalContext": "Written in 1958, it is a quintessential piece of the 'Theatre of the Absurd' in America.",
+                "writingStyle": "Absurdist, psychologically aggressive, dialog-heavy, and darkly comedic.",
+                "majorWorks": [
+                  "Who's Afraid of Virginia Woolf?",
+                  "The Zoo Story",
+                  "A Delicate Balance"
+                ],
+                "influence": "Revolutionized American theater by introducing absurdist European traditions into relatable American settings."
+              },
+              "contentAnalysis": {
+                "summary": "The Zoo Story is a bleak look at modern alienation. Jerry's desperation to connect with another human—even if it results in violence and death—highlights the invisible barriers of class and protocol that keep people isolated in crowded cities.",
+                "themes": [
+                  "Isolation and Loneliness",
+                  "Class Disparity",
+                  "The Absurdity of Modern Life"
+                ],
+                "literaryDevices": [
+                  {
+                    "device": "Symbolism",
+                    "example": "The 'bench' symbolizes Peter's comfortable, assigned territory in society, which Jerry invades."
+                  },
+                  {
+                    "device": "Foreshadowing",
+                    "example": "Jerry's story about trying to connect with the dog via violence foreshadows his violent connection with Peter."
+                  }
+                ],
+                "criticalAnalysis": "Albee critiques the American Dream through Peter, whose complacency is violently disrupted by Jerry. Jerry views negative interaction (fighting) as vastly superior to no interaction (apathy).",
+                "relevance": "A foundational text in acting classes regarding tension, status, and objective."
+              },
+              "faqs": [
+                {
+                  "question": "Why does Jerry kill himself?",
+                  "answer": "Jerry orchestrates his own death because the physical and emotional trauma of the moment was the only way he could force Peter (and society) to truly notice and interact with him."
+                }
+              ],
+              "quiz": [
+                {
+                  "question": "Where does the entirety of The Zoo Story take place?",
+                  "options": [
+                    "In a zoo",
+                    "In a publishing office",
+                    "On a bench in Central Park",
+                    "In Jerry's rooming house"
+                  ],
+                  "correctAnswer": "On a bench in Central Park",
+                  "explanation": "The play is a one-act scenario occurring entirely on a single park bench in Central Park on a Sunday."
+                }
+              ]
+            },
+            {
+              "title": "The Proposal",
+              "slug": "the-proposal",
+              "category": "Unit II: One Act Plays",
+              "author": "Anton Chekhov",
+              "fullText": "[Core Summary and Passages of The Proposal]\n\nThe Proposal (also translated as A Marriage Proposal) is a fast-paced, one-act farce.\n\nCharacters:\nStepan Stepanovitch Chubukov: A landowner.\nNatalya Stepanovna: His 25-year-old daughter.\nIvan Vassilevitch Lomov: A suspicious, hypochondriac landowner.\n\nLomov visits his neighbor Chubukov, dressed formally, to ask for Natalya's hand in marriage. Chubukov is thrilled and leaves them alone. Lomov tries to propose, but he is extremely nervous and begins complaining about his palpitations and trembling lips.\n\nTo break the ice, Lomov mentions his property touching theirs, specifically referring to 'my Oxen Meadows'. Natalya immediately interrupts, claiming the Oxen Meadows belong to her family. The romantic proposal instantly devolves into a vicious, screaming argument over a useless piece of land.\n\nChubukov enters, takes his daughter's side, and kicks Lomov out of the house. \n\nAfter Lomov leaves, Chubukov mentions that Lomov came to propose. Natalya becomes hysterical and demands Lomov be brought back. \n\nLomov returns, exhausted and having heart palpitations. Natalya tries to steer the conversation back to romance, but they bring up hunting dogs. They immediately start a second screaming match over whose dog is superior (Guess vs. Squeezer). Lomov faints from exhaustion. Natalya thinks he is dead. When he wakes up, Chubukov shoves them together, tells them to kiss, and immediately yells for Champagne.",
+              "difficultWords": [
+                {
+                  "word": "Farce",
+                  "definition": "A comic dramatic work using buffoonery and horseplay and typically including crude characterization and ludicrously improbable situations.",
+                  "connotation": "Exaggerated, fast-paced physical comedy.",
+                  "example": "The argument over the dog turned the serious meeting into a farce."
+                },
+                {
+                  "word": "Palpitations",
+                  "definition": "A noticeably rapid, strong, or irregular heartbeat due to agitation, exertion, or illness.",
+                  "connotation": "Associated with intense anxiety or hypochondria.",
+                  "example": "His fear of public speaking gave him severe palpitations."
+                }
+              ],
+              "authorInfo": {
+                "biography": "Anton Chekhov (1860–1904) was a Russian playwright and short-story writer who is considered to be among the greatest writers of short fiction in history.",
+                "historicalContext": "Written in 1888-1889, it satirizes the land-owning Russian elite to whom marriage was a business transaction rather than a romantic union.",
+                "writingStyle": "Satirical, fast-paced, deeply character-driven.",
+                "majorWorks": [
+                  "The Seagull",
+                  "Uncle Vanya",
+                  "The Cherry Orchard"
+                ],
+                "influence": "A pioneer of early modernism in theater, proving that lack of complex plot can be solved with intense character psychology."
+              },
+              "contentAnalysis": {
+                "summary": "The play is a hilarious critique of upper-class courtship. It shows how the greed, pride, and pettiness of the landowners constantly override their desire for romance or a successful marital transaction.",
+                "themes": [
+                  "Marriage as a Business",
+                  "Pride and Real Estate",
+                  "Hypochondria and Hysteria"
+                ],
+                "literaryDevices": [
+                  {
+                    "device": "Irony",
+                    "example": "Lomov comes to declare his eternal love, but spends the entire play viciously insulting the woman he wants to marry."
+                  },
+                  {
+                    "device": "Farce",
+                    "example": "The rapid escalation from formal politeness to screaming over trivial things (a meadow, a dog) is classic farcical escalation."
+                  }
+                ],
+                "criticalAnalysis": "Chekhov uses Lomov's physical ailments (palpitations, twitching) as physical manifestations of his emotional instability. The ultimate marriage happens not out of love, but out of sheer exhaustion.",
+                "relevance": "A brilliant study in dialogue pacing and character ego that remains a staple in world theater."
+              },
+              "faqs": [
+                {
+                  "question": "Why do Lomov and Natalya argue the first time?",
+                  "answer": "They argue over the legal ownership of a largely useless piece of land called the Oxen Meadows."
+                }
+              ],
+              "quiz": [
+                {
+                  "question": "What physical problem does Lomov constantly complain about during his proposal?",
+                  "options": [
+                    "A broken leg",
+                    "Heart palpitations",
+                    "Blindness",
+                    "Deafness"
+                  ],
+                  "correctAnswer": "Heart palpitations",
+                  "explanation": "Lomov's extreme hypochondria manifests primarily as heart palpitations and twitching whenever he gets nervous or angry."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit III: Interviews",
+          "works": [
+            {
+              "title": "Selected Interviews (Mandela, Sharma, Messi)",
+              "slug": "selected-interviews",
+              "category": "Unit III: Interviews",
+              "author": "Various",
+              "fullText": "1. Nelson Mandela with Larry King (CNN, May 2000)\nLarry King interviewed Nelson Mandela, focusing on forgiveness and moving forward post-apartheid. \nLarry King: 'Are you bitter? Twenty-seven years!'\nNelson Mandela: 'If I was bitter, Larry, I would still be in prison. When I walked out of the gate, I knew that if I continued to hate them, I was still in prison.'\nConcept: The interview showcases ultimate grace. Mandela refutes hostility with profound moral clarity.\n\n2. Rakesh Sharma with Indira Gandhi (April 1984)\nRakesh Sharma, the first Indian citizen to travel to space, was connected to Prime Minister Indira Gandhi via an audio-visual link while aboard the Soviet T-11.\nIndira Gandhi: 'Upar se Bharat kaisa dikhta hai?' (How does India look from up there?)\nRakesh Sharma: 'Sare Jahan Se Achha.' (Better than the entire world.)\nConcept: A historic broadcast interview highlighting national pride, concise communication under pressure, and iconic cultural rhetoric.\n\n3. Lionel Messi with Sid Lowe (World Soccer Print Interview)\nA rare print interview examining Messi's introverted brilliance.\nSid Lowe asks deeply tactical and personal questions. Unlike broadcast interviews, Print interviews allow for editing, elaboration, and physical description.\nMessi notes: 'I prefer to win titles with the team ahead of individual awards...'\nConcept: Translating physical action into textual insights. Shows how sports journalism constructs narrative from quiet subjects.",
+              "difficultWords": [],
+              "authorInfo": {
+                "biography": "Various journalistic sources.",
+                "historicalContext": "Covers crucial political, historical, and sporting moments of the 20th and 21st centuries.",
+                "writingStyle": "Direct address Q&A format.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This unit focuses on three different mediums of interviewing: global broadcast journalism (Larry King), state-sponsored historic transmission (Sharma), and deep-dive print sports journalism (Sid Lowe).",
+                "themes": [
+                  "Journalistic Formats",
+                  "Grace under pressure",
+                  "Public persona"
+                ],
+                "literaryDevices": [],
+                "criticalAnalysis": "Interviews are performative texts. They require understanding the dynamic between the interviewer's objective (to extract a headline) and the interviewee's objective (to manage their narrative).",
+                "relevance": "Teaches students how to analyze spoken English, handle rapid questions, and understand media framing."
+              },
+              "faqs": [
+                {
+                  "question": "Why is Mandela's quote about prison so famous?",
+                  "answer": "It perfectly encapsulates his philosophy of reconciliation over revenge; he recognized that psychological freedom was more important than physical freedom."
+                }
+              ],
+              "quiz": [
+                {
+                  "question": "When Indira Gandhi asked Rakesh Sharma how India looked from space, how did he reply?",
+                  "options": [
+                    "It looks very small",
+                    "Sare Jahan Se Achha",
+                    "Beautiful and green",
+                    "I cannot see it through the clouds"
+                  ],
+                  "correctAnswer": "Sare Jahan Se Achha",
+                  "explanation": "He used the famous Urdu phrase 'Sare Jahan Se Achha' meaning 'Better than the entire world'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit IV: Language Competency",
+          "works": [
+            {
+              "title": "Advanced Communication & Defensibility",
+              "slug": "language-competency-adv",
+              "category": "Unit IV: Language Competency",
+              "author": "Grammar Guide",
+              "fullText": "LANGUAGE COMPETENCY CONCEPTS\n\n1. Refuting, Arguing & Debating\n- Refuting: To formally prove a statement or theory to be wrong or false. Requires transitional phrases like 'While I understand your point, the data suggests...' or 'That assumption overlooks...'.\n- Debating: A formalized structure of presenting an argument, requiring claim, evidence, and impact.\n\n2. Making Suggestions & Responding\n- Modals of Advice: Using 'could', 'should', 'might want to' instead of commands.\n- Asking for help: 'I would appreciate your insight on...' rather than 'Tell me how to...'.\n\n3. Interview Mechanics\n- Face to Face: Relies heavily on non-verbal cues. 55% of communication is physical.\n- Telephone: Requires hyper-articulation and active listening sounds ('I see', 'Yes', 'Understood') since physical cues are missing.\n- Video Conferencing: Involves managing digital latency, eye contact directly into the camera lens, and background curation.",
+              "difficultWords": [
+                {
+                  "word": "Defensibility",
+                  "definition": "The quality of being justifiable by argument.",
+                  "connotation": "A robust, bulletproof argument.",
+                  "example": "The defensibility of your thesis is questionable."
+                }
+              ],
+              "authorInfo": {
+                "biography": "Based on 'Role Play-Theory and Practice' and advanced communications modules.",
+                "historicalContext": "Crucial for upper-intermediate C1/C2 transitions.",
+                "writingStyle": "Direct, pedagogical.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This unit focuses on conversational agility—how to strongly disagree without being offensive, how to solicit help politely, and how to conquer modern interviewing challenges across various mediums.",
+                "themes": [
+                  "Diplomacy",
+                  "Debate",
+                  "Adaptation"
+                ],
+                "literaryDevices": [],
+                "criticalAnalysis": "True fluency is not just vocabulary; it's the ability to modulate tone based on the emotional objective of the conversation.",
+                "relevance": "Essential for corporate environments and high-level academic discourse."
+              },
+              "faqs": [
+                {
+                  "question": "Why is telephone interviewing considered uniquely difficult?",
+                  "answer": "Because it completely strips away body language, forcing the candidate to rely 100% on tone of voice and articulation to convey enthusiasm and competence."
+                }
+              ],
+              "quiz": [
+                {
+                  "question": "When video conferencing, what is the best way to simulate direct eye contact with the interviewer?",
+                  "options": [
+                    "Looking at their face on the screen",
+                    "Looking directly into your device's camera lens",
+                    "Looking at your own picture",
+                    "Closing your eyes and focusing on their voice"
+                  ],
+                  "correctAnswer": "Looking directly into your device's camera lens",
+                  "explanation": "Looking at the screen makes it appear as if you are looking down. To create the illusion of eye contact, you must look directly into the camera lens."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit V: English for Workplace",
+          "works": [
+            {
+              "title": "Workplace Documentation & Digital Profiles",
+              "slug": "workplace-english-adv",
+              "category": "Unit V: English for Workplace",
+              "author": "Professional Guide",
+              "fullText": "ENGLISH FOR WORKPLACE\n\n1. Job Applications (Cover Letters, CV, Resume)\n- CV (Curriculum Vitae): A detailed, multi-page document outlining your entire academic and professional history. Used mostly in academia or Europe/Asia.\n- Resume: A short, targeted one-page summary of your experience specific to the job you are applying for (common in North America).\n- Cover Letter: A narrative document introducing the resume, explaining 'why' you are perfect for the company culture.\n\n2. Creating a Digital Profile (LinkedIn)\n- Headlines should be outcome-oriented rather than just a job title (e.g., 'Transforming Data into Insights | BI Analyst' rather than just 'Data Analyst').\n- The Summary must be written in the first person.\n\n3. Form Filling & Transactions\n- The language of UI/UX is highly specific: 'Submit', 'Authorize', 'Authenticate', 'Mandatory Fields'. Comprehending banking, railway, and online account creation jargon is basic survival English.\n\n4. Body Language (Kinesics)\n- Maintain a naturally upright posture.\n- Mirrored body language builds subconscious rapport.\n- Fidgeting (playing with pens, touching hair) communicates anxiety and under-confidence.",
+              "difficultWords": [
+                {
+                  "word": "Kinesics",
+                  "definition": "The study of the way in which certain body movements and gestures serve as a form of non-verbal communication.",
+                  "connotation": "A scientific approach to body language.",
+                  "example": "Her kinesics during the interview showed extreme confidence."
+                }
+              ],
+              "authorInfo": {
+                "biography": "Aggregated from 'How to Build a Professional Digital Profile'.",
+                "historicalContext": "Digital era workplace readiness.",
+                "writingStyle": "Instructional.",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "This component is entirely practical, covering the paperwork and digital footprint required to secure employment. It highlights the difference between CVs and Resumes and provides actionable LinkedIn optimization strategies.",
+                "themes": [
+                  "Digital Identity",
+                  "Professionalism",
+                  "Non-verbal communication"
+                ],
+                "literaryDevices": [],
+                "criticalAnalysis": "In the modern era, English proficiency guarantees nothing if a candidate's digital profile and physical presence are poorly communicated.",
+                "relevance": "Directly translates to a student's ability to get hired."
+              },
+              "faqs": [],
+              "quiz": [
+                {
+                  "question": "Which document is typically a short, 1-page summary highly targeted toward a specific job application?",
+                  "options": [
+                    "A Curriculum Vitae (CV)",
+                    "A Resume",
+                    "A Cover Letter",
+                    "A LinkedIn Profile"
+                  ],
+                  "correctAnswer": "A Resume",
+                  "explanation": "A resume is a brief, targeted summary, whereas a CV is a comprehensive, multi-page academic and professional history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit VI: Contemporary Issues",
+          "works": [
+            {
+              "title": "Contemporary Seminars & Webinars",
+              "slug": "contemporary-issues-iv",
+              "category": "Unit VI: Contemporary Issues",
+              "author": "Contemporary Guide",
+              "fullText": "This section relies on dynamic content delivered via Expert lectures, online seminars, and webinars.\n\nAdvanced topics include the impact of globalization on English dialects, the ethics of AI generation in academia, and high-level negotiation tactics.\n\nThis unit functions practically; students must watch seminars and subsequently debate their contents to apply the skills from Unit IV.",
+              "difficultWords": [],
+              "authorInfo": {
+                "biography": "",
+                "historicalContext": "",
+                "writingStyle": "",
+                "majorWorks": [],
+                "influence": ""
+              },
+              "contentAnalysis": {
+                "summary": "A practical application space for advanced communicative English.",
+                "themes": [
+                  "Application",
+                  "Active Engagement"
+                ],
+                "literaryDevices": [],
+                "criticalAnalysis": "",
+                "relevance": "Tests all previously learned grammar, body language, and debate skills in a live setting."
+              },
+              "faqs": [],
+              "quiz": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Soft Skills Mastery",
       "slug": "soft-skills-mastery",
       "description": "20-week blended program teaching emotional intelligence, communication, teamwork, leadership, and career readiness aligned with WEF 2025 skills.",
