@@ -1958,7 +1958,7 @@
                 {
                   "word": "Rebuked",
                   "definition": "Express sharp disapproval or criticism of (someone) because of their behavior.",
-                  "connotation": "A stern, formal scolding.",
+                  "connotation": "A stern, formal scolding or reprimand.",
                   "example": "She was rebuked for being late."
                 },
                 {
@@ -1966,6 +1966,24 @@
                   "definition": "The expression of very strong disapproval; censure.",
                   "connotation": "A heavy, almost final judgment against someone.",
                   "example": "There was widespread condemnation of the attack."
+                },
+                {
+                  "word": "Tactfully",
+                  "definition": "With skill and sensitivity in dealing with others or with difficult issues.",
+                  "connotation": "Implies diplomacy, grace, and an avoidance of causing offense.",
+                  "example": "She tactfully suggested that he reconsider his plan."
+                },
+                {
+                  "word": "Derogatory",
+                  "definition": "Showing a critical or disrespectful attitude.",
+                  "connotation": "Actively insulting or looking down upon someone.",
+                  "example": "He refused to tolerate derogatory comments."
+                },
+                {
+                  "word": "Yielding",
+                  "definition": "Giving way under pressure; complying with the requests or demands of others.",
+                  "connotation": "Here, used positively as a strategic psychological concession.",
+                  "example": "By yielding early, you paradoxically gain the upper hand."
                 }
               ],
               "authorInfo": {
@@ -1991,13 +2009,25 @@
                     "example": "'Isn't it much easier to listen to self-criticism than to bear condemnation from alien lips?' Used to engage the reader's common sense directly."
                   }
                 ],
-                "criticalAnalysis": "Carnegie flips standard human defensiveness on its head. He proves that vulnerability is a powerful tool for de-escalating anger, a principle deeply rooted in modern psychological conflict resolution.",
+                "criticalAnalysis": "Dale Carnegie brilliantly reverse-engineers human ego. The essay acts as a manual on how to weaponize humility. By actively encouraging vulnerability, he outlines a tactical approach to defusing hostility. From a literary standpoint, the writing is heavily persuasive, relying on rhetorical questions, direct second-person addresses ('you'), and appeals to common-sense proverbs to validate modern psychological theory. It is a foundational text in self-improvement literature.",
                 "relevance": "Highly relevant in modern professional and personal relationships for effective communication."
               },
               "faqs": [
                 {
-                  "question": "Why is it better to criticize yourself before someone else does?",
-                  "answer": "Because it removes the opponent's desire to fight. If you agree with their anger immediately, they are forced to shift from an adversarial stance to a defensive or purely forgiving one out of human nature."
+                  "question": "Why does Carnegie suggest criticizing yourself before the other person can?",
+                  "answer": "Because it removes the opponent's desire to fight. If you agree with their anger immediately, they are forced to shift from an adversarial stance to a defensive or forgiving one due to human psychological nature."
+                },
+                {
+                  "question": "What is the psychological effect of admitting you are wrong 'with enthusiasm'?",
+                  "answer": "It disarms the critic completely. It takes the wind out of their sails, as the expected resistance or argument is suddenly absent, leaving the critic feeling foolish if they continue to attack."
+                },
+                {
+                  "question": "What is the core proverb shared at the end of the text?",
+                  "answer": "Carnegie shares the proverb: 'By fighting you never get enough, but by yielding you get more than you expected.'"
+                },
+                {
+                  "question": "How does this advice apply to leadership?",
+                  "answer": "A leader who admits their faults quickly builds massive trust and credibility. It shows vulnerability and eliminates a toxic culture of defensiveness."
                 }
               ],
               "quiz": [
@@ -2010,7 +2040,40 @@
                     "They will agree and pile on criticism"
                   ],
                   "correctAnswer": "They will usually take a forgiving attitude",
-                  "explanation": "Carnegie argues that 'the chances are a hundred to one that a generous, forgiving attitude will be taken'."
+                  "explanation": "Carnegie notes that 'the chances are a hundred to one that a generous, forgiving attitude will be taken'."
+                },
+                {
+                  "question": "How does Carnegie describe the experience of admitting a mistake quickly rather than defending oneself?",
+                  "options": [
+                    "It is humiliating",
+                    "It is financially rewarding",
+                    "It is a lot more fun",
+                    "It is a sign of weakness"
+                  ],
+                  "correctAnswer": "It is a lot more fun",
+                  "explanation": "He surprisingly notes: 'believe it or not, it is a lot more fun, under the circumstances, than trying to defend oneself'."
+                },
+                {
+                  "question": "According to the author, what should we do when we are absolutely right?",
+                  "options": [
+                    "Force others to see our brilliance",
+                    "Win people gently and tactfully to our way of thinking",
+                    "Keep quiet to avoid bragging",
+                    "Let the results speak for themselves"
+                  ],
+                  "correctAnswer": "Win people gently and tactfully to our way of thinking",
+                  "explanation": "He states that 'when we are right, let's try to win people gently and tactfully'."
+                },
+                {
+                  "question": "What is the ultimate benefit of 'yielding' according to the passage's concluding proverb?",
+                  "options": [
+                    "You lose the battle but win the war",
+                    "You preserve your energy",
+                    "You get more than you expected",
+                    "You avoid physical confrontation"
+                  ],
+                  "correctAnswer": "You get more than you expected",
+                  "explanation": "The proverb states: 'but by yielding you get more than you expected'."
                 }
               ]
             },
@@ -2032,6 +2095,24 @@
                   "definition": "The characteristic spirit of a culture, era, or community as manifested in its beliefs and aspirations.",
                   "connotation": "Refers to the deep, defining soul of a people.",
                   "example": "A commitment to equality is part of the national ethos."
+                },
+                {
+                  "word": "Accommodate",
+                  "definition": "To fit in with the wishes or needs of; to provide with space.",
+                  "connotation": "Reflects generosity, patience, and spatial compromise.",
+                  "example": "The train was crowded, but everyone shifted to accommodate the new passengers."
+                },
+                {
+                  "word": "Bastardization",
+                  "definition": "The changing of something in a way that lowers its quality or value.",
+                  "connotation": "A highly aggressive linguistic term used by purists to insult evolving dialects.",
+                  "example": "The critic called the movie a complete bastardization of the original novel."
+                },
+                {
+                  "word": "Prepone",
+                  "definition": "To bring something forward to an earlier date or time.",
+                  "connotation": "A brilliant, uniquely Indian linguistic invention operating as the logical opposite of 'postpone'.",
+                  "example": "The meeting was preponed from Friday to Wednesday."
                 }
               ],
               "authorInfo": {
@@ -2063,26 +2144,71 @@
                     "example": "Uses the crowded train scenario to visually explain a linguistic concept."
                   }
                 ],
-                "criticalAnalysis": "Tharoor argues against linguistic prescriptivism. By defending 'Indianisms,' he asserts that language ownership transferring from the colonizer to the colonized is a beautiful, necessary evolution.",
+                "criticalAnalysis": "Tharoor is a linguistic master who uses the very weapon of standard English to aggressively defend regional dialects. This essay is a brilliant piece of post-colonial literature; it validates 'Indian English' not as an error of translation, but as an act of massive cultural reclamation. He captures the essence of India—an ethos of extreme crowds, chaotic beauty, and eternal compromise ('adjusting'). The prose is satirical, proudly defiant, and incredibly warm.",
                 "relevance": "Validates the regional dialects of English worldwide, reminding students that English is a global, adaptable tool."
               },
               "faqs": [
                 {
                   "question": "What does 'kindly adjust' mean in an Indian context?",
-                  "answer": "It is a polite but firm request for others to make physical or metaphorical space to accommodate someone, reflecting a survival mechanism in a densely populated country."
+                  "answer": "It is a polite but firm cultural request for others to make physical or metaphorical space to accommodate someone, reflecting a powerful survival mechanism in a densely populated, chaotic country."
+                },
+                {
+                  "question": "Why does Tharoor praise words like 'prepone' or 'out of station'?",
+                  "answer": "Because they show that Indian English is a living, breathing, adaptive entity. Indians have taken a colonial language and efficiently molded its syntax to serve their specific environmental and cultural needs."
+                },
+                {
+                  "question": "What is the author's argument against British linguistic purists?",
+                  "answer": "Tharoor argues that language is an evolving tool of communication, not a static museum exhibit. Strict adherence to Queen's English ignores the reality of post-colonial assimilation."
+                },
+                {
+                  "question": "What tone does Tharoor use throughout the essay?",
+                  "answer": "He uses a witty, highly articulate, yet deeply affectionate tone. He writes in masterfully complex English to celebrate what others might sneeringly call 'broken' English."
                 }
               ],
               "quiz": [
                 {
-                  "question": "Which of the following is an example of 'Indian English' given by Tharoor?",
+                  "question": "Which unique Indian English word does Tharoor use as the brilliant opposite of 'postpone'?",
                   "options": [
-                    "Postpone",
-                    "Schedule",
+                    "Bring forward",
+                    "Pre-schedule",
                     "Prepone",
-                    "Delay"
+                    "Advance"
                   ],
                   "correctAnswer": "Prepone",
-                  "explanation": "Tharoor notes that Indians invented the logical opposite of 'postpone' by creating the highly efficient word 'prepone'."
+                  "explanation": "Tharoor champions 'prepone' as a massive Indian linguistic achievement of efficiency."
+                },
+                {
+                  "question": "How does the phrase 'Kindly adjust' usually manifest in the essay's example?",
+                  "options": [
+                    "In a boardroom meeting",
+                    "Squeezing into a terribly crowded train compartment",
+                    "Asking for a cheaper price at a market",
+                    "Tuning a radio"
+                  ],
+                  "correctAnswer": "Squeezing into a terribly crowded train compartment",
+                  "explanation": "He famously uses the imagery of someone jamming themselves into a train where there is not an inch of space left."
+                },
+                {
+                  "question": "To whom does Tharoor suggest these expressions sound like 'atrocious bastardizations'?",
+                  "options": [
+                    "To the pedantic British ear",
+                    "To American tourists",
+                    "To rural Indians",
+                    "To modern teenagers"
+                  ],
+                  "correctAnswer": "To the pedantic British ear",
+                  "explanation": "He explicitly calls out 'the pedantic British ear' as the group that finds these evolutions horrifying."
+                },
+                {
+                  "question": "According to the author, what is language?",
+                  "options": [
+                    "A mathematical formula",
+                    "A museum exhibit to be preserved",
+                    "An evolving tool of communication",
+                    "A symbol of oppression"
+                  ],
+                  "correctAnswer": "An evolving tool of communication",
+                  "explanation": "He writes definitively: 'But language is an evolving tool of communication, not a museum exhibit.'"
                 }
               ]
             },
@@ -2098,6 +2224,30 @@
                   "definition": "Gradually decline in effectiveness or vigor due to underuse or neglect.",
                   "connotation": "A disturbing physical or mental wasting away.",
                   "example": "Without exercise, his muscles began to atrophy."
+                },
+                {
+                  "word": "Faculties",
+                  "definition": "Inherent mental or physical powers.",
+                  "connotation": "The core cognitive machinery of the human mind.",
+                  "example": "Despite his age, he retained all of his faculties."
+                },
+                {
+                  "word": "Synthesis",
+                  "definition": "The combination of ideas to form a theory or system.",
+                  "connotation": "Requires active mental exertion, contrasting with passive consumption.",
+                  "example": "The essay represents a brilliant synthesis of history and philosophy."
+                },
+                {
+                  "word": "Prescient",
+                  "definition": "Having or showing knowledge of events before they take place.",
+                  "connotation": "Visionary or prophetic.",
+                  "example": "His essay written in the 1930s was incredibly prescient regarding the internet."
+                },
+                {
+                  "word": "Passivity",
+                  "definition": "Acceptance of what happens, without active response or resistance.",
+                  "connotation": "A dangerous, lazy surrender of will.",
+                  "example": "Her passivity in the face of tyranny was terrifying."
                 }
               ],
               "authorInfo": {
@@ -2123,26 +2273,71 @@
                     "example": "The 'Spoon-fed' age compares modern adult society to helpless infants being fed baby food without having to chew."
                   }
                 ],
-                "criticalAnalysis": "A remarkably prescient essay that predicted the passive consumption habits that dominate the internet and social media age. Inge's critique questions whether technological progress equals human progress.",
+                "criticalAnalysis": "Inge's essay is a terrifying piece of prophetic literature. Long before the advent of smartphones and AI algorithms, Inge recognized the catastrophic danger of outsourcing cognitive effort. The 'Spoon-fed' metaphor brilliantly critiques the infantilization of modern adults. His prose forces modern educators to ask whether making learning 'easier' through technology is actually destroying the mental resilience necessary for true human progress.",
                 "relevance": "Extremely relevant today when debating the effects of smartphones, AI, and social media on human attention spans and critical thinking."
               },
               "faqs": [
                 {
-                  "question": "What does Inge mean by 'spoon-fed'?",
-                  "answer": "He means that modern society delivers entertainment, news, and physical comfort so easily to people that they no longer have to exert any intellectual or physical effort."
+                  "question": "What does Inge mean by a 'spoon-fed' age?",
+                  "answer": "He is using the metaphor of a helpless baby. Modern society delivers entertainment, news, and physical comfort so easily to people that they no longer have to exert any muscular or intellectual effort to chew through problems."
+                },
+                {
+                  "question": "How does technology contribute to intellectual decay according to Inge?",
+                  "answer": "By outsourcing our imagination to movies or the radio (and subsequently the internet), we lose the ability to create our own imagery and think critically, leading to a mass mental atrophy."
+                },
+                {
+                  "question": "What is Inge's definition of 'true education'?",
+                  "answer": "He believes true education is actively wrestling with difficulties and 'drawing out' the faculties of the mind, rather than passively memorizing pre-packaged thoughts."
+                },
+                {
+                  "question": "What historical exchange does Inge lament?",
+                  "answer": "He laments the modern exchange of harsh, vigorous, and fierce independence inherited from our ancestors for a state of comfortable, unthinking dependence on machines."
                 }
               ],
               "quiz": [
                 {
-                  "question": "According to Inge, what happens to the human mind when it is 'spoon-fed'?",
+                  "question": "According to Inge, what happens to the human mind when it is perpetually 'spoon-fed'?",
                   "options": [
-                    "It becomes enlightened",
+                    "It reaches enlightenment",
+                    "It achieves total peace",
                     "It begins to atrophy",
-                    "It becomes more active",
-                    "It achieves peace"
+                    "It evolves faster"
                   ],
                   "correctAnswer": "It begins to atrophy",
-                  "explanation": "Inge argues that without struggle or effort, the mind and body begin to atrophy (waste away)."
+                  "explanation": "He states that when everything is prepared for us, the mind and body begin to atrophy (waste away)."
+                },
+                {
+                  "question": "Which of these is an example Inge uses to describe modern laziness?",
+                  "options": [
+                    "Writing instead of typing",
+                    "Taking the bus instead of walking",
+                    "Eating raw food instead of cooked food",
+                    "Swimming instead of sailing"
+                  ],
+                  "correctAnswer": "Taking the bus instead of walking",
+                  "explanation": "He specifically complains: 'We no longer walk; we take the bus.'"
+                },
+                {
+                  "question": "What happens when people constantly accept 'pre-packaged thoughts' handed to them?",
+                  "options": [
+                    "They surrender their individuality",
+                    "They win political debates",
+                    "They become highly educated",
+                    "They avoid stress"
+                  ],
+                  "correctAnswer": "They surrender their individuality",
+                  "explanation": "Inge warns that blindly consuming mass media forces individuals to 'surrender our individuality'."
+                },
+                {
+                  "question": "What was W.R. Inge's profession, which often influenced his pessimistic tone?",
+                  "options": [
+                    "An aerospace engineer",
+                    "Dean of St Paul's Cathedral (an Anglican Priest)",
+                    "A professional athlete",
+                    "A Wall Street banker"
+                  ],
+                  "correctAnswer": "Dean of St Paul's Cathedral (an Anglican Priest)",
+                  "explanation": "He was a powerful English author and Anglican priest, famously dubbed 'The Gloomy Dean' due to his grim outlook on modern consumption."
                 }
               ]
             }
@@ -4660,16 +4855,34 @@
               "fullText": "[Core Summary and Passages of The Zoo Story]\n\nThe play explores themes of isolation, loneliness, miscommunication as anathematisation, social disparity and dehumanization in a commercial world.\n\nSetting: Central Park, New York City, on a Sunday afternoon.\n\nCharacters:\nPeter: A wealthy, middle-class publishing executive, reading a book on a bench.\nJerry: An isolated, restless, lower-class man who desperately wants to connect with another human being.\n\nJerry approaches Peter and forcefully starts a conversation, declaring, 'I've been to the zoo.' Despite Peter's discomfort, Jerry forces him to listen to his chaotic life story, detailing his horrific living conditions in a rooming house, his abusive landlady, and a disturbing story about how he tried to poison her dog to establish some kind of interaction.\n\nJerry says: 'Sometimes it's necessary to go a long distance out of the way in order to come back a short distance correctly.'\n\nAs the play climaxes, Jerry begins physically pushing Peter off his own bench, mocking his comfortable life. Jerry pulls out a knife and drops it, challenging Peter to a fight. When Peter holds the knife out in self-defense, Jerry willingly impales himself on it. \n\nDying, Jerry thanks Peter for finally interacting with him, wiping Peter's fingerprints off the handle so Peter won't be charged. Jerry's final act achieves the ultimate human connection he craved, albeit fatally.",
               "difficultWords": [
                 {
-                  "word": "Anathematisation",
-                  "definition": "The act of cursing or condemning someone to isolation.",
-                  "connotation": "A deep, formal ostracization from society.",
-                  "example": "The anathematisation of the poor was a central theme."
+                  "word": "Alienation",
+                  "definition": "The state or experience of being isolated from a group or an activity to which one should belong.",
+                  "connotation": "A profound, modern psychological isolation despite living in crowded urban spaces.",
+                  "example": "The play perfectly captures the alienation of city life."
                 },
                 {
-                  "word": "Impale",
-                  "definition": "Pierce or transfix with a sharp instrument.",
-                  "connotation": "A violent, deeply physical act of penetration.",
-                  "example": "He was impaled on the jagged fence."
+                  "word": "Absurdism",
+                  "definition": "A philosophy based on the belief that the universe is irrational and meaningless.",
+                  "connotation": "Often associated with dark, tragicomic literature where communication breaks down completely.",
+                  "example": "Albee's early works heavily rely on theatrical absurdism."
+                },
+                {
+                  "word": "Complacency",
+                  "definition": "A feeling of smug or uncritical satisfaction with oneself or one's achievements.",
+                  "connotation": "A dangerous, willful ignorance of deeper societal or personal rot.",
+                  "example": "Peter's upper-middle-class complacency is shattered by Jerry."
+                },
+                {
+                  "word": "Impalement",
+                  "definition": "The act of piercing or being pierced with a sharp instrument.",
+                  "connotation": "Evokes incredibly brutal, sacrificial violence.",
+                  "example": "The climax of the story involves a shocking impalement."
+                },
+                {
+                  "word": "Bourgeois",
+                  "definition": "Of or characteristic of the middle class, typically with reference to its perceived materialistic values or conventional attitudes.",
+                  "connotation": "Used critically to describe someone who is boring, materialistic, and disconnected from raw reality.",
+                  "example": "Peter's bourgeois lifestyle prevents him from understanding true despair."
                 }
               ],
               "authorInfo": {
@@ -4700,26 +4913,71 @@
                     "example": "Jerry's story about trying to connect with the dog via violence foreshadows his violent connection with Peter."
                   }
                 ],
-                "criticalAnalysis": "Albee critiques the American Dream through Peter, whose complacency is violently disrupted by Jerry. Jerry views negative interaction (fighting) as vastly superior to no interaction (apathy).",
+                "criticalAnalysis": "The Zoo Story is a terrifying masterpiece of Absurdist Theatre. Albee surgically dissects the modern American Dream by trapping two completely opposed socio-economic classes on a single bench. The breakdown of language and the escalation of bizarre hostility serve as a critique against human alienation. The shocking ending insists that in a society stripped of genuine empathy, violence remains the only universal language capable of destroying bourgeois complacency.",
                 "relevance": "A foundational text in acting classes regarding tension, status, and objective."
               },
               "faqs": [
                 {
-                  "question": "Why does Jerry kill himself?",
-                  "answer": "Jerry orchestrates his own death because the physical and emotional trauma of the moment was the only way he could force Peter (and society) to truly notice and interact with him."
+                  "question": "What is the primary physical setting of 'The Zoo Story'?",
+                  "answer": "The entire play takes place on a single park bench in Central Park, New York City on a Sunday afternoon."
+                },
+                {
+                  "question": "What do the two characters, Peter and Jerry, represent?",
+                  "answer": "Peter represents the affluent, complacent, neatly-ordered bourgeois society. Jerry represents the chaotic, isolated, and socially alienated underclass desperate for human connection."
+                },
+                {
+                  "question": "Why does Jerry tell 'The Story of Jerry and the Dog'?",
+                  "answer": "The long monologue about attempting to poison his landlady's dog is deeply symbolic. Jerry was trying to establish a connection (even a violent one) with an animal, mirroring his urgent, desperate need to connect with Peter on the bench."
+                },
+                {
+                  "question": "Why does Jerry provoke Peter into killing him?",
+                  "answer": "Jerry realizes that society is so disconnected that the only way to force Peter out of his complacency and forge a permanent, inescapable human connection is through a shared act of extreme violence."
                 }
               ],
               "quiz": [
                 {
-                  "question": "Where does the entirety of The Zoo Story take place?",
+                  "question": "What profession does Peter have in 'The Zoo Story'?",
                   "options": [
-                    "In a zoo",
-                    "In a publishing office",
-                    "On a bench in Central Park",
-                    "In Jerry's rooming house"
+                    "A publishing executive",
+                    "A real estate agent",
+                    "A taxi driver",
+                    "A zookeeper"
                   ],
-                  "correctAnswer": "On a bench in Central Park",
-                  "explanation": "The play is a one-act scenario occurring entirely on a single park bench in Central Park on a Sunday."
+                  "correctAnswer": "A publishing executive",
+                  "explanation": "Peter is a wealthy, comfortable publishing executive reading quietly on a bench."
+                },
+                {
+                  "question": "Which location does Jerry repeatedly mention that he just walked from?",
+                  "options": [
+                    "The Brooklyn Bridge",
+                    "Central Park Zoo",
+                    "Times Square",
+                    "The Statue of Liberty"
+                  ],
+                  "correctAnswer": "Central Park Zoo",
+                  "explanation": "The play is named after his bizarre insistence: 'I've been to the zoo. I said, I've been to the zoo!'"
+                },
+                {
+                  "question": "Which of the following objects does Jerry throw at Peter's feet to initiate the violent climax?",
+                  "options": [
+                    "A gun",
+                    "A book",
+                    "A knife",
+                    "A leash"
+                  ],
+                  "correctAnswer": "A knife",
+                  "explanation": "Jerry throws a knife at Peter's feet, taunting him to defend his bench."
+                },
+                {
+                  "question": "What theatrical / literary movement is 'The Zoo Story' heavily associated with?",
+                  "options": [
+                    "Romanticism",
+                    "Theatre of the Absurd",
+                    "Elizabethan Drama",
+                    "Neoclassicism"
+                  ],
+                  "correctAnswer": "Theatre of the Absurd",
+                  "explanation": "Albee brought the Theatre of the Absurd (highlighting the breakdown of human communication and isolation) to the American stage."
                 }
               ]
             },
@@ -4733,14 +4991,32 @@
                 {
                   "word": "Farce",
                   "definition": "A comic dramatic work using buffoonery and horseplay and typically including crude characterization and ludicrously improbable situations.",
-                  "connotation": "Exaggerated, fast-paced physical comedy.",
-                  "example": "The argument over the dog turned the serious meeting into a farce."
+                  "connotation": "Used for high-energy, over-the-top comedy.",
+                  "example": "The argument over the meadows turned the marriage proposal into a hilarious farce."
+                },
+                {
+                  "word": "Hypochondriac",
+                  "definition": "A person who is abnormally anxious about their health.",
+                  "connotation": "Nervous, constantly complaining of imaginary or exaggerated ailments.",
+                  "example": "Lomov is a severe hypochondriac who claims he is dying during every argument."
+                },
+                {
+                  "word": "Pettiness",
+                  "definition": "Undue concern with trivial matters.",
+                  "connotation": "Reflects childish behavior over absolute nonsense.",
+                  "example": "Their pettiness over the dog's overshot jaw ruined the romantic mood."
                 },
                 {
                   "word": "Palpitations",
                   "definition": "A noticeably rapid, strong, or irregular heartbeat due to agitation, exertion, or illness.",
-                  "connotation": "Associated with intense anxiety or hypochondria.",
-                  "example": "His fear of public speaking gave him severe palpitations."
+                  "connotation": "A physical manifestation of severe anxiety or panic.",
+                  "example": "He collapsed onto the sofa, suffering from severe heart palpitations."
+                },
+                {
+                  "word": "Satire",
+                  "definition": "The use of humor, irony, exaggeration, or ridicule to expose and criticize people's stupidity or vices.",
+                  "connotation": "A sharp critique disguised as comedy.",
+                  "example": "Chekhov uses satire to mock the marriage practices of the Russian elite."
                 }
               ],
               "authorInfo": {
@@ -4771,26 +5047,71 @@
                     "example": "The rapid escalation from formal politeness to screaming over trivial things (a meadow, a dog) is classic farcical escalation."
                   }
                 ],
-                "criticalAnalysis": "Chekhov uses Lomov's physical ailments (palpitations, twitching) as physical manifestations of his emotional instability. The ultimate marriage happens not out of love, but out of sheer exhaustion.",
+                "criticalAnalysis": "Chekhov's 'The Proposal' is a blistering farce that relentlessly mocks the institution of marriage among the Russian petty-bourgeoisie. By having the characters abandon a monumental life event (a marriage proposal) to scream about useless land and ugly hunting dogs, Chekhov exposes their absolute moral bankruptcy. Love does not exist here—only ego, economics, and pride. It requires expert comedic timing, operating as a rapid-fire physical comedy that thinly veils a sharp sociological critique.",
                 "relevance": "A brilliant study in dialogue pacing and character ego that remains a staple in world theater."
               },
               "faqs": [
                 {
-                  "question": "Why do Lomov and Natalya argue the first time?",
-                  "answer": "They argue over the legal ownership of a largely useless piece of land called the Oxen Meadows."
+                  "question": "What is Lomov's actual goal when he arrives at Chubukov's house?",
+                  "answer": "Lomov arrives wearing formal evening dress to propose marriage to Chubukov's daughter, Natalya."
+                },
+                {
+                  "question": "What is the first trivial thing Lomov and Natalya aggressively argue about?",
+                  "answer": "They begin screaming at each other over the ownership of a small piece of land called 'Oxen Meadows', completely forgetting about the marriage proposal."
+                },
+                {
+                  "question": "Once the land dispute is temporarily settled, what do they immediately start arguing about next?",
+                  "answer": "They begin a vicious argument over whose hunting dog is superior: Lomov's dog (Guess) or Natalya's dog (Squeezer)."
+                },
+                {
+                  "question": "What does this play say about marriage in 19th-century Russia?",
+                  "answer": "Chekhov is satirizing the concept of marriage among the landed gentry. The play suggests these marriages were cold economic alliances entirely driven by property and pride, completely devoid of actual romance or love."
                 }
               ],
               "quiz": [
                 {
-                  "question": "What physical problem does Lomov constantly complain about during his proposal?",
+                  "question": "What physical ailment does Ivan Lomov constantly complain about during the play?",
                   "options": [
                     "A broken leg",
-                    "Heart palpitations",
                     "Blindness",
+                    "Heart palpitations and nervous twitching",
                     "Deafness"
                   ],
-                  "correctAnswer": "Heart palpitations",
-                  "explanation": "Lomov's extreme hypochondria manifests primarily as heart palpitations and twitching whenever he gets nervous or angry."
+                  "correctAnswer": "Heart palpitations and nervous twitching",
+                  "explanation": "Lomov is a severe hypochondriac; whenever he gets upset, he screams about palpitations, twitching eyebrows, and numbness."
+                },
+                {
+                  "question": "What is the name of the disputed land that ruins the romantic proposal?",
+                  "options": [
+                    "Oxen Meadows",
+                    "The Birch Woods",
+                    "The Cherry Orchard",
+                    "The Volga Bend"
+                  ],
+                  "correctAnswer": "Oxen Meadows",
+                  "explanation": "The primary argument starts over ownership of 'Oxen Meadows', which both families claim to have owned for generations."
+                },
+                {
+                  "question": "When Chubukov realizes Lomov is there to propose, how does he initially react?",
+                  "options": [
+                    "He throws him out",
+                    "He is overjoyed and kisses him",
+                    "He demands a dowry",
+                    "He calls the police"
+                  ],
+                  "correctAnswer": "He is overjoyed and kisses him",
+                  "explanation": "Chubukov is thrilled because it means an excellent economic match for his daughter, though this joy quickly devolves into screaming matches."
+                },
+                {
+                  "question": "In the final moment of the play, what are Lomov and Natalya doing as Chubukov calls for champagne?",
+                  "options": [
+                    "Kissing passionately",
+                    "Leaving the house",
+                    "Continuing to argue about the dogs",
+                    "Singing together"
+                  ],
+                  "correctAnswer": "Continuing to argue about the dogs",
+                  "explanation": "Even after the proposal is forced through and champagne is poured, they violently resume arguing over whether Guess is better than Squeezer."
                 }
               ]
             }
