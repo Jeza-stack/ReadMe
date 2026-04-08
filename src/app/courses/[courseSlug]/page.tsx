@@ -117,12 +117,13 @@ const courseFallbacks: Record<string, CourseData> = {
     ],
   },
   'chat-gpt-safety': {
-    name: 'Safe Use of Chat GPT',
-    description: 'Learn the ethical, safe, and highly productive ways to prompt and interact with Large Language Models responsibly.',
+    name: 'Students Hack to Use GenAI',
+    description: 'The top 15 battle-tested GenAI power moves that the top 1% of global achievers use to 10x their learning, research, and career outcomes.',
     slug: 'chat-gpt-safety',
     categories: [
-      { name: 'Understanding LLMs', works: [{ slug: 'how-llm-works', title: 'How ChatGPT Works', author: 'AI Ethics Faculty' }] },
-      { name: 'Responsible Use', works: [{ slug: 'privacy', title: 'Privacy & Data Safety', author: 'AI Ethics Faculty' }, { slug: 'accuracy', title: 'Fact-Checking AI Outputs', author: 'AI Ethics Faculty' }] },
+      { name: 'Learning & Comprehension Hacks', works: [{ slug: 'hack-feynman-prompt', title: 'Hack #1: The Feynman Prompt', author: 'GenAI Strategy' }, { slug: 'hack-socratic-debate', title: 'Hack #2: The Socratic Debate Partner', author: 'GenAI Strategy' }] },
+      { name: 'Research & Writing Hacks', works: [{ slug: 'hack-literature-review', title: 'Hack #5: Literature Review Accelerator', author: 'GenAI Strategy' }, { slug: 'hack-outline-architect', title: 'Hack #7: The Outline Architect', author: 'GenAI Strategy' }] },
+      { name: 'Career & Productivity Hacks', works: [{ slug: 'hack-recruiter-simulation', title: 'Hack #8: The Recruiter Simulation', author: 'GenAI Strategy' }] },
     ],
   },
   'academic-language': {

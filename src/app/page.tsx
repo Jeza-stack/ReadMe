@@ -79,8 +79,8 @@ const allCourses = [
   },
   {
     id: 9,
-    title: 'Safe Use of Chat GPT',
-    description: 'Learn the ethical, secure, and highly productive ways to prompt and interact with LLMs while protecting your data and ensuring accuracy.',
+    title: 'Students Hack to Use GenAI',
+    description: 'The top 15 battle-tested GenAI power moves that the top 1% of global achievers use to 10x their learning, research, and career outcomes.',
     href: '/courses/chat-gpt-safety',
     icon: <ShieldCheck className="w-5 h-5" />,
     level: 'Beginner',
