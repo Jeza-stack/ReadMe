@@ -1410,6 +1410,24 @@
                   "definition": "A hired thug or bully, originating from the Indian subcontinent.",
                   "connotation": "Carries a derogatory tone for an unruly troublemaker.",
                   "example": "The shopkeeper was threatened by a local goonda."
+                },
+                {
+                  "word": "Lassi",
+                  "definition": "A popular traditional dahi (yogurt)-based drink that originated in the Indian subcontinent.",
+                  "connotation": "Invokes a feeling of home, traditional hospitality, and simplicity.",
+                  "example": "He offered his guest a cold glass of sweet lassi."
+                },
+                {
+                  "word": "Regeneration",
+                  "definition": "The action or process of regenerating or being regenerated, in particular the formation of new tissue.",
+                  "connotation": "Used comically by the speaker out of context to sound intellectual.",
+                  "example": "The city's urban regeneration project took a decade."
+                },
+                {
+                  "word": "Ram Rajya",
+                  "definition": "A term referencing the reign of Lord Ram in Hindu mythology, characterized by peace, prosperity, and truth.",
+                  "connotation": "Utopian ideal of governance and societal harmony.",
+                  "example": "Gandhi envisioned a post-independence India as a modern Ram Rajya."
                 }
               ],
               "authorInfo": {
@@ -1445,17 +1463,25 @@
                     "example": "Using literal translations of native syntax ('I am simply not understanding', 'goonda fellow')."
                   }
                 ],
-                "criticalAnalysis": "Ezekiel masterfully captures the cadence and linguistic quirks of Indian-English speakers, utilizing present-continuous tense indiscriminately ('I am standing', 'I am reading'). While deeply satirical, it evokes a warm endearment toward the speaker rather than outright malice.",
+                "criticalAnalysis": "Ezekiel masterfully captures the cadence and linguistic quirks of Indian-English speakers, utilizing present-continuous tense indiscriminately ('I am standing', 'I am reading'). The satire is twofold: it mocks the speaker's simplistic understanding of terrifying geopolitical events ('China behaving like that') while simultaneously celebrating the speaker's warm, unfiltered hospitality. It is a loving critique of a society caught between ancient wisdom and a desperate desire for modern post-colonial relevancy.",
                 "relevance": "It highlights how language evolves regionally and demonstrates how postcolonial societies grapple with English usage while maintaining local cultural idiosyncrasies."
               },
               "faqs": [
                 {
                   "question": "Why does the poet use incorrect grammar like 'fighting fighting'?",
-                  "answer": "Ezekiel deliberately uses ungrammatical, uniquely 'Indian English' phrases such as 'fighting fighting' to authentically replicate how many native Indians converse colloquially, serving as a linguistic satire."
+                  "answer": "Ezekiel deliberately uses ungrammatical, uniquely 'Indian English' phrases such as 'fighting fighting' (reduplication) to authentically replicate how many native Indians converse colloquially, serving as a linguistic satire."
                 },
                 {
                   "question": "What is the tone of the poem?",
-                  "answer": "The tone is predominantly humorous, conversational, and subtly ironic."
+                  "answer": "The tone is predominantly humorous, conversational, and subtly ironic, showcasing the contradictions of the modern Indian citizen."
+                },
+                {
+                  "question": "Who is the speaker addressing?",
+                  "answer": "The speaker is addressing a silent listener (dramatic monologue), likely a friend or an acquaintance, offering them lassi and sharing unsolicited opinions."
+                },
+                {
+                  "question": "Why does the speaker use present continuous tense incorrectly?",
+                  "answer": "The overuse of the present continuous tense (e.g., 'I am standing', 'I am understanding') is a major hallmark of Babu English. It highlights the speaker's attempt to sound highly educated while failing at basic grammar."
                 }
               ],
               "quiz": [
@@ -1469,6 +1495,39 @@
                   ],
                   "correctAnswer": "Times of India",
                   "explanation": "The speaker explicitly states: 'Every day I'm reading Times of India / To improve my English language'."
+                },
+                {
+                  "question": "What drink does the speaker offer to his companion?",
+                  "options": [
+                    "Tea",
+                    "Coffee",
+                    "Wine",
+                    "Lassi"
+                  ],
+                  "correctAnswer": "Lassi",
+                  "explanation": "He offers lassi, pointing out its digestive benefits and noting he is a 'total teetotaller'."
+                },
+                {
+                  "question": "Which Shakespearean phrase does the speaker awkwardly quote?",
+                  "options": [
+                    "To be or not to be",
+                    "Friends, Romans, countrymen",
+                    "All the world's a stage",
+                    "Et tu, Brute?"
+                  ],
+                  "correctAnswer": "Friends, Romans, countrymen",
+                  "explanation": "He humorously quotes Mark Antony's famous speech from Julius Caesar ('Friends, Romans, countrymen, I am saying (to myself)... Lend me the ears.')."
+                },
+                {
+                  "question": "Which rhetorical mode is this poem written in?",
+                  "options": [
+                    "Sonnet",
+                    "Elegy",
+                    "Dramatic Monologue",
+                    "Haiku"
+                  ],
+                  "correctAnswer": "Dramatic Monologue",
+                  "explanation": "A dramatic monologue is a poem in the form of a speech or narrative by an imagined person, in which the speaker inadvertently reveals aspects of their character while describing a particular situation or series of events."
                 }
               ]
             },
@@ -1496,6 +1555,18 @@
                   "definition": "Troubled or threatened persistently.",
                   "connotation": "A feeling of being surrounded by depression or anxiety.",
                   "example": "He was beset by self-doubt."
+                },
+                {
+                  "word": "Sassiness",
+                  "definition": "Lively, bold, and full of spirit; cheeky.",
+                  "connotation": "A celebratory term for unapologetic, charismatic defiance often associated with Black culture.",
+                  "example": "Her sassiness made her the center of attention in every room."
+                },
+                {
+                  "word": "Welling",
+                  "definition": "To rise to the surface and spill or be about to spill.",
+                  "connotation": "Evokes the image of an unstoppable, natural emotional or physical force.",
+                  "example": "Tears were welling in her eyes."
                 }
               ],
               "authorInfo": {
@@ -1537,7 +1608,19 @@
               "faqs": [
                 {
                   "question": "Who is the speaker addressing as 'You'?",
-                  "answer": "'You' represents the historical oppressors, slave-owners, racists, and anyone broadly who attempts to drag down and belittle the speaker or her people."
+                  "answer": "'You' represents the historical oppressors, racists, and anyone broadly who attempts to drag down and belittle the speaker or Black women in general."
+                },
+                {
+                  "question": "What is the significance of the natural imagery (suns, moons, tides)?",
+                  "answer": "Angelou compares her inevitable rise against systemic oppression to undeniable forces of nature (the sun rising, the tides turning), implying that surviving and thriving is an unchangeable law of the universe."
+                },
+                {
+                  "question": "How does the poet treat wealth in this poem?",
+                  "answer": "She metaphorically claims immense wealth (oil wells, gold mines, diamonds). This isn't literal monetary wealth, but a supreme, untouchable self-worth and spiritual richness that her oppressors cannot strip from her."
+                },
+                {
+                  "question": "What is the pacing effect of repeating 'I rise' at the end?",
+                  "answer": "The repeated incantation of 'I rise' acts like a rhythmic drumbeat, increasing the physical tempo and emotional intensity of the poem until it culminates in a soaring conclusion."
                 }
               ],
               "quiz": [
@@ -1551,6 +1634,39 @@
                   ],
                   "correctAnswer": "Fire",
                   "explanation": "She compares her rise to dust, air, and tides, but never fire."
+                },
+                {
+                  "question": "What physical location does the poem say the speaker is 'leaving behind'?",
+                  "options": [
+                    "The ocean",
+                    "Nights of terror and fear",
+                    "The cotton fields",
+                    "The mountains"
+                  ],
+                  "correctAnswer": "Nights of terror and fear",
+                  "explanation": "She explicitly writes: 'Leaving behind nights of terror and fear / I rise'."
+                },
+                {
+                  "question": "What type of imagery is 'I'm a black ocean, leaping and wide'?",
+                  "options": [
+                    "Simile",
+                    "Metaphor",
+                    "Personification",
+                    "Hyperbole"
+                  ],
+                  "correctAnswer": "Metaphor",
+                  "explanation": "It is a direct metaphor, equating herself completely to the vast, untamable force of the ocean without using 'like' or 'as'."
+                },
+                {
+                  "question": "Angelou writes she dances like she has diamonds where?",
+                  "options": [
+                    "In her hair",
+                    "At the meeting of her thighs",
+                    "In her shoes",
+                    "On her fingers"
+                  ],
+                  "correctAnswer": "At the meeting of her thighs",
+                  "explanation": "She proudly celebrates her sexuality and womanhood, declaring she dances wildly as if she has 'diamonds at the meeting of my thighs'."
                 }
               ]
             },
@@ -1572,6 +1688,24 @@
                   "definition": "A short story, typically with animals or natural elements, conveying a moral.",
                   "connotation": "Indicates that the poem is highly allegorical.",
                   "example": "Aesop's fables remain popular today."
+                },
+                {
+                  "word": "Muttering",
+                  "definition": "Saying something in a low or barely audible voice, typically in dissatisfaction.",
+                  "connotation": "A secret, cowardly form of complaint rather than direct confrontation.",
+                  "example": "He walked away muttering curses."
+                },
+                {
+                  "word": "Sow'd",
+                  "definition": "Planted (seed) by scattering it on or in the earth.",
+                  "connotation": "An archaic spelling of 'sowed', highlighting the timeless agricultural metaphor.",
+                  "example": "The farmer sow'd the seeds in the spring."
+                },
+                {
+                  "word": "Discontent",
+                  "definition": "Lack of contentment; dissatisfaction with one's circumstances.",
+                  "connotation": "A lingering, pervasive unhappiness.",
+                  "example": "There was widespread discontent among the workers."
                 }
               ],
               "authorInfo": {
@@ -1602,17 +1736,25 @@
                     "example": "The public hates the flower when it is original, loves it when it is stolen, and then hates it again because it is common."
                   }
                 ],
-                "criticalAnalysis": "Tennyson critiques how society often persecutes pioneers, only to later commodify their genius. Eventually, mass production or imitation dilutes the beauty of the original creation until it is taken for granted.",
+                "criticalAnalysis": "Tennyson brilliantly critiques the fickleness of public consumption and the aggressive nature of literary critics. He exposes a cruel paradox faced by pioneers: society will persecute you for being original, then society will steal your original idea and commodify it, and finally, society will hate you for being 'common' once your idea is mass-reproduced. The allegory remains startlingly relevant in the era of internet trends and viral content.",
                 "relevance": "Highly relevant in the internet age regarding memes, trends, or artistic styles that start as niche, become aggressively mainstream, and finally become 'uncool'."
               },
               "faqs": [
                 {
                   "question": "What does the flower symbolize?",
-                  "answer": "The flower represents the poet's original work, style, or genius. The 'seed' is the template or the creative idea."
+                  "answer": "The flower represents an original piece of art, a new poetic style, or a groundbreaking societal idea. The 'seed' is the raw creative inspiration needed to produce it."
                 },
                 {
-                  "question": "Why do the people call it a weed at the end?",
-                  "answer": "Because the thieves stole the seeds and grew it everywhere. It lost its rarity and uniqueness, so the public grew tired of it."
+                  "question": "Why do the people initially call the flower a 'weed' at the beginning?",
+                  "answer": "Because original ideas often threaten the status quo. People rarely recognize true genius immediately and often mistake unconventional beauty as an ugly aberration (a weed) simply because it defies expectations."
+                },
+                {
+                  "question": "Why do the people call it a weed again at the very end of the poem?",
+                  "answer": "Once the 'thieves' stole the seeds and mass-produced the flower everywhere, it lost its rarity. Human nature often dictates that when a masterpiece becomes overly common or plagiarized, society gets utterly bored with it and dismissively labels it a 'weed' once more."
+                },
+                {
+                  "question": "What does the line 'He that runs may read' mean?",
+                  "answer": "It is an idiom meaning the moral of the fable is so glaringly obvious that even someone sprinting past it at full speed could clearly understand the message."
                 }
               ],
               "quiz": [
@@ -1626,6 +1768,39 @@
                   ],
                   "correctAnswer": "A weed",
                   "explanation": "The poem states: 'Up there came a flower, / The people said, a weed.'"
+                },
+                {
+                  "question": "What did the flower eventually wear when it grew tall?",
+                  "options": [
+                    "A crown of light",
+                    "A blanket of snow",
+                    "A coat of thorns",
+                    "A shadow of doubt"
+                  ],
+                  "correctAnswer": "A crown of light",
+                  "explanation": "Tennyson writes: 'Then it grew so tall / It wore a crown of light'."
+                },
+                {
+                  "question": "Who stole the seeds by night?",
+                  "options": [
+                    "The government",
+                    "Birds and animals",
+                    "Thieves from o'er the wall",
+                    "The poet himself"
+                  ],
+                  "correctAnswer": "Thieves from o'er the wall",
+                  "explanation": "The thieves represent plagiarists and imitators who steal originally brilliant ideas to capitalize on them."
+                },
+                {
+                  "question": "What is the core theme of 'The Flower'?",
+                  "options": [
+                    "Gardening techniques",
+                    "Originality vs. Mass production (Plagiarism)",
+                    "The beauty of nature",
+                    "The passage of time"
+                  ],
+                  "correctAnswer": "Originality vs. Mass production (Plagiarism)",
+                  "explanation": "The entire poem is a grand allegory about how society rejects original creators, eventually steals their genius to turn a profit, and then incorrectly blames the creator once the market is oversaturated."
                 }
               ]
             },
@@ -1647,6 +1822,24 @@
                   "definition": "A main branch of a tree.",
                   "connotation": "Implies thick, sturdy strength.",
                   "example": "The heavy snow broke the apple tree's boughs."
+                },
+                {
+                  "word": "Anchoring",
+                  "definition": "Securing firmly in position.",
+                  "connotation": "Describes the roots acting as a stabilizing, profound foundation.",
+                  "example": "The deep roots were anchoring the tree during the hurricane."
+                },
+                {
+                  "word": "Withering",
+                  "definition": "To become dry and shriveled.",
+                  "connotation": "A slow, agonizing death of organic matter.",
+                  "example": "The heat resulted in the withering of all the crops."
+                },
+                {
+                  "word": "Scorching",
+                  "definition": "Burning the surface of something with intense heat.",
+                  "connotation": "A deliberate, violent thermal attack.",
+                  "example": "The scorching summer sun baked the earth."
                 }
               ],
               "authorInfo": {
@@ -1688,7 +1881,19 @@
               "faqs": [
                 {
                   "question": "Why does the poet describe the bark as 'leprous'?",
-                  "answer": "The rough, discolored surface of the tree bark resembles leprosy. Using disease-related imagery personifies the tree as an aging living organ."
+                  "answer": "The rough, discolored, uneven surface of the tree bark physically resembles the skin disease leprosy. By utilizing a disease metaphor, Patel subtly personifies the tree, forcing the reader to view chopping the tree down as an act against an aging living organ."
+                },
+                {
+                  "question": "Why won't a 'simple jab of the knife' kill the tree?",
+                  "answer": "Because the tree has spent decades slowly consuming the earth, absorbing sunlight, and building immense internal resilience. A physical surface wound ('simple jab') will simply heal over time."
+                },
+                {
+                  "question": "What does the 'root' represent in the poem?",
+                  "answer": "The root physically represents the tree's life source, but metaphorically, it represents the deep cultural, traditional, or fundamental anchors of any living entity that must be completely eradicated if an oppressor truly wants to destroy it."
+                },
+                {
+                  "question": "Why is the poem written in a procedural, clinical tone?",
+                  "answer": "Patel writes exactly like a doctor giving instructions on an autopsy or a surgical extraction. This clinical detachment creates brilliant irony; it forces the brutal violence of deforestation to sound terrifyingly casual and premeditated."
                 }
               ],
               "quiz": [
@@ -1702,6 +1907,39 @@
                   ],
                   "correctAnswer": "The roots",
                   "explanation": "The poem specifically points out: 'The root is to be pulled out... And the strength of the tree exposed'."
+                },
+                {
+                  "question": "What happens if a tree is 'hacked and chopped' near the ground but the root is left intact?",
+                  "options": [
+                    "It instantly dies",
+                    "Curled green twigs will rise and expand again",
+                    "The wood rots",
+                    "It bleeds to death"
+                  ],
+                  "correctAnswer": "Curled green twigs will rise and expand again",
+                  "explanation": "Nature's resilience is incredible. Patel notes: 'The bleeding bark will heal / And from close to the ground / Will rise curled green twigs'."
+                },
+                {
+                  "question": "Which adjectives does Patel use to describe the actual source (root) once it is pulled out?",
+                  "options": [
+                    "Dry and hard",
+                    "White and wet",
+                    "Black and crumbling",
+                    "Green and leafy"
+                  ],
+                  "correctAnswer": "White and wet",
+                  "explanation": "He describes the exposed root as 'The source, white and wet, / The most sensitive, hidden'."
+                },
+                {
+                  "question": "What environmental and social issue is 'On Killing a Tree' most directly critiquing?",
+                  "options": [
+                    "Overpopulation",
+                    "Deforestation and mankind's casual destruction of nature",
+                    "Water pollution",
+                    "Air purity"
+                  ],
+                  "correctAnswer": "Deforestation and mankind's casual destruction of nature",
+                  "explanation": "The poem's horrifyingly exact instructions on how to definitively execute a tree serves as a biting satire against humanity's ruthless deforestation practices."
                 }
               ]
             }
