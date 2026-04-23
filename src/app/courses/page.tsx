@@ -26,6 +26,7 @@ const allCourses = [
     duration: 'Untimed',
     difficulty: 'Self-Paced',
     subject: 'Workshops',
+    image: 'https://images.unsplash.com/photo-1558244661-d248897f7bc4?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 8,
@@ -37,6 +38,7 @@ const allCourses = [
     duration: '24 Weeks',
     difficulty: 'Advanced',
     subject: 'Core English',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 1,
@@ -48,6 +50,7 @@ const allCourses = [
     duration: '12 Weeks',
     difficulty: 'Beginner',
     subject: 'Core English',
+    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 2,
@@ -59,6 +62,7 @@ const allCourses = [
     duration: '12 Weeks',
     difficulty: 'Elementary',
     subject: 'Core English',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 3,
@@ -70,6 +74,7 @@ const allCourses = [
     duration: '16 Weeks',
     difficulty: 'Intermediate',
     subject: 'Core English',
+    image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 4,
@@ -81,6 +86,7 @@ const allCourses = [
     duration: '20 Weeks',
     difficulty: 'Upper Intermediate',
     subject: 'Professional',
+    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 5,
@@ -92,6 +98,7 @@ const allCourses = [
     duration: '8 Weeks',
     difficulty: 'Advanced',
     subject: 'Professional',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 6,
@@ -103,6 +110,7 @@ const allCourses = [
     duration: '10 Weeks',
     difficulty: 'Intermediate',
     subject: 'Conversation',
+    image: 'https://images.unsplash.com/photo-1523050335456-c6bb7f9ccb7a?auto=format&fit=crop&q=80&w=800',
   },
 ];
 
@@ -301,6 +309,7 @@ export default function CoursesPage() {
                 description={course.description}
                 href={course.href}
                 icon={course.icon}
+                image={course.image}
                 cta="Explore Course"
               />
             ))}

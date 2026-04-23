@@ -4,7 +4,7 @@
       "name": "English I",
       "slug": "english-1",
       "description": "Foundational course in English literature and language competency, focusing on classic poetry, prose, and essential workplace communication skills.",
-      "image": "https://placehold.co/600x400.png",
+      "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800",
       "dataAiHint": "library books",
       "categories": [
         {
@@ -1386,7 +1386,7 @@
       "name": "English II",
       "slug": "english-2",
       "description": "Elementary course covering Indian poetry, global prose, fiction (The Alchemist), language competencies, and contemporary workplace issues.",
-      "image": "https://placehold.co/600x400.png",
+      "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800",
       "dataAiHint": "international literature and workplace communication",
       "categories": [
         {
@@ -4725,7 +4725,7 @@
       "name": "English III",
       "slug": "english-3",
       "description": "Advanced course covering complex literary works, including Shakespeare, famous speeches, and modern communication for professional environments.",
-      "image": "https://placehold.co/600x400.png",
+      "image": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=800",
       "dataAiHint": "classic architecture",
       "categories": [
         {
@@ -6741,7 +6741,7 @@
       "name": "English IV",
       "slug": "english-4",
       "description": "Upper-intermediate course focused on high-level professional interactions, autobiographical literature, one-act plays, and nuanced expression in academic settings.",
-      "image": "https://placehold.co/600x400.png",
+      "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800",
       "dataAiHint": "business meeting and theater",
       "categories": [
         {
@@ -9859,7 +9859,7 @@
       "name": "Soft Skills Mastery",
       "slug": "soft-skills-mastery",
       "description": "20-week blended program teaching emotional intelligence, communication, teamwork, leadership, and career readiness aligned with WEF 2025 skills.",
-      "image": "https://placehold.co/600x400.png",
+      "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800",
       "dataAiHint": "soft skills",
       "categories": []
     },
