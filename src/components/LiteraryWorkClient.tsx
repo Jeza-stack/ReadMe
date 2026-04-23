@@ -36,7 +36,7 @@ function InteractiveText({ text, difficultWords }: { text: string; difficultWord
                                         <PopoverTrigger asChild>
                                             <span className="cursor-pointer font-bold text-primary/80 hover:text-primary transition-colors">{part}</span>
                                         </PopoverTrigger>
-                                        <PopoverContent className="w-80 bg-background border-border shadow-2xl">
+                                        <PopoverContent className="w-72 xs:w-80 bg-background border-border shadow-2xl">
                                             <div className="space-y-2">
                                                 <h4 className="font-bold font-headline text-primary">{wordData.word}</h4>
                                                 <p className="text-sm text-foreground/90">{wordData.definition}</p>

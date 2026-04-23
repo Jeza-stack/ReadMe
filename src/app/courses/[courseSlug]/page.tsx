@@ -234,7 +234,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseS
                               <BookText className="w-6 h-6 md:w-7 md:h-7 text-[#043370] dark:text-cyan-400 group-hover:scale-110 transition-transform" />
                             </div>
                             <div className="min-w-0">
-                              <p className="font-headline font-bold text-lg md:text-xl text-slate-900 dark:text-white mb-1 group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors truncate">{work.title}</p>
+                              <p className="font-headline font-bold text-lg md:text-xl text-slate-900 dark:text-white mb-1 group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors line-clamp-2">{work.title}</p>
                               <div className="flex items-center text-sm text-slate-500 dark:text-slate-400 font-medium">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-2 flex-shrink-0" />
                                 {work.author ?? 'Certified Instructor'}
