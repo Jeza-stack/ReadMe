@@ -2,14 +2,14 @@
 
 **Phase:** 2 — Platform Build
 
-**Today's Objective:** Item 2 — Navigation
+**Today's Objective:** Item 3 — English Course shell (course home + week pages)
 
 **Success Criteria:**
-- [ ] Header nav reflects the pillar structure (English Courses first, then Explore)
-- [ ] Mobile menu works
-- [ ] Footer matches actual pages (fix mismatch)
+- [ ] Course home template: overview, units, works, weeks
+- [ ] Week page route (/courses/<course>/week/<n>) reading content/courses/
+- [ ] JB can review as a lecturer
 
 **Status:** Not started
 
 ---
-*Done: 1. Homepage ✓ (server-rendered, This Week from semester.json, two-tier, Loading… eliminated). Rule: one objective per session.*
+*Done: 1. Homepage ✓ · 2. Navigation ✓ (pillar dropdowns, mobile menu, honest footer, ReadMe branding). Rule: one objective per session.*

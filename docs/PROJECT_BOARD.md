@@ -8,7 +8,7 @@ Session rule: pick ONE item → implement → verify locally → commit → tick
 
 ## Phase 2 — Platform (order revised per JB: pedagogy first, polish last)
 - [x] 1. Homepage (This Week + two-tier)
-- [ ] 2. Navigation
+- [x] 2. Navigation
 - [ ] 3. English Course shell (course home + week pages)
 - [ ] 4. Literature Guide template (live, reviewable by JB as lecturer)
 - [ ] 5. MDX rendering pipeline (+ frontmatter validation)
