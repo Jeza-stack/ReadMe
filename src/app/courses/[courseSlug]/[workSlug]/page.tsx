@@ -2,6 +2,7 @@ import { getLiteraryWork, getCourses } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import LiteraryWorkClient from '@/components/LiteraryWorkClient';
+import LiteratureGuide from '@/components/LiteratureGuide';
 import ModernWorkClient from '@/components/ModernWorkClient';
 import { SocialShare } from '@/components/SocialShare';
 import { ArrowLeft, BookOpen, Sparkles, Cpu, GraduationCap, Zap } from 'lucide-react';
@@ -9,6 +10,8 @@ import { BackNav } from '@/components/BackNav';
 
 // Slugs that use the modern, vibrant layout
 const MODERN_COURSE_SLUGS = new Set(['ai-tools', 'chat-gpt-safety', 'academic-language']);
+// English courses use the Literature Guide template
+const ENGLISH_COURSES = new Set(['english-1', 'english-2', 'english-3', 'english-4']);
 
 export async function generateStaticParams() {
   const params: { courseSlug: string; workSlug: string }[] = [];
@@ -113,6 +116,21 @@ export default async function LiteraryWorkPage({ params }: { params: Promise<{ c
           </div>
         </div>
       </div>
+    );
+  }
+
+  /* ── English I–IV: Literature Guide (LitCharts-calibre, Style Guide §3) ── */
+  if (ENGLISH_COURSES.has(courseSlug) && existingCourse) {
+    const flat = existingCourse.categories.flatMap((cat) => cat.works);
+    const idx = flat.findIndex((w) => w.slug === workSlug);
+    const nextWork = idx >= 0 && idx < flat.length - 1 ? flat[idx + 1] : null;
+    return (
+      <LiteratureGuide
+        work={work!}
+        courseSlug={courseSlug}
+        courseName={courseLabel}
+        next={nextWork ? { slug: nextWork.slug, title: nextWork.title } : null}
+      />
     );
   }
 

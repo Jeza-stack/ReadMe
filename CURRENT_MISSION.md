@@ -2,15 +2,14 @@
 
 **Phase:** 2 — Platform Build
 
-**Today's Objective:** Item 4 — Literature Guide template (live, reviewable by JB as lecturer)
+**Today's Objective:** Item 5 — MDX rendering pipeline (+ frontmatter validation)
 
 **Success Criteria:**
-- [ ] Guide layout: sticky section nav, fixed section order per Style Guide
-- [ ] Renders existing work data (fullText/difficultWords/authorInfo/contentAnalysis/faqs/quiz)
-- [ ] Four-Question Framework + WhatNext block
-- [ ] JB reviews one real guide (e.g. Still I Rise or Ozymandias)
+- [ ] content/**.mdx rendered with real MDX (replaces week-page interim parser)
+- [ ] Frontmatter validated against content/_schemas at build time
+- [ ] Build fails loudly on invalid frontmatter
 
 **Status:** Not started
 
 ---
-*Done: 1. Homepage ✓ · 2. Navigation ✓ · 3. Course shell ✓ (textbook structure, week pages, course.json for JB's outcomes; English II Week 1 sample published). Rule: one objective per session.*
+*Done: 1. Homepage ✓ · 2. Navigation ✓ · 3. Course shell ✓ · 4. Literature Guide ✓ (sticky nav, fixed section order, all data sections surfaced, WhatNext). Rule: one objective per session.*

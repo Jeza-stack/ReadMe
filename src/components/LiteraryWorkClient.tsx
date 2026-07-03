@@ -14,8 +14,8 @@ import { cn } from "@/lib/utils";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-// InteractiveText Component
-function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
+// InteractiveText Component (exported for reuse in LiteratureGuide)
+export function InteractiveText({ text, difficultWords }: { text: string; difficultWords: DifficultWord[] }) {
     const difficultWordsMap = new Map(difficultWords.map(dw => [dw.word.toLowerCase(), dw]));
     
     const paragraphs = text.split('\n\n');
@@ -60,8 +60,8 @@ function InteractiveText({ text, difficultWords }: { text: string; difficultWord
     );
 }
 
-// Quiz Component
-function Quiz({ questions }: { questions: QuizQuestion[] }) {
+// Quiz Component (exported for reuse in LiteratureGuide)
+export function Quiz({ questions }: { questions: QuizQuestion[] }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [isAnswered, setIsAnswered] = useState(false);
