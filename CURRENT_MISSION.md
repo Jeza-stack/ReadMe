@@ -2,16 +2,14 @@
 
 **Phase:** 2 — Platform Build
 
-**Today's Objective:** Item 1 — Homepage (This Week + two-tier)
+**Today's Objective:** Item 2 — Navigation
 
 **Success Criteria:**
-- [ ] This Week cards render from content/semester.json (hidden gracefully when week = 0)
-- [ ] Two-tier layout: English Courses top, Explore pillars below
-- [ ] "Loading…" placeholder eliminated (server-rendered)
-- [ ] Mobile responsive
-- [ ] Lighthouse > 90
+- [ ] Header nav reflects the pillar structure (English Courses first, then Explore)
+- [ ] Mobile menu works
+- [ ] Footer matches actual pages (fix mismatch)
 
 **Status:** Not started
 
 ---
-*Phase 1 locked at tag `phase-1-complete`. Rule: one explicit objective per session.*
+*Done: 1. Homepage ✓ (server-rendered, This Week from semester.json, two-tier, Loading… eliminated). Rule: one objective per session.*

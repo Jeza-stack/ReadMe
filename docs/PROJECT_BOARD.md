@@ -7,7 +7,7 @@ Session rule: pick ONE item → implement → verify locally → commit → tick
 - [x] JB review + lock (tag `phase-1-complete`)
 
 ## Phase 2 — Platform (order revised per JB: pedagogy first, polish last)
-- [ ] 1. Homepage (This Week + two-tier)
+- [x] 1. Homepage (This Week + two-tier)
 - [ ] 2. Navigation
 - [ ] 3. English Course shell (course home + week pages)
 - [ ] 4. Literature Guide template (live, reviewable by JB as lecturer)

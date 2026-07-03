@@ -32,4 +32,13 @@ Source of truth: `src/data/readme-data.json`. Migration projects fail through om
 **Unit V: English for Workplace** — ☐ Leadership Communication · ☐ Negotiation & Persuasion · ☐ Professional Presentation Skills
 **Unit VI: Contemporary Issues** — ☐ Democracy, Free Speech, Misinformation · ☐ Mental Health & the Language of Seeking Help
 
-**Total: 68 items.** Copyright note before publishing full texts: verify public-domain/licence status per work (esp. The Alchemist, Animal Farm, The Old Man and the Sea, I am Malala, Long Walk to Freedom, contemporary speeches/plays) — excerpt within fair dealing where not cleared; record decisions in IMPLEMENTATION_NOTES.md.
+**Total: 68 items.**
+
+## Copyright categories (assign every work one category during migration)
+| Category | Action |
+|---|---|
+| **PD** — Public domain | Full text permitted (verify source + local legal considerations) |
+| **©** — Copyrighted | JB's own summaries, analysis, commentary, discussion questions; brief quotations only |
+| **UNI** — University materials | Review ownership/licensing before publication |
+
+Principle: **ReadMe's value is the teaching, not reproducing books.** Students come for the explanations, not the novel. Likely © items: The Alchemist, Animal Farm, The Old Man and the Sea, I am Malala, Long Walk to Freedom, Still I Rise, modern speeches (Yes We Can, Jobs), The Zoo Story, The Proposal/The Bear translations, interview texts. Record each decision in IMPLEMENTATION_NOTES.md.
