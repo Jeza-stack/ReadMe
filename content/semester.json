@@ -4,7 +4,7 @@
   "note": "Update currentWeek weekly (manually or via JB COG OS agent). Drives the homepage This Week block.",
   "weeks": {
     "english-i": 0,
-    "english-ii": 0,
+    "english-ii": 1,
     "english-iii": 0,
     "english-iv": 0
   }

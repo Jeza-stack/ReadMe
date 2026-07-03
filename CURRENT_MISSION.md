@@ -2,14 +2,15 @@
 
 **Phase:** 2 — Platform Build
 
-**Today's Objective:** Item 3 — English Course shell (course home + week pages)
+**Today's Objective:** Item 4 — Literature Guide template (live, reviewable by JB as lecturer)
 
 **Success Criteria:**
-- [ ] Course home template: overview, units, works, weeks
-- [ ] Week page route (/courses/<course>/week/<n>) reading content/courses/
-- [ ] JB can review as a lecturer
+- [ ] Guide layout: sticky section nav, fixed section order per Style Guide
+- [ ] Renders existing work data (fullText/difficultWords/authorInfo/contentAnalysis/faqs/quiz)
+- [ ] Four-Question Framework + WhatNext block
+- [ ] JB reviews one real guide (e.g. Still I Rise or Ozymandias)
 
 **Status:** Not started
 
 ---
-*Done: 1. Homepage ✓ · 2. Navigation ✓ (pillar dropdowns, mobile menu, honest footer, ReadMe branding). Rule: one objective per session.*
+*Done: 1. Homepage ✓ · 2. Navigation ✓ · 3. Course shell ✓ (textbook structure, week pages, course.json for JB's outcomes; English II Week 1 sample published). Rule: one objective per session.*

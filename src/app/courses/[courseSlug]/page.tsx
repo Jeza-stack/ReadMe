@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { BookText, ChevronRight } from 'lucide-react';
 import { BackNav } from '@/components/BackNav';
+import { EnglishCourseHome } from '@/components/EnglishCourseHome';
 
 // Fallback shape for courses not yet in the JSON data
 type CourseData = {
@@ -160,9 +161,16 @@ export async function generateMetadata({ params }: { params: Promise<{ courseSlu
   };
 }
 
+const ENGLISH_COURSES = new Set(['english-1', 'english-2', 'english-3', 'english-4']);
+
 export default async function CoursePage({ params }: { params: Promise<{ courseSlug: string }> }) {
   const { courseSlug: slug } = await params;
   const existingCourse = getCourse(slug);
+
+  // English I–IV use the textbook-style course home (Canonical Spec §Pillars)
+  if (ENGLISH_COURSES.has(slug) && existingCourse) {
+    return <EnglishCourseHome course={existingCourse} />;
+  }
 
   // Build a unified typed object
   const course: CourseData = existingCourse
