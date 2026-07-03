@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Literature guide frontmatter",
+  "type": "object",
+  "required": ["title", "slug", "author", "courses", "type", "summary", "updated"],
+  "properties": {
+    "title": { "type": "string" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "author": { "type": "string" },
+    "courses": { "type": "array", "items": { "enum": ["english-i", "english-ii", "english-iii", "english-iv"] } },
+    "units": { "type": "array", "items": { "type": "string" } },
+    "type": { "enum": ["poem", "prose", "short-story", "play", "essay"] },
+    "summary": { "type": "string", "maxLength": 300 },
+    "themes": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "updated": { "type": "string", "format": "date" }
+  }
+}

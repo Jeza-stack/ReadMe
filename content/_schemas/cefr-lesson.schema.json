@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CEFR lesson frontmatter",
+  "type": "object",
+  "required": ["title", "level", "skill", "canDo", "updated"],
+  "properties": {
+    "title": { "type": "string" },
+    "level": { "enum": ["a1", "a2", "b1", "b2", "c1", "c2"] },
+    "skill": { "enum": ["grammar", "vocabulary", "reading", "listening", "speaking", "writing", "academic"] },
+    "canDo": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "updated": { "type": "string", "format": "date" }
+  }
+}

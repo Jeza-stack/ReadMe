@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generic guide frontmatter (ai-for-students, soft-skills, academic-success, research, glossary)",
+  "type": "object",
+  "required": ["title", "pillar", "updated"],
+  "properties": {
+    "title": { "type": "string" },
+    "pillar": { "enum": ["ai-for-students", "soft-skills", "academic-success", "research", "glossary"] },
+    "section": { "type": "string", "description": "e.g. ai-for-students: fundamentals|prompts|study|assignments|ethics|tools|tutorials|cases|updates" },
+    "audience": { "type": "array", "items": { "enum": ["students", "teachers", "researchers"] } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "updated": { "type": "string", "format": "date" }
+  }
+}

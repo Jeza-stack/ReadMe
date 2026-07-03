@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowledge Feed article frontmatter",
+  "type": "object",
+  "required": ["title", "dek", "tags", "updated"],
+  "properties": {
+    "title": { "type": "string", "maxLength": 90 },
+    "dek": { "type": "string", "maxLength": 200, "description": "one-sentence standfirst shown on the poster" },
+    "cover": { "type": "string", "description": "path under /public or generated card" },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "readingTime": { "type": "integer", "description": "minutes; computed at build if absent" },
+    "editorsPick": { "type": "boolean", "default": false },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "updated": { "type": "string", "format": "date" }
+  }
+}

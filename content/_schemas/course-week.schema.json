@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Course weekly module frontmatter",
+  "type": "object",
+  "required": ["course", "week", "title", "discussionQuestion", "updated"],
+  "properties": {
+    "course": { "enum": ["english-i", "english-ii", "english-iii", "english-iv"] },
+    "week": { "type": "integer", "minimum": 1, "maximum": 16 },
+    "title": { "type": "string" },
+    "readBefore": { "type": "array", "items": { "type": "string" }, "description": "slugs of literature guides or lessons" },
+    "discussionQuestion": { "type": "string" },
+    "revision": { "type": "array", "items": { "type": "string" } },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "updated": { "type": "string", "format": "date" }
+  }
+}
