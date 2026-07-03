@@ -79,10 +79,6 @@ export function EnglishCourseHome({ course }: { course: Course }) {
   const contentDir = path.join(process.cwd(), 'content');
   const meta =
     readJson<CourseMeta>(path.join(contentDir, 'courses', key, 'course.json')) ?? {};
-  const semester = readJson<{ semester: string; weeks: Record<string, number> }>(
-    path.join(contentDir, 'semester.json')
-  );
-  const currentWeek = semester?.weeks?.[key] ?? 0;
   const publishedWeeks = getPublishedWeeks(key);
 
   const linkList = (items: { label: string; href?: string }[]) => (
@@ -108,7 +104,7 @@ export function EnglishCourseHome({ course }: { course: Course }) {
         {/* 1 — Overview */}
         <header className="mb-10" style={{ borderTop: `4px solid ${BURGUNDY}` }}>
           <p className="mt-4 text-xs uppercase tracking-widest text-slate-400">
-            English Courses{semester?.semester ? ` · ${semester.semester}` : ''}
+            English Courses
           </p>
           <h1 className="font-headline text-4xl font-bold text-white mt-1">{course.name}</h1>
           <p className="text-slate-300 mt-3 leading-relaxed">{course.description}</p>
@@ -128,23 +124,7 @@ export function EnglishCourseHome({ course }: { course: Course }) {
           </Section>
         )}
 
-        {/* 3 — This Week */}
-        {currentWeek > 0 && (
-          <Section id="this-week" icon={CalendarDays} title={`This Week — Week ${currentWeek}`}>
-            <Link
-              href={`/courses/${course.slug}/week/${currentWeek}`}
-              className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 p-4 transition-colors"
-              style={{ borderLeft: `3px solid ${BURGUNDY}` }}
-            >
-              <span className="text-white font-semibold">
-                What to read and prepare before this week&apos;s class
-              </span>
-              <ArrowRight className="w-4 h-4 text-cyan-300" />
-            </Link>
-          </Section>
-        )}
-
-        {/* 4 — Weekly Modules */}
+        {/* 3 — Weekly Modules */}
         {publishedWeeks.length > 0 && (
           <Section id="weeks" icon={CalendarDays} title="Weekly Modules">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -152,11 +132,7 @@ export function EnglishCourseHome({ course }: { course: Course }) {
                 <Link
                   key={w}
                   href={`/courses/${course.slug}/week/${w}`}
-                  className={`rounded-lg border p-3 text-center transition-colors ${
-                    w === currentWeek
-                      ? 'border-cyan-400/50 bg-cyan-400/10 text-cyan-300'
-                      : 'border-white/10 bg-white/5 text-slate-300 hover:bg-white/10'
-                  }`}
+                  className="rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 p-3 text-center transition-colors"
                 >
                   <span className="text-xs uppercase tracking-widest block text-white/40">Week</span>
                   <span className="font-headline font-bold text-lg">{w}</span>

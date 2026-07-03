@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import fs from 'fs';
-import path from 'path';
 import {
   BookOpen,
   Globe,
@@ -13,23 +11,6 @@ import {
 } from 'lucide-react';
 
 // ── Data ────────────────────────────────────────────────────────
-
-type Semester = {
-  semester: string;
-  weeks: Record<string, number>;
-};
-
-function getSemester(): Semester {
-  try {
-    const raw = fs.readFileSync(
-      path.join(process.cwd(), 'content', 'semester.json'),
-      'utf-8'
-    );
-    return JSON.parse(raw);
-  } catch {
-    return { semester: '', weeks: {} };
-  }
-}
 
 const unsplash = (id: string) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&q=80&w=800`;
@@ -53,11 +34,6 @@ const pillars = [
 // ── Page (server component — no client JS, no loading flash) ────
 
 export default function HomePage() {
-  const semester = getSemester();
-  const activeWeeks = englishCourses.filter(
-    (c) => (semester.weeks?.[c.key] ?? 0) > 0
-  );
-
   return (
     <div className="bg-[color:var(--ce-deep-navy,#0E141F)]">
       {/* Hero */}
@@ -79,36 +55,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      {/* This Week — only when the semester is running */}
-      {activeWeeks.length > 0 && (
-        <section aria-labelledby="this-week" className="max-w-5xl mx-auto px-4 pb-10">
-          <h2 id="this-week" className="font-headline text-xl font-bold text-white mb-1">
-            This Week{semester.semester ? ` · ${semester.semester}` : ''}
-          </h2>
-          <p className="text-sm text-slate-400 mb-4">
-            What to read before your next class.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {activeWeeks.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/courses/${c.slug}`}
-                className="rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 p-4 transition-colors"
-                style={{ borderTop: '3px solid #7B2D3B' }}
-              >
-                <div className="text-xs uppercase tracking-widest text-slate-400">
-                  Week {semester.weeks[c.key]}
-                </div>
-                <div className="font-headline font-bold text-white mt-1">{c.name}</div>
-                <div className="text-sm text-cyan-300 mt-2 inline-flex items-center gap-1">
-                  Open this week&apos;s work <ArrowRight className="w-3 h-3" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* English Courses — primary tier */}
       <section aria-labelledby="english-courses" className="max-w-5xl mx-auto px-4 pb-12">
