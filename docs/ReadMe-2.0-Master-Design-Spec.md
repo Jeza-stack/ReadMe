@@ -102,6 +102,22 @@ Reuse existing shadcn/Radix primitives; new components:
 - **Search:** build-time JSON index (title, headings, tags, dek) → client SearchDialog. No external service.
 - **Known fixes in Phase 2:** homepage "Loading…" (client component without SSR fallback), dead "(Soon)" assessment buttons, footer/course list mismatch.
 
+## 7b. Educational Template Families (added 2026-07-04, JB-approved)
+Every learning page belongs to exactly ONE family. No ambiguity.
+
+**1. Literature Guide** — poems, stories, speeches, novels, essays (Units I–III).
+Overview → Author → Historical Context → Read → Themes → Literary Devices → Critical Analysis → Why It Matters → Vocabulary → FAQs → Quiz → What Next. *Implemented; do not change.*
+
+**2. Language Lesson** — grammar, writing, vocabulary, communication (Units IV–V core).
+Before You Begin (time · difficulty · prerequisites · objectives) → What You Will Learn → Key Concepts → The Lesson → Worked Examples → Common Mistakes → Key Terms → FAQs → Quiz → What Next. *Implemented as LiteratureGuide variant='language'. Before You Begin / Worked Examples / Common Mistakes render when JB supplies the data (lessonMeta, workedExamples, commonMistakes fields) — Pass 3 content.* Lessons should draw on real IBS teaching experience ("the five punctuation mistakes IBS students make most often"), which is the platform's unfair advantage.
+
+**3. Skills Workshop** — negotiation, persuasion, presentations, professional communication (workplace-skills works). Overview → Learning Outcomes → Real-life Scenario → Skills Framework → Worked Example → Practice Task → Reflection → Discussion → Self-Assessment → Quiz → What Next. *DEFERRED: currently these render as Language Lessons; build the Workshop template after Phase 2 completes.*
+
+## 7c. Three-Pass Content Review (JB's process — replaces "proofread during migration")
+- **Pass 1 — Structural:** literature vs language vs workshop classification. ✅ Done 2026-07-04.
+- **Pass 2 — Language editing:** grammar, consistency, terminology, spelling, formatting. No content changes. *Scheduled before/alongside Item 6 migration.*
+- **Pass 3 — Educational improvement:** examples, exercises, common mistakes, teaching tips — JB's lecturer experience, fills the new lesson fields.
+
 ## 8. Page templates (specs)
 1. **Home** — This Week strip → English Courses grid → Explore pillars → PosterHero + feed (Latest·Editor's Pick·Recently Updated) → About teaser → CTA "Find your CEFR level in 15 minutes — free"
 2. **Course Home** — hero (name, semester, outcomes) → syllabus accordion → week grid → works by unit → revision → further reading

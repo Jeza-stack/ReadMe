@@ -1199,7 +1199,13 @@
                   "correctAnswer": "Incorrect tense",
                   "explanation": "The use of 'yesterday' indicates a specific time in the past, which requires the simple past tense. The correct sentence is 'I saw that movie yesterday.'"
                 }
-              ]
+              ],
+              "lessonMeta": {
+                "estimatedTime": "20 minutes",
+                "difficulty": "Beginner",
+                "prerequisites": [],
+                "objectives": []
+              }
             }
           ]
         },

@@ -34,12 +34,12 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
 
   const labels = isLanguage
     ? {
-        overview: 'What This Lesson Covers',
+        overview: 'What You Will Learn',
         read: 'The Lesson',
-        themes: 'Key Learning Points',
+        themes: 'Key Concepts',
         analysis: 'The Approach',
         vocabulary: 'Key Terms',
-        quiz: 'Practise What You Learned',
+        quiz: 'Quiz',
       }
     : {
         overview: 'Overview',
@@ -50,12 +50,20 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
         quiz: 'Check Your Understanding',
       };
 
+  const lm = work.lessonMeta;
+  const hasBeforeYouBegin =
+    isLanguage &&
+    Boolean(lm?.estimatedTime || lm?.difficulty || lm?.prerequisites?.length || lm?.objectives?.length);
+
   const sections: { id: string; label: string; show: boolean }[] = [
+    { id: 'begin', label: 'Before You Begin', show: hasBeforeYouBegin },
     { id: 'overview', label: labels.overview, show: Boolean(ca?.summary) },
     { id: 'author', label: 'About the Author', show: !isLanguage && Boolean(ai?.biography || ai?.writingStyle) },
     { id: 'context', label: 'Historical Context', show: !isLanguage && Boolean(ai?.historicalContext) },
     { id: 'themes', label: labels.themes, show: isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 },
     { id: 'read', label: labels.read, show: Boolean(work.fullText) },
+    { id: 'examples', label: 'Worked Examples', show: isLanguage && Array.isArray(work.workedExamples) && work.workedExamples.length > 0 },
+    { id: 'mistakes', label: 'Common Mistakes', show: isLanguage && Array.isArray(work.commonMistakes) && work.commonMistakes.length > 0 },
     { id: 'lit-themes', label: labels.themes, show: !isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 },
     { id: 'devices', label: 'Literary Devices', show: !isLanguage && Array.isArray(ca?.literaryDevices) && ca.literaryDevices.length > 0 },
     { id: 'analysis', label: labels.analysis, show: Boolean(ca?.criticalAnalysis) },
@@ -138,6 +146,47 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
           </nav>
 
           <div className="space-y-12">
+            {/* Before You Begin — orientation block (JB-authored lessonMeta) */}
+            {hasBeforeYouBegin && (
+              <section>
+                <H id="begin">Before You Begin</H>
+                <div className="rounded-xl border border-border bg-card/50 p-5 space-y-3 text-sm">
+                  <div className="flex flex-wrap gap-4 text-muted-foreground">
+                    {lm?.estimatedTime && (
+                      <span>
+                        <strong className="text-foreground">Estimated time:</strong> {lm.estimatedTime}
+                      </span>
+                    )}
+                    {lm?.difficulty && (
+                      <span>
+                        <strong className="text-foreground">Difficulty:</strong> {lm.difficulty}
+                      </span>
+                    )}
+                  </div>
+                  {lm?.prerequisites && lm.prerequisites.length > 0 && (
+                    <div>
+                      <strong>Prerequisites:</strong>
+                      <ul className="list-disc list-inside mt-1 text-muted-foreground">
+                        {lm.prerequisites.map((p, i) => (
+                          <li key={i}>{p}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {lm?.objectives && lm.objectives.length > 0 && (
+                    <div>
+                      <strong>By the end of this lesson you will be able to:</strong>
+                      <ul className="list-disc list-inside mt-1 text-muted-foreground">
+                        {lm.objectives.map((o, i) => (
+                          <li key={i}>{o}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </section>
+            )}
+
             {ca?.summary && (
               <section>
                 <H id="overview">{labels.overview}</H>
@@ -210,6 +259,42 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
                     <InteractiveText text={work.fullText} difficultWords={work.difficultWords ?? []} />
                   </>
                 )}
+              </section>
+            )}
+
+            {/* Worked Examples — language lessons */}
+            {isLanguage && Array.isArray(work.workedExamples) && work.workedExamples.length > 0 && (
+              <section>
+                <H id="examples">Worked Examples</H>
+                <div className="space-y-4">
+                  {work.workedExamples.map((ex, i) => (
+                    <div key={i} className="rounded-lg border border-border bg-card/50 p-4">
+                      {ex.title && <p className="font-headline font-bold mb-2">{ex.title}</p>}
+                      <div className="prose prose-sm max-w-none dark:prose-invert">
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{ex.example}</ReactMarkdown>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Common Mistakes — language lessons */}
+            {isLanguage && Array.isArray(work.commonMistakes) && work.commonMistakes.length > 0 && (
+              <section>
+                <H id="mistakes">Common Mistakes</H>
+                <div className="space-y-3">
+                  {work.commonMistakes.map((m, i) => (
+                    <div key={i} className="rounded-lg border border-border bg-card/50 p-4 text-sm">
+                      <p className="text-red-400/90">
+                        <strong>✗</strong> {m.mistake}
+                      </p>
+                      <p className="text-green-400/90 mt-2">
+                        <strong>✓</strong> {m.correction}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </section>
             )}
 

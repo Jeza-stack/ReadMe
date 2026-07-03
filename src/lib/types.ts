@@ -47,6 +47,16 @@ export interface LiteraryWork {
   contentAnalysis?: ContentAnalysis;
   faqs: Faq[];
   quiz: QuizQuestion[];
+  /** Language Lesson pedagogy fields (Pass 3 content, JB-authored).
+      Sections render only when present. */
+  lessonMeta?: {
+    estimatedTime?: string;      // e.g. "20 minutes"
+    difficulty?: string;         // e.g. "Intermediate"
+    prerequisites?: string[];
+    objectives?: string[];       // "By the end you will be able to…"
+  };
+  commonMistakes?: { mistake: string; correction: string }[];
+  workedExamples?: { title?: string; example: string }[];
 }
 
 export interface Course {
