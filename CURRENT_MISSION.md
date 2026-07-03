@@ -1,19 +1,17 @@
 # CURRENT MISSION
 
-**Phase:** 1 — Foundation Documents
+**Phase:** 2 — Platform Build
 
-**Today's Objective:** Phase 1A scaffolding complete → awaiting JB review (Phase 1B)
+**Today's Objective:** Item 1 — Homepage (This Week + two-tier)
 
 **Success Criteria:**
-- [x] docs/ReadMe-2.0-Master-Design-Spec.md drafted
-- [x] docs/ReadMe-Content-Style-Guide.md drafted
-- [x] docs/IMPLEMENTATION_NOTES.md created
-- [x] docs/PROJECT_BOARD.md created
-- [x] content/ folder structure + _schemas + _templates scaffolded
-- [ ] JB review (~1–2 h): typography, colours, IA, course organisation, naming
-- [ ] Phase 1C: commit all, tag `phase-1-complete`
+- [ ] This Week cards render from content/semester.json (hidden gracefully when week = 0)
+- [ ] Two-tier layout: English Courses top, Explore pillars below
+- [ ] "Loading…" placeholder eliminated (server-rendered)
+- [ ] Mobile responsive
+- [ ] Lighthouse > 90
 
-**Status:** In Progress (1B — awaiting JB review)
+**Status:** Not started
 
 ---
-*Rule: one explicit objective per session. When this task completes, this file changes to the next Project Board item.*
+*Phase 1 locked at tag `phase-1-complete`. Rule: one explicit objective per session.*

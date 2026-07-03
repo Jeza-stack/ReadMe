@@ -2,19 +2,21 @@
 Session rule: pick ONE item → implement → verify locally → commit → tick here → stop.
 
 ## Phase 1 — Foundation docs
-- [x] Master Design Specification (draft)
-- [x] Content Style Guide (draft)
-- [ ] JB review + lock (tag `phase-1-complete`)
+- [x] Master Design Specification (approved)
+- [x] Content Style Guide (approved)
+- [x] JB review + lock (tag `phase-1-complete`)
 
-## Phase 2 — Platform
-- [ ] Homepage (This Week + two-tier)
-- [ ] Navigation
-- [ ] MDX pipeline (+ frontmatter validation)
-- [ ] Search
-- [ ] Release Notes page
-- [ ] Templates + shared components
-- [ ] JSON→MDX migration
-- [ ] Bug fixes (Loading…, dead "(Soon)" buttons, footer mismatch)
+## Phase 2 — Platform (order revised per JB: pedagogy first, polish last)
+- [ ] 1. Homepage (This Week + two-tier)
+- [ ] 2. Navigation
+- [ ] 3. English Course shell (course home + week pages)
+- [ ] 4. Literature Guide template (live, reviewable by JB as lecturer)
+- [ ] 5. MDX rendering pipeline (+ frontmatter validation)
+- [ ] 6. JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md)
+- [ ] 7. Search
+- [ ] 8. Related content
+- [ ] 9. SEO
+- [ ] 10. Polish (+ bug fixes: Loading…, dead "(Soon)" buttons, footer mismatch — Loading fix lands with item 1)
 
 ## Phase 3 — English Courses
 - [ ] English I (complete)

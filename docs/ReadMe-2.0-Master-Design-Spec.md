@@ -50,10 +50,12 @@ Existing `/level/a1…c2` routes 301-redirect to `/cefr/<level>`.
 - **Body:** Inter (already familiar from JB's tooling). 16px base, 1.7 line height, 65–75ch measure.
 - **Mono/labels:** JetBrains Mono for metadata chips (reading time, level, week).
 
-### 4.2 Colour (JB to approve)
+### 4.2 Colour (APPROVED — JB, Phase 1B)
 - **Ink:** #1A2333 (text) on #FFFFFF / #FAF9F6 (paper)
-- **Primary:** deep teal #0F6B5C (echoes current site heritage) — nav, links, buttons
-- **Accent per pillar:** Literature #7C3AED · CEFR #0369A1 · AI #D97706 · Soft Skills #059669 · Academic Success #BE185D · Assessment #4338CA (thin card top-bars + tags only; pages stay calm)
+- **Primary:** deep teal #0F6B5C — nav, links, buttons
+- **One accent per pillar, consistent everywhere (no rainbow pages):**
+  English Courses **Burgundy** #7B2D3B · CEFR **Blue** #0369A1 · AI for Students **Purple** #6D28D9 · Soft Skills **Green** #059669 · Academic Success **Orange** #C2540A · IQ Test **Slate** #475569 · Articles **Neutral** #6B7280
+  (thin card top-bars + tags only; pages stay calm)
 - **Dark mode:** #0E141F paper, #E8EDF4 ink, same accents at 80 % saturation.
 
 ### 4.3 Layout rules
@@ -117,10 +119,10 @@ Reuse existing shadcn/Radix primitives; new components:
 - Manual: Content Quality Standard checklist (style guide §9) before publish
 - Lighthouse mobile/SEO ≥ 90 (homepage + one guide) each phase
 
-## 10. Open decisions for JB (Phase 1B)
-1. Typography pairing (Fraunces+Inter proposed) — approve/replace
-2. Colour system above — approve/adjust
-3. Keep current logo or refresh?
-4. English I unit structure confirmed as the 5 units found in data? Same pattern for II–IV?
-5. `semester.json` week numbers — who updates weekly (you or JB COG OS agent)?
-6. About page: photo + 2–3-line bio needed
+## 10. Phase 1B decisions (RESOLVED 2026-07-03)
+1. Typography: **Fraunces + Inter approved**
+2. Colour: **approved with one-accent-per-pillar rule** (see §4.2)
+3. Logo: **keep for v2.0** — branding deferred to v3
+4. Units: **structure confirmed from readme-data.json** (E-I: 5 units/16 works · E-II: 6/18 · E-III: 5/17 · E-IV: 6/17) — full inventory in `docs/MIGRATION_CHECKLIST.md`; JB reviews unit content during migration
+5. `semester.json`: **JB updates manually weekly** (<5 min; not automated)
+6. About page: **concise, not a CV** — who I am · why the site exists · why trust it. Photo + bio still to be supplied.
