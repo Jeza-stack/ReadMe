@@ -110,7 +110,7 @@ const allCourses = [
     duration: '10 Weeks',
     difficulty: 'Intermediate',
     subject: 'Conversation',
-    image: 'https://images.unsplash.com/photo-1523050335456-c6bb7f9ccb7a?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800',
   },
 ];
 
