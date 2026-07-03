@@ -9,7 +9,7 @@
 - [ ] Frontmatter validated against content/_schemas at build time
 - [ ] Build fails loudly on invalid frontmatter
 
-**Status:** Not started
+**Status:** Ready (Pass 2 complete)
 
 ---
 *Done: 1. Homepage ✓ · 2. Navigation ✓ · 3. Course shell ✓ · 4. Literature Guide ✓ (sticky nav, fixed section order, all data sections surfaced, WhatNext). Rule: one objective per session.*
