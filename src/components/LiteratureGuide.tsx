@@ -21,24 +21,49 @@ type Props = {
   courseSlug: string;
   courseName: string;
   next?: { slug: string; title: string } | null;
+  /** 'literature' = literary work (author/themes framing);
+      'language' = grammar/skills lesson (Units IV–VI: no author persona,
+      pedagogic labels, sources note instead of biography). */
+  variant?: 'literature' | 'language';
 };
 
-export default function LiteratureGuide({ work, courseSlug, courseName, next }: Props) {
+export default function LiteratureGuide({ work, courseSlug, courseName, next, variant = 'literature' }: Props) {
   const ca = work.contentAnalysis;
   const ai = work.authorInfo;
+  const isLanguage = variant === 'language';
+
+  const labels = isLanguage
+    ? {
+        overview: 'What This Lesson Covers',
+        read: 'The Lesson',
+        themes: 'Key Learning Points',
+        analysis: 'The Approach',
+        vocabulary: 'Key Terms',
+        quiz: 'Practise What You Learned',
+      }
+    : {
+        overview: 'Overview',
+        read: 'Read',
+        themes: 'Themes',
+        analysis: 'Critical Analysis',
+        vocabulary: 'Vocabulary',
+        quiz: 'Check Your Understanding',
+      };
 
   const sections: { id: string; label: string; show: boolean }[] = [
-    { id: 'overview', label: 'Overview', show: Boolean(ca?.summary) },
-    { id: 'author', label: 'About the Author', show: Boolean(ai?.biography || ai?.writingStyle) },
-    { id: 'context', label: 'Historical Context', show: Boolean(ai?.historicalContext) },
-    { id: 'read', label: 'Read', show: Boolean(work.fullText) },
-    { id: 'themes', label: 'Themes', show: Array.isArray(ca?.themes) && ca.themes.length > 0 },
-    { id: 'devices', label: 'Literary Devices', show: Array.isArray(ca?.literaryDevices) && ca.literaryDevices.length > 0 },
-    { id: 'analysis', label: 'Critical Analysis', show: Boolean(ca?.criticalAnalysis) },
+    { id: 'overview', label: labels.overview, show: Boolean(ca?.summary) },
+    { id: 'author', label: 'About the Author', show: !isLanguage && Boolean(ai?.biography || ai?.writingStyle) },
+    { id: 'context', label: 'Historical Context', show: !isLanguage && Boolean(ai?.historicalContext) },
+    { id: 'themes', label: labels.themes, show: isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 },
+    { id: 'read', label: labels.read, show: Boolean(work.fullText) },
+    { id: 'lit-themes', label: labels.themes, show: !isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 },
+    { id: 'devices', label: 'Literary Devices', show: !isLanguage && Array.isArray(ca?.literaryDevices) && ca.literaryDevices.length > 0 },
+    { id: 'analysis', label: labels.analysis, show: Boolean(ca?.criticalAnalysis) },
     { id: 'matters', label: 'Why It Matters', show: Boolean(ca?.relevance) },
-    { id: 'vocabulary', label: 'Vocabulary', show: Array.isArray(work.difficultWords) && work.difficultWords.length > 0 },
+    { id: 'vocabulary', label: labels.vocabulary, show: Array.isArray(work.difficultWords) && work.difficultWords.length > 0 },
     { id: 'faqs', label: 'FAQs', show: Array.isArray(work.faqs) && work.faqs.length > 0 },
     { id: 'quiz', label: 'Quiz', show: Array.isArray(work.quiz) && work.quiz.length > 0 },
+    { id: 'sources', label: 'Background & Sources', show: isLanguage && Boolean(ai?.biography || ai?.historicalContext) },
   ].filter((s) => s.show);
 
   const H = ({ id, children }: { id: string; children: React.ReactNode }) => (
@@ -89,10 +114,11 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
               {work.category}
             </p>
             <h1 className="font-headline text-4xl font-bold mt-1">{work.title}</h1>
-            <p className="text-lg text-muted-foreground mt-1">by {work.author}</p>
+            {!isLanguage && <p className="text-lg text-muted-foreground mt-1">by {work.author}</p>}
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Prescribed reading for {courseName} ({work.category}). Read the guide
-              before class; finish with the quiz to check your understanding.
+              {isLanguage
+                ? `Language and skills lesson for ${courseName} (${work.category}). Work through the lesson, then practise with the quiz.`
+                : `Prescribed reading for ${courseName} (${work.category}). Read the guide before class; finish with the quiz to check your understanding.`}
             </p>
           </header>
 
@@ -114,12 +140,30 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
           <div className="space-y-12">
             {ca?.summary && (
               <section>
-                <H id="overview">Overview</H>
+                <H id="overview">{labels.overview}</H>
                 <p className="text-lg leading-relaxed text-foreground/90">{ca.summary}</p>
               </section>
             )}
 
-            {(ai?.biography || ai?.writingStyle) && (
+            {/* Language lessons: key learning points up front */}
+            {isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 && (
+              <section>
+                <H id="themes">{labels.themes}</H>
+                <ul className="space-y-3">
+                  {ca.themes.map((t, i) => (
+                    <li
+                      key={i}
+                      className="rounded-lg border border-border bg-card/50 px-4 py-3 text-foreground/90"
+                      style={{ borderLeft: `3px solid ${BURGUNDY}` }}
+                    >
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {!isLanguage && (ai?.biography || ai?.writingStyle) && (
               <section>
                 <H id="author">About the Author</H>
                 <div className="space-y-4 text-foreground/85 leading-relaxed">
@@ -143,7 +187,7 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
               </section>
             )}
 
-            {ai?.historicalContext && (
+            {!isLanguage && ai?.historicalContext && (
               <section>
                 <H id="context">Historical Context</H>
                 <p className="text-foreground/85 leading-relaxed">{ai.historicalContext}</p>
@@ -152,18 +196,26 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
 
             {work.fullText && (
               <section>
-                <H id="read">Read</H>
-                <p className="text-sm text-muted-foreground mb-6">
-                  Tap the <span className="text-primary font-bold">bolded words</span> for
-                  definitions and connotations.
-                </p>
-                <InteractiveText text={work.fullText} difficultWords={work.difficultWords ?? []} />
+                <H id="read">{labels.read}</H>
+                {isLanguage ? (
+                  <article className="prose prose-lg max-w-none dark:prose-invert">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{work.fullText}</ReactMarkdown>
+                  </article>
+                ) : (
+                  <>
+                    <p className="text-sm text-muted-foreground mb-6">
+                      Tap the <span className="text-primary font-bold">bolded words</span> for
+                      definitions and connotations.
+                    </p>
+                    <InteractiveText text={work.fullText} difficultWords={work.difficultWords ?? []} />
+                  </>
+                )}
               </section>
             )}
 
-            {Array.isArray(ca?.themes) && ca.themes.length > 0 && (
+            {!isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 && (
               <section>
-                <H id="themes">Themes</H>
+                <H id="lit-themes">Themes</H>
                 <ul className="space-y-3">
                   {ca.themes.map((t, i) => (
                     <li
@@ -178,7 +230,7 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
               </section>
             )}
 
-            {Array.isArray(ca?.literaryDevices) && ca.literaryDevices.length > 0 && (
+            {!isLanguage && Array.isArray(ca?.literaryDevices) && ca.literaryDevices.length > 0 && (
               <section>
                 <H id="devices">Literary Devices</H>
                 <dl className="space-y-4">
@@ -194,7 +246,7 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
 
             {ca?.criticalAnalysis && (
               <section>
-                <H id="analysis">Critical Analysis</H>
+                <H id="analysis">{labels.analysis}</H>
                 <p className="text-foreground/85 leading-relaxed">{ca.criticalAnalysis}</p>
               </section>
             )}
@@ -214,7 +266,7 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
 
             {Array.isArray(work.difficultWords) && work.difficultWords.length > 0 && (
               <section>
-                <H id="vocabulary">Vocabulary</H>
+                <H id="vocabulary">{labels.vocabulary}</H>
                 <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {work.difficultWords.map((w) => (
                     <div key={w.word} className="rounded-lg border border-border bg-card/50 p-4">
@@ -255,8 +307,24 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next }: 
 
             {Array.isArray(work.quiz) && work.quiz.length > 0 && (
               <section>
-                <H id="quiz">Check Your Understanding</H>
+                <H id="quiz">{labels.quiz}</H>
                 <Quiz questions={work.quiz} />
+              </section>
+            )}
+
+            {/* Language lessons: honest sources note instead of an author persona */}
+            {isLanguage && (ai?.biography || ai?.historicalContext) && (
+              <section>
+                <H id="sources">Background &amp; Sources</H>
+                <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  {ai.biography && <p>{ai.biography}</p>}
+                  {ai.historicalContext && <p>{ai.historicalContext}</p>}
+                  {Array.isArray(ai.majorWorks) && ai.majorWorks.length > 0 && (
+                    <p>
+                      <strong>Reference works:</strong> {ai.majorWorks.join(' · ')}
+                    </p>
+                  )}
+                </div>
               </section>
             )}
 

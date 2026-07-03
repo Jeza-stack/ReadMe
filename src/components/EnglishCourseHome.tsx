@@ -161,7 +161,7 @@ export function EnglishCourseHome({ course }: { course: Course }) {
                           <span className="block text-white font-medium group-hover:text-cyan-300 transition-colors">
                             {w.title}
                           </span>
-                          {w.author && (
+                          {w.author && !/unit\s+(iv|v|vi)\b/i.test(unit.name) && (
                             <span className="block text-xs text-slate-400 mt-0.5">{w.author}</span>
                           )}
                         </span>

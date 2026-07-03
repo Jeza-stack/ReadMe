@@ -27,10 +27,18 @@ export async function generateMetadata({ params }: { params: Promise<{ courseSlu
   const { courseSlug, workSlug } = await params;
   const work = getLiteraryWork(courseSlug, workSlug);
   if (!work) return { title: 'Work not found' };
-  return {
-    title: `${work.title} by ${work.author} | CEFR English`,
-    description: `An analysis of ${work.title}, part of the ${courseSlug} course.`,
-  };
+  const course = getCourses().find((c) => c.slug === courseSlug);
+  const unit = course?.categories.find((cat) => cat.works.some((w) => w.slug === workSlug));
+  const isLanguageUnit = /unit\s+(iv|v|vi)\b/i.test(unit?.name ?? work.category);
+  return isLanguageUnit
+    ? {
+        title: `${work.title} | ReadMe`,
+        description: `A language and skills lesson from ${course?.name ?? courseSlug}.`,
+      }
+    : {
+        title: `${work.title} by ${work.author} | ReadMe`,
+        description: `A study guide to ${work.title}, prescribed reading in ${course?.name ?? courseSlug}.`,
+      };
 }
 
 export default async function LiteraryWorkPage({ params }: { params: Promise<{ courseSlug: string, workSlug: string }> }) {
@@ -124,12 +132,21 @@ export default async function LiteraryWorkPage({ params }: { params: Promise<{ c
     const flat = existingCourse.categories.flatMap((cat) => cat.works);
     const idx = flat.findIndex((w) => w.slug === workSlug);
     const nextWork = idx >= 0 && idx < flat.length - 1 ? flat[idx + 1] : null;
+    // Units IV–VI are language/grammar/skills lessons, not literary works.
+    // Detect from the unit (category) name in the course structure — the
+    // work's own `category` field is inconsistent (sometimes lacks the
+    // "Unit X:" prefix in English II/IV data).
+    const unit = existingCourse.categories.find((cat) =>
+      cat.works.some((w) => w.slug === workSlug)
+    );
+    const isLanguageUnit = /unit\s+(iv|v|vi)\b/i.test(unit?.name ?? work!.category);
     return (
       <LiteratureGuide
         work={work!}
         courseSlug={courseSlug}
         courseName={courseLabel}
         next={nextWork ? { slug: nextWork.slug, title: nextWork.title } : null}
+        variant={isLanguageUnit ? 'language' : 'literature'}
       />
     );
   }
