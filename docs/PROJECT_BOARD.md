@@ -1,5 +1,5 @@
 # ReadMe 2.0 — Project Board
-Session rule: pick ONE item → implement → verify locally → commit → tick here → stop.
+Session rule: ONE item → implement → verify locally → commit → PUSH → preview → tick here → stop. No exceptions. master changes only at phase completion (v2.0 release).
 
 ## Phase 1 — Foundation docs
 - [x] Master Design Specification (approved)
