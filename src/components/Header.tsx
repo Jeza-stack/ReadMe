@@ -6,6 +6,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { SearchDialog } from "@/components/SearchDialog";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -166,8 +167,9 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Right: primary CTA */}
-          <div className="flex items-center justify-end">
+          {/* Right: search + primary CTA */}
+          <div className="flex items-center justify-end gap-2">
+            <SearchDialog />
             <Button asChild className="rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-5">
               <Link href="/assessment/quick">Find Your Level</Link>
             </Button>

@@ -13,7 +13,7 @@ Session rule: ONE item → implement → verify locally → commit → PUSH → 
 - [x] 4. Literature Guide template (live, reviewable by JB as lecturer)
 - [x] 5. MDX rendering pipeline (+ frontmatter validation)
 - [ ] 6. JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md)
-- [ ] 7. Search
+- [x] 7. Search
 - [ ] 8. Related content
 - [ ] 9. SEO
 - [ ] 10. Polish (+ bug fixes: Loading…, dead "(Soon)" buttons, footer mismatch — Loading fix lands with item 1)
