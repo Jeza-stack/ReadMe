@@ -156,7 +156,7 @@ export async function generateMetadata({ params }: { params: Promise<{ courseSlu
   const name = existing?.name ?? fallback?.name ?? slug.replace(/-/g, ' ').toUpperCase();
   const description = existing?.description ?? fallback?.description ?? 'Explore this program on the CEFR English platform.';
   return {
-    title: `${name} | CEFR English`,
+    title: name,
     description,
   };
 }

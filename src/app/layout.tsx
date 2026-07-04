@@ -18,8 +18,25 @@ const fontHeadline = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'CEFR English Learning Platform - Master English Step by Step',
-  description: 'Learn English systematically with our CEFR-aligned platform. From A1 beginner to C2 proficiency, master all language skills with interactive lessons and assessments.',
+  metadataBase: new URL('https://read-me-self.vercel.app'),
+  title: {
+    default: 'ReadMe — English Literature, Language & AI Literacy',
+    template: '%s | ReadMe',
+  },
+  description:
+    'Free, academically rigorous study guides for English Literature, CEFR English, and AI literacy — built by a lecturer to complement the classroom, for students in the Pacific and beyond.',
+  openGraph: {
+    siteName: 'ReadMe',
+    type: 'website',
+    locale: 'en_GB',
+    title: 'ReadMe — English Literature, Language & AI Literacy',
+    description:
+      'Free study guides: literature analysis, CEFR English lessons, AI literacy, and academic skills.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'ReadMe — English Literature, Language & AI Literacy',
+  },
 };
 
 export default function RootLayout({

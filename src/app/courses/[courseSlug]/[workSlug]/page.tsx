@@ -33,11 +33,11 @@ export async function generateMetadata({ params }: { params: Promise<{ courseSlu
   const isLanguageUnit = /unit\s+(iv|v|vi)\b/i.test(unit?.name ?? work.category);
   return isLanguageUnit
     ? {
-        title: `${work.title} | ReadMe`,
+        title: work.title,
         description: `A language and skills lesson from ${course?.name ?? courseSlug}.`,
       }
     : {
-        title: `${work.title} by ${work.author} | ReadMe`,
+        title: `${work.title} by ${work.author}`,
         description: `A study guide to ${work.title}, prescribed reading in ${course?.name ?? courseSlug}.`,
       };
 }
