@@ -142,6 +142,11 @@ export default async function LiteraryWorkPage({ params }: { params: Promise<{ c
       cat.works.some((w) => w.slug === workSlug)
     );
     const isLanguageUnit = /unit\s+(iv|v|vi)\b/i.test(unit?.name ?? work!.category);
+    // Related: other works in the same unit (knowledge web, Item 8)
+    const related = (unit?.works ?? [])
+      .filter((w) => w.slug !== workSlug)
+      .slice(0, 3)
+      .map((w) => ({ slug: w.slug, title: w.title, author: isLanguageUnit ? undefined : w.author }));
     return (
       <LiteratureGuide
         work={work!}
@@ -149,6 +154,8 @@ export default async function LiteraryWorkPage({ params }: { params: Promise<{ c
         courseName={courseLabel}
         next={nextWork ? { slug: nextWork.slug, title: nextWork.title } : null}
         variant={isLanguageUnit ? 'language' : 'literature'}
+        related={related}
+        unitName={unit?.name}
       />
     );
   }

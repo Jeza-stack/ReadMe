@@ -14,7 +14,7 @@ Session rule: ONE item → implement → verify locally → commit → PUSH → 
 - [x] 5. MDX rendering pipeline (+ frontmatter validation)
 - [ ] 6. JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md)
 - [x] 7. Search
-- [ ] 8. Related content
+- [x] 8. Related content
 - [ ] 9. SEO
 - [ ] 10. Polish (+ bug fixes: Loading…, dead "(Soon)" buttons, footer mismatch — Loading fix lands with item 1)
 

@@ -25,9 +25,12 @@ type Props = {
       'language' = grammar/skills lesson (Units IV–VI: no author persona,
       pedagogic labels, sources note instead of biography). */
   variant?: 'literature' | 'language';
+  /** Other works in the same unit (knowledge web). */
+  related?: { slug: string; title: string; author?: string }[];
+  unitName?: string;
 };
 
-export default function LiteratureGuide({ work, courseSlug, courseName, next, variant = 'literature' }: Props) {
+export default function LiteratureGuide({ work, courseSlug, courseName, next, variant = 'literature', related = [], unitName }: Props) {
   const ca = work.contentAnalysis;
   const ai = work.authorInfo;
   const isLanguage = variant === 'language';
@@ -456,6 +459,31 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
                       <strong>Reference works:</strong> {ai.majorWorks.join(' · ')}
                     </p>
                   )}
+                </div>
+              </section>
+            )}
+
+            {/* Related in this unit (knowledge web) */}
+            {related.length > 0 && (
+              <section aria-label="Related" className="border-t border-border pt-8">
+                <h2 className="font-headline text-lg font-bold mb-4">
+                  More from {unitName ?? 'this unit'}
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {related.map((r) => (
+                    <Link
+                      key={r.slug}
+                      href={`/courses/${courseSlug}/${r.slug}`}
+                      className="rounded-xl border border-border bg-card/50 hover:bg-card p-4 transition-colors group"
+                    >
+                      <span className="block font-semibold text-sm group-hover:text-primary leading-snug">
+                        {r.title}
+                      </span>
+                      {r.author && (
+                        <span className="block text-xs text-muted-foreground mt-1">{r.author}</span>
+                      )}
+                    </Link>
+                  ))}
                 </div>
               </section>
             )}
