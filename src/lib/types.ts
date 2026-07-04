@@ -57,6 +57,13 @@ export interface LiteraryWork {
   };
   commonMistakes?: { mistake: string; correction: string }[];
   workedExamples?: { title?: string; example: string }[];
+  /** ReadMe Copyright & Literary Content Policy. Status is a JB-reviewed
+      decision — never set automatically. */
+  copyright?: {
+    status?: 'public-domain' | 'copyrighted';
+    note?: string;
+    readAt?: string;
+  };
 }
 
 export interface Course {

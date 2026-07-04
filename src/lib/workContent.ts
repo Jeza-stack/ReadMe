@@ -44,6 +44,7 @@ function toWork(fm: WorkFrontmatter, body: string, unitName: string): LiteraryWo
     lessonMeta: fm.lessonMeta,
     commonMistakes: fm.commonMistakes,
     workedExamples: fm.workedExamples,
+    copyright: fm.copyright,
   };
 }
 

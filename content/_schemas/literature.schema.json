@@ -14,6 +14,16 @@
     "themes": { "type": "array", "items": { "type": "string" } },
     "tags": { "type": "array", "items": { "type": "string" } },
     "related": { "type": "array", "items": { "type": "string" } },
-    "updated": { "type": "string", "format": "date" }
+    "updated": { "type": "string", "format": "date" },
+    "copyright": {
+      "type": "object",
+      "description": "Mandatory before the JSON fallback is retired. Status is a JB-reviewed decision, never automated.",
+      "properties": {
+        "status": { "enum": ["public-domain", "copyrighted"] },
+        "note": { "type": "string", "description": "one-line justification, JB-approved" },
+        "readAt": { "type": "string", "description": "authorised source link (copyrighted works): publisher → author site → licensed educational source → recognised archive" }
+      }
+    },
+    "sourceType": { "enum": ["original-analysis", "summary", "primary-text", "quotation", "external-resource"] }
   }
 }

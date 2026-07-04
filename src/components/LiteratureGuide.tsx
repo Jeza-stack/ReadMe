@@ -61,7 +61,8 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
     { id: 'author', label: 'About the Author', show: !isLanguage && Boolean(ai?.biography || ai?.writingStyle) },
     { id: 'context', label: 'Historical Context', show: !isLanguage && Boolean(ai?.historicalContext) },
     { id: 'themes', label: labels.themes, show: isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 },
-    { id: 'read', label: labels.read, show: Boolean(work.fullText) },
+    { id: 'read', label: !isLanguage && work.copyright?.status === 'copyrighted' ? 'Selected Passages' : labels.read, show: Boolean(work.fullText) },
+    { id: 'watch', label: 'Watch', show: !isLanguage && Boolean(work.videoEmbedId) },
     { id: 'examples', label: 'Worked Examples', show: isLanguage && Array.isArray(work.workedExamples) && work.workedExamples.length > 0 },
     { id: 'mistakes', label: 'Common Mistakes', show: isLanguage && Array.isArray(work.commonMistakes) && work.commonMistakes.length > 0 },
     { id: 'lit-themes', label: labels.themes, show: !isLanguage && Array.isArray(ca?.themes) && ca.themes.length > 0 },
@@ -245,18 +246,47 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
 
             {work.fullText && (
               <section>
-                <H id="read">{labels.read}</H>
+                <H id="read">
+                  {!isLanguage && work.copyright?.status === 'copyrighted'
+                    ? 'Selected Passages'
+                    : labels.read}
+                </H>
                 {isLanguage ? (
                   <article className="prose prose-lg max-w-none dark:prose-invert">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>{work.fullText}</ReactMarkdown>
                   </article>
                 ) : (
                   <>
+                    {work.copyright?.status === 'copyrighted' && (
+                      <p className="text-sm text-muted-foreground mb-4">
+                        This work is under copyright. The passages below are brief,
+                        attributed quotations selected to support the analysis in this
+                        guide.
+                      </p>
+                    )}
                     <p className="text-sm text-muted-foreground mb-6">
                       Tap the <span className="text-primary font-bold">bolded words</span> for
                       definitions and connotations.
                     </p>
                     <InteractiveText text={work.fullText} difficultWords={work.difficultWords ?? []} />
+                    {work.copyright?.status === 'copyrighted' && work.copyright.readAt && (
+                      <a
+                        href={work.copyright.readAt}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 flex items-center justify-between rounded-xl border border-border bg-card/50 hover:bg-card p-4 transition-colors group"
+                      >
+                        <span>
+                          <span className="block text-xs uppercase tracking-widest text-muted-foreground">
+                            Authorised source
+                          </span>
+                          <span className="block font-semibold mt-1 group-hover:text-primary">
+                            Read the full text of {work.title}
+                          </span>
+                        </span>
+                        <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
+                      </a>
+                    )}
                   </>
                 )}
               </section>
@@ -294,6 +324,23 @@ export default function LiteratureGuide({ work, courseSlug, courseName, next, va
                       </p>
                     </div>
                   ))}
+                </div>
+              </section>
+            )}
+
+            {/* Official video (rights sit with the uploader; embed, don't copy) */}
+            {!isLanguage && work.videoEmbedId && (
+              <section>
+                <H id="watch">Watch</H>
+                <div className="relative aspect-video">
+                  <iframe
+                    className="absolute inset-0 w-full h-full rounded-lg"
+                    src={`https://www.youtube.com/embed/${work.videoEmbedId}`}
+                    title={`${work.title} by ${work.author}`}
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
                 </div>
               </section>
             )}

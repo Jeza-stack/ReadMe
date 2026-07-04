@@ -118,6 +118,13 @@ Before You Begin (time · difficulty · prerequisites · objectives) → What Yo
 - **Pass 2 — Language editing:** grammar, consistency, terminology, spelling, formatting. No content changes. *Scheduled before/alongside Item 6 migration.*
 - **Pass 3 — Educational improvement:** examples, exercises, common mistakes, teaching tips — JB's lecturer experience, fills the new lesson fields.
 
+## 7d. ReadMe Copyright & Literary Content Policy (JB-approved 2026-07-04)
+> ReadMe publishes original educational commentary, analysis, explanations, and learning resources. For works that remain under copyright, ReadMe presents original analysis supported by brief, attributed quotations where appropriate, and directs readers to authorised sources for the complete text. The primary educational value of ReadMe lies in its original explanations, analysis, vocabulary support, discussion questions, and learning guidance rather than reproducing complete literary texts.
+
+**Three principles:** 1. ReadMe owns the analysis, not the literary text. 2. Public-domain works may display their complete text after verification that the edition or translation used is itself in the public domain; copyrighted works display original commentary with only the minimum necessary attributed quotations plus links to authorised sources. 3. ReadMe exists to teach, not to reproduce literary works.
+
+**Binding rules:** quotation amount = minimum necessary for the accompanying analysis (per work, JB-chosen, never automated) · copyright classification is ALWAYS a JB-reviewed decision (AI prepares, JB approves; no legal rules encoded in software) · jurisdiction-specific cases reviewed individually (details in MIGRATION_CHECKLIST, not here) · authorised-link preference: official publisher → official author website → licensed educational source → recognised archive where legally available. Frontmatter `copyright.status` is mandatory for every literature guide before the JSON fallback is retired. Later: public /copyright page.
+
 ## 8. Page templates (specs)
 1. **Home** — This Week strip → English Courses grid → Explore pillars → PosterHero + feed (Latest·Editor's Pick·Recently Updated) → About teaser → CTA "Find your CEFR level in 15 minutes — free"
 2. **Course Home** — hero (name, semester, outcomes) → syllabus accordion → week grid → works by unit → revision → further reading
