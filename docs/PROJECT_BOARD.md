@@ -41,3 +41,7 @@ Session rule: ONE item → implement → verify locally → commit → PUSH → 
 
 ## Phase 9 — Launch
 - [ ] Lighthouse ≥90 · student-journey test (≤2 clicks) · deploy · smoke test
+
+---
+## ERA SHIFT (2026-07-04): Platform Build (Era 1) COMPLETE → Teaching-Driven Content (Era 2)
+Phase 2 platform build is done (all 10 items). Infrastructure now fades into the background. New rhythm: **Teach → Observe → Record → Improve → Publish** (docs/EDITORIAL_CALENDAR.md). Before pillar population (CEFR B1 → Academic Success → AI for Students → Soft Skills → IQ Test), JB completes the four/five-visitor journey review + copyright triage. Snapshot: docs/RELEASE_NOTES.md.
