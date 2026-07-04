@@ -10,7 +10,7 @@
 - [ ] Spot-check 2 pages render identically
 - [ ] Commit + push
 
-**Status:** English I ✓ (9 guides + 7 lessons, MDX-first with JSON fallback). English II next.
+**Status:** English I ✓ · English II ✓ (10 guides + 8 lessons). English III next.
 
 ---
 *Copyright note: assign PD/©/UNI category per work during JB review (see MIGRATION_CHECKLIST).* 

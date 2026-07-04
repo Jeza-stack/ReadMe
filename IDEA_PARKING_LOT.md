@@ -14,3 +14,6 @@ Rule: from now until launch, no new ideas enter the Canonical Specification. Eve
 | Logo refresh / rebranding | 2026-07-03 | Deferred to v3 |
 | Section-completeness warnings (literature guides must contain Overview/Themes/Why It Matters/Quiz/What Next — warn, not error) | 2026-07-04 | Post-migration validator enhancement |
 | GitHub Actions CI running validate:content on every push/PR | 2026-07-04 | v2.1 improvement |
+| Archive readme-data.json as archive/readme-data-v1.json after English IV migration (never delete — history matters) | 2026-07-04 | Post-E4 step |
+| Remove JSON fallback from work loader AFTER one full semester teaching on MDX | 2026-07-04 | One semester of safety first |
+| Tag "content-architecture-complete" milestone after English IV | 2026-07-04 | Recognition point: infrastructure done, content improvement begins |

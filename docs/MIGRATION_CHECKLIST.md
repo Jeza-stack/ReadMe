@@ -10,12 +10,12 @@ Source of truth: `src/data/readme-data.json`. Migration projects fail through om
 **Unit V: English for Workplace** — ☑ Self-introduction & Greetings · ☑ Introducing Others · ☑ Listening for General/Specific Information · ☑ Instructions & Directions
 
 ## English II (18 works)
-**Unit I: Poetry** — ☐ Very Indian Poem in Indian English · ☐ Still I Rise · ☐ The Flower · ☐ On Killing a Tree
-**Unit II: Prose** — ☐ If You Are Wrong Admit It · ☐ Kindly Adjust Please · ☐ The Spoon-fed Age
-**Unit III: Fiction** — ☐ The Alchemist · ☐ Animal Farm · ☐ The Old Man and the Sea
-**Unit IV: Language Competency** — ☐ Precise Writing: Grammar, Style, Register · ☐ Academic Word List Strategies · ☐ Reading for Comprehension
-**Unit V: English in the Workplace** — ☐ Professional Email · ☐ Report Writing & Proposals · ☐ Job Applications & Interviews
-**Unit VI: Contemporary Issues** — ☐ AI and the Future of Work · ☐ Climate Change
+**Unit I: Poetry** — ☑ Very Indian Poem in Indian English · ☑ Still I Rise · ☑ The Flower · ☑ On Killing a Tree
+**Unit II: Prose** — ☑ If You Are Wrong Admit It · ☑ Kindly Adjust Please · ☑ The Spoon-fed Age
+**Unit III: Fiction** — ☑ The Alchemist · ☑ Animal Farm · ☑ The Old Man and the Sea
+**Unit IV: Language Competency** — ☑ Precise Writing: Grammar, Style, Register · ☑ Academic Word List Strategies · ☑ Reading for Comprehension
+**Unit V: English in the Workplace** — ☑ Professional Email · ☑ Report Writing & Proposals · ☑ Job Applications & Interviews
+**Unit VI: Contemporary Issues** — ☑ AI and the Future of Work · ☑ Climate Change
 
 ## English III (17 works)
 **Unit I: Poetry** — ☐ The Voice of the Mountain · ☐ Sita · ☐ A Song of Hope · ☐ In an Artist's Studio
