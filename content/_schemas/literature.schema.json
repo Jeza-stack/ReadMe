@@ -9,7 +9,7 @@
     "author": { "type": "string" },
     "courses": { "type": "array", "items": { "enum": ["english-i", "english-ii", "english-iii", "english-iv"] } },
     "units": { "type": "array", "items": { "type": "string" } },
-    "type": { "enum": ["poem", "prose", "short-story", "play", "essay"] },
+    "type": { "enum": ["poem", "prose", "short-story", "play", "essay", "speech", "interview", "life-writing"] },
     "summary": { "type": "string", "maxLength": 300 },
     "themes": { "type": "array", "items": { "type": "string" } },
     "tags": { "type": "array", "items": { "type": "string" } },

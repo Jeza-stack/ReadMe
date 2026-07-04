@@ -1,4 +1,5 @@
 import { getLiteraryWork, getCourses } from '@/lib/data';
+import { getWorkFromContent } from '@/lib/workContent';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import LiteraryWorkClient from '@/components/LiteraryWorkClient';
@@ -43,7 +44,8 @@ export async function generateMetadata({ params }: { params: Promise<{ courseSlu
 
 export default async function LiteraryWorkPage({ params }: { params: Promise<{ courseSlug: string, workSlug: string }> }) {
   const { courseSlug, workSlug } = await params;
-  const work = getLiteraryWork(courseSlug, workSlug);
+  // MDX-first: migrated works serve from content/, others from readme-data.json
+  const work = getWorkFromContent(courseSlug, workSlug) ?? getLiteraryWork(courseSlug, workSlug);
   if (!work) notFound();
 
   const existingCourse = getCourses().find(c => c.slug === courseSlug);

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Course language/skills lesson frontmatter (Units IV–VI)",
+  "type": "object",
+  "required": ["title", "slug", "course", "unit", "summary", "updated"],
+  "properties": {
+    "title": { "type": "string" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "course": { "enum": ["english-i", "english-ii", "english-iii", "english-iv"] },
+    "unit": { "type": "string" },
+    "summary": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "updated": { "type": "string", "format": "date" }
+  }
+}

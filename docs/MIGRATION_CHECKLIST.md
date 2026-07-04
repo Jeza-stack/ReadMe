@@ -3,11 +3,11 @@ Per work: ☐ migrated ☐ reviewed (JB) ☐ internal links (≥2) ☐ diagrams 
 Source of truth: `src/data/readme-data.json`. Migration projects fail through omission — tick every box.
 
 ## English I (16 works)
-**Unit I: Poetry** — ☐ Don't Quit · ☐ The Sparrow · ☐ A Nation's Strength · ☐ Ozymandias
-**Unit II: Prose** — ☐ Father Forgets · ☐ On the Rule of the Road
-**Unit III: Short Stories** — ☐ The Faltering Pendulum · ☐ How I Taught My Grandmother to Read · ☐ Kabuliwala
-**Unit IV: Language Competency** — ☐ Vocabulary: Synonyms, Antonyms, Word Formation · ☐ Articles & Parts of Speech · ☐ Error Correction Exercises
-**Unit V: English for Workplace** — ☐ Self-introduction & Greetings · ☐ Introducing Others · ☐ Listening for General/Specific Information · ☐ Instructions & Directions
+**Unit I: Poetry** — ☑ Don't Quit · ☑ The Sparrow · ☑ A Nation's Strength · ☑ Ozymandias
+**Unit II: Prose** — ☑ Father Forgets · ☑ On the Rule of the Road
+**Unit III: Short Stories** — ☑ The Faltering Pendulum · ☑ How I Taught My Grandmother to Read · ☑ Kabuliwala
+**Unit IV: Language Competency** — ☑ Vocabulary: Synonyms, Antonyms, Word Formation · ☑ Articles & Parts of Speech · ☑ Error Correction Exercises
+**Unit V: English for Workplace** — ☑ Self-introduction & Greetings · ☑ Introducing Others · ☑ Listening for General/Specific Information · ☑ Instructions & Directions
 
 ## English II (18 works)
 **Unit I: Poetry** — ☐ Very Indian Poem in Indian English · ☐ Still I Rise · ☐ The Flower · ☐ On Killing a Tree

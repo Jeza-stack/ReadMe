@@ -14,6 +14,7 @@ const SCHEMA_DIR = path.join(CONTENT_DIR, '_schemas');
 // Which schema governs which content path (first match wins)
 const SCHEMA_MAP: { prefix: RegExp; schema: string }[] = [
   { prefix: /^courses\/[^/]+\/week-\d+\.mdx$/, schema: 'course-week' },
+  { prefix: /^courses\/[^/]+\/lessons\//, schema: 'course-lesson' },
   { prefix: /^literature\//, schema: 'literature' },
   { prefix: /^cefr\//, schema: 'cefr-lesson' },
   { prefix: /^articles\//, schema: 'article' },

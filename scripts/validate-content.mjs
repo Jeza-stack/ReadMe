@@ -12,6 +12,7 @@ const SCHEMAS = path.join(CONTENT, '_schemas');
 
 const SCHEMA_MAP = [
   [/^courses\/[^/]+\/week-\d+\.mdx$/, 'course-week'],
+  [/^courses\/[^/]+\/lessons\//, 'course-lesson'],
   [/^literature\//, 'literature'],
   [/^cefr\//, 'cefr-lesson'],
   [/^articles\//, 'article'],

@@ -12,3 +12,5 @@ Rule: from now until launch, no new ideas enter the Canonical Specification. Eve
 | Login / user accounts | 2026-07-03 | Explicitly out of scope for v2.0 |
 | Research Hub | 2026-07-03 | Deferred post-launch (in constitution) |
 | Logo refresh / rebranding | 2026-07-03 | Deferred to v3 |
+| Section-completeness warnings (literature guides must contain Overview/Themes/Why It Matters/Quiz/What Next — warn, not error) | 2026-07-04 | Post-migration validator enhancement |
+| GitHub Actions CI running validate:content on every push/PR | 2026-07-04 | v2.1 improvement |

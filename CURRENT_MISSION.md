@@ -2,15 +2,15 @@
 
 **Phase:** 2 — Platform Build
 
-**Today's Objective:** Item 6 — JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md)
+**Today's Objective:** Item 6 (continued) — migrate English II, then III, then IV (one commit + push each)
 
-**Success Criteria:**
-- [ ] scripts/migrate-json-to-mdx generates content/literature/*.mdx from readme-data.json
-- [ ] Frontmatter passes the build gate for all 68 works
-- [ ] Originals archived, not deleted
-- [ ] Spot-check: guides render identically from MDX
+**Success Criteria (per course):**
+- [ ] node scripts/migrate-json-to-mdx.mjs <course>
+- [ ] validate:content + build green
+- [ ] Spot-check 2 pages render identically
+- [ ] Commit + push
 
-**Status:** Not started
+**Status:** English I ✓ (9 guides + 7 lessons, MDX-first with JSON fallback). English II next.
 
 ---
-*Done: 1–5 ✓ (homepage, nav, course shell, guide templates, content pipeline with build-time frontmatter validation). Rule: one item → commit → push → preview.*
+*Copyright note: assign PD/©/UNI category per work during JB review (see MIGRATION_CHECKLIST).* 
