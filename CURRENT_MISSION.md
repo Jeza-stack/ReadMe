@@ -1,15 +1,13 @@
 # CURRENT MISSION
 
-**Phase:** 2 — Platform Build · **MILESTONE: Content Architecture Complete**
+**Phase:** 2 COMPLETE — Platform Build done (all 10 items)
 
-**Today's Objective:** JB milestone review — four-visitor verification exercise
+**Today's Objective:** JB reviews, then Phase 4+ content sessions (CEFR B1 academy, AI for Students launch set, Soft Skills, Academic Success seeds, IQ Test rebuild)
 
-**The exercise (JB, ~1 hour):**
-1. English I student looking for this week's prescribed reading
-2. English IV student revising for an assessment
-3. Public visitor arriving from a search engine
-4. Mobile user on a slower connection
+**Awaiting JB:**
+- Four-visitor verification exercise (~1 h)
+- Copyright triage table (33 rows Pending in docs/MIGRATION_CHECKLIST.md)
+- Per-work review boxes (semester-paced)
+- Items A–F info (syllabi weeks, branding photo/bio) whenever convenient
 
-**Then next on the board:** Item 7 — Search
-
-**Status:** All four English courses migrated to MDX (69 content files, build gate green). JSON archived as archive/readme-data-v1.json; fallback stays until one full semester taught on MDX. Copyright triage table awaits JB review (33 rows, Pending).
+**Status:** Platform infrastructure complete. Phase 3 (English course structure) done via migration; weekly modules populate as JB publishes week-N.mdx files.

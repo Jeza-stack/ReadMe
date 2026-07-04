@@ -140,10 +140,11 @@ export default function AssessmentPage() {
                       </Button>
                     </Link>
                   ) : (
-                    <Button className="w-full h-12 rounded-xl opacity-50" disabled variant="secondary">
-                      Start {assessment.type}
-                      <span className="ml-2 text-[10px] uppercase font-bold">(Soon)</span>
-                    </Button>
+                    // Honest status instead of a dead button (Canonical Spec:
+                    // a missing feature is better than a broken feature)
+                    <p className="w-full h-12 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-sm text-slate-500 dark:text-slate-400">
+                      In development — the Quick Assessment is available now
+                    </p>
                   )}
                 </div>
               </CardContent>

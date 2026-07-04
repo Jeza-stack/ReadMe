@@ -16,7 +16,7 @@ Session rule: ONE item → implement → verify locally → commit → PUSH → 
 - [x] 7. Search
 - [x] 8. Related content
 - [x] 9. SEO
-- [ ] 10. Polish (+ bug fixes: Loading…, dead "(Soon)" buttons, footer mismatch — Loading fix lands with item 1)
+- [x] 10. Polish (Loading… fixed in 2.1, footer in 2.2, "(Soon)" buttons replaced with honest status in 2.10)
 
 ## Phase 3 — English Courses
 - [ ] English I (complete)
