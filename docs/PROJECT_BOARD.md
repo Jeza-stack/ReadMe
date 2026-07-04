@@ -11,7 +11,7 @@ Session rule: ONE item → implement → verify locally → commit → PUSH → 
 - [x] 2. Navigation
 - [x] 3. English Course shell (course home + week pages)
 - [x] 4. Literature Guide template (live, reviewable by JB as lecturer)
-- [ ] 5. MDX rendering pipeline (+ frontmatter validation)
+- [x] 5. MDX rendering pipeline (+ frontmatter validation)
 - [ ] 6. JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md)
 - [ ] 7. Search
 - [ ] 8. Related content

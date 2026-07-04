@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, BookOpen, MessageCircleQuestion, RotateCcw } from 'lucide-react';
 import { getCourse } from '@/lib/data';
+import { getContentDoc, listContent } from '@/lib/content';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-// Weekly module page: reads content/courses/<key>/week-<n>.mdx.
-// Interim frontmatter parser until the MDX pipeline (Phase 2 Item 5)
-// replaces body rendering with real MDX.
+// Weekly module page — content/courses/<key>/week-<n>.mdx via the content
+// pipeline (frontmatter validated against course-week.schema.json at build).
 
 const slugToKey: Record<string, string> = {
   'english-1': 'english-i',
@@ -15,52 +15,24 @@ const slugToKey: Record<string, string> = {
   'english-3': 'english-iii',
   'english-4': 'english-iv',
 };
+const keyToSlug = Object.fromEntries(Object.entries(slugToKey).map(([a, b]) => [b, a]));
 
-type WeekDoc = {
+type WeekFrontmatter = {
+  course: string;
+  week: number;
   title: string;
-  readBefore: string[];
+  readBefore?: string[];
   discussionQuestion: string;
-  revision: string[];
-  body: string;
+  revision?: string[];
+  updated: string;
 };
 
-function parseWeekFile(raw: string): WeekDoc {
-  const fm = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/.exec(raw);
-  const head = fm?.[1] ?? '';
-  const body = (fm?.[2] ?? raw).trim();
-  const get = (k: string) => new RegExp(`^${k}:\\s*"?([^"\\n]*)"?\\s*$`, 'm').exec(head)?.[1] ?? '';
-  const getList = (k: string) => {
-    const inline = new RegExp(`^${k}:\\s*\\[([^\\]]*)\\]`, 'm').exec(head)?.[1];
-    if (inline !== undefined)
-      return inline
-        .split(',')
-        .map((s) => s.trim().replace(/^["']|["']$/g, ''))
-        .filter(Boolean);
-    return [];
-  };
-  return {
-    title: get('title'),
-    readBefore: getList('readBefore'),
-    discussionQuestion: get('discussionQuestion'),
-    revision: getList('revision'),
-    body,
-  };
-}
-
 export function generateStaticParams() {
-  const params: { courseSlug: string; week: string }[] = [];
-  for (const [slug, key] of Object.entries(slugToKey)) {
-    const dir = path.join(process.cwd(), 'content', 'courses', key);
-    try {
-      for (const f of fs.readdirSync(dir)) {
-        const m = /^week-(\d+)\.mdx$/.exec(f);
-        if (m) params.push({ courseSlug: slug, week: m[1] });
-      }
-    } catch {
-      /* no weeks published yet */
-    }
-  }
-  return params;
+  return listContent('courses')
+    .map((file) => /^courses\/([^/]+)\/week-(\d+)\.mdx$/.exec(file))
+    .filter(Boolean)
+    .map((m) => ({ courseSlug: keyToSlug[m![1]] ?? m![1], week: m![2] }))
+    .filter((p) => p.courseSlug in slugToKey);
 }
 
 export default async function WeekPage({
@@ -73,13 +45,7 @@ export default async function WeekPage({
   const course = getCourse(courseSlug);
   if (!key || !course) notFound();
 
-  const file = path.join(process.cwd(), 'content', 'courses', key, `week-${week}.mdx`);
-  let doc: WeekDoc | null = null;
-  try {
-    doc = parseWeekFile(fs.readFileSync(file, 'utf-8'));
-  } catch {
-    doc = null;
-  }
+  const doc = getContentDoc<WeekFrontmatter>(`courses/${key}/week-${week}.mdx`);
 
   return (
     <div className="bg-[color:var(--ce-deep-navy,#0E141F)] min-h-screen">
@@ -97,15 +63,17 @@ export default async function WeekPage({
 
         {doc ? (
           <>
-            <h1 className="font-headline text-3xl font-bold text-white mt-1 mb-8">{doc.title}</h1>
+            <h1 className="font-headline text-3xl font-bold text-white mt-1 mb-8">
+              {doc.frontmatter.title}
+            </h1>
 
-            {doc.readBefore.length > 0 && (
+            {(doc.frontmatter.readBefore?.length ?? 0) > 0 && (
               <section className="mb-8">
                 <h2 className="flex items-center gap-2 font-headline text-lg font-bold text-white mb-3">
                   <BookOpen className="w-5 h-5 text-[#7B2D3B]" /> Read before class
                 </h2>
                 <ul className="space-y-2">
-                  {doc.readBefore.map((slug) => (
+                  {doc.frontmatter.readBefore!.map((slug) => (
                     <li key={slug}>
                       <Link
                         href={`/courses/${courseSlug}/${slug}`}
@@ -121,31 +89,29 @@ export default async function WeekPage({
             )}
 
             {doc.body && (
-              <section className="mb-8 text-slate-300 leading-relaxed space-y-4">
-                {doc.body.split(/\n\n+/).map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+              <section className="mb-8 prose prose-invert prose-slate max-w-none leading-relaxed">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{doc.body}</ReactMarkdown>
               </section>
             )}
 
-            {doc.discussionQuestion && (
+            {doc.frontmatter.discussionQuestion && (
               <section className="mb-8">
                 <h2 className="flex items-center gap-2 font-headline text-lg font-bold text-white mb-3">
                   <MessageCircleQuestion className="w-5 h-5 text-[#7B2D3B]" /> Tutorial discussion
                 </h2>
                 <blockquote className="rounded-xl border border-white/10 bg-white/5 p-5 text-slate-200 italic leading-relaxed">
-                  {doc.discussionQuestion}
+                  {doc.frontmatter.discussionQuestion}
                 </blockquote>
               </section>
             )}
 
-            {doc.revision.length > 0 && (
+            {(doc.frontmatter.revision?.length ?? 0) > 0 && (
               <section className="mb-8">
                 <h2 className="flex items-center gap-2 font-headline text-lg font-bold text-white mb-3">
                   <RotateCcw className="w-5 h-5 text-[#7B2D3B]" /> Revision pointers
                 </h2>
                 <ul className="list-disc list-inside space-y-1 text-slate-300 text-sm">
-                  {doc.revision.map((r, i) => (
+                  {doc.frontmatter.revision!.map((r, i) => (
                     <li key={i}>{r}</li>
                   ))}
                 </ul>

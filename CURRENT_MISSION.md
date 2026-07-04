@@ -2,14 +2,15 @@
 
 **Phase:** 2 — Platform Build
 
-**Today's Objective:** Item 5 — MDX rendering pipeline (+ frontmatter validation)
+**Today's Objective:** Item 6 — JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md)
 
 **Success Criteria:**
-- [ ] content/**.mdx rendered with real MDX (replaces week-page interim parser)
-- [ ] Frontmatter validated against content/_schemas at build time
-- [ ] Build fails loudly on invalid frontmatter
+- [ ] scripts/migrate-json-to-mdx generates content/literature/*.mdx from readme-data.json
+- [ ] Frontmatter passes the build gate for all 68 works
+- [ ] Originals archived, not deleted
+- [ ] Spot-check: guides render identically from MDX
 
-**Status:** Ready (Pass 2 complete)
+**Status:** Not started
 
 ---
-*Done: 1. Homepage ✓ · 2. Navigation ✓ · 3. Course shell ✓ · 4. Literature Guide ✓ (sticky nav, fixed section order, all data sections surfaced, WhatNext). Rule: one objective per session.*
+*Done: 1–5 ✓ (homepage, nav, course shell, guide templates, content pipeline with build-time frontmatter validation). Rule: one item → commit → push → preview.*
