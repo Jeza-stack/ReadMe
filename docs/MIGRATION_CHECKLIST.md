@@ -25,12 +25,12 @@ Source of truth: `src/data/readme-data.json`. Migration projects fail through om
 **Unit V: English for Workplace** — ☑ Data Interpretation & Reporting · ☑ Data Presentation & Analysis · ☑ Meeting Etiquette · ☑ Online Meetings
 
 ## English IV (17 works)
-**Unit I: Life Writing** — ☐ I am Malala (Ch. 1) · ☐ My Inventions (Ch. 2) · ☐ Long Walk to Freedom
-**Unit II: One Act Plays** — ☐ The Zoo Story · ☐ The Proposal · ☐ The Bear
-**Unit III: Interviews** — ☐ The Art of the Interview · ☐ Feynman in Conversation · ☐ Toni Morrison in Conversation
-**Unit IV: Language Competency** — ☐ Advanced Grammar: Discourse, Cohesion, Style · ☐ Critical Reading & Textual Analysis · ☐ Essay Architecture
-**Unit V: English for Workplace** — ☐ Leadership Communication · ☐ Negotiation & Persuasion · ☐ Professional Presentation Skills
-**Unit VI: Contemporary Issues** — ☐ Democracy, Free Speech, Misinformation · ☐ Mental Health & the Language of Seeking Help
+**Unit I: Life Writing** — ☑ I am Malala (Ch. 1) · ☑ My Inventions (Ch. 2) · ☑ Long Walk to Freedom
+**Unit II: One Act Plays** — ☑ The Zoo Story · ☑ The Proposal · ☑ The Bear
+**Unit III: Interviews** — ☑ The Art of the Interview · ☑ Feynman in Conversation · ☑ Toni Morrison in Conversation
+**Unit IV: Language Competency** — ☑ Advanced Grammar: Discourse, Cohesion, Style · ☑ Critical Reading & Textual Analysis · ☑ Essay Architecture
+**Unit V: English for Workplace** — ☑ Leadership Communication · ☑ Negotiation & Persuasion · ☑ Professional Presentation Skills
+**Unit VI: Contemporary Issues** — ☑ Democracy, Free Speech, Misinformation · ☑ Mental Health & the Language of Seeking Help
 
 **Total: 68 items.**
 

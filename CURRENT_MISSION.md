@@ -1,16 +1,15 @@
 # CURRENT MISSION
 
-**Phase:** 2 — Platform Build
+**Phase:** 2 — Platform Build · **MILESTONE: Content Architecture Complete**
 
-**Today's Objective:** Item 6 (continued) — migrate English II, then III, then IV (one commit + push each)
+**Today's Objective:** JB milestone review — four-visitor verification exercise
 
-**Success Criteria (per course):**
-- [ ] node scripts/migrate-json-to-mdx.mjs <course>
-- [ ] validate:content + build green
-- [ ] Spot-check 2 pages render identically
-- [ ] Commit + push
+**The exercise (JB, ~1 hour):**
+1. English I student looking for this week's prescribed reading
+2. English IV student revising for an assessment
+3. Public visitor arriving from a search engine
+4. Mobile user on a slower connection
 
-**Status:** English I ✓ · English II ✓ (10 guides + 8 lessons). English III next.
+**Then next on the board:** Item 7 — Search
 
----
-*Copyright note: assign PD/©/UNI category per work during JB review (see MIGRATION_CHECKLIST).* 
+**Status:** All four English courses migrated to MDX (69 content files, build gate green). JSON archived as archive/readme-data-v1.json; fallback stays until one full semester taught on MDX. Copyright triage table awaits JB review (33 rows, Pending).
