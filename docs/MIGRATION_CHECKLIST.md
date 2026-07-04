@@ -18,11 +18,11 @@ Source of truth: `src/data/readme-data.json`. Migration projects fail through om
 **Unit VI: Contemporary Issues** — ☑ AI and the Future of Work · ☑ Climate Change
 
 ## English III (17 works)
-**Unit I: Poetry** — ☐ The Voice of the Mountain · ☐ Sita · ☐ A Song of Hope · ☐ In an Artist's Studio
-**Unit II: Scenes From Shakespeare** — ☐ Romeo & Juliet: Balcony Scene · ☐ Othello: Climax Scene · ☐ Julius Caesar: Murder Scene
-**Unit III: Speeches** — ☐ Tryst with Destiny · ☐ Yes, We Can · ☐ You've Got to Find What You Love
-**Unit IV: Language Competency** — ☐ Letters & Emails · ☐ Social Media Messaging · ☐ Netiquette & Email Etiquette
-**Unit V: English for Workplace** — ☐ Data Interpretation & Reporting · ☐ Data Presentation & Analysis · ☐ Meeting Etiquette · ☐ Online Meetings
+**Unit I: Poetry** — ☑ The Voice of the Mountain · ☑ Sita · ☑ A Song of Hope · ☑ In an Artist's Studio
+**Unit II: Scenes From Shakespeare** — ☑ Romeo & Juliet: Balcony Scene · ☑ Othello: Climax Scene · ☑ Julius Caesar: Murder Scene
+**Unit III: Speeches** — ☑ Tryst with Destiny · ☑ Yes, We Can · ☑ You've Got to Find What You Love
+**Unit IV: Language Competency** — ☑ Letters & Emails · ☑ Social Media Messaging · ☑ Netiquette & Email Etiquette
+**Unit V: English for Workplace** — ☑ Data Interpretation & Reporting · ☑ Data Presentation & Analysis · ☑ Meeting Etiquette · ☑ Online Meetings
 
 ## English IV (17 works)
 **Unit I: Life Writing** — ☐ I am Malala (Ch. 1) · ☐ My Inventions (Ch. 2) · ☐ Long Walk to Freedom
@@ -35,42 +35,42 @@ Source of truth: `src/data/readme-data.json`. Migration projects fail through om
 **Total: 68 items.**
 
 ## Copyright categories (assign every work one category during migration)
-Statuses (per ReadMe Copyright & Literary Content Policy, MDS §7d): `public-domain` (full text after verifying the edition/translation itself is PD) | `copyrighted` (JB's minimum-necessary quotations + readAt link). **PROPOSED by AI, DECIDED by JB — nothing is final until the Approve box is ticked.**
+Statuses (per ReadMe Copyright & Literary Content Policy, MDS §7d): `public-domain` (full text after verifying the edition/translation itself is PD) | `copyrighted` (JB's minimum-necessary quotations + readAt link). **PROPOSED by AI, DECIDED by JB.** Status values: `Pending` (default) · `Approved` · `Needs Review` (uncertain translation/date — not forced into yes/no).
 
-| Work | Proposed | Justification (verify) | Approve |
+| Work | Proposed | Justification (verify) | Status |
 |---|---|---|---|
-| Ozymandias — Shelley | public-domain | d. 1822 | ☐ |
-| The Sparrow — Dunbar | public-domain | d. 1906 | ☐ |
-| A Nation's Strength — Emerson | public-domain | d. 1882 | ☐ |
-| Don't Quit — Guest | public-domain | published ~1921 (pre-1928) | ☐ |
-| Father Forgets — Larned | public-domain | published 1927 (pre-1928) | ☐ |
-| On the Rule of the Road — Gardiner | public-domain | essay c. 1914–19 (pre-1928) | ☐ |
-| Kabuliwala — Tagore | public-domain | 1892 — **verify the English translation is pre-1928** | ☐ |
-| The Flower — Tennyson | public-domain | d. 1892 | ☐ |
-| In an Artist's Studio — Rossetti | public-domain | d. 1894 | ☐ |
-| Sita — Toru Dutt | public-domain | d. 1877 | ☐ |
-| Romeo & Juliet / Othello / Julius Caesar scenes | public-domain | Shakespeare — **verify edition used is unannotated/PD** | ☐ |
-| Tryst with Destiny — Nehru | public-domain | 1947 speech; PD in India (life+60, d. 1964) | ☐ |
-| My Inventions — Tesla | public-domain | published 1919 (pre-1928) | ☐ |
-| The Proposal / The Bear — Chekhov | public-domain* | Chekhov d. 1904 — **PD only if translation is old; modern translations are copyrighted** | ☐ |
-| The Faltering Pendulum — Bhattacharya | copyrighted | d. 1988 | ☐ |
-| How I Taught My Grandmother… — Sudha Murthy | copyrighted | living author | ☐ |
-| Very Indian Poem… — Ezekiel | copyrighted | d. 2004 | ☐ |
-| Still I Rise — Angelou | copyrighted | 1978; d. 2014 | ☐ |
-| On Killing a Tree — Patel | copyrighted | living author | ☐ |
-| If You Are Wrong Admit It — Carnegie | copyrighted | from How to Win Friends (1936) | ☐ |
-| Kindly Adjust Please — Tharoor | copyrighted | living author | ☐ |
-| The Spoon-fed Age — Inge | copyrighted | d. 1954 — **verify publication date; may be pre-1928** | ☐ |
-| The Alchemist — Coelho | copyrighted | living author | ☐ |
-| Animal Farm — Orwell | copyrighted | jurisdiction-specific: PD in PNG/EU (d. 1950) but US © until 2041; site hosted in US → treat as © | ☐ |
-| The Old Man and the Sea — Hemingway | copyrighted | 1952 | ☐ |
-| The Voice of the Mountain — Mamang Dai | copyrighted | living author | ☐ |
-| A Song of Hope — Oodgeroo Noonuccal | copyrighted | d. 1993 | ☐ |
-| Yes, We Can — Obama | copyrighted | 2008 speech | ☐ |
-| You've Got to Find What You Love — Jobs | copyrighted | 2005; Stanford holds rights; official video embeddable | ☐ |
-| I am Malala (excerpt) | copyrighted | 2013 | ☐ |
-| Long Walk to Freedom — Mandela | copyrighted | 1994 | ☐ |
-| The Zoo Story — Albee | copyrighted | 1958; performance/text rights strictly managed | ☐ |
-| Feynman interview / Morrison interview | copyrighted | interview texts, rights with publishers | ☐ |
+| Ozymandias — Shelley | public-domain | d. 1822 | Pending |
+| The Sparrow — Dunbar | public-domain | d. 1906 | Pending |
+| A Nation's Strength — Emerson | public-domain | d. 1882 | Pending |
+| Don't Quit — Guest | public-domain | published ~1921 (pre-1928) | Pending |
+| Father Forgets — Larned | public-domain | published 1927 (pre-1928) | Pending |
+| On the Rule of the Road — Gardiner | public-domain | essay c. 1914–19 (pre-1928) | Pending |
+| Kabuliwala — Tagore | public-domain | 1892 — **verify the English translation is pre-1928** | Pending |
+| The Flower — Tennyson | public-domain | d. 1892 | Pending |
+| In an Artist's Studio — Rossetti | public-domain | d. 1894 | Pending |
+| Sita — Toru Dutt | public-domain | d. 1877 | Pending |
+| Romeo & Juliet / Othello / Julius Caesar scenes | public-domain | Shakespeare — **verify edition used is unannotated/PD** | Pending |
+| Tryst with Destiny — Nehru | public-domain | 1947 speech; PD in India (life+60, d. 1964) | Pending |
+| My Inventions — Tesla | public-domain | published 1919 (pre-1928) | Pending |
+| The Proposal / The Bear — Chekhov | public-domain* | Chekhov d. 1904 — **PD only if translation is old; modern translations are copyrighted** | Pending |
+| The Faltering Pendulum — Bhattacharya | copyrighted | d. 1988 | Pending |
+| How I Taught My Grandmother… — Sudha Murthy | copyrighted | living author | Pending |
+| Very Indian Poem… — Ezekiel | copyrighted | d. 2004 | Pending |
+| Still I Rise — Angelou | copyrighted | 1978; d. 2014 | Pending |
+| On Killing a Tree — Patel | copyrighted | living author | Pending |
+| If You Are Wrong Admit It — Carnegie | copyrighted | from How to Win Friends (1936) | Pending |
+| Kindly Adjust Please — Tharoor | copyrighted | living author | Pending |
+| The Spoon-fed Age — Inge | copyrighted | d. 1954 — **verify publication date; may be pre-1928** | Pending |
+| The Alchemist — Coelho | copyrighted | living author | Pending |
+| Animal Farm — Orwell | copyrighted | jurisdiction-specific: PD in PNG/EU (d. 1950) but US © until 2041; site hosted in US → treat as © | Pending |
+| The Old Man and the Sea — Hemingway | copyrighted | 1952 | Pending |
+| The Voice of the Mountain — Mamang Dai | copyrighted | living author | Pending |
+| A Song of Hope — Oodgeroo Noonuccal | copyrighted | d. 1993 | Pending |
+| Yes, We Can — Obama | copyrighted | 2008 speech | Pending |
+| You've Got to Find What You Love — Jobs | copyrighted | 2005; Stanford holds rights; official video embeddable | Pending |
+| I am Malala (excerpt) | copyrighted | 2013 | Pending |
+| Long Walk to Freedom — Mandela | copyrighted | 1994 | Pending |
+| The Zoo Story — Albee | copyrighted | 1958; performance/text rights strictly managed | Pending |
+| Feynman interview / Morrison interview | copyrighted | interview texts, rights with publishers | Pending |
 
 Principle: **ReadMe's value is the teaching, not reproducing books.** Record each JB decision here AND in the work's frontmatter (`copyright.status/note/readAt`).

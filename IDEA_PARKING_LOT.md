@@ -17,3 +17,4 @@ Rule: from now until launch, no new ideas enter the Canonical Specification. Eve
 | Archive readme-data.json as archive/readme-data-v1.json after English IV migration (never delete — history matters) | 2026-07-04 | Post-E4 step |
 | Remove JSON fallback from work loader AFTER one full semester teaching on MDX | 2026-07-04 | One semester of safety first |
 | Tag "content-architecture-complete" milestone after English IV | 2026-07-04 | Recognition point: infrastructure done, content improvement begins |
+| Rename frontmatter `copyright:` → `rights:`/`publicationRights:` (describes how ReadMe may publish, not copyright law) | 2026-07-04 | Minor; do during a schema-touching session, not standalone |
