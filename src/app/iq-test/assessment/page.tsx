@@ -10,6 +10,8 @@ export default function Assessment() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [score, setScore] = useState(0);
+  // per-question correctness ('1'/'0'), drives the per-domain profile on the results page
+  const [results, setResults] = useState('');
 
   const question = IQ_QUESTIONS[currentIndex];
 
@@ -17,15 +19,18 @@ export default function Assessment() {
     if (!selectedOption) return;
 
     const opt = question.options.find(o => o.id === selectedOption);
-    const newScore = opt?.isCorrect ? score + 1 : score;
+    const correct = !!opt?.isCorrect;
+    const newScore = correct ? score + 1 : score;
+    const newResults = results + (correct ? '1' : '0');
 
     if (currentIndex < IQ_QUESTIONS.length - 1) {
       setScore(newScore);
+      setResults(newResults);
       setCurrentIndex(currentIndex + 1);
       setSelectedOption(null);
     } else {
       // Finished practice
-      router.push(`/iq-test/results?score=${newScore}`);
+      router.push(`/iq-test/results?score=${newScore}&r=${newResults}`);
     }
   };
 
