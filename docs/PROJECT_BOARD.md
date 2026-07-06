@@ -12,32 +12,32 @@ Session rule: ONE item → implement → verify locally → commit → PUSH → 
 - [x] 3. English Course shell (course home + week pages)
 - [x] 4. Literature Guide template (live, reviewable by JB as lecturer)
 - [x] 5. MDX rendering pipeline (+ frontmatter validation)
-- [ ] 6. JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md)
+- [x] 6. JSON→MDX migration (per docs/MIGRATION_CHECKLIST.md — all four English courses, 69 files)
 - [x] 7. Search
 - [x] 8. Related content
 - [x] 9. SEO
 - [x] 10. Polish (Loading… fixed in 2.1, footer in 2.2, "(Soon)" buttons replaced with honest status in 2.10)
 
 ## Phase 3 — English Courses
-- [ ] English I (complete)
-- [ ] English II (home + skeleton + 1 flagship guide)
-- [ ] English III (home + skeleton + 1 flagship guide)
-- [ ] English IV (home + skeleton + 1 flagship guide)
+- [x] English I (complete — via MDX migration)
+- [x] English II (via MDX migration, 10 guides + 8 lessons)
+- [x] English III (via MDX migration, 10 guides + 7 lessons)
+- [x] English IV (via MDX migration, 9 guides + 8 lessons)
 
 ## Phase 4 — CEFR
-- [ ] B1 full academy (then A1–C2 frames)
+- [x] B1 full academy (8 lessons across 6 skills at /cefr/b1; A1–C2 frames live with honest empty states; legacy /level pages retained)
 
 ## Phase 5 — AI for Students
-- [ ] Launch set (fundamentals, prompt library seed, integrity guide, glossary)
+- [x] Launch set (fundamentals, prompt library seed, integrity guide, glossary — /ai-for-students)
 
 ## Phase 6 — Soft Skills
-- [ ] Programme map + 2 modules
+- [x] Programme map + 2 modules (Communication Essentials, Teamwork — /soft-skills/programme; legacy blog retained at /soft-skills)
 
 ## Phase 7 — Academic Success
-- [ ] 3 seed guides (essay writing, referencing, exam prep)
+- [x] 3 seed guides (essay writing, referencing, exam prep — /academic-success, worked examples included)
 
 ## Phase 8 — IQ Test (Cognitive Assessment)
-- [ ] Rebuilt flow → profile + strengths + recommendations
+- [x] Rebuilt results → per-domain profile + strengths + recommendations + FAQ + Limitations (mock-IQ number removed per constitution)
 
 ## Phase 9 — Launch
 - [ ] Lighthouse ≥90 · student-journey test (≤2 clicks) · deploy · smoke test
