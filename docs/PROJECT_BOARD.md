@@ -40,7 +40,10 @@ Session rule: ONE item → implement → verify locally → commit → PUSH → 
 - [x] Rebuilt results → per-domain profile + strengths + recommendations + FAQ + Limitations (mock-IQ number removed per constitution)
 
 ## Phase 9 — Launch
-- [ ] Lighthouse ≥90 · student-journey test (≤2 clicks) · deploy · smoke test
+- [x] Lighthouse ≥90 — home 90/100/100/100, B1 lesson 94/96/100/100 (production build, reports/lighthouse-*.json, 2026-07-06)
+- [x] Student-journey test — Home → English I → Ozymandias = 2 clicks
+- [ ] Merge readme-2.0 → master (fast-forward, 34 commits, 0 behind) — **JB one click**: https://github.com/Jeza-stack/ReadMe/compare/master...readme-2.0?expand=1
+- [ ] Smoke test read-me-self.vercel.app after deploy
 
 ---
 ## ERA SHIFT (2026-07-04): Platform Build (Era 1) COMPLETE → Teaching-Driven Content (Era 2)
