@@ -17,10 +17,10 @@ const columns: { title: string; links: { href: string; label: string }[] }[] = [
   {
     title: 'Explore',
     links: [
-      { href: '/courses/cefr-english', label: 'CEFR English' },
-      { href: '/courses/ai-tools', label: 'AI for Students' },
-      { href: '/soft-skills', label: 'Soft Skills' },
-      { href: '/courses/academic-language', label: 'Academic Success' },
+      { href: '/cefr', label: 'CEFR Academy' },
+      { href: '/ai-for-students', label: 'AI for Students' },
+      { href: '/soft-skills/programme', label: 'Soft Skills Programme' },
+      { href: '/academic-success', label: 'Academic Success' },
       { href: '/iq-test', label: 'IQ Test (Cognitive Assessment)' },
     ],
   },
