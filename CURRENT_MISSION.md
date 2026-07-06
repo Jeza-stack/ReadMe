@@ -1,8 +1,8 @@
 # CURRENT MISSION
 
-**Phase:** 2 COMPLETE — Platform Build done (all 10 items)
+**Phase:** 8 COMPLETE — all build phases done (2026-07-06). Only Phase 9 (Launch) remains: Lighthouse ≥90, student-journey test, deploy to master, smoke test — gated on JB review.
 
-**Today's Objective:** JB reviews, then Phase 4+ content sessions (CEFR B1 academy, AI for Students launch set, Soft Skills, Academic Success seeds, IQ Test rebuild)
+**Today's Objective:** JB reviews the five new pillars on the Vercel preview (readme-2.0 branch): /cefr/b1 (8 lessons), /ai-for-students (4 guides), /soft-skills/programme (map + 2 modules), /academic-success (3 guides), /iq-test results rebuild
 
 **Awaiting JB:**
 - Four-visitor verification exercise (~1 h)
