@@ -29,7 +29,8 @@
     --ce-deep-navy: #043370;
     --ce-soft-blue: #00A2C9;
     --ce-harvard-crimson: #A51C30;
-    --ce-golden-yellow: #FFB81C;
+    --ce-golden-yellow: #FF9E2F;
+    --ce-gold-2: #FF861E;
     --ce-white-blend: #F8FAFC;
     
     --ce-text-primary: #1E293B;
@@ -37,35 +38,36 @@
   }
 
   .dark {
-    /* Dark Navy + Electric Blue brand mapping (HSL values) */
-    --background: 220 49% 8%;            /* #0b1220 */
-    --foreground: 220 14% 94%;           /* #e5e7eb */
-    --card: 220 47% 11%;                 /* #0f172a */
-    --card-foreground: 220 14% 94%;
-    --popover: 220 47% 11%;
-    --popover-foreground: 220 14% 94%;
-    --primary: 217.2 91.2% 59.8%;        /* #3b82f6 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 220 32% 22%;            /* muted surface */
-    --secondary-foreground: 220 14% 94%;
-    --muted: 220 32% 22%;                /* border/input bg */
-    --muted-foreground: 215 20.2% 65.1%; /* #94a3b8 */
-    --accent: 221 83% 53%;               /* stronger blue #1d4ed8 */
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84.2% 60.2%;        /* #ef4444 */
+    /* Glass-night: deep blue-black ground, orange-gold accent (2026 theme) */
+    --background: 224 47% 5%;            /* #070A17 deep space */
+    --foreground: 220 30% 94%;           /* #E9EEF9 */
+    --card: 222 44% 9%;                  /* solid fallback under glass */
+    --card-foreground: 220 30% 94%;
+    --popover: 222 46% 8%;
+    --popover-foreground: 220 30% 94%;
+    --primary: 31 100% 59%;              /* #FF9E2F orange-gold */
+    --primary-foreground: 28 90% 8%;     /* dark text on gold */
+    --secondary: 220 34% 16%;            /* muted surface */
+    --secondary-foreground: 220 30% 94%;
+    --muted: 220 32% 15%;
+    --muted-foreground: 218 22% 70%;     /* #A2B0CC */
+    --accent: 220 40% 18%;               /* subtle blue hover surface */
+    --accent-foreground: 220 30% 94%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 32% 28%;               /* #1e293b-ish */
-    --input: 220 32% 28%;
-    --ring: 217.2 91.2% 59.8%;           /* ring matches primary */
+    --border: 217 38% 20%;
+    --input: 217 38% 20%;
+    --ring: 31 100% 59%;                 /* ring = gold */
 
     /* SCU-Harvard Hybrid Palette - Dark Mode */
-    --ce-deep-navy: #021639;
-    --ce-mid-blue: #043370;
+    --ce-deep-navy: #070A17;
+    --ce-mid-blue: #0B1E3A;
     --ce-soft-blue: #00A2C9;
-    --ce-golden-yellow: #FFB81C;
-    
+    --ce-golden-yellow: #FF9E2F;
+    --ce-gold-2: #FF861E;
+
     --ce-text-primary: #F8FAFC;
-    --ce-text-secondary: #94A3B8;
+    --ce-text-secondary: #A2B0CC;
   }
 }
 
@@ -87,6 +89,44 @@
   .bg-scu-glass {
     @apply bg-white/10 backdrop-blur-md border border-white/20;
     -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* ==== 2026 Glass-night theme ==== */
+  /* Frosted glass panel: light-catch edge + depth shadow + hover-ready */
+  .glass-panel {
+    background: linear-gradient(150deg, rgba(255,255,255,.08), rgba(255,255,255,.015));
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    border: 1px solid rgba(150,182,255,.18);
+    box-shadow: 0 22px 60px -18px rgba(0,8,32,.85), inset 0 1px 0 rgba(255,255,255,.16);
+    border-radius: var(--radius);
+  }
+  .glass-hover {
+    transition: transform .28s cubic-bezier(.2,.7,.2,1), border-color .28s, box-shadow .28s;
+  }
+  .glass-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(180,208,255,.42);
+    box-shadow: 0 26px 60px -18px rgba(0,8,32,.9), 0 0 34px -8px rgba(255,140,36,.30), inset 0 1px 0 rgba(255,255,255,.22);
+  }
+
+  /* App atmosphere: deep gradient ground + glow blooms, sits behind everything */
+  .app-atmosphere {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(60% 50% at 15% 0%, rgba(46,107,255,.28), transparent 60%),
+      radial-gradient(55% 45% at 90% 15%, rgba(65,216,255,.16), transparent 60%),
+      radial-gradient(45% 40% at 12% 55%, rgba(255,150,50,.12), transparent 60%),
+      radial-gradient(120% 90% at 50% 0%, transparent 40%, rgba(2,4,10,.55) 100%),
+      var(--ce-deep-navy);
+  }
+
+  /* Orange-gold text/gradient accents */
+  .text-gold { color: var(--ce-golden-yellow); }
+  .bg-gold-grad { background: linear-gradient(135deg, var(--ce-golden-yellow), var(--ce-gold-2)); }
+  .text-gold-grad {
+    background: linear-gradient(135deg, var(--ce-golden-yellow), var(--ce-gold-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
   }
 
   /* Typography Synchronization */

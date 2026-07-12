@@ -146,10 +146,10 @@ export default function HomePage() {
             Built by Dr. Jaffer Basha
           </h2>
           <p className="text-slate-400 mt-2 max-w-xl mx-auto text-sm leading-relaxed">
-            Lecturer in English and Business Communication (IBS University, PNG ·
-            Southern Cross University). ReadMe complements the classroom — it
-            supports lectures, tutorials, and independent study with clear,
-            structured, academically rigorous resources.
+            Experienced educator in English and Business Communication (IBS
+            University, PNG · Southern Cross University). This website complements
+            classroom learning—it supports lectures, tutorials, and independent
+            study with clear, structured, academically rigorous resources.
           </p>
         </div>
       </section>

@@ -50,8 +50,8 @@ export function Footer() {
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-sm">
               Free, academically rigorous English Literature, Language, and AI
-              literacy resources — built by a lecturer to complement the
-              classroom, for students in the Pacific and beyond.
+              literacy resources — built by an experienced educator to complement
+              the classroom, for students and learners.
             </p>
             <div className="flex gap-4 mt-2">
               <a

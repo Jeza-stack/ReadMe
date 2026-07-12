@@ -90,7 +90,7 @@ export function Header() {
   );
 
   return (
-    <header className="bg-[var(--ce-deep-navy)] text-white sticky top-0 z-50 shadow-md">
+    <header className="bg-[color:var(--ce-deep-navy)]/70 backdrop-blur-xl border-b border-white/10 text-white sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Left: brand + desktop nav */}
@@ -171,7 +171,7 @@ export function Header() {
           {/* Right: search + primary CTA */}
           <div className="flex items-center justify-end gap-2">
             <SearchDialog />
-            <Button asChild className="rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-5">
+            <Button asChild className="rounded-full bg-gold-grad hover:opacity-90 text-slate-950 font-bold px-5 shadow-[0_8px_24px_-6px_rgba(255,140,36,0.45)]">
               <Link href="/assessment/quick">Find Your Level</Link>
             </Button>
           </div>
