@@ -64,7 +64,7 @@ function Section({
     <section aria-labelledby={id} className="mb-10">
       <h2
         id={id}
-        className="flex items-center gap-2 font-headline text-xl font-bold text-white mb-4 pb-2 border-b border-white/10"
+        className="flex items-center gap-2 font-headline text-xl font-bold text-foreground mb-4 pb-2 border-b border-white/10"
       >
         <Icon className="w-5 h-5" style={{ color: BURGUNDY }} aria-hidden />
         {title}
@@ -85,13 +85,13 @@ export function EnglishCourseHome({ course }: { course: Course }) {
     <ul className="space-y-2">
       {items.map((r) => (
         <li key={r.label} className="flex items-center gap-2 text-sm">
-          <ChevronRight className="w-4 h-4 text-white/30" />
+          <ChevronRight className="w-4 h-4 text-foreground/30" />
           {r.href ? (
             <Link href={r.href} className="text-cyan-300 hover:text-cyan-200">
               {r.label}
             </Link>
           ) : (
-            <span className="text-slate-300">{r.label}</span>
+            <span className="text-muted-foreground">{r.label}</span>
           )}
         </li>
       ))}
@@ -103,11 +103,11 @@ export function EnglishCourseHome({ course }: { course: Course }) {
       <div className="max-w-3xl mx-auto px-4 py-10">
         {/* 1 — Overview */}
         <header className="mb-10" style={{ borderTop: `4px solid ${BURGUNDY}` }}>
-          <p className="mt-4 text-xs uppercase tracking-widest text-slate-400">
+          <p className="mt-4 text-xs uppercase tracking-widest text-muted-foreground">
             English Courses
           </p>
-          <h1 className="font-headline text-4xl font-bold text-white mt-1">{course.name}</h1>
-          <p className="text-slate-300 mt-3 leading-relaxed">{course.description}</p>
+          <h1 className="font-headline text-4xl font-bold text-foreground mt-1">{course.name}</h1>
+          <p className="text-muted-foreground mt-3 leading-relaxed">{course.description}</p>
         </header>
 
         {/* 2 — Course Learning Outcomes */}
@@ -115,8 +115,8 @@ export function EnglishCourseHome({ course }: { course: Course }) {
           <Section id="outcomes" icon={Target} title="Course Learning Outcomes">
             <ul className="space-y-2">
               {meta.outcomes.map((o, i) => (
-                <li key={i} className="flex gap-3 text-sm text-slate-300 leading-relaxed">
-                  <span className="font-mono text-white/40">{i + 1}.</span>
+                <li key={i} className="flex gap-3 text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-mono text-foreground/40">{i + 1}.</span>
                   {o}
                 </li>
               ))}
@@ -132,9 +132,9 @@ export function EnglishCourseHome({ course }: { course: Course }) {
                 <Link
                   key={w}
                   href={`/courses/${course.slug}/week/${w}`}
-                  className="glass-panel glass-hover rounded-lg text-slate-300 p-3 text-center"
+                  className="glass-panel glass-hover rounded-lg text-muted-foreground p-3 text-center"
                 >
-                  <span className="text-xs uppercase tracking-widest block text-white/40">Week</span>
+                  <span className="text-xs uppercase tracking-widest block text-foreground/40">Week</span>
                   <span className="font-headline font-bold text-lg">{w}</span>
                 </Link>
               ))}
@@ -147,7 +147,7 @@ export function EnglishCourseHome({ course }: { course: Course }) {
           <div className="space-y-6">
             {course.categories.map((unit) => (
               <div key={unit.name}>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-400 mb-3">
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-3">
                   {unit.name}
                 </h3>
                 <ul className="space-y-2">
@@ -158,14 +158,14 @@ export function EnglishCourseHome({ course }: { course: Course }) {
                         className="group glass-panel glass-hover flex items-center justify-between rounded-lg px-4 py-3"
                       >
                         <span>
-                          <span className="block text-white font-medium group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
+                          <span className="block text-foreground font-medium group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
                             {w.title}
                           </span>
                           {w.author && !/unit\s+(iv|v|vi)\b/i.test(unit.name) && (
-                            <span className="block text-xs text-slate-400 mt-0.5">{w.author}</span>
+                            <span className="block text-xs text-muted-foreground mt-0.5">{w.author}</span>
                           )}
                         </span>
-                        <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-[color:var(--ce-golden-yellow)] group-hover:translate-x-0.5 transition-all" />
+                        <ArrowRight className="w-4 h-4 text-foreground/30 group-hover:text-[color:var(--ce-golden-yellow)] group-hover:translate-x-0.5 transition-all" />
                       </Link>
                     </li>
                   ))}
