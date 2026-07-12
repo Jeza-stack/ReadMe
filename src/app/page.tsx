@@ -35,7 +35,7 @@ const pillars = [
 
 export default function HomePage() {
   return (
-    <div className="bg-[color:var(--ce-deep-navy,#0E141F)]">
+    <div className="relative">
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-4 pt-14 pb-10 text-center">
         <h1 className="font-headline text-4xl md:text-5xl font-bold text-white leading-tight">
@@ -48,7 +48,7 @@ export default function HomePage() {
         <div className="mt-6">
           <Link
             href="/assessment/quick"
-            className="inline-flex items-center gap-2 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-7 py-3 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-gold-grad hover:opacity-90 text-slate-950 font-bold px-7 py-3 transition-opacity shadow-[0_10px_30px_-8px_rgba(255,140,36,0.5)]"
           >
             Find your CEFR level in 15 minutes — free
             <ArrowRight className="w-4 h-4" />
@@ -69,7 +69,7 @@ export default function HomePage() {
             <Link
               key={c.slug}
               href={`/courses/${c.slug}`}
-              className="group rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 overflow-hidden transition-colors"
+              className="group rounded-2xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/25 shadow-[0_18px_50px_-20px_rgba(0,8,32,0.85)]"
               style={{ borderTop: '4px solid #7B2D3B' }}
             >
               <div className="relative h-36 w-full">
@@ -82,11 +82,11 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-headline text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                <h3 className="font-headline text-xl font-bold text-white group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
                   {c.name}
                 </h3>
                 <p className="text-slate-300 mt-2 text-sm leading-relaxed">{c.blurb}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-cyan-300">
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[color:var(--ce-golden-yellow)]">
                   Open course <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
               <Link
                 key={p.href}
                 href={p.href}
-                className="group rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 p-5 transition-colors"
+                className="group rounded-2xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] backdrop-blur-xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 shadow-[0_18px_50px_-20px_rgba(0,8,32,0.85)]"
                 style={{ borderTop: `3px solid ${p.accent}` }}
               >
                 <div className="flex items-center gap-3">
@@ -127,7 +127,7 @@ export default function HomePage() {
                     <span style={{ color: p.accent }}>
                       <Icon className="w-4 h-4 flex-shrink-0" />
                     </span>
-                    <h3 className="font-headline font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 className="font-headline font-bold text-white group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
                       {p.name}
                     </h3>
                   </div>
