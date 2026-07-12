@@ -95,7 +95,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-white/50 gap-4">
           <p>
-            &copy; {new Date().getFullYear()} ReadMe · Built by Dr. Jaffer Basha
+            &copy; {new Date().getFullYear()} ReadMe
           </p>
           <p>ReadMe v2.0 — complements the classroom, never replaces it.</p>
         </div>
