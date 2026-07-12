@@ -69,7 +69,7 @@ export default function HomePage() {
             <Link
               key={c.slug}
               href={`/courses/${c.slug}`}
-              className="group rounded-2xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/25 shadow-[0_18px_50px_-20px_rgba(0,8,32,0.85)]"
+              className="group glass-panel glass-hover rounded-2xl overflow-hidden"
               style={{ borderTop: '4px solid #7B2D3B' }}
             >
               <div className="relative h-36 w-full">
@@ -110,7 +110,7 @@ export default function HomePage() {
               <Link
                 key={p.href}
                 href={p.href}
-                className="group rounded-2xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.1] backdrop-blur-xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 shadow-[0_18px_50px_-20px_rgba(0,8,32,0.85)]"
+                className="group glass-panel glass-hover rounded-2xl p-5"
                 style={{ borderTop: `3px solid ${p.accent}` }}
               >
                 <div className="flex items-center gap-3">

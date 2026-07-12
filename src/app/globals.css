@@ -94,9 +94,8 @@
   /* ==== 2026 Glass-night theme ==== */
   /* Frosted glass panel: light-catch edge + depth shadow + hover-ready */
   .glass-panel {
+    @apply backdrop-blur-xl;
     background: linear-gradient(150deg, rgba(255,255,255,.08), rgba(255,255,255,.015));
-    backdrop-filter: blur(22px) saturate(150%);
-    -webkit-backdrop-filter: blur(22px) saturate(150%);
     border: 1px solid rgba(150,182,255,.18);
     box-shadow: 0 22px 60px -18px rgba(0,8,32,.85), inset 0 1px 0 rgba(255,255,255,.16);
     border-radius: var(--radius);
