@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { SearchDialog } from "@/components/SearchDialog";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -170,6 +171,7 @@ export function Header() {
 
           {/* Right: search + primary CTA */}
           <div className="flex items-center justify-end gap-2">
+            <ThemeToggle />
             <SearchDialog />
             <Button asChild className="rounded-full bg-gold-grad hover:opacity-90 text-slate-950 font-bold px-5 shadow-[0_8px_24px_-6px_rgba(255,140,36,0.45)]">
               <Link href="/assessment/quick">Find Your Level</Link>

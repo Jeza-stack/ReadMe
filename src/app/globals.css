@@ -4,25 +4,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
+    /* Glass-day: soft blue-white ground, orange-gold accent (light mode) */
+    --background: 220 42% 96%;           /* #EEF2FA */
+    --foreground: 222 47% 12%;           /* #12203D */
+    --card: 220 40% 99%;
+    --card-foreground: 222 47% 12%;
+    --popover: 220 40% 99%;
+    --popover-foreground: 222 47% 12%;
+    --primary: 28 90% 46%;               /* #E07C0F deep orange-gold for contrast */
+    --primary-foreground: 40 100% 97%;
+    --secondary: 214 40% 92%;
+    --secondary-foreground: 222 47% 12%;
+    --muted: 214 40% 92%;
+    --muted-foreground: 218 18% 42%;     /* #5A6684 */
+    --accent: 214 40% 90%;
+    --accent-foreground: 222 47% 12%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --border: 214 30% 84%;
+    --input: 214 30% 84%;
+    --ring: 28 90% 46%;
     --radius: 0.75rem;
 
     /* SCU-Harvard Hybrid Palette */
@@ -95,10 +96,16 @@
   /* Frosted glass panel: light-catch edge + depth shadow + hover-ready */
   .glass-panel {
     @apply backdrop-blur-xl;
-    background: linear-gradient(150deg, rgba(255,255,255,.08), rgba(255,255,255,.015));
-    border: 1px solid rgba(150,182,255,.18);
-    box-shadow: 0 22px 60px -18px rgba(0,8,32,.85), inset 0 1px 0 rgba(255,255,255,.16);
+    /* light default */
+    background: linear-gradient(150deg, rgba(255,255,255,.72), rgba(255,255,255,.40));
+    border: 1px solid rgba(40,72,150,.14);
+    box-shadow: 0 20px 50px -22px rgba(30,55,120,.32), inset 0 1px 0 rgba(255,255,255,.7);
     border-radius: var(--radius);
+  }
+  .dark .glass-panel {
+    background: linear-gradient(150deg, rgba(255,255,255,.08), rgba(255,255,255,.015));
+    border-color: rgba(150,182,255,.18);
+    box-shadow: 0 22px 60px -18px rgba(0,8,32,.85), inset 0 1px 0 rgba(255,255,255,.16);
   }
   .glass-hover {
     transition: transform .28s cubic-bezier(.2,.7,.2,1), border-color .28s, box-shadow .28s;
@@ -112,6 +119,14 @@
   /* App atmosphere: deep gradient ground + glow blooms, sits behind everything */
   .app-atmosphere {
     position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    /* light default */
+    background:
+      radial-gradient(60% 50% at 15% 0%, rgba(70,120,255,.14), transparent 60%),
+      radial-gradient(55% 45% at 90% 15%, rgba(60,190,240,.10), transparent 60%),
+      radial-gradient(45% 40% at 12% 55%, rgba(255,150,50,.08), transparent 60%),
+      hsl(var(--background));
+  }
+  .dark .app-atmosphere {
     background:
       radial-gradient(60% 50% at 15% 0%, rgba(46,107,255,.28), transparent 60%),
       radial-gradient(55% 45% at 90% 15%, rgba(65,216,255,.16), transparent 60%),

@@ -38,10 +38,10 @@ export default function HomePage() {
     <div className="relative">
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-4 pt-14 pb-10 text-center">
-        <h1 className="font-headline text-4xl md:text-5xl font-bold text-white leading-tight">
+        <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground leading-tight">
           Your courses. Your guides. One place.
         </h1>
-        <p className="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
+        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
           Free, academically rigorous resources for English Literature, English
           Language, and AI literacy — built by a lecturer, for students.
         </p>
@@ -58,10 +58,10 @@ export default function HomePage() {
 
       {/* English Courses — primary tier */}
       <section aria-labelledby="english-courses" className="max-w-5xl mx-auto px-4 pb-12">
-        <h2 id="english-courses" className="font-headline text-2xl font-bold text-white mb-1">
+        <h2 id="english-courses" className="font-headline text-2xl font-bold text-foreground mb-1">
           📘 English Courses
         </h2>
-        <p className="text-slate-400 mb-5">
+        <p className="text-muted-foreground mb-5">
           Your prescribed units, literary works, and study guides — organised by course.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -82,10 +82,10 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-headline text-xl font-bold text-white group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
+                <h3 className="font-headline text-xl font-bold text-foreground group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
                   {c.name}
                 </h3>
-                <p className="text-slate-300 mt-2 text-sm leading-relaxed">{c.blurb}</p>
+                <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{c.blurb}</p>
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[color:var(--ce-golden-yellow)]">
                   Open course <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </span>
@@ -97,10 +97,10 @@ export default function HomePage() {
 
       {/* Explore — secondary tier */}
       <section aria-labelledby="explore" className="max-w-5xl mx-auto px-4 pb-14">
-        <h2 id="explore" className="font-headline text-2xl font-bold text-white mb-1">
+        <h2 id="explore" className="font-headline text-2xl font-bold text-foreground mb-1">
           Explore
         </h2>
-        <p className="text-slate-400 mb-5">
+        <p className="text-muted-foreground mb-5">
           Beyond your coursework — level up your English, AI skills, and study craft.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -127,12 +127,12 @@ export default function HomePage() {
                     <span style={{ color: p.accent }}>
                       <Icon className="w-4 h-4 flex-shrink-0" />
                     </span>
-                    <h3 className="font-headline font-bold text-white group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
+                    <h3 className="font-headline font-bold text-foreground group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
                       {p.name}
                     </h3>
                   </div>
                 </div>
-                <p className="text-slate-300 mt-3 text-sm leading-relaxed">{p.blurb}</p>
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p.blurb}</p>
               </Link>
             );
           })}
@@ -142,10 +142,10 @@ export default function HomePage() {
       {/* About teaser */}
       <section className="border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 py-10 text-center">
-          <h2 className="font-headline text-lg font-bold text-white">
+          <h2 className="font-headline text-lg font-bold text-foreground">
             Built by Dr. Jaffer Basha
           </h2>
-          <p className="text-slate-400 mt-2 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-muted-foreground mt-2 max-w-xl mx-auto text-sm leading-relaxed">
             Experienced educator in English and Business Communication (IBS
             University, PNG · Southern Cross University). This website complements
             classroom learning—it supports lectures, tutorials, and independent

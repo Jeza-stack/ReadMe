@@ -46,8 +46,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={cn("font-body antialiased bg-[color:var(--ce-deep-navy)] text-[color:var(--ce-text-primary)]", fontBody.variable, fontHeadline.variable, "min-h-screen flex flex-col")}>        
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={cn("font-body antialiased bg-background text-foreground", fontBody.variable, fontHeadline.variable, "min-h-screen flex flex-col")}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':(!window.matchMedia||window.matchMedia('(prefers-color-scheme:dark)').matches);if(d)document.documentElement.classList.add('dark');}catch(e){document.documentElement.classList.add('dark');}})();`,
+          }}
+        />
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-primary-foreground px-3 py-2 rounded">Skip to main content</a>
         <ThemeAtmosphere />
         <div className="relative z-10 flex flex-col min-h-screen">
