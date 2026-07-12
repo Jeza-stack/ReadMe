@@ -203,7 +203,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseS
       };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col">
+    <div className="relative min-h-screen flex flex-col">
       <BackNav 
         crumbs={[{ label: 'Home', href: '/' }]} 
         current={course.name} 
@@ -235,7 +235,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseS
                   const href = work.slug.startsWith('/') ? work.slug : `/courses/${course.slug}/${work.slug}`;
                   return (
                     <Link href={href} key={work.slug} className="block group">
-                      <Card className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-cyan-500 dark:hover:border-cyan-400 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
+                      <Card className="glass-hover">
                         <CardContent className="p-5 md:p-7 flex items-center justify-between gap-4">
                           <div className="flex items-center gap-5 min-w-0">
                             <div className="bg-slate-50 dark:bg-slate-800 p-3 md:p-4 rounded-xl group-hover:bg-cyan-50 dark:group-hover:bg-cyan-900/30 transition-colors flex-shrink-0">
