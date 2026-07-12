@@ -99,7 +99,7 @@ export function EnglishCourseHome({ course }: { course: Course }) {
   );
 
   return (
-    <div className="bg-[color:var(--ce-deep-navy,#0E141F)] min-h-screen">
+    <div className="relative min-h-screen">
       <div className="max-w-3xl mx-auto px-4 py-10">
         {/* 1 — Overview */}
         <header className="mb-10" style={{ borderTop: `4px solid ${BURGUNDY}` }}>
@@ -132,7 +132,7 @@ export function EnglishCourseHome({ course }: { course: Course }) {
                 <Link
                   key={w}
                   href={`/courses/${course.slug}/week/${w}`}
-                  className="rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 p-3 text-center transition-colors"
+                  className="glass-panel glass-hover rounded-lg text-slate-300 p-3 text-center"
                 >
                   <span className="text-xs uppercase tracking-widest block text-white/40">Week</span>
                   <span className="font-headline font-bold text-lg">{w}</span>
@@ -155,17 +155,17 @@ export function EnglishCourseHome({ course }: { course: Course }) {
                     <li key={w.slug}>
                       <Link
                         href={`/courses/${course.slug}/${w.slug}`}
-                        className="group flex items-center justify-between rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 px-4 py-3 transition-colors"
+                        className="group glass-panel glass-hover flex items-center justify-between rounded-lg px-4 py-3"
                       >
                         <span>
-                          <span className="block text-white font-medium group-hover:text-cyan-300 transition-colors">
+                          <span className="block text-white font-medium group-hover:text-[color:var(--ce-golden-yellow)] transition-colors">
                             {w.title}
                           </span>
                           {w.author && !/unit\s+(iv|v|vi)\b/i.test(unit.name) && (
                             <span className="block text-xs text-slate-400 mt-0.5">{w.author}</span>
                           )}
                         </span>
-                        <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-cyan-300 group-hover:translate-x-0.5 transition-all" />
+                        <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-[color:var(--ce-golden-yellow)] group-hover:translate-x-0.5 transition-all" />
                       </Link>
                     </li>
                   ))}
