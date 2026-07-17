@@ -7,6 +7,7 @@ import {
   Users,
   GraduationCap,
   BrainCircuit,
+  Network,
   ArrowRight,
 } from 'lucide-react';
 
@@ -27,6 +28,7 @@ const pillars = [
   { name: 'AI for Students', href: '/courses/ai-tools', accent: '#6D28D9', icon: Cpu, blurb: 'Use AI well: study skills, assignments, ethics, and academic integrity.', image: unsplash('photo-1677442136019-21780ecad995') },
   { name: 'Soft Skills', href: '/soft-skills', accent: '#059669', icon: Users, blurb: 'Communication, teamwork, leadership, and career readiness.', image: unsplash('photo-1517048676732-d65bc937f952') },
   { name: 'Academic Success', href: '/courses/academic-language', accent: '#C2540A', icon: GraduationCap, blurb: 'Essay writing, referencing, critical thinking, and exam preparation.', image: unsplash('photo-1434030216411-0b793f4b4173') },
+  { name: 'Mind Mapping', href: '/mind-mapping', accent: '#0EA5E9', icon: Network, blurb: 'Organise ideas, understand yourself, and plan — build your first map in one sitting.', image: '/images/mind-map-summary.png' },
   { name: 'IQ Test (Cognitive Assessment)', href: '/iq-test', accent: '#475569', icon: BrainCircuit, blurb: 'A structured profile of your reasoning, verbal, and numerical strengths.', image: unsplash('photo-1558244661-d248897f7bc4') },
   { name: 'All Courses', href: '/courses', accent: '#6B7280', icon: BookOpen, blurb: 'Browse the full catalogue of guides, courses, and assessments.', image: unsplash('photo-1481627834876-b7833e8f5570') },
 ];

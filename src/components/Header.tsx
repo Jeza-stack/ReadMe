@@ -38,6 +38,7 @@ const explore = [
   { href: "/ai-for-students", label: "AI for Students" },
   { href: "/soft-skills/programme", label: "Soft Skills Programme" },
   { href: "/academic-success", label: "Academic Success" },
+  { href: "/mind-mapping", label: "Mind Mapping" },
   { href: "/iq-test", label: "IQ Test (Cognitive Assessment)" },
   { href: "/courses", label: "All Courses" },
 ];
