@@ -7695,6 +7695,50 @@
                   ],
                   "correctAnswer": "To state your purpose for writing directly",
                   "explanation": "In formal communication, it is best to be direct and immediately state the reason for your message to respect the recipient's time."
+                },
+                {
+                  "question": "Which sign-off is appropriate for a formal letter?",
+                  "options": [
+                    "'Yours faithfully,'",
+                    "'Cheers,'",
+                    "'See ya,'",
+                    "'xoxo'"
+                  ],
+                  "correctAnswer": "'Yours faithfully,'",
+                  "explanation": "Formal closings include 'Sincerely,', 'Yours faithfully,', or 'Best regards,'; 'Cheers,' is informal, for colleagues."
+                },
+                {
+                  "question": "What should the closing of a formal email do?",
+                  "options": [
+                    "Summarise the main point or state the desired next step",
+                    "Introduce a completely new topic",
+                    "Repeat the whole email",
+                    "Ask personal questions"
+                  ],
+                  "correctAnswer": "Summarise the main point or state the desired next step",
+                  "explanation": "The closing summarises or states next steps, e.g. 'I have attached my resume... and look forward to hearing from you.'"
+                },
+                {
+                  "question": "Which salutation fits an informal email to a colleague you know well?",
+                  "options": [
+                    "'Hi Sarah,'",
+                    "'Dear Hiring Manager,'",
+                    "'To Whom It May Concern,'",
+                    "'Dear Dr. Evans,'"
+                  ],
+                  "correctAnswer": "'Hi Sarah,'",
+                  "explanation": "Informal emails use friendly greetings like 'Hi Sarah,' or 'Hello Team,'; the formal options suit letters to strangers or seniors."
+                },
+                {
+                  "question": "What formatting does the lesson suggest for clarity in the body of an informal email?",
+                  "options": [
+                    "Bullet points",
+                    "ALL CAPITALS",
+                    "Very long paragraphs",
+                    "No punctuation"
+                  ],
+                  "correctAnswer": "Bullet points",
+                  "explanation": "For informal emails: 'Keep it brief and to the point. Use bullet points for clarity if needed.'"
                 }
               ]
             },
@@ -7735,6 +7779,50 @@
                   ],
                   "correctAnswer": "To protect your professional credibility",
                   "explanation": "Simple mistakes like typos and grammatical errors can make you seem careless or unprofessional, which damages your credibility with your audience."
+                },
+                {
+                  "question": "How does the appropriate tone differ between LinkedIn and Twitter (X)?",
+                  "options": [
+                    "LinkedIn is professional and longer-form; Twitter is concise and fast-paced",
+                    "LinkedIn is casual; Twitter is formal",
+                    "Both require identical tones",
+                    "Twitter requires longer posts than LinkedIn"
+                  ],
+                  "correctAnswer": "LinkedIn is professional and longer-form; Twitter is concise and fast-paced",
+                  "explanation": "The lesson says to know your platform: LinkedIn takes a professional, industry-appropriate tone with longer posts; Twitter demands concise, impactful messages."
+                },
+                {
+                  "question": "What does 'Provide Value' mean as a social media principle?",
+                  "options": [
+                    "Share useful information and insights, not just self-promotion",
+                    "Post as often as possible",
+                    "Only share paid advertisements",
+                    "Keep all posts private"
+                  ],
+                  "correctAnswer": "Share useful information and insights, not just self-promotion",
+                  "explanation": "The principle states: 'Share useful information, insights, or resources. Don't just self-promote.'"
+                },
+                {
+                  "question": "What content approach suits Facebook/Instagram for professional use?",
+                  "options": [
+                    "Storytelling and visual content like company culture and customer stories",
+                    "Long technical whitepapers",
+                    "Legal documents",
+                    "Internal financial reports"
+                  ],
+                  "correctAnswer": "Storytelling and visual content like company culture and customer stories",
+                  "explanation": "For those platforms: 'Focus on storytelling and visual content. Showcase company culture, behind-the-scenes looks, or customer stories.'"
+                },
+                {
+                  "question": "What does 'Be Authentic' mean when posting professionally?",
+                  "options": [
+                    "Posts should reflect your genuine professional persona or brand voice",
+                    "Copy successful posts from competitors",
+                    "Use a fake name for safety",
+                    "Post only official press releases"
+                  ],
+                  "correctAnswer": "Posts should reflect your genuine professional persona or brand voice",
+                  "explanation": "Authenticity means 'your posts should reflect your genuine professional persona or your company's brand voice.'"
                 }
               ]
             },
@@ -7775,6 +7863,61 @@
                   ],
                   "correctAnswer": "That you are shouting",
                   "explanation": "Using all capital letters in online communication is universally interpreted as shouting and can be perceived as aggressive or rude."
+                },
+                {
+                  "question": "When should you use 'Reply All'?",
+                  "options": [
+                    "Only when every person on the chain truly needs your response",
+                    "For every reply, always",
+                    "When you want attention",
+                    "Never, under any circumstances"
+                  ],
+                  "correctAnswer": "Only when every person on the chain truly needs your response",
+                  "explanation": "Rule 3: 'Only use Reply All if every single person on the original email chain truly needs to read your response.'"
+                },
+                {
+                  "question": "Which is an example of a professional email address?",
+                  "options": [
+                    "jane.doe@email.com",
+                    "surfer_girl_88@email.com",
+                    "coolguy2000@email.com",
+                    "party.animal@email.com"
+                  ],
+                  "correctAnswer": "jane.doe@email.com",
+                  "explanation": "Your address should be a variation of your name — the lesson contrasts 'jane.doe@email.com' with 'surfer_girl_88@email.com'."
+                },
+                {
+                  "question": "Why should sarcasm and humour be avoided in professional emails?",
+                  "options": [
+                    "Tone is hard to interpret in text and may be misread as rude",
+                    "They make emails too long",
+                    "They are illegal in business",
+                    "They use too many words"
+                  ],
+                  "correctAnswer": "Tone is hard to interpret in text and may be misread as rude",
+                  "explanation": "Rule 5: 'Tone is very difficult to interpret in text. What you think is funny might be misinterpreted as rude or unprofessional.'"
+                },
+                {
+                  "question": "What does prompt email responding look like, per the lesson?",
+                  "options": [
+                    "Acknowledge within 24-48 hours, even if the full answer comes later",
+                    "Reply within one minute",
+                    "Reply only when you have a complete answer, however long it takes",
+                    "Never acknowledge receipt"
+                  ],
+                  "correctAnswer": "Acknowledge within 24-48 hours, even if the full answer comes later",
+                  "explanation": "Rule 9: acknowledge within 24-48 hours, 'even if it's just to say Thanks, I've received this and will get back to you by Friday.'"
+                },
+                {
+                  "question": "What should you do with a very large file attachment?",
+                  "options": [
+                    "Use a cloud sharing service like Google Drive or Dropbox",
+                    "Send it in ALL CAPS",
+                    "Split it across 20 emails",
+                    "Print and post it"
+                  ],
+                  "correctAnswer": "Use a cloud sharing service like Google Drive or Dropbox",
+                  "explanation": "Rule 8: don't send excessively large files without warning; 'use a cloud sharing service... for large files.'"
                 }
               ]
             }
@@ -7826,6 +7969,50 @@
                   ],
                   "correctAnswer": "Sales declined",
                   "explanation": "'Declined' is a standard verb used to describe a downward movement in data."
+                },
+                {
+                  "question": "Which verb describes an upward trend?",
+                  "options": [
+                    "Surged",
+                    "Slumped",
+                    "Declined",
+                    "Stabilized"
+                  ],
+                  "correctAnswer": "Surged",
+                  "explanation": "Upward-trend verbs include 'rose, grew, climbed, surged'; 'slumped' and 'declined' describe downward movement."
+                },
+                {
+                  "question": "Which phrase reports that data showed no change?",
+                  "options": [
+                    "'The market share remained stable'",
+                    "'Sales increased sharply'",
+                    "'Engagement fluctuated throughout the year'",
+                    "'Turnover dropped steadily'"
+                  ],
+                  "correctAnswer": "'The market share remained stable'",
+                  "explanation": "No-change language includes 'remained stable', 'held steady', 'did not change', 'stabilized at'."
+                },
+                {
+                  "question": "In a data report, what belongs in the 'Interpretation (So What)' section?",
+                  "options": [
+                    "What the findings mean, why they happened, and their implications",
+                    "The report's title page",
+                    "The raw spreadsheet rows",
+                    "The author's biography"
+                  ],
+                  "correctAnswer": "What the findings mean, why they happened, and their implications",
+                  "explanation": "Interpretation explains meaning: e.g. 'This increase is likely due to our new SEO strategy. It suggests we should continue investing...'"
+                },
+                {
+                  "question": "What does the 'Now What' (conclusion) section of a report do?",
+                  "options": [
+                    "Summarises findings and recommends next steps",
+                    "Lists every data point again",
+                    "Introduces the data sources",
+                    "Thanks the reader for their time"
+                  ],
+                  "correctAnswer": "Summarises findings and recommends next steps",
+                  "explanation": "The conclusion/recommendation 'summarises the findings and recommends the next steps', e.g. doubling the content budget for Q3."
                 }
               ]
             },
@@ -7866,6 +8053,50 @@
                   ],
                   "correctAnswer": "Introduce the chart and its purpose clearly",
                   "explanation": "Always orient your audience first by explaining what they are looking at. A good opening would be: 'This chart shows our user growth over the last six months.'"
+                },
+                {
+                  "question": "Which phrase introduces a visual to your audience?",
+                  "options": [
+                    "'This graph illustrates the trend in...'",
+                    "'Moving on to questions...'",
+                    "'Thank you all for coming.'",
+                    "'Let me check my notes.'"
+                  ],
+                  "correctAnswer": "'This graph illustrates the trend in...'",
+                  "explanation": "Introducing phrases include 'If you look at the chart... you'll see...' and 'This graph illustrates the trend in...'."
+                },
+                {
+                  "question": "What does the 'One Idea per Slide' rule mean?",
+                  "options": [
+                    "Don't clutter a slide with multiple charts; focus on one key message",
+                    "Use only one slide for the whole talk",
+                    "Every slide must have exactly one word",
+                    "Show all charts on the final slide"
+                  ],
+                  "correctAnswer": "Don't clutter a slide with multiple charts; focus on one key message",
+                  "explanation": "Best practice 1: 'Don't clutter a single slide with multiple charts. Focus on one key message.'"
+                },
+                {
+                  "question": "How should you describe the axes of a graph to an audience?",
+                  "options": [
+                    "'The vertical axis represents units sold, while the horizontal axis shows the months'",
+                    "'The lines go up and to the right'",
+                    "'The axes are self-explanatory'",
+                    "'Ignore the axes and look at the colours'"
+                  ],
+                  "correctAnswer": "'The vertical axis represents units sold, while the horizontal axis shows the months'",
+                  "explanation": "The lesson models explaining axes explicitly so the audience can read the chart correctly."
+                },
+                {
+                  "question": "What does 'Tell a Story' mean when presenting data?",
+                  "options": [
+                    "Start with the main insight, then show the data that supports it",
+                    "Invent fictional characters for the data",
+                    "Read the numbers aloud in order",
+                    "Save all insights for the very end"
+                  ],
+                  "correctAnswer": "Start with the main insight, then show the data that supports it",
+                  "explanation": "'Don't just show a chart and say Here is the data. Guide your audience. Start with the main insight, then show the data that supports it.'"
                 }
               ]
             },
@@ -7906,6 +8137,50 @@
                   ],
                   "correctAnswer": "Varying your tone, pitch, and pace to keep listeners engaged",
                   "explanation": "Voice modulation is the skill of using your voice dynamically to convey meaning and emotion, which prevents you from sounding boring and keeps your audience interested."
+                },
+                {
+                  "question": "What should you do if you know you will be late to a meeting?",
+                  "options": [
+                    "Inform the meeting organiser in advance",
+                    "Arrive quietly and say nothing",
+                    "Skip the meeting entirely",
+                    "Send a colleague in your place secretly"
+                  ],
+                  "correctAnswer": "Inform the meeting organiser in advance",
+                  "explanation": "Punctuality rule: 'Arrive on time. If you are going to be late, inform the meeting organiser in advance.'"
+                },
+                {
+                  "question": "What does good meeting preparation involve?",
+                  "options": [
+                    "Reviewing the agenda and pre-reading materials beforehand",
+                    "Writing the minutes before the meeting happens",
+                    "Preparing to dominate the conversation",
+                    "Memorising everyone's job titles"
+                  ],
+                  "correctAnswer": "Reviewing the agenda and pre-reading materials beforehand",
+                  "explanation": "'Review the agenda and any pre-reading materials before the meeting. Come prepared to contribute.'"
+                },
+                {
+                  "question": "For a meeting with an important external client, how should you dress?",
+                  "options": [
+                    "Slightly overdressed rather than underdressed",
+                    "As casually as possible",
+                    "In sportswear",
+                    "It makes no difference"
+                  ],
+                  "correctAnswer": "Slightly overdressed rather than underdressed",
+                  "explanation": "The lesson advises: for important external clients, 'it's always better to be slightly overdressed than underdressed.'"
+                },
+                {
+                  "question": "What is the etiquette for phones during a meeting?",
+                  "options": [
+                    "Put your phone on silent and away",
+                    "Keep it on the table with sound on",
+                    "Answer calls quietly in the room",
+                    "Text under the table"
+                  ],
+                  "correctAnswer": "Put your phone on silent and away",
+                  "explanation": "Technology rule: 'Put your phone on silent and away' — and mute your microphone in online meetings when not speaking."
                 }
               ]
             },
@@ -7946,6 +8221,50 @@
                   ],
                   "correctAnswer": "Keep it muted unless you are actively speaking",
                   "explanation": "Muting by default is a fundamental rule of online meeting etiquette. It prevents your background noise (typing, coughing, etc.) from disrupting the meeting for everyone else."
+                },
+                {
+                  "question": "What does the phrase 'Let's take this offline' mean in a meeting?",
+                  "options": [
+                    "Discuss the specific topic outside the main meeting to save the group's time",
+                    "Turn off the internet connection",
+                    "End the meeting immediately",
+                    "Switch to a phone call"
+                  ],
+                  "correctAnswer": "Discuss the specific topic outside the main meeting to save the group's time",
+                  "explanation": "It suggests 'discussing a tangent or a very specific topic outside of the main meeting to save time for the group.'"
+                },
+                {
+                  "question": "What is a polite way to tell a colleague their microphone is off while speaking?",
+                  "options": [
+                    "'I think you're muted.'",
+                    "'Stop wasting our time!'",
+                    "'Your computer is broken.'",
+                    "'Speak louder!'"
+                  ],
+                  "correctAnswer": "'I think you're muted.'",
+                  "explanation": "'You're on mute.' or 'I think you're muted.' is the standard polite phrase for this common situation."
+                },
+                {
+                  "question": "Why should you look at the webcam rather than your own image when speaking?",
+                  "options": [
+                    "It creates the effect of eye contact with the audience",
+                    "The camera needs light to work",
+                    "It improves your internet speed",
+                    "It hides your background"
+                  ],
+                  "correctAnswer": "It creates the effect of eye contact with the audience",
+                  "explanation": "'Try to look at your webcam, not at your own image on the screen. This creates the effect of eye contact.'"
+                },
+                {
+                  "question": "In large online meetings, what should you do instead of interrupting?",
+                  "options": [
+                    "Use the 'raise hand' feature to signal you'd like to speak",
+                    "Type in ALL CAPS in the chat",
+                    "Unmute and talk over others",
+                    "Leave and rejoin the meeting"
+                  ],
+                  "correctAnswer": "Use the 'raise hand' feature to signal you'd like to speak",
+                  "explanation": "Etiquette rule 5: 'use the raise hand feature to signal that you'd like to speak, rather than interrupting.'"
                 }
               ]
             }
