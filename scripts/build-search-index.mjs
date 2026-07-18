@@ -58,6 +58,49 @@ for (const lvl of ['a1', 'a2', 'b1', 'b2', 'c1', 'c2']) {
   });
 }
 
+// A1 lesson pages: static routes at src/app/level/a1/<slug>/page.tsx.
+// Title comes from the page itself (metadata title or BackNav current), else the slug.
+const a1Dir = 'src/app/level/a1';
+for (const slug of fs.readdirSync(a1Dir)) {
+  const pagePath = path.join(a1Dir, slug, 'page.tsx');
+  if (!fs.existsSync(pagePath)) continue;
+  const src = fs.readFileSync(pagePath, 'utf-8');
+  const meta = src.match(/title:\s*'A1 Grammar:\s*([^']+?)\s*-\s*ReadMe[^']*'/);
+  const crumb = src.match(/current="([^"]+)"/);
+  const title =
+    meta?.[1] ?? crumb?.[1] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  entries.push({
+    title,
+    sub: 'CEFR A1 lesson',
+    href: `/level/a1/${slug}`,
+    k: `cefr a1 lesson ${slug.replace(/-/g, ' ')} ${title}`.toLowerCase(),
+  });
+}
+
+// A2 grammar lessons: same data file that src/app/level/a2/grammar/[slug]
+// reads in generateStaticParams, so the two lists cannot drift.
+const a2Grammar = JSON.parse(fs.readFileSync('public/grammar/a2/data/lessons.json', 'utf-8'));
+for (const lesson of a2Grammar.lessons) {
+  entries.push({
+    title: lesson.title,
+    sub: 'CEFR A2 grammar',
+    href: `/level/a2/grammar/${lesson.slug}`,
+    k: `cefr a2 grammar ${lesson.slug.replace(/-/g, ' ')} ${lesson.title}`.toLowerCase(),
+  });
+}
+
+// A2 vocabulary categories: same data file as src/app/level/a2/vocabulary/[category].
+// Slugs are URI-encoded to match generateStaticParams (health-&-body → health-%26-body).
+const a2Vocab = JSON.parse(fs.readFileSync('src/data/vocabulary/a2.json', 'utf-8'));
+for (const cat of a2Vocab.categories ?? []) {
+  entries.push({
+    title: cat.title,
+    sub: 'CEFR A2 vocabulary',
+    href: `/level/a2/vocabulary/${encodeURIComponent(cat.slug)}`,
+    k: `cefr a2 vocabulary ${cat.slug.replace(/-/g, ' ')} ${cat.title}`.toLowerCase(),
+  });
+}
+
 for (const course of data.courses) {
   if (RETIRED_COURSES.has(course.slug)) continue;
   entries.push({
