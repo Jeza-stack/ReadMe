@@ -1,10 +1,30 @@
-// Quiz depth gate: every work in readme-data.json must have 5-8 valid quiz
-// questions. Loop-readable output; exits 1 while any work fails.
+// Quiz depth gate: every work must have 5-8 valid quiz questions in the store
+// the page ACTUALLY renders from — MDX frontmatter if the work is migrated to
+// content/ (mirrors src/lib/workContent.ts MDX-first resolution), else
+// readme-data.json. Loop-readable output; exits 1 while any work fails.
 // Run: npm run check:quizzes
 
 import fs from 'fs';
+import matter from 'gray-matter';
 
 const data = JSON.parse(fs.readFileSync('src/data/readme-data.json', 'utf-8'));
+
+const SLUG_TO_KEY = { 'english-1': 'english-i', 'english-2': 'english-ii', 'english-3': 'english-iii', 'english-4': 'english-iv' };
+
+// Same resolution as getWorkFromContent(): literature file (gated on courses
+// list) first, then course lesson file; null = not migrated, JSON serves it.
+function mdxQuiz(courseSlug, workSlug) {
+  const key = SLUG_TO_KEY[courseSlug];
+  if (!key) return null;
+  const lit = `content/literature/${workSlug}.mdx`;
+  if (fs.existsSync(lit)) {
+    const fm = matter.read(lit).data;
+    if ((fm.courses ?? []).includes(key)) return { quiz: fm.quiz ?? [], source: lit };
+  }
+  const lesson = `content/courses/${key}/lessons/${workSlug}.mdx`;
+  if (fs.existsSync(lesson)) return { quiz: matter.read(lesson).data.quiz ?? [], source: lesson };
+  return null;
+}
 
 const MIN = 5;
 const MAX = 8;
@@ -20,7 +40,8 @@ for (const course of data.courses) {
     for (const work of cat.works ?? []) {
       if (!work.slug) continue;
       total++;
-      const quiz = work.quiz ?? [];
+      const resolved = mdxQuiz(course.slug, work.slug);
+      const quiz = resolved ? resolved.quiz : (work.quiz ?? []);
       const problems = [];
 
       if (quiz.length < MIN) problems.push(`only ${quiz.length} question(s), need >=${MIN}`);
