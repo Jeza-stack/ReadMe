@@ -73,6 +73,61 @@
                   ],
                   "correctAnswer": "Rest, if you must",
                   "explanation": "The poem advises taking a break if needed but ultimately to not quit the struggle."
+                },
+                {
+                  "question": "According to the poem, what may happen 'when the pace seems slow'?",
+                  "options": [
+                    "You may succeed with another blow",
+                    "You should give up immediately",
+                    "The road becomes downhill",
+                    "The debts disappear"
+                  ],
+                  "correctAnswer": "You may succeed with another blow",
+                  "explanation": "The poem says: 'Don't give up though the pace seems slow— / You may succeed with another blow.'"
+                },
+                {
+                  "question": "What does the metaphor 'Success is failure turned inside out' suggest?",
+                  "options": [
+                    "Success and failure are closely connected",
+                    "Success is impossible after failure",
+                    "Failure should be hidden from others",
+                    "Success comes only to the lucky"
+                  ],
+                  "correctAnswer": "Success and failure are closely connected",
+                  "explanation": "The metaphor presents success as the other side of failure — persisting through failure can turn it into success."
+                },
+                {
+                  "question": "In the line 'the road you're trudging seems all uphill', what does 'trudging' mean?",
+                  "options": [
+                    "Walking slowly with heavy steps",
+                    "Running quickly",
+                    "Driving carefully",
+                    "Dancing happily"
+                  ],
+                  "correctAnswer": "Walking slowly with heavy steps",
+                  "explanation": "'Trudging' means walking slowly and with effort, suggesting a difficult, weary journey."
+                },
+                {
+                  "question": "When does the poem say you 'must not quit'?",
+                  "options": [
+                    "When things seem worst",
+                    "When funds are low",
+                    "When you want to smile",
+                    "When life is easy"
+                  ],
+                  "correctAnswer": "When things seem worst",
+                  "explanation": "The final line states: 'It's when things seem worst that you must not quit.'"
+                },
+                {
+                  "question": "Which theme best describes the overall message of 'Don't Quit'?",
+                  "options": [
+                    "Perseverance",
+                    "Romantic love",
+                    "The beauty of nature",
+                    "The dangers of wealth"
+                  ],
+                  "correctAnswer": "Perseverance",
+                  "explanation": "The poem's central themes are perseverance, hope, and resilience in the face of hardship."
                 }
               ]
             },
@@ -150,6 +205,61 @@
                   ],
                   "correctAnswer": "He is too busy working",
                   "explanation": "The poem states, 'But I work on, nor heed its lay,' indicating that the speaker's focus on his work caused him to neglect the bird's song."
+                },
+                {
+                  "question": "What does the little bird do at the speaker's window?",
+                  "options": [
+                    "It chirps and taps on the window-pane",
+                    "It breaks the glass",
+                    "It builds a nest",
+                    "It flies straight inside"
+                  ],
+                  "correctAnswer": "It chirps and taps on the window-pane",
+                  "explanation": "The bird 'chirps its little strain, / Then taps upon my window-pane' to call the speaker's notice."
+                },
+                {
+                  "question": "In the second stanza, what do the 'birds of peace and hope and love' represent?",
+                  "options": [
+                    "Simple joys and blessings we often ignore",
+                    "Real sparrows migrating south",
+                    "Noisy city traffic",
+                    "The speaker's childhood friends"
+                  ],
+                  "correctAnswer": "Simple joys and blessings we often ignore",
+                  "explanation": "The sparrow is a metaphor for the peaceful, hopeful moments that come to us but are ignored in our busy lives."
+                },
+                {
+                  "question": "Why do people fail to 'let them in', according to the poem?",
+                  "options": [
+                    "They are too busy in 'traffic's rush and din'",
+                    "The windows are locked",
+                    "The birds are dangerous",
+                    "They dislike birdsong"
+                  ],
+                  "correctAnswer": "They are too busy in 'traffic's rush and din'",
+                  "explanation": "The poem says we are 'in traffic's rush and din / Too deep engaged to let them in' — modern busyness deadens us."
+                },
+                {
+                  "question": "What does the word 'plumage' mean in the first line?",
+                  "options": [
+                    "A bird's feathers",
+                    "A bird's song",
+                    "A type of tree",
+                    "A window frame"
+                  ],
+                  "correctAnswer": "A bird's feathers",
+                  "explanation": "'Plumage' refers to a bird's feathers — the sparrow has 'plumage brown'."
+                },
+                {
+                  "question": "Which theme is central to 'The Sparrow'?",
+                  "options": [
+                    "Missed opportunities and regret",
+                    "The glory of war",
+                    "The power of kings",
+                    "Scientific progress"
+                  ],
+                  "correctAnswer": "Missed opportunities and regret",
+                  "explanation": "We 'know our loss till they are gone' — the poem is about ignoring life's simple gifts until it is too late."
                 }
               ]
             },
@@ -228,6 +338,61 @@
                   ],
                   "correctAnswer": "Gold",
                   "explanation": "The poem explicitly states, 'It is not gold... Not gold but only men can make / A people great and strong.'"
+                },
+                {
+                  "question": "According to Emerson, what alone can make 'a people great and strong'?",
+                  "options": [
+                    "Men who stand fast for truth and honor",
+                    "Great stores of gold",
+                    "A powerful army",
+                    "National pride"
+                  ],
+                  "correctAnswer": "Men who stand fast for truth and honor",
+                  "explanation": "The poem concludes: 'Not gold but only men can make / A people great and strong; / Men who for truth and honor's sake / Stand fast and suffer long.'"
+                },
+                {
+                  "question": "What happened to the empires built on the sword, according to the poem?",
+                  "options": [
+                    "Their glory turned to decay",
+                    "They grew stronger forever",
+                    "They became rich kingdoms",
+                    "They were rewarded by God"
+                  ],
+                  "correctAnswer": "Their glory turned to decay",
+                  "explanation": "The poem says of such empires: 'The blood has turned their stones to rust, / Their glory to decay.'"
+                },
+                {
+                  "question": "Which literary device opens the poem: 'What makes a nation's pillars high...?'",
+                  "options": [
+                    "Rhetorical question",
+                    "Simile",
+                    "Hyperbole",
+                    "Onomatopoeia"
+                  ],
+                  "correctAnswer": "Rhetorical question",
+                  "explanation": "The poem opens with rhetorical questions that Emerson then answers stanza by stanza."
+                },
+                {
+                  "question": "What do the 'pillars' and 'foundations' in the poem represent?",
+                  "options": [
+                    "The core principles and stability of a nation",
+                    "Real stone buildings",
+                    "Ancient temples",
+                    "Military weapons"
+                  ],
+                  "correctAnswer": "The core principles and stability of a nation",
+                  "explanation": "'Pillars' and 'foundations' are metaphors for the moral principles that hold a nation up."
+                },
+                {
+                  "question": "What does the word 'abiding' mean in 'Not on abiding rock'?",
+                  "options": [
+                    "Lasting; enduring",
+                    "Broken; cracked",
+                    "Golden; shining",
+                    "Hidden; secret"
+                  ],
+                  "correctAnswer": "Lasting; enduring",
+                  "explanation": "'Abiding' means lasting or permanent — kingdoms built on gold rest on 'sinking sand, / Not on abiding rock'."
                 }
               ]
             },
@@ -306,6 +471,61 @@
                   ],
                   "correctAnswer": "Nothing remains of them",
                   "explanation": "The poem ends with the powerful image of the 'colossal Wreck' surrounded by nothing but 'lone and level sands,' highlighting the complete disappearance of the king's empire."
+                },
+                {
+                  "question": "Who tells the speaker about the statue in the desert?",
+                  "options": [
+                    "A traveller from an antique land",
+                    "Ozymandias himself",
+                    "The sculptor",
+                    "A desert king"
+                  ],
+                  "correctAnswer": "A traveller from an antique land",
+                  "explanation": "The poem begins: 'I met a traveller from an antique land, / Who said...' — the description comes from the traveller."
+                },
+                {
+                  "question": "What remains of Ozymandias's statue?",
+                  "options": [
+                    "Two trunkless legs and a shattered face",
+                    "A complete golden statue",
+                    "Only the pedestal",
+                    "A grand palace"
+                  ],
+                  "correctAnswer": "Two trunkless legs and a shattered face",
+                  "explanation": "'Two vast and trunkless legs of stone / Stand in the desert' and nearby 'a shattered visage lies'."
+                },
+                {
+                  "question": "Why is the inscription 'Look on my Works, ye Mighty, and despair!' ironic?",
+                  "options": [
+                    "No works remain — only a wreck surrounded by empty sand",
+                    "The works are still standing today",
+                    "Ozymandias was never a king",
+                    "The mighty obeyed his command"
+                  ],
+                  "correctAnswer": "No works remain — only a wreck surrounded by empty sand",
+                  "explanation": "The boast survives, but 'Nothing beside remains' — the empty desert mocks the king's pride."
+                },
+                {
+                  "question": "What is the main theme of 'Ozymandias'?",
+                  "options": [
+                    "The transience of power",
+                    "The joy of travel",
+                    "The beauty of sculpture",
+                    "The wealth of Egypt"
+                  ],
+                  "correctAnswer": "The transience of power",
+                  "explanation": "The ruined statue of the 'King of Kings' shows that all power fades, while time and nature endure."
+                },
+                {
+                  "question": "What does the word 'visage' mean in the poem?",
+                  "options": [
+                    "Face",
+                    "Crown",
+                    "Kingdom",
+                    "Desert"
+                  ],
+                  "correctAnswer": "Face",
+                  "explanation": "'Visage' means face — the 'shattered visage' is the statue's broken face with its 'sneer of cold command'."
                 }
               ]
             }
@@ -388,6 +608,61 @@
                   ],
                   "correctAnswer": "Be a 'real daddy' by playing with him and being patient",
                   "explanation": "The father vows to chum with his son, share in his joys and sorrows, and bite his tongue when he feels impatient."
+                },
+                {
+                  "question": "When does the father speak these words to his son?",
+                  "options": [
+                    "While the boy is asleep",
+                    "At the breakfast table",
+                    "On the way to school",
+                    "During a family meeting"
+                  ],
+                  "correctAnswer": "While the boy is asleep",
+                  "explanation": "The father says: 'I am saying this as you lie asleep' — the whole piece is spoken at the sleeping boy's bedside."
+                },
+                {
+                  "question": "What did the boy do in the library that filled the father with remorse?",
+                  "options": [
+                    "He ran in and kissed his father goodnight",
+                    "He broke the father's glasses",
+                    "He tore the newspaper",
+                    "He fell asleep on the floor"
+                  ],
+                  "correctAnswer": "He ran in and kissed his father goodnight",
+                  "explanation": "Despite being snapped at, the boy 'threw your arms around my neck and kissed me' — this spontaneous affection triggers the father's guilt."
+                },
+                {
+                  "question": "What does the father mean by 'measuring you by the yardstick of my own years'?",
+                  "options": [
+                    "He judged a child by adult standards",
+                    "He measured the boy's height often",
+                    "He counted the boy's birthdays",
+                    "He compared the boy to other children"
+                  ],
+                  "correctAnswer": "He judged a child by adult standards",
+                  "explanation": "The metaphor means the father expected adult behaviour from a little boy — 'I have asked too much, too much.'"
+                },
+                {
+                  "question": "Which literary device describes the whole piece, since the sleeping son cannot hear the father?",
+                  "options": [
+                    "Apostrophe",
+                    "Simile",
+                    "Alliteration",
+                    "Hyperbole"
+                  ],
+                  "correctAnswer": "Apostrophe",
+                  "explanation": "Apostrophe is addressing someone who cannot respond — the father speaks to his sleeping son throughout."
+                },
+                {
+                  "question": "What does the word 'remorse' mean in the text?",
+                  "options": [
+                    "Deep regret for a wrong done",
+                    "Great happiness",
+                    "Fear of the dark",
+                    "Physical tiredness"
+                  ],
+                  "correctAnswer": "Deep regret for a wrong done",
+                  "explanation": "A 'stifling wave of remorse' sweeps over the father — remorse is deep guilt and regret for how he treated his son."
                 }
               ]
             },

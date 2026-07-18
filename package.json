@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "validate:vocab": "ts-node -O '{\"module\":\"commonjs\"}' scripts/validate-vocabulary.ts",
     "validate:content": "node scripts/validate-content.mjs",
-    "build:search": "node scripts/build-search-index.mjs"
+    "build:search": "node scripts/build-search-index.mjs",
+    "check:quizzes": "node scripts/check-quizzes.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
