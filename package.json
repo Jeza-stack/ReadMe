@@ -13,6 +13,11 @@
     "build:search": "node scripts/build-search-index.mjs",
     "check:quizzes": "node scripts/check-quizzes.mjs"
   },
+  "overrides": {
+    "next": {
+      "postcss": "^8.5.10"
+    }
+  },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-collapsible": "^1.1.11",
@@ -34,7 +39,7 @@
     "gray-matter": "^4.0.3",
     "lamejs": "^1.2.1",
     "lucide-react": "^0.475.0",
-    "next": "16.2.1",
+    "next": "16.2.10",
     "patch-package": "^8.0.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
