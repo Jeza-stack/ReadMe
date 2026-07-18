@@ -1569,6 +1569,39 @@
                   ],
                   "correctAnswer": "im-",
                   "explanation": "The correct prefix to negate 'possible' is 'im-', creating the word 'impossible'."
+                },
+                {
+                  "question": "Which pair of words are antonyms?",
+                  "options": [
+                    "Begin and end",
+                    "Happy and joyful",
+                    "Good and excellent",
+                    "Quick and fast"
+                  ],
+                  "correctAnswer": "Begin and end",
+                  "explanation": "Antonyms are words with opposite meanings — 'the antonym of begin is end'. The other pairs are synonyms."
+                },
+                {
+                  "question": "What does adding the suffix '-ly' to the adjective 'quick' do?",
+                  "options": [
+                    "Changes it into the adverb 'quickly'",
+                    "Makes it a noun",
+                    "Gives it the opposite meaning",
+                    "Turns it into a verb"
+                  ],
+                  "correctAnswer": "Changes it into the adverb 'quickly'",
+                  "explanation": "A suffix can change a word's part of speech: 'quick' (adjective) + '-ly' = 'quickly' (adverb)."
+                },
+                {
+                  "question": "What is formed when the prefix 're-' is added to 'do'?",
+                  "options": [
+                    "'Redo', meaning to do again",
+                    "'Undo', meaning to reverse",
+                    "'Doer', meaning a person who does",
+                    "'Doing', meaning in progress"
+                  ],
+                  "correctAnswer": "'Redo', meaning to do again",
+                  "explanation": "The lesson shows 're-' + 'do' = 'redo' (to do again) — prefixes are added to the beginning of a word to change its meaning."
                 }
               ]
             },
@@ -1626,6 +1659,39 @@
                   ],
                   "correctAnswer": "a",
                   "explanation": "'a' is the correct indefinite article because 'car' is a non-specific noun that starts with a consonant sound."
+                },
+                {
+                  "question": "When should the indefinite article 'an' be used instead of 'a'?",
+                  "options": [
+                    "Before words starting with a vowel sound",
+                    "Before all long words",
+                    "Before specific nouns",
+                    "Before plural nouns"
+                  ],
+                  "correctAnswer": "Before words starting with a vowel sound",
+                  "explanation": "'A' is used before consonant sounds and 'an' before vowel sounds, as in 'an apple'."
+                },
+                {
+                  "question": "In the sentence 'I saw the cat that lives next door', why is 'the' used?",
+                  "options": [
+                    "Both speaker and listener know the specific cat",
+                    "Any cat could be meant",
+                    "Cats always take 'the'",
+                    "'The' is used after verbs"
+                  ],
+                  "correctAnswer": "Both speaker and listener know the specific cat",
+                  "explanation": "The definite article 'the' is used for a specific noun that both the speaker and listener know."
+                },
+                {
+                  "question": "Which part of speech joins words or phrases, such as 'and', 'but', and 'or'?",
+                  "options": [
+                    "Conjunction",
+                    "Preposition",
+                    "Interjection",
+                    "Pronoun"
+                  ],
+                  "correctAnswer": "Conjunction",
+                  "explanation": "A conjunction is 'a word that joins words or phrases (e.g., and, but, or)'."
                 }
               ]
             },
@@ -1682,6 +1748,28 @@
                   ],
                   "correctAnswer": "Incorrect tense",
                   "explanation": "The use of 'yesterday' indicates a specific time in the past, which requires the simple past tense. The correct sentence is 'I saw that movie yesterday.'"
+                },
+                {
+                  "question": "Find the error: 'She is more taller than her brother.'",
+                  "options": [
+                    "'More taller' is a double comparative — it should be 'taller'",
+                    "'Than' should be 'then'",
+                    "'Brother' should be plural",
+                    "There is no error"
+                  ],
+                  "correctAnswer": "'More taller' is a double comparative — it should be 'taller'",
+                  "explanation": "Short adjectives form the comparative with '-er' alone: 'She is taller than her brother.' Adding 'more' creates a double comparative."
+                },
+                {
+                  "question": "Find the error: 'Me and my friend went to the park.'",
+                  "options": [
+                    "'Me' should be 'My friend and I'",
+                    "'Park' needs a capital letter",
+                    "'Went' should be 'gone'",
+                    "There is no error"
+                  ],
+                  "correctAnswer": "'Me' should be 'My friend and I'",
+                  "explanation": "The subject of a sentence takes the subject pronoun 'I': 'My friend and I went to the park.'"
                 }
               ],
               "lessonMeta": {
@@ -1733,6 +1821,50 @@
                   ],
                   "correctAnswer": "Who you are, what you do, and your goal",
                   "explanation": "A strong self-introduction clearly states who you are (name/role), what you do (your value/skills), and what your objective is in that context."
+                },
+                {
+                  "question": "Which greeting is appropriate for a formal interview?",
+                  "options": [
+                    "'Good morning. My name is [Your Name].'",
+                    "'Hey, how's it going?'",
+                    "'Hi, what's up?'",
+                    "'Yo, nice to see you!'"
+                  ],
+                  "correctAnswer": "'Good morning. My name is [Your Name].'",
+                  "explanation": "Formal greetings like 'Good morning/afternoon. My name is...' are used in interviews and formal meetings; 'Hey, how's it going?' is informal."
+                },
+                {
+                  "question": "How long should an 'elevator pitch' self-introduction be?",
+                  "options": [
+                    "About 30 seconds",
+                    "About 5 minutes",
+                    "As long as possible",
+                    "One hour"
+                  ],
+                  "correctAnswer": "About 30 seconds",
+                  "explanation": "An elevator pitch is 'a concise, 30-second summary of who you are, what you do, and what you want.'"
+                },
+                {
+                  "question": "In Alex Smith's example introduction, what does the phrase 'I specialize in agile methodologies' express?",
+                  "options": [
+                    "The value and key skill Alex brings",
+                    "Alex's home town",
+                    "A formal greeting",
+                    "Alex's salary expectations"
+                  ],
+                  "correctAnswer": "The value and key skill Alex brings",
+                  "explanation": "Step 2 of the pitch structure is stating what you do and the value you bring: 'I specialize in [Your Key Skill]...'"
+                },
+                {
+                  "question": "When should informal greetings like 'Hi, how are you?' be used at work?",
+                  "options": [
+                    "With colleagues you know well",
+                    "With senior executives",
+                    "In job interviews",
+                    "Never at work"
+                  ],
+                  "correctAnswer": "With colleagues you know well",
+                  "explanation": "The lesson says informal greetings are for 'colleagues you know well', not formal settings."
                 }
               ]
             },
@@ -1773,6 +1905,50 @@
                   ],
                   "correctAnswer": "'Susan, I'd like to introduce Tom, our new junior designer. Tom, this is Susan, our Head of Marketing.'",
                   "explanation": "You should address the person of higher status (Susan) first and introduce the person of lower status (Tom) to her, while providing context about their roles."
+                },
+                {
+                  "question": "According to the Rule of Status, who should be addressed first in an introduction?",
+                  "options": [
+                    "The person of higher status",
+                    "The person of lower status",
+                    "The younger person",
+                    "Whoever arrived first"
+                  ],
+                  "correctAnswer": "The person of higher status",
+                  "explanation": "You 'introduce the person of lower status to the person of higher status' and 'address the person of higher status first.'"
+                },
+                {
+                  "question": "Which of these can determine 'status' in a workplace introduction?",
+                  "options": [
+                    "Rank, age, or being a client",
+                    "Height and appearance",
+                    "Salary only",
+                    "Alphabetical order of names"
+                  ],
+                  "correctAnswer": "Rank, age, or being a client",
+                  "explanation": "The lesson lists rank (junior vs senior), age, and client vs colleague as bases of status."
+                },
+                {
+                  "question": "Why should you add context after introducing two people's names?",
+                  "options": [
+                    "To give them a starting point for conversation",
+                    "To fill the silence",
+                    "To show off your memory",
+                    "It is required by law"
+                  ],
+                  "correctAnswer": "To give them a starting point for conversation",
+                  "explanation": "'After the names, provide a brief piece of information to start a conversation' — like Sarah being the lead designer on the mockups."
+                },
+                {
+                  "question": "What is a good way to respond when you are introduced to someone?",
+                  "options": [
+                    "Smile, make eye contact, and say 'It's a pleasure to meet you'",
+                    "Look away and nod silently",
+                    "Immediately talk about yourself",
+                    "Ask them how much they earn"
+                  ],
+                  "correctAnswer": "Smile, make eye contact, and say 'It's a pleasure to meet you'",
+                  "explanation": "The lesson advises smiling, eye contact, a firm handshake if appropriate, and 'It's a pleasure to meet you, [Name].'"
                 }
               ]
             },
@@ -1819,6 +1995,50 @@
                   ],
                   "correctAnswer": "Specific Listening (Scanning)",
                   "explanation": "You are listening for a particular piece of data (the budget), so you should be 'scanning' the conversation for that specific information."
+                },
+                {
+                  "question": "What is 'listening for gist'?",
+                  "options": [
+                    "Listening to understand the main idea, not every detail",
+                    "Writing down every word spoken",
+                    "Listening only for numbers and dates",
+                    "Ignoring the speaker's tone"
+                  ],
+                  "correctAnswer": "Listening to understand the main idea, not every detail",
+                  "explanation": "General listening (gist/skimming) means understanding 'the main idea or overall topic' without catching every detail."
+                },
+                {
+                  "question": "Which is a signal phrase that should switch you to specific listening?",
+                  "options": [
+                    "'The deadline is...'",
+                    "'Anyway, as I was saying...'",
+                    "'Let me tell you a story...'",
+                    "'Good morning, everyone'"
+                  ],
+                  "correctAnswer": "'The deadline is...'",
+                  "explanation": "The lesson says to listen for signal words like 'The deadline is...' or 'The key metric will be...' when scanning for details."
+                },
+                {
+                  "question": "What should you do when you hear a word you don't understand while listening for general information?",
+                  "options": [
+                    "Focus on the overall context instead of getting stuck",
+                    "Stop listening completely",
+                    "Interrupt the speaker immediately",
+                    "Write the word down fifty times"
+                  ],
+                  "correctAnswer": "Focus on the overall context instead of getting stuck",
+                  "explanation": "The lesson advises: 'Don't get stuck on words you don't understand; focus on the overall context.'"
+                },
+                {
+                  "question": "In the project kickoff example, when the manager says 'The first draft is due on October 25th', what should you do?",
+                  "options": [
+                    "Switch to specific listening and note the exact date",
+                    "Keep listening only for the general goal",
+                    "Leave the meeting",
+                    "Ask what the project is about"
+                  ],
+                  "correctAnswer": "Switch to specific listening and note the exact date",
+                  "explanation": "The scenario shows switching from general listening to specific listening to 'note down that exact date.'"
                 }
               ]
             },
@@ -1865,6 +2085,50 @@
                   ],
                   "correctAnswer": "Paraphrase the instructions back to the person who gave them",
                   "explanation": "Paraphrasing, or repeating the instructions in your own words, is the most effective way to actively confirm your understanding and catch any potential miscommunications."
+                },
+                {
+                  "question": "Which words help a listener follow the order of steps in instructions?",
+                  "options": [
+                    "First, Next, Then, Finally",
+                    "Maybe, Possibly, Perhaps",
+                    "Big, Small, Fast",
+                    "And, But, Or"
+                  ],
+                  "correctAnswer": "First, Next, Then, Finally",
+                  "explanation": "Sequence words like 'First', 'Next', 'Then', 'After that', and 'Finally' guide the listener through the steps."
+                },
+                {
+                  "question": "What kind of verbs should begin each instruction?",
+                  "options": [
+                    "Imperative verbs like 'Open' and 'Click'",
+                    "Past tense verbs",
+                    "Modal verbs like 'might'",
+                    "Passive verbs"
+                  ],
+                  "correctAnswer": "Imperative verbs like 'Open' and 'Click'",
+                  "explanation": "The lesson says to 'use imperative verbs: start sentences with action words (Open, Click, Submit, Send).'"
+                },
+                {
+                  "question": "After giving instructions, what should you do to check they were understood?",
+                  "options": [
+                    "Ask 'What questions do you have?'",
+                    "Repeat everything three times",
+                    "Assume they understood",
+                    "Send a formal letter"
+                  ],
+                  "correctAnswer": "Ask 'What questions do you have?'",
+                  "explanation": "Check for understanding with questions like 'Does that make sense?' or 'What questions do you have?'"
+                },
+                {
+                  "question": "If an instruction like 'do it soon' is unclear, what should the listener do?",
+                  "options": [
+                    "Ask a clarifying question such as 'What is the exact deadline?'",
+                    "Guess a deadline",
+                    "Ignore the task",
+                    "Complain to a colleague"
+                  ],
+                  "correctAnswer": "Ask a clarifying question such as 'What is the exact deadline?'",
+                  "explanation": "The lesson advises asking clarifying questions like 'When you say soon, what is the exact deadline?' rather than pretending to understand."
                 }
               ]
             }
