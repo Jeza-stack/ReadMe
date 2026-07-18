@@ -6,6 +6,7 @@ import { ThemeAtmosphere } from '@/components/ThemeAtmosphere';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Inter, Poppins } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 const fontBody = Inter({
   subsets: ['latin'],
@@ -63,6 +64,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
