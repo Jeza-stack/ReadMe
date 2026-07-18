@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  async redirects() {
+    // Old course-shaped sections superseded by the dedicated hubs.
+    return [
+      { source: '/courses/cefr-english', destination: '/cefr', permanent: true },
+      { source: '/courses/ai-tools', destination: '/ai-for-students', permanent: true },
+      { source: '/courses/ai-tools/:path*', destination: '/ai-for-students', permanent: true },
+      { source: '/courses/chat-gpt-safety', destination: '/ai-for-students', permanent: true },
+      { source: '/courses/chat-gpt-safety/:path*', destination: '/ai-for-students', permanent: true },
+      { source: '/courses/academic-language', destination: '/academic-success', permanent: true },
+      { source: '/courses/academic-language/:path*', destination: '/academic-success', permanent: true },
+    ];
+  },
   images: {
     remotePatterns: [
       {

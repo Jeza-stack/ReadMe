@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -474,7 +475,8 @@ export default function QuickAssessment() {
             </Card>
 
             {/* Questions */}
-            <form className="space-y-6 sm:space-y-8">
+            {/* ponytail: preventDefault stops native form submission (Enter key or submit-type button) from reloading the page and wiping state */}
+            <form className="space-y-6 sm:space-y-8" onSubmit={(e) => e.preventDefault()}>
               {['Grammar', 'Vocabulary', 'Reading'].map(category => (
                 <Card key={category} className="border-2">
                   <CardHeader className="pb-4">
@@ -526,7 +528,8 @@ export default function QuickAssessment() {
               ))}
               
               <div className="text-center pt-6">
-                <Button 
+                <Button
+                  type="button"
                   onClick={calculateResults}
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold"
@@ -651,12 +654,22 @@ export default function QuickAssessment() {
                 >
                   Take Again
                 </Button>
-                <Button 
+                <Button
+                  asChild
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base sm:text-lg px-6 sm:px-8"
                 >
-                  Start Learning at {cefrLevel?.level} Level
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  {/* ponytail: a1/a2 lessons live under /level; b1+ under the /cefr academy */}
+                  <Link
+                    href={
+                      ['a1', 'a2'].includes((cefrLevel?.level || 'a1').toLowerCase())
+                        ? `/level/${(cefrLevel?.level || 'a1').toLowerCase()}`
+                        : `/cefr/${(cefrLevel?.level || 'a1').toLowerCase()}`
+                    }
+                  >
+                    Start Learning at {cefrLevel?.level} Level
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
                 </Button>
               </div>
             </div>

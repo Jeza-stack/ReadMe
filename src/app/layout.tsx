@@ -21,6 +21,8 @@ const fontHeadline = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://read-me-self.vercel.app'),
+  // Each page resolves this against its own path → per-page canonical URLs.
+  alternates: { canonical: './' },
   title: {
     default: 'ReadMe — English Literature, Language & AI Literacy',
     template: '%s | ReadMe',
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
       'Free study guides: literature analysis, CEFR English lessons, AI literacy, and academic skills.',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'ReadMe — English Literature, Language & AI Literacy',
   },
 };

@@ -3,9 +3,14 @@
 // Runs as part of `npm run build`; the client SearchDialog fetches the JSON.
 
 import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 const data = JSON.parse(fs.readFileSync('src/data/readme-data.json', 'utf-8'));
 const entries = [];
+
+// Superseded course-shaped sections that now redirect to the hubs (see next.config.ts).
+const RETIRED_COURSES = new Set(['ai-tools', 'chat-gpt-safety', 'academic-language']);
 
 // Fixed sections
 const fixed = [
@@ -15,8 +20,34 @@ const fixed = [
   ['Level Assessment', 'Assessment options', '/assessment', 'test level placement'],
   ['IQ Test (Cognitive Assessment)', 'Reasoning, verbal, numerical profile', '/iq-test', 'iq cognitive reasoning'],
   ['Soft Skills', 'Communication, teamwork, leadership', '/soft-skills', 'soft skills blog career'],
+  ['CEFR English Academy', 'Lessons by level, A1 to C2', '/cefr', 'cefr academy level lessons english'],
+  ['AI for Students', 'Fundamentals, prompts, integrity', '/ai-for-students', 'ai artificial intelligence students integrity prompts'],
+  ['Academic Success', 'Essays, referencing, exams', '/academic-success', 'academic essay referencing exam study'],
+  ['Soft Skills Programme', 'Communication and teamwork modules', '/soft-skills/programme', 'soft skills programme communication teamwork'],
+  ['Mind Mapping', 'Build your first map in one sitting', '/mind-mapping', 'mind map mapping ideas planning'],
 ];
 for (const [title, sub, href, k] of fixed) entries.push({ title, sub, href, k });
+
+// MDX guide content (hubs + CEFR academy lessons): title from frontmatter, route from folder
+const contentDirs = [
+  ['content/ai-for-students', '/ai-for-students', 'AI for Students'],
+  ['content/academic-success', '/academic-success', 'Academic Success'],
+  ['content/soft-skills', '/soft-skills/programme', 'Soft Skills Programme'],
+  ...['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].map((l) => [`content/cefr/${l}`, `/cefr/${l}`, `CEFR ${l.toUpperCase()}`]),
+];
+for (const [dir, base, section] of contentDirs) {
+  if (!fs.existsSync(dir)) continue;
+  for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.mdx'))) {
+    const slug = path.basename(file, '.mdx');
+    const fm = matter(fs.readFileSync(path.join(dir, file), 'utf-8')).data;
+    entries.push({
+      title: fm.title || slug.replace(/-/g, ' '),
+      sub: section,
+      href: `${base}/${slug}`,
+      k: `${section} ${slug.replace(/-/g, ' ')} ${fm.description || ''}`.toLowerCase(),
+    });
+  }
+}
 
 for (const lvl of ['a1', 'a2', 'b1', 'b2', 'c1', 'c2']) {
   entries.push({
@@ -28,6 +59,7 @@ for (const lvl of ['a1', 'a2', 'b1', 'b2', 'c1', 'c2']) {
 }
 
 for (const course of data.courses) {
+  if (RETIRED_COURSES.has(course.slug)) continue;
   entries.push({
     title: course.name,
     sub: 'Course',

@@ -7,7 +7,7 @@ export default function QuickAssessmentPage() {
       <BackNav 
         crumbs={[
           { label: 'Home', href: '/' },
-          { label: 'CEFR English', href: '/courses/cefr-english' },
+          { label: 'CEFR English', href: '/cefr' },
           { label: 'Assessments', href: '/assessment' }
         ]} 
         current="Quick Assessment" 

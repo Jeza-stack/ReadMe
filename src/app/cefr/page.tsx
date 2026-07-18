@@ -8,9 +8,11 @@ export const metadata = {
     'Structured English lessons by CEFR level, A1 to C2 — can-do based, self-checked, free.',
 };
 
-const LEVELS = [
-  { level: 'a1', label: 'A1 · Beginner', desc: 'Everyday phrases, introductions, the present simple.' },
-  { level: 'a2', label: 'A2 · Elementary', desc: 'Routine tasks, simple past, everyday vocabulary.' },
+const LEVELS: { level: string; label: string; desc: string; href?: string; lessons?: number }[] = [
+  // ponytail: A1/A2 lessons already exist under the older /level section — link
+  // there (with hand-counted lesson totals) until academy versions replace them.
+  { level: 'a1', label: 'A1 · Beginner', desc: 'Everyday phrases, introductions, the present simple.', href: '/level/a1', lessons: 12 },
+  { level: 'a2', label: 'A2 · Elementary', desc: 'Routine tasks, simple past, everyday vocabulary.', href: '/level/a2', lessons: 33 },
   { level: 'b1', label: 'B1 · Intermediate', desc: 'Independent use: opinions, narratives, workplace English.' },
   { level: 'b2', label: 'B2 · Upper Intermediate', desc: 'Fluent discussion, argument, and academic reading.' },
   { level: 'c1', label: 'C1 · Advanced', desc: 'Flexible, effective language for academic and professional life.' },
@@ -43,13 +45,13 @@ export default function CefrHome() {
           {LEVELS.map((l) => (
             <li key={l.level}>
               <Link
-                href={`/cefr/${l.level}`}
+                href={l.href ?? `/cefr/${l.level}`}
                 className="block h-full rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 p-5 transition-colors"
               >
                 <div className="flex items-center justify-between">
                   <h2 className="font-headline text-lg font-bold text-white">{l.label}</h2>
                   <span className="text-xs text-slate-400">
-                    {counts[l.level] > 0 ? `${counts[l.level]} lessons` : 'coming soon'}
+                    {(l.lessons ?? counts[l.level]) > 0 ? `${l.lessons ?? counts[l.level]} lessons` : 'coming soon'}
                   </span>
                 </div>
                 <p className="text-sm text-slate-300 mt-2">{l.desc}</p>
