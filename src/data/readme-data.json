@@ -1059,6 +1059,61 @@
                   ],
                   "correctAnswer": "A reasonable consideration for the rights or feelings of others",
                   "explanation": "He explicitly states that this consideration for others is the foundation of how we behave in a society and what makes us civilized."
+                },
+                {
+                  "question": "What did the old lady in Petrograd do that caused confusion?",
+                  "options": [
+                    "She walked down the middle of the street",
+                    "She drove a cab on the pavement",
+                    "She blocked a policeman",
+                    "She refused to carry her basket"
+                  ],
+                  "correctAnswer": "She walked down the middle of the street",
+                  "explanation": "The essay opens with the old lady walking 'down the middle of a street in Petrograd', saying 'We've got liberty now.'"
+                },
+                {
+                  "question": "According to Gardiner, why is the policeman at Piccadilly Circus a symbol of liberty, not tyranny?",
+                  "options": [
+                    "His interference creates the social order that makes everyone's liberty real",
+                    "He never actually stops any cars",
+                    "He only stops dangerous drivers",
+                    "He works for the traffic companies"
+                  ],
+                  "correctAnswer": "His interference creates the social order that makes everyone's liberty real",
+                  "explanation": "Gardiner argues we submit to 'a curtailment of private liberty in order that you may enjoy a social order which makes your liberty a reality.'"
+                },
+                {
+                  "question": "What does Gardiner mean when he says liberty is 'a social contract'?",
+                  "options": [
+                    "Everyone's liberty must be limited so that all liberties are preserved",
+                    "Liberty is written in legal documents",
+                    "Only governments can grant liberty",
+                    "Liberty means doing whatever you like"
+                  ],
+                  "correctAnswer": "Everyone's liberty must be limited so that all liberties are preserved",
+                  "explanation": "The rule of the road means 'in order that the liberties of all may be preserved the liberties of everybody must be curtailed.'"
+                },
+                {
+                  "question": "Why does Gardiner mention playing the trombone at midnight?",
+                  "options": [
+                    "To show personal liberty ends where it disturbs others",
+                    "To describe his favourite hobby",
+                    "To criticise musicians",
+                    "To praise mountain climbing"
+                  ],
+                  "correctAnswer": "To show personal liberty ends where it disturbs others",
+                  "explanation": "On a mountain-top he could please himself, but in the streets 'my liberty to blow the trombone must not interfere with their liberty to sleep in quiet.'"
+                },
+                {
+                  "question": "What was wrong with the loud talker in the railway carriage?",
+                  "options": [
+                    "He lacked the social sense",
+                    "He was reading a Blue-book",
+                    "He spoke too quietly",
+                    "He refused to talk to anyone"
+                  ],
+                  "correctAnswer": "He lacked the social sense",
+                  "explanation": "Gardiner concludes the well-intentioned man 'had not the social sense. He was not a clubbable man.'"
                 }
               ]
             }
@@ -1126,15 +1181,59 @@
               ],
               "quiz": [
                 {
-                  "question": "What does the grandfather clock's pendulum symbolize?",
+                  "question": "What two things does the rag-woman buy at the Tuesday haat?",
                   "options": [
-                    "The future of the city",
-                    "The industrialist's wealth",
-                    "Shibnath's own life and craft",
-                    "The changing seasons"
+                    "Pumpkin seeds and a goat youngling",
+                    "A clock and a basket",
+                    "Rags and a puppy",
+                    "Mangoes and a sari"
                   ],
-                  "correctAnswer": "Shibnath's own life and craft",
-                  "explanation": "The story repeatedly links the weakening of the pendulum to the decline of Shibnath's fortunes and the relevance of his traditional skills."
+                  "correctAnswer": "Pumpkin seeds and a goat youngling",
+                  "explanation": "By a barter of rags she buys 'three ripe pumpkin seeds embedded in the flesh of a sliced crescent piece, and a month-old goat youngling.'"
+                },
+                {
+                  "question": "What do the village boys shout at the rag-woman?",
+                  "options": [
+                    "'Rag hag'",
+                    "'Goat woman'",
+                    "'Pumpkin thief'",
+                    "'Old mother'"
+                  ],
+                  "correctAnswer": "'Rag hag'",
+                  "explanation": "The boys taunt her from the trees with cries of 'Rag hag!' and 'Rag hag—mad hag!', driving her into a fury."
+                },
+                {
+                  "question": "What does the rag-woman call the 'hard nut' inside her?",
+                  "options": [
+                    "Her temper",
+                    "Her hunger",
+                    "Her memory",
+                    "Her courage"
+                  ],
+                  "correctAnswer": "Her temper",
+                  "explanation": "She begs 'the hard core of her temper' to 'Keep still. Do not toss about' — the nut is her uncontrollable anger."
+                },
+                {
+                  "question": "Why does the goat become so important to the rag-woman?",
+                  "options": [
+                    "It listens to her when no one else will",
+                    "It guards her shack from thieves",
+                    "It is worth a lot of money",
+                    "It scares the village boys away"
+                  ],
+                  "correctAnswer": "It listens to her when no one else will",
+                  "explanation": "'No one had ever cared to listen to her talk because of the temper in her... Only the goat listened and answered in pity.'"
+                },
+                {
+                  "question": "What does the 'faltering pendulum' regaining its swing represent at the end of the story?",
+                  "options": [
+                    "Balance returning to her life as the vines fruit after the goat's death",
+                    "A broken clock being repaired",
+                    "The boys apologising to her",
+                    "Her decision to leave the village"
+                  ],
+                  "correctAnswer": "Balance returning to her life as the vines fruit after the goat's death",
+                  "explanation": "As the goat lies dead the pumpkin vines 'spring to fruitful life... A balance was achieved. The faltering pendulum had regained its swing.'"
                 }
               ]
             },
@@ -1214,6 +1313,61 @@
                   ],
                   "correctAnswer": "As a sign of respect for her teacher",
                   "explanation": "She explicitly states that she is touching the feet of her 'teacher', not her granddaughter, to show her immense respect and gratitude for the gift of knowledge."
+                },
+                {
+                  "question": "Which serial story did the author read aloud to her grandmother every week?",
+                  "options": [
+                    "'Kashi Yatre' by Triveni",
+                    "'Karmaveera' by Sudha Murthy",
+                    "'Treasure Island'",
+                    "'Tristram Shandy'"
+                  ],
+                  "correctAnswer": "'Kashi Yatre' by Triveni",
+                  "explanation": "Triveni's novel 'Kashi Yatre' was appearing as a serial in the Kannada weekly 'Karmaveera', and the girl read each episode to her grandmother."
+                },
+                {
+                  "question": "Why was the grandmother in tears when the author returned from the wedding?",
+                  "options": [
+                    "She could not read the new episode by herself",
+                    "The magazine had stopped coming",
+                    "She had lost her savings",
+                    "The story had ended sadly"
+                  ],
+                  "correctAnswer": "She could not read the new episode by herself",
+                  "explanation": "The magazine came while the girl was away; the grandmother 'rubbed my hands over the pages, wishing I could understand what was written' and felt 'dependent and helpless.'"
+                },
+                {
+                  "question": "What deadline did the grandmother set for learning to read?",
+                  "options": [
+                    "Saraswati Pooja day during Dussehra",
+                    "Her sixty-third birthday",
+                    "The next wedding season",
+                    "New Year's Day"
+                  ],
+                  "correctAnswer": "Saraswati Pooja day during Dussehra",
+                  "explanation": "She decided: 'I will keep the Saraswati Pooja day during Dussehra as the deadline. That day I should be able to read a novel on my own.'"
+                },
+                {
+                  "question": "In the novel 'Kashi Yatre', what does the old woman finally do with her savings?",
+                  "options": [
+                    "Gives them to an orphan girl for her wedding",
+                    "Travels to Kashi",
+                    "Builds a temple",
+                    "Buys a house for her family"
+                  ],
+                  "correctAnswer": "Gives them to an orphan girl for her wedding",
+                  "explanation": "The old woman gives all her savings to the orphan girl, saying the girl's happiness 'is more important than worshipping Lord Vishweshwara at Kashi.'"
+                },
+                {
+                  "question": "Which statement best expresses the grandmother's belief about learning?",
+                  "options": [
+                    "'For learning, age is no bar'",
+                    "'Education is only for the young'",
+                    "'Money matters more than reading'",
+                    "'Stories are a waste of time'"
+                  ],
+                  "correctAnswer": "'For learning, age is no bar'",
+                  "explanation": "At sixty-two she declares: 'For a good cause, if you are determined, you can overcome any obstacle... For learning, age is no bar.'"
                 }
               ]
             },
@@ -1298,6 +1452,61 @@
                   ],
                   "correctAnswer": "Seeing the handprint of Rahamat's own daughter",
                   "explanation": "When Rahamat shows him the crumpled paper with his daughter's handprint, Mini's father has a moment of profound empathy, realizing that they share the same universal love and pain as fathers."
+                },
+                {
+                  "question": "Why is Mini terrified of the Kabuliwala at their first meeting?",
+                  "options": [
+                    "She believes his bag contains children like herself",
+                    "He shouts at her loudly",
+                    "He refuses to give her fruit",
+                    "Her father warns her about him"
+                  ],
+                  "correctAnswer": "She believes his bag contains children like herself",
+                  "explanation": "Mini 'had a blind belief that inside the bag... there were perhaps two or three other children like herself.'"
+                },
+                {
+                  "question": "How does the Kabuliwala win Mini's friendship?",
+                  "options": [
+                    "With gifts of nuts, almonds and raisins",
+                    "By telling her about the mountains",
+                    "By buying her a new sari",
+                    "By teaching her to read"
+                  ],
+                  "correctAnswer": "With gifts of nuts, almonds and raisins",
+                  "explanation": "He 'overcame the child's first terror by a judicious bribery of nuts and almonds, and the two were now great friends.'"
+                },
+                {
+                  "question": "In their running joke, what does the phrase 'father-in-law's house' secretly mean to the Kabuliwala?",
+                  "options": [
+                    "Jail",
+                    "His shop",
+                    "Afghanistan",
+                    "The marketplace"
+                  ],
+                  "correctAnswer": "Jail",
+                  "explanation": "Among men of his class the phrase 'is a euphemism for jail, the place where we are well cared for, at no expense to ourselves.'"
+                },
+                {
+                  "question": "What does Mini's mother do when she sees the eight-anna coin?",
+                  "options": [
+                    "She scolds Mini for taking it from the Kabuliwala",
+                    "She returns it to the father",
+                    "She keeps it as a gift",
+                    "She buys sweets with it"
+                  ],
+                  "correctAnswer": "She scolds Mini for taking it from the Kabuliwala",
+                  "explanation": "Catching sight of the coin, she 'pounced on the child with: Where did you get that eight-anna bit?... how could you take it from him?'"
+                },
+                {
+                  "question": "Which theme is central to 'Kabuliwala'?",
+                  "options": [
+                    "Fatherly love across cultures and distance",
+                    "The dangers of city life",
+                    "The importance of wealth",
+                    "Rivalry between neighbours"
+                  ],
+                  "correctAnswer": "Fatherly love across cultures and distance",
+                  "explanation": "The story connects Mini's father and the Kabuliwala — a pedlar far from his own daughter — through the universal experience of fatherhood."
                 }
               ]
             }
