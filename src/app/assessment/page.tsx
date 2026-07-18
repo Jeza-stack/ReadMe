@@ -86,7 +86,7 @@ export default function AssessmentPage() {
       <BackNav 
         crumbs={[
           { label: 'Home', href: '/' },
-          { label: 'CEFR English', href: '/courses/cefr-english' }
+          { label: 'CEFR English', href: '/cefr' }
         ]} 
         current="English Proficiency Assessment" 
       />

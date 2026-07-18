@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
     // Old course-shaped sections superseded by the dedicated hubs.
     return [
       { source: '/courses/cefr-english', destination: '/cefr', permanent: true },
+      // B1-C2 marketing shells superseded by the CEFR Academy lesson hubs.
+      // /level/a1 and /level/a2 keep real lesson content and stay live.
+      { source: '/level/b1', destination: '/cefr/b1', permanent: true },
+      { source: '/level/b2', destination: '/cefr/b2', permanent: true },
+      { source: '/level/c1', destination: '/cefr/c1', permanent: true },
+      { source: '/level/c2', destination: '/cefr/c2', permanent: true },
       { source: '/courses/ai-tools', destination: '/ai-for-students', permanent: true },
       { source: '/courses/ai-tools/:path*', destination: '/ai-for-students', permanent: true },
       { source: '/courses/chat-gpt-safety', destination: '/ai-for-students', permanent: true },

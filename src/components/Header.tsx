@@ -27,10 +27,10 @@ const englishCourses = [
 const cefrLevels = [
   { href: "/level/a1", label: "A1 · Beginner" },
   { href: "/level/a2", label: "A2 · Elementary" },
-  { href: "/level/b1", label: "B1 · Intermediate" },
-  { href: "/level/b2", label: "B2 · Upper Intermediate" },
-  { href: "/level/c1", label: "C1 · Advanced" },
-  { href: "/level/c2", label: "C2 · Proficiency" },
+  { href: "/cefr/b1", label: "B1 · Intermediate" },
+  { href: "/cefr/b2", label: "B2 · Upper Intermediate" },
+  { href: "/cefr/c1", label: "C1 · Advanced" },
+  { href: "/cefr/c2", label: "C2 · Proficiency" },
 ];
 
 const explore = [

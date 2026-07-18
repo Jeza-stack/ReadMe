@@ -27,7 +27,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     return (
       <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col">
         <BackNav 
-          crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/courses/cefr-english' }, { label: 'A2 Level', href: '/level/a2' }]} 
+          crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/cefr' }, { label: 'A2 Level', href: '/level/a2' }]} 
           current="Not Found" 
         />
         <div className="p-8">
@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col">
       <BackNav 
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/courses/cefr-english' }, { label: 'A2 Level', href: '/level/a2' }]} 
+        crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/cefr' }, { label: 'A2 Level', href: '/level/a2' }]} 
         current={entry.title} 
       />
       <div className="p-8">

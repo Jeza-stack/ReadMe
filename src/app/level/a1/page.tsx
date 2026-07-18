@@ -65,7 +65,7 @@ export default function A1Level() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col">
       <BackNav 
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/courses/cefr-english' }]} 
+        crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/cefr' }]} 
         current="Level A1 - Beginner" 
       />
 
@@ -203,7 +203,7 @@ export default function A1Level() {
 
         {/* Level Footer Nav */}
         <div className="mt-20 flex justify-between items-center py-8 border-t border-slate-200 dark:border-white/10">
-           <Link href="/courses/cefr-english" className="flex items-center gap-2 text-slate-500 hover:text-[#043370] font-bold transition-colors group">
+           <Link href="/cefr" className="flex items-center gap-2 text-slate-500 hover:text-[#043370] font-bold transition-colors group">
              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" /> Back to CEFR Overview
            </Link>
            <Link href="/level/a2" className="flex items-center gap-2 text-[#00A2C9] hover:text-[#043370] font-bold transition-colors group">
