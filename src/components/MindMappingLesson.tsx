@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { MindMapSvg } from '@/components/MindMapSvg';
+import { MindMapHeroGraphic } from '@/components/MindMapHeroGraphic';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -17,10 +18,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
 import {
-  Clock,
-  Target,
-  Smartphone,
-  Brain,
   Plus,
   X,
   Check,
@@ -36,7 +33,6 @@ import {
 } from 'lucide-react';
 import {
   TOTAL_SECTIONS,
-  REASSURANCE,
   JOURNEY_STEPS,
   SECTION_TIMES,
   TAKEAWAYS,
@@ -458,46 +454,104 @@ export default function MindMappingLesson() {
             <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground leading-tight">
               Mind Mapping
             </h1>
-            <p className="mt-3 text-lg font-semibold text-gold">Learn • Think • Connect • Grow</p>
-            <p className="mt-4 text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Learn one simple technique that helps you organise ideas, understand yourself,
-              and plan your future.
-            </p>
-            <p className="mt-3 text-sm text-foreground/50 max-w-xl mx-auto lg:mx-0">
-              {REASSURANCE}
+            <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Organise your thoughts, connect ideas, and unlock your creativity. Mind mapping
+              helps you learn better, remember more, and think clearly.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-              <Badge variant="secondary" className="gap-1.5 py-1.5 px-3">
-                <Clock className="w-3.5 h-3.5" /> 30 minutes
-              </Badge>
-              <Badge variant="secondary" className="gap-1.5 py-1.5 px-3">
-                <Target className="w-3.5 h-3.5" /> Beginner
-              </Badge>
-              <Badge variant="secondary" className="gap-1.5 py-1.5 px-3">
-                <Smartphone className="w-3.5 h-3.5" /> Interactive
-              </Badge>
-              <Badge variant="secondary" className="gap-1.5 py-1.5 px-3">
-                <Brain className="w-3.5 h-3.5" /> Brain Friendly
-              </Badge>
-            </div>
-
-            <div className="mt-7">
-              <a
-                href="#understand"
-                className="inline-flex items-center gap-2 rounded-full bg-gold-grad hover:opacity-90 text-slate-950 font-bold px-7 py-3 transition-opacity shadow-[0_10px_30px_-8px_rgba(255,140,36,0.5)]"
-              >
-                Start Learning
-                <ArrowRight className="w-4 h-4" />
-              </a>
+            <div className="mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+              {WHY_BENEFITS.map((benefit) => (
+                <span
+                  key={benefit}
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary/50 px-4 py-2 text-sm font-medium text-foreground"
+                >
+                  <Check className="w-4 h-4 shrink-0 text-gold" />
+                  {benefit}
+                </span>
+              ))}
             </div>
           </div>
 
-          {/* Not decoration: this is the map the lesson teaches you to build. */}
-          <div className="glass-panel rounded-2xl p-4 sm:p-6 text-foreground">
-            <MindMapSvg stage={4} />
+          {/* The brain hub from the reference: six concepts branching from one centre. */}
+          <div className="text-foreground">
+            <MindMapHeroGraphic />
           </div>
         </div>
+      </section>
+
+      {/* ── Why it matters (surfaced under the hero to mirror the reference) ──── */}
+      <section className="max-w-5xl mx-auto px-4 pb-10">
+        {/* What is it? — the contrast */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          {NOTES_COMPARISON.map((column) => (
+            <Card key={column.label} className={column.good ? 'border-emerald-400/25' : undefined}>
+              <CardContent className="p-5">
+                <h3
+                  className={cn(
+                    'font-headline text-lg font-bold mb-3',
+                    column.good ? 'text-emerald-400' : 'text-foreground/60'
+                  )}
+                >
+                  {column.label}
+                </h3>
+                <ul className="flex flex-col gap-2">
+                  {column.traits.map((trait) => (
+                    <li
+                      key={trait}
+                      className={cn('text-sm', column.good ? 'text-foreground/80' : 'text-foreground/50')}
+                    >
+                      — {trait}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* One thought becoming five — the learner watches association happen. */}
+        <p className="text-center text-sm text-foreground/50 mb-3">
+          Say one word, and your brain does this on its own:
+        </p>
+        <ol className="flex flex-wrap items-center justify-center gap-x-2 gap-y-3 mb-4">
+          {ASSOCIATION_CHAIN.map((word, index) => (
+            <li key={word} className="flex items-center gap-2">
+              <span
+                className={cn(
+                  'rounded-full border px-4 py-2 text-sm font-medium',
+                  index === 0 ? 'border-[var(--ce-golden-yellow)] text-gold' : 'border-white/15 text-foreground/70'
+                )}
+              >
+                {word}
+              </span>
+              {index < ASSOCIATION_CHAIN.length - 1 && (
+                <ArrowRight className="w-3.5 h-3.5 text-foreground/25" aria-hidden="true" />
+              )}
+            </li>
+          ))}
+        </ol>
+        <p className="text-center text-sm text-foreground/50">
+          A mind map simply writes that chain down. That is the whole idea.
+        </p>
+
+        {/* The science is real but optional — it motivates, it doesn't gate the lesson. */}
+        <Accordion type="single" collapsible className="w-full mt-6 max-w-3xl mx-auto">
+          <AccordionItem value="why-it-works" className={cn(openPanelBase, 'border-b')}>
+            <AccordionTrigger className="text-sm font-semibold justify-center gap-2">
+              Why does it work? (the science)
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                {WHY_IT_WORKS.map((item) => (
+                  <div key={item.title} className="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <h4 className="font-bold text-gold mb-1.5">{item.title}</h4>
+                    <p className="text-sm text-foreground/70 leading-relaxed">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </section>
 
       {/* ── Journey ribbon ───────────────────────────────────────────────────── */}
@@ -547,77 +601,6 @@ export default function MindMappingLesson() {
             ))}
           </div>
 
-          {/* What is it? — the contrast */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            {NOTES_COMPARISON.map((column) => (
-              <Card key={column.label} className={column.good ? 'border-emerald-400/25' : undefined}>
-                <CardContent className="p-5">
-                  <h3
-                    className={cn(
-                      'font-headline text-lg font-bold mb-3',
-                      column.good ? 'text-emerald-400' : 'text-foreground/60'
-                    )}
-                  >
-                    {column.label}
-                  </h3>
-                  <ul className="flex flex-col gap-2">
-                    {column.traits.map((trait) => (
-                      <li
-                        key={trait}
-                        className={cn('text-sm', column.good ? 'text-foreground/80' : 'text-foreground/50')}
-                      >
-                        — {trait}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* One thought becoming five — the learner watches association happen. */}
-          <p className="text-center text-sm text-foreground/50 mb-3">
-            Say one word, and your brain does this on its own:
-          </p>
-          <ol className="flex flex-wrap items-center justify-center gap-x-2 gap-y-3 mb-4">
-            {ASSOCIATION_CHAIN.map((word, index) => (
-              <li key={word} className="flex items-center gap-2">
-                <span
-                  className={cn(
-                    'rounded-full border px-4 py-2 text-sm font-medium',
-                    index === 0 ? 'border-[var(--ce-golden-yellow)] text-gold' : 'border-white/15 text-foreground/70'
-                  )}
-                >
-                  {word}
-                </span>
-                {index < ASSOCIATION_CHAIN.length - 1 && (
-                  <ArrowRight className="w-3.5 h-3.5 text-foreground/25" aria-hidden="true" />
-                )}
-              </li>
-            ))}
-          </ol>
-          <p className="text-center text-sm text-foreground/50">
-            A mind map simply writes that chain down. That is the whole idea.
-          </p>
-
-          {/* The science is real but optional — it motivates, it doesn't gate the lesson. */}
-          <Accordion type="single" collapsible className="w-full mt-6">
-            <AccordionItem value="why-it-works" className={cn(openPanelBase, 'border-b')}>
-              <AccordionTrigger className="text-sm font-semibold justify-center gap-2">
-                Why does it work? (the science)
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  {WHY_IT_WORKS.map((item) => (
-                    <div key={item.title} className="rounded-lg border border-white/10 bg-white/5 p-4">
-                      <h4 className="font-bold text-gold mb-1.5">{item.title}</h4>
-                      <p className="text-sm text-foreground/70 leading-relaxed">{item.body}</p>
-                    </div>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
         </div>
 
         <DidYouKnow section={1} />
