@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { MindMapSvg } from '@/components/MindMapSvg';
-import { MindMapHeroGraphic } from '@/components/MindMapHeroGraphic';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -472,9 +471,9 @@ export default function MindMappingLesson() {
             </div>
           </div>
 
-          {/* The brain hub from the reference: six concepts branching from one centre. */}
-          <div className="text-foreground">
-            <MindMapHeroGraphic />
+          {/* Not decoration: this is the map the lesson teaches you to build. */}
+          <div className="glass-panel rounded-2xl p-4 sm:p-6 text-foreground">
+            <MindMapSvg stage={4} />
           </div>
         </div>
       </section>
