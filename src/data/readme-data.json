@@ -1131,15 +1131,33 @@
               "difficultWords": [
                 {
                   "word": "Faltering",
-                  "definition": "Losing strength or momentum.",
-                  "connotation": "Suggests a weakening or hesitant movement, a decline.",
-                  "example": "The business was faltering due to the economy."
+                  "definition": "Losing strength, steadiness, or momentum; hesitating.",
+                  "connotation": "Suggests a weakening, unsteady movement — a life or rhythm losing its balance.",
+                  "example": "The faltering pendulum of her life had lost its even swing."
                 },
                 {
-                  "word": "Antiquated",
-                  "definition": "Old-fashioned or outdated.",
-                  "connotation": "Implies something is no longer useful or relevant in the modern world.",
-                  "example": "He has some antiquated ideas about technology."
+                  "word": "Barter",
+                  "definition": "To exchange goods or services directly for other goods, without using money.",
+                  "connotation": "Evokes a simple, traditional village economy where even rags have trading value.",
+                  "example": "She purchased the pumpkin seeds and the goat by a barter of rags."
+                },
+                {
+                  "word": "Collyrium",
+                  "definition": "A dark ointment or cosmetic (like kohl) traditionally applied around the eyes.",
+                  "connotation": "Suggests traditional Indian adornment; it makes the goat's black eye-markings seem lovingly decorated.",
+                  "example": "The little white goat had black edges about the eyes, like marks of collyrium."
+                },
+                {
+                  "word": "Flotsam",
+                  "definition": "Wreckage or debris found floating on water; anything adrift and discarded.",
+                  "connotation": "Implies helplessness — being swept along by a force too strong to resist.",
+                  "example": "Lost to reason, she was an abandoned flotsam on the sweeping tide of her fury."
+                },
+                {
+                  "word": "Brickbat",
+                  "definition": "A piece of brick used as a missile; also, a blunt insult or criticism.",
+                  "connotation": "Suggests crude, impulsive violence born of rage rather than planned attack.",
+                  "example": "In her fury she picked up a brickbat and flung it at the taunting boys."
                 }
               ],
               "authorInfo": {
@@ -1153,30 +1171,42 @@
                 "influence": "His novels brought the social issues of post-independence India to an international audience and are valued for their humanistic perspective."
               },
               "contentAnalysis": {
-                "summary": "The story is about Shibnath, an old clockmaker, whose traditional craft is becoming obsolete. He sees his own life and skills reflected in the weakening pendulum of his masterpiece, a grandfather clock. When given a chance to earn a large sum of money by repairing an heirloom for a wealthy industrialist, he uses the reward not to modernize, but to restore his own beloved clock, finding victory in preserving his craft rather than adapting to the new world.",
+                "summary": "At the Tuesday haat of a remote Bengal village, an old, lonely rag-woman barters her rags for three pumpkin seeds and a month-old goat youngling. Scorned by the village and taunted as 'Rag hag' by cruel boys, and burdened with a violent temper she pictures as a hard nut rolling inside her, she pours her suppressed heart into her two new companions: the goat that listens to her as no person ever has, and the vines she nurtures with its dung. When the vines bloom profusely but bear no fruit, their barrenness reopens the wound of her own childless widowhood. In a sudden burst of the old fury she throttles the goat for nibbling the vines — and only then, on the very tendrils the goat had stripped bare, are two tiny pumpkins discovered. Grief and fulfilment arrive in the same hour, and the faltering pendulum of her life regains its swing.",
                 "themes": [
-                  "Tradition vs. Modernity",
-                  "The Value of Craftsmanship",
-                  "The Passage of Time",
-                  "Personal Integrity"
+                  "Loneliness and the Longing for Kinship",
+                  "Barrenness and the Urge for Fulfilment",
+                  "The Destructive Power of Uncontrolled Temper",
+                  "Loss and Renewal: The Balance of Life"
                 ],
                 "literaryDevices": [
                   {
                     "device": "Symbolism",
-                    "example": "The faltering pendulum of the grandfather clock symbolizes Shibnath's own declining fortunes and the fading relevance of his traditional skills."
+                    "example": "The pendulum of the title symbolizes the swing of the rag-woman's life between rage and tenderness, barrenness and fruitfulness. It appears only in the closing line — 'The faltering pendulum had regained its swing' — when loss and fulfilment finally balance each other."
+                  },
+                  {
+                    "device": "Metaphor",
+                    "example": "Her temper is a hard nut tossing inside her that she pleads with — 'Keep still. Do not toss about' — turning an abstract character flaw into a physical thing she must wrestle."
+                  },
+                  {
+                    "device": "Personification",
+                    "example": "She grants the vines a listening, feeling life of their own, hoping they 'would surely make response by the wag of a tendril, the swing of a leaf.'"
                   },
                   {
                     "device": "Irony",
-                    "example": "It is ironic that the man who represents the modern industry that is destroying Shibnath's livelihood is the one who provides him with the means to preserve his most cherished creation."
+                    "example": "The goat she strangles for pillaging the vines is the very agent of her joy: 'The goat had cleared up thick patches of leaves, and on a stripped tendril a tiny pumpkin hung.' Its dung fed the vines, and its nibbling revealed their fruit."
                   }
                 ],
-                "criticalAnalysis": "A poignant tale about the dignity of labor and the personal satisfaction found in one's craft. Bhattacharya critiques the soullessness of mass production and celebrates the passion and integrity of the individual artisan. The story isn't about resisting change, but about choosing what is valuable to preserve.",
-                "relevance": "In an age of increasing automation and disposability, the story is a powerful reminder of the value of skill, passion, and the things that cannot be mass-produced."
+                "criticalAnalysis": "A compassionate psychological portrait of a village outcast, the story shows Bhattacharya's characteristic sympathy for the poor and despised. The barren vines mirror the rag-woman's own childless widowhood — she feels 'all deadwood inside' — so that tending them becomes a displaced act of mothering, just as talking to the goat becomes a substitute for the kin she never had. The ending is deliberately double-edged: fulfilment comes only through loss, and the 'balance' of the final line is bought with the life of the one creature that loved her. Bhattacharya neither mocks her folk beliefs nor sentimentalizes her temper; he insists on the full humanity of a woman the village sees only as a 'rag hag'.",
+                "relevance": "The story speaks to the isolation of the elderly and unwanted, the casual cruelty of mockery, and the human need — undiminished by age or poverty — for something to nurture and someone who will listen. Its quiet insight that gain and loss often arrive together, and that life's balance is restored at a price, remains universal."
               },
               "faqs": [
                 {
-                  "question": "Why didn't Shibnath use the money to modernize his shop?",
-                  "answer": "Shibnath's goal was not financial success in the modern sense. His passion was for his craft and his masterpiece clock. Restoring the clock was, for him, a greater victory than adapting to a world he felt no connection with."
+                  "question": "Why does the rag-woman kill the goat she loves so much?",
+                  "answer": "She does not plan to kill it. After the barren vines have shattered her dearest hope, her lifelong temper — the 'hard nut' she constantly begs to keep still — erupts in a 'swift fire-burst' when the goat repeatedly nibbles the vines despite her warnings. The killing is an act of uncontrolled rage, not cruelty, which is why her grief afterwards is so absolute."
+                },
+                {
+                  "question": "What does the title 'The Faltering Pendulum' refer to?",
+                  "answer": "There is no actual clock in the story. The pendulum is a metaphor for the balance of the rag-woman's life, which has long faltered between loneliness and longing, rage and remorse. In the final scene, when the vines bear fruit even as the goat lies dead, gain and loss counterweigh each other and 'the faltering pendulum regained its swing.'"
                 }
               ],
               "quiz": [
