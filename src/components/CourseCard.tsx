@@ -10,6 +10,7 @@ interface CourseCardProps {
   href: string;
   image?: string;
   icon?: React.ReactNode;
+  meta?: string;
   cta?: string;
 }
 
@@ -19,6 +20,7 @@ export function CourseCard({
   href,
   image,
   icon,
+  meta,
   cta = 'View Details',
 }: CourseCardProps) {
   return (
@@ -56,6 +58,11 @@ export function CourseCard({
 
         {/* Content Section */}
         <CardContent className="flex flex-col flex-1 p-6">
+          {meta && (
+            <span className="text-xs font-medium uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+              {meta}
+            </span>
+          )}
           <CardTitle className="font-headline text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-[#00A2C9] transition-colors">
             {title}
           </CardTitle>
