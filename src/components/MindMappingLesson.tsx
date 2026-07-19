@@ -84,6 +84,15 @@ const EMPTY_STATE: LessonState = {
 
 const marker = (n: number) => `Step ${n} of ${TOTAL_SECTIONS} · ${SECTION_TIMES[n]}`;
 
+// Official apps flattened from TOOL_GROUPS, each given a distinct colour so they render
+// as the coloured "circled" buttons requested, surfaced above the lesson. URLs stay
+// single-sourced in the data file.
+const APP_COLORS = ['#E8590C', '#2563EB', '#0D9488', '#DC2626', '#7C3AED', '#16A34A', '#DB2777'];
+const APP_BUTTONS = TOOL_GROUPS.flatMap((group) => group.tools).map((tool, i) => ({
+  ...tool,
+  color: APP_COLORS[i % APP_COLORS.length],
+}));
+
 /**
  * Section shell matching the synced site's own rhythm (see src/app/page.tsx: max-w-5xl,
  * text-2xl headings, mb-1/mb-5). The old shared <Section> is April-era — text-6xl titles
@@ -480,32 +489,57 @@ export default function MindMappingLesson() {
 
       {/* ── Why it matters (surfaced under the hero to mirror the reference) ──── */}
       <section className="max-w-5xl mx-auto px-4 pb-10">
-        {/* What is it? — the contrast */}
+        {/* What is it? — the contrast, each side illustrated (notebook vs. mind map) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {NOTES_COMPARISON.map((column) => (
-            <Card key={column.label} className={column.good ? 'border-emerald-400/25' : undefined}>
-              <CardContent className="p-5">
-                <h3
-                  className={cn(
-                    'font-headline text-lg font-bold mb-3',
-                    column.good ? 'text-emerald-400' : 'text-foreground/60'
-                  )}
-                >
-                  {column.label}
-                </h3>
-                <ul className="flex flex-col gap-2">
-                  {column.traits.map((trait) => (
-                    <li
-                      key={trait}
-                      className={cn('text-sm', column.good ? 'text-foreground/80' : 'text-foreground/50')}
-                    >
-                      — {trait}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+          {NOTES_COMPARISON.map((column) => {
+            const picture = column.good ? (
+              <Image
+                src="/images/mind-map-topic.png"
+                width={322}
+                height={176}
+                alt="A colourful mind map branching outward from a central topic"
+                className="w-36 sm:w-44 h-auto rounded-lg shrink-0"
+              />
+            ) : (
+              <Image
+                src="/images/traditional-notes.png"
+                width={217}
+                height={182}
+                alt="A page of linear handwritten notes with a pen"
+                className="w-32 sm:w-40 h-auto rounded-lg shrink-0"
+              />
+            );
+            return (
+              <Card key={column.label} className={column.good ? 'border-emerald-400/25' : undefined}>
+                <CardContent className="p-5">
+                  <div className="flex items-center gap-4 sm:gap-5">
+                    {!column.good && picture}
+                    <div className="flex-1">
+                      <h3
+                        className={cn(
+                          'font-headline text-lg font-bold mb-3',
+                          column.good ? 'text-emerald-400' : 'text-foreground/60'
+                        )}
+                      >
+                        {column.label}
+                      </h3>
+                      <ul className="flex flex-col gap-2">
+                        {column.traits.map((trait) => (
+                          <li
+                            key={trait}
+                            className={cn('text-sm', column.good ? 'text-foreground/80' : 'text-foreground/50')}
+                          >
+                            — {trait}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {column.good && picture}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* One thought becoming five — the learner watches association happen. */}
@@ -574,6 +608,42 @@ export default function MindMappingLesson() {
           </ol>
         </div>
       </div>
+
+      {/* ── Applications (surfaced just before Step 1; official links as coloured buttons) ── */}
+      <section className="max-w-5xl mx-auto px-4 pb-12">
+        <h2 className="font-headline text-2xl font-bold text-foreground mb-1 text-center">
+          Professional software — turn your map visual
+        </h2>
+        <p className="text-center text-muted-foreground mb-6">
+          Ready to go digital? Open any official app and start building.
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+          {APP_BUTTONS.map((app) => (
+            <a
+              key={app.name}
+              href={app.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-2xl p-2 transition-transform hover:scale-[1.03] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              style={{ backgroundColor: app.color }}
+            >
+              <span className="block rounded-xl border border-white/45 p-1.5">
+                <span className="flex items-center justify-center gap-1.5 rounded-lg border border-white/40 px-3 py-3 text-sm font-bold uppercase tracking-wide text-white">
+                  {app.name}
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0 opacity-85" aria-hidden="true" />
+                  <span className="sr-only">(opens in a new tab)</span>
+                </span>
+              </span>
+            </a>
+          ))}
+        </div>
+
+        <p className="text-center text-sm text-foreground/70 italic mt-6 mb-4">{TOOLS_CLOSING}</p>
+        <p className="max-w-3xl mx-auto rounded-md border border-white/10 bg-white/[0.03] px-4 py-3 text-xs text-foreground/45 leading-relaxed text-center">
+          {TOOLS_DISCLAIMER}
+        </p>
+      </section>
 
       {/* ── 1 · Understand (Why + What + Why-it-works, merged) ───────────────── */}
       <Step id="understand" step={1} title="Understand" lead={WHAT_IS}>
@@ -893,45 +963,6 @@ export default function MindMappingLesson() {
                     </div>
                   ))}
                 </div>
-              </AccordionContent>
-            </AccordionItem>
-
-            {/* Professional Software */}
-            <AccordionItem value="software" className={openPanelBase} style={panelStyle(openFurther === 'software')}>
-              <AccordionTrigger className="text-left font-semibold">
-                Professional software — turn your map visual
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
-                  {TOOL_GROUPS.map((group) => (
-                    <div key={group.audience} className="rounded-lg border border-white/10 bg-white/5 p-4">
-                      <h4 className="font-headline font-bold text-gold mb-3">{group.audience}</h4>
-                      <ul className="flex flex-col gap-2 mb-3">
-                        {group.tools.map((tool) => (
-                          <li key={tool.name}>
-                            <a
-                              href={tool.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/85 hover:text-gold transition-colors"
-                            >
-                              {tool.name}
-                              <ExternalLink className="w-3 h-3 shrink-0 opacity-60" aria-hidden="true" />
-                              <span className="sr-only">(opens in a new tab)</span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="text-xs text-foreground/55 leading-relaxed">{group.note}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="text-center text-sm text-foreground/70 italic mb-4">{TOOLS_CLOSING}</p>
-
-                <p className="rounded-md border border-white/10 bg-white/[0.03] px-4 py-3 text-xs text-foreground/45 leading-relaxed">
-                  {TOOLS_DISCLAIMER}
-                </p>
               </AccordionContent>
             </AccordionItem>
 
