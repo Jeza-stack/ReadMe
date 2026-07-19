@@ -54,42 +54,6 @@ const courseFallbacks: Record<string, CourseData> = {
       { name: 'Unit 2 – Academic Writing', works: [{ slug: 'essays', title: 'Essay Structures', author: 'Core Faculty' }] },
     ],
   },
-  'cefr-english': {
-    name: 'CEFR English',
-    description: 'Comprehensive mastery of the Common European Framework of Reference for Languages, from A1 to C2 proficiency standards.',
-    slug: 'cefr-english',
-    categories: [
-      { 
-        name: 'Foundation (A1 - A2)', 
-        works: [
-          { slug: '/level/a1', title: 'Level A1 - Beginner', author: 'Academic Faculty' },
-          { slug: '/level/a2', title: 'Level A2 - Elementary', author: 'Academic Faculty' }
-        ] 
-      },
-      { 
-        name: 'Independence (B1 - B2)', 
-        works: [
-          { slug: '/level/b1', title: 'Level B1 - Intermediate', author: 'Academic Faculty' },
-          { slug: '/level/b2', title: 'Level B2 - Upper Intermediate', author: 'Academic Faculty' }
-        ] 
-      },
-      { 
-        name: 'Proficiency (C1 - C2)', 
-        works: [
-          { slug: '/level/c1', title: 'Level C1 - Advanced', author: 'Academic Faculty' },
-          { slug: '/level/c2', title: 'Level C2 - Proficiency', author: 'Academic Faculty' }
-        ] 
-      },
-      { 
-        name: 'Assessments & Samples', 
-        works: [
-          { slug: '/assessment/quick', title: 'Quick Placement Test', author: 'Assessment Faculty' },
-          { slug: '/assessment/samples', title: 'Sample Questions', author: 'Assessment Faculty' },
-          { slug: '/assessment', title: 'Detailed Diagnostics', author: 'Assessment Faculty' }
-        ] 
-      },
-    ],
-  },
   'soft-skills': {
     name: 'Soft Skills',
     description: 'A comprehensive 8-week program developing communication, teamwork, leadership, and career readiness across all industries.',

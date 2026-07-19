@@ -49,11 +49,12 @@ for (const [dir, base, section] of contentDirs) {
   }
 }
 
+// a1/a2 keep their /level lesson hubs; b1-c2 shells were retired in favour of /cefr.
 for (const lvl of ['a1', 'a2', 'b1', 'b2', 'c1', 'c2']) {
   entries.push({
     title: `CEFR ${lvl.toUpperCase()}`,
     sub: 'CEFR English level',
-    href: `/level/${lvl}`,
+    href: lvl === 'a1' || lvl === 'a2' ? `/level/${lvl}` : `/cefr/${lvl}`,
     k: `cefr level ${lvl} grammar vocabulary english`,
   });
 }

@@ -7,7 +7,7 @@ export default function PersonalPronounsPage() {
       <BackNav
         crumbs={[
           { label: 'Home', href: '/' },
-          { label: 'CEFR English', href: '/courses/cefr-english' },
+          { label: 'CEFR English', href: '/cefr' },
           { label: 'A1 Level', href: '/level/a1' }
         ]}
         current="Personal Pronouns"

@@ -87,7 +87,7 @@ export default async function A2Level() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col">
       <BackNav 
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/courses/cefr-english' }]} 
+        crumbs={[{ label: 'Home', href: '/' }, { label: 'CEFR English', href: '/cefr' }]} 
         current="Level A2 - Elementary" 
       />
 
@@ -228,7 +228,7 @@ export default async function A2Level() {
            <Link href="/level/a1" className="flex items-center gap-2 text-slate-500 hover:text-[#043370] font-bold transition-colors group">
              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" /> Previous: A1 Beginner
            </Link>
-           <Link href="/level/b1" className="flex items-center gap-2 text-[#00A2C9] hover:text-[#043370] font-bold transition-colors group">
+           <Link href="/cefr/b1" className="flex items-center gap-2 text-[#00A2C9] hover:text-[#043370] font-bold transition-colors group">
              Next Up: B1 Intermediate <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
            </Link>
         </div>
